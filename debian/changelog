@@ -1,0 +1,5 @@
+xkb-data (1.0.1-1) experimental; urgency=low
+
+  * First upload to Debian
+
+ -- David Nusinow <dnusinow@debian.org>  Thu, 26 Jan 2006 21:59:13 -0500
