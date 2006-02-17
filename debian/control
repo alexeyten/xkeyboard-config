@@ -1,4 +1,4 @@
-Source: xkbdata
+Source: xkb-data-legacy
 Section: x11
 Priority: optional
 Maintainer: Debian X Strike Force <debian-x@lists.debian.org>
@@ -6,7 +6,7 @@ Uploaders: David Nusinow <dnusinow@debian.org>, Branden Robinson <branden@debian
 Build-Depends: debhelper (>= 4.0.0)
 Standards-Version: 3.6.1.0
 
-Package: xkbdata
+Package: xkb-data-legacy
 Architecture: all
 Depends: ${misc:Depends}
 Conflicts: xlibs-data (<< 6.8.2-35), xkb-data

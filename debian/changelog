@@ -1,8 +1,9 @@
-xkbdata (1.0.1-2) experimental; urgency=low
+xkb-data-legacy (1.0.1-2) experimental; urgency=low
 
   * Actually install files properly. This removes cruft left over from copy of
     stuff from xbitmaps data packaging. Thanks Joerg Jaspert for catching this
     huge mistake.
+  * Rename the package for consistency with xkb-data
 
  -- David Nusinow <dnusinow@debian.org>  Tue,  7 Feb 2006 23:46:47 -0500
 
