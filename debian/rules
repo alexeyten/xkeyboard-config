@@ -30,7 +30,7 @@ else
 endif
 
 
-build: build-stamp
+build: patch build-stamp
 build-stamp:
 	dh_testdir
 
@@ -43,7 +43,7 @@ build-stamp:
 
 	touch build-stamp
 
-clean:
+clean: xsfclean
 	dh_testdir
 	dh_testroot
 	rm -f build-stamp

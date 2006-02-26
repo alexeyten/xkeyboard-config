@@ -4,8 +4,10 @@ xkb-data-legacy (1.0.1-2) experimental; urgency=low
     stuff from xbitmaps data packaging. Thanks Joerg Jaspert for catching this
     huge mistake.
   * Rename the package for consistency with xkb-data
+  * Port patches from trunk
+    + general/099l_xkb_cymotion_master_and_ibm_space_saver.diff
 
- -- David Nusinow <dnusinow@debian.org>  Tue,  7 Feb 2006 23:46:47 -0500
+ -- David Nusinow <dnusinow@debian.org>  Sun, 26 Feb 2006 18:29:11 -0500
 
 xkbdata (1.0.1-1) experimental; urgency=low
 
