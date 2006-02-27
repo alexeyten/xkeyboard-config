@@ -1,1 +1,17 @@
 01_cymotion_master_and_ibm_space_saver.diff
+02_xkb_symbols_euro_support.diff -p3
+03_drop_rules_xorg_duplicates.diff
+04_czech_include_location.diff
+05_evdev_xkb.diff
+06_AB10_minus_underscore.diff -p3
+07_AE12_apostrophe_on_pc_de_nodeadkeys.diff -p3
+08_implement_grp:sclk_toggle.diff
+09_enable_ca_variants.diff -p3
+10_ralt_switch_multikey.diff
+11_uk_macintosh_problems.diff -p3
+12_implement_compose:caps.diff
+13_macintosh_problems.diff -p3
+14_dead_diaresis.diff -p4
+15_symbols_polish_keypad_separator.diff -p3
+16_brazilian_keypad_separator.diff -p3
+17_tr_fix_eacute.diff -p3

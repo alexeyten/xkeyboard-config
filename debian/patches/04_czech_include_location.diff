@@ -1,0 +1,31 @@
+Index: xkbdata-X11R7.0-1.0.1/symbols/pc/cz
+===================================================================
+--- xkbdata-X11R7.0-1.0.1.orig/symbols/pc/cz	2006-01-26 21:46:48.000000000 -0500
++++ xkbdata-X11R7.0-1.0.1/symbols/pc/cz	2006-02-26 20:21:39.000000000 -0500
+@@ -78,7 +78,7 @@
+ 
+ // Use <BKSL> instead of <LSGT> (useful for keyboard without <LSGT> key)
+ xkb_symbols "bksl" {
+-    include "cz(basic)"
++    include "pc/cz(basic)"
+     name[Group1]= "Czechia - With <\|> key";
+ 
+     key <BKSL>	{ [ backslash,        bar,        slash,     NoSymbol ]	};
+@@ -91,7 +91,7 @@
+     // of 'Z' and 'Y' keys, which are in the qwerty style (ie. swapped).
+     // 2001 by Kamil Toman <ktoman@email.cz>
+     
+-    include "cz(basic)"
++    include "pc/cz(basic)"
+     name[Group1]= "Czechia - qwerty";
+ 
+     key <AB01>	{ [         z,          Z,       degree,     NoSymbol ]	};
+@@ -100,7 +100,7 @@
+ 
+ // Use <BKSL> instead of <LSGT> (useful for keyboard without <LSGT> key)
+ xkb_symbols "qwerty_bksl" {
+-    include "cz(qwerty)"
++    include "pc/cz(qwerty)"
+ 
+     name[Group1]= "Czechia - qwerty, extended Backslash";
+ 

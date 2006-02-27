@@ -1,0 +1,42 @@
+$Id: 081_xkb_fix_AB10_minus_underscore_on_hr.diff 396 2005-07-22 21:45:02Z dnusinow $
+
+Fix the latin(type3) PC keyboard map to override the AB10 key definition
+inherited from the basic layout, mapping the key to "minus, underscore"
+rather than "slash, question".  This enables the al (Albanian), hr
+(Croatian), pl2 (Polish QWERTZ), si (Slovenian), and yu (Yugoslavian)
+layouts to inherit this key mapping (though al overrides it).  See Debian
+#236604.
+
+This patch by Branden Robinson; tested by Josip Rodin.
+
+diff -urN xc/programs/xkbcomp/symbols~/pc/latin xc/programs/xkbcomp/symbols/pc/latin
+--- xc/programs/xkbcomp/symbols~/pc/latin	2003-01-25 21:01:48.000000000 -0500
++++ xc/programs/xkbcomp/symbols/pc/latin	2004-03-30 17:08:27.000000000 -0500
+@@ -108,13 +108,14 @@
+     key <AC05>	{ [         g,          G, bracketright,          ENG ]	};
+     key <AC08>	{ [         k,          K,      lstroke,    ampersand ]	};
+ 
+-    key <AB01>	{ [         y,          Y, guillemotleft,         less ]	};
++    key <AB01>	{ [         y,          Y, guillemotleft,        less ]	};
+     key <AB04>	{ [         v,          V,           at,        grave ]	};
+     key <AB05>	{ [         b,          B,    braceleft,   apostrophe ]	};
+     key <AB06>	{ [         n,          N,   braceright,   braceright ]	};
+     key <AB07>	{ [         m,          M,      section,    masculine ]	};
+     key <AB08>	{ [     comma,  semicolon,         less,     multiply ]	};
+     key <AB09>	{ [    period,      colon,      greater,     division ]	};
++    key <AB10>	{ [     minus, underscore, dead_belowdot, dead_abovedot ] };
+ };
+ 
+ // Another one Latin common layout
+diff -urN xc/programs/xkbcomp/symbols~/pc/si xc/programs/xkbcomp/symbols/pc/si
+--- xc/programs/xkbcomp/symbols~/pc/si	2003-02-04 20:38:36.000000000 -0500
++++ xc/programs/xkbcomp/symbols/pc/si	2004-03-30 17:08:27.000000000 -0500
+@@ -33,8 +33,6 @@
+     key <AC10>	{ [    ccaron,     Ccaron,   dead_acute, dead_doubleacute ] };
+     key <AC11>	{ [    cacute,     Cacute,       ssharp,   dead_caron ]	};
+ 
+-    key <AB10>	{ [     minus, underscore, dead_belowdot, dead_abovedot ] };
+-
+     key <TLDE>	{ [dead_cedilla, dead_diaeresis, notsign,     notsign ]	};
+ 
+     key <BKSL>	{ [    zcaron,     Zcaron,     currency,   dead_breve ]	};

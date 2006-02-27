@@ -1,0 +1,55 @@
+$Id: 099g_xkb_symbols_polish_fix_keypad_separator.diff 689 2005-10-19 22:11:30Z dnusinow $
+
+This patch by Branden Robinson, based on a report from Emil Novak.
+
+Not submitted to XFree86.
+
+Index: xc/programs/xkbcomp/symbols/pc/pl
+===================================================================
+--- xc/programs/xkbcomp/symbols/pc/pl.orig	2005-10-19 17:35:50.000000000 -0400
++++ xc/programs/xkbcomp/symbols/pc/pl	2005-10-19 17:57:15.000000000 -0400
+@@ -24,6 +24,10 @@
+ 
+     include "keypad(comma)"
+ 
++    // Begin keypad section
++    key  <KPDL> {        [        KP_Delete, KP_Separator     ]       };
++    // End of keypad section
++
+     include "level3(ralt_switch)"
+ };
+ 
+Index: xc/programs/xkbcomp/symbols/pl
+===================================================================
+--- xc/programs/xkbcomp/symbols/pl.orig	2005-10-19 17:51:55.000000000 -0400
++++ xc/programs/xkbcomp/symbols/pl	2005-10-19 17:57:15.000000000 -0400
+@@ -37,8 +37,12 @@
+ 			[	zabovedot,       Zabovedot	]	};
+     // End alphanumeric section
+ 
+-    // Begin mofifier mappings
+-    
++    // Begin keypad section
++    key  <KPDL> {        [        KP_Delete, KP_Separator     ]       };
++    // End of keypad section
++
++    // Begin modifier mappings
++
+     modifier_map Shift  { Shift_L };
+     modifier_map Lock   { Caps_Lock };
+     modifier_map Control{ Control_L };
+Index: xc/programs/xkbcomp/symbols/pl2
+===================================================================
+--- xc/programs/xkbcomp/symbols/pl2.orig	2005-10-19 17:51:55.000000000 -0400
++++ xc/programs/xkbcomp/symbols/pl2	2005-10-19 17:57:15.000000000 -0400
+@@ -95,6 +95,10 @@
+ 
+     // End alphanumeric section
+ 
++    // Begin keypad section
++    key  <KPDL> {        [        KP_Delete, KP_Separator     ]       };
++    // End of keypad section
++
+     // begin modifier mappings
+     modifier_map Shift  { Shift_L };
+     modifier_map Lock   { Caps_Lock };

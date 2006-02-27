@@ -1,0 +1,63 @@
+The lv3:ralt_switch_multikey option was available in previous releases
+and has even been the default, so keep it.
+
+Index: xkbdata-X11R7.0-1.0.1/rules/xorg
+===================================================================
+--- xkbdata-X11R7.0-1.0.1.orig/rules/xorg	2006-02-26 21:53:38.000000000 -0500
++++ xkbdata-X11R7.0-1.0.1/rules/xorg	2006-02-26 21:55:08.000000000 -0500
+@@ -915,6 +915,7 @@
+   lv3:switch		=	+level3(switch)
+   lv3:ralt_switch	=	+level3(ralt_switch)
+   lv3:lalt_switch	=	+level3(lalt_switch)
++  lv3:ralt_switch_multikey =	+level3(ralt_switch_multikey)
+   lv3:alt_switch	=	+level3(alt_switch)
+   lv3:menu_switch	=	+level3(menu_switch)
+   lv3:win_switch	=	+level3(win_switch)
+Index: xkbdata-X11R7.0-1.0.1/rules/xorg.lst
+===================================================================
+--- xkbdata-X11R7.0-1.0.1.orig/rules/xorg.lst	2006-02-26 21:51:14.000000000 -0500
++++ xkbdata-X11R7.0-1.0.1/rules/xorg.lst	2006-02-26 21:55:08.000000000 -0500
+@@ -371,6 +371,7 @@
+   lv3:alt_switch       Press any of Alt keys to choose 3rd level.
+   lv3:lalt_switch      Press Left Alt key to choose 3rd level.
+   lv3:ralt_switch      Press Right Alt key to choose 3rd level.
++  lv3:ralt_switch_multikey Press Right Alt key to choose 3rd level, Shift+Right Alt key is Multi_Key
+   ctrl                 Control key position
+   ctrl:nocaps          Make CapsLock an additional Control.
+   ctrl:swapcaps        Swap Control and CapsLock.
+Index: xkbdata-X11R7.0-1.0.1/rules/xorg.xml
+===================================================================
+--- xkbdata-X11R7.0-1.0.1.orig/rules/xorg.xml	2006-02-26 21:51:14.000000000 -0500
++++ xkbdata-X11R7.0-1.0.1/rules/xorg.xml	2006-02-26 21:55:08.000000000 -0500
+@@ -7356,6 +7356,12 @@
+           <description xml:lang="vi">Nhấn phím Alt bên phải để chọn ngôn ngữ thứ 3.</description>
+         </configItem>
+       </option>
++      <option>
++        <configItem>
++          <name>lv3:ralt_switch_multikey</name>
++          <description>Press Right Alt key to choose 3rd level, Shift+Right Alt key is Multi_Key</description>
++        </configItem>
++      </option>
+     </group>
+     <group allowMultipleSelection="false">
+       <!-- Tweaking the position of the "Ctrl" key -->
+Index: xkbdata-X11R7.0-1.0.1/symbols/level3
+===================================================================
+--- xkbdata-X11R7.0-1.0.1.orig/symbols/level3	2006-01-26 21:46:48.000000000 -0500
++++ xkbdata-X11R7.0-1.0.1/symbols/level3	2006-02-26 21:55:08.000000000 -0500
+@@ -18,6 +18,14 @@
+   modifier_map Mod5   { ISO_Level3_Shift };
+ };
+ 
++partial modifier_keys
++xkb_symbols "ralt_switch_multikey" {
++  key <RALT> {
++    type[Group1]="TWO_LEVEL",
++    symbols[Group1] = [ ISO_Level3_Shift, Multi_key ]
++    };
++};
++
+ // using the level(alt_switch) map, either Alt key temporarily chooses
+ // the third shift level.  (Mostly be used to imitate Mac OS functionality.)
+ partial modifier_keys

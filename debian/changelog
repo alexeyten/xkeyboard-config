@@ -6,8 +6,24 @@ xkb-data-legacy (1.0.1-2) experimental; urgency=low
   * Rename the package for consistency with xkb-data
   * Port patches from trunk
     + general/099l_xkb_cymotion_master_and_ibm_space_saver.diff
+    + general/013a_xkb_symbols_euro_support.diff
+    + general/013_xkb_drop_rules_xorg_duplicates.diff
+    + general/016_czech_include_location.diff
+    + general/034_evdev_xkb.diff
+    + general/081_xkb_fix_AB10_minus_underscore_on_hr.diff
+    + general/082_xkb_AE12_apostrophe_on_pc_de_nodeadkeys.diff
+    + general/084_xkb_implement_grp:sclk_toggle.diff
+    + general/086_enable_ca_variants.diff
+    + general/087_xkb_ralt_switch_multikey.diff
+    + general/090_xkb_fix_uk_macintosh_problems.diff
+    + general/091_xkb_implement_compose:caps.diff
+    + general/093_xkb_fix_macintosh_problems.diff
+    + general/094_xkb_fix_dead_diaresis.diff
+    + general/099g_xkb_symbols_polish_fix_keypad_separator.diff
+    + general/099p_xkb_brazilian_fix_keypad_separator.diff
+    + general/099s_xkb_tr_fix_eacute.diff
 
- -- David Nusinow <dnusinow@debian.org>  Sun, 26 Feb 2006 18:29:11 -0500
+ -- David Nusinow <dnusinow@debian.org>  Sun, 26 Feb 2006 20:21:46 -0500
 
 xkbdata (1.0.1-1) experimental; urgency=low
 

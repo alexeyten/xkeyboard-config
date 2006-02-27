@@ -1,0 +1,72 @@
+$Id: 013a_xkb_symbols_euro_support.diff 396 2005-07-22 21:45:02Z dnusinow $
+
+This patch by Mike A. Harris.
+
+Not submitted upstream yet.
+
+Index: xc/programs/xkbcomp/symbols/hu
+===================================================================
+--- xc.orig/programs/xkbcomp/symbols/hu	2005-06-26 06:51:37.000000000 +0800
++++ xc/programs/xkbcomp/symbols/hu	2005-06-26 12:12:46.000000000 +0800
+@@ -246,6 +246,8 @@
+                         [        backslash                   ]       };
+     key <AD02> {        [                w, W                ],
+                         [              bar                   ]       };
++    key <AD07> {        [                u, U                ],
++                        [         EuroSign                   ]       };
+     key <AD08> {        [                i, I                ],
+                         [           Iacute                   ]       };
+     key <AD12> {        [           uacute, Uacute           ],
+Index: xc/programs/xkbcomp/symbols/hu_US
+===================================================================
+--- xc.orig/programs/xkbcomp/symbols/hu_US	2005-06-26 06:51:37.000000000 +0800
++++ xc/programs/xkbcomp/symbols/hu_US	2005-06-26 12:12:46.000000000 +0800
+@@ -44,6 +44,8 @@
+     key <AD02> {        [         w,    W               ],
+                         [       bar                     ]       };
+     key <AD06> {        [         z,    Z               ]       };
++    key <AD07> {        [         u,    U               ],
++                        [  EuroSign                     ]       };
+     key <AD08> {        [         i,    I               ],
+                         [    Iacute                     ]       };
+ //    key <AD11> {      [ odoubleacute, Odoubleacute    ],
+Index: xc/programs/xkbcomp/symbols/pl
+===================================================================
+--- xc.orig/programs/xkbcomp/symbols/pl	2005-06-26 06:51:37.000000000 +0800
++++ xc/programs/xkbcomp/symbols/pl	2005-06-26 12:12:46.000000000 +0800
+@@ -25,6 +25,8 @@
+ 			[	  lstroke,	   Lstroke	]	};
+     key	<AB06> {	[	                            	],	
+ 			[          nacute,          Nacute	]	};
++    key	<AD07> {	[	                        	],	
++			[        EuroSign               	]	};
+     key	<AD09> {	[	                        	],	
+ 			[          oacute,       Oacute        	]	};
+     key <AC02> {	[	         			],
+Index: xc/programs/xkbcomp/symbols/pl2
+===================================================================
+--- xc.orig/programs/xkbcomp/symbols/pl2	2005-06-26 06:51:37.000000000 +0800
++++ xc/programs/xkbcomp/symbols/pl2	2005-06-26 12:12:46.000000000 +0800
+@@ -45,7 +45,8 @@
+     key <AD04> { [ r,			R		]	};
+     key <AD05> { [ t,			T		]	};
+     key <AD06> { [ z,			Z		]	};
+-    key <AD07> { [ u,			U		]	};
++    key <AD07> { [ u,			U		],
++                 [ EuroSign             ]   };
+     key <AD08> { [ i,			I		]	};
+     key <AD09> { [ o,			O		]	};
+     key <AD10> { [ p,			P		]	};
+Index: xc/programs/xkbcomp/symbols/tr
+===================================================================
+--- xc.orig/programs/xkbcomp/symbols/tr	2005-06-26 06:51:37.000000000 +0800
++++ xc/programs/xkbcomp/symbols/tr	2005-06-26 12:12:46.000000000 +0800
+@@ -37,6 +37,8 @@
+     key <AE11> {	[  asterisk,	question 	],
+ 			[ backslash			]	};
+     key <AE12> {	[     minus,	underscore	]	};
++    key <AD03> {	[         e,	E		],
++			[  EuroSign			]	};
+     key <AD08> {	[  idotless,    I		]	};
+     key <AD11> {	[    gbreve,    Gbreve		]	};
+     key <AD12> {	[ udiaeresis,	Udiaeresis	],

@@ -1,0 +1,32 @@
+$Id: 099p_xkb_brazilian_fix_keypad_separator.diff 689 2005-10-19 22:11:30Z dnusinow $
+
+This patch by Denis Barbier, based on a report from Rafael Ávila de
+Espíndola.
+
+Not submitted to XFree86.
+
+Index: xc/programs/xkbcomp/symbols/br
+===================================================================
+--- xc/programs/xkbcomp/symbols/br.orig	2005-10-18 19:45:33.000000000 -0400
++++ xc/programs/xkbcomp/symbols/br	2005-10-18 22:10:11.000000000 -0400
+@@ -61,7 +61,7 @@
+                         [          degree,    questiondown	]       };
+ 
+     key <KPPT> {	[  KP_Decimal				]	};
+-    key <KPDL> {	[  KP_Delete,	comma			]	};
++    key <KPDL> {	[  KP_Delete,	KP_Separator		]	};
+ 
+     // begin modifier mappings
+     
+Index: xc/programs/xkbcomp/symbols/pc/br
+===================================================================
+--- xc/programs/xkbcomp/symbols/pc/br.orig	2005-10-18 19:45:33.000000000 -0400
++++ xc/programs/xkbcomp/symbols/pc/br	2005-10-18 22:10:33.000000000 -0400
+@@ -42,6 +42,7 @@
+     key <AB11>	{ [     slash,   question,       degree, questiondown ]	};
+ 
+     key <KPPT>	{ [ KP_Decimal ]	};
++	key <KPDL> { [ KP_Delete, KP_Separator ]   };
+ 
+     include "keypad(comma)"
+ 

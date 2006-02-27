@@ -1,0 +1,65 @@
+$Id: 091_xkb_implement_compose:caps.diff 1169 2006-02-06 03:08:41Z dnusinow $
+
+Implement option to place Compose key ("Multi_key") on <CAPS> key.  See
+Debian #251310 #345796
+
+This patch by Andrew Suffield and Branden Robinson.
+
+Not submitted to XFree86.
+
+Index: xkbdata-X11R7.0-1.0.1/rules/xorg
+===================================================================
+--- xkbdata-X11R7.0-1.0.1.orig/rules/xorg	2006-02-26 21:55:08.000000000 -0500
++++ xkbdata-X11R7.0-1.0.1/rules/xorg	2006-02-26 21:58:03.000000000 -0500
+@@ -940,6 +940,7 @@
+   compose:rwin		=	+compose(rwin)
+   compose:menu		=	+compose(menu)
+   compose:rctrl		=	+compose(rctrl)
++  compose:caps     =   +compose(caps)
+   srvrkeys:none		=	+srvr_ctrl(no_srvr_keys)
+   eurosign:e		=	+eurosign(e)
+   eurosign:5		=	+eurosign(5)
+Index: xkbdata-X11R7.0-1.0.1/rules/xorg.lst
+===================================================================
+--- xkbdata-X11R7.0-1.0.1.orig/rules/xorg.lst	2006-02-26 21:55:08.000000000 -0500
++++ xkbdata-X11R7.0-1.0.1/rules/xorg.lst	2006-02-26 21:58:03.000000000 -0500
+@@ -403,6 +403,7 @@
+   compose:rwin         Right Win-key is Compose.
+   compose:menu         Menu is Compose.
+   compose:rctrl        Right Ctrl is Compose.
++  compose:caps     Caps Lock is Compose
+   compat               Miscellaneous compatibility options
+   numpad:microsoft     Shift with numpad keys works as in MS Windows.
+   srvrkeys:none        Special keys (Ctrl+Alt+&lt;key&gt;) handled in a server.
+Index: xkbdata-X11R7.0-1.0.1/rules/xorg.xml
+===================================================================
+--- xkbdata-X11R7.0-1.0.1.orig/rules/xorg.xml	2006-02-26 21:55:08.000000000 -0500
++++ xkbdata-X11R7.0-1.0.1/rules/xorg.xml	2006-02-26 21:58:03.000000000 -0500
+@@ -7934,6 +7934,14 @@
+           <description xml:lang="vi">Thêm ký hiệu đồng Euro vào phím 2.</description>
+         </configItem>
+       </option>
++      <option>
++        <configItem>
++          <name>compose:caps</name>
++          <description>Caps Lock is Compose</description>
++          <description xml:lang="bg">Клавиша Caps Lock фунцкионира като Compose</description>
++          <description xml:lang="ru">Клавиша Caps Lock соответствует клавише Compose</description>
++        </configItem>
++      </option>
+     </group>
+   </optionList>
+ </xkbConfigRegistry>
+Index: xkbdata-X11R7.0-1.0.1/symbols/compose
+===================================================================
+--- xkbdata-X11R7.0-1.0.1.orig/symbols/compose	2006-01-26 21:46:48.000000000 -0500
++++ xkbdata-X11R7.0-1.0.1/symbols/compose	2006-02-26 21:58:03.000000000 -0500
+@@ -22,3 +22,8 @@
+ xkb_symbols "rctrl" {
+     key <RCTL> { type[Group1]="TWO_LEVEL", [ Multi_key, Multi_key ] };
+ };
++
++partial modifier_keys
++xkb_symbols "caps" {
++    key <CAPS>	{ type[Group1]="TWO_LEVEL", [ Multi_key, Multi_key ] };
++};

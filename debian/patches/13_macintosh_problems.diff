@@ -1,0 +1,22 @@
+$Id: 093_xkb_fix_macintosh_problems.diff 480 2005-08-02 20:14:26Z branden $
+
+Fix miscellaneous Macintosh XKB data problems:
+* The keypad equal key (<KPEQ>) should map to the "KP_Equal" keysym, not
+  "equal".
+
+This patch by Branden Robinson.
+
+Not submitted to X.Org.
+
+diff -ruN xc-old/programs/xkbcomp/symbols/macintosh/us xc/programs/xkbcomp/symbols/macintosh/us
+--- xc-old/programs/xkbcomp/symbols/macintosh/us	2005-05-08 23:28:52.000000000 -0400
++++ xc/programs/xkbcomp/symbols/macintosh/us	2005-07-02 14:59:09.000000000 -0400
+@@ -101,7 +101,7 @@
+ 
+     // Begin "Keypad" section
+     key <NMLK> {	[  Num_Lock,	Pointer_EnableKeys	]	};
+-    key <KPEQ> {	[  equal				]	};
++    key <KPEQ> {	[  KP_Equal				]	};
+     key <KPDV> {	[  KP_Divide				]	};
+     key <KPMU> {	[  KP_Multiply				]	};
+ 
