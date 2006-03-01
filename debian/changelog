@@ -22,8 +22,10 @@ xkb-data-legacy (1.0.1-2) experimental; urgency=low
     + general/099g_xkb_symbols_polish_fix_keypad_separator.diff
     + general/099p_xkb_brazilian_fix_keypad_separator.diff
     + general/099s_xkb_tr_fix_eacute.diff
+    + arm/300_riscpc_xkb_keycodes.diff
+    + sparc/101b_xkb_sun_loads_srvr_ctrl.diff
 
- -- David Nusinow <dnusinow@debian.org>  Sun, 26 Feb 2006 20:21:46 -0500
+ -- David Nusinow <dnusinow@debian.org>  Tue, 28 Feb 2006 21:44:37 -0500
 
 xkbdata (1.0.1-1) experimental; urgency=low
 

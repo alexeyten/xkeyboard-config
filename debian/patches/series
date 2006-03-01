@@ -15,3 +15,5 @@
 15_symbols_polish_keypad_separator.diff -p3
 16_brazilian_keypad_separator.diff -p3
 17_tr_fix_eacute.diff -p3
+18_riscpc_keycodes.diff
+19_sun_loads_srvr_ctrl.diff -p3
