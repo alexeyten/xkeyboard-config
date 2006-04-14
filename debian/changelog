@@ -1,34 +1,78 @@
-xkb-data-legacy (1.0.1-2) experimental; urgency=low
+xkeyboard-config (0.8-5) unstable; urgency=low
 
-  * Actually install files properly. This removes cruft left over from copy of
-    stuff from xbitmaps data packaging. Thanks Joerg Jaspert for catching this
-    huge mistake.
-  * Rename the package for consistency with xkb-data
-  * Port patches from trunk
-    + general/099l_xkb_cymotion_master_and_ibm_space_saver.diff
-    + general/013a_xkb_symbols_euro_support.diff
-    + general/013_xkb_drop_rules_xorg_duplicates.diff
-    + general/016_czech_include_location.diff
-    + general/034_evdev_xkb.diff
-    + general/081_xkb_fix_AB10_minus_underscore_on_hr.diff
-    + general/082_xkb_AE12_apostrophe_on_pc_de_nodeadkeys.diff
-    + general/084_xkb_implement_grp:sclk_toggle.diff
-    + general/086_enable_ca_variants.diff
-    + general/087_xkb_ralt_switch_multikey.diff
-    + general/090_xkb_fix_uk_macintosh_problems.diff
-    + general/091_xkb_implement_compose:caps.diff
-    + general/093_xkb_fix_macintosh_problems.diff
-    + general/094_xkb_fix_dead_diaresis.diff
-    + general/099g_xkb_symbols_polish_fix_keypad_separator.diff
-    + general/099p_xkb_brazilian_fix_keypad_separator.diff
-    + general/099s_xkb_tr_fix_eacute.diff
-    + arm/300_riscpc_xkb_keycodes.diff
-    + sparc/101b_xkb_sun_loads_srvr_ctrl.diff
+  * Add a symlink rules/xfree86 -> rules/base.  Thanks Daniel Stone.
 
- -- David Nusinow <dnusinow@debian.org>  Tue, 28 Feb 2006 21:44:37 -0500
+ -- Denis Barbier <barbier@debian.org>  Fri, 14 Apr 2006 22:30:25 +0200
 
-xkbdata (1.0.1-1) experimental; urgency=low
+xkeyboard-config (0.8-4) unstable; urgency=low
 
-  * First upload to Debian
+  * Upload to unstable
 
- -- David Nusinow <dnusinow@debian.org>  Thu, 26 Jan 2006 21:59:13 -0500
+ -- David Nusinow <dnusinow@debian.org>  Thu,  6 Apr 2006 19:56:38 -0400
+
+xkeyboard-config (0.8-3) experimental; urgency=low
+
+  * Add a note into NEWS.Debian telling to read README.Debian.
+  * Improve README.Debian again.
+  * Replace /etc/X11/xkb by /usr/share/X11/xkb in docs/README.config too.
+
+ -- Denis Barbier <barbier@debian.org>  Tue, 28 Mar 2006 20:52:21 +0200
+
+xkeyboard-config (0.8-2) experimental; urgency=low
+
+  * Explain in README.Debian how to use xkb-data 0.8 with xorg < 7.0.
+    Thanks Andreas Kroschel  (Closes: #357207)
+  * Update po/fr.po
+
+ -- Denis Barbier <barbier@debian.org>  Thu, 16 Mar 2006 23:27:19 +0100
+
+xkeyboard-config (0.8-1) experimental; urgency=low
+
+  * New upstream release.
+  * This release includes the Khmmer layout.  Closes: #355613
+  * Add Build-Depends-Indep: libxml-parser-perl, which is needed to build rules.xml.
+  * Modify debian/rules so that xkbcomp is not required to build this package.
+    Closes: #355742
+  * Move XKB files into /usr/share/X11/xkb and purge unmodified configuration file
+    when upgrading from previous xkb-data releases.
+  * Remove xkbcomp symlink, it is no more needed.  Closes: #356529
+  * Set Maintainer to Debian X Strike Force, and myself to Uploaders.
+
+ -- Denis Barbier <barbier@debian.org>  Mon, 13 Mar 2006 21:21:25 +0100
+
+xkeyboard-config (0.6-2) experimental; urgency=low
+
+  * symbols/compose: add CapsLock as a compose key.  Closes: #343287
+    Thanks Andreas Kroschel.
+  * symbols/group: add ScrollLock as a group switcher key.
+    Thanks Andreas Kroschel.
+
+ -- Denis Barbier <barbier@debian.org>  Fri, 16 Dec 2005 17:54:43 +0100
+
+xkeyboard-config (0.6-1) experimental; urgency=low
+
+  * New upstream release.
+  * debian/control: Bump Standards-Version to 3.6.2, no changes needed
+    in packaging.
+  * debian/README.Debian: Add a note explaining how to use xkeyboard-config.
+  * Since binary package is xkb-data, files are installed under
+    /etc/X11/xkb-data and not /etc/X11/xkeyboard-config.
+
+ -- Denis Barbier <barbier@debian.org>  Thu,  6 Oct 2005 23:19:59 +0200
+
+xkeyboard-config (0.5-2) experimental; urgency=low
+
+  * Some packages have a versioned dependency on xlibs, so Replaces
+    does not work here.  For the moment, XKB files are moved to
+    /etc/X11/xkeyboard-config
+
+ -- Denis Barbier <barbier@debian.org>  Thu, 17 Mar 2005 22:25:02 +0100
+
+xkeyboard-config (0.5-1) experimental; urgency=low
+
+  * Initial upload.  Closes: #274299
+  * Uploaded to experimental until we decide what to do with the
+    xlibs <-> xkb-data transition.
+
+ -- Denis Barbier <barbier@debian.org>  Wed,  2 Mar 2005 22:28:23 +0100
+
