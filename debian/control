@@ -1,18 +1,24 @@
-Source: xkb-data-legacy
+Source: xkeyboard-config
 Section: x11
-Priority: optional
+Priority: extra
 Maintainer: Debian X Strike Force <debian-x@lists.debian.org>
-Uploaders: David Nusinow <dnusinow@debian.org>, Branden Robinson <branden@debian.org>, Fabio M. Di Nitto <fabbione@fabbione.net>
+Uploaders: Denis Barbier <barbier@debian.org>
 Build-Depends: debhelper (>= 4.0.0)
-Standards-Version: 3.6.1.0
+Build-Depends-Indep: libxml-parser-perl
+Standards-Version: 3.7.2
 
-Package: xkb-data-legacy
+Package: xkb-data
 Architecture: all
-Depends: ${misc:Depends}
-Conflicts: xlibs-data (<< 6.8.2-35), xkb-data
-Replaces: xlibs-data (<< 6.8.2-35), xkb-data
-Pre-Depends: x11-common (>= 1:1.0.0-1)
-Description: Classic XKB data
- This package contains the old xkb datasets. Note that this package is more
- or less unsupported by upstream, and the new xkb-data package will replace
- it.
+Description: X Keyboard Extension (XKB) configuration data
+ This package contains configuration data used by the X Keyboard
+ Extension (XKB), which allows selection of keyboard layouts when
+ using a graphical interface.
+ .
+ Every X11 vendor provides its own XKB data files, so keyboard layout
+ designers have to send their layouts to several places.  The
+ xkeyboard-config project has been launched at FreeDesktop in order
+ to provide a central repository that could be used by all vendors.
+ This package comes from xkeyboard-config, and thus conflicts with
+ and replaces the xlibs package which is part of the XFree86 server.
+ .
+  Homepage: http://www.freedesktop.org/Software/XKeyboardConfig
