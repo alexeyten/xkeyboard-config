@@ -12,6 +12,7 @@ xkeyboard-config (0.8-6) UNRELEASED; urgency=low
       Closes: #363925
     + hr(us) layout apparently broken.  Closes: #373833
     + symbols/inet and rules/base.* do not match.  Closes: #368885
+    + no korean alphabet (hangul) mapping support.  Closes: #342615
 
   * Drop fr.po.diff, included upstream.
 
