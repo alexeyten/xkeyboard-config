@@ -13,31 +13,67 @@ else
 	confflags += --build $(DEB_BUILD_GNU_TYPE) --host $(DEB_HOST_GNU_TYPE)
 endif
 
-xkb_base = /usr/share/X11/xkb
+xkb_base := /usr/share/X11/xkb
+stamp := stamp-dir/
+QUILT := quilt --quiltrc debian/patches/quiltrc
 
-config.status: configure
+$(stamp):
+	mkdir $@
+
+patch: $(stamp)patch
+$(stamp)patch: $(stamp)
+	@if $(QUILT) next >/dev/null 2>&1; then \
+	  echo -n "Applying patches..."; \
+	  if $(QUILT) push -a -v > ${stamp}patch-log 2>&1; then \
+	    echo "successful."; \
+	    mv ${stamp}patch-log $@; \
+	  else \
+	    echo "failed! (check ${stamp}patch-log for details)"; \
+	    exit 1; \
+	  fi; \
+	else \
+	  echo "No patches to apply"; \
+	fi
+
+unpatch:
+	@echo -n "Unapplying patches..."
+	@if $(QUILT) top >/dev/null 2>&1; then \
+	  if $(QUILT) pop -a -v > $(stamp)unpatch-log 2>&1; then \
+	    echo "successful."; \
+	  else \
+	    echo "failed! (check $(stamp)unpatch-log for details)"; \
+	    exit 1; \
+	  fi; \
+	else \
+	  echo "nothing to do."; \
+	fi
+	-rm -f $(stamp)patch $(stamp)patch-log $(stamp)unpatch-log
+	-rm -rf .pc
+
+config.status: $(stamp)configure
+$(stamp)configure: $(stamp)patch
 	dh_testdir
 	./configure $(confflags) \
 	  --prefix=/usr \
 	  --disable-xkbcomp-symlink --with-xkb-rules-symlink=xfree86,xorg \
 	  --with-xkb-base=$(xkb_base) \
 	  XKBCOMP=/no/thanks
+	touch $@
 
-build: build-stamp
-
-build-stamp:  config.status
+build: $(stamp)build
+$(stamp)build: $(stamp)configure
 	dh_testdir
 
 	# Files kept so that xkbcomp is not needed
 	for d in compat geometry keycodes keymap semantics symbols types; \
 	  do cp debian/$$d.dir $$d/; done
 	$(MAKE)
-	touch build-stamp
+	touch $@
 
-clean:
+clean: unpatch
 	dh_testdir
 	dh_testroot
-	rm -f build-stamp 
+	rm -rf $(stamp)
 
 	-$(MAKE) distclean
 	# Files not cleaned up
@@ -47,7 +83,7 @@ clean:
 	dh_clean 
 
 deb:
-	dpkg-buildpackage -rfakeroot -i'/\.git'
+	dpkg-buildpackage -rfakeroot -i'/\.git|/\.svn'
 
 install: build
 	dh_testdir

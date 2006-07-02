@@ -4,7 +4,9 @@ xkeyboard-config (0.8-6) UNRELEASED; urgency=low
 
   * debian/control: Bump Standards-Version to 3.7.2, no changes needed.
 
- -- Denis Barbier <barbier@debian.org>  Fri, 16 Jun 2006 11:49:31 +0200
+  * debian/control: Use quilt to manage changes.
+
+ -- Denis Barbier <barbier@debian.org>  Sun,  2 Jul 2006 22:11:44 +0200
 
 xkeyboard-config (0.8-5) unstable; urgency=low
 

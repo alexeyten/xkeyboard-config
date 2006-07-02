@@ -1,0 +1,54 @@
+--- xkeyboard-config-0.8.orig/symbols/group
++++ xkeyboard-config-0.8/symbols/group
+@@ -293,3 +293,16 @@
+ 	virtualMods= AltGr
+     };
+ };
++
++
++// using the group(sclk_toggle) map, pressing the Scroll Lock key
++// toggles groups.
++partial modifier_keys
++xkb_symbols "sclk_toggle" {
++  virtual_modifiers AltGr;
++  key <SCLK> {
++    virtualMods= AltGr,
++    symbols[Group1] = [ ISO_Next_Group ]
++    };
++};
++
+--- xkeyboard-config-0.8.orig/rules/base.o_s.part
++++ xkeyboard-config-0.8/rules/base.o_s.part
+@@ -20,6 +20,7 @@
+   grp:lctrl_toggle	=	+group(lctrl_toggle)
+   grp:rctrl_toggle	=	+group(rctrl_toggle)
+   grp:lalt_toggle	=	+group(lalt_toggle)
++  grp:sclk_toggle	=	+group(sclk_toggle)
+   lv3:switch		=	+level3(switch)
+   lv3:ralt_switch	=	+level3(ralt_switch)
+   lv3:lalt_switch	=	+level3(lalt_switch)
+--- xkeyboard-config-0.8.orig/rules/base
++++ xkeyboard-config-0.8/rules/base
+@@ -970,6 +970,7 @@
+   grp:lctrl_toggle	=	+group(lctrl_toggle)
+   grp:rctrl_toggle	=	+group(rctrl_toggle)
+   grp:lalt_toggle	=	+group(lalt_toggle)
++  grp:sclk_toggle	=	+group(sclk_toggle)
+   lv3:switch		=	+level3(switch)
+   lv3:ralt_switch	=	+level3(ralt_switch)
+   lv3:lalt_switch	=	+level3(lalt_switch)
+--- xkeyboard-config-0.8.orig/rules/base.xml.in
++++ xkeyboard-config-0.8/rules/base.xml.in
+@@ -2604,6 +2604,12 @@
+           <_description>Right Ctrl key changes group.</_description>
+         </configItem>
+       </option>
++      <option>
++        <configItem>
++          <name>grp:sclk_toggle</name>
++          <_description>ScrollLock key changes group.</_description>
++        </configItem>
++      </option>
+     </group>
+     <group allowMultipleSelection="true">
+       <!-- The key combination used to choose the 3rd (and 4th, together with Shift)
