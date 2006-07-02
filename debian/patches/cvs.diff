@@ -2,7 +2,18 @@ Index: xkb-data/ChangeLog
 ===================================================================
 --- xkb-data.orig/ChangeLog
 +++ xkb-data/ChangeLog
-@@ -1,3 +1,222 @@
+@@ -1,3 +1,233 @@
++2006-07-02  Sergey Udaltsov
++
++	rules/base.xml.in: fixed mismatch between directory and symbols/inet
++	file.
++	https://bugs.freedesktop.org/show_bug.cgi?id=7398
++	
++2006-07-02  Sergey Udaltsov
++
++	symbols/ro: fixed Romanian academic
++	https://bugs.freedesktop.org/show_bug.cgi?id=7393
++	
 +2006-06-28  Sergey Udaltsov
 +
 +	keycodes/evdev: pc105 compatiliby, closing
@@ -225,7 +236,7 @@ Index: xkb-data/ChangeLog
  2006-03-05  Sergey Udaltsov
  
  	configure.in, NEWS, Changelog:Preparing release 0.8
-@@ -35,7 +254,7 @@
+@@ -35,7 +265,7 @@
  	
  2006-02-21 svu
  
@@ -234,12 +245,12 @@ Index: xkb-data/ChangeLog
  	https://bugzilla.redhat.com/bugzilla/show_bug.cgi?id=3807
  	
  2006-02-01 svu
-@@ -742,7 +961,7 @@
+@@ -742,7 +972,7 @@
  
  2004-09-13 22:39  svu
  
 -	* symbols/tj: new local cvs keyword seems to be ok - no more $Id: ChangeLog,v 1.126 2006/03/04 17:33:43 svu Exp $
-+	* symbols/tj: new local cvs keyword seems to be ok - no more $Id: ChangeLog,v 1.168 2006-06-28 21:15:54 svu Exp $
++	* symbols/tj: new local cvs keyword seems to be ok - no more $Id: ChangeLog,v 1.170 2006-07-02 21:28:19 svu Exp $
  
  2004-09-13 22:38  svu
  
@@ -65293,7 +65304,7 @@ Index: xkb-data/rules/base.lst
    gyration        Gyration
    hpi6            Hewlett-Packard Internet Keyboard
    hp2501          Hewlett-Packard SK-2501 Multimedia Keyboard
-@@ -68,6 +71,7 @@
+@@ -68,21 +71,21 @@
    logiaccess      Logitech Access Keyboard
    ltcd            Logitech Cordless Desktop
    logicdit        Logitech Cordless Desktop iTouch
@@ -65301,13 +65312,18 @@ Index: xkb-data/rules/base.lst
    logicdp         Logitech Cordless Desktop Pro
    logicdpa        Logitech Cordless Desktop Pro (alternate option)
    logicdpa2       Logitech Cordless Desktop Pro (alternate option2)
-@@ -80,9 +84,12 @@
-   itouch          Logitech iTouch
+   logicdo         Logitech Cordless Desktop Optical
+   logicfn         Logitech Cordless Freedom/Desktop Navigator
+   logicdn         Logitech Cordless Desktop Navigator
+-  logidak         Logitech Deluxe Access Keyboard
    logiitc         Logitech iTouch Cordless Keyboard (model Y-RB6)
    logiik          Logitech Internet Keyboard
+   itouch          Logitech iTouch
+-  logiitc         Logitech iTouch Cordless Keyboard (model Y-RB6)
+-  logiik          Logitech Internet Keyboard
 -  logiink         Logitech Internet Navigator Keyboard
+-  itouchin        Logitech iTouch keyboard Internet Navigator
 +  logicink        Logitech Internet Navigator Keyboard
-   itouchin        Logitech iTouch keyboard Internet Navigator
 +  logiinkse       Logitech iTouch Internet Navigator Keyboard SE
 +  logiinkseusb    Logitech iTouch Internet Navigator Keyboard SE (USB)
    logiultrax      Logitech Ultra-X Keyboard
@@ -65315,7 +65331,7 @@ Index: xkb-data/rules/base.lst
    mx1998          Memorex MX1998
    mx2500          Memorex MX2500 EZ-Access Keyboard
    mx2750          Memorex MX2750
-@@ -113,9 +120,13 @@
+@@ -113,9 +116,13 @@
    macintosh_old   Macintosh Old
    powerpcps2      PowerPC PS/2
    acer_tm_800     Acer TravelMate 800
@@ -65329,7 +65345,7 @@ Index: xkb-data/rules/base.lst
  
  ! layout
    us              U.S. English
-@@ -134,6 +145,7 @@
+@@ -134,6 +141,7 @@
    bg              Bulgaria
    mm              Myanmar
    ca              Canada
@@ -65337,7 +65353,7 @@ Index: xkb-data/rules/base.lst
    hr              Croatia
    cz              Czechia
    dk              Denmark
-@@ -141,6 +153,7 @@
+@@ -141,6 +149,7 @@
    bt              Bhutan
    ee              Estonia
    ir              Iran
@@ -65345,7 +65361,7 @@ Index: xkb-data/rules/base.lst
    fo              Faroe Islands
    fi              Finland
    fr              France
-@@ -184,12 +197,14 @@
+@@ -184,12 +193,14 @@
    gb              United Kingdom
    uz              Uzbekistan
    vn              Vietnam
@@ -65361,7 +65377,7 @@ Index: xkb-data/rules/base.lst
  
  ! variant
    intl            us: International (with dead keys)
-@@ -212,6 +227,7 @@
+@@ -212,6 +223,7 @@
    iso-alternate   be: ISO Alternate
    nodeadkeys      be: Eliminate dead keys
    sundeadkeys     be: Sun dead keys
@@ -65369,7 +65385,7 @@ Index: xkb-data/rules/base.lst
    probhat         bd: Probhat
    ben             in: Bengali
    ben_probhat     in: Bengali Probhat
-@@ -252,9 +268,16 @@
+@@ -252,9 +264,16 @@
    pro             ir: Pro
    keypad          ir: Keypad
    pro_keypad      ir: Pro Keypad
@@ -65386,7 +65402,7 @@ Index: xkb-data/rules/base.lst
    nodeadkeys      fr: Eliminate dead keys
    sundeadkeys     fr: Sun dead keys
    latin9          fr: Alternative
-@@ -275,6 +298,7 @@
+@@ -275,6 +294,7 @@
    ro_nodeadkeys   de: Romanian keyboard with German letters, eliminate dead keys
    dvorak          de: Dvorak
    sundeadkeys     de: Sun dead keys
@@ -65394,7 +65410,7 @@ Index: xkb-data/rules/base.lst
    extended        gr: Extended
    nodeadkeys      gr: Eliminate dead keys
    polytonic       gr: Polytonic
-@@ -300,7 +324,6 @@
+@@ -300,7 +320,6 @@
    Sundeadkeys     is: Sun dead keys
    nodeadkeys      is: Eliminate dead keys
    lyx             il: lyx
@@ -65402,7 +65418,7 @@ Index: xkb-data/rules/base.lst
    phonetic        il: Phonetic
    nodeadkeys      it: Eliminate dead keys
    ruskaz          kz: Russian with Kazakh
-@@ -313,7 +336,7 @@
+@@ -313,7 +332,7 @@
    tilde           lv: Tilde (~) variant
    fkey            lv: F-letter (F) variant
    nodeadkeys      mk: Eliminate dead keys
@@ -65411,7 +65427,7 @@ Index: xkb-data/rules/base.lst
    nodeadkeys      no: Eliminate dead keys
    dvorak          no: Dvorak
    smi             no: Northern Saami
-@@ -358,8 +381,13 @@
+@@ -358,8 +377,13 @@
    fr              ch: French
    fr_nodeadkeys   ch: French, eliminate dead keys
    fr_sundeadkeys  ch: French, Sun dead keys
@@ -65425,7 +65441,7 @@ Index: xkb-data/rules/base.lst
    tam_unicode     lk: Tamil Unicode
    tam_TAB         lk: Tamil TAB Typewriter
    tis             th: TIS-820.2538
-@@ -367,6 +395,9 @@
+@@ -367,6 +391,9 @@
    f               tr: (F)
    alt             tr: Alt-Q
    sundeadkeys     tr: Sun dead keys
@@ -65435,7 +65451,7 @@ Index: xkb-data/rules/base.lst
    phonetic        ua: Phonetic
    typewriter      ua: Typewriter
    winkeys         ua: Winkeys
-@@ -374,6 +405,7 @@
+@@ -374,6 +401,7 @@
    rstu_ru         ua: Standard RSTU on Russian layout
    intl            gb: International (with dead keys)
    dvorak          gb: Dvorak
@@ -65443,7 +65459,7 @@ Index: xkb-data/rules/base.lst
    CloGaelach      ie: CloGaelach
    UnicodeExpert   ie: UnicodeExpert
    ogam            ie: Ogham
-@@ -441,6 +473,7 @@
+@@ -441,6 +469,7 @@
    altwin:alt_super_win Alt is mapped to the right Win-key and Super to Menu.
    Compose key          Compose key position
    compose:ralt         Right Alt is Compose.
@@ -65562,47 +65578,63 @@ Index: xkb-data/rules/base.xml.in
          <name>logicdp</name>
          <_description>Logitech Cordless Desktop Pro</_description>
        </configItem>
-@@ -490,7 +514,7 @@
+@@ -454,12 +478,6 @@
+     </model>
+     <model>
+       <configItem>
+-        <name>logidak</name>
+-        <_description>Logitech Deluxe Access Keyboard</_description>
+-      </configItem>
+-    </model>
+-    <model>
+-      <configItem>
+         <name>logiitc</name>
+         <_description>Logitech iTouch Cordless Keyboard (model Y-RB6)</_description>
+       </configItem>
+@@ -478,32 +496,32 @@
+     </model>
+     <model>
+       <configItem>
+-        <name>logiitc</name>
+-        <_description>Logitech iTouch Cordless Keyboard (model Y-RB6)</_description>
++        <name>logicink</name>
++        <_description>Logitech Internet Navigator Keyboard</_description>
+       </configItem>
+     </model>
+     <model>
+       <configItem>
+-        <name>logiik</name>
+-        <_description>Logitech Internet Keyboard</_description>
++        <name>logiinkse</name>
++        <_description>Logitech iTouch Internet Navigator Keyboard SE</_description>
+       </configItem>
      </model>
      <model>
        <configItem>
 -        <name>logiink</name>
-+        <name>logicink</name>
-         <_description>Logitech Internet Navigator Keyboard</_description>
-       </configItem>
-     </model>
-@@ -502,12 +526,30 @@
-     </model>
-     <model>
-       <configItem>
-+        <name>logiinkse</name>
-+        <_description>Logitech iTouch Internet Navigator Keyboard SE</_description>
-+      </configItem>
-+    </model>
-+    <model>
-+      <configItem>
+-        <_description>Logitech Internet Navigator Keyboard</_description>
 +        <name>logiinkseusb</name>
 +        <_description>Logitech iTouch Internet Navigator Keyboard SE (USB)</_description>
-+      </configItem>
-+    </model>
-+    <model>
-+      <configItem>
-         <name>logiultrax</name>
-         <_description>Logitech Ultra-X Keyboard</_description>
        </configItem>
      </model>
      <model>
        <configItem>
+-        <name>itouchin</name>
+-        <_description>Logitech iTouch keyboard Internet Navigator</_description>
++        <name>logiultrax</name>
++        <_description>Logitech Ultra-X Keyboard</_description>
+       </configItem>
+     </model>
+     <model>
+       <configItem>
+-        <name>logiultrax</name>
+-        <_description>Logitech Ultra-X Keyboard</_description>
 +        <name>dinovo</name>
 +        <_description>Logitech diNovo Keyboard</_description>
-+      </configItem>
-+    </model>
-+    <model>
-+      <configItem>
-         <name>mx1998</name>
-         <_description>Memorex MX1998</_description>
        </configItem>
-@@ -688,12 +730,30 @@
+     </model>
+     <model>
+@@ -688,12 +706,30 @@
      </model>
      <model>
        <configItem>
@@ -65633,7 +65665,7 @@ Index: xkb-data/rules/base.xml.in
          <name>silvercrest</name>
          <_description>SILVERCREST Multimedia Wireless Keyboard</_description>
        </configItem>
-@@ -704,6 +764,12 @@
+@@ -704,6 +740,12 @@
          <_description>Laptop/notebook eMachines m68xx</_description>
        </configItem>
      </model>
@@ -65646,7 +65678,7 @@ Index: xkb-data/rules/base.xml.in
    </modelList>
    <layoutList>
      <layout>
-@@ -903,6 +969,12 @@
+@@ -903,6 +945,12 @@
              <_description>Sun dead keys</_description>
            </configItem>
          </variant>
@@ -65659,7 +65691,7 @@ Index: xkb-data/rules/base.xml.in
        </variantList>
      </layout>
      <layout>
-@@ -1125,6 +1197,14 @@
+@@ -1125,6 +1173,14 @@
      </layout>
      <layout>
        <configItem>
@@ -65674,7 +65706,7 @@ Index: xkb-data/rules/base.xml.in
          <name>hr</name>
          <_shortDescription>Hrv</_shortDescription>
          <_description>Croatia</_description>
-@@ -1266,6 +1346,51 @@
+@@ -1266,6 +1322,51 @@
              <_description>Pro Keypad</_description>
            </configItem>
          </variant>
@@ -65726,7 +65758,7 @@ Index: xkb-data/rules/base.xml.in
        </variantList>
      </layout>
      <layout>
-@@ -1302,6 +1427,12 @@
+@@ -1302,6 +1403,12 @@
              <_description>Northern Saami</_description>
            </configItem>
          </variant>
@@ -65739,7 +65771,7 @@ Index: xkb-data/rules/base.xml.in
        </variantList>
      </layout>
      <layout>
-@@ -1458,6 +1589,12 @@
+@@ -1458,6 +1565,12 @@
              <_description>Sun dead keys</_description>
            </configItem>
          </variant>
@@ -65752,7 +65784,7 @@ Index: xkb-data/rules/base.xml.in
        </variantList>
      </layout>
      <layout>
-@@ -1613,8 +1750,6 @@
+@@ -1613,8 +1726,6 @@
              <_description>102/qwerty/dot/Eliminate dead keys</_description>
            </configItem>
          </variant>
@@ -65761,7 +65793,7 @@ Index: xkb-data/rules/base.xml.in
        </variantList>
      </layout>
      <layout>
-@@ -1653,12 +1788,6 @@
+@@ -1653,12 +1764,6 @@
          </variant>
          <variant>
            <configItem>
@@ -65774,7 +65806,7 @@ Index: xkb-data/rules/base.xml.in
              <name>phonetic</name>
              <_description>Phonetic</_description>
            </configItem>
-@@ -1835,7 +1964,7 @@
+@@ -1835,7 +1940,7 @@
          <variant>
            <configItem>
              <name>us</name>
@@ -65783,7 +65815,7 @@ Index: xkb-data/rules/base.xml.in
            </configItem>
          </variant>
        </variantList>
-@@ -2209,6 +2338,18 @@
+@@ -2209,6 +2314,18 @@
              <_description>French, Sun dead keys</_description>
            </configItem>
          </variant>
@@ -65802,7 +65834,7 @@ Index: xkb-data/rules/base.xml.in
        </variantList>
      </layout>
      <layout>
-@@ -2230,6 +2371,24 @@
+@@ -2230,6 +2347,24 @@
              <_description>Syriac phonetic</_description>
            </configItem>
          </variant>
@@ -65827,7 +65859,7 @@ Index: xkb-data/rules/base.xml.in
        </variantList>
      </layout>
      <layout>
-@@ -2307,6 +2466,24 @@
+@@ -2307,6 +2442,24 @@
              <_description>Sun dead keys</_description>
            </configItem>
          </variant>
@@ -65852,7 +65884,7 @@ Index: xkb-data/rules/base.xml.in
        </variantList>
      </layout>
      <layout>
-@@ -2388,10 +2565,25 @@
+@@ -2388,10 +2541,25 @@
        <variantList/>
      </layout>
      <layout>
@@ -65879,7 +65911,7 @@ Index: xkb-data/rules/base.xml.in
        </configItem>
        <variantList/>
      </layout>
-@@ -2458,6 +2650,13 @@
+@@ -2458,6 +2626,13 @@
  	<_description>Esperanto</_description>
        </configItem>
      </layout>
@@ -65893,7 +65925,7 @@ Index: xkb-data/rules/base.xml.in
    </layoutList>
    <optionList>
      <group allowMultipleSelection="true">
-@@ -2837,6 +3036,12 @@
+@@ -2837,6 +3012,12 @@
        </option>
        <option>
          <configItem>
@@ -66339,7 +66371,7 @@ Index: xkb-data/symbols/Makefile.am
 ===================================================================
 --- xkb-data.orig/symbols/Makefile.am
 +++ xkb-data/symbols/Makefile.am
-@@ -5,15 +5,15 @@
+@@ -5,20 +5,20 @@
  ad af al am ara \
  az be bd \
  bg br ba \
@@ -66358,6 +66390,12 @@ Index: xkb-data/symbols/Makefile.am
  latam latin lk \
  lt lv mao \
  mk mm mn \
+ mt mv nl \
+-no pc pk \
++no np pc pk \
+ pl pt ro \
+ ru se si \
+ sk sy th \
 Index: xkb-data/symbols/Makefile.in
 ===================================================================
 --- xkb-data.orig/symbols/Makefile.in
@@ -66433,7 +66471,7 @@ Index: xkb-data/symbols/Makefile.in
  sbindir = @sbindir@
  sharedstatedir = @sharedstatedir@
  sysconfdir = @sysconfdir@
-@@ -167,15 +175,15 @@
+@@ -167,20 +175,20 @@
  ad af al am ara \
  az be bd \
  bg br ba \
@@ -66452,6 +66490,12 @@ Index: xkb-data/symbols/Makefile.in
  latam latin lk \
  lt lv mao \
  mk mm mn \
+ mt mv nl \
+-no pc pk \
++no np pc pk \
+ pl pt ro \
+ ru se si \
+ sk sy th \
 @@ -190,8 +198,7 @@
  altwin capslock compose ctrl group inet keypad level3 level5 srvr_ctrl \
  eurosign
@@ -67463,6 +67507,16 @@ Index: xkb-data/symbols/gh
      include "level3(ralt_switch)"
  
  };
+Index: xkb-data/symbols/gr
+===================================================================
+--- xkb-data.orig/symbols/gr
++++ xkb-data/symbols/gr
+@@ -1,4 +1,4 @@
+-// $XKeyboardConfig: xkbdesc/symbols/gr,v 1.7 2005/10/04 17:32:19 svu Exp $
++// $XKeyboardConfig: xkbdesc/symbols/gr,v 1.7 2005-10-04 17:32:19 svu Exp $
+ 
+ // $XFree86: xc/programs/xkbcomp/symbols/el,v 1.2 2002/11/15 02:26:41 dawes Exp $
+ //
 Index: xkb-data/symbols/group
 ===================================================================
 --- xkb-data.orig/symbols/group
@@ -68652,6 +68706,80 @@ Index: xkb-data/symbols/no
  // $XFree86: xc/programs/xkbcomp/symbols/no,v 1.3 2002/12/19 01:07:56 dawes Exp $
  
  partial default alphanumeric_keys
+Index: xkb-data/symbols/np
+===================================================================
+--- /dev/null
++++ xkb-data/symbols/np
+@@ -0,0 +1,69 @@
++// $XKeyboardConfig: xkbdesc/symbols/np,v 1.1 2006-07-02 22:13:55 svu Exp $
++
++// based on a keyboard map from an 'xkb/symbols/dev' file
++//
++// $XFree86: xc/programs/xkbcomp/symbols/pc/dev,v 1.2 2002/11/22 04:03:28 dawes Exp $
++
++partial default alphanumeric_keys 
++xkb_symbols "basic" {
++
++      name[Group1]= "Nepal";
++
++// `,1,2,3,4,5,6,7,8,9,0,-,=
++
++      key <TLDE> { [      0x100093D,0x100093C ]	};
++      key <AE01> { [      0x1000967	 		]	};
++      key <AE02> { [      0x1000968			]	};
++      key <AE03> { [      0x1000969 	 		]	};
++      key <AE04> { [      0x100096A  	 		]	};
++      key <AE05> { [      0x100096B  	 		]	};
++      key <AE06> { [      0x100096C  	 		]	};
++      key <AE07> { [      0x100096D                     ]	};
++      key <AE08> { [      0x100096e  	 		]	};
++      key <AE09> { [      0x100096F	 		]	};
++      key <AE10> { [      0x1000966,0x1000970		]	};
++      key <AE11> { [      minus, 0x1000952 		]	};
++      key <AE12> { [      equals, 0x100200C 		]	};
++
++// q,w,e,r,t,y,u,i,o,p,[,]
++
++      key <AD01> { [      0x100091F,  0x1000920       	]	};
++      key <AD02> { [      0x100094C,  0x1000914       	]	};
++      key <AD03> { [      0x1000947,  0x1000948       	]	};
++      key <AD04> { [      0x1000930,  0x1000943       	]	};
++      key <AD05> { [      0x1000924,  0x1000925       	]	};
++      key <AD06> { [      0x100092F,  0x100091E 	]	};
++      key <AD07> { [      0x1000941,  0x1000942 	]	};
++      key <AD08> { [      0x100093F,  0x1000940 	]	};
++      key <AD09> { [      0x100094B,  0x1000913		]	};
++      key <AD10> { [      0x100092A,  0x100092B 	]	};
++      key <AD11> { [      0x1000907,  0x1000908		]	};
++      key <AD12> { [      0x100090F,  0x1000910		]	};
++
++// a,s,d,f,g,h,j,k,l,;,',Backslash 
++      key <AC01> { [      0x100093E,  0x1000906       	]	};
++      key <AC02> { [      0x1000938,  0x1000936       	]	};
++      key <AC03> { [      0x1000926,  0x1000927       	]	};
++      key <AC04> { [      0x1000909,  0x100090A       	]	};
++      key <AC05> { [      0x1000917,  0x1000918       	]	};
++      key <AC06> { [      0x1000939,  0x1000905 	]	};
++      key <AC07> { [      0x100091C,  0x100091D 	]	};
++      key <AC08> { [      0x1000915,  0x1000916 	]	};
++      key <AC09> { [      0x1000932,  0x1000933 	]	};
++      key <AC10> { [      semicolon,  colon 		]	};
++      key <AC11> { [      quoteright, quotedbl 		]	};
++      key <BKSL> { [      0x1000950,  0x1000903 	]	};
++
++
++// z,x,c,v,b,n,m,,,.,/ 
++      key <AB01> { [      0x1000937,  0x100090B		]	};
++      key <AB02> { [      0x1000921,  0x1000922		]	};
++      key <AB03> { [      0x100091B,  0x100091A         ]       };
++      key <AB04> { [      0x1000935,  0x1000901		]       };
++      key <AB05> { [      0x100092C,  0x100092D		]       };
++      key <AB06> { [      0x1000928,  0x1000923         ]       };
++      key <AB07> { [      0x100092E,  0x1000902         ]       };
++      key <AB08> { [      comma,      0x1000919         ]       };
++      key <AB09> { [      0x1000964,  0x1000965		]       };
++      key <AB10> { [      0x100094D,  question		]       };
++};
 Index: xkb-data/symbols/pc
 ===================================================================
 --- xkb-data.orig/symbols/pc
@@ -68706,10 +68834,43 @@ Index: xkb-data/symbols/ro
 +++ xkb-data/symbols/ro
 @@ -1,4 +1,4 @@
 -// $XKeyboardConfig: xkbdesc/symbols/ro,v 1.11 2005/09/04 22:01:52 svu Exp $
-+// $XKeyboardConfig: xkbdesc/symbols/ro,v 1.11 2005-09-04 22:01:52 svu Exp $
++// $XKeyboardConfig: xkbdesc/symbols/ro,v 1.12 2006-07-02 21:05:20 svu Exp $
  // $XFree86: xc/programs/xkbcomp/symbols/ro,v 1.6 2003/09/08 13:12:51 pascal Exp $
  //
  // Complete set of Romanian keyboards as described in the new Romanian standard
+@@ -7,15 +7,15 @@
+ // 
+ // The default mapping is the RO_US/Programmers layout because of the lack of 
+ // Romanian hardware keyboards. The primary standard layout is implemented as 
+-// the "standard" variant. If you're determined to get commas bellow as in 
++// the "std" variant. If you're really determined to get commas bellow as in 
+ // ISO-8859-16 (and not cedillas as in ISO-8859-2) use the already defined 
+ // variants: "comma" for the default layout or "academic" for the standard one.
+-// MS compatible layout included (use the "ms" variant).
++// MS compatible layout included (use the "winkeys" variant).
+ // 
+ // Created by Cristian Gafton, <gafton@redhat.com> (C) 2000
+ // Modified by Marius Andreiana, <mandreiana@yahoo.com> (C) 2001
+-// Completed by Misu Moldovan, <dumol@gnome.ro> (C) 2001, 2004, 2005.
+-// 
++// Completed by Misu Moldovan, <dumol@gnome.ro> (C) 2001, 2004-2006.
++// v 1.2
+ 
+ 
+ default partial alphanumeric_keys
+@@ -124,10 +124,10 @@
+ xkb_symbols "academic" {
+     // Academic variant of the standard layout with comma bellow.
+     // Implements S and T with comma bellow as in ISO-8859-16.
+-    // Hopefully these diacritics should become mainstream in a few years.
++    // Hopefully these should become mainstream in a few years.
+     // For now it's the oddest variant (although the perfect one).
+ 
+-    include "ro(standard)"
++    include "ro(std)"
+ 
+     key <AC10> { [ 0x1000219,	   0x1000218 ] };
+     key <AC11> { [ 0x100021b,	   0x100021a ] };
 Index: xkb-data/symbols/ru
 ===================================================================
 --- xkb-data.orig/symbols/ru
