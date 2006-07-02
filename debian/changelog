@@ -6,6 +6,14 @@ xkeyboard-config (0.8-6) UNRELEASED; urgency=low
 
   * debian/control: Use quilt to manage changes.
 
+  * Sync with CVS 2006-06-30.
+    The following bugs have been fixed upstream:
+    + XF86AudioRaiseVolume is defined twice for Logitech keyboards.
+      Closes: #363925
+    + hr(us) layout apparently broken.  Closes: #373833
+
+  * Drop fr.po.diff, included upstream.
+
  -- Denis Barbier <barbier@debian.org>  Sun,  2 Jul 2006 22:11:44 +0200
 
 xkeyboard-config (0.8-5) unstable; urgency=low

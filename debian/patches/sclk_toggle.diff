@@ -1,5 +1,7 @@
---- xkeyboard-config-0.8.orig/symbols/group
-+++ xkeyboard-config-0.8/symbols/group
+Index: xkb-data/symbols/group
+===================================================================
+--- xkb-data.orig/symbols/group
++++ xkb-data/symbols/group
 @@ -293,3 +293,16 @@
  	virtualMods= AltGr
      };
@@ -17,8 +19,10 @@
 +    };
 +};
 +
---- xkeyboard-config-0.8.orig/rules/base.o_s.part
-+++ xkeyboard-config-0.8/rules/base.o_s.part
+Index: xkb-data/rules/base.o_s.part
+===================================================================
+--- xkb-data.orig/rules/base.o_s.part
++++ xkb-data/rules/base.o_s.part
 @@ -20,6 +20,7 @@
    grp:lctrl_toggle	=	+group(lctrl_toggle)
    grp:rctrl_toggle	=	+group(rctrl_toggle)
@@ -27,9 +31,11 @@
    lv3:switch		=	+level3(switch)
    lv3:ralt_switch	=	+level3(ralt_switch)
    lv3:lalt_switch	=	+level3(lalt_switch)
---- xkeyboard-config-0.8.orig/rules/base
-+++ xkeyboard-config-0.8/rules/base
-@@ -970,6 +970,7 @@
+Index: xkb-data/rules/base
+===================================================================
+--- xkb-data.orig/rules/base
++++ xkb-data/rules/base
+@@ -990,6 +990,7 @@
    grp:lctrl_toggle	=	+group(lctrl_toggle)
    grp:rctrl_toggle	=	+group(rctrl_toggle)
    grp:lalt_toggle	=	+group(lalt_toggle)
@@ -37,9 +43,11 @@
    lv3:switch		=	+level3(switch)
    lv3:ralt_switch	=	+level3(ralt_switch)
    lv3:lalt_switch	=	+level3(lalt_switch)
---- xkeyboard-config-0.8.orig/rules/base.xml.in
-+++ xkeyboard-config-0.8/rules/base.xml.in
-@@ -2604,6 +2604,12 @@
+Index: xkb-data/rules/base.xml.in
+===================================================================
+--- xkb-data.orig/rules/base.xml.in
++++ xkb-data/rules/base.xml.in
+@@ -2803,6 +2803,12 @@
            <_description>Right Ctrl key changes group.</_description>
          </configItem>
        </option>
@@ -52,3 +60,15 @@
      </group>
      <group allowMultipleSelection="true">
        <!-- The key combination used to choose the 3rd (and 4th, together with Shift)
+Index: xkb-data/rules/base.lst
+===================================================================
+--- xkb-data.orig/rules/base.lst
++++ xkb-data/rules/base.lst
+@@ -436,6 +436,7 @@
+   grp:rshift_toggle    Right Shift key changes group.
+   grp:lctrl_toggle     Left Ctrl key changes group.
+   grp:rctrl_toggle     Right Ctrl key changes group.
++  grp:sclk_toggle      ScrollLock key changes group.
+   lv3                  Third level choosers
+   lv3:switch           Press Right Ctrl to choose 3rd level.
+   lv3:menu_switch      Press Menu key to choose 3rd level.
