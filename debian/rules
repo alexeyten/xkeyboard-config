@@ -70,7 +70,7 @@ $(stamp)build: $(stamp)configure
 	$(MAKE)
 	touch $@
 
-clean: unpatch
+clean: $(stamp) unpatch
 	dh_testdir
 	dh_testroot
 	rm -rf $(stamp)
