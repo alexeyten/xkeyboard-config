@@ -1,4 +1,4 @@
-xkeyboard-config (0.8-6) UNRELEASED; urgency=low
+xkeyboard-config (0.8-6) unstable; urgency=low
 
   * debian/control: Move debhelper from Build-Depends-Indep to Build-Depends.
 
