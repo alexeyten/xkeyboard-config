@@ -1,0 +1,104 @@
+Index: xkb-data/symbols/macintosh_vndr/de
+===================================================================
+--- xkb-data.orig/symbols/macintosh_vndr/de
++++ xkb-data/symbols/macintosh_vndr/de
+@@ -9,6 +9,8 @@
+     // Describes the differences between a very simple US/ASCII
+     // keyboard and a very simple German keybaord
+ 
++    include "latin"
++
+     // Alphanumeric section
+     name[Group1]= "German";
+     key <TLDE> {	[ dead_circumflex,	degree	],
+Index: xkb-data/symbols/macintosh_vndr/dk
+===================================================================
+--- xkb-data.orig/symbols/macintosh_vndr/dk
++++ xkb-data/symbols/macintosh_vndr/dk
+@@ -7,6 +7,8 @@
+     // keyboard and a Danish keyboard with dead key support
+     // and all of ISO-8859-1 characters available.
+ 
++    include "latin"
++
+     name[Group1]= "Danish";
+ 
+     key <TLDE> {	[         onehalf,         section      ],
+Index: xkb-data/symbols/macintosh_vndr/es
+===================================================================
+--- xkb-data.orig/symbols/macintosh_vndr/es
++++ xkb-data/symbols/macintosh_vndr/es
+@@ -5,6 +5,8 @@
+     // Describes the differences between a very simple mac_US
+     // keyboard and a very simple Spanish keybaord
+ 
++    include "latin"
++
+     name[Group1]= "Spanish";
+ 
+     key <TLDE> {	[     bracketleft,    bracketright	],	
+Index: xkb-data/symbols/macintosh_vndr/gb
+===================================================================
+--- xkb-data.orig/symbols/macintosh_vndr/gb
++++ xkb-data/symbols/macintosh_vndr/gb
+@@ -6,6 +6,8 @@
+     // Describes the differences between a very simple en_US
+     // keyboard and a very simple U.K. keyboard layout
+ 
++    include "latin"
++
+     name[Group1]= "Great Britain";
+ 
+     key <AE03> {	[               3,        sterling     	],
+Index: xkb-data/symbols/macintosh_vndr/nl
+===================================================================
+--- xkb-data.orig/symbols/macintosh_vndr/nl
++++ xkb-data/symbols/macintosh_vndr/nl
+@@ -5,6 +5,8 @@
+     // Describes the differences between a very simple mac_US
+     // keyboard and a very simple netherland keybaord
+ 
++    include "latin"
++
+     name[Group1]= "Netherland";
+ 
+ // do just nothing
+Index: xkb-data/symbols/macintosh_vndr/no
+===================================================================
+--- xkb-data.orig/symbols/macintosh_vndr/no
++++ xkb-data/symbols/macintosh_vndr/no
+@@ -6,6 +6,8 @@
+     // Describes the differences between a very simple en_US
+     // keyboard and a very simple Norwegian keybaord
+ 
++    include "latin"
++
+     name[Group1]= "Norwegian";
+ 
+     key <TLDE> {	[             bar,         section      ]	};
+Index: xkb-data/symbols/macintosh_vndr/pt
+===================================================================
+--- xkb-data.orig/symbols/macintosh_vndr/pt
++++ xkb-data/symbols/macintosh_vndr/pt
+@@ -8,6 +8,8 @@
+     // Describes the differences between a very simple en_US
+     // keyboard and a very simple Portuguese keybaord
+ 
++    include "latin"
++
+     name[Group1]= "Portuguese";
+ 
+     key <LSGT> {	[	     less,	   greater	],
+Index: xkb-data/symbols/macintosh_vndr/se
+===================================================================
+--- xkb-data.orig/symbols/macintosh_vndr/se
++++ xkb-data/symbols/macintosh_vndr/se
+@@ -6,6 +6,8 @@
+     // Describes the differences between a very simple en_US
+     // keyboard and a very simple Swedish(Sweden) keybaord
+ 
++    include "latin"
++
+     name[Group1]= "Swedish";
+ 
+     key <TLDE> {	[         section,         degree	]	};

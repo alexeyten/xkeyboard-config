@@ -1,0 +1,18 @@
+Index: xkb-data/symbols/macintosh_vndr/gb
+===================================================================
+--- xkb-data.orig/symbols/macintosh_vndr/gb
++++ xkb-data/symbols/macintosh_vndr/gb
+@@ -6,11 +6,12 @@
+     // Describes the differences between a very simple en_US
+     // keyboard and a very simple U.K. keyboard layout
+ 
+-
+     name[Group1]= "Great Britain";
+ 
+     key <AE03> {	[               3,        sterling     	],
+ 			[      numbersign			]	};
++    key <LSGT> {	[       quoteleft,      asciitilde ] };
++    key <TLDE> {	[         section,       plusminus ] };
+ 
+     // End alphanumeric section
+     
