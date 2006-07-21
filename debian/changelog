@@ -6,6 +6,9 @@ xkeyboard-config (0.8-7) UNRELEASED; urgency=low
   * debian/patches/macintosh.diff: New patch to include 'latin' layout.
     Closes: #366615, #363525
 
+  * debian/patches/update-bt.diff: New patch to update the Bhutanese layout.
+    Closes: #378309 Thanks Christian Perrier
+
  -- Denis Barbier <barbier@debian.org>  Fri, 21 Jul 2006 22:50:11 +0200
 
 xkeyboard-config (0.8-6) unstable; urgency=low
