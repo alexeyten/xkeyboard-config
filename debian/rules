@@ -64,6 +64,8 @@ build: $(stamp)build
 $(stamp)build: $(stamp)configure
 	dh_testdir
 
+	# Remove these files to ensure that they are rebuilt
+	cd rules && rm -f base base.xml base.lst
 	# Files kept so that xkbcomp is not needed
 	for d in compat geometry keycodes keymap semantics symbols types; \
 	  do cp debian/$$d.dir $$d/; done

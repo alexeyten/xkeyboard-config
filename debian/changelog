@@ -1,4 +1,4 @@
-xkeyboard-config (0.8-7) UNRELEASED; urgency=low
+xkeyboard-config (0.8-7) unstable; urgency=low
 
   * debian/patches/macintosh-gb.diff: New patch to fix <LSGT> and <TLDE> keys.
     Closes: #379148 Thanks Roger Leigh
@@ -9,7 +9,9 @@ xkeyboard-config (0.8-7) UNRELEASED; urgency=low
   * debian/patches/update-bt.diff: New patch to update the Bhutanese layout.
     Closes: #378309 Thanks Christian Perrier
 
- -- Denis Barbier <barbier@debian.org>  Fri, 21 Jul 2006 22:50:11 +0200
+  * debian/rules: Make sure that rules/base{,.lst,.xml} files are rebuilt.
+
+ -- Denis Barbier <barbier@debian.org>  Mon, 14 Aug 2006 16:10:41 +0200
 
 xkeyboard-config (0.8-6) unstable; urgency=low
 
