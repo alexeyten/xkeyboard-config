@@ -10,7 +10,7 @@ Index: symbols/hr
 +    key <AE01> { [         1,     exclam,   asciitilde,   dead_tilde ] };
 +    key <AE03> { [         3, numbersign,  asciicircum, dead_circumflex ] };
 +    key <AE05> { [         5,    percent,       degree, dead_abovering ] };
-+    key <TLDE> { [dead_cedilla, dead_diaeresis, notsign,     notsign ] };
++    key <AE07> { [         7,      slash,        grave,   dead_grave ] };
 +    key <AB10> { [     minus, underscore, dead_belowdot, dead_abovedot ] };
  };
  
