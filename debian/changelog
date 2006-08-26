@@ -4,6 +4,9 @@ xkeyboard-config (0.8-8) UNRELEASED; urgency=low
     some differences with previous XFree86 keymap had been introduced
     in xkeyboard-config.  Closes: #379292  Thanks Josip Rodin
 
+  * debian/patches/mac_fnkeys.diff: New patch to fix console switching
+    with Macintosh us layout.  Closes: #370564  Thanks Ben Mueller
+
  -- Denis Barbier <barbier@debian.org>  Sat, 26 Aug 2006 14:54:51 +0200
 
 xkeyboard-config (0.8-7) unstable; urgency=low
