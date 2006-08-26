@@ -4,3 +4,4 @@ sclk_toggle.diff
 update-bt.diff
 macintosh-gb.diff
 macintosh.diff
+fix_symbols_hr.diff -p0
