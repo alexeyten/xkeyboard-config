@@ -7,6 +7,10 @@ xkeyboard-config (0.8-8) UNRELEASED; urgency=low
   * debian/patches/mac_fnkeys.diff: New patch to fix console switching
     with Macintosh us layout.  Closes: #370564  Thanks Ben Mueller
 
+  * debian/patches/ralt_switch_multikey.diff: New patch to enable again
+    lv3:ralt_switch_multikey which had been dropped from xkeyboard-config.
+    Closes: #364435  Thanks Klaus Ethgen
+
  -- Denis Barbier <barbier@debian.org>  Sat, 26 Aug 2006 14:54:51 +0200
 
 xkeyboard-config (0.8-7) unstable; urgency=low
