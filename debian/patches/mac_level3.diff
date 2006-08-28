@@ -1355,3 +1355,21 @@ Index: xkb-data/symbols/macintosh_vndr/nl
  // do just nothing
  
  };
+Index: xkb-data/symbols/macintosh_vndr/apple
+===================================================================
+--- xkb-data.orig/symbols/macintosh_vndr/apple
++++ xkb-data/symbols/macintosh_vndr/apple
+@@ -49,12 +49,6 @@
+ 
+ partial modifier_keys
+ xkb_symbols "laptop_bad_switch" {
++    // Kept for backward compatibility
+     include "macintosh_vndr/apple(laptop)"
+-
+-    // Before XFree86 4.3, most keymaps were configured to generate the 
+-    // third-level shift from the second group as opposed to the third-level
+-    // of the first group. These keymaps require this mapping to work as
+-    // expected.
+-    replace key <KPEN> { [ Mode_switch ] };
+-    modifier_map Mod2  { Mode_switch };	
+ };
