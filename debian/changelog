@@ -1,5 +1,17 @@
 xkeyboard-config (0.8-8) UNRELEASED; urgency=low
 
+  * Sync to CVS 2006-08-28.
+    + symbols/inet, keycodes/evdev: updated evdev
+    + symbols/pl: added pl(csb)
+    + symbols/bt: fixed Bhutan
+    + symbols/us: added dvorak-classic  Closes: #257626, #264647
+    + symbols/inet: added acer_c300
+    + symbols/lk: updated Sinhala
+    + symbols/de: added Mac variants
+    + symbols/ch: fixed KPDL in ch(de_mac)
+
+  * debian/patches/update-bt.diff: Patch dropped, merged upstream.
+
   * debian/patches/fix_symbols_hr.diff: New patch to fix Croatian layout,
     some differences with previous XFree86 keymap had been introduced
     in xkeyboard-config.  Closes: #379292  Thanks Josip Rodin
