@@ -1,0 +1,1357 @@
+The aim of this patch is to fix current mess with Macintosh keyboards.
+It will be included into experimental version only, and will be
+sent to upstream and uploaded into unstable when it is tested.
+
+Index: xkb-data/symbols/macintosh_vndr/ch
+===================================================================
+--- xkb-data.orig/symbols/macintosh_vndr/ch
++++ xkb-data/symbols/macintosh_vndr/ch
+@@ -11,112 +11,64 @@
+ 
+     // Alphanumeric section
+ 
+-    key <AE01> { [	1,		plus			],
+-		 [	plusminus,	infinity		]	};
+-    key <AE02> { [	2,		quotedbl		],
+-		 [leftdoublequotemark, rightdoublequotemark 	]	};
+-    key <AE03> { [	3,		asterisk		],
+-		 [	numbersign,	leftcaret		]	};
++    key <AE01> { [	1,	plus, 	plusminus,	infinity		]	};
++    key <AE02> { [	2,	quotedbl, leftdoublequotemark, rightdoublequotemark 	]	};
++    key <AE03> { [	3,	asterisk, 	numbersign,	leftcaret		]	};
+ 					// not displayed here
+-    key <AE04> { [	4,		ccedilla		],
+-   		 [	Ccedilla,	slash			]	};
+-    key <AE05> { [	5,		percent			],
+-    		 [	bracketleft				]	};
+-    key <AE06> { [	6,		ampersand		],
+-		 [	bracketright				]	};
+-    key <AE07> { [	7,		slash			],
+-		 [	bar,		backslash		]	};
+-    key <AE08> { [	8,		parenleft		],
+-		 [	braceleft,	Ograve			]	};
+-    key <AE09> { [	9,		parenright		],
+-    		 [	braceright,	Ocircumflex		]	};
+-    key <AE10> { [	0,		equal			],
+-    		 [	notequal,	Uacute			]	};
+-    key <AE11> { [	apostrophe,	question		],
+-		 [	questiondown, 	NoSymbol		]	};
+-    key <AE12> { [	dead_circumflex,dead_grave		],
+-		 [	dead_acute,	asciicircum		]	};
+-    key <AD01> { [	q,		Q			],
+-		 [	oe,		OE			]	};
+-    key <AD02> { [	w,		W			],
+-		 [	Greek_SIGMA,	Aacute			]	};
+-    key <AD03> { [ 	e,		E			],
+-		 [	EuroSign,	Ediaeresis		]	};
+-    key <AD04> { [ 	r,		R			],
+-		 [	registered,	Egrave			]	};
+-    key <AD05> { [ 	t,		T			],
+-		 [	dagger,		Icircumflex		]	}; 
+-    key <AD06> { [	z,		Z			],
+-		 [	Greek_OMEGA,	Iacute			]	};
+-    key <AD07> { [ 	u,		U			],
+-		 [	degree,		Ugrave			]	};
+-    key <AD08> { [ 	i,		I			],
+-		 [	exclamdown,	idotless		]	};
+-    key <AD09> { [ 	o,		O			],
+-		 [	oslash,		Ooblique		]	};
+-    key <AD10> { [ 	p,		P			],
+-		 [	Greek_pi,	Greek_PI		]	};
+-    key <AD11> { [	udiaeresis,	egrave			],
+-		 [	section,	ydiaeresis		]	};
+-    key <AD12> { [	dead_diaeresis,	exclam			],
+-		 [	grave,		apostrophe		]	};
+-    key <AC01> { [ 	a,		A			],
+-		 [	aring,		Aring			]	};
+-    key <AC02> { [ 	s,		S			],
+-		 [	ssharp, 	NoSymbol		]	}; 
++    key <AE04> { [	4,	ccedilla, 	Ccedilla,	slash			]	};
++    key <AE05> { [	5,	percent, 	bracketleft				]	};
++    key <AE06> { [	6,	ampersand, 	bracketright				]	};
++    key <AE07> { [	7,	slash, 	bar,		backslash		]	};
++    key <AE08> { [	8,	parenleft, 	braceleft,	Ograve			]	};
++    key <AE09> { [	9,	parenright, 	braceright,	Ocircumflex		]	};
++    key <AE10> { [	0,	equal, 	notequal,	Uacute			]	};
++    key <AE11> { [	apostrophe,	question, 	questiondown, 	NoSymbol		]	};
++    key <AE12> { [	dead_circumflex,dead_grave, 	dead_acute,	asciicircum		]	};
++    key <AD01> { [	q,	Q, 	oe,		OE			]	};
++    key <AD02> { [	w,	W, 	Greek_SIGMA,	Aacute			]	};
++    key <AD03> { [ 	e,	E, 	EuroSign,	Ediaeresis		]	};
++    key <AD04> { [ 	r,	R, 	registered,	Egrave			]	};
++    key <AD05> { [ 	t,	T, 	dagger,		Icircumflex		]	}; 
++    key <AD06> { [	z,	Z, 	Greek_OMEGA,	Iacute			]	};
++    key <AD07> { [ 	u,	U, 	degree,		Ugrave			]	};
++    key <AD08> { [ 	i,	I, 	exclamdown,	idotless		]	};
++    key <AD09> { [ 	o,	O, 	oslash,		Ooblique		]	};
++    key <AD10> { [ 	p,	P, 	Greek_pi,	Greek_PI		]	};
++    key <AD11> { [	udiaeresis,	egrave, 	section,	ydiaeresis		]	};
++    key <AD12> { [	dead_diaeresis,	exclam, 	grave,		apostrophe		]	};
++    key <AC01> { [ 	a,	A, 	aring,		Aring			]	};
++    key <AC02> { [ 	s,	S, 	ssharp, 	NoSymbol		]	}; 
+ 					// ligature fl
+-    key <AC03> { [ 	d,		D			],
+-		 [	Greek_sigma,	NoSymbol		]	};
++    key <AC03> { [ 	d,	D, 	Greek_sigma,	NoSymbol		]	};
+ 			// partialderivative is not available here att
+-    key <AC04> { [ 	f,		F			],
+-		 [	function,	doubledagger		]	};
+-    key <AC05> { [ 	g,		G			],
+-		 [	at,		comma			]	};
+-    key <AC06> { [ 	h,		H			],
+-		 [	ordfeminine,	periodcentered		]	};
+-    key <AC07> { [ 	j,		J			],
+-		 [ 	masculine,	eth	 		]	};
+-    key <AC08> { [ 	k,		K			],
+-		 [	Greek_DELTA,	macron			]	};
+-    key <AC09> { [ 	l,		L			],
+-    		 [	notsign,	caret			]	};
+-    key <AC10> { [	odiaeresis,	eacute			],
+-    		 [	cent,		breve 			]	};
+-    key <AC11> { [	adiaeresis,	agrave			],
+-		 [	ae,		AE			]	};
+-    key <AB01> { [	y,		Y 			],
+-		 [	yen,		Ydiaeresis		]	};
+-    key <AB02> { [ 	x,		X			],
+-		 [	similarequal,	trademark		]	};
+-    key <AB03> { [ 	c,		C			],
+-		 [	copyright,	NoSymbol		]	};
+-    key <AB04> { [ 	v,		V			],
+-		 [	radical,	diamond			]	};
+-    key <AB05> { [ 	b,		B			],
+-		 [	integral,	NoSymbol		]	};  
+-    key <AB06> { [ 	n,		N			],
+-		 [	dead_tilde, 	enopencircbullet	]       };
++    key <AC04> { [ 	f,	F, 	function,	doubledagger		]	};
++    key <AC05> { [ 	g,	G, 	at,		comma			]	};
++    key <AC06> { [ 	h,	H, 	ordfeminine,	periodcentered		]	};
++    key <AC07> { [ 	j,	J,  	masculine,	eth	 		]	};
++    key <AC08> { [ 	k,	K, 	Greek_DELTA,	macron			]	};
++    key <AC09> { [ 	l,	L, 	notsign,	caret			]	};
++    key <AC10> { [	odiaeresis,	eacute, 	cent,		breve 			]	};
++    key <AC11> { [	adiaeresis,	agrave, 	ae,		AE			]	};
++    key <AB01> { [	y,	Y, 	yen,		Ydiaeresis		]	};
++    key <AB02> { [ 	x,	X, 	similarequal,	trademark		]	};
++    key <AB03> { [ 	c,	C, 	copyright,	NoSymbol		]	};
++    key <AB04> { [ 	v,	V, 	radical,	diamond			]	};
++    key <AB05> { [ 	b,	B, 	integral,	NoSymbol		]	};  
++    key <AB06> { [ 	n,	N, 	dead_tilde, 	enopencircbullet	]       };
+ 					// to be fixed att
+-    key <AB07> { [ 	m,		M			],
+-		 [	mu,		dead_abovering		]       };
++    key <AB07> { [ 	m,	M, 	mu,		dead_abovering		]       };
+ 					// not sure att
+-    key <AB08> { [	comma,		semicolon		],
+-		 [	guillemotleft,	guillemotright		]	};
+-    key <AB09> { [	period,		colon			],
+-		 [	ellipsis,	division		]	};
+-    key <AB10> { [	minus,		underscore		],
+-		 [	hyphen,		emdash			]	};
+-    key <TLDE> { [	section,	degree			],
+-		 [  	NoSymbol, 	NoSymbol		]	};
++    key <AB08> { [	comma,	semicolon, 	guillemotleft,	guillemotright		]	};
++    key <AB09> { [	period,	colon, 	ellipsis,	division		]	};
++    key <AB10> { [	minus,	underscore, 	hyphen,		emdash			]	};
++    key <TLDE> { [	section,	degree,   	NoSymbol, 	NoSymbol		]	};
+ 			// ligature fi	// per mille
+-    key <SPCE> { [	space					],
+-		 [	nobreakspace,	nobreakspace		]	};
+-    key <LSGT> { [	less,		greater			],
+-		 [	lessthanequal,	greaterthanequal	]  	};
+-    key <BKSL> { [	dollar,		sterling		],
+-		 [	paragraph,	enfilledcircbullet	]	};
++    key <SPCE> { [	space, 	nobreakspace,	nobreakspace		]	};
++    key <LSGT> { [	less,	greater, 	lessthanequal,	greaterthanequal	]  	};
++    key <BKSL> { [	dollar,	sterling, 	paragraph,	enfilledcircbullet	]	};
+ 
+     include "keypad(comma)"
++    include "level3(ralt_switch)"
+ };
+ 
+ partial alphanumeric_keys 
+@@ -134,19 +86,17 @@
+     name[Group1]= "Swiss French";
+ 
+     override key <AD11> {
+-	[ egrave,	udiaeresis	],
+-	[ bracketleft			]
++	[ egrave,	udiaeresis,  bracketleft			]
+     };
+     override key <AC10> {
+ 	[ eacute,	odiaeresis	]
+     };
+     override key <AC11> {
+-	[ agrave,	adiaeresis	],
+-	[  braceleft			]
++	[ agrave,	adiaeresis,   braceleft			]
+     };
+ };
+ 
+ partial alphanumeric_keys
+ xkb_symbols "nodeadkeys" {
+-    include "macintosh_vndr/fr_CH" // for consistent naming
++    include "macintosh_vndr/ch(fr)" // for consistent naming
+ };
+Index: xkb-data/symbols/macintosh_vndr/de
+===================================================================
+--- xkb-data.orig/symbols/macintosh_vndr/de
++++ xkb-data/symbols/macintosh_vndr/de
+@@ -13,108 +13,64 @@
+ 
+     // Alphanumeric section
+     name[Group1]= "German";
+-    key <TLDE> {	[ dead_circumflex,	degree	],
+-			[   notsign 			]	};
+-    key <AE01> {	[         1,    exclam		],
+-			[ exclamdown,   at		]	};
+-    key <AE02> {	[	  2,	quotedbl	],
+-			[ twosuperior			]	};
+-    key <AE03> {	[	  3,	section		],
+-			[ threesuperior,sterling	]	};
+-    key <AE04> {	[	  4,	dollar		],
+-			[ onequarter,	currency	]	};
+-    key <AE05> {	[	  5,	percent		],
+-			[ bracketleft			]	};
+-    key <AE06> {	[	  6,	ampersand	],
+-			[ bracketright			]	};
+-    key <AE07> {	[	  7,	slash		],
+-			[       bar,    backslash	]	};
+-    key <AE08> {	[	  8,	parenleft	],
+-			[ braceleft,    asciitilde	]	};
+-    key <AE09> {	[	  9,	parenright	],
+-			[braceright			]	};
+-    key <AE10> {	[	  0,	equal		],
+-			[ braceright,	degree		]	};
+-    key <AE11> {	[    ssharp,	question	],
+-			[ backslash,	questiondown	]	};
+-    key <AE12> {	[ dead_acute,	dead_grave	],
+-			[ dead_cedilla			]	};
+-
+-    key <AD01> {	[	  q,	Q 		],
+-			[guillemotleft,guillemotright	]	};
+-    key <AD03> {	[	  e,	E		],
+-			[  EuroSign			]	};
+-    key <AD04> {	[         r,    R		],
+-			[ registered			]	};
++    key <TLDE> {	[ dead_circumflex,	degree,    notsign 			]	};
++    key <AE01> {	[         1,    exclam,  exclamdown,   at		]	};
++    key <AE02> {	[	  2,	quotedbl,  twosuperior			]	};
++    key <AE03> {	[	  3,	section,  threesuperior,sterling	]	};
++    key <AE04> {	[	  4,	dollar,  onequarter,	currency	]	};
++    key <AE05> {	[	  5,	percent,  bracketleft			]	};
++    key <AE06> {	[	  6,	ampersand,  bracketright			]	};
++    key <AE07> {	[	  7,	slash,        bar,    backslash	]	};
++    key <AE08> {	[	  8,	parenleft,  braceleft,    asciitilde	]	};
++    key <AE09> {	[	  9,	parenright, braceright			]	};
++    key <AE10> {	[	  0,	equal,  braceright,	degree		]	};
++    key <AE11> {	[    ssharp,	question,  backslash,	questiondown	]	};
++    key <AE12> {	[ dead_acute,	dead_grave,  dead_cedilla			]	};
++
++    key <AD01> {	[	  q,	Q, guillemotleft,guillemotright	]	};
++    key <AD03> {	[	  e,	E,   EuroSign			]	};
++    key <AD04> {	[         r,    R,  registered			]	};
+     key <AD05> {	[	  t,	T		]	};
+     key <AD06> {	[	  z,	Z		]	};
+-    key <AD07> {	[	  u,	U		],
+-			[diaeresis,    Aacute		]	};
+-    key <AD08> {	[	  i,	I		],
+-			[     slash,    Ucircumflex	]	};
+-    key <AD09> {	[         o,    O		],
+-			[     oslash,   Ooblique	]	};
+-    key <AD11> {	[ udiaeresis,	Udiaeresis	],
+-			[ periodcentered, degree	]	};
+-    key <AD12> {	[      plus,	asterisk	],
+-			[ asciitilde			]	}; 
+-    key <AC01> {	[         a,    A		],
+-			[     aring,    Aring		]	};
++    key <AD07> {	[	  u,	U, diaeresis,    Aacute		]	};
++    key <AD08> {	[	  i,	I,      slash,    Ucircumflex	]	};
++    key <AD09> {	[         o,    O,      oslash,   Ooblique	]	};
++    key <AD11> {	[ udiaeresis,	Udiaeresis,  periodcentered, degree	]	};
++    key <AD12> {	[      plus,	asterisk,  asciitilde			]	}; 
++    key <AC01> {	[         a,    A,      aring,    Aring		]	};
+     key <AC04> {	[	  f,	F		]	};
+-    key <AC05> {	[	  g,	G		],
+-			[ copyright			]	};
+-    key <AC06> {	[         h,    H		],
+-			[ ordfeminine			]	};
+-    key <AC09> {	[	  l,    L		],
+-			[	at			]	};
+-    key <AC10> {	[ odiaeresis,	Odiaeresis	],
+-			[ dead_acute			]	};
+-    key <AC11> {	[ adiaeresis,	Adiaeresis	],
+-			[ dead_circumflex		]	};
+-
+-    key <LSGT> {	[      less,	greater		],
+-			[       bar			]	};
+-    key <AB01> {	[	  y,	Y 		],
+-			[ guillemotleft,less		]	};
+-    key <AB06> {	[         n,    N		],
+-			[asciitilde			]	};
+-    key <AB07> {	[	  m,	M		],
+-			[	 mu			]	};
++    key <AC05> {	[	  g,	G,  copyright			]	};
++    key <AC06> {	[         h,    H,  ordfeminine			]	};
++    key <AC09> {	[	  l,    L, 	at			]	};
++    key <AC10> {	[ odiaeresis,	Odiaeresis,  dead_acute			]	};
++    key <AC11> {	[ adiaeresis,	Adiaeresis,  dead_circumflex		]	};
++
++    key <LSGT> {	[      less,	greater,        bar			]	};
++    key <AB01> {	[	  y,	Y,  guillemotleft,less		]	};
++    key <AB06> {	[         n,    N, asciitilde			]	};
++    key <AB07> {	[	  m,	M, 	 mu			]	};
+     key <AB08> {	[     comma,	semicolon	]	};
+-    key <AB09> {	[    period,	colon		],
+-			[ periodcentered, division	]	};
++    key <AB09> {	[    period,	colon,  periodcentered, division	]	};
+     key <AB10> {	[     minus,	underscore	]	};
+-    key <BKSL> {	[ numbersign,	apostrophe	],
+-			[ dead_grave			]	};
++    key <BKSL> {	[ numbersign,	apostrophe,  dead_grave			]	};
+ 
+     include "keypad(comma)"
++    include "level3(ralt_switch)"
+ 
+-    // begin modifier mappings
+-//    modifier_map Shift  { Shift_L };
+-//    modifier_map Lock   { Caps_Lock };
+-//    modifier_map Control{ Control_L };
+-//    modifier_map Mod3	{ Mode_switch };
+ };
+ 
+ partial alphanumeric_keys 
+ xkb_symbols "Sundeadkeys" {
+     // modify the default German layout to use Sun dead keys
+     include "macintosh_vndr/de(basic)"
+-    key <TLDE> {	[ SunFA_Circum,	degree		],
+-			[   notsign 			]	};
+-    key <AE12> {	[ SunFA_Acute,	SunFA_Grave	],
+-			[ SunFA_Cedilla			]	};
+-    key <AD11> {	[ udiaeresis,	Udiaeresis	],
+-			[ SunFA_Diaeresis		]	};
+-    key <AD12> {	[      plus,	asterisk	],
+-			[ SunFA_Tilde,	dead_macron	]	};
+-    key <AC10> {	[ odiaeresis,	Odiaeresis	],
+-			[ SunFA_Acute			]	};
+-    key <AC11> {	[ adiaeresis,	Adiaeresis	],
+-			[ SunFA_Circum			]	};
++    key <TLDE> {	[ SunFA_Circum,	degree,    notsign 			]	};
++    key <AE12> {	[ SunFA_Acute,	SunFA_Grave,  SunFA_Cedilla			]	};
++    key <AD11> {	[ udiaeresis,	Udiaeresis,  SunFA_Diaeresis		]	};
++    key <AD12> {	[      plus,	asterisk,  SunFA_Tilde,	dead_macron	]	};
++    key <AC10> {	[ odiaeresis,	Odiaeresis,  SunFA_Acute			]	};
++    key <AC11> {	[ adiaeresis,	Adiaeresis,  SunFA_Circum			]	};
+ 
+-    key <BKSL> {	[ numbersign,	acute		],
+-			[ SunFA_Grave			]	};
++    key <BKSL> {	[ numbersign,	acute,  SunFA_Grave			]	};
+ };
+ 
+ partial alphanumeric_keys 
+@@ -126,19 +82,12 @@
+ xkb_symbols "nodeadkeys" {
+     // modify the default German layout to not have any dead keys
+     include "macintosh_vndr/de(basic)"
+-    key <TLDE> {	[ asciicircum,	degree		],
+-			[   notsign 			]	};
+-    key <AE12> {	[ acute,	grave		],
+-			[ cedilla			]	};
+-    key <AD11> {	[ udiaeresis,	Udiaeresis	],
+-			[ diaeresis 			]	};
+-    key <AD12> {	[      plus,	asterisk	],
+-			[ asciitilde,	macron		]	};
+-    key <AC10> {	[ odiaeresis,	Odiaeresis	],
+-			[ acute				]	};
+-    key <AC11> {	[ adiaeresis,	Adiaeresis	],
+-			[ asciicircum			]	};
++    key <TLDE> {	[ asciicircum,	degree,    notsign 			]	};
++    key <AE12> {	[ acute,	grave,  cedilla			]	};
++    key <AD11> {	[ udiaeresis,	Udiaeresis,  diaeresis 			]	};
++    key <AD12> {	[      plus,	asterisk,  asciitilde,	macron		]	};
++    key <AC10> {	[ odiaeresis,	Odiaeresis,  acute				]	};
++    key <AC11> {	[ adiaeresis,	Adiaeresis,  asciicircum			]	};
+ 
+-    key <BKSL> {	[ numbersign,	apostrophe	],
+-			[ grave				]	};
++    key <BKSL> {	[ numbersign,	apostrophe,  grave				]	};
+ };
+Index: xkb-data/symbols/macintosh_vndr/dk
+===================================================================
+--- xkb-data.orig/symbols/macintosh_vndr/dk
++++ xkb-data/symbols/macintosh_vndr/dk
+@@ -11,69 +11,41 @@
+ 
+     name[Group1]= "Danish";
+ 
+-    key <TLDE> {	[         onehalf,         section      ],
+-			[   threequarters,       paragraph	]};
+-    key <LSGT> {	[	     less,	   greater	],
+-			[	backslash,         notsign	]};
+-    key <SPCE> {	[	    space,	     space	],
+-			[    nobreakspace,    nobreakspace	]};
+-    key <AE01> {	[               1,          exclam  	],
+-			[      exclamdown,     onesuperior	]};
+-    key <AE02> {	[               2,        quotedbl  	],
+-			[	       at,     twosuperior	]};
+-    key <AE03> {	[              	3,	numbersign	],
+-			[	 sterling,   threesuperior	]};
+-    key <AE04> {	[               4,        currency     	],
+-			[	   dollar,	onequarter	]};
+-    key <AE05> {	[               5,         percent     	],
+-			[        NoSymbol,	      cent	]};
+-    key <AE06> {	[               6,       ampersand     	],
+-			[	      yen,	  NoSymbol	]};
+-    key <AE07> {	[               7,           slash     	],
+-			[       braceleft,        division	]};
+-    key <AE08> {	[               8,       parenleft     	],
+-			[     bracketleft,   guillemotleft	]};
+-    key <AE09> {	[               9,      parenright     	],
+-			[    bracketright,  guillemotright	]};
+-    key <AE10> {	[               0,           equal     	],
+-                        [      braceright,          degree      ]};
+-    key <AB08> {	[           comma,       semicolon     	],
+-			[    dead_cedilla,     dead_ogonek	]};
+-    key <AB09> {	[          period,           colon     	],
+-			[  periodcentered,   dead_abovedot	]};
+-    key <AB03> {        [               c,               C      ],
+-                        [       copyright,        NoSymbol      ]};
+-    key <AB10> {	[           minus,      underscore     	],
+-			[	   hyphen,          macron	]};
+-    key <AC01> {        [               a,               A      ],
+-                        [     ordfeminine,       masculine      ]};
+-    key <AC03> {        [               d,               D      ],
+-                        [             eth,             ETH      ]};
+-    key <AD03> {        [               e,               E      ],
+-                        [        NoSymbol,            cent      ]};
+-    key <AD04> {        [               r,               R      ],
+-                        [      registered,        NoSymbol      ]};
+-    key <AD05> {        [               t,               T      ],
+-                        [           thorn,           THORN      ]};
+-    key <AD08> {        [               i,               I      ],
+-                        [        NoSymbol,        NoSymbol      ]};
+-    key <AD09> {        [               o,               O      ],
+-                        [              oe,              OE      ]};
+-    key	<AC10> {	[	       ae,	        AE	]};
+-    key <AE11> {	[            plus,        question      ],
+-			[       plusminus,    questiondown	]};
+-    key <AC11> {	[	   oslash,        Ooblique 	]};
+-    key <BKSL> {	[      apostrophe,        asterisk	],
+-                 	[dead_doubleacute,        multiply      ]};
+-    key <AD11> {	[	    aring,           Aring 	]};
+-    key <AE12> {   	[      dead_acute,      dead_grave      ],
+-                 	[             bar,       brokenbar      ]};
+-    key <AD12> {   	[  dead_diaeresis, dead_circumflex      ],
+-                 	[      dead_tilde,      dead_caron      ]};
+-
++    key <TLDE> {	[  onehalf,         section,    threequarters,       paragraph	]};
++    key <LSGT> {	[     less,         greater,        backslash,         notsign	]};
++    key <SPCE> {	[    space,           space,     nobreakspace,    nobreakspace	]};
++    key <AE01> {	[        1,          exclam,       exclamdown,     onesuperior	]};
++    key <AE02> {	[        2,        quotedbl,               at,     twosuperior	]};
++    key <AE03> {	[        3,      numbersign,         sterling,   threesuperior	]};
++    key <AE04> {	[        4,        currency,           dollar,      onequarter	]};
++    key <AE05> {	[        5,         percent,         NoSymbol,            cent	]};
++    key <AE06> {	[        6,       ampersand,              yen,        NoSymbol	]};
++    key <AE07> {	[        7,           slash,        braceleft,        division	]};
++    key <AE08> {	[        8,       parenleft,      bracketleft,   guillemotleft	]};
++    key <AE09> {	[        9,      parenright,     bracketright,  guillemotright	]};
++    key <AE10> {	[        0,           equal,       braceright,          degree	]};
++    key <AB08> {	[    comma,       semicolon,     dead_cedilla,     dead_ogonek	]};
++    key <AB09> {	[   period,           colon,   periodcentered,   dead_abovedot	]};
++    key <AB03> {	[        c,               C,        copyright,        NoSymbol	]};
++    key <AB10> {	[    minus,      underscore,           hyphen,          macron	]};
++    key <AC01> {        [        a,               A,      ordfeminine,       masculine      ]};
++    key <AC03> {        [        d,               D,              eth,             ETH      ]};
++    key <AD03> {        [        e,               E,         NoSymbol,            cent      ]};
++    key <AD04> {        [        r,               R,       registered,        NoSymbol      ]};
++    key <AD05> {        [        t,               T,            thorn,           THORN      ]};
++    key <AD08> {        [        i,               I,         NoSymbol,        NoSymbol      ]};
++    key <AD09> {        [        o,               O,               oe,              OE      ]};
++    key	<AC10> {	[	ae,               AE	]};
++    key <AE11> {	[     plus,        question,        plusminus,    questiondown	]};
++    key <AC11> {	[   oslash,        Ooblique 	]};
++    key <BKSL> {	[ apostrophe,        asterisk, dead_doubleacute,        multiply	]};
++    key <AD11> {	[    aring,           Aring 	]};
++    key <AE12> {   	[ dead_acute,      dead_grave,              bar,       brokenbar	]};
++    key <AD12> {   	[ dead_diaeresis, dead_circumflex,       dead_tilde,      dead_caron      ]};
+ 
+     // End alphanumeric section
+ 
++    include "level3(ralt_switch)"
+ };
+ 
+ 
+@@ -87,8 +59,6 @@
+ partial alphanumeric_keys 
+ xkb_symbols "nodeadkeys" {
+     include "macintosh_vndr/dk(basic)"
+-    key <AE12> {	[	    acute,	     grave	],	
+-			[	      bar,	    ogonek	]	};
+-    key <AD12> {	[       diaeresis,     asciicircum     	],	
+-			[      asciitilde,     dead_macron     	]      	};
++    key <AE12> {	[           acute,           grave,              bar,          ogonek	]	};
++    key <AD12> {	[       diaeresis,     asciicircum,       asciitilde,     dead_macron     	]      	};
+ };
+Index: xkb-data/symbols/macintosh_vndr/es
+===================================================================
+--- xkb-data.orig/symbols/macintosh_vndr/es
++++ xkb-data/symbols/macintosh_vndr/es
+@@ -9,42 +9,31 @@
+ 
+     name[Group1]= "Spanish";
+ 
+-    key <TLDE> {	[     bracketleft,    bracketright	],	
+-    			[       braceleft,      braceright	]	};
+-    key <LSGT> {	[	     less,	   greater	],
+-			[     bracketleft,       braceleft	]	};
+-    key <AE01> {	[         	1,	exclam 		]	};
+-    key <AE02> {	[               2,      exclamdown     	],	
+-			[	       at,	 oneeighth	]	};
+-    key <AE03> {	[               3,      numbersign     	],
+-			[   guillemotleft,  guillemotright	]	};
+-    key <AE04> {	[               4,          dollar     	],	
+-			[	      yen,     Icircumflex	]	};
+-    key <AE05> {	[		5,         percent	]	};
+-    key <AE06> {	[               6,           slash     	],	
+-			[	backslash,      Idiaeresis	]	};
+-    key <AE07> {	[               7,       ampersand     	],
+-			[	      bar,          Iacute	]	};
+-    key <AE08> {	[               8,        asterisk     	],
+-			[		degree			]	};
+-    key <AE09> {	[               9,       parenleft     	],
+-			[	 sterling,     Ocircumflex	]	};
++    key <TLDE> {	[     bracketleft,    bracketright,        braceleft,      braceright	]	};
++    key <LSGT> {	[            less,         greater,      bracketleft,       braceleft	]	};
++    key <AE01> {	[               1,          exclam 	]	};
++    key <AE02> {	[               2,      exclamdown,               at,       oneeighth	]	};
++    key <AE03> {	[               3,      numbersign,    guillemotleft,  guillemotright	]	};
++    key <AE04> {	[               4,          dollar,              yen,     Icircumflex	]	};
++    key <AE05> {	[               5,         percent	]	};
++    key <AE06> {	[               6,           slash,        backslash,      Idiaeresis	]	};
++    key <AE07> {	[               7,       ampersand,              bar,          Iacute	]	};
++    key <AE08> {	[               8,        asterisk,           degree	]	};
++    key <AE09> {	[               9,       parenleft,         sterling,     Ocircumflex	]	};
+     key <AE10> {	[               0,      parenright     	]	};
+     key <AE11> {	[           minus,      underscore	]	};
+-    key <AE12> {	[           equal,            plus	],
+-			[               plusminus		]	};
++    key <AE12> {	[           equal,            plus,        plusminus	]	};
+     key <AD11> {	[      dead_grave,          degree 	]	};
+-    key <AD12> {	[      dead_acute,   dead_diaeresis    	],
+-			[               bar			]	};
++    key <AD12> {	[      dead_acute,  dead_diaeresis,              bar	]	};
+ 
+     key <AB08> {	[           comma,    questiondown   	]	};
+     key <AB09> {	[          period,        question     	]	};
+     key <AB10> {	[        ccedilla,        Ccedilla     	]	};
+-    key	<AC10> {	[	   ntilde,          Ntilde  	],	
+-			[      asciitilde,dead_doubleacute	]	};
++    key	<AC10> {	[	   ntilde,          Ntilde,       asciitilde, dead_doubleacute	]	};
+     key <AC11> {	[       semicolon,    	     colon 	]	};
+     key <BKSL> {	[      apostrophe,        quotedbl	]	};
+ 
+     // End alphanumeric section
+ 
++    include "level3(ralt_switch)"
+ };
+Index: xkb-data/symbols/macintosh_vndr/fr
+===================================================================
+--- xkb-data.orig/symbols/macintosh_vndr/fr
++++ xkb-data/symbols/macintosh_vndr/fr
+@@ -26,114 +26,61 @@
+     key <ESC>  {	[ Escape			]	};
+ 
+     // Alphanumeric section
+-    key <TLDE> {	[	   at,	  numbersign	],
+-			[periodcentered,  Ydiaeresis	]	}; // MISSING: Ydiaeresis; eherlent : ok in Latin9
++    key <TLDE> {	[          at,     numbersign, periodcentered,  Ydiaeresis	]	}; // MISSING: Ydiaeresis; eherlent : ok in Latin9
+     key <ENTR> {        [    KP_Enter                   ]       };
+-    key <AE01> {	[   ampersand,	  1		],
+-			[  VoidSymbol,	  dead_acute	]	}; // MISSING: Apple
+-    key <AE02> {	[      eacute,	  2		],
+-			[  ediaeresis,	  Eacute	]	};
+-    key <AE03> {	[    quotedbl,	  3		],
+-			[  VoidSymbol,    VoidSymbol	] 	}; // CHECK all quotemarks
+-    key <AE04> {	[  apostrophe,	  4		],
+-			[  VoidSymbol,	  VoidSymbol	] 	};
+-    key <AE05> {	[   parenleft,	  5		],
+-			[   braceleft,	  bracketleft	]	};
+-    key <AE06> {	[     section,	  6		],	// CHECK section
+-			[   paragraph,	  aring		]	};
+-    key <AE07> {	[      egrave,	  7		],
+-			[guillemotleft,	  guillemotright]	};
+-    key <AE08> {	[      exclam,	  8		],
+-			[  exclamdown,	  Ucircumflex	]	};
+-    key <AE09> {	[    ccedilla,	  9		],
+-			[    Ccedilla,	  Aacute	]	};
+-    key <AE10> {	[      agrave,	  0		],
+-			[      oslash,	  VoidSymbol	]	}; // MISSING: Oslash
+-    key <AE11> {	[  parenright,	  degree	],
+-			[  braceright,	  bracketright	]	};
+-    key <AE12> {	[	minus,	  underscore	],
+-			[      emdash,	  endash	]	}; // CHECK dashes
+-    key <BKSP> {	[   BackSpace,    VoidSymbol	],
+-			[      Delete,	  VoidSymbol	]	};
+-
+-    key	 <TAB> {	[	  Tab,	ISO_Left_Tab	]	};
+-    key <AD01> {	[	    a,	A		],
+-			[	   ae,	AE		]	};
+-    key <AD02> {	[	    z,	Z		],
+-			[ Acircumflex,	Aring		]	};
+-    key <AD03> {	[	    e,	E		],
+-			[ ecircumflex,	Ecircumflex	]	};
+-    key <AD04> {	[	    r,	R		],
+-			[  registered,	currency	]	};
+-    key <AD05> {	[	    t,	T		],
+-			[  VoidSymbol,	VoidSymbol	]	};
+-    key <AD06> {	[	    y,	Y		],
+-			[      Uacute,  Ydiaeresis	]	}; // MISSING: Ydiaeresis; eherlent : ok in Latin9
+-    key <AD07> {	[	    u,	U		],
+-			[  VoidSymbol,	ordfeminine	]	}; // MISSING: ordmasculine?
+-    key <AD08> {	[	    i,	I		],
+-			[ icircumflex,	idiaeresis	]	};
+-    key <AD09> {	[	    o,	O		],
+-			[          oe,	OE      	]	}; // MISSING: oe, OE lacking in Latin1; eherlent ok in Latin9
+-    key <AD10> {	[	    p,	P		],
+-			[  VoidSymbol,  VoidSymbol	]	};
+-    key <AD11> {	[dead_circumflex,dead_diaeresis	],
+-			[ ocircumflex, Ocircumflex	]	};
+-    key <AD12> {	[      dollar,	asterisk	],
+-			[  EuroSign, yen		]	}; // eherlent : EuroSign in Latin9
+-
+-    key <CAPS> {	[	Caps_Lock		]	};
+-    key <AC01> {	[	  q,	Q		],
+-			[acircumflex,	Agrave		]	};
+-    key <AC02> {	[	  s,	S		],
+-			[    Ograve,	VoidSymbol	]	};
+-    key <AC03> {	[	  d,	D		],
+-			[VoidSymbol,	VoidSymbol	]	};
+-    key <AC04> {	[	  f,	F		],
+-			[VoidSymbol,	periodcentered	]	}; // MISSING: oblong script f??
+-    key <AC05> {	[	  g,	G		],
+-			[VoidSymbol,	VoidSymbol	]	}; // MISSING: kerned fi, fl
+-    key <AC06> {	[	  h,	H		],
+-			[    Igrave,	Icircumflex	]	};
+-    key <AC07> {	[	  j,	J		],
+-			[Idiaeresis,	Iacute		]	};
+-    key <AC08> {	[	  k,	K		],
+-			[   Egrave,	Ediaeresis	]	};
+-    key <AC09> {	[	  l,	L		],
+-			[   notsign,	bar		]	};
+-    key <AC10> {	[	  m,	M		],
+-			[  	 mu,	Oacute		]	};
+-    key <AC11> {	[    ugrave,	percent		],
+-			[    Ugrave,	ucircumflex	]	}; // MISSING: per-mille
+-    key <BKSL> {	[ dead_grave,	sterling	],
+-			[	 at,	numbersign	]	};
+-    key <RTRN> {	[    Return			]	};
+-
+-    key <LSGT> {	[	 less,	  greater	],
+-			[VoidSymbol, 	VoidSymbol	]	};
+-    key <AB01> {	[	  w,	W		],
+-			[VoidSymbol,	VoidSymbol	]	};	// MISSING: half-guillemot (single angle bracket)
+-    key <AB02> {	[	  x,	X		],
+-			[VoidSymbol,	VoidSymbol	]	}; // CHECK similarequal; MISSING: extra-slanted slash
+-    key <AB03> {	[	  c,	C		],
+-			[ copyright,	cent		]	};
+-    key <AB04> {	[	  v,	V		],
+-			[   diamond,	leftradical	]	}; // CHECK diamond, leftradical
+-    key <AB05> {	[	  b,	B		],
+-			[    ssharp,    VoidSymbol	]	}; // CHECK: Greek_beta or ssharp?; MISSING: oblong script s
+-    key <AB06> {	[	  n,	N		],
+-			[ dead_tilde,	asciitilde	]	};
+-    key <AB07> {	[     comma,	question	],
+-			[VoidSymbol,	questiondown	]	};
+-    key <AB08> {	[ semicolon,	period		],
+-			[VoidSymbol,	periodcentered	]	};
+-    key <AB09> {	[     colon,	slash		],
+-			[  division,	backslash	]	};
+-    key <AB10> {	[     equal,	plus		],
+-			[VoidSymbol,	plusminus	]	};
++    key <AE01> {	[   ampersand,    1,   VoidSymbol,    dead_acute	]	}; // MISSING: Apple
++    key <AE02> {	[      eacute,    2,   ediaeresis,        Eacute	]	};
++    key <AE03> {	[    quotedbl,    3,   VoidSymbol,    VoidSymbol	] 	}; // CHECK all quotemarks
++    key <AE04> {	[  apostrophe,    4,   VoidSymbol,    VoidSymbol	] 	};
++    key <AE05> {	[   parenleft,    5,    braceleft,   bracketleft	]	};
++ // CHECK section
++    key <AE06> {	[     section,    6,    paragraph,         aring	]	};
++    key <AE07> {	[      egrave,    7, guillemotleft, guillemotright	]	};
++    key <AE08> {	[      exclam,    8,   exclamdown,   Ucircumflex	]	};
++    key <AE09> {	[    ccedilla,    9,     Ccedilla,        Aacute	]	};
++    key <AE10> {	[      agrave,    0,       oslash,    VoidSymbol	]	}; // MISSING: Oslash
++    key <AE11> {	[  parenright, degree, braceright,  bracketright	]	};
++    key <AE12> {	[       minus, underscore, emdash,        endash	]	}; // CHECK dashes
++
++    key <AD01> {	[           a,  A,           ae,          AE	]	};
++    key <AD02> {	[           z,  Z,  Acircumflex,       Aring		]	};
++    key <AD03> {	[           e,  E,  ecircumflex, Ecircumflex	]	};
++    key <AD04> {	[           r,  R,   registered,    currency	]	};
++    key <AD05> {	[           t,  T,   VoidSymbol,  VoidSymbol	]	};
++    key <AD06> {	[           y,  Y,       Uacute,  Ydiaeresis	]	}; // MISSING: Ydiaeresis; eherlent : ok in Latin9
++    key <AD07> {	[           u,  U,   VoidSymbol, ordfeminine	]	}; // MISSING: ordmasculine?
++    key <AD08> {	[           i,  I,  icircumflex,  idiaeresis	]	};
++    key <AD09> {	[           o,  O,           oe,          OE      	]	}; // MISSING: oe, OE lacking in Latin1; eherlent ok in Latin9
++    key <AD10> {	[           p,  P,   VoidSymbol,  VoidSymbol	]	};
++    key <AD11> {	[dead_circumflex,dead_diaeresis, ocircumflex, Ocircumflex	]	};
++    key <AD12> {	[      dollar, asterisk,   EuroSign, yen		]	}; // eherlent : EuroSign in Latin9
++
++    key <AC01> {	[         q, Q, acircumflex,         Agrave		]	};
++    key <AC02> {	[         s, S,      Ograve,     VoidSymbol	]	};
++    key <AC03> {	[         d, D,  VoidSymbol,     VoidSymbol	]	};
++    key <AC04> {	[         f, F,  VoidSymbol, periodcentered	]	}; // MISSING: oblong script f??
++    key <AC05> {	[         g, G,  VoidSymbol,     VoidSymbol	]	}; // MISSING: kerned fi, fl
++    key <AC06> {	[         h, H,      Igrave,    Icircumflex	]	};
++    key <AC07> {	[         j, J,  Idiaeresis,         Iacute	]	};
++    key <AC08> {	[         k, K,      Egrave,     Ediaeresis	]	};
++    key <AC09> {	[         l, L,     notsign,            bar	]	};
++    key <AC10> {	[         m, M,          mu,         Oacute	]	};
++    key <AC11> {	[    ugrave,percent, Ugrave,    ucircumflex	]	}; // MISSING: per-mille
++    key <BKSL> {	[ dead_grave, sterling,  at,     numbersign	]	};
++
++    key <LSGT> {	[      less, greater, VoidSymbol, VoidSymbol	]	};
++    key <AB01> {	[         w, W, VoidSymbol,   VoidSymbol	]	};	// MISSING: half-guillemot (single angle bracket)
++    key <AB02> {	[         x, X, VoidSymbol,   VoidSymbol	]	}; // CHECK similarequal; MISSING: extra-slanted slash
++    key <AB03> {	[         c, C,  copyright,         cent	]	};
++    key <AB04> {	[         v, V,    diamond,  leftradical	]	}; // CHECK diamond, leftradical
++    key <AB05> {	[         b, B,     ssharp,   VoidSymbol	]	}; // CHECK: Greek_beta or ssharp?; MISSING: oblong script s
++    key <AB06> {	[         n, N,  dead_tilde,  asciitilde	]	};
++    key <AB07> {	[     comma,  question, VoidSymbol,  questiondown	]	};
++    key <AB08> {	[ semicolon,  period, VoidSymbol,  periodcentered	]	};
++    key <AB09> {	[     colon,  slash,   division,        backslash	]	};
++    key <AB10> {	[     equal,   plus, VoidSymbol,        plusminus	]	};
+ 
+-    key <SPCE> {	[     space,	space		],
+-			[nobreakspace,	nobreakspace	]	};
++    key <SPCE> {	[     space,  space, nobreakspace,   nobreakspace	]	};
+     // End alphanumeric section
+ 
+     // Begin modifier mappings
+@@ -147,38 +94,6 @@
+     key <RALT> {	[  script_switch	]	};
+     // End modifier mappings
+ 
+-    // Begin "Function" section
+-    key <FK01> {	[  F1			]	};
+-    key <FK02> {	[  F2			]	};
+-    key <FK03> {	[  F3			]	};
+-    key <FK04> {	[  F4			]	};
+-    key <FK05> {	[  F5			]	};
+-    key <FK06> {	[  F6			]	};
+-    key <FK07> {	[  F7			]	};
+-    key <FK08> {	[  F8			]	};
+-    key <FK09> {	[  F9			]	};
+-    key <FK10> {	[  F10			]	};
+-    key <FK11> {	[  F11			]	};
+-    key <FK12> {	[  F12			]	};
+-    key <FK13> {	[  F13, Print		]	};
+-    key <FK14> {	[  F14, Scroll_Lock	]	};
+-    key <FK15> {	[  F15, Pause		]	};
+-    // End "Function" section
+-
+-    // Begin "Editing" section
+-    key	 <INS> {	[  Insert		]	};
+-    key <HOME> {	[  Home			]	};
+-    key <PGUP> {	[  Prior		]	};
+-    key <DELE> {	[  Delete		]	};
+-    key	 <END> {	[  End			]	};
+-    key <PGDN> {	[  Next			]	};
+-
+-    key	  <UP> {	[  Up			]	};
+-    key <LEFT> {	[  Left			]	};
+-    key <DOWN> {	[  Down			]	};
+-    key <RGHT> {	[  Right		]	};
+-    // End "Editing" section
+-
+     // Begin "Keypad" section
+     key <KPCL> {	[  Clear		]	};
+     key <KPEQ> {	[  KP_Equal		]	};
+@@ -204,15 +119,7 @@
+     key <KPDL> {	[  comma,KP_Decimal	]	};
+  // End "Keypad" section
+ 
+-
+-    // begin modifier mappings
+-    modifier_map Shift	{ Shift_L,   Shift_R   };
+-    modifier_map Lock	{ Caps_Lock	       };
+-    modifier_map Control{ Control_L, Control_R };
+-    modifier_map Mod1	{ Meta_L, Meta_R       };
+-    modifier_map Mod2   { Alt_L, Alt_R         };
+-    modifier_map Mod3	{ Mode_switch	       };
+-    // end modifier mappings
++    include "level3(ralt_switch)"
+ };
+ 
+ 
+Index: xkb-data/symbols/macintosh_vndr/gb
+===================================================================
+--- xkb-data.orig/symbols/macintosh_vndr/gb
++++ xkb-data/symbols/macintosh_vndr/gb
+@@ -10,13 +10,13 @@
+ 
+     name[Group1]= "Great Britain";
+ 
+-    key <AE03> {	[               3,        sterling     	],
+-			[      numbersign			]	};
++    key <AE03> {	[               3,        sterling,       numbersign	]	};
+     key <LSGT> {	[       quoteleft,      asciitilde ] };
+     key <TLDE> {	[         section,       plusminus ] };
+ 
+     // End alphanumeric section
+     
++    include "level3(ralt_switch)"
+ };
+ 
+ 
+Index: xkb-data/symbols/macintosh_vndr/is
+===================================================================
+--- xkb-data.orig/symbols/macintosh_vndr/is
++++ xkb-data/symbols/macintosh_vndr/is
+@@ -60,129 +60,65 @@
+     name[Group1]= "Icelandic";
+ 
+ 	//-- Row 5 (E) --//
+-	key <TLDE> {	[	sterling,	section		],
+-			[	UF8FF,		apostrophe	]	};
+-	key <AE01> {	[	1,		exclam		],
+-			[	exclamdown,	VoidSymbol	]	};
+-	key <AE02> {	[	2,		quotedbl	],
+-			[	at,		VoidSymbol	]	};
+-	key <AE03> {	[	3,		numbersign	],
+-			[	U2122,		sterling	]	};
+-	key <AE04> {	[	4,		dollar		],
+-			[	U00A2,		EuroSign	]	};
+-	key <AE05> {	[	5,		percent		],
+-			[	U2030,		infinity	]	};
+-	key <AE06> {	[	6,		ampersand	],
+-			[	asciicircum,	U2044		]	};
+-	key <AE07> {	[	7,		slash		],
+-			[	backslash,	U00F7		]	};
+-	key <AE08> {	[	8,		parenleft	],
+-			[	bracketleft,	braceleft	]	};
+-	key <AE09> {	[	9,		parenright	],
+-			[	bracketright,	braceright	]	};
+-	key <AE10> {	[	0,		equal		],
+-			[	U2260,		U2248		]	};
+-	key <AE11> {	[	odiaeresis,	Odiaeresis	],
+-			[	oslash,		Ooblique	]	};
+-	key <AE12> {	[	minus,		underscore	],
+-			[	endash,		emdash		]	};
++	key <TLDE> {	[	sterling,	section, 	UF8FF,		apostrophe	]	};
++	key <AE01> {	[	1,		exclam, 	exclamdown,	VoidSymbol	]	};
++	key <AE02> {	[	2,		quotedbl, 	at,		VoidSymbol	]	};
++	key <AE03> {	[	3,		numbersign, 	U2122,		sterling	]	};
++	key <AE04> {	[	4,		dollar, 	U00A2,		EuroSign	]	};
++	key <AE05> {	[	5,		percent, 	U2030,		infinity	]	};
++	key <AE06> {	[	6,		ampersand, 	asciicircum,	U2044		]	};
++	key <AE07> {	[	7,		slash, 	backslash,	U00F7		]	};
++	key <AE08> {	[	8,		parenleft, 	bracketleft,	braceleft	]	};
++	key <AE09> {	[	9,		parenright, 	bracketright,	braceright	]	};
++	key <AE10> {	[	0,		equal, 	U2260,		U2248		]	};
++	key <AE11> {	[	odiaeresis,	Odiaeresis, 	oslash,		Ooblique	]	};
++	key <AE12> {	[	minus,		underscore, 	endash,		emdash		]	};
+ 
+ 	
+ 	//-- Row 4 (D) --//
+-	key <AD01> {	[	q,		Q		],
+-			[	paragraph,	VoidSymbol	]	};
+-	key <AD02> {	[	w,		W		],
+-			[	U2211,		VoidSymbol	]	};
+-	key <AD03> {	[	e,		E		],
+-			[	dead_grave,	VoidSymbol	]	};
+-	key <AD04> {	[	r,		R		],
+-			[	registered,	VoidSymbol	]	};
+-	key <AD05> {	[	t,		T		],
+-			[	degree,		VoidSymbol	]	};
+-	key <AD06> {	[	y,		Y		],
+-			[	yen,		VoidSymbol	]	};
+-	key <AD07> {	[	u,		U		],
+-			[	dead_diaeresis,	VoidSymbol	]	};
+-	key <AD08> {	[	i,		I		],
+-			[	U0131,		U00AA		]	};
+-	key <AD09> {	[	o,		O		],
+-			[	dead_circumflex,U00BA		]	};
+-	key <AD10> {	[	p,		P		],
+-			[	Greek_pi,	Greek_PI	]	};
+-	key <AD11> {	[	eth,		Eth		],
+-			[	U201e,		U201c		]	};
+-	key <AD12> {	[	apostrophe,	question	],
+-			[	questiondown,	U00B7		]	};
++	key <AD01> {	[	q,		Q, 	paragraph,	VoidSymbol	]	};
++	key <AD02> {	[	w,		W, 	U2211,		VoidSymbol	]	};
++	key <AD03> {	[	e,		E, 	dead_grave,	VoidSymbol	]	};
++	key <AD04> {	[	r,		R, 	registered,	VoidSymbol	]	};
++	key <AD05> {	[	t,		T, 	degree,		VoidSymbol	]	};
++	key <AD06> {	[	y,		Y, 	yen,		VoidSymbol	]	};
++	key <AD07> {	[	u,		U, 	dead_diaeresis,	VoidSymbol	]	};
++	key <AD08> {	[	i,		I, 	U0131,		U00AA		]	};
++	key <AD09> {	[	o,		O, 	dead_circumflex,U00BA		]	};
++	key <AD10> {	[	p,		P, 	Greek_pi,	Greek_PI	]	};
++	key <AD11> {	[	eth,		Eth, 	U201e,		U201c		]	};
++	key <AD12> {	[	apostrophe,	question, 	questiondown,	U00B7		]	};
+ 	
+ 	
+ 	//-- Row 3 (C) --//
+-	key <AC01> {	[	a,		A		],
+-			[	aring,		Aring		]	};
+-	key <AC02> {	[	s,		S		],
+-			[	ssharp,		abovedot	]	};
+-	key <AC03> {	[	d,		D		],
+-			[	U2202,		U2DA		]	};
+-	key <AC04> {	[	f,		F		],
+-			[	U192,		macron		]	};
+-	key <AC05> {	[	g,		G		],
+-			[	copyright,	breve		]	};
+-	key <AC06> {	[	h,		H		],
+-			[	bar,		VoidSymbol	]	};
+-	key <AC07> {	[	j,		J		],
+-			[	U2206,		U2dd		]	};
+-	key <AC08> {	[	k,		K		],
+-			[	U00AC,		VoidSymbol	]	};
+-	key <AC09> {	[	l,		L		],
+-			[	U2026,		caron		]	};
+-	key <AC10> {	[	ae,		AE		],
+-			[	oe,		OE		]	};
+-	key <AC11> {	[	dead_acute,	dead_diaeresis	],
+-			[	U201A,		U2018		]	};
+-	key <BKSL> {	[	plus,		asterisk	],
+-			[	U2022,		plusminus	]	};
++	key <AC01> {	[	a,		A, 	aring,		Aring		]	};
++	key <AC02> {	[	s,		S, 	ssharp,		abovedot	]	};
++	key <AC03> {	[	d,		D, 	U2202,		U2DA		]	};
++	key <AC04> {	[	f,		F, 	U192,		macron		]	};
++	key <AC05> {	[	g,		G, 	copyright,	breve		]	};
++	key <AC06> {	[	h,		H, 	bar,		VoidSymbol	]	};
++	key <AC07> {	[	j,		J, 	U2206,		U2dd		]	};
++	key <AC08> {	[	k,		K, 	U00AC,		VoidSymbol	]	};
++	key <AC09> {	[	l,		L, 	U2026,		caron		]	};
++	key <AC10> {	[	ae,		AE, 	oe,		OE		]	};
++	key <AC11> {	[	dead_acute,	dead_diaeresis, 	U201A,		U2018		]	};
++	key <BKSL> {	[	plus,		asterisk, 	U2022,		plusminus	]	};
+ 	
+ 	
+ 	//-- Row 2  (B) --//
+-	key <LSGT> {	[	less,		greater		],
+-			[	section,	UF8FF		]	};
+-	key <AB01> {	[	z,		Z		],
+-			[	U3A9,		VoidSymbol	]	};
+-	key <AB02> {	[	x,		X		],
+-			[	asciitilde,	VoidSymbol	]	};
+-	key <AB03> {	[	c,		C		],
+-			[	ccedilla,	Ccedilla	]	};
+-	key <AB04> {	[	v,		V		],
+-			[	U221A,		U25CA		]	};
+-	key <AB05> {	[	b,		B		],
+-			[	U222B,		VoidSymbol	]	};
+-	key <AB06> {	[	n,		N		],
+-			[	dead_tilde,	VoidSymbol	]	};
+-	key <AB07> {	[	m,		M		],
+-			[	U00B5,		VoidSymbol	]	};
+-	key <AB08> {	[	comma,		semicolon	],
+-			[	lessthanequal,	guillemotleft	]	};
+-	key <AB09> {	[	period,		colon		],
+-			[	greaterthanequal,guillemotright	]	};
+-	key <AB10> {	[	thorn,		Thorn		],
+-			[	U2019,		U201d		]	};
++	key <LSGT> {	[	less,		greater, 	section,	UF8FF		]	};
++	key <AB01> {	[	z,		Z, 	U3A9,		VoidSymbol	]	};
++	key <AB02> {	[	x,		X, 	asciitilde,	VoidSymbol	]	};
++	key <AB03> {	[	c,		C, 	ccedilla,	Ccedilla	]	};
++	key <AB04> {	[	v,		V, 	U221A,		U25CA		]	};
++	key <AB05> {	[	b,		B, 	U222B,		VoidSymbol	]	};
++	key <AB06> {	[	n,		N, 	dead_tilde,	VoidSymbol	]	};
++	key <AB07> {	[	m,		M, 	U00B5,		VoidSymbol	]	};
++	key <AB08> {	[	comma,		semicolon, 	lessthanequal,	guillemotleft	]	};
++	key <AB09> {	[	period,		colon, 	greaterthanequal,guillemotright	]	};
++	key <AB10> {	[	thorn,		Thorn, 	U2019,		U201d		]	};
+ 
+-	// Special keys and modifiers
+-	key <LWIN> {	[	Alt_L,		Meta_L		]	};
+-	key <LFSH> {	[	Shift_L				]	};
+-	key <LCTL> {	[	Control_L			]	};
+-	key <LALT> {	[	Mode_switch			]	};
+-	key <RMTA> {	[	Meta_R				]	};
+-	key <RTSH> {	[	Shift_R				]	};
+-	key <RCTL> {	[	Control_R			]	};
+-	key <RALT> {	[	script_switch			]	};
+-
+-	// And now to map those modifiers ...
+-	modifier_map Shift	{ Shift_L,	Shift_R };
+-	modifier_map Lock	{ Caps_Lock		};
+-	modifier_map Control	{ Control_L, Control_R	};
+-	modifier_map Mod1	{ Meta_L, Meta_R	};
+-	//modifier_map Mod2	{ Alt_L, Alt_R		};
+-	modifier_map Mod3	{ Mode_switch		};
++    include "level3(ralt_switch)"
+ };
+ 
+ partial alphanumeric_keys
+Index: xkb-data/symbols/macintosh_vndr/it
+===================================================================
+--- xkb-data.orig/symbols/macintosh_vndr/it
++++ xkb-data/symbols/macintosh_vndr/it
+@@ -4,89 +4,63 @@
+     name[Group1]= "italian";
+ 
+     // Alphanumeric section
+-    key <LSGT> {	[        less,	  greater   	]	};
+-    key <TLDE> {        [        at,    numbersign      ],
+-                        [   periodcentered              ]	};
+-    key <AE01> {	[   ampersand,	  1    		],
+-			[guillemotleft,guillemotright	]	};
+-    key <AE02> {	[    quotedbl,	  2 		]	};
+-    key <AE03> {	[  apostrophe,	  3         	]	};
+-    key <AE04> {	[   parenleft,	  4    		],
+-                        [   braceleft,    bracketleft	]	};
+-    key <AE05> {	[    ccedilla,	  5    		],
+-              	        [    Ccedilla,    Iacute	]	};
+-    key <AE06> {	[      egrave,	  6          	],
+-                        [   paragraph,    periodcentered]	};
+-    key <AE07> {	[  parenright,	  7        	],
+-                        [  braceright,	  bracketright	]	};
+-    key <AE08> {	[    sterling,	  8       	],
+-                        [  infinity			]	};
+-    key <AE09> {	[      agrave,    9        	],
+-                        [       acute,    Ocircumflex	]	};
+-    key <AE10> {	[      eacute,	  0         	],
+-                        [       grave,    Oacute	]	};
+-    key <AE11> {	[       minus,	  underscore	]	};
+-    key <AE12> {	[       equal, 	  plus		],
+-			[    notequal,    plusminus	]	};
+-
+-    key <AD01> {	[           q,	Q 		]	};
+-    key <AD02> {	[	    z,	Z		]	};
+-    key <AD03> {	[	    e,	E		]	};
+-    key <AD04> {	[	    r,	R		],
+-                	[  registered			] 	};
+-    key <AD05> {	[	    t,	T		]	};
+-    key <AD06> {	[	    y,	Y		],
+-                	[      Uacute,	ydiaeresis      ] 	};
+-    key <AD07> {	[	    u,	U		]	};
+-    key <AD08> {	[	    i,	I		],
+-                	[ icircumflex,	idiaeresis      ] 	};
+-    key <AD09> {	[	    o,	O		]	};
+-    key <AD10> {	[	    p,	P		]	};
++    key <LSGT> {	[        less,  greater   	]	};
++    key <TLDE> {        [        at,    numbersign,    periodcentered              ]	};
++    key <AE01> {	[   ampersand,    1, guillemotleft,guillemotright	]	};
++    key <AE02> {	[    quotedbl,    2 		]	};
++    key <AE03> {	[  apostrophe,    3         	]	};
++    key <AE04> {	[   parenleft,    4,    braceleft,    bracketleft	]	};
++    key <AE05> {	[    ccedilla,    5,     Ccedilla,    Iacute	]	};
++    key <AE06> {	[      egrave,    6,    paragraph,    periodcentered]	};
++    key <AE07> {	[  parenright,    7,   braceright,	  bracketright	]	};
++    key <AE08> {	[    sterling,    8,   infinity			]	};
++    key <AE09> {	[      agrave,    9,        acute,    Ocircumflex	]	};
++    key <AE10> {	[      eacute,    0,        grave,    Oacute	]	};
++    key <AE11> {	[       minus,    underscore	]	};
++    key <AE12> {	[       equal, 	  plus,     notequal,    plusminus	]	};
++
++    key <AD01> {	[           q,  Q 		]	};
++    key <AD02> {	[	    z,  Z		]	};
++    key <AD03> {	[	    e,  E		]	};
++    key <AD04> {	[	    r,  R,   registered			] 	};
++    key <AD05> {	[	    t,  T		]	};
++    key <AD06> {	[	    y,  Y,       Uacute,	ydiaeresis      ] 	};
++    key <AD07> {	[	    u,  U		]	};
++    key <AD08> {	[	    i,  I,  icircumflex,	idiaeresis      ] 	};
++    key <AD09> {	[	    o,  O		]	};
++    key <AD10> {	[	    p,  P		]	};
+     key <AD11> {	[      igrave,  asciicircum     ]	};
+     key <AD12> {	[      dollar,	asterisk        ]	};
+-    key <BKSL> {	[     section,  degree		],
+-			[          at,  numbersign      ]	};
++    key <BKSL> {	[     section,  degree,           at,  numbersign      ]	};
+ 
+-    key <AC01> {	[	  a,	A 		]	,
+-                	[     aring,   Aring		] 	};
+-    key <AC02> {	[	  s,	S		],
+-			[    ssharp			]	};
++    key <AC01> {	[	  a,	A,      aring,   Aring		] 	};
++    key <AC02> {	[	  s,	S,     ssharp			]	};
+     key <AC03> {	[	  d,	D		]	};
+     key <AC04> {	[	  f,	F		]	};
+     key <AC05> {	[	  g,	G		]	};
+-    key <AC06> {	[	  h,	H		],
+-			[    Igrave,    Icircumflex     ]	};
+-    key <AC07> {	[	  j,	J		],
+-			[ Idiaeresis,   Iacute          ]	};
+-    key <AC08> {	[	  k,	K		],
+-			[    Egrave,    Ediaeresis      ]	};
+-    key <AC09> {	[	  l,	L		],
+-			[    ssharp,    bar		]	};
+-    key <AC10> {	[         m,	M    		],
+-			[        mu,    Oacute		]	};
+-    key <AC11> {	[    ugrave,	percent 	],
+-			[        ae,    AE		]	};
++    key <AC06> {	[	  h,	H,     Igrave,    Icircumflex     ]	};
++    key <AC07> {	[	  j,	J,  Idiaeresis,   Iacute          ]	};
++    key <AC08> {	[	  k,	K,     Egrave,    Ediaeresis      ]	};
++    key <AC09> {	[	  l,	L,     ssharp,    bar		]	};
++    key <AC10> {	[         m,	M,         mu,    Oacute		]	};
++    key <AC11> {	[    ugrave,	percent,         ae,    AE		]	};
+ 
+     key <AB01> {	[	  w,	W 		]	};
+     key <AB02> {	[	  x,	X		]	};
+-    key <AB03> {	[	  c,	C		],
+-			[ copyright,    copyright	]	};
++    key <AB03> {	[	  c,	C,  copyright,    copyright	]	};
+     key <AB04> {	[	  v,	V		]	};
+     key <AB05> {	[	  b,	B		]	};
+-    key <AB06> {	[	  n,	N		],
+-                        [ dead_tilde                    ]       };
+-    key <AB07> {	[     comma,	question	],
+-			[         questiondown		]	};
++    key <AB06> {	[	  n,	N,  dead_tilde                    ]       };
++    key <AB07> {	[     comma,	question,          questiondown		]	};
+     key <AB08> {	[ semicolon,	period          ]	};
+-    key <AB09> {	[     colon,	slash  		],
+-			[       bar,    backslash	]	};
+-    key <AB10> {	[    ograve,	exclam    	],
+-			[    exclamdown			]	};
++    key <AB09> {	[     colon,	slash,        bar,    backslash	]	};
++    key <AB10> {	[    ograve,	exclam,     exclamdown			]	};
+ 
+     // End alphanumeric section
+ 
+     key <KPDL> {	[ KP_Decimal , KP_Delete	]	};
+     // End "Keypad" section
+ 
++    include "level3(ralt_switch)"
+ };
+ 
+Index: xkb-data/symbols/macintosh_vndr/no
+===================================================================
+--- xkb-data.orig/symbols/macintosh_vndr/no
++++ xkb-data/symbols/macintosh_vndr/no
+@@ -11,38 +11,30 @@
+     name[Group1]= "Norwegian";
+ 
+     key <TLDE> {	[             bar,         section      ]	};
+-    key <AE02> {	[               2,        quotedbl     	],	
+-			[	       at,	 oneeighth	]	};
+-    key <AE04> {	[	        4,        currency	],
+-			[	   dollar,	    dollar	]	};
+-    key <AE03> {	[               3,	numbersign 	],
+-			[        sterling,        sterling	]	};
++    key <AE02> {	[               2,        quotedbl, 	       at,	 oneeighth	]	};
++    key <AE04> {	[	        4,        currency, 	   dollar,	    dollar	]	};
++    key <AE03> {	[               3,	numbersign,         sterling,        sterling	]	};
+     key <AE06> {	[               6,       ampersand     	]	};
+-    key <AE07> {	[               7,           slash     	],
+-			[	      bar,       backslash	]  	};
+-    key <AE08> {	[               8,       parenleft     	],
+-			[     bracketleft,	 braceleft	]	};
+-    key <AE09> {	[               9,      parenright     	],
+-			[    bracketright,      braceright	]	};
++    key <AE07> {	[               7,           slash, 	      bar,       backslash	]  	};
++    key <AE08> {	[               8,       parenleft,      bracketleft,	 braceleft	]	};
++    key <AE09> {	[               9,      parenright,     bracketright,      braceright	]	};
+     key <AE10> {	[               0,           equal     	]	};
+ 
+     key <AB08> {	[           comma,       semicolon     	]	};
+     key <AB09> {	[          period,           colon     	]	};
+     key <AB10> {	[           minus,      underscore     	]	};
+-    key	<AC10> {	[	   oslash,        Ooblique  	],
+-			[      odiaeresis,     Odiaeresis	]	};
++    key	<AC10> {	[	   oslash,        Ooblique,       odiaeresis,     Odiaeresis	]	};
+     key <AE11> {	[            plus,        question      ]	};
+     key <AC11> {	[              ae,              AE 	]	};
+     key <AD11> {	[	    aring,           Aring     	]	};
+-    key <AE12> {	[      dead_grave,      dead_acute	],
+-			[	    acute,     dead_ogonek 	]	};
+-    key <AD12> {	[       diaeresis,     asciicircum     	],	
+-			[      asciitilde,     dead_macron     	]      	};
++    key <AE12> {	[      dead_grave,      dead_acute, 	    acute,     dead_ogonek 	]	};
++    key <AD12> {	[       diaeresis,     asciicircum,       asciitilde,     dead_macron     	]      	};
+     key <BKSL> {	[              at,        asterisk	]	};
+     key <LSGT> {	[            less,         greater	]	};
+ 
+     // End alphanumeric section
+ 
++    include "level3(ralt_switch)"
+ };
+ 
+ 
+@@ -52,9 +44,7 @@
+     // Modifies the basic Norwegian layout to eliminate dead keys
+ 
+     include "macintosh_vndr/no(basic)"
+-    key <AE12> {	[           grave,           acute	],
+-			[	    acute,          ogonek 	]	};
+-    key <AD12> {	[       diaeresis,     asciicircum     	],	
+-			[      asciitilde,          macron     	]      	};
++    key <AE12> {	[           grave,           acute, 	    acute,          ogonek 	]	};
++    key <AD12> {	[       diaeresis,     asciicircum,       asciitilde,          macron     	]      	};
+ 
+ };
+Index: xkb-data/symbols/macintosh_vndr/pt
+===================================================================
+--- xkb-data.orig/symbols/macintosh_vndr/pt
++++ xkb-data/symbols/macintosh_vndr/pt
+@@ -12,24 +12,17 @@
+ 
+     name[Group1]= "Portuguese";
+ 
+-    key <LSGT> {	[	     less,	   greater	],
+-			[	      bar,       brokenbar	]	};
+-    key <AE02> {	[               2,	  quotedbl    	],	
+-			[	       at,       oneeighth	]	};
+-    key <AE04> {	[               4,	    dollar     	],
+-			[         section,          dollar	]	};
+-    key <AE03> {	[               3,	numbersign     	],
+-			[        sterling,        sterling     	]	};
++    key <LSGT> {	[	     less,	   greater, 	      bar,       brokenbar	]	};
++    key <AE02> {	[               2,	  quotedbl, 	       at,       oneeighth	]	};
++    key <AE04> {	[               4,	    dollar,          section,          dollar	]	};
++    key <AE03> {	[               3,	numbersign,         sterling,        sterling     	]	};
+     key <AE06> {	[               6,       ampersand     	]	};
+     key <AE07> {	[               7,           slash     	]	};
+-    key <AE08> {	[               8,       parenleft     	],
+-			[     bracketleft,       braceleft     	]	};
+-    key <AE09> {	[               9,      parenright      ],
+-			[    bracketright,      braceright     	]	};
++    key <AE08> {	[               8,       parenleft,      bracketleft,       braceleft     	]	};
++    key <AE09> {	[               9,      parenright,     bracketright,      braceright     	]	};
+     key <AE10> {	[               0,           equal      ]	};
+     key <AE11> {	[      apostrophe,        question      ]	};
+-    key <AE12> {	[	     plus,        asterisk 	],
+-    			[            dead_diaeresis             ]	};
++    key <AE12> {	[	     plus,        asterisk,             dead_diaeresis             ]	};
+     key <AB08> {	[           comma,       semicolon     	]	};
+     key <AB09> {	[          period,           colon      ]	};
+     key <AB10> {	[           minus,      underscore      ]	};
+@@ -40,14 +33,14 @@
+     key <AD12> {	[      dead_acute,      dead_grave 	]	};
+     // End alphanumeric section
+ 
++    include "level3(ralt_switch)"
+ };
+ 
+ partial alphanumeric_keys 
+ xkb_symbols "Sundeadkeys" {
+     include "macintosh_vndr/pt(basic)" // for consistent naming
+     
+-    key <AE12> {	[	     plus,        asterisk 	],
+-			[ SunFA_Diaeresis, SunFA_Diaeresis      ]	};
++    key <AE12> {	[	     plus,        asterisk,  SunFA_Diaeresis, SunFA_Diaeresis      ]	};
+     key <AC11> {	[     SunFA_Tilde,    SunFA_Circum	]	};
+     key <AD12> {	[     SunFA_Acute,     SunFA_Grave 	]	};
+ };
+@@ -61,8 +54,7 @@
+ xkb_symbols "nodeadkeys" {
+     include "macintosh_vndr/pt(basic)" // for consistent naming
+ 
+-    key <AE12> {	[	     plus,        asterisk 	],
+-			[	 quotedbl,        quotedbl      ]	};
++    key <AE12> {	[	     plus,        asterisk, 	 quotedbl,        quotedbl      ]	};
+     key <AC11> {	[      asciitilde,     asciicircum	]	};
+     key <AD12> {	[	    acute,           grave 	]	};
+ };
+Index: xkb-data/symbols/macintosh_vndr/se
+===================================================================
+--- xkb-data.orig/symbols/macintosh_vndr/se
++++ xkb-data/symbols/macintosh_vndr/se
+@@ -12,40 +12,29 @@
+ 
+     key <TLDE> {	[         section,         degree	]	};
+ 
+-    key <AE01> {	[               1,          exclam	],
+-			[       copyright,      exclamdown	]	};
+-    key <AE02> {	[               2,        quotedbl     	],	
+-			[	       at,	 oneeighth	]	};
+-    key <AE03> {	[               3,      numbersign      ],	
+-			[        sterling,             yen	]	};
+-    key <AE04> {	[               4,        currency     	],	
+-			[	   dollar,	      cent	]	};
++    key <AE01> {	[               1,          exclam,        copyright,      exclamdown	]	};
++    key <AE02> {	[               2,        quotedbl, 	       at,	 oneeighth	]	};
++    key <AE03> {	[               3,      numbersign,         sterling,             yen	]	};
++    key <AE04> {	[               4,        currency, 	   dollar,	      cent	]	};
+     key <AE06> {	[               6,       ampersand     	]	};
+-    key <AE07> {	[               7,           slash     	],
+-			[	      bar,       backslash	]	};
+-    key <AE08> {	[               8,       parenleft     	],
+-			[     bracketleft,       braceleft	]	};
+-    key <AE09> {	[               9,      parenright	],
+-			[    bracketright,      braceright	]	};
++    key <AE07> {	[               7,           slash, 	      bar,       backslash	]	};
++    key <AE08> {	[               8,       parenleft,      bracketleft,       braceleft	]	};
++    key <AE09> {	[               9,      parenright,     bracketright,      braceright	]	};
+     key <AB08> {	[           comma,       semicolon     	]	};
+     key <AE10> {	[               0,           equal     	]	};
+     key <AB09> {	[          period,           colon     	]	};
+     key <AB10> {	[           minus,      underscore     	]	};
+-    key	<AC10> {	[      odiaeresis,      Odiaeresis     	],
+-			[	   oslash,	    Ooblique	]	};
++    key	<AC10> {	[      odiaeresis,      Odiaeresis, 	   oslash,	    Ooblique	]	};
+     key <AE11> {	[            plus,        question      ]	};
+-    key <AC11> {	[      adiaeresis,      Adiaeresis 	],
+-			[              ae,		AE	]	};
++    key <AC11> {	[      adiaeresis,      Adiaeresis,               ae,		AE	]	};
+     key <AD11> {	[	    aring,           Aring     	]	};
+     key <AE12> {	[           acute,           grave	]	};
+-    key <AD12> {	[       diaeresis,     asciicircum     	],
+-    			[	asciitilde			]	};
+-    key <BKSL> {	[      apostrophe,        asterisk	],
+-			[              at			]	};
+-    key <LSGT> {        [            less,         greater      ],
+-                        [             bar,       brokenbar      ]       };
++    key <AD12> {	[       diaeresis,     asciicircum, 	asciitilde			]	};
++    key <BKSL> {	[      apostrophe,        asterisk,               at			]	};
++    key <LSGT> {        [            less,         greater,              bar,       brokenbar      ]       };
+ 
+     include "keypad(comma)"
++    include "level3(ralt_switch)"
+ };
+ 
+ 
+Index: xkb-data/symbols/macintosh_vndr/us
+===================================================================
+--- xkb-data.orig/symbols/macintosh_vndr/us
++++ xkb-data/symbols/macintosh_vndr/us
+@@ -199,13 +199,27 @@
+     // End "Modifier" section
+ 
+     // begin modifier mappings
+-    modifier_map Shift  { Shift_L , Shift_R };
+-    modifier_map Lock   { Caps_Lock };
++    modifier_map Shift  { Shift_L, Shift_R };
++    modifier_map Lock   { Caps_Lock, ISO_Lock };
+     modifier_map Control{ Control_L, Control_R };
+-    modifier_map Mod1   { Alt_L, Alt_R, Meta_L, Meta_R };
+     modifier_map Mod2   { Num_Lock };
+-    modifier_map Mod4   { Super_L, Super_R };
+-    modifier_map Mod5   { Scroll_Lock };
++
++    //  Fake keys for virtual<->real modifiers mapping 
++    key <LVL3> {	[ ISO_Level3_Shift	]	};
++    key <MDSW> {	[ Mode_switch 		]	};
++    modifier_map Mod5   { <LVL3>, <MDSW> };
++
++    key <ALT>  {	[ NoSymbol, Alt_L	]	};
++    modifier_map Mod1   { <ALT>, <LALT> };
++
++    key <META> {	[ NoSymbol, Meta_L	]	};
++    modifier_map Mod1   { <META> };
++
++    key <SUPR> {	[ NoSymbol, Super_L	]	};
++    modifier_map Mod4   { <SUPR> };
++
++    key <HYPR> {	[ NoSymbol, Hyper_L	]	};
++    modifier_map Mod4   { <HYPR> };
+     // end modifier mappings
+ 
+ };
+Index: xkb-data/symbols/macintosh_vndr/nl
+===================================================================
+--- xkb-data.orig/symbols/macintosh_vndr/nl
++++ xkb-data/symbols/macintosh_vndr/nl
+@@ -9,6 +9,8 @@
+ 
+     name[Group1]= "Netherland";
+ 
++    include "level3(ralt_switch)"
++
+ // do just nothing
+ 
+ };
