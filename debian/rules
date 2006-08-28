@@ -87,6 +87,16 @@ clean: $(stamp) unpatch
 deb:
 	dpkg-buildpackage -rfakeroot -i'/\.git|/\.svn'
 
+dir:
+	set -e; for f in compat geometry keycodes keymap semantics symbols types; do \
+	  rm -f $$f/$$f.dir; \
+	  cd $$f; \
+	  make $$f.dir XKBCOMP=xkbcomp; \
+	  LC_ALL=C sort -k3 $$f.dir > $$f.new && mv $$f.new $$f.dir; \
+	  cd ..; \
+	  cp $$f/$$f.dir debian/; \
+	done
+
 install: build
 	dh_testdir
 	dh_testroot
