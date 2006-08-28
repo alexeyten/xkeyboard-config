@@ -6,4 +6,5 @@ macintosh.diff
 fix_symbols_hr.diff -p0
 mac_fnkeys.diff -p0
 ralt_switch_multikey.diff
+microsoft.diff
 #mac_level3.diff
