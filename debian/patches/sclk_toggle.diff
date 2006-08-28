@@ -31,23 +31,11 @@ Index: xkb-data/rules/base.o_s.part
    lv3:switch		=	+level3(switch)
    lv3:ralt_switch	=	+level3(ralt_switch)
    lv3:lalt_switch	=	+level3(lalt_switch)
-Index: xkb-data/rules/base
-===================================================================
---- xkb-data.orig/rules/base
-+++ xkb-data/rules/base
-@@ -990,6 +990,7 @@
-   grp:lctrl_toggle	=	+group(lctrl_toggle)
-   grp:rctrl_toggle	=	+group(rctrl_toggle)
-   grp:lalt_toggle	=	+group(lalt_toggle)
-+  grp:sclk_toggle	=	+group(sclk_toggle)
-   lv3:switch		=	+level3(switch)
-   lv3:ralt_switch	=	+level3(ralt_switch)
-   lv3:lalt_switch	=	+level3(lalt_switch)
 Index: xkb-data/rules/base.xml.in
 ===================================================================
 --- xkb-data.orig/rules/base.xml.in
 +++ xkb-data/rules/base.xml.in
-@@ -2803,6 +2803,12 @@
+@@ -2815,6 +2815,12 @@
            <_description>Right Ctrl key changes group.</_description>
          </configItem>
        </option>
