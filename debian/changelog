@@ -27,6 +27,10 @@ xkeyboard-config (0.8-8) UNRELEASED; urgency=low
     'microsoft' model, it had been disabled by error in previous uploads.
     Closes: #379917 Thanks Phil Armstrong
 
+  * debian/patches/inet.diff: New patch to add apple, apple_laptop,
+    hpxt1000 and latitude to $inetkbds.  Closes: #381882
+    Thanks Steinar H. Gunderson
+
  -- Denis Barbier <barbier@debian.org>  Sat, 26 Aug 2006 14:54:51 +0200
 
 xkeyboard-config (0.8-7) unstable; urgency=low

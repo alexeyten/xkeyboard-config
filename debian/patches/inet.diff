@@ -1,0 +1,27 @@
+Index: xkb-data/rules/base.lists.part
+===================================================================
+--- xkb-data.orig/rules/base.lists.part
++++ xkb-data/rules/base.lists.part
+@@ -27,11 +27,11 @@
+               compaqeak8 compaqik7 compaqik13 compaqik18 \
+               cymotionlinux \
+               presario ipaq \
+-              dell inspiron dellusbmm dtk2000 \
++              dell inspiron latitude dellusbmm dtk2000 \
+               dexxa diamond \
+               genius geniuscomfy geniuscomfy2 genius_kb19e_nb \
+               emachines ennyah_dkb1008 gyration \
+-              hpi6 hp2501 hp2505 hp5181 hpxe3gc hpxe3gf hpxe4xxx hpzt11xx \
++              hpi6 hp2501 hp2505 hp5181 hpxe3gc hpxe3gf hpxe4xxx hpxt1000 hpzt11xx \
+               hp500fa hp5xx hp5185 \
+               honeywell_euroboard \
+               rapidaccess rapidaccess2 rapidaccess2a \
+@@ -41,7 +41,7 @@
+               microsoftinet microsoftpro microsoftprousb microsoftprooem microsoftprose \
+               microsoftoffice microsoftmult \
+               oretec \
+-              power_g5 propeller silvercrest scorpius \
++              power_g5 apple apple_laptop propeller silvercrest scorpius \
+               qtronix \
+               samsung4500 samsung4510 \
+               sk1300 sk2500 sk6200 sk7100 sp_inet \
