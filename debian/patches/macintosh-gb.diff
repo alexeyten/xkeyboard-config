@@ -1,3 +1,8 @@
+  * debian/patches/macintosh-gb.diff: New patch to fix <LSGT> and <TLDE> keys.
+    Closes: #379148 Thanks Roger Leigh
+
+Not submitted yet.
+
 Index: xkb-data/symbols/macintosh_vndr/gb
 ===================================================================
 --- xkb-data.orig/symbols/macintosh_vndr/gb

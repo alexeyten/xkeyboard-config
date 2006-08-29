@@ -2,6 +2,8 @@ The aim of this patch is to fix current mess with Macintosh keyboards.
 It will be included into experimental version only, and will be
 sent to upstream and uploaded into unstable when it is tested.
 
+Not submitted yet.
+
 Index: xkb-data/symbols/macintosh_vndr/ch
 ===================================================================
 --- xkb-data.orig/symbols/macintosh_vndr/ch

@@ -1,5 +1,7 @@
 This line has been erroneously removed from CVS 1.5
 
+Submitted upstream: https://bugs.freedesktop.org/show_bug.cgi?id=7817
+
 Index: xkb-data/rules/base.m_g.part
 ===================================================================
 --- xkb-data.orig/rules/base.m_g.part

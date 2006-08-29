@@ -5,6 +5,8 @@ which breaks terminal switching for us layout (see #370564).
 Here we move definitions which are performed in pc(pc105) into a new oldmac
 variant, which is used only with old Mac keyboards.
 
+Not submitted yet.
+
 Index: symbols/macintosh_vndr/us
 ===================================================================
 --- symbols/macintosh_vndr/us.orig

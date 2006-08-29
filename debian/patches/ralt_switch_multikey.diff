@@ -1,3 +1,9 @@
+  * debian/patches/ralt_switch_multikey.diff: New patch to enable again
+    lv3:ralt_switch_multikey which had been dropped from xkeyboard-config.
+    Closes: #364435  Thanks Klaus Ethgen
+
+Not submitted yet.
+
 Index: xkb-data/rules/base.o_s.part
 ===================================================================
 --- xkb-data.orig/rules/base.o_s.part

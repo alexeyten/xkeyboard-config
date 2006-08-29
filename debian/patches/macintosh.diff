@@ -1,3 +1,9 @@
+  * debian/patches/macintosh.diff: New patch to include 'latin' layout.
+    Closes: #366615, #363525
+
+Submitted upstream: https://bugs.freedesktop.org/show_bug.cgi?id=6670
+but this updated patch should be sent upstream.
+
 Index: xkb-data/symbols/macintosh_vndr/de
 ===================================================================
 --- xkb-data.orig/symbols/macintosh_vndr/de

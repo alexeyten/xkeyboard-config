@@ -1,3 +1,8 @@
+  * symbols/group: add ScrollLock as a group switcher key.
+    Thanks Andreas Kroschel.  Closes: #343287
+
+Not submitted yet.
+
 Index: xkb-data/symbols/group
 ===================================================================
 --- xkb-data.orig/symbols/group

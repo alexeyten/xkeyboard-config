@@ -1,3 +1,9 @@
+  * debian/patches/fix_symbols_hr.diff: New patch to fix Croatian layout,
+    some differences with previous XFree86 keymap had been introduced
+    in xkeyboard-config.  Closes: #379292  Thanks Josip Rodin
+
+Submitted upstream: https://bugs.freedesktop.org/show_bug.cgi?id=8019
+
 Index: symbols/hr
 ===================================================================
 --- symbols/hr.orig
