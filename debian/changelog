@@ -3,6 +3,9 @@ xkeyboard-config (0.8-9) UNRELEASED; urgency=low
   * debian/patches/resync_rules_base.diff: New patch to help keeping
     rules/base.* and rules/compat/base.* files up-to-date.
 
+  * debian/patches/mac_swap_kp.diff: New patch to swap KP_Delete and
+    KP_Separator on Mac keyboards.  Closes: #328125  Thanks Ben Mueller
+
  -- Denis Barbier <barbier@debian.org>  Tue, 29 Aug 2006 23:00:50 +0200
 
 xkeyboard-config (0.8-8) unstable; urgency=low

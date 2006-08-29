@@ -8,5 +8,6 @@ mac_fnkeys.diff -p0
 ralt_switch_multikey.diff
 microsoft.diff
 inet.diff
-resync_rules_base.diff
+mac_swap_kp.diff
 #mac_level3.diff
+resync_rules_base.diff
