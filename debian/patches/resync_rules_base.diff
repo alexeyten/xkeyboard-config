@@ -1,0 +1,332 @@
+# To rebuild this patch, run
+  ./debian/rules config.status
+  cd rules/compat
+  quilt add base.l[2-4]*.part base.m*.part
+  make
+  cd ..
+  quilt add base base.xml base.lst
+  make base base.xml base.lst
+  cd ..
+  quilt refresh --sort
+  exit 0
+
+Index: xkb-data/rules/base
+===================================================================
+--- xkb-data.orig/rules/base
++++ xkb-data/rules/base
+@@ -27,7 +27,8 @@
+ ! $qwertz = al cz de hr hu ro si sk 
+ 
+ ! $inetkbds = a4techKB21 a4techKBS8 a4_rfkb23 \
+-              acer_ferrari4k acer_tm_800 acpi airkey armada azonaRF2300 \
++              acer_c300 acer_ferrari4k acer_tm_800 \
++              acpi airkey armada azonaRF2300 \
+               brother \
+               btc5113rf btc5126t btc9000 btc9000a btc9001ah btc5090 \
+               cherryblue cherrybluea cherryblueb cherrycyboard \
+@@ -35,11 +36,11 @@
+               compaqeak8 compaqik7 compaqik13 compaqik18 \
+               cymotionlinux \
+               presario ipaq \
+-              dell inspiron dellusbmm dtk2000 \
++              dell inspiron latitude dellusbmm dtk2000 \
+               dexxa diamond \
+               genius geniuscomfy geniuscomfy2 genius_kb19e_nb \
+               emachines ennyah_dkb1008 gyration \
+-              hpi6 hp2501 hp2505 hp5181 hpxe3gc hpxe3gf hpxe4xxx hpzt11xx \
++              hpi6 hp2501 hp2505 hp5181 hpxe3gc hpxe3gf hpxe4xxx hpxt1000 hpzt11xx \
+               hp500fa hp5xx hp5185 \
+               honeywell_euroboard \
+               rapidaccess rapidaccess2 rapidaccess2a \
+@@ -49,11 +50,12 @@
+               microsoftinet microsoftpro microsoftprousb microsoftprooem microsoftprose \
+               microsoftoffice microsoftmult \
+               oretec \
+-              power_g5 propeller silvercrest scorpius \
++              power_g5 apple apple_laptop propeller silvercrest scorpius \
+               qtronix \
+               samsung4500 samsung4510 \
+               sk1300 sk2500 sk6200 sk7100 sp_inet \
+-              sven symplon toshiba_s3000 trust trustda yahoo
++              sven symplon toshiba_s3000 trust trustda yahoo \
++              evdev
+ 
+ // all layouts with 3rd and 4th groups
+ ! $threelevellayouts = al az \
+@@ -106,6 +108,7 @@
+   *             =       +aliases(qwerty)
+ 
+ ! model		=	geometry
++  microsoft	=	microsoft(natural)
+   microsoftpro	=	microsoft(natural)
+   microsoftprousb =	microsoft(natural)
+   microsoftprose =	microsoft(natural)
+@@ -352,11 +355,11 @@
+   sun5		*			=	latin+sun_vndr/us(sun5)+%l%(v)
+   pc98		nec_vndr/jp		=	nec_vndr/jp(pc98)
+   abnt2		br			=	pc(pc104)+br
+-  old_macintosh	us			=	macintosh_vndr/us(extended)
+-  old_macintosh	en_US			=	macintosh_vndr/us(extended)
+-  old_macintosh	$macvendorlayouts	=	macintosh_vndr/us(extended)+macintosh_vndr/%l%(v)
+-  old_macintosh	$nonlatin		=	macintosh_vndr/us(extended)+%l%(v):2
+-  old_macintosh	*			=	macintosh_vndr/us(extended)+%l%(v)
++  old_macintosh	us			=	macintosh_vndr/us(oldmac)
++  old_macintosh	en_US			=	macintosh_vndr/us(oldmac)
++  old_macintosh	$macvendorlayouts	=	macintosh_vndr/us(oldmac)+macintosh_vndr/%l%(v)
++  old_macintosh	$nonlatin		=	macintosh_vndr/us(oldmac)+%l%(v):2
++  old_macintosh	*			=	macintosh_vndr/us(oldmac)+%l%(v)
+  $mac		en_US			=	pc(pc105)+macintosh_vndr/us(extended)
+  $mac		$macvendorlayouts	=	pc(pc105)+macintosh_vndr/%l%(v)
+  $pcmodels      intl   			=       us(%mcompose)
+@@ -506,9 +509,9 @@
+   amiga		*			=	xfree68_vndr/amiga(usa1)+%l[1]%(v[1])
+   sun4		*			=	latin+sun_vndr/us(sun4)+%l[1]%(v[1])
+   sun5		*			=	latin+sun_vndr/us(sun5)+%l[1]%(v[1])
+-  old_macintosh	us			=	macintosh_vndr/us(extended)
+-  old_macintosh	$macvendorlayouts	=	macintosh_vndr/us(extended)+macintosh_vndr/%l[1]%(v[1])
+-  old_macintosh	*			=	macintosh_vndr/us(extended)+%l[1]%(v[1])
++  old_macintosh	us			=	macintosh_vndr/us(oldmac)
++  old_macintosh	$macvendorlayouts	=	macintosh_vndr/us(oldmac)+macintosh_vndr/%l[1]%(v[1])
++  old_macintosh	*			=	macintosh_vndr/us(oldmac)+%l[1]%(v[1])
+  $mac		$macvendorlayouts	=	pc(pc105)+macintosh_vndr/%l[1]%(v[1])
+  $pcmodels	*			=	pc(%m)+%l[1]%(v[1])
+   *		*			=	pc(pc105)+%l[1]%(v[1])
+@@ -990,8 +993,10 @@
+   grp:lctrl_toggle	=	+group(lctrl_toggle)
+   grp:rctrl_toggle	=	+group(rctrl_toggle)
+   grp:lalt_toggle	=	+group(lalt_toggle)
++  grp:sclk_toggle	=	+group(sclk_toggle)
+   lv3:switch		=	+level3(switch)
+   lv3:ralt_switch	=	+level3(ralt_switch)
++  lv3:ralt_switch_multikey	=	+level3(ralt_switch_multikey)
+   lv3:lalt_switch	=	+level3(lalt_switch)
+   lv3:alt_switch	=	+level3(alt_switch)
+   lv3:menu_switch	=	+level3(menu_switch)
+Index: xkb-data/rules/base.lst
+===================================================================
+--- xkb-data.orig/rules/base.lst
++++ xkb-data/rules/base.lst
+@@ -4,6 +4,7 @@
+   pc104           Generic 104-key PC
+   pc105           Generic 105-key (Intl) PC
+   dell101         Dell 101-key PC
++  latitude        Dell Latitude series laptop
+   everex          Everex STEPnote
+   flexpro         Keytronic FlexPro
+   microsoft       Microsoft Natural
+@@ -13,6 +14,7 @@
+   pc98            PC-98xx Series
+   a4techKB21      A4Tech KB-21
+   a4techKBS8      A4Tech KBS-8
++  a4_rfkb23       A4Tech Wireless Desktop RFKB-23
+   abnt2           Brazilian ABNT2
+   airkey          Acer AirKey V
+   acpi            ACPI Standard
+@@ -49,6 +51,7 @@
+   genius          Genius Comfy KB-16M / Genius MM Keyboard KWD-910
+   geniuscomfy     Genius Comfy KB-12e
+   geniuscomfy2    Genius Comfy KB-21e-Scroll
++  genius_kb19e_nb Genius KB-19e NB
+   gyration        Gyration
+   hpi6            Hewlett-Packard Internet Keyboard
+   hp2501          Hewlett-Packard SK-2501 Multimedia Keyboard
+@@ -68,21 +71,21 @@
+   logiaccess      Logitech Access Keyboard
+   ltcd            Logitech Cordless Desktop
+   logicdit        Logitech Cordless Desktop iTouch
++  logiclx300      Logitech Cordless Desktop LX-300
+   logicdp         Logitech Cordless Desktop Pro
+   logicdpa        Logitech Cordless Desktop Pro (alternate option)
+   logicdpa2       Logitech Cordless Desktop Pro (alternate option2)
+   logicdo         Logitech Cordless Desktop Optical
+   logicfn         Logitech Cordless Freedom/Desktop Navigator
+   logicdn         Logitech Cordless Desktop Navigator
+-  logidak         Logitech Deluxe Access Keyboard
+   logiitc         Logitech iTouch Cordless Keyboard (model Y-RB6)
+   logiik          Logitech Internet Keyboard
+   itouch          Logitech iTouch
+-  logiitc         Logitech iTouch Cordless Keyboard (model Y-RB6)
+-  logiik          Logitech Internet Keyboard
+-  logiink         Logitech Internet Navigator Keyboard
+-  itouchin        Logitech iTouch keyboard Internet Navigator
++  logicink        Logitech Internet Navigator Keyboard
++  logiinkse       Logitech iTouch Internet Navigator Keyboard SE
++  logiinkseusb    Logitech iTouch Internet Navigator Keyboard SE (USB)
+   logiultrax      Logitech Ultra-X Keyboard
++  dinovo          Logitech diNovo Keyboard
+   mx1998          Memorex MX1998
+   mx2500          Memorex MX2500 EZ-Access Keyboard
+   mx2750          Memorex MX2750
+@@ -112,10 +115,16 @@
+   macintosh       Macintosh
+   macintosh_old   Macintosh Old
+   powerpcps2      PowerPC PS/2
++  acer_c300       Acer C300
+   acer_tm_800     Acer TravelMate 800
++  acer_ferrari4k  Acer Ferrari 4000
+   power_g5        Power G5
++  apple           Apple
++  apple_laptop    Apple Laptop
+   silvercrest     SILVERCREST Multimedia Wireless Keyboard
+   emachines       Laptop/notebook eMachines m68xx
++  kr106           Korean 106-key
++  evdev           Evdev-managed keyboard
+ 
+ ! layout
+   us              U.S. English
+@@ -134,6 +143,7 @@
+   bg              Bulgaria
+   mm              Myanmar
+   ca              Canada
++  cd              Congo, Democratic Republic of the
+   hr              Croatia
+   cz              Czechia
+   dk              Denmark
+@@ -141,6 +151,7 @@
+   bt              Bhutan
+   ee              Estonia
+   ir              Iran
++  iq              Iraq
+   fo              Faroe Islands
+   fi              Finland
+   fr              France
+@@ -184,12 +195,14 @@
+   gb              United Kingdom
+   uz              Uzbekistan
+   vn              Vietnam
+-  nec_vndr/jp     PC-98xx Series
++  kr              Korea, Republic of
++  nec_vndr/jp     Japan (PC-98xx Series)
+   ie              Ireland
+   pk              Pakistan
+   mv              Maldives
+   za              South Africa
+   epo             Esperanto
++  np              Nepal
+ 
+ ! variant
+   intl            us: International (with dead keys)
+@@ -197,6 +210,7 @@
+   dvorak          us: Dvorak
+   dvorak-l        us: Left handed Dvorak
+   dvorak-r        us: Right handed Dvorak
++  dvorak-classic  us: Classic Dvorak
+   rus             us: Russian phonetic
+   ps              af: Pashto
+   uz              af: Southern Uzbek
+@@ -212,6 +226,7 @@
+   iso-alternate   be: ISO Alternate
+   nodeadkeys      be: Eliminate dead keys
+   sundeadkeys     be: Sun dead keys
++  wang            be: Wang model 724 azerty
+   probhat         bd: Probhat
+   ben             in: Bengali
+   ben_probhat     in: Bengali Probhat
+@@ -252,9 +267,16 @@
+   pro             ir: Pro
+   keypad          ir: Keypad
+   pro_keypad      ir: Pro Keypad
++  ku              ir: Kurdish, Latin Q
++  ku_f            ir: Kurdish, (F)
++  ku_alt          ir: Kurdish, Latin Alt-Q
++  ku              iq: Kurdish, Latin Q
++  ku_f            iq: Kurdish, (F)
++  ku_alt          iq: Kurdish, Latin Alt-Q
+   nodeadkeys      fo: Eliminate dead keys
+   nodeadkeys      fi: Eliminate dead keys
+   smi             fi: Northern Saami
++  kotoistus       fi: Kotoistus
+   nodeadkeys      fr: Eliminate dead keys
+   sundeadkeys     fr: Sun dead keys
+   latin9          fr: Alternative
+@@ -275,6 +297,9 @@
+   ro_nodeadkeys   de: Romanian keyboard with German letters, eliminate dead keys
+   dvorak          de: Dvorak
+   sundeadkeys     de: Sun dead keys
++  neo             de: Neostyle
++  mac             de: Macintosh layout
++  mac_nodeadkeys  de: Macintosh layout, eliminate dead keys
+   extended        gr: Extended
+   nodeadkeys      gr: Eliminate dead keys
+   polytonic       gr: Polytonic
+@@ -300,7 +325,6 @@
+   Sundeadkeys     is: Sun dead keys
+   nodeadkeys      is: Eliminate dead keys
+   lyx             il: lyx
+-  si1452          il: si1452
+   phonetic        il: Phonetic
+   nodeadkeys      it: Eliminate dead keys
+   ruskaz          kz: Russian with Kazakh
+@@ -313,7 +337,7 @@
+   tilde           lv: Tilde (~) variant
+   fkey            lv: F-letter (F) variant
+   nodeadkeys      mk: Eliminate dead keys
+-  us              mt: US keyboard with Maltian letters
++  us              mt: Maltese keyboard with US layout
+   nodeadkeys      no: Eliminate dead keys
+   dvorak          no: Dvorak
+   smi             no: Northern Saami
+@@ -322,6 +346,7 @@
+   dvorak          pl: Dvorak
+   dvorak_quotes   pl: Dvorak, Polish quotes on quotemark key
+   dvorak_altquotes pl: Dvorak, Polish quotes on key "1/!"
++  csb             pl: Kashubian
+   nodeadkeys      pt: Eliminate dead keys
+   sundeadkeys     pt: Sun dead keys
+   std             ro: Standard
+@@ -358,8 +383,13 @@
+   fr              ch: French
+   fr_nodeadkeys   ch: French, eliminate dead keys
+   fr_sundeadkeys  ch: French, Sun dead keys
++  fr_mac          ch: French (Macintosh)
++  de_mac          ch: German (Macintosh)
+   syc             sy: Syriac
+   syc_phonetic    sy: Syriac phonetic
++  ku              sy: Kurdish, Latin Q
++  ku_f            sy: Kurdish, (F)
++  ku_alt          sy: Kurdish, Latin Alt-Q
+   tam_unicode     lk: Tamil Unicode
+   tam_TAB         lk: Tamil TAB Typewriter
+   tis             th: TIS-820.2538
+@@ -367,6 +397,9 @@
+   f               tr: (F)
+   alt             tr: Alt-Q
+   sundeadkeys     tr: Sun dead keys
++  ku              tr: Kurdish, Latin Q
++  ku_f            tr: Kurdish, (F)
++  ku_alt          tr: Kurdish, Latin Alt-Q
+   phonetic        ua: Phonetic
+   typewriter      ua: Typewriter
+   winkeys         ua: Winkeys
+@@ -374,6 +407,7 @@
+   rstu_ru         ua: Standard RSTU on Russian layout
+   intl            gb: International (with dead keys)
+   dvorak          gb: Dvorak
++  kr104           kr: 101/104 key Compatible
+   CloGaelach      ie: CloGaelach
+   UnicodeExpert   ie: UnicodeExpert
+   ogam            ie: Ogham
+@@ -404,6 +438,7 @@
+   grp:rshift_toggle    Right Shift key changes group.
+   grp:lctrl_toggle     Left Ctrl key changes group.
+   grp:rctrl_toggle     Right Ctrl key changes group.
++  grp:sclk_toggle      ScrollLock key changes group.
+   lv3                  Third level choosers
+   lv3:switch           Press Right Ctrl to choose 3rd level.
+   lv3:menu_switch      Press Menu key to choose 3rd level.
+@@ -413,6 +448,7 @@
+   lv3:alt_switch       Press any of Alt keys to choose 3rd level.
+   lv3:lalt_switch      Press Left Alt key to choose 3rd level.
+   lv3:ralt_switch      Press Right Alt key to choose 3rd level.
++  lv3:ralt_switch_multikey Press Right Alt key to choose 3rd level, Shift+Right Alt key is Multi_Key.
+   ctrl                 Ctrl key position
+   ctrl:nocaps          Make CapsLock an additional Ctrl.
+   ctrl:swapcaps        Swap Ctrl and CapsLock.
+@@ -441,6 +477,7 @@
+   altwin:alt_super_win Alt is mapped to the right Win-key and Super to Menu.
+   Compose key          Compose key position
+   compose:ralt         Right Alt is Compose.
++  compose:lwin         Left Win-key is Compose.
+   compose:rwin         Right Win-key is Compose.
+   compose:menu         Menu is Compose.
+   compose:rctrl        Right Ctrl is Compose.
