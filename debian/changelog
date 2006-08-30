@@ -11,7 +11,10 @@ xkeyboard-config (0.8-9) UNRELEASED; urgency=low
     historically provided as alternative quotes, but these ones are
     better alternatives.  Closes: #308196 Thanks Mark Sheppard
 
- -- Denis Barbier <barbier@debian.org>  Tue, 29 Aug 2006 23:00:50 +0200
+  * debian/patches/mac_nodeadkeys.diff:  New patch to fix nodeadkeys variants,
+    they were badly broken.
+
+ -- Denis Barbier <barbier@debian.org>  Wed, 30 Aug 2006 22:17:59 +0200
 
 xkeyboard-config (0.8-8) unstable; urgency=low
 

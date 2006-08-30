@@ -11,4 +11,5 @@ inet.diff
 mac_swap_kp.diff
 #mac_level3.diff
 latin_quotes.diff
+mac_nodeadkeys.diff
 resync_rules_base.diff
