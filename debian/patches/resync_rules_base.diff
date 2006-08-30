@@ -2,9 +2,11 @@
   ./debian/rules config.status
   cd rules/compat
   quilt add base.l[2-4]*.part base.m*.part
+  rm -f base.l[2-4]*.part base.m*.part
   make
   cd ..
   quilt add base base.xml base.lst
+  rm -f base base.xml base.lst
   make base base.xml base.lst
   cd ..
   quilt refresh --sort

@@ -1,4 +1,4 @@
-xkeyboard-config (0.8-9) UNRELEASED; urgency=low
+xkeyboard-config (0.8-9) unstable; urgency=low
 
   * debian/patches/resync_rules_base.diff: New patch to help keeping
     rules/base.* and rules/compat/base.* files up-to-date.
