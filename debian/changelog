@@ -6,6 +6,11 @@ xkeyboard-config (0.8-9) UNRELEASED; urgency=low
   * debian/patches/mac_swap_kp.diff: New patch to swap KP_Delete and
     KP_Separator on Mac keyboards.  Closes: #328125  Thanks Ben Mueller
 
+  * debian/patches/latin_quotes.diff: New patch; grave and apostrophe
+    on the 4th level can be provided via simpler keystrokes.  They were
+    historically provided as alternative quotes, but these ones are
+    better alternatives.  Closes: #308196 Thanks Mark Sheppard
+
  -- Denis Barbier <barbier@debian.org>  Tue, 29 Aug 2006 23:00:50 +0200
 
 xkeyboard-config (0.8-8) unstable; urgency=low

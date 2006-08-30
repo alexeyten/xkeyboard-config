@@ -1,0 +1,22 @@
+Grave and apostrophe on the 4th level can be provided via simpler
+keystrokes.  They were historically provided as alternative quotes,
+but these one are better alternatives now that Unicode is common.
+Closes: #308196  Thanks Mark Sheppard
+
+Not sunmitted yet.
+
+Index: xkb-data/symbols/latin
+===================================================================
+--- xkb-data.orig/symbols/latin
++++ xkb-data/symbols/latin
+@@ -50,8 +50,8 @@
+     key <AB01>	{ [         z,          Z, guillemotleft,        less ]	};
+     key <AB02>	{ [         x,          X, guillemotright,    greater ]	};
+     key <AB03>	{ [         c,          C,         cent,    copyright ]	};
+-    key <AB04>	{ [         v,          V, leftdoublequotemark, grave ]	};
+-    key <AB05>	{ [         b,          B, rightdoublequotemark, apostrophe ] };
++    key <AB04>	{ [         v,          V, leftdoublequotemark, leftsinglequotemark ]	};
++    key <AB05>	{ [         b,          B, rightdoublequotemark, rightsinglequotemark ] };
+     key <AB06>	{ [         n,          N ]	};
+     key <AB07>	{ [         m,          M,           mu,    masculine ]	};
+     key <AB08>	{ [     comma,       less, horizconnector,   multiply ]	};
