@@ -12,4 +12,5 @@ mac_swap_kp.diff
 #mac_level3.diff
 latin_quotes.diff
 mac_nodeadkeys.diff
+#macbook_keycodes.diff
 resync_rules_base.diff

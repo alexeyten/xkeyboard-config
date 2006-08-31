@@ -1,3 +1,10 @@
+xkeyboard-config (0.8-10) unstable; urgency=low
+
+  * Really fix Mac nodeadkeys variants, rules/base was not properly
+    rebuilt.
+
+ -- Denis Barbier <barbier@debian.org>  Thu, 31 Aug 2006 00:30:25 +0200
+
 xkeyboard-config (0.8-9) unstable; urgency=low
 
   * debian/patches/resync_rules_base.diff: New patch to help keeping

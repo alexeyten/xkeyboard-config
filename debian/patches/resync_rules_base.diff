@@ -5,9 +5,9 @@
   rm -f base.l[2-4]*.part base.m*.part
   make
   cd ..
-  quilt add base base.xml base.lst
-  rm -f base base.xml base.lst
-  make base base.xml base.lst
+  quilt add base base.lst
+  rm -f base base.lst
+  make base base.lst
   cd ..
   quilt refresh --sort
   exit 0
@@ -63,6 +63,15 @@ Index: xkb-data/rules/base
    microsoftpro	=	microsoft(natural)
    microsoftprousb =	microsoft(natural)
    microsoftprose =	microsoft(natural)
+@@ -205,7 +208,7 @@
+   *		yu		yz		=	pc(pc105)+srp(latinyz)
+   $pcmodels	yu		unicodeyz		=	pc(%m)+srp(latinunicodeyz)
+   *		yu		unicodeyz		=	pc(pc105)+srp(latinunicodeyz)
+- $mac		$macvendorlayouts	nodeadkeys	=	macintosh_vndr/us(extended)+macintosh_vndr/%l%(v)
++ $mac		$macvendorlayouts	nodeadkeys	=	pc(pc105)+macintosh_vndr/us(extended)+macintosh_vndr/%l%(v)
+ 
+ ! model		layout				=	symbols
+   $pcmodels	ar			=	pc(%m)+ara
 @@ -352,11 +355,11 @@
    sun5		*			=	latin+sun_vndr/us(sun5)+%l%(v)
    pc98		nec_vndr/jp		=	nec_vndr/jp(pc98)

@@ -1,0 +1,49 @@
+Some new Mac keyboards have two keycodes swapped.
+Let's introduce a new model for now.
+
+Not submitted yet, but partially discussed in
+  https://bugs.freedesktop.org/show_bug.cgi?id=8068
+
+Index: xkb-data/keycodes/macintosh
+===================================================================
+--- xkb-data.orig/keycodes/macintosh
++++ xkb-data/keycodes/macintosh
+@@ -37,6 +37,13 @@
+    <KPEQ> = 157;
+    
+ };
++
++xkb_keycodes "macbook" {
++   include "macintosh"
++   <TLDE> =  94;
++   <LSGT> =  49;
++};
++
+ xkb_keycodes "old" {
+ 
+     minimum= 8;
+Index: xkb-data/rules/base.m_k.part
+===================================================================
+--- xkb-data.orig/rules/base.m_k.part
++++ xkb-data/rules/base.m_k.part
+@@ -3,6 +3,7 @@
+   sun4		=	sun(type4_euro)
+   sun5		=	sun(type5_euro)
+   macintosh_old	=	macintosh(old)
++  macbook	=	macintosh(macbook)
+   macintosh	=	macintosh
+   powerpcps2	=	powerpcps2
+   pc98		=	xfree98(pc98)
+Index: xkb-data/rules/base.lists.part
+===================================================================
+--- xkb-data.orig/rules/base.lists.part
++++ xkb-data/rules/base.lists.part
+@@ -10,7 +10,7 @@
+ ! $pcgeometries = abnt2 latitude microsoft jp106 kr106
+ 
+ ! $maclaptop = ibook powerbook
+-! $mac = macintosh macintosh_old ibook powerbook
++! $mac = macintosh macintosh_old ibook powerbook macbook
+ 
+ ! $macvendorlayouts = ch de dk es fi fr gb is it nl no pt se us
+ 
