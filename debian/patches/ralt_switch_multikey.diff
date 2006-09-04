@@ -2,7 +2,8 @@
     lv3:ralt_switch_multikey which had been dropped from xkeyboard-config.
     Closes: #364435  Thanks Klaus Ethgen
 
-Not submitted yet.
+Not submitted directly, but discussed in
+   https://bugs.freedesktop.org/show_bug.cgi?id=7674
 
 Index: xkb-data/rules/base.o_s.part
 ===================================================================

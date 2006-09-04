@@ -3,7 +3,7 @@ keystrokes.  They were historically provided as alternative quotes,
 but these one are better alternatives now that Unicode is common.
 Closes: #308196  Thanks Mark Sheppard
 
-Not sunmitted yet.
+Submitted upstream: https://bugs.freedesktop.org/show_bug.cgi?id=8122
 
 Index: xkb-data/symbols/latin
 ===================================================================

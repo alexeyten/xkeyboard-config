@@ -1,7 +1,7 @@
 The nodeadkeys variant of Mac layouts is unusable, modifiers and others
 important keys are not defined.
 
-Not submitted yet.
+Submitted upstream: https://bugs.freedesktop.org/show_bug.cgi?id=8123
 
 Index: xkb-data/rules/base.mlv_s.part
 ===================================================================
