@@ -1,3 +1,15 @@
+xkeyboard-config (0.8-11) unstable; urgency=low
+
+  * debian/patches/rearrange_options.diff: New patch to modify options
+    order in rules/base so that altwin:meta_win can be overriden by
+    other options.  Closes: #385355  Thanks Ben Mueller
+
+  * debian/patches/fix_symbols_key_type.diff: Several layouts did
+    define global key types, so keys for other groups were broken.
+    Closes: #373692, #385970  Thanks Robert Marlow and Jan Willem Stumpel
+
+ -- Denis Barbier <barbier@debian.org>  Mon,  4 Sep 2006 21:50:00 +0200
+
 xkeyboard-config (0.8-10) unstable; urgency=low
 
   * Really fix Mac nodeadkeys variants, rules/base was not properly

@@ -1367,7 +1367,15 @@ Index: xkb-data/symbols/macintosh_vndr/apple
 ===================================================================
 --- xkb-data.orig/symbols/macintosh_vndr/apple
 +++ xkb-data/symbols/macintosh_vndr/apple
-@@ -49,12 +49,6 @@
+@@ -42,19 +42,13 @@
+     // the fn-keypad, so use the Enter key (right of <SPC>) for Mode_switch,
+     // and use fn+Enter (Apple's code for Menu) for KP_Enter.
+     replace key <KPEN> { [ ISO_Level3_Shift ] };
+-    modifier_map Mod2  { ISO_Level3_Shift };	
++    modifier_map Mod5  { ISO_Level3_Shift };	
+     // Linux kernel bug with Menu on macs means this doesn't work yet
+ //    replace key <MENU> { [ KP_Enter ] }; // should be keycode 117
+ };
  
  partial modifier_keys
  xkb_symbols "laptop_bad_switch" {
@@ -1381,3 +1389,29 @@ Index: xkb-data/symbols/macintosh_vndr/apple
 -    replace key <KPEN> { [ Mode_switch ] };
 -    modifier_map Mod2  { Mode_switch };	
  };
+Index: xkb-data/symbols/inet
+===================================================================
+--- xkb-data.orig/symbols/inet
++++ xkb-data/symbols/inet
+@@ -2170,19 +2170,16 @@
+ // Apple keyboard
+ partial modifier_keys
+ xkb_symbols "apple" {
+-    key <KPEQ> { [ KP_Equal ] };
++    include "macintosh_vndr/apple(extended)"
+ };
+ 
+ partial modifier_keys
+ xkb_symbols "apple_laptop" {
+-    include "inet(apple)"
+-
+     // These keyboards only generate a <RALT> when pressing fn+Alt. This makes
+     // it impossible to get to the third shift level on keys that are on
+     // the fn-keypad, so use the Enter key (right of <SPC>) for Mode_switch,
+     // and use fn+Enter (Apple's code for Menu) for KP_Enter.
+-    replace key <KPEN> { [ ISO_Level3_Shift ] };
+-    modifier_map Mod2  { ISO_Level3_Shift };
++    include "macintosh_vndr/apple(laptop)"
+ };
+ 
+ partial alphanumeric_keys

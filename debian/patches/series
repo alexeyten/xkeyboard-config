@@ -4,8 +4,10 @@ sclk_toggle.diff
 macintosh-gb.diff
 macintosh.diff
 fix_symbols_hr.diff -p0
+fix_symbols_key_type.diff
 mac_fnkeys.diff -p0
 ralt_switch_multikey.diff
+rearrange_options.diff
 microsoft.diff
 inet.diff
 mac_swap_kp.diff
@@ -13,4 +15,5 @@ mac_swap_kp.diff
 latin_quotes.diff
 mac_nodeadkeys.diff
 #macbook_keycodes.diff
+#generic_symbols_pc.diff
 resync_rules_base.diff

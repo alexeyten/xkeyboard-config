@@ -102,7 +102,21 @@ Index: xkb-data/rules/base
   $mac		$macvendorlayouts	=	pc(pc105)+macintosh_vndr/%l[1]%(v[1])
   $pcmodels	*			=	pc(%m)+%l[1]%(v[1])
    *		*			=	pc(pc105)+%l[1]%(v[1])
-@@ -990,8 +993,10 @@
+@@ -968,6 +971,13 @@
+ 
+ ! option	=	symbols
+   grp:shift_toggle	=	+group(shifts_toggle)
++  altwin:menu		=	+altwin(menu)
++  altwin:meta_alt	=	+altwin(meta_alt)
++  altwin:meta_win	=	+altwin(meta_win)
++  altwin:left_meta_win	=	+altwin(left_meta_win)
++  altwin:super_win	=	+altwin(super_win)
++  altwin:hyper_win	=	+altwin(hyper_win)
++  altwin:alt_super_win	=	+altwin(alt_super_win)
+   grp:switch		=	+group(switch)
+   grp:lswitch		=	+group(lswitch)
+   grp:win_switch	=	+group(win_switch)
+@@ -990,8 +1000,10 @@
    grp:lctrl_toggle	=	+group(lctrl_toggle)
    grp:rctrl_toggle	=	+group(rctrl_toggle)
    grp:lalt_toggle	=	+group(lalt_toggle)
@@ -113,6 +127,20 @@ Index: xkb-data/rules/base
    lv3:lalt_switch	=	+level3(lalt_switch)
    lv3:alt_switch	=	+level3(alt_switch)
    lv3:menu_switch	=	+level3(menu_switch)
+@@ -1006,13 +1018,6 @@
+   ctrl:ctrl_ac		=	+ctrl(ctrl_ac)
+   ctrl:ctrl_aa		=	+ctrl(ctrl_aa)
+   ctrl:ctrl_ra		=	+ctrl(ctrl_ra)
+-  altwin:menu		=	+altwin(menu)
+-  altwin:meta_alt	=	+altwin(meta_alt)
+-  altwin:meta_win	=	+altwin(meta_win)
+-  altwin:left_meta_win	=	+altwin(left_meta_win)
+-  altwin:super_win	=	+altwin(super_win)
+-  altwin:hyper_win	=	+altwin(hyper_win)
+-  altwin:alt_super_win	=	+altwin(alt_super_win)
+   compose:ralt		=	+compose(ralt)
+   compose:lwin		=	+compose(lwin)
+   compose:rwin		=	+compose(rwin)
 Index: xkb-data/rules/base.lst
 ===================================================================
 --- xkb-data.orig/rules/base.lst
