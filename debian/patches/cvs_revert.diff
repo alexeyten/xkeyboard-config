@@ -1,0 +1,97 @@
+Changes for Macintosh keyboards are currently tested within
+experimental packages.  They will be backported into trunk
+later, revert these changes for now in order to not confuse
+Mac users of unstable packages.
+
+Index: xkb-data/rules/base.lists.part
+===================================================================
+--- xkb-data.orig/rules/base.lists.part
++++ xkb-data/rules/base.lists.part
+@@ -14,9 +14,8 @@
+ // PC geometries - they have special geometry but symbols are mostly pc105
+ ! $pcgeometries = abnt2 latitude jp106 kr106
+ 
+-! $macbooks = macbook78 macbook79
+-! $maclaptop = ibook powerbook macbook78 macbook79
+-! $macs = macintosh macintosh_old ibook powerbook macbook78 macbook79
++! $maclaptop = ibook powerbook
++! $macs = macintosh macintosh_old ibook powerbook
+ 
+ ! $macvendorlayouts = ch de dk es fi fr gb is it nl no pt se us
+ 
+Index: xkb-data/rules/base.m_g.part
+===================================================================
+--- xkb-data.orig/rules/base.m_g.part
++++ xkb-data/rules/base.m_g.part
+@@ -9,6 +9,5 @@
+   everex	=	everex(STEPnote)
+   winbook	=	winbook(XP5)
+   pc98		=	nec(pc98)
+- $macbooks      =       macintosh(%m)
+  $macs		=	macintosh(macintosh)
+   *		=       pc(pc104)
+Index: xkb-data/rules/base.m_k.part
+===================================================================
+--- xkb-data.orig/rules/base.m_k.part
++++ xkb-data/rules/base.m_k.part
+@@ -9,6 +9,5 @@
+   abnt2		=	xfree86(abnt2)
+   jp106		=	xfree86(jp106)
+   evdev		=	evdev
+- $macbooks	=	macintosh(macbook)
+  $macs   	=	macintosh
+   *		=	xfree86
+Index: xkb-data/rules/base.ml_s.part
+===================================================================
+--- xkb-data.orig/rules/base.ml_s.part
++++ xkb-data/rules/base.ml_s.part
+@@ -13,7 +13,6 @@
+   old_macintosh	$macvendorlayouts	=	macintosh_vndr/us(extended)+macintosh_vndr/%l%(v)
+   old_macintosh	$nonlatin		=	macintosh_vndr/us(extended)+%l%(v):2
+   old_macintosh	*			=	macintosh_vndr/us(extended)+%l%(v)
+- $macbooks	*			=	pc(pc105)+%l%(v)
+  $macs		en_US			=	pc(pc105)+macintosh_vndr/us(extended)
+  $macs		$macvendorlayouts	=	pc(pc105)+macintosh_vndr/%l%(v)
+  $pcmodels      intl   			=       us(%mcompose)
+Index: xkb-data/rules/base.xml.in
+===================================================================
+--- xkb-data.orig/rules/base.xml.in
++++ xkb-data/rules/base.xml.in
+@@ -682,18 +682,6 @@
+     </model>
+     <model>
+       <configItem>
+-        <name>macbook78</name>
+-        <description>MacBook/MacBook Pro</description>
+-      </configItem>
+-    </model>
+-    <model>
+-      <configItem>
+-        <name>macbook79</name>
+-        <description>MacBook/MacBook Pro (Intl)</description>
+-      </configItem>
+-    </model>
+-    <model>
+-      <configItem>
+         <name>macintosh</name>
+         <_description>Macintosh</_description>
+       </configItem>
+Index: xkb-data/ChangeLog
+===================================================================
+--- xkb-data.orig/ChangeLog
++++ xkb-data/ChangeLog
+@@ -47,14 +47,6 @@
+ 
+ 2006-08-31  Sergey Udaltsov
+ 
+-	geometry/macintosh, keycodes/macintosh, keycodes/xfree86,
+-	rules/base.lists.part, rules/base.m_g.part, rules/base.m_k.part,
+-	rules/base.m_s.part, rules/base.ml_s.part, rules/base.xml.in,
+-	symbols/inet: Added Macbook stuff, partially closing
+-	https://bugs.freedesktop.org/show_bug.cgi?id=8068
+-
+-2006-08-31  Sergey Udaltsov
+-
+ 	symbols/group, rules/base.o_s.part: added group:alt_caps_toggle
+ 	https://bugs.freedesktop.org/show_bug.cgi?id=8047
+ 

@@ -1393,13 +1393,7 @@ Index: xkb-data/symbols/inet
 ===================================================================
 --- xkb-data.orig/symbols/inet
 +++ xkb-data/symbols/inet
-@@ -2170,19 +2170,16 @@
- // Apple keyboard
- partial modifier_keys
- xkb_symbols "apple" {
--    key <KPEQ> { [ KP_Equal ] };
-+    include "macintosh_vndr/apple(extended)"
- };
+@@ -2178,14 +2178,11 @@
  
  partial modifier_keys
  xkb_symbols "apple_laptop" {

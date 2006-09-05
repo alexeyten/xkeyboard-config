@@ -16,17 +16,19 @@ Index: xkb-data/rules/base
 ===================================================================
 --- xkb-data.orig/rules/base
 +++ xkb-data/rules/base
-@@ -27,7 +27,8 @@
- ! $qwertz = al cz de hr hu ro si sk 
+@@ -23,9 +23,8 @@
+ // PC geometries - they have special geometry but symbols are mostly pc105
+ ! $pcgeometries = abnt2 latitude jp106 kr106
  
- ! $inetkbds = a4techKB21 a4techKBS8 a4_rfkb23 \
--              acer_ferrari4k acer_tm_800 acpi airkey armada azonaRF2300 \
-+              acer_c300 acer_ferrari4k acer_tm_800 \
-+              acpi airkey armada azonaRF2300 \
-               brother \
-               btc5113rf btc5126t btc9000 btc9000a btc9001ah btc5090 \
-               cherryblue cherrybluea cherryblueb cherrycyboard \
-@@ -35,11 +36,11 @@
+-! $macbooks = macbook78 macbook79
+-! $maclaptop = ibook powerbook macbook78 macbook79
+-! $macs = macintosh macintosh_old ibook powerbook macbook78 macbook79
++! $maclaptop = ibook powerbook
++! $macs = macintosh macintosh_old ibook powerbook
+ 
+ ! $macvendorlayouts = ch de dk es fi fr gb is it nl no pt se us
+ 
+@@ -42,11 +41,11 @@
                compaqeak8 compaqik7 compaqik13 compaqik18 \
                cymotionlinux \
                presario ipaq \
@@ -40,39 +42,32 @@ Index: xkb-data/rules/base
                hp500fa hp5xx hp5185 \
                honeywell_euroboard \
                rapidaccess rapidaccess2 rapidaccess2a \
-@@ -49,11 +50,12 @@
-               microsoftinet microsoftpro microsoftprousb microsoftprooem microsoftprose \
-               microsoftoffice microsoftmult \
-               oretec \
--              power_g5 propeller silvercrest scorpius \
-+              power_g5 apple apple_laptop propeller silvercrest scorpius \
-               qtronix \
-               samsung4500 samsung4510 \
-               sk1300 sk2500 sk6200 sk7100 sp_inet \
--              sven symplon toshiba_s3000 trust trustda yahoo
-+              sven symplon toshiba_s3000 trust trustda yahoo \
-+              evdev
+@@ -101,7 +100,6 @@
+   abnt2		=	xfree86(abnt2)
+   jp106		=	xfree86(jp106)
+   evdev		=	evdev
+- $macbooks	=	macintosh(macbook)
+  $macs   	=	macintosh
+   *		=	xfree86
  
- // all layouts with 3rd and 4th groups
- ! $threelevellayouts = al az \
-@@ -106,6 +108,7 @@
-   *             =       +aliases(qwerty)
+@@ -127,7 +125,6 @@
+   everex	=	everex(STEPnote)
+   winbook	=	winbook(XP5)
+   pc98		=	nec(pc98)
+- $macbooks      =       macintosh(%m)
+  $macs		=	macintosh(macintosh)
+   *		=       pc(pc104)
  
- ! model		=	geometry
-+  microsoft	=	microsoft(natural)
-   microsoftpro	=	microsoft(natural)
-   microsoftprousb =	microsoft(natural)
-   microsoftprose =	microsoft(natural)
-@@ -205,7 +208,7 @@
+@@ -214,7 +211,7 @@
    *		yu		yz		=	pc(pc105)+srp(latinyz)
    $pcmodels	yu		unicodeyz		=	pc(%m)+srp(latinunicodeyz)
    *		yu		unicodeyz		=	pc(pc105)+srp(latinunicodeyz)
-- $mac		$macvendorlayouts	nodeadkeys	=	macintosh_vndr/us(extended)+macintosh_vndr/%l%(v)
-+ $mac		$macvendorlayouts	nodeadkeys	=	pc(pc105)+macintosh_vndr/us(extended)+macintosh_vndr/%l%(v)
+- $macs		$macvendorlayouts	nodeadkeys	=	macintosh_vndr/us(extended)+macintosh_vndr/%l%(v)
++ $macs		$macvendorlayouts	nodeadkeys	=	pc(pc105)+macintosh_vndr/us(extended)+macintosh_vndr/%l%(v)
  
  ! model		layout				=	symbols
    $pcmodels	ar			=	pc(%m)+ara
-@@ -352,11 +355,11 @@
+@@ -361,12 +358,11 @@
    sun5		*			=	latin+sun_vndr/us(sun5)+%l%(v)
    pc98		nec_vndr/jp		=	nec_vndr/jp(pc98)
    abnt2		br			=	pc(pc104)+br
@@ -81,15 +76,16 @@ Index: xkb-data/rules/base
 -  old_macintosh	$macvendorlayouts	=	macintosh_vndr/us(extended)+macintosh_vndr/%l%(v)
 -  old_macintosh	$nonlatin		=	macintosh_vndr/us(extended)+%l%(v):2
 -  old_macintosh	*			=	macintosh_vndr/us(extended)+%l%(v)
+- $macbooks	*			=	pc(pc105)+%l%(v)
 +  old_macintosh	us			=	macintosh_vndr/us(oldmac)
 +  old_macintosh	en_US			=	macintosh_vndr/us(oldmac)
 +  old_macintosh	$macvendorlayouts	=	macintosh_vndr/us(oldmac)+macintosh_vndr/%l%(v)
 +  old_macintosh	$nonlatin		=	macintosh_vndr/us(oldmac)+%l%(v):2
 +  old_macintosh	*			=	macintosh_vndr/us(oldmac)+%l%(v)
-  $mac		en_US			=	pc(pc105)+macintosh_vndr/us(extended)
-  $mac		$macvendorlayouts	=	pc(pc105)+macintosh_vndr/%l%(v)
+  $macs		en_US			=	pc(pc105)+macintosh_vndr/us(extended)
+  $macs		$macvendorlayouts	=	pc(pc105)+macintosh_vndr/%l%(v)
   $pcmodels      intl   			=       us(%mcompose)
-@@ -506,9 +509,9 @@
+@@ -516,9 +512,9 @@
    amiga		*			=	xfree68_vndr/amiga(usa1)+%l[1]%(v[1])
    sun4		*			=	latin+sun_vndr/us(sun4)+%l[1]%(v[1])
    sun5		*			=	latin+sun_vndr/us(sun5)+%l[1]%(v[1])
@@ -99,48 +95,17 @@ Index: xkb-data/rules/base
 +  old_macintosh	us			=	macintosh_vndr/us(oldmac)
 +  old_macintosh	$macvendorlayouts	=	macintosh_vndr/us(oldmac)+macintosh_vndr/%l[1]%(v[1])
 +  old_macintosh	*			=	macintosh_vndr/us(oldmac)+%l[1]%(v[1])
-  $mac		$macvendorlayouts	=	pc(pc105)+macintosh_vndr/%l[1]%(v[1])
+  $macs		$macvendorlayouts	=	pc(pc105)+macintosh_vndr/%l[1]%(v[1])
   $pcmodels	*			=	pc(%m)+%l[1]%(v[1])
    *		*			=	pc(pc105)+%l[1]%(v[1])
-@@ -968,6 +971,13 @@
- 
- ! option	=	symbols
-   grp:shift_toggle	=	+group(shifts_toggle)
-+  altwin:menu		=	+altwin(menu)
-+  altwin:meta_alt	=	+altwin(meta_alt)
-+  altwin:meta_win	=	+altwin(meta_win)
-+  altwin:left_meta_win	=	+altwin(left_meta_win)
-+  altwin:super_win	=	+altwin(super_win)
-+  altwin:hyper_win	=	+altwin(hyper_win)
-+  altwin:alt_super_win	=	+altwin(alt_super_win)
-   grp:switch		=	+group(switch)
-   grp:lswitch		=	+group(lswitch)
-   grp:win_switch	=	+group(win_switch)
-@@ -990,8 +1000,10 @@
+@@ -1010,6 +1006,7 @@
    grp:lctrl_toggle	=	+group(lctrl_toggle)
    grp:rctrl_toggle	=	+group(rctrl_toggle)
    grp:lalt_toggle	=	+group(lalt_toggle)
 +  grp:sclk_toggle	=	+group(sclk_toggle)
    lv3:switch		=	+level3(switch)
    lv3:ralt_switch	=	+level3(ralt_switch)
-+  lv3:ralt_switch_multikey	=	+level3(ralt_switch_multikey)
-   lv3:lalt_switch	=	+level3(lalt_switch)
-   lv3:alt_switch	=	+level3(alt_switch)
-   lv3:menu_switch	=	+level3(menu_switch)
-@@ -1006,13 +1018,6 @@
-   ctrl:ctrl_ac		=	+ctrl(ctrl_ac)
-   ctrl:ctrl_aa		=	+ctrl(ctrl_aa)
-   ctrl:ctrl_ra		=	+ctrl(ctrl_ra)
--  altwin:menu		=	+altwin(menu)
--  altwin:meta_alt	=	+altwin(meta_alt)
--  altwin:meta_win	=	+altwin(meta_win)
--  altwin:left_meta_win	=	+altwin(left_meta_win)
--  altwin:super_win	=	+altwin(super_win)
--  altwin:hyper_win	=	+altwin(hyper_win)
--  altwin:alt_super_win	=	+altwin(alt_super_win)
-   compose:ralt		=	+compose(ralt)
-   compose:lwin		=	+compose(lwin)
-   compose:rwin		=	+compose(rwin)
+   lv3:ralt_switch_multikey	=	+level3(ralt_switch_multikey)
 Index: xkb-data/rules/base.lst
 ===================================================================
 --- xkb-data.orig/rules/base.lst
@@ -196,14 +161,14 @@ Index: xkb-data/rules/base.lst
    mx1998          Memorex MX1998
    mx2500          Memorex MX2500 EZ-Access Keyboard
    mx2750          Memorex MX2750
-@@ -112,10 +115,16 @@
+@@ -112,10 +115,15 @@
    macintosh       Macintosh
    macintosh_old   Macintosh Old
    powerpcps2      PowerPC PS/2
 +  acer_c300       Acer C300
    acer_tm_800     Acer TravelMate 800
+-  power_g5        Power G5
 +  acer_ferrari4k  Acer Ferrari 4000
-   power_g5        Power G5
 +  apple           Apple
 +  apple_laptop    Apple Laptop
    silvercrest     SILVERCREST Multimedia Wireless Keyboard
@@ -213,7 +178,7 @@ Index: xkb-data/rules/base.lst
  
  ! layout
    us              U.S. English
-@@ -134,6 +143,7 @@
+@@ -134,6 +142,7 @@
    bg              Bulgaria
    mm              Myanmar
    ca              Canada
@@ -221,7 +186,7 @@ Index: xkb-data/rules/base.lst
    hr              Croatia
    cz              Czechia
    dk              Denmark
-@@ -141,6 +151,7 @@
+@@ -141,6 +150,7 @@
    bt              Bhutan
    ee              Estonia
    ir              Iran
@@ -229,7 +194,7 @@ Index: xkb-data/rules/base.lst
    fo              Faroe Islands
    fi              Finland
    fr              France
-@@ -184,12 +195,14 @@
+@@ -184,12 +194,14 @@
    gb              United Kingdom
    uz              Uzbekistan
    vn              Vietnam
@@ -245,7 +210,7 @@ Index: xkb-data/rules/base.lst
  
  ! variant
    intl            us: International (with dead keys)
-@@ -197,6 +210,7 @@
+@@ -197,6 +209,7 @@
    dvorak          us: Dvorak
    dvorak-l        us: Left handed Dvorak
    dvorak-r        us: Right handed Dvorak
@@ -253,7 +218,7 @@ Index: xkb-data/rules/base.lst
    rus             us: Russian phonetic
    ps              af: Pashto
    uz              af: Southern Uzbek
-@@ -212,6 +226,7 @@
+@@ -212,6 +225,7 @@
    iso-alternate   be: ISO Alternate
    nodeadkeys      be: Eliminate dead keys
    sundeadkeys     be: Sun dead keys
@@ -261,16 +226,36 @@ Index: xkb-data/rules/base.lst
    probhat         bd: Probhat
    ben             in: Bengali
    ben_probhat     in: Bengali Probhat
-@@ -252,9 +267,16 @@
+@@ -226,7 +240,7 @@
+   tam             in: Tamil
+   tel             in: Telugu
+   urd             in: Urdu
+-  alternatequotes ba: Use guillemots for quotes
++  alternatequotes ba: Use guillemets for quotes
+   unicode         ba: Use Bosnian digraphs
+   unicodeus       ba: US keyboard with Bosnian digraphs
+   us              ba: US keyboard with Bosnian letters
+@@ -238,7 +252,7 @@
+   multi           ca: Multilingual, first part
+   multi-2gr       ca: Multilingual, second part
+   ike             ca: Inuktitut
+-  alternatequotes hr: Use guillemots for quotes
++  alternatequotes hr: Use guillemets for quotes
+   unicode         hr: Use Croatian digraphs
+   unicodeus       hr: US keyboard with Croatian digraphs
+   us              hr: US keyboard with Croatian letters
+@@ -252,9 +266,18 @@
    pro             ir: Pro
    keypad          ir: Keypad
    pro_keypad      ir: Pro Keypad
 +  ku              ir: Kurdish, Latin Q
 +  ku_f            ir: Kurdish, (F)
 +  ku_alt          ir: Kurdish, Latin Alt-Q
++  ku_ara          ir: Kurdish, Arabic-Latin
 +  ku              iq: Kurdish, Latin Q
 +  ku_f            iq: Kurdish, (F)
 +  ku_alt          iq: Kurdish, Latin Alt-Q
++  ku_ara          iq: Kurdish, Arabic-Latin
    nodeadkeys      fo: Eliminate dead keys
    nodeadkeys      fi: Eliminate dead keys
    smi             fi: Northern Saami
@@ -278,7 +263,7 @@ Index: xkb-data/rules/base.lst
    nodeadkeys      fr: Eliminate dead keys
    sundeadkeys     fr: Sun dead keys
    latin9          fr: Alternative
-@@ -275,6 +297,9 @@
+@@ -275,6 +298,9 @@
    ro_nodeadkeys   de: Romanian keyboard with German letters, eliminate dead keys
    dvorak          de: Dvorak
    sundeadkeys     de: Sun dead keys
@@ -288,7 +273,7 @@ Index: xkb-data/rules/base.lst
    extended        gr: Extended
    nodeadkeys      gr: Eliminate dead keys
    polytonic       gr: Polytonic
-@@ -300,7 +325,6 @@
+@@ -300,7 +326,6 @@
    Sundeadkeys     is: Sun dead keys
    nodeadkeys      is: Eliminate dead keys
    lyx             il: lyx
@@ -296,7 +281,12 @@ Index: xkb-data/rules/base.lst
    phonetic        il: Phonetic
    nodeadkeys      it: Eliminate dead keys
    ruskaz          kz: Russian with Kazakh
-@@ -313,7 +337,7 @@
+@@ -309,11 +334,12 @@
+   sundeadkeys     latam: Sun dead keys
+   std             lt: Standard
+   us              lt: US keyboard with Lithuanian letters
++  ibm             lt: IBM (LST 1205-92)
+   apostrophe      lv: Apostrophe (') variant
    tilde           lv: Tilde (~) variant
    fkey            lv: F-letter (F) variant
    nodeadkeys      mk: Eliminate dead keys
@@ -305,7 +295,7 @@ Index: xkb-data/rules/base.lst
    nodeadkeys      no: Eliminate dead keys
    dvorak          no: Dvorak
    smi             no: Northern Saami
-@@ -322,6 +346,7 @@
+@@ -322,6 +348,7 @@
    dvorak          pl: Dvorak
    dvorak_quotes   pl: Dvorak, Polish quotes on quotemark key
    dvorak_altquotes pl: Dvorak, Polish quotes on key "1/!"
@@ -313,7 +303,27 @@ Index: xkb-data/rules/base.lst
    nodeadkeys      pt: Eliminate dead keys
    sundeadkeys     pt: Sun dead keys
    std             ro: Standard
-@@ -358,8 +383,13 @@
+@@ -330,14 +357,16 @@
+   typewriter      ru: Typewriter
+   winkeys         ru: Winkeys
+   tt              ru: Tatar
++  os              ru: Ossetian
++  os_winkeys      ru: Ossetian, Winkeys
+   yz              cs: Z and ZHE swapped
+   latin           cs: Latin
+   latinunicode    cs: Latin Unicode
+   latinyz         cs: Latin qwerty
+   latinunicodeyz  cs: Latin Unicode qwerty
+-  alternatequotes cs: With guillemots
+-  latinalternatequotes cs: Latin with guillemots
+-  alternatequotes si: Use guillemots for quotes
++  alternatequotes cs: With guillemets
++  latinalternatequotes cs: Latin with guillemets
++  alternatequotes si: Use guillemets for quotes
+   unicode         si: Use Slovenian digraphs
+   unicodeus       si: US keyboard with Slovenian digraphs
+   us              si: US keyboard with Slovenian letters
+@@ -358,8 +387,13 @@
    fr              ch: French
    fr_nodeadkeys   ch: French, eliminate dead keys
    fr_sundeadkeys  ch: French, Sun dead keys
@@ -327,7 +337,7 @@ Index: xkb-data/rules/base.lst
    tam_unicode     lk: Tamil Unicode
    tam_TAB         lk: Tamil TAB Typewriter
    tis             th: TIS-820.2538
-@@ -367,6 +397,9 @@
+@@ -367,6 +401,9 @@
    f               tr: (F)
    alt             tr: Alt-Q
    sundeadkeys     tr: Sun dead keys
@@ -337,7 +347,7 @@ Index: xkb-data/rules/base.lst
    phonetic        ua: Phonetic
    typewriter      ua: Typewriter
    winkeys         ua: Winkeys
-@@ -374,6 +407,7 @@
+@@ -374,6 +411,7 @@
    rstu_ru         ua: Standard RSTU on Russian layout
    intl            gb: International (with dead keys)
    dvorak          gb: Dvorak
@@ -345,7 +355,15 @@ Index: xkb-data/rules/base.lst
    CloGaelach      ie: CloGaelach
    UnicodeExpert   ie: UnicodeExpert
    ogam            ie: Ogham
-@@ -404,6 +438,7 @@
+@@ -391,6 +429,7 @@
+   grp:lalt_toggle      Left Alt key changes group.
+   grp:caps_toggle      CapsLock key changes group.
+   grp:shift_caps_toggle Shift+CapsLock changes group.
++  grp:alt_caps_toggle  Alt+CapsLock changes group.
+   grp:shifts_toggle    Both Shift keys together change group.
+   grp:alts_toggle      Both Alt keys together change group.
+   grp:ctrls_toggle     Both Ctrl keys together change group.
+@@ -404,6 +443,7 @@
    grp:rshift_toggle    Right Shift key changes group.
    grp:lctrl_toggle     Left Ctrl key changes group.
    grp:rctrl_toggle     Right Ctrl key changes group.
@@ -353,7 +371,7 @@ Index: xkb-data/rules/base.lst
    lv3                  Third level choosers
    lv3:switch           Press Right Ctrl to choose 3rd level.
    lv3:menu_switch      Press Menu key to choose 3rd level.
-@@ -413,6 +448,7 @@
+@@ -413,6 +453,7 @@
    lv3:alt_switch       Press any of Alt keys to choose 3rd level.
    lv3:lalt_switch      Press Left Alt key to choose 3rd level.
    lv3:ralt_switch      Press Right Alt key to choose 3rd level.
@@ -361,8 +379,11 @@ Index: xkb-data/rules/base.lst
    ctrl                 Ctrl key position
    ctrl:nocaps          Make CapsLock an additional Ctrl.
    ctrl:swapcaps        Swap Ctrl and CapsLock.
-@@ -441,6 +477,7 @@
+@@ -439,8 +480,10 @@
+   altwin:super_win     Super is mapped to the Win-keys (default).
+   altwin:hyper_win     Hyper is mapped to the Win-keys.
    altwin:alt_super_win Alt is mapped to the right Win-key and Super to Menu.
++  altwin:swap_lalt_lwin Left Alt is swapped with left Win-key.
    Compose key          Compose key position
    compose:ralt         Right Alt is Compose.
 +  compose:lwin         Left Win-key is Compose.

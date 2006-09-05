@@ -2,7 +2,67 @@ Index: xkb-data/ChangeLog
 ===================================================================
 --- xkb-data.orig/ChangeLog
 +++ xkb-data/ChangeLog
-@@ -1,3 +1,272 @@
+@@ -1,3 +1,332 @@
++2006-09-04  Sergey Udaltsov
++
++	rules/base.lists.part, rules/base.m_g.part, rules/base.m_k.part,
++	rules/base.m_s.part, rules/base.ml1_s.part, rules/base.ml_s.part,
++	rules/base.mlv_s.part: fixing lists,
++	https://bugs.freedesktop.org/show_bug.cgi?id=7817
++
++2006-09-04  Sergey Udaltsov
++
++	symbols/cd, symbols/gr, symbols/il, symbols/jp, symbols/la,
++	symbols/lk, symbols/ru, symbols/ca: fixing types, on per-group basis,
++	https://bugs.freedesktop.org/show_bug.cgi?id=8121
++
++2006-09-04  Sergey Udaltsov
++
++	symbols/level3: adding level3:ralt_switch_multikey,
++	https://bugs.freedesktop.org/show_bug.cgi?id=7674
++
++2006-09-03  Sergey Udaltsov
++
++	symbols/vn: getting rid of digits (1 and 2 shift levels),
++	https://bugs.freedesktop.org/show_bug.cgi?id=7807
++
++2006-09-03  Sergey Udaltsov
++
++	rules/base.xml.in: s/guillemot/guillemet/, closing
++	https://bugs.freedesktop.org/show_bug.cgi?id=8116
++
++2006-09-02  Sergey Udaltsov
++
++	symbols/lt, rules/base.xml.in: added lt(ibm)
++	https://bugs.freedesktop.org/show_bug.cgi?id=3841
++
++2006-09-02  Sergey Udaltsov
++
++	symbols/hr: reverted Croatian
++	https://bugs.freedesktop.org/show_bug.cgi?id=8019
++
++2006-09-01  Sergey Udaltsov
++
++	symbols/ru, rules/base.xml.in: added Ossetian, closing
++	https://bugs.freedesktop.org/show_bug.cgi?id=8092
++
++2006-09-01  Sergey Udaltsov
++
++	symbols/ir, symbols/iq, rules/base.xml.in: added Kurdish Arabic-Latin
++
++2006-08-31  Sergey Udaltsov
++
++	geometry/macintosh, keycodes/macintosh, keycodes/xfree86,
++	rules/base.lists.part, rules/base.m_g.part, rules/base.m_k.part,
++	rules/base.m_s.part, rules/base.ml_s.part, rules/base.xml.in,
++	symbols/inet: Added Macbook stuff, partially closing
++	https://bugs.freedesktop.org/show_bug.cgi?id=8068
++
++2006-08-31  Sergey Udaltsov
++
++	symbols/group, rules/base.o_s.part: added group:alt_caps_toggle
++	https://bugs.freedesktop.org/show_bug.cgi?id=8047
++
 +2006-08-02  Sergey Udaltsov
 +
 +	symbols/inet, keycodes/evdev: updated evdev
@@ -275,7 +335,7 @@ Index: xkb-data/ChangeLog
  2006-03-05  Sergey Udaltsov
  
  	configure.in, NEWS, Changelog:Preparing release 0.8
-@@ -35,7 +304,7 @@
+@@ -35,7 +364,7 @@
  	
  2006-02-21 svu
  
@@ -284,12 +344,12 @@ Index: xkb-data/ChangeLog
  	https://bugzilla.redhat.com/bugzilla/show_bug.cgi?id=3807
  	
  2006-02-01 svu
-@@ -742,7 +1011,7 @@
+@@ -742,7 +1071,7 @@
  
  2004-09-13 22:39  svu
  
 -	* symbols/tj: new local cvs keyword seems to be ok - no more $Id: ChangeLog,v 1.126 2006/03/04 17:33:43 svu Exp $
-+	* symbols/tj: new local cvs keyword seems to be ok - no more $Id: ChangeLog,v 1.178 2006-08-02 23:16:20 svu Exp $
++	* symbols/tj: new local cvs keyword seems to be ok - no more $Id: ChangeLog,v 1.189 2006-09-04 21:23:22 svu Exp $
  
  2004-09-13 22:38  svu
  
@@ -5086,7 +5146,7 @@ Index: xkb-data/geometry/macintosh
  	           { <RALT>, "RALT" }, { <RCTL>, "RCTL" }
  	    };
  	};
-@@ -172,3 +177,155 @@
+@@ -172,3 +177,394 @@
      }; // End of "Keypad" section
  
  }; // End of "default" geometry
@@ -5242,6 +5302,245 @@ Index: xkb-data/geometry/macintosh
 +    }; // End of "Keypad" section
 +
 +}; // End of "applepro" geometry
++
++xkb_geometry "macbook78" {
++
++    description= "Apple Laptop 78-key (US)";
++    width= 273;
++    height= 110;
++
++    shape.cornerRadius= 0;
++    shape "ESC"  { { [ 21,9] }, cornerRadius=1, { [0,1], [ 19,8] } };
++    shape "FUNC" { { [ 18,9] }, cornerRadius=1, { [2,1], [ 16,8] } };
++    shape "EJCT" { { [ 20,9] }, cornerRadius=1, { [2,1], [ 20,8] } };
++    shape "DEGR" { { [ 16,18] }, cornerRadius=1, { [0,2], [ 14,16] } };
++    shape "NORM" { { [ 18,18] }, cornerRadius=1, { [2,2], [ 16,16] } };
++    shape "BKSP" { { [ 25,18] }, cornerRadius=1, { [2,2], [ 25,16] } };
++    shape "TABK" { { [ 24,18] }, cornerRadius=1, { [0,2], [ 22,16] } };
++    shape "BKSL" { { [ 17,18] }, cornerRadius=1, { [2,2], [17,16] } };
++    shape "RTRN" { { [ 31,18] }, cornerRadius=1, { [2,2], [31,16] } };
++    shape "CAPS" { { [ 29,18] }, cornerRadius=1, { [0,2], [ 27,16] } };
++    shape "LFSH" { { [ 40,18] }, cornerRadius=1, { [0,2], [ 38,16] } };
++    shape "RTSH" { { [ 39,18] }, cornerRadius=1, { [2,2], [ 39,16] } };
++    shape "APPL" { { [ 23,18] }, cornerRadius=1, { [2,2], [ 21,16] } };
++    shape "SPCE" { { [ 94,18] }, cornerRadius=1, { [2,2], [ 92,16] } };
++    shape "ARRO" { { [ 17,9] }, cornerRadius=1, { [2,1], [ 15,8] } };
++
++    shape "LED"  { cornerRadius= 1, { [  2,  2 ] } };
++
++    indicator.onColor= "green";
++    indicator.offColor= "gray";
++    indicator.shape= "LED";
++    indicator "Num Lock"   { top=4; left= 119; };
++    indicator "Caps Lock"  { top=53; left= 4; };
++
++    section.left=0;
++    row.left= 1;
++    key.shape= "FUNC";
++    key.gap= 1;
++    section "Function" {
++	top= 0;
++	row {
++	    top= 1;
++	    keys {  {<ESC>, "ESC" },
++		    <FK01>, <FK02>, <FK03>, <FK04>,
++		    <FK05>, <FK06>, <FK07>, <FK08>,
++		    <FK09>, <FK10>, <FK11>, <FK12>,
++                    {<K6C>, "EJCT" }
++	    };
++	};
++    }; // End of "Function" section
++
++    key.shape= "NORM";
++    section "Alpha" {
++	top= 10;
++	row {
++	    top= 1;
++	    keys { {<TLDE>, "DEGR"},
++                   <AE01>, <AE02>, <AE03>, <AE04>,
++		   <AE05>, <AE06>, <AE07>, <AE08>,
++                   <AE09>, <AE10>, <AE11>, <AE12>,
++		   { <BKSP>, "BKSP" }
++	    };
++	};
++	row {
++	    top= 20;
++	    keys { { <TAB>, "TABK"},
++		   <AD01>, <AD02>, <AD03>, <AD04>, <AD05>, 
++		   <AD06>, <AD07>, <AD08>, <AD09>, <AD10>, 
++		   <AD11>, <AD12>, 
++                   { <BKSL>, "BKSL" }
++	    };
++	};
++	row {
++	    top= 39;
++	    keys { { <CAPS>, "CAPS" },
++		   <AC01>, <AC02>, <AC03>, <AC04>, <AC05>, 
++		   <AC06>, <AC07>, <AC08>, <AC09>, <AC10>, 
++		   <AC11>, 
++                   { <RTRN>, "RTRN" }
++	    };
++        };
++	row {
++	    top= 58;
++	    keys { { <LFSH>, "LFSH"},
++		   <AB01>, <AB02>, <AB03>, <AB04>, <AB05>, 
++		   <AB06>, <AB07>, <AB08>, <AB09>, <AB10>, 
++		   { <RTSH>, "RTSH" }
++	    };
++	};
++	row {
++	    top= 77;
++	    keys { {<FN>, "DEGR"}, 
++                   <LCTL>, <LALT>, 
++                   {<LMTA>, "APPL"},
++                   {<SPCE>, "SPCE" }, 
++                   {<RMTA>, "APPL"},
++                   <KPEN>
++	    };
++	};
++
++    }; // End of "Alpha" section
++
++    key.shape= "ARRO";
++    section "Editing" {
++        top = 86;
++        left = 217;
++	row {
++	    top= 1;
++	    left= 19;
++	    keys { <UP> };
++	};
++	row {
++	    top= 10;
++	    keys { <LEFT>, <DOWN>, <RGHT> };
++	};
++    }; // End of "Editing" section
++
++    alias <AC00> = <CAPS>;
++    alias <AA00> = <LCTL>;
++
++};
++
++xkb_geometry "macbook79" {
++
++    description= "Apple Laptop 79-key (Intl)";
++    width= 273;
++    height= 110;
++
++    shape.cornerRadius= 0;
++    shape "ESC"  { { [ 21,9] }, cornerRadius=1, { [0,1], [ 19,8] } };
++    shape "FUNC" { { [ 18,9] }, cornerRadius=1, { [2,1], [ 16,8] } };
++    shape "EJCT" { { [ 20,9] }, cornerRadius=1, { [2,1], [ 20,8] } };
++    shape "DEGR" { { [ 16,18] }, cornerRadius=1, { [0,2], [ 14,16] } };
++    shape "NORM" { { [ 18,18] }, cornerRadius=1, { [2,2], [ 16,16] } };
++    shape "BKSP" { { [ 25,18] }, cornerRadius=1, { [2,2], [ 25,16] } };
++    shape "TABK" { { [ 24,18] }, cornerRadius=1, { [0,2], [ 22,16] } };
++    shape "RTRN" { { [ 0,0], [17,0], [17,37], [5,37], [5, 18], [0,18], [0,0] },
++                   cornerRadius=1, 
++	           { [ 2,2], [15,2], [15,35], [7,35], [7, 16], [2,16] } 
++                 };
++    shape "CAPS" { { [ 29,18] }, cornerRadius=1, { [0,2], [ 27,16] } };
++    shape "LFSH" { { [ 21,18] }, cornerRadius=1, { [0,2], [ 19,16] } };
++    shape "RTSH" { { [ 39,18] }, cornerRadius=1, { [2,2], [ 39,16] } };
++    shape "APPL" { { [ 23,18] }, cornerRadius=1, { [2,2], [ 21,16] } };
++    shape "SPCE" { { [ 94,18] }, cornerRadius=1, { [2,2], [ 92,16] } };
++    shape "ARRO" { { [ 17,9] }, cornerRadius=1, { [2,1], [ 15,8] } };
++
++    shape "LED"  { cornerRadius= 1, { [  2,  2 ] } };
++
++    indicator.onColor= "green";
++    indicator.offColor= "gray";
++    indicator.shape= "LED";
++    indicator "Num Lock"   { top=4; left= 119; };
++    indicator "Caps Lock"  { top=53; left= 4; };
++
++    section.left=0;
++    row.left= 1;
++    key.shape= "FUNC";
++    key.gap= 1;
++    section "Function" {
++	top= 0;
++	row {
++	    top= 1;
++	    keys {  {<ESC>, "ESC" },
++		    <FK01>, <FK02>, <FK03>, <FK04>,
++		    <FK05>, <FK06>, <FK07>, <FK08>,
++		    <FK09>, <FK10>, <FK11>, <FK12>,
++                    {<K6C>, "EJCT" }
++	    };
++	};
++    }; // End of "Function" section
++
++    key.shape= "NORM";
++    section "Alpha" {
++	top= 10;
++	row {
++	    top= 1;
++	    keys { {<TLDE>, "DEGR"},
++                   <AE01>, <AE02>, <AE03>, <AE04>,
++		   <AE05>, <AE06>, <AE07>, <AE08>,
++                   <AE09>, <AE10>, <AE11>, <AE12>,
++		   { <BKSP>, "BKSP" }
++	    };
++	};
++	row {
++	    top= 20;
++	    keys { { <TAB>, "TABK"},
++		   <AD01>, <AD02>, <AD03>, <AD04>, <AD05>, 
++		   <AD06>, <AD07>, <AD08>, <AD09>, <AD10>, 
++		   <AD11>, <AD12>, { <RTRN>, "RTRN" }
++	    };
++	};
++	row {
++	    top= 39;
++	    keys { { <CAPS>, "CAPS" },
++		   <AC01>, <AC02>, <AC03>, <AC04>, <AC05>, 
++		   <AC06>, <AC07>, <AC08>, <AC09>, <AC10>, 
++		   <AC11>, <BKSL>
++	    };
++        };
++	row {
++	    top= 58;
++	    keys { { <LFSH>, "LFSH"},
++		   <LSGT>, <AB01>, <AB02>, <AB03>, <AB04>, <AB05>, 
++		   <AB06>, <AB07>, <AB08>, <AB09>, <AB10>,
++		   { <RTSH>, "RTSH" }
++	    };
++	};
++	row {
++	    top= 77;
++	    keys { {<FN>, "DEGR"}, 
++                   <LCTL>, <LALT>, 
++                   {<LWIN>, "APPL"},
++                   {<SPCE>, "SPCE" }, 
++                   {<RALT>, "APPL"},
++                   <KPEN>
++	    };
++	};
++
++    }; // End of "Alpha" section
++
++    key.shape= "ARRO";
++    section "Editing" {
++        top = 86;
++        left = 217;
++	row {
++	    top= 1;
++	    left= 19;
++	    keys { <UP> };
++	};
++	row {
++	    top= 10;
++	    keys { <LEFT>, <DOWN>, <RGHT> };
++	};
++    }; // End of "Editing" section
++
++    alias <AC00> = <CAPS>;
++    alias <AA00> = <LCTL>;
++
++}; // End of "default" geometry
++
 Index: xkb-data/geometry/pc
 ===================================================================
 --- xkb-data.orig/geometry/pc
@@ -6793,11 +7092,367 @@ Index: xkb-data/keycodes/evdev
  	<TLDE> = 49;
  	<AE01> = 10;
  	<AE02> = 11;
-@@ -346,6 +349,7 @@
- 	// <META> =   156; // <I1C>
- 	// <SUPR> =   127; // <U7F>
- 	// <HYPR> =   128; // <U80>
-+	<LSGT> = 94;
+@@ -69,7 +72,8 @@
+ 	// Microsoft keyboard extra keys
+ 	<LWIN> = 133;
+ 	<RWIN> = 134;
+-	<MENU> = 135;
++	<COMP> = 135;
++	alias <MENU> = <COMP>;
+ 
+ 	<ESC> = 9;
+ 	<FK01> = 67;
+@@ -124,228 +128,146 @@
+ 
+ 	<KP0> = 90;
+ 	<KPDL> = 91;
+-	// <KPEQ> = 126;
++	<KPEQ> = 125;
+ 
+ 	<FK13> = 191;
+ 	<FK14> = 192;
+ 	<FK15> = 193;
+ 	<FK16> = 194;
+ 	<FK17> = 195;
+-	// <KPDC> = 123;
++	<FK18> = 196;
++	<FK19> = 197;
++	<FK20> = 198;
++	<FK21> = 199;
++	<FK22> = 200;
++	<FK23> = 201;
++	<FK24> = 202;
+ 
+ 	// Keys that are generated on Japanese keyboards
+ 
+-	// alias <HZTG> = <TLDE>;	// Hankaku_Zenkaku toggle
+-	// <HZTG> =  85;               // Hankaku/Zenkakau toggle
+-	// <HKTG> =  93;		// Hiragana/Katakana toggle
+-	// <AB11> = 211;		// backslash/underscore
+-	// <XFER> =  92;		// Henkan
+-	// <NFER> =  94;		// Muhenkan
+-	// <AE13> = 124;		// Yen
++	<HZTG> =  93;	// Hankaku/Zenkakau toggle
++	<HKTG> = 101;	// Hiragana/Katakana toggle
++	<AB11> = 211;	// backslash/underscore
++	<HENK> = 100;	// Henkan
++	<MUHE> = 102;	// Muhenkan
++	<AE13> = 132;	// Yen
++	<KATA> =  98;	// Katakana
++	<HIRA> =  99;	// Hiragana
++	<JPCM> = 103;	// KPJPComma
+ 
+ 	// Keys that are generated on Korean keyboards
+ 
+-	// alias <HNGL> = <FK16>;     // Hangul Latin toggle
+-	// alias <HJCV> = <FK17>;     // Hangul to Hanja conversion
+-	<HNGL> = 130;
+-	<HJCV> = 131;
+-
+-	// Extended keys that may be generated on "Internet" keyboards.
+-	// These are not standardised, hence the meaningless names.
+-	// The entries commented out are never generated because the raw codes
+-	// in those positions are already used for well-defined keys.
+-
+-	// evdev does standardize names for these though.  comment them
+-	// all out for now.
+-
+-	// alias <I01> = <XFER>;
+-	// <I02> =   130;
+-	// alias <I03> = <NFER>;
+-	// <I04> =   132;
+-	// alias <I05> = <AE13>;
+-	// <I06> =   134;
+-	// <I07> =   135;
+-	// <I08> =   136;
+-	// <I09> =   137;
+-	// <I0A> =   138;
+-	// <I0B> =   139;
+-	// <I0C> =   140;
+-	// <I0D> =   141;
+-	// <I0E> =   142;
+-	// <I0F> =   143;
+-	// <I10> =   144;
+-	// <I11> =   145;
+-	// <I12> =   146;
+-	// <I13> =   147;
+-	// <I14> =   148;
+-	// <I15> =   149;
+-	// <I16> =   150;
+-	// <I17> =   151;
+-	// <I18> =   152;
+-	// <I19> =   153;
+-	// <I1A> =   154;
+-	// <I1B> =   155;
+-	// <I1C> =   156;	<META>
+-	// <I1D> =   157;	<K59>
+-	// <I1E> =   158;
+-	// <I1F> =   159;
+-	// <I20> =   160;
+-	// <I21> =   161;
+-	// <I22> =   162;
+-	// <I23> =   163;
+-	// <I24> =   164;
+-	// <I25> =   165;
+-	// <I26> =   166;
+-	// <I27> =   167;
+-	// <I28> =   168;
+-	// <I29> =   169;
+-	// <I2A> =   170;	<K5A>
+-	// <I2B> =   171;
+-	// <I2C> =   172;
+-	// <I2D> =   173;
+-	// <I2E> =   174;
+-	// <I2F> =   175;
+-	// <I30> =   176;
+-	// <I31> =   177;
+-	// <I32> =   178;
+-	// <I33> =   179;
+-	// <I34> =   180;
+-	// <I35> =   181;	<K5B>
+-	// <I36> =   182;	<K5D>
+-	// <I37> =   183;	<K5E>
+-	// <I38> =   184;	<K5F>
+-	// <I39> =   185;
+-	// <I3A> =   186;
+-	// <I3B> =   187;
+-	// <I3C> =   188;
+-	// <I3D> =   189;	<K62>
+-	// <I3E> =   190;	<K63>
+-	// <I3F> =   191;	<K64>
+-	// <I40> =   192;	<K65>
+-	// <I41> =   193;	<K66>
+-	// <I42> =   194;
+-	// <I43> =   195;
+-	// <I44> =   196;
+-	// <I45> =   197;
+-	// <I46> =   198;	<K67>
+-	// <I47> =   199;	<K68>
+-	// <I48> =   200;	<K69>
+-	// <I49> =   201;	<K6A>
+-	// <I4A> =   202;
+-	// <I4B> =   203;	<K6B>
+-	// <I4C> =   204;	<K6C>
+-	// <I4D> =   205;	<K6D>
+-	// <I4E> =   206;	<K6E>
+-	// <I4F> =   207;	<K6F>
+-	// <I50> =   208;	<K70>
+-	// <I51> =   209;	<K71>
+-	// <I52> =   210;	<K72>
+-	// <I53> =   211;	<K73>
+-	// <I54> =   212;
+-	// <I55> =   213;
+-	// <I56> =   214;
+-	// <I57> =   215;
+-	// <I58> =   216;
+-	// <I59> =   217;
+-	// <I5A> =   218;
+-	// <I5B> =   219;	<K74>
+-	// <I5C> =   220;	<K75>
+-	// <I5D> =   221;	<K76>
+-	// <I5E> =   222;
+-	// <I5F> =   223;
+-	// <I60> =   224;
+-	// <I61> =   225;
+-	// <I62> =   226;
+-	// <I63> =   227;
+-	// <I64> =   228;
+-	// <I65> =   229;
+-	// <I66> =   230;
+-	// <I67> =   231;
+-	// <I68> =   232;
+-	// <I69> =   233;
+-	// <I6A> =   234;
+-	// <I6B> =   235;
+-	// <I6C> =   236;
+-	// <I6D> =   237;
+-	// <I6E> =   238;
+-	// <I6F> =   239;
+-	// <I70> =   240;
+-	// <I71> =   241;
+-	// <I72> =   242;
+-	// <I73> =   243;
+-	// <I74> =   244;
+-	// <I75> =   245;
+-	// <I76> =   246;
+-	// <I77> =   247;
+-	// <I78> =   248;
+-	// <I79> =   249;
+-	// <I7A> =   250;
+-	// <I7B> =   251;
+-	// <I7C> =   252;
+-	// <I7D> =   253;
+-	// <I7E> =   254;
+-	// <I7F> =   255;
+-
+-	// Codes generated for scancodes 0x59-0x5f, 0x62-0x76
+-	// <K59> =   157;		// <I1D>
+-	// <K5A> =   170;		// <I2A>
+-	// <K5B> =   181;		// <I35>
+-	// alias <K5C> = <KPEQ>;
+-	// <K5D> =   182;		// <I36>
+-	// <K5E> =   183;		// <I37>
+-	// <K5F> =   184;		// <I38>
+-	// <K62> =   189;		// <I3D>
+-	// <K63> =   190;		// <I3E>
+-	// <K64> =   191;		// <I3F>
+-	// <K65> =   192;		// <I40>
+-	// <K66> =   193;		// <I41>
+-	// <K67> =   198;		// <I46>
+-	// <K68> =   199;		// <I47>
+-	// <K69> =   200;		// <I48>
+-	// <K6A> =   201;		// <I49>
+-	// <K6B> =   203;		// <I4B>
+-	// <K6C> =   204;		// <I4C>
+-	// <K6D> =   205;		// <I4D>
+-	// <K6E> =   206;		// <I4E>
+-	// <K6F> =   207;		// <I4F>
+-	// alias <K70> = <HKTG>;	// <I50>
+-	// <K71> =   209;		// <I51>
+-	// <K72> =   210;		// <I52>
+-	// alias <K73> = <AB11>;	// <I53>
+-	// <K74> =   219;		// <I5B>
+-	// <K75> =   220;		// <I5C>
+-	// <K76> =   221;		// <I5D>
++	<HNGL> = 130;	// Hangul Latin toggle
++	<HJCV> = 131;	// Hangul to Hanja conversion
+ 
+ 	// Solaris compatibility
+ 
+-	// alias <LMTA> = <LWIN>;
+-	// alias <RMTA> = <RWIN>;
+-	// alias <COMP> = <MENU>;
+-	// alias <POWR> = <I0C>;
+-	// alias <MUTE> = <I0D>;
+-	// alias <VOL-> = <I0E>;
+-	// alias <VOL+> = <I0F>;
+-	// alias <HELP> = <I10>;
+-	// alias <STOP> = <I11>;
+-	// alias <AGAI> = <I12>;
+-	// alias <PROP> = <I13>;
+-	// alias <UNDO> = <I14>;
+-	// alias <FRNT> = <I15>;
+-	// alias <COPY> = <I16>;
+-	// alias <OPEN> = <I17>;
+-	// alias <PAST> = <I18>;
+-	// alias <FIND> = <I19>;
+-	// alias <CUT>  = <I1A>;
+-
+-	// Other codes never generated.  The XFree86 ddx never generates
+-	// these codes.
+-	// Thus we can use them as fake keys
+-	// <MDSW> =    93; // <U5D>
+-	// <LVL3> =   124; // <U7C>
+-	// <ALT>  =   125; // <U7D>
+-	// <META> =   156; // <I1C>
+-	// <SUPR> =   127; // <U7F>
+-	// <HYPR> =   128; // <U80>
++	alias <LMTA> = <LWIN>;
++	alias <RMTA> = <RWIN>;
++	<MUTE> = 121;
++	<VOL-> = 122;
++	<VOL+> = 123;
++	<POWR> = 124;
++	<STOP> = 136;
++	<AGAI> = 137;
++	<PROP> = 138;
++	<UNDO> = 139;
++	<FRNT> = 140;
++	<COPY> = 141;
++	<OPEN> = 142;
++	<PAST> = 143;
++	<FIND> = 144;
++	<CUT>  = 145;
++	<HELP> = 146;
++
++	// Extended keys that may be generated on "Internet" keyboards.
++	// evdev has standardize names for these.
++
++	<RO> = 97;	// #define KEY_RO                  89
++	<LNFD> = 109;	// #define KEY_LINEFEED            101
++	<I120> = 120;	// #define KEY_MACRO               112
++	<I126> = 126;	// #define KEY_KPPLUSMINUS         118
++	<I129> = 129;	// #define KEY_KPCOMMA             121
++	<I147> = 147;	// #define KEY_MENU                139
++	<I148> = 148;	// #define KEY_CALC                140
++	<I149> = 149;	// #define KEY_SETUP               141
++	<I150> = 150;	// #define KEY_SLEEP               142
++	<I151> = 151;	// #define KEY_WAKEUP              143
++	<I152> = 152;	// #define KEY_FILE                144
++	<I153> = 153;	// #define KEY_SENDFILE            145
++	<I154> = 154;	// #define KEY_DELETEFILE          146
++	<I155> = 155;	// #define KEY_XFER                147
++	<I156> = 156;	// #define KEY_PROG1               148
++	<I157> = 157;	// #define KEY_PROG2               149
++	<I158> = 158;	// #define KEY_WWW                 150
++	<I159> = 159;	// #define KEY_MSDOS               151
++	<I160> = 160;	// #define KEY_COFFEE              152
++	<I161> = 161;	// #define KEY_DIRECTION           153
++	<I162> = 162;	// #define KEY_CYCLEWINDOWS        154
++	<I163> = 163;	// #define KEY_MAIL                155
++	<I164> = 164;	// #define KEY_BOOKMARKS           156
++	<I165> = 165;	// #define KEY_COMPUTER            157
++	<I166> = 166;	// #define KEY_BACK                158
++	<I167> = 167;	// #define KEY_FORWARD             159
++	<I168> = 168;	// #define KEY_CLOSECD             160
++	<I169> = 169;	// #define KEY_EJECTCD             161
++	<I170> = 170;	// #define KEY_EJECTCLOSECD        162
++	<I171> = 171;	// #define KEY_NEXTSONG            163
++	<I172> = 172;	// #define KEY_PLAYPAUSE           164
++	<I173> = 173;	// #define KEY_PREVIOUSSONG        165
++	<I174> = 174;	// #define KEY_STOPCD              166
++	<I175> = 175;	// #define KEY_RECORD              167
++	<I176> = 176;	// #define KEY_REWIND              168
++	<I177> = 177;	// #define KEY_PHONE               169
++	<I178> = 178;	// #define KEY_ISO                 170
++	<I179> = 179;	// #define KEY_CONFIG              171
++	<I180> = 180;	// #define KEY_HOMEPAGE            172
++	<I181> = 181;	// #define KEY_REFRESH             173
++	<I182> = 182;	// #define KEY_EXIT                174
++	<I183> = 183;	// #define KEY_MOVE                175
++	<I184> = 184;	// #define KEY_EDIT                176
++	<I185> = 185;	// #define KEY_SCROLLUP            177
++	<I186> = 186;	// #define KEY_SCROLLDOWN          178
++	<I187> = 187;	// #define KEY_KPLEFTPAREN         179
++	<I188> = 188;	// #define KEY_KPRIGHTPAREN        180
++	<I189> = 189;	// #define KEY_NEW                 181
++	<I190> = 190;	// #define KEY_REDO                182
++	<I208> = 208;	// #define KEY_PLAYCD              200
++	<I209> = 209;	// #define KEY_PAUSECD             201
++	<I210> = 210;	// #define KEY_PROG3               202
++	<I211> = 211;	// #define KEY_PROG4               203
++	<I213> = 213;	// #define KEY_SUSPEND             205
++	<I214> = 214;	// #define KEY_CLOSE               206
++	<I215> = 215;	// #define KEY_PLAY                207
++	<I216> = 216;	// #define KEY_FASTFORWARD         208
++	<I217> = 217;	// #define KEY_BASSBOOST           209
++	<I218> = 218;	// #define KEY_PRINT               210
++	<I219> = 219;	// #define KEY_HP                  211
++	<I220> = 220;	// #define KEY_CAMERA              212
++	<I221> = 221;	// #define KEY_SOUND               213
++	<I222> = 222;	// #define KEY_QUESTION            214
++	<I223> = 223;	// #define KEY_EMAIL               215
++	<I224> = 224;	// #define KEY_CHAT                216
++	<I225> = 225;	// #define KEY_SEARCH              217
++	<I226> = 226;	// #define KEY_CONNECT             218
++	<I227> = 227;	// #define KEY_FINANCE             219
++	<I228> = 228;	// #define KEY_SPORT               220
++	<I229> = 229;	// #define KEY_SHOP                221
++	<I230> = 230;	// #define KEY_ALTERASE            222
++	<I231> = 231;	// #define KEY_CANCEL              223
++	<I232> = 232;	// #define KEY_BRIGHTNESSDOWN      224
++	<I233> = 233;	// #define KEY_BRIGHTNESSUP        225
++	<I234> = 234;	// #define KEY_MEDIA               226
++	<I235> = 235;	// #define KEY_SWITCHVIDEOMODE     227
++	<I236> = 236;	// #define KEY_KBDILLUMTOGGLE      228
++	<I237> = 237;	// #define KEY_KBDILLUMDOWN        229
++	<I238> = 238;	// #define KEY_KBDILLUMUP          230
++	<I239> = 239;	// #define KEY_SEND                231
++	<I240> = 240;	// #define KEY_REPLY               232
++	<I241> = 241;	// #define KEY_FORWARDMAIL         233
++	<I242> = 242;	// #define KEY_SAVE                234
++	<I243> = 243;	// #define KEY_DOCUMENTS           235
++	<I244> = 244;	// #define KEY_BATTERY             236
  
  	indicator 1 = "Caps Lock";
  	indicator 2 = "Num Lock";
@@ -6805,7 +7460,7 @@ Index: xkb-data/keycodes/macintosh
 ===================================================================
 --- xkb-data.orig/keycodes/macintosh
 +++ xkb-data/keycodes/macintosh
-@@ -29,6 +29,15 @@
+@@ -29,6 +29,24 @@
  // $XFree86: xc/programs/xkbcomp/keycodes/macintosh,v 1.4 2001/10/02 19:57:00 alanh Exp $
  //
  default xkb_keycodes "macintosh" {
@@ -6817,6 +7472,15 @@ Index: xkb-data/keycodes/macintosh
 +   <KPEQ> = 157;
 +   
 +};
++
++xkb_keycodes "macbook" {
++    include "macintosh"
++
++// MacBook keyboards switch TLDE and LSGT keycodes
++    <TLDE> =  94;
++    <LSGT> =  49;
++};
++
 +xkb_keycodes "old" {
  
      minimum= 8;
@@ -6880,7 +7544,17 @@ Index: xkb-data/keycodes/xfree86
 ===================================================================
 --- xkb-data.orig/keycodes/xfree86
 +++ xkb-data/keycodes/xfree86
-@@ -407,8 +407,8 @@
+@@ -295,6 +295,9 @@
+     <I7E> =   254;
+     <I7F> =   255;
+ 
++    // MacBooks generate 0x65 for the lower brightness key
++    <II65> =  101;
++
+     // Codes generated for scancodes 0x59-0x5f, 0x62-0x76
+     <K59> =   157;		// <I1D>
+     <K5A> =   170;		// <I2A>
+@@ -407,9 +410,7 @@
  // For brazilian ABNT2 keyboard. by Ricardo Y. Igarashi(iga@that.com.br)
  xkb_keycodes "abnt2" {
      include "xfree86(basic)"
@@ -6890,7 +7564,8 @@ Index: xkb-data/keycodes/xfree86
 +    <AC13> = 94;
      <KPPT> = 134;
  };
- 
+-
+-
 Index: xkb-data/keymap/Makefile.in
 ===================================================================
 --- xkb-data.orig/keymap/Makefile.in
@@ -7386,7 +8061,11 @@ Index: xkb-data/po/ChangeLog
 ===================================================================
 --- xkb-data.orig/po/ChangeLog
 +++ xkb-data/po/ChangeLog
-@@ -1,3 +1,31 @@
+@@ -1,3 +1,35 @@
++2006-08-31  Andriy Rysin <arysin@myrealbox.com>
++
++	* uk.po: updated Ukrainian translation
++
 +2006-06-29  Francisco Javier F. Serrador <serrador@cvs.gnome.org>
 +
 +	* es.po: updated Spanish translation
@@ -54149,152 +54828,158 @@ Index: xkb-data/po/uk.po
 ===================================================================
 --- xkb-data.orig/po/uk.po
 +++ xkb-data/po/uk.po
-@@ -1,14 +1,14 @@
+@@ -1,2331 +1,1986 @@
 -# Ukrainian translation to xfree86_xkb_xml
+-# Copyright (C) 2002 Free Software Foundation, Inc.
++# translation of uk1.po to Ukrainian
 +# Ukrainian translation to xkeyboard-config
- # Copyright (C) 2002 Free Software Foundation, Inc.
++# Copyright (C) 2002, 2006 Free Software Foundation, Inc.
  # Sergey V. Udaltsov <svu@users.sourceforge.net>
 -# Maxim V. Dziumanenko <mvd@mylinux.com.ua>, 2004
-+# Maxim V. Dziumanenko <mvd@mylinux.com.ua>, 2004-2006
  #
++# Maxim V. Dziumanenko <mvd@mylinux.com.ua>, 2004-2006.
++# Andriy Rysin <arysin@bcsii.com>, 2006.
  msgid ""
  msgstr ""
 -"Project-Id-Version: xfree86_xkb_xml 4.4pre1\n"
-+"Project-Id-Version: xkeyboard-config 0.6\n"
- "Report-Msgid-Bugs-To: \n"
+-"Report-Msgid-Bugs-To: \n"
 -"POT-Creation-Date: 2006-03-04 17:41+0000\n"
 -"PO-Revision-Date: 2004-04-02 15:45+0200\n"
-+"POT-Creation-Date: 2005-08-14 00:39+0100\n"
-+"PO-Revision-Date: 2006-04-07 16:50+0300\n"
- "Last-Translator: Maxim V. Dziumanenko <mvd@mylinux.com.ua>\n"
- "Language-Team: Ukrainian <translation-team-uk@lists.sourceforge.net>\n"
+-"Last-Translator: Maxim V. Dziumanenko <mvd@mylinux.com.ua>\n"
+-"Language-Team: Ukrainian <translation-team-uk@lists.sourceforge.net>\n"
++"Project-Id-Version: uk1\n"
++"Report-Msgid-Bugs-To: svu@users.sourceforge.net\n"
++"POT-Creation-Date: 2006-08-30 21:53-0400\n"
++"PO-Revision-Date: 2006-08-30 23:39-0400\n"
++"Last-Translator: Andriy Rysin <arysin@bcsii.com>\n"
++"Language-Team: Ukrainian <uk@li.org>\n"
  "MIME-Version: 1.0\n"
-@@ -16,2316 +16,1655 @@
+ "Content-Type: text/plain; charset=UTF-8\n"
  "Content-Transfer-Encoding: 8bit\n"
++"X-Generator: KBabel 1.11.4\n"
  
  #: ../rules/base.xml.in.h:1
--msgid "(F)"
+ msgid "(F)"
 -msgstr ""
-+msgid "\"Standard\""
-+msgstr "\"Стандартна\""
++msgstr "(F)"
  
  #: ../rules/base.xml.in.h:2
 -#, fuzzy
 -msgid "101/qwerty/comma/Dead keys"
 -msgstr "Latin2 pc101, qwerty, кома"
-+msgid "(F)"
-+msgstr "(F)"
++msgid "101/104 key Compatible"
++msgstr "Сумісна з 101/104-клавішними моделями"
  
  #: ../rules/base.xml.in.h:3
 -#, fuzzy
 -msgid "101/qwerty/comma/Eliminate dead keys"
 -msgstr "Вилучити спеціальні клавіші (dead keys)"
 +msgid "101/qwerty/comma/Dead keys"
-+msgstr "101/qwerty/comma/Спеціальні клавіші"
++msgstr "101/qwerty/comma/Сліпі клавіші"
  
  #: ../rules/base.xml.in.h:4
 -#, fuzzy
 -msgid "101/qwerty/dot/Dead keys"
 -msgstr "Latin2 pc101, qwerty, точка"
 +msgid "101/qwerty/comma/Eliminate dead keys"
-+msgstr "101/qwerty/comma/Вимкнути спеціальні клавіші (dead keys)"
++msgstr "101/qwerty/comma/Без сліпих клавіш"
  
  #: ../rules/base.xml.in.h:5
 -#, fuzzy
 -msgid "101/qwerty/dot/Eliminate dead keys"
 -msgstr "Вилучити спеціальні клавіші (dead keys)"
 +msgid "101/qwerty/dot/Dead keys"
-+msgstr "101/qwerty/dot/Спеціальні клавіші"
++msgstr "101/qwerty/dot/Сліпі клавіші"
  
  #: ../rules/base.xml.in.h:6
 -#, fuzzy
 -msgid "101/qwertz/comma/Dead keys"
 -msgstr "Latin2 pc101, qwertz, кома"
 +msgid "101/qwerty/dot/Eliminate dead keys"
-+msgstr "101/qwerty/dot/Вимкнути спеціальні клавіші (dead keys)"
++msgstr "101/qwerty/dot/Без сліпих клавіш"
  
  #: ../rules/base.xml.in.h:7
 -#, fuzzy
 -msgid "101/qwertz/comma/Eliminate dead keys"
 -msgstr "Вилучити спеціальні клавіші (dead keys)"
 +msgid "101/qwertz/comma/Dead keys"
-+msgstr "101/qwertz/comma/Спеціальні клавіші"
++msgstr "101/qwertz/comma/Сліпі клавіші"
  
  #: ../rules/base.xml.in.h:8
 -#, fuzzy
 -msgid "101/qwertz/dot/Dead keys"
 -msgstr "Latin2 pc101, qwertz, точка"
 +msgid "101/qwertz/comma/Eliminate dead keys"
-+msgstr "101/qwertz/comma/Вимкнути спеціальні клавіші (dead keys)"
++msgstr "101/qwertz/comma/Без сліпих клавіш"
  
  #: ../rules/base.xml.in.h:9
 -#, fuzzy
 -msgid "101/qwertz/dot/Eliminate dead keys"
 -msgstr "Вилучити спеціальні клавіші (dead keys)"
 +msgid "101/qwertz/dot/Dead keys"
-+msgstr "101/qwertz/dot/Спеціальні клавіші"
++msgstr "101/qwertz/dot/Сліпі клавіші"
  
  #: ../rules/base.xml.in.h:10
 -#, fuzzy
 -msgid "102/qwerty/comma/Dead keys"
 -msgstr "Latin2 pc102, qwerty, кома"
 +msgid "101/qwertz/dot/Eliminate dead keys"
-+msgstr "101/qwertz/dot/Вимкнути спеціальні клавіші (dead keys)"
++msgstr "101/qwertz/dot/Без сліпих клавіш"
  
  #: ../rules/base.xml.in.h:11
 -#, fuzzy
 -msgid "102/qwerty/comma/Eliminate dead keys"
 -msgstr "Вилучити спеціальні клавіші (dead keys)"
 +msgid "102/qwerty/comma/Dead keys"
-+msgstr "102/qwerty/comma/Спеціальні клавіші"
++msgstr "102/qwerty/comma/Сліпі клавіші"
  
  #: ../rules/base.xml.in.h:12
 -#, fuzzy
 -msgid "102/qwerty/dot/Dead keys"
 -msgstr "Latin2 pc102, qwerty, точка"
 +msgid "102/qwerty/comma/Eliminate dead keys"
-+msgstr "102/qwerty/comma/Вимкнути спеціальні клавіші (dead keys)"
++msgstr "102/qwerty/comma/Без сліпих клавіш"
  
  #: ../rules/base.xml.in.h:13
 -#, fuzzy
 -msgid "102/qwerty/dot/Eliminate dead keys"
 -msgstr "Вилучити спеціальні клавіші (dead keys)"
 +msgid "102/qwerty/dot/Dead keys"
-+msgstr "102/qwerty/dot/Спеціальні клавіші"
++msgstr "102/qwerty/dot/Сліпі клавіші"
  
  #: ../rules/base.xml.in.h:14
 -#, fuzzy
 -msgid "102/qwertz/comma/Dead keys"
 -msgstr "Latin2 pc102, qwertz, кома"
 +msgid "102/qwerty/dot/Eliminate dead keys"
-+msgstr "102/qwerty/dot/Вимкнути спеціальні клавіші (dead keys)"
++msgstr "102/qwerty/dot/Без сліпих клавіш"
  
  #: ../rules/base.xml.in.h:15
 -#, fuzzy
 -msgid "102/qwertz/comma/Eliminate dead keys"
 -msgstr "Вилучити спеціальні клавіші (dead keys)"
 +msgid "102/qwertz/comma/Dead keys"
-+msgstr "102/qwertz/comma/Спеціальні клавіші"
++msgstr "102/qwertz/comma/Сліпі клавіші"
  
  #: ../rules/base.xml.in.h:16
 -#, fuzzy
 -msgid "102/qwertz/dot/Dead keys"
 -msgstr "Latin2 pc102, qwertz, точка"
 +msgid "102/qwertz/comma/Eliminate dead keys"
-+msgstr "102/qwertz/comma/Вимкнути спеціальні клавіші (dead keys)"
++msgstr "102/qwertz/comma/Без сліпих клавіш"
  
  #: ../rules/base.xml.in.h:17
 -#, fuzzy
 -msgid "102/qwertz/dot/Eliminate dead keys"
 -msgstr "Вилучити спеціальні клавіші (dead keys)"
 +msgid "102/qwertz/dot/Dead keys"
-+msgstr "102/qwertz/dot/Спеціальні клавіші"
++msgstr "102/qwertz/dot/Сліпі клавіші"
  
  #: ../rules/base.xml.in.h:18
 -msgid "A4Tech KB-21"
 -msgstr ""
 +msgid "102/qwertz/dot/Eliminate dead keys"
-+msgstr "102/qwertz/dot/Вимкнути спеціальні клавіші (dead keys)"
++msgstr "102/qwertz/dot/Без сліпих клавіш"
  
  #: ../rules/base.xml.in.h:19
 -msgid "A4Tech KBS-8"
@@ -54307,2547 +54992,2783 @@ Index: xkb-data/po/uk.po
 +msgstr "A4Tech KBS-8"
 +
 +#: ../rules/base.xml.in.h:21
++msgid "A4Tech Wireless Desktop RFKB-23"
++msgstr "A4Tech Wireless Desktop RFKB-23"
++
++#: ../rules/base.xml.in.h:22
  msgid "ACPI Standard"
  msgstr "Типова ACPI"
  
 -#: ../rules/base.xml.in.h:21
-+#: ../rules/base.xml.in.h:22
++#: ../rules/base.xml.in.h:23
  msgid "Acer AirKey V"
  msgstr "Acer AirKey V"
  
 -#: ../rules/base.xml.in.h:22
-+#: ../rules/base.xml.in.h:23
++#: ../rules/base.xml.in.h:24
++msgid "Acer C300"
++msgstr "Acer C300"
++
++#: ../rules/base.xml.in.h:25
++msgid "Acer Ferrari 4000"
++msgstr "Acer Ferrari 4000"
++
++#: ../rules/base.xml.in.h:26
  msgid "Acer TravelMate 800"
 -msgstr ""
 +msgstr "Acer TravelMate 800"
  
 -#: ../rules/base.xml.in.h:23
-+#: ../rules/base.xml.in.h:24
++#: ../rules/base.xml.in.h:27
  msgid "Add the EuroSign to the 2 key."
 -msgstr ""
 +msgstr "Призначити знак євро на клавішу 2."
  
 -#: ../rules/base.xml.in.h:24
-+#: ../rules/base.xml.in.h:25
++#: ../rules/base.xml.in.h:28
  msgid "Add the EuroSign to the 5 key."
 -msgstr ""
 +msgstr "Призначити знак євро на клавішу 5."
  
 -#: ../rules/base.xml.in.h:25
-+#: ../rules/base.xml.in.h:26
++#: ../rules/base.xml.in.h:29
  msgid "Add the EuroSign to the E key."
 -msgstr ""
 +msgstr "Призначити знак євро на клавішу E."
  
 -#: ../rules/base.xml.in.h:26
-+#: ../rules/base.xml.in.h:27
++#: ../rules/base.xml.in.h:30
  msgid "Add the standard behavior to Menu key."
- msgstr "Надає клавіші Menu типову функцію."
+-msgstr "Надає клавіші Menu типову функцію."
++msgstr "Надає клавіші Menu типову поведінку."
  
 -#: ../rules/base.xml.in.h:27
-+#: ../rules/base.xml.in.h:28
++#: ../rules/base.xml.in.h:31
  msgid "Adding the EuroSign to certain keys"
 -msgstr ""
-+msgstr "додавання знаку євро до певних клавіш"
++msgstr "Додавання знаку євро до певних клавіш"
  
 -#: ../rules/base.xml.in.h:28
-+#: ../rules/base.xml.in.h:29
++#: ../rules/base.xml.in.h:32
  msgid "Advance Scorpius KI"
  msgstr "Advance Scorpius KI"
  
 -#: ../rules/base.xml.in.h:29
--msgid "Afg"
++#: ../rules/base.xml.in.h:33
+ msgid "Afg"
 -msgstr ""
--
- #: ../rules/base.xml.in.h:30
++msgstr "Афг"
+ 
+-#: ../rules/base.xml.in.h:30
 -#, fuzzy
--msgid "Afghanistan"
++#: ../rules/base.xml.in.h:34
+ msgid "Afghanistan"
 -msgstr "Таджицька"
--
++msgstr "Афганістан"
+ 
 -#: ../rules/base.xml.in.h:31
--msgid "Akan"
++#: ../rules/base.xml.in.h:35
+ msgid "Akan"
 -msgstr ""
--
++msgstr "Акан"
+ 
 -#: ../rules/base.xml.in.h:32
++#: ../rules/base.xml.in.h:36
  msgid "Alb"
  msgstr "Алб"
  
 -#: ../rules/base.xml.in.h:33
 -#, fuzzy
-+#: ../rules/base.xml.in.h:31
++#: ../rules/base.xml.in.h:37
  msgid "Albania"
 -msgstr "Албанська"
 +msgstr "Албанія"
  
 -#: ../rules/base.xml.in.h:34
 -#, fuzzy
-+#: ../rules/base.xml.in.h:32
++#: ../rules/base.xml.in.h:38
  msgid "Alt and Meta are on the Alt keys (default)."
 -msgstr "Alt і Meta на клавішах Alt (за замовчанням)"
 +msgstr "Alt і Meta на клавішах Alt (типово)."
  
 -#: ../rules/base.xml.in.h:35
 -#, fuzzy
-+#: ../rules/base.xml.in.h:33
++#: ../rules/base.xml.in.h:39
  msgid "Alt is mapped to the right Win-key and Super to Menu."
 -msgstr "Клавіша Meta відповідає лівій клавіші Win"
-+msgstr "Клавіша Alt призначена правій клавіші Win а Super клавіші Menu."
++msgstr "Клавіша Alt призначена правій клавіші Win, а Super - клавіші Menu."
  
 -#: ../rules/base.xml.in.h:36
 -#, fuzzy
--msgid "Alt+Ctrl changes group."
++#: ../rules/base.xml.in.h:40
++msgid "Alt+CapsLock changes group."
++msgstr "Alt+CapsLock міняють групу."
++
++#: ../rules/base.xml.in.h:41
+ msgid "Alt+Ctrl changes group."
 -msgstr "Alt+Control міняють групу"
-+#: ../rules/base.xml.in.h:34
-+msgid "Alt+Control changes group."
-+msgstr "Alt+Control міняють групу."
++msgstr "Alt+Ctrl міняють групу."
  
 -#: ../rules/base.xml.in.h:37
 -#, fuzzy
-+#: ../rules/base.xml.in.h:35
++#: ../rules/base.xml.in.h:42
  msgid "Alt+Shift changes group."
 -msgstr "Alt+Shift міняють групу"
 +msgstr "Alt+Shift міняють групу."
  
 -#: ../rules/base.xml.in.h:38
-+#: ../rules/base.xml.in.h:36
++#: ../rules/base.xml.in.h:43
  msgid "Alt-Q"
 -msgstr ""
 +msgstr "Alt-Q"
  
 -#: ../rules/base.xml.in.h:39
-+#: ../rules/base.xml.in.h:37
++#: ../rules/base.xml.in.h:44
  msgid "Alt/Win key behavior"
- msgstr "Клавіші Alt/Win"
+-msgstr "Клавіші Alt/Win"
++msgstr "Поведінка Alt/Win"
  
 -#: ../rules/base.xml.in.h:40
 -#, fuzzy
-+#: ../rules/base.xml.in.h:38
++#: ../rules/base.xml.in.h:45
  msgid "Alternative"
 -msgstr "Додаткова"
 +msgstr "Альтернативна"
  
 -#: ../rules/base.xml.in.h:41
-+#: ../rules/base.xml.in.h:39
++#: ../rules/base.xml.in.h:46
  msgid "Alternative international (former us_intl)"
 -msgstr ""
-+msgstr "Альтернативна інтернаціональна (колишня us_intl)"
++msgstr "Альтернативна міжнародна (колишня us_intl)"
  
 -#: ../rules/base.xml.in.h:42
 -#, fuzzy
-+#: ../rules/base.xml.in.h:40
++#: ../rules/base.xml.in.h:47
  msgid "Alternative, Sun dead keys"
 -msgstr "Спеціальні клавіші (dead keys) Sun"
-+msgstr "Альтернативна, Sun (dead keys)"
++msgstr "Альтернативна, сліпі клавіші Sun"
  
 -#: ../rules/base.xml.in.h:43
 -#, fuzzy
-+#: ../rules/base.xml.in.h:41
++#: ../rules/base.xml.in.h:48
  msgid "Alternative, eliminate dead keys"
 -msgstr "Вилучити спеціальні клавіші (dead keys)"
--
++msgstr "Альтернативна, без сліпих клавіш"
+ 
 -#: ../rules/base.xml.in.h:44
 -#, fuzzy
--msgid "And"
++#: ../rules/base.xml.in.h:49
+ msgid "And"
 -msgstr "Перс"
--
++msgstr "Анд"
+ 
 -#: ../rules/base.xml.in.h:45
--msgid "Andorra"
++#: ../rules/base.xml.in.h:50
+ msgid "Andorra"
 -msgstr ""
-+msgstr "Альтернативна, вимикати спеціальні клавіші"
++msgstr "Андора"
  
 -#: ../rules/base.xml.in.h:46
-+#: ../rules/base.xml.in.h:42
++#: ../rules/base.xml.in.h:51
  msgid "Apostrophe (') variant"
 -msgstr ""
 +msgstr "Варіант з апострофом (')"
  
 -#: ../rules/base.xml.in.h:47
 -#, fuzzy
-+#: ../rules/base.xml.in.h:43
++#: ../rules/base.xml.in.h:52
++msgid "Apple"
++msgstr "Apple"
++
++#: ../rules/base.xml.in.h:53
++msgid "Apple Laptop"
++msgstr "Лептоп Apple"
++
++#: ../rules/base.xml.in.h:54
  msgid "Ara"
 -msgstr "Фра"
 +msgstr "Араб"
  
 -#: ../rules/base.xml.in.h:48
-+#: ../rules/base.xml.in.h:44
++#: ../rules/base.xml.in.h:55
  msgid "Arabic"
  msgstr "Арабська"
  
 -#: ../rules/base.xml.in.h:49
-+#: ../rules/base.xml.in.h:45
++#: ../rules/base.xml.in.h:56
  msgid "Arm"
  msgstr "Вірм"
  
 -#: ../rules/base.xml.in.h:50
 -#, fuzzy
-+#: ../rules/base.xml.in.h:46
++#: ../rules/base.xml.in.h:57
  msgid "Armenia"
 -msgstr "Вірменська"
 +msgstr "Вірменія"
  
 -#: ../rules/base.xml.in.h:51
-+#: ../rules/base.xml.in.h:47
++#: ../rules/base.xml.in.h:58
  msgid "Aze"
  msgstr "Азер"
  
 -#: ../rules/base.xml.in.h:52
 -#, fuzzy
-+#: ../rules/base.xml.in.h:48
++#: ../rules/base.xml.in.h:59
  msgid "Azerbaijan"
 -msgstr "Азербайджанська"
 +msgstr "Азербайджан"
  
 -#: ../rules/base.xml.in.h:53
 -#, fuzzy
-+#: ../rules/base.xml.in.h:49
++#: ../rules/base.xml.in.h:60
  msgid "Azona RF2300 wireless Internet Keyboard"
 -msgstr "Logitech Internet Keyboard"
 +msgstr "Azona RF2300 бездротова Інтернет-клавіатура"
  
 -#: ../rules/base.xml.in.h:54
-+#: ../rules/base.xml.in.h:50
++#: ../rules/base.xml.in.h:61
  msgid "BTC 5090"
  msgstr "BTC 5090"
  
 -#: ../rules/base.xml.in.h:55
-+#: ../rules/base.xml.in.h:51
++#: ../rules/base.xml.in.h:62
  msgid "BTC 5113RF Multimedia"
 -msgstr "BTC 5113RF мультимедія"
 +msgstr "BTC 5113RF мультимедійна"
  
 -#: ../rules/base.xml.in.h:56
-+#: ../rules/base.xml.in.h:52
++#: ../rules/base.xml.in.h:63
  msgid "BTC 5126T"
  msgstr "BTC 5126T"
  
 -#: ../rules/base.xml.in.h:57
-+#: ../rules/base.xml.in.h:53
++#: ../rules/base.xml.in.h:64
  msgid "BTC 9000"
  msgstr "BTC 9000"
  
 -#: ../rules/base.xml.in.h:58
-+#: ../rules/base.xml.in.h:54
++#: ../rules/base.xml.in.h:65
  msgid "BTC 9000A"
  msgstr "BTC 9000A"
  
 -#: ../rules/base.xml.in.h:59
-+#: ../rules/base.xml.in.h:55
++#: ../rules/base.xml.in.h:66
  msgid "BTC 9001AH"
  msgstr "BTC 9001AH"
  
 -#: ../rules/base.xml.in.h:60
 -#, fuzzy
-+#: ../rules/base.xml.in.h:56
++#: ../rules/base.xml.in.h:67
  msgid "Ban"
 -msgstr "Кан"
 +msgstr "Банг"
  
 -#: ../rules/base.xml.in.h:61
-+#: ../rules/base.xml.in.h:57
++#: ../rules/base.xml.in.h:68
  msgid "Bangladesh"
 -msgstr ""
-+msgstr "Бангладешська"
++msgstr "Бангладеш"
  
 -#: ../rules/base.xml.in.h:62
-+#: ../rules/base.xml.in.h:58
++#: ../rules/base.xml.in.h:69
  msgid "Bel"
  msgstr "Бельг"
  
 -#: ../rules/base.xml.in.h:63
 -#, fuzzy
-+#: ../rules/base.xml.in.h:59
++#: ../rules/base.xml.in.h:70
  msgid "Belarus"
- msgstr "Білоруська"
+-msgstr "Білоруська"
++msgstr "Білорусь"
  
 -#: ../rules/base.xml.in.h:64
 -#, fuzzy
-+#: ../rules/base.xml.in.h:60
++#: ../rules/base.xml.in.h:71
  msgid "Belgium"
- msgstr "Бельгійська"
+-msgstr "Бельгійська"
++msgstr "Бельгія"
  
 -#: ../rules/base.xml.in.h:65
 -#, fuzzy
-+#: ../rules/base.xml.in.h:61
++#: ../rules/base.xml.in.h:72
  msgid "Bengali"
 -msgstr "Порт"
 +msgstr "Бенгальська"
  
 -#: ../rules/base.xml.in.h:66
 -#, fuzzy
-+#: ../rules/base.xml.in.h:62
++#: ../rules/base.xml.in.h:73
  msgid "Bengali Probhat"
 -msgstr "Порт"
 +msgstr "Бенгальська (Probhat)"
  
 -#: ../rules/base.xml.in.h:67
-+#: ../rules/base.xml.in.h:63
++#: ../rules/base.xml.in.h:74
  msgid "Bgr"
  msgstr "Болг"
  
 -#: ../rules/base.xml.in.h:68
 -#, fuzzy
-+#: ../rules/base.xml.in.h:64
++#: ../rules/base.xml.in.h:75
  msgid "Bhu"
 -msgstr "Босн"
 +msgstr "Бут"
  
 -#: ../rules/base.xml.in.h:69
 -#, fuzzy
-+#: ../rules/base.xml.in.h:65
++#: ../rules/base.xml.in.h:76
  msgid "Bhutan"
 -msgstr "Кан"
-+msgstr "Бутанська"
++msgstr "Бутан"
  
 -#: ../rules/base.xml.in.h:70
-+#: ../rules/base.xml.in.h:66
++#: ../rules/base.xml.in.h:77
  msgid "Bih"
  msgstr "Босн"
  
 -#: ../rules/base.xml.in.h:71
-+#: ../rules/base.xml.in.h:67
++#: ../rules/base.xml.in.h:78
  msgid "Blr"
  msgstr "Біл"
  
 -#: ../rules/base.xml.in.h:72
-+#: ../rules/base.xml.in.h:68
++#: ../rules/base.xml.in.h:79
  msgid "Bosnia and Herzegovina"
 -msgstr ""
 +msgstr "Боснія та Герцеговина"
  
 -#: ../rules/base.xml.in.h:73
 -#, fuzzy
-+#: ../rules/base.xml.in.h:69
++#: ../rules/base.xml.in.h:80
  msgid "Both Alt keys together change group."
 -msgstr "Дві клавіші Alt разом міняють групу"
-+msgstr "Дві клавіші Alt разом міняють групу."
++msgstr "Обидві клавіші Alt разом міняють групу."
  
 -#: ../rules/base.xml.in.h:74
 -#, fuzzy
-+#: ../rules/base.xml.in.h:70
++#: ../rules/base.xml.in.h:81
  msgid "Both Ctrl keys together change group."
 -msgstr "Дві клавіші Ctrl разом міняють групу"
-+msgstr "Дві клавіші Ctrl разом міняють групу."
++msgstr "Обидві клавіші Ctrl разом міняють групу."
  
 -#: ../rules/base.xml.in.h:75
 -#, fuzzy
-+#: ../rules/base.xml.in.h:71
++#: ../rules/base.xml.in.h:82
  msgid "Both Shift keys together change group."
 -msgstr "Дві клавіші Shift разом міняють групу"
-+msgstr "Дві клавіші Shift разом міняють групу."
++msgstr "Обидві клавіші Shift разом міняють групу."
  
 -#: ../rules/base.xml.in.h:76
 -#, fuzzy
-+#: ../rules/base.xml.in.h:72
++#: ../rules/base.xml.in.h:83
  msgid "Both Win-keys switch group while pressed."
 -msgstr "Дві клавіші Win переключають групу на час натиснення"
-+msgstr "Дві клавіші Win перемикають групу на час натискання."
++msgstr "Обидві клавіші Win перемикають групу на час натискання."
  
 -#: ../rules/base.xml.in.h:77
-+#: ../rules/base.xml.in.h:73
++#: ../rules/base.xml.in.h:84
  msgid "Bra"
  msgstr "Браз"
  
 -#: ../rules/base.xml.in.h:78
 -#, fuzzy
-+#: ../rules/base.xml.in.h:74
++#: ../rules/base.xml.in.h:85
  msgid "Brazil"
  msgstr "Бразильська"
  
 -#: ../rules/base.xml.in.h:79
-+#: ../rules/base.xml.in.h:75
++#: ../rules/base.xml.in.h:86
  msgid "Brazilian ABNT2"
  msgstr "Бразильська ABTN2"
  
 -#: ../rules/base.xml.in.h:80
-+#: ../rules/base.xml.in.h:76
++#: ../rules/base.xml.in.h:87
  msgid "Brother Internet Keyboard"
  msgstr "Brother Internet Keyboard"
  
 -#: ../rules/base.xml.in.h:81
 -#, fuzzy
-+#: ../rules/base.xml.in.h:77
++#: ../rules/base.xml.in.h:88
  msgid "Bulgaria"
- msgstr "Болгарська"
+-msgstr "Болгарська"
++msgstr "Болгарія"
  
 -#: ../rules/base.xml.in.h:82
--msgid "Cambodia"
++#: ../rules/base.xml.in.h:89
+ msgid "Cambodia"
 -msgstr ""
--
++msgstr "Камбоджа"
+ 
 -#: ../rules/base.xml.in.h:83
-+#: ../rules/base.xml.in.h:78
++#: ../rules/base.xml.in.h:90
  msgid "Can"
  msgstr "Кан"
  
 -#: ../rules/base.xml.in.h:84
 -#, fuzzy
-+#: ../rules/base.xml.in.h:79
++#: ../rules/base.xml.in.h:91
  msgid "Canada"
  msgstr "Канадська"
  
 -#: ../rules/base.xml.in.h:85
 -#, fuzzy
--msgid "Caps Lock is Compose."
++#: ../rules/base.xml.in.h:92
+ msgid "Caps Lock is Compose."
 -msgstr "Клавіша Menu відповідає клавіші Compose"
--
++msgstr "Клавіша Menu відповідає Compose."
+ 
 -#: ../rules/base.xml.in.h:86
 -#, fuzzy
-+#: ../rules/base.xml.in.h:80
++#: ../rules/base.xml.in.h:93
  msgid "CapsLock LED shows alternative group."
 -msgstr "Індикатор Caps Lock відображає альтернативну групу"
-+msgstr "Індикатор Caps Lock відображає альтернативну групу."
++msgstr "Індикатор Caps Lock показує альтернативну групу."
  
 -#: ../rules/base.xml.in.h:87
 -#, fuzzy
-+#: ../rules/base.xml.in.h:81
++#: ../rules/base.xml.in.h:94
  msgid "CapsLock acts as Shift with locking. Shift cancels CapsLock."
 -msgstr "Діє як Shift з блокуванням. Shift відміняє Caps."
-+msgstr "CapsLock діє як Shift з блокуванням. Shift відміняє CapsLock."
++msgstr "CapsLock діє як Shift з блокуванням. Shift скасовує CapsLock."
  
 -#: ../rules/base.xml.in.h:88
 -#, fuzzy
-+#: ../rules/base.xml.in.h:82
++#: ../rules/base.xml.in.h:95
  msgid "CapsLock acts as Shift with locking. Shift doesn't cancel CapsLock."
 -msgstr "Діє як Shift з блокуванням. Shift не відміняє Caps."
-+msgstr "CapsLock діє як Shift з блокуванням. Shift не відміняє CapsLock."
++msgstr "CapsLock діє як Shift з блокуванням. Shift не скасовує CapsLock."
  
 -#: ../rules/base.xml.in.h:89
-+#: ../rules/base.xml.in.h:83
++#: ../rules/base.xml.in.h:96
  msgid "CapsLock just locks the Shift modifier."
 -msgstr ""
-+msgstr "CapsLock просто блокує модифікатор Shift"
++msgstr "CapsLock просто блокує модифікатор Shift."
  
 -#: ../rules/base.xml.in.h:90
-+#: ../rules/base.xml.in.h:84
++#: ../rules/base.xml.in.h:97
  msgid "CapsLock key behavior"
 -msgstr "Клавіша Caps Lock"
-+msgstr "Клавіша CapsLock"
++msgstr "Поведінка CapsLock"
  
 -#: ../rules/base.xml.in.h:91
 -#, fuzzy
-+#: ../rules/base.xml.in.h:85
++#: ../rules/base.xml.in.h:98
  msgid "CapsLock key changes group."
 -msgstr "Клавіша Caps Lock міняє групу"
 +msgstr "Клавіша CapsLock міняє групу."
  
 -#: ../rules/base.xml.in.h:92
-+#: ../rules/base.xml.in.h:86
++#: ../rules/base.xml.in.h:99
  msgid "CapsLock toggles Shift so all keys are affected."
 -msgstr ""
-+msgstr "CapsLock перемикає Shift та впливає на усі символи."
++msgstr "CapsLock перемикає Shift і впливає на усі символи."
  
 -#: ../rules/base.xml.in.h:93
-+#: ../rules/base.xml.in.h:87
++#: ../rules/base.xml.in.h:100
  msgid "CapsLock toggles normal capitalization of alphabetic characters."
 -msgstr ""
-+msgstr "CapsLock перемикає регістр алфавітних символів."
++msgstr "CapsLock перемикає нормальну капіталізацію алфавітних символів."
  
 -#: ../rules/base.xml.in.h:94
 -#, fuzzy
-+#: ../rules/base.xml.in.h:88
++#: ../rules/base.xml.in.h:101
  msgid "CapsLock uses internal capitalization. Shift cancels CapsLock."
 -msgstr "Використовувати внутрішнє збільшення літер. Shift відміняє Caps."
-+msgstr "Використовувати внутрішнє збільшення літер. Shift відміняє CapsLock."
++msgstr "CapsLock вживає внутрішню капіталізацію літер. Shift скасовує CapsLock."
  
 -#: ../rules/base.xml.in.h:95
 -#, fuzzy
-+#: ../rules/base.xml.in.h:89
++#: ../rules/base.xml.in.h:102
  msgid "CapsLock uses internal capitalization. Shift doesn't cancel CapsLock."
 -msgstr "Використовувати внутрішнє збільшення літер. Shift не відміняє Caps."
--
++msgstr "CapsLock вживає внутрішню капіталізацію літер. Shift не скасовує CapsLock."
+ 
 -#: ../rules/base.xml.in.h:96
--msgid "Catalan variant with middle-dot L"
++#: ../rules/base.xml.in.h:103
+ msgid "Catalan variant with middle-dot L"
 -msgstr ""
-+msgstr "Використовувати внутрішнє збільшення літер. Shift не відміняє CapsLock."
++msgstr "Каталонський варіант з середньою L"
  
 -#: ../rules/base.xml.in.h:97
 -#, fuzzy
-+#: ../rules/base.xml.in.h:90
++#: ../rules/base.xml.in.h:104
  msgid "Che"
  msgstr "Чес"
  
 -#: ../rules/base.xml.in.h:98
-+#: ../rules/base.xml.in.h:91
++#: ../rules/base.xml.in.h:105
  msgid "Cherry Blue Line CyBo@rd"
  msgstr "Cherry Blue Line CyBo@rd"
  
 -#: ../rules/base.xml.in.h:99
-+#: ../rules/base.xml.in.h:92
++#: ../rules/base.xml.in.h:106
  msgid "Cherry Blue Line CyBo@rd (alternate option)"
  msgstr "Cherry Blue Line CyBo@rd (альтернативний варіант)"
  
 -#: ../rules/base.xml.in.h:100
 -#, fuzzy
--msgid "Cherry CyBo@rd USB-Hub"
++#: ../rules/base.xml.in.h:107
+ msgid "Cherry CyBo@rd USB-Hub"
 -msgstr "Cherry Blue Line CyBo@rd"
--
++msgstr "Cherry CyBo@rd USB-Hub"
+ 
 -#: ../rules/base.xml.in.h:101
-+#: ../rules/base.xml.in.h:93
++#: ../rules/base.xml.in.h:108
  msgid "Cherry CyMotion Master Linux"
 -msgstr ""
 +msgstr "Cherry CyMotion Master Linux"
  
 -#: ../rules/base.xml.in.h:102
-+#: ../rules/base.xml.in.h:94
++#: ../rules/base.xml.in.h:109
  msgid "Chicony Internet Keyboard"
  msgstr "Інтернет-клавіатура Chicony"
  
 -#: ../rules/base.xml.in.h:103
-+#: ../rules/base.xml.in.h:95
++#: ../rules/base.xml.in.h:110
  msgid "Chicony KB-9885"
  msgstr "Chicony KB-9885"
  
 -#: ../rules/base.xml.in.h:104
-+#: ../rules/base.xml.in.h:96
++#: ../rules/base.xml.in.h:111
++msgid "Classic Dvorak"
++msgstr "Класичний Dvorak"
++
++#: ../rules/base.xml.in.h:112
  msgid "CloGaelach"
  msgstr "CloGaelach"
  
 -#: ../rules/base.xml.in.h:105
-+#: ../rules/base.xml.in.h:97
++#: ../rules/base.xml.in.h:113
  msgid "Compaq Easy Access Keyboard"
  msgstr "Compaq Easy Access Keyboard"
  
 -#: ../rules/base.xml.in.h:106
-+#: ../rules/base.xml.in.h:98
++#: ../rules/base.xml.in.h:114
  msgid "Compaq Internet Keyboard (13 keys)"
  msgstr "Compaq Internet Keyboard (13 клавіш)"
  
 -#: ../rules/base.xml.in.h:107
-+#: ../rules/base.xml.in.h:99
++#: ../rules/base.xml.in.h:115
  msgid "Compaq Internet Keyboard (18 keys)"
  msgstr "Compaq Internet Keyboard (18 клавіш)"
  
 -#: ../rules/base.xml.in.h:108
-+#: ../rules/base.xml.in.h:100
++#: ../rules/base.xml.in.h:116
  msgid "Compaq Internet Keyboard (7 keys)"
  msgstr "Compaq Internet Keyboard (7 клавіш)"
  
 -#: ../rules/base.xml.in.h:109
-+#: ../rules/base.xml.in.h:101
++#: ../rules/base.xml.in.h:117
  msgid "Compaq iPaq Keyboard"
  msgstr "Compaq iPaq Keyboard"
  
 -#: ../rules/base.xml.in.h:110
 -#, fuzzy
-+#: ../rules/base.xml.in.h:102
++#: ../rules/base.xml.in.h:118
  msgid "Compose key position"
 -msgstr "Розташування клавіші Control"
--
++msgstr "Розташування клавіші Compose"
+ 
 -#: ../rules/base.xml.in.h:111
 -#, fuzzy
--msgid "Croatia"
++#: ../rules/base.xml.in.h:119
++msgid "Congo, Democratic Republic of the"
++msgstr "Конго, демократична республіка"
++
++#: ../rules/base.xml.in.h:120
+ msgid "Croatia"
 -msgstr "Хорватська"
-+msgstr "Розташування клавіші Compose"
++msgstr "Хорватія"
  
 -#: ../rules/base.xml.in.h:112
 -#, fuzzy
--msgid "Ctrl key at bottom left"
-+#: ../rules/base.xml.in.h:103
-+msgid "Control key at bottom left"
- msgstr "Клавіша Control знизу зліва"
++#: ../rules/base.xml.in.h:121
+ msgid "Ctrl key at bottom left"
+-msgstr "Клавіша Control знизу зліва"
++msgstr "Клавіша Ctrl знизу зліва"
  
 -#: ../rules/base.xml.in.h:113
 -#, fuzzy
--msgid "Ctrl key at left of 'A'"
-+#: ../rules/base.xml.in.h:104
-+msgid "Control key at left of 'A'"
- msgstr "Клавіша Control зліва від 'Ф'"
++#: ../rules/base.xml.in.h:122
+ msgid "Ctrl key at left of 'A'"
+-msgstr "Клавіша Control зліва від 'Ф'"
++msgstr "Клавіша Ctrl зліва від 'A'"
  
 -#: ../rules/base.xml.in.h:114
 -#, fuzzy
--msgid "Ctrl key position"
-+#: ../rules/base.xml.in.h:105
-+msgid "Control key position"
- msgstr "Розташування клавіші Control"
++#: ../rules/base.xml.in.h:123
+ msgid "Ctrl key position"
+-msgstr "Розташування клавіші Control"
++msgstr "Розташування клавіші Ctrl"
  
 -#: ../rules/base.xml.in.h:115
 -#, fuzzy
--msgid "Ctrl+Shift changes group."
++#: ../rules/base.xml.in.h:124
+ msgid "Ctrl+Shift changes group."
 -msgstr "Control+Shift змінюють групу"
-+#: ../rules/base.xml.in.h:106
-+msgid "Control+Shift changes group."
-+msgstr "Control+Shift змінюють групу."
++msgstr "Ctrl+Shift змінюють групу."
  
 -#: ../rules/base.xml.in.h:116
-+#: ../rules/base.xml.in.h:107
-+msgid "Croatia"
-+msgstr "Хорватська"
-+
-+#: ../rules/base.xml.in.h:108
++#: ../rules/base.xml.in.h:125
  msgid "Cyrillic"
- msgstr "Кирилична"
+-msgstr "Кирилична"
++msgstr "Кирилиця"
  
 -#: ../rules/base.xml.in.h:117
-+#: ../rules/base.xml.in.h:109
++#: ../rules/base.xml.in.h:126
  msgid "Cze"
  msgstr "Чес"
  
 -#: ../rules/base.xml.in.h:118
 -#, fuzzy
-+#: ../rules/base.xml.in.h:110
++#: ../rules/base.xml.in.h:127
  msgid "Czechia"
- msgstr "Чеська"
+-msgstr "Чеська"
++msgstr "Чехія"
  
 -#: ../rules/base.xml.in.h:119
-+#: ../rules/base.xml.in.h:111
++#: ../rules/base.xml.in.h:128
++msgid "DRC"
++msgstr "DRC"
++
++#: ../rules/base.xml.in.h:129
  msgid "DTK2000"
 -msgstr ""
 +msgstr "DTK2000"
  
 -#: ../rules/base.xml.in.h:120
-+#: ../rules/base.xml.in.h:112
++#: ../rules/base.xml.in.h:130
  msgid "Dead acute"
- msgstr "Спец. символ Dead acute"
+-msgstr "Спец. символ Dead acute"
++msgstr ""
  
 -#: ../rules/base.xml.in.h:121
-+#: ../rules/base.xml.in.h:113
++#: ../rules/base.xml.in.h:131
  msgid "Dead grave acute"
- msgstr "Спец. символ Dead grave acute"
+-msgstr "Спец. символ Dead grave acute"
++msgstr ""
  
 -#: ../rules/base.xml.in.h:122
-+#: ../rules/base.xml.in.h:114
++#: ../rules/base.xml.in.h:132
  msgid "Dell"
  msgstr "Dell"
  
 -#: ../rules/base.xml.in.h:123
-+#: ../rules/base.xml.in.h:115
++#: ../rules/base.xml.in.h:133
  msgid "Dell 101-key PC"
- msgstr "Dell 101-клавішна для ПК"
+-msgstr "Dell 101-клавішна для ПК"
++msgstr "Dell 101 клавіша для ПК"
  
 -#: ../rules/base.xml.in.h:124
 -#, fuzzy
--msgid "Dell USB Multimedia Keybard"
++#: ../rules/base.xml.in.h:134
++msgid "Dell Latitude series laptop"
++msgstr "Лептоп моделі Dell Latitude"
++
++#: ../rules/base.xml.in.h:135
+ msgid "Dell USB Multimedia Keybard"
 -msgstr "Hewlett-Packard SK-2501 Multimedia Keyboard"
--
++msgstr "Dell USB Multimedia Keybard"
+ 
 -#: ../rules/base.xml.in.h:125
 -#, fuzzy
-+#: ../rules/base.xml.in.h:116
++#: ../rules/base.xml.in.h:136
  msgid "Denmark"
 -msgstr "Дат"
 +msgstr "Датська"
  
 -#: ../rules/base.xml.in.h:126
-+#: ../rules/base.xml.in.h:117
++#: ../rules/base.xml.in.h:137
  msgid "Deu"
  msgstr "Нім"
  
 -#: ../rules/base.xml.in.h:127
-+#: ../rules/base.xml.in.h:118
++#: ../rules/base.xml.in.h:138
  msgid "Dexxa Wireless Desktop Keyboard"
  msgstr "Dexxa Wireless Desktop Keyboard"
  
 -#: ../rules/base.xml.in.h:128
-+#: ../rules/base.xml.in.h:119
-+msgid "Dhivehi"
-+msgstr "Дхівехі"
-+
-+#: ../rules/base.xml.in.h:120
++#: ../rules/base.xml.in.h:139
  msgid "Diamond 9801 / 9802 series"
  msgstr "Моделі Diamond 9801/9802"
  
 -#: ../rules/base.xml.in.h:129
-+#: ../rules/base.xml.in.h:121
-+msgid "Div"
-+msgstr "Дів"
-+
-+#: ../rules/base.xml.in.h:122
++#: ../rules/base.xml.in.h:140
  msgid "Dnk"
  msgstr "Дат"
  
 -#: ../rules/base.xml.in.h:130
-+#: ../rules/base.xml.in.h:123
++#: ../rules/base.xml.in.h:141
  msgid "Dvorak"
- msgstr "Дворак"
+-msgstr "Дворак"
++msgstr "Dvorak"
  
 -#: ../rules/base.xml.in.h:131
-+#: ../rules/base.xml.in.h:124
++#: ../rules/base.xml.in.h:142
  msgid "Dvorak, Polish quotes on key \"1/!\""
 -msgstr ""
-+msgstr "Дворак, польські лапки на клавіші \"1/!\""
++msgstr "Dvorak, польські лапки на клавіші \"1/!\""
  
 -#: ../rules/base.xml.in.h:132
-+#: ../rules/base.xml.in.h:125
++#: ../rules/base.xml.in.h:143
  msgid "Dvorak, Polish quotes on quotemark key"
 -msgstr ""
-+msgstr "Дворак, польські лапки на знаку лапки"
++msgstr "Dvorak, польські лапки на клавіші лапок"
  
 -#: ../rules/base.xml.in.h:133
-+#: ../rules/base.xml.in.h:126
++#: ../rules/base.xml.in.h:144
  msgid "Eliminate dead keys"
- msgstr "Вилучити спеціальні клавіші (dead keys)"
+-msgstr "Вилучити спеціальні клавіші (dead keys)"
++msgstr "Вилучити сліпі клавіші"
  
 -#: ../rules/base.xml.in.h:134
-+#: ../rules/base.xml.in.h:127
++#: ../rules/base.xml.in.h:145
  msgid "Ennyah DKB-1008"
  msgstr "Ennyah DKB-1008"
  
 -#: ../rules/base.xml.in.h:135
 -#, fuzzy
--msgid "Epo"
++#: ../rules/base.xml.in.h:146
+ msgid "Epo"
 -msgstr "Ісп"
--
++msgstr "Епо"
+ 
 -#: ../rules/base.xml.in.h:136
-+#: ../rules/base.xml.in.h:128
++#: ../rules/base.xml.in.h:147
  msgid "Esp"
  msgstr "Ісп"
  
 -#: ../rules/base.xml.in.h:137
--msgid "Esperanto"
++#: ../rules/base.xml.in.h:148
+ msgid "Esperanto"
 -msgstr ""
--
++msgstr "Есперанто"
+ 
 -#: ../rules/base.xml.in.h:138
-+#: ../rules/base.xml.in.h:129
++#: ../rules/base.xml.in.h:149
  msgid "Est"
  msgstr "Ест"
  
 -#: ../rules/base.xml.in.h:139
 -#, fuzzy
-+#: ../rules/base.xml.in.h:130
++#: ../rules/base.xml.in.h:150
  msgid "Estonia"
  msgstr "Естонська"
  
 -#: ../rules/base.xml.in.h:140
-+#: ../rules/base.xml.in.h:131
++#: ../rules/base.xml.in.h:151
++msgid "Evdev-managed keyboard"
++msgstr "ґ"
++
++#: ../rules/base.xml.in.h:152
  msgid "Everex STEPnote"
  msgstr "Everex STEPnote"
  
 -#: ../rules/base.xml.in.h:141
 -#, fuzzy
--msgid "Ewe"
++#: ../rules/base.xml.in.h:153
+ msgid "Ewe"
 -msgstr "Швед"
--
++msgstr "Еве"
+ 
 -#: ../rules/base.xml.in.h:142
-+#: ../rules/base.xml.in.h:132
++#: ../rules/base.xml.in.h:154
  msgid "Extended"
  msgstr "Розширена"
  
 -#: ../rules/base.xml.in.h:143
 -#, fuzzy
-+#: ../rules/base.xml.in.h:133
++#: ../rules/base.xml.in.h:155
  msgid "Extended Backslash"
 -msgstr "Розширена"
 +msgstr "Розширена Backslash"
  
 -#: ../rules/base.xml.in.h:144
-+#: ../rules/base.xml.in.h:134
++#: ../rules/base.xml.in.h:156
  msgid "F-letter (F) variant"
 -msgstr ""
 +msgstr "Варіант з літерою F"
  
 -#: ../rules/base.xml.in.h:145
-+#: ../rules/base.xml.in.h:135
++#: ../rules/base.xml.in.h:157
  msgid "Fao"
  msgstr "Фарер"
  
 -#: ../rules/base.xml.in.h:146
 -#, fuzzy
-+#: ../rules/base.xml.in.h:136
++#: ../rules/base.xml.in.h:158
  msgid "Faroe Islands"
--msgstr "Фарерські о-ви"
-+msgstr "О-ви Фарое"
+ msgstr "Фарерські о-ви"
  
 -#: ../rules/base.xml.in.h:147
-+#: ../rules/base.xml.in.h:137
++#: ../rules/base.xml.in.h:159
  msgid "Fin"
  msgstr "Фін"
  
 -#: ../rules/base.xml.in.h:148
 -#, fuzzy
-+#: ../rules/base.xml.in.h:138
++#: ../rules/base.xml.in.h:160
  msgid "Finland"
 -msgstr "Фін"
 +msgstr "Фінляндія"
  
 -#: ../rules/base.xml.in.h:149
-+#: ../rules/base.xml.in.h:139
++#: ../rules/base.xml.in.h:161
  msgid "Fra"
  msgstr "Фра"
  
 -#: ../rules/base.xml.in.h:150
 -#, fuzzy
-+#: ../rules/base.xml.in.h:140
++#: ../rules/base.xml.in.h:162
  msgid "France"
 -msgstr "Французька"
 +msgstr "Франція"
  
 -#: ../rules/base.xml.in.h:151
-+#: ../rules/base.xml.in.h:141
++#: ../rules/base.xml.in.h:163
  msgid "French"
  msgstr "Французька"
  
 -#: ../rules/base.xml.in.h:152
 -#, fuzzy
-+#: ../rules/base.xml.in.h:142
++#: ../rules/base.xml.in.h:164
++msgid "French (Macintosh)"
++msgstr "Французька (Macintosh)"
++
++#: ../rules/base.xml.in.h:165
  msgid "French (legacy)"
 -msgstr "Французька (альтернативна)"
 +msgstr "Французька (застаріла)"
  
 -#: ../rules/base.xml.in.h:153
 -#, fuzzy
-+#: ../rules/base.xml.in.h:143
++#: ../rules/base.xml.in.h:166
  msgid "French Dvorak"
 -msgstr "Французька"
-+msgstr "Французький дворак"
++msgstr "Французька Dvorak"
  
 -#: ../rules/base.xml.in.h:154
 -#, fuzzy
-+#: ../rules/base.xml.in.h:144
++#: ../rules/base.xml.in.h:167
  msgid "French, Sun dead keys"
 -msgstr "Спеціальні клавіші (dead keys) Sun"
-+msgstr "Французька, Sun зі спеціальними клавішами"
++msgstr "Французька, Sun зі сліпими клавішами"
  
 -#: ../rules/base.xml.in.h:155
 -#, fuzzy
-+#: ../rules/base.xml.in.h:145
++#: ../rules/base.xml.in.h:168
  msgid "French, eliminate dead keys"
 -msgstr "Вилучити спеціальні клавіші (dead keys)"
--
++msgstr "Французька, без сліпих клавіш"
+ 
 -#: ../rules/base.xml.in.h:156
--msgid "Fula"
++#: ../rules/base.xml.in.h:169
+ msgid "Fula"
 -msgstr ""
-+msgstr "Французька, вимикати спеціальні клавіші (dead keys)"
++msgstr "Фула"
  
 -#: ../rules/base.xml.in.h:157
-+#: ../rules/base.xml.in.h:146
++#: ../rules/base.xml.in.h:170
  msgid "GBr"
  msgstr "Брит"
  
 -#: ../rules/base.xml.in.h:158
--msgid "Ga"
++#: ../rules/base.xml.in.h:171
+ msgid "Ga"
 -msgstr ""
--
++msgstr "Га"
+ 
 -#: ../rules/base.xml.in.h:159
-+#: ../rules/base.xml.in.h:147
++#: ../rules/base.xml.in.h:172
  msgid "Generic 101-key PC"
- msgstr "Звичайна 101-клавішна для ПК"
+-msgstr "Звичайна 101-клавішна для ПК"
++msgstr "Звичайна 101 клавіша для ПК"
  
 -#: ../rules/base.xml.in.h:160
-+#: ../rules/base.xml.in.h:148
++#: ../rules/base.xml.in.h:173
  msgid "Generic 102-key (Intl) PC"
- msgstr "Звичайна 102-клавішна для ПК"
+-msgstr "Звичайна 102-клавішна для ПК"
++msgstr "Звичайна 102 клавіші (міжнар.) для ПК"
  
 -#: ../rules/base.xml.in.h:161
-+#: ../rules/base.xml.in.h:149
++#: ../rules/base.xml.in.h:174
  msgid "Generic 104-key PC"
- msgstr "Звичайна 104-клавішна для ПК"
+-msgstr "Звичайна 104-клавішна для ПК"
++msgstr "Звичайна 104 клавіш для ПК"
  
 -#: ../rules/base.xml.in.h:162
-+#: ../rules/base.xml.in.h:150
++#: ../rules/base.xml.in.h:175
  msgid "Generic 105-key (Intl) PC"
- msgstr "Звичайна 105-клавішна для ПК"
+-msgstr "Звичайна 105-клавішна для ПК"
++msgstr "Звичайна 105 клавіш (міжнар.) для ПК"
  
 -#: ../rules/base.xml.in.h:163
--msgid "Genius Comfy KB-12e"
++#: ../rules/base.xml.in.h:176
+ msgid "Genius Comfy KB-12e"
 -msgstr ""
--
++msgstr "Genius Comfy KB-12e"
+ 
 -#: ../rules/base.xml.in.h:164
-+#: ../rules/base.xml.in.h:151
++#: ../rules/base.xml.in.h:177
  msgid "Genius Comfy KB-16M / Genius MM Keyboard KWD-910"
  msgstr "Genius Comfy KB-16M / Genius MM Keyboard KWD-910"
  
 -#: ../rules/base.xml.in.h:165
-+#: ../rules/base.xml.in.h:152
++#: ../rules/base.xml.in.h:178
  msgid "Genius Comfy KB-21e-Scroll"
 -msgstr ""
 +msgstr "Genius Comfy KB-21e-Scroll"
  
 -#: ../rules/base.xml.in.h:166
-+#: ../rules/base.xml.in.h:153
++#: ../rules/base.xml.in.h:179
++msgid "Genius KB-19e NB"
++msgstr "Genius KB-19e NB"
++
++#: ../rules/base.xml.in.h:180
  msgid "Geo"
  msgstr "Груз"
  
 -#: ../rules/base.xml.in.h:167
 -#, fuzzy
-+#: ../rules/base.xml.in.h:154
++#: ../rules/base.xml.in.h:181
  msgid "Georgia"
 -msgstr "Німецька"
 +msgstr "Грузія"
  
 -#: ../rules/base.xml.in.h:168
 -#, fuzzy
-+#: ../rules/base.xml.in.h:155
++#: ../rules/base.xml.in.h:182
++msgid "German (Macintosh)"
++msgstr "Німецька (Macintosh)"
++
++#: ../rules/base.xml.in.h:183
  msgid "German, Sun dead keys"
 -msgstr "Спеціальні клавіші (dead keys) Sun"
-+msgstr "Німецька Sun зі спеціальними клавішами"
++msgstr "Німецька Sun зі сліпими клавішами"
  
 -#: ../rules/base.xml.in.h:169
 -#, fuzzy
-+#: ../rules/base.xml.in.h:156
++#: ../rules/base.xml.in.h:184
  msgid "German, eliminate dead keys"
 -msgstr "Вилучити спеціальні клавіші (dead keys)"
-+msgstr "Німецька, вимикати спеціальні клавіші (dead keys)"
++msgstr "Німецька, без сліпих клавіш"
  
 -#: ../rules/base.xml.in.h:170
 -#, fuzzy
-+#: ../rules/base.xml.in.h:157
++#: ../rules/base.xml.in.h:185
  msgid "Germany"
 -msgstr "Німецька"
--
--#: ../rules/base.xml.in.h:171
--#, fuzzy
--msgid "Gha"
--msgstr "Тай"
 +msgstr "Німеччина"
  
+-#: ../rules/base.xml.in.h:171
+-#, fuzzy
++#: ../rules/base.xml.in.h:186
+ msgid "Gha"
+-msgstr "Тай"
++msgstr "Гана"
+ 
 -#: ../rules/base.xml.in.h:172
--msgid "Ghana"
++#: ../rules/base.xml.in.h:187
+ msgid "Ghana"
 -msgstr ""
--
++msgstr "Гана"
+ 
 -#: ../rules/base.xml.in.h:173
 -#, fuzzy
-+#: ../rules/base.xml.in.h:158
++#: ../rules/base.xml.in.h:188
  msgid "Gre"
 -msgstr "Грецька"
 +msgstr "Гре"
  
 -#: ../rules/base.xml.in.h:174
 -#, fuzzy
-+#: ../rules/base.xml.in.h:159
++#: ../rules/base.xml.in.h:189
  msgid "Greece"
 -msgstr "Грецька"
 +msgstr "Греція"
  
 -#: ../rules/base.xml.in.h:175
-+#: ../rules/base.xml.in.h:160
++#: ../rules/base.xml.in.h:190
  msgid "Group Shift/Lock behavior"
- msgstr "Функція зміни групи"
+-msgstr "Функція зміни групи"
++msgstr "Поведінка зміни групи"
  
 -#: ../rules/base.xml.in.h:176
 -#, fuzzy
-+#: ../rules/base.xml.in.h:161
++#: ../rules/base.xml.in.h:191
  msgid "Gujarati"
  msgstr "Гуяраті"
  
 -#: ../rules/base.xml.in.h:177
 -#, fuzzy
-+#: ../rules/base.xml.in.h:162
++#: ../rules/base.xml.in.h:192
  msgid "Gurmukhi"
  msgstr "Гурмукхі"
  
 -#: ../rules/base.xml.in.h:178
 -#, fuzzy
-+#: ../rules/base.xml.in.h:163
++#: ../rules/base.xml.in.h:193
  msgid "Gyration"
 -msgstr "Хорватська"
-+msgstr "Циклічна зміна"
++msgstr "Gyration"
  
 -#: ../rules/base.xml.in.h:179
--msgid "Hausa"
++#: ../rules/base.xml.in.h:194
+ msgid "Hausa"
 -msgstr ""
--
++msgstr "Хауса"
+ 
 -#: ../rules/base.xml.in.h:180
-+#: ../rules/base.xml.in.h:164
++#: ../rules/base.xml.in.h:195
  msgid "Hewlett-Packard Internet Keyboard"
  msgstr "Hewlett-Packard Internet Keyboard"
  
 -#: ../rules/base.xml.in.h:181
-+#: ../rules/base.xml.in.h:165
++#: ../rules/base.xml.in.h:196
  msgid "Hewlett-Packard Omnibook 500 FA"
  msgstr "Hewlett-Packard Omnibook 500 FA"
  
 -#: ../rules/base.xml.in.h:182
-+#: ../rules/base.xml.in.h:166
++#: ../rules/base.xml.in.h:197
  msgid "Hewlett-Packard Omnibook 5xx"
  msgstr "Hewlett-Packard Omnibook 5xx"
  
 -#: ../rules/base.xml.in.h:183
-+#: ../rules/base.xml.in.h:167
++#: ../rules/base.xml.in.h:198
  msgid "Hewlett-Packard Omnibook 6000/6100"
  msgstr "Hewlett-Packard Omnibook 6000/6100"
  
 -#: ../rules/base.xml.in.h:184
-+#: ../rules/base.xml.in.h:168
++#: ../rules/base.xml.in.h:199
  msgid "Hewlett-Packard Omnibook XE3 GC"
  msgstr "Hewlett-Packard Omnibook XE3 GC"
  
 -#: ../rules/base.xml.in.h:185
-+#: ../rules/base.xml.in.h:169
++#: ../rules/base.xml.in.h:200
  msgid "Hewlett-Packard Omnibook XE3 GF"
  msgstr "Hewlett-Packard Omnibook XE3 GF"
  
 -#: ../rules/base.xml.in.h:186
-+#: ../rules/base.xml.in.h:170
++#: ../rules/base.xml.in.h:201
  msgid "Hewlett-Packard Omnibook XT1000"
  msgstr "Hewlett-Packard Omnibook XT1000"
  
 -#: ../rules/base.xml.in.h:187
-+#: ../rules/base.xml.in.h:171
++#: ../rules/base.xml.in.h:202
  msgid "Hewlett-Packard Pavilion ZT11xx"
  msgstr "Hewlett-Packard Pavilion ZT11xx"
  
 -#: ../rules/base.xml.in.h:188
-+#: ../rules/base.xml.in.h:172
++#: ../rules/base.xml.in.h:203
  msgid "Hewlett-Packard SK-2501 Multimedia Keyboard"
  msgstr "Hewlett-Packard SK-2501 Multimedia Keyboard"
  
 -#: ../rules/base.xml.in.h:189
-+#: ../rules/base.xml.in.h:173
++#: ../rules/base.xml.in.h:204
  msgid "Hewlett-Packard SK-2505 Internet Keyboard"
  msgstr "Hewlett-Packard SK-2505 Internet Keyboard"
  
 -#: ../rules/base.xml.in.h:190
-+#: ../rules/base.xml.in.h:174
++#: ../rules/base.xml.in.h:205
  msgid "Honeywell Euroboard"
  msgstr "Honeywell Euroboard"
  
 -#: ../rules/base.xml.in.h:191
-+#: ../rules/base.xml.in.h:175
++#: ../rules/base.xml.in.h:206
  msgid "Hrv"
  msgstr "Хорв"
  
 -#: ../rules/base.xml.in.h:192
-+#: ../rules/base.xml.in.h:176
++#: ../rules/base.xml.in.h:207
  msgid "Hun"
  msgstr "Уго"
  
 -#: ../rules/base.xml.in.h:193
 -#, fuzzy
-+#: ../rules/base.xml.in.h:177
++#: ../rules/base.xml.in.h:208
  msgid "Hungary"
 -msgstr "Угорська"
 +msgstr "Угорщина"
  
 -#: ../rules/base.xml.in.h:194
-+#: ../rules/base.xml.in.h:178
++#: ../rules/base.xml.in.h:209
  msgid "Hyper is mapped to the Win-keys."
- msgstr "Hyper відповідає клавішам Win"
+-msgstr "Hyper відповідає клавішам Win"
++msgstr "Hyper відповідає клавішам Win."
  
 -#: ../rules/base.xml.in.h:195
-+#: ../rules/base.xml.in.h:179
++#: ../rules/base.xml.in.h:210
  msgid "IBM Rapid Access"
  msgstr "IBM Rapid Access"
  
 -#: ../rules/base.xml.in.h:196
-+#: ../rules/base.xml.in.h:180
++#: ../rules/base.xml.in.h:211
  msgid "IBM Rapid Access II"
  msgstr "IBM Rapid Access II"
  
 -#: ../rules/base.xml.in.h:197
-+#: ../rules/base.xml.in.h:181
++#: ../rules/base.xml.in.h:212
  msgid "IBM Rapid Access II (alternate option)"
  msgstr "IBM Rapid Access II (альтернативний варіант)"
  
 -#: ../rules/base.xml.in.h:198
-+#: ../rules/base.xml.in.h:182
++#: ../rules/base.xml.in.h:213
  msgid "IBM ThinkPad 560Z/600/600E/A22E"
  msgstr "IBM ThinkPad 560Z/600/600E/A22E"
  
 -#: ../rules/base.xml.in.h:199
-+#: ../rules/base.xml.in.h:183
++#: ../rules/base.xml.in.h:214
  msgid "ISO Alternate"
- msgstr "Додаткова ISO"
+-msgstr "Додаткова ISO"
++msgstr "Альтернативна ISO"
  
 -#: ../rules/base.xml.in.h:200
 -#, fuzzy
-+#: ../rules/base.xml.in.h:184
++#: ../rules/base.xml.in.h:215
  msgid "Iceland"
 -msgstr "Ісландська"
 +msgstr "Ісландія"
  
 -#: ../rules/base.xml.in.h:201
 -#, fuzzy
-+#: ../rules/base.xml.in.h:185
++#: ../rules/base.xml.in.h:216
  msgid "Ind"
 -msgstr "Перс"
 +msgstr "Інд"
  
 -#: ../rules/base.xml.in.h:202
 -#, fuzzy
-+#: ../rules/base.xml.in.h:186
++#: ../rules/base.xml.in.h:217
  msgid "India"
 -msgstr "Українська"
 +msgstr "Індія"
  
 -#: ../rules/base.xml.in.h:203
-+#: ../rules/base.xml.in.h:187
++#: ../rules/base.xml.in.h:218
  msgid "International (with dead keys)"
 -msgstr ""
-+msgstr "Інтернаціональна (зі спеціальними клавішами)"
++msgstr "Міжнародна (зі сліпими клавішами)"
  
 -#: ../rules/base.xml.in.h:204
-+#: ../rules/base.xml.in.h:188
++#: ../rules/base.xml.in.h:219
  msgid "Inuktitut"
  msgstr "Іннуітська"
  
 -#: ../rules/base.xml.in.h:205
 -#, fuzzy
-+#: ../rules/base.xml.in.h:189
++#: ../rules/base.xml.in.h:220
  msgid "Iran"
 -msgstr "Перс"
 +msgstr "Іран"
  
 -#: ../rules/base.xml.in.h:206
 -#, fuzzy
-+#: ../rules/base.xml.in.h:190
++#: ../rules/base.xml.in.h:221
++msgid "Iraq"
++msgstr "Ірак"
++
++#: ../rules/base.xml.in.h:222
  msgid "Ireland"
 -msgstr "Ісландська"
 +msgstr "Ірландія"
  
 -#: ../rules/base.xml.in.h:207
-+#: ../rules/base.xml.in.h:191
++#: ../rules/base.xml.in.h:223
  msgid "Irl"
  msgstr "Ірл"
  
 -#: ../rules/base.xml.in.h:208
-+#: ../rules/base.xml.in.h:192
++#: ../rules/base.xml.in.h:224
  msgid "Irn"
 -msgstr "Перс"
 +msgstr "Іран"
  
 -#: ../rules/base.xml.in.h:209
-+#: ../rules/base.xml.in.h:193
++#: ../rules/base.xml.in.h:225
++msgid "Irq"
++msgstr "Ірак"
++
++#: ../rules/base.xml.in.h:226
  msgid "Isl"
  msgstr "Ісл"
  
 -#: ../rules/base.xml.in.h:210
-+#: ../rules/base.xml.in.h:194
++#: ../rules/base.xml.in.h:227
  msgid "Isr"
  msgstr "Івр"
  
 -#: ../rules/base.xml.in.h:211
 -#, fuzzy
-+#: ../rules/base.xml.in.h:195
++#: ../rules/base.xml.in.h:228
  msgid "Israel"
 -msgstr "Івріт"
 +msgstr "Ізраїль"
  
 -#: ../rules/base.xml.in.h:212
-+#: ../rules/base.xml.in.h:196
++#: ../rules/base.xml.in.h:229
  msgid "Ita"
  msgstr "Іта"
  
 -#: ../rules/base.xml.in.h:213
 -#, fuzzy
-+#: ../rules/base.xml.in.h:197
++#: ../rules/base.xml.in.h:230
  msgid "Italy"
 -msgstr "Іта"
 +msgstr "Італія"
  
 -#: ../rules/base.xml.in.h:214
 -#, fuzzy
-+#: ../rules/base.xml.in.h:198
++#: ../rules/base.xml.in.h:231
  msgid "Japan"
 -msgstr "Японська"
 +msgstr "Японія"
  
 -#: ../rules/base.xml.in.h:215
-+#: ../rules/base.xml.in.h:199
++#: ../rules/base.xml.in.h:232
++msgid "Japan (PC-98xx Series)"
++msgstr "Японія (моделі PC-98xx)"
++
++#: ../rules/base.xml.in.h:233
  msgid "Japanese 106-key"
  msgstr "Японська 106-клавішна"
  
 -#: ../rules/base.xml.in.h:216
-+#: ../rules/base.xml.in.h:200
++#: ../rules/base.xml.in.h:234
  msgid "Jpn"
  msgstr "Япо"
  
 -#: ../rules/base.xml.in.h:217
 -#, fuzzy
-+#: ../rules/base.xml.in.h:201
++#: ../rules/base.xml.in.h:235
  msgid "Kannada"
- msgstr "Канадська"
+-msgstr "Канадська"
++msgstr "Каннадська"
  
 -#: ../rules/base.xml.in.h:218
--msgid "Kaz"
++#: ../rules/base.xml.in.h:236
++msgid "Kashubian"
++msgstr "Кашубська"
++
++#: ../rules/base.xml.in.h:237
+ msgid "Kaz"
 -msgstr ""
--
++msgstr "Каз"
+ 
 -#: ../rules/base.xml.in.h:219
--msgid "Kazakh with Russian"
++#: ../rules/base.xml.in.h:238
+ msgid "Kazakh with Russian"
 -msgstr ""
--
++msgstr "Казахська з російською"
+ 
 -#: ../rules/base.xml.in.h:220
 -#, fuzzy
--msgid "Kazakhstan"
++#: ../rules/base.xml.in.h:239
+ msgid "Kazakhstan"
 -msgstr "Таджицька"
--
++msgstr "Казахстан"
+ 
 -#: ../rules/base.xml.in.h:221
--msgid "Keypad"
++#: ../rules/base.xml.in.h:240
+ msgid "Keypad"
 -msgstr ""
--
++msgstr "Додаткова панель"
+ 
 -#: ../rules/base.xml.in.h:222
-+#: ../rules/base.xml.in.h:202
++#: ../rules/base.xml.in.h:241
  msgid "Keytronic FlexPro"
  msgstr "Keytronic FlexPro"
  
 -#: ../rules/base.xml.in.h:223
--msgid "Khm"
--msgstr ""
--
++#: ../rules/base.xml.in.h:242
+ msgid "Khm"
++msgstr "Кхм"
++
++#: ../rules/base.xml.in.h:243
++msgid "Kor"
++msgstr "Кор"
++
++#: ../rules/base.xml.in.h:244
++msgid "Korea, Republic of"
++msgstr "Республіка Корея"
++
++#: ../rules/base.xml.in.h:245
++msgid "Korean 106-key"
++msgstr "Корейська 106-клавішна"
++
++#: ../rules/base.xml.in.h:246
++msgid "Kotoistus"
+ msgstr ""
+ 
 -#: ../rules/base.xml.in.h:224
 -#, fuzzy
-+#: ../rules/base.xml.in.h:203
++#: ../rules/base.xml.in.h:247
++msgid "Kurdish, (F)"
++msgstr "Курдська, (F)"
++
++#: ../rules/base.xml.in.h:248
++msgid "Kurdish, Latin Alt-Q"
++msgstr "Курдська, Латинська Alt-Q"
++
++#: ../rules/base.xml.in.h:249
++msgid "Kurdish, Latin Q"
++msgstr "Курдська, Латинська Q"
++
++#: ../rules/base.xml.in.h:250
  msgid "Kyr"
 -msgstr "Сир"
 +msgstr "Кир"
  
 -#: ../rules/base.xml.in.h:225
-+#: ../rules/base.xml.in.h:204
++#: ../rules/base.xml.in.h:251
  msgid "Kyrgyzstan"
 -msgstr ""
 +msgstr "Киргизстан"
  
 -#: ../rules/base.xml.in.h:226
-+#: ../rules/base.xml.in.h:205
++#: ../rules/base.xml.in.h:252
  msgid "LAm"
  msgstr "ЛатАм"
  
 -#: ../rules/base.xml.in.h:227
 -#, fuzzy
-+#: ../rules/base.xml.in.h:206
++#: ../rules/base.xml.in.h:253
  msgid "Lao"
 -msgstr "Малаз"
 +msgstr "Лаос"
  
 -#: ../rules/base.xml.in.h:228
 -#, fuzzy
-+#: ../rules/base.xml.in.h:207
++#: ../rules/base.xml.in.h:254
  msgid "Laos"
 -msgstr "Ноутбук"
 +msgstr "Лаос"
  
 -#: ../rules/base.xml.in.h:229
-+#: ../rules/base.xml.in.h:208
++#: ../rules/base.xml.in.h:255
  msgid "Laptop/notebook Compaq (eg. Armada) Laptop Keyboard"
- msgstr "Клавіатура для комп'ютерів Compaq (напр., Armada)"
+-msgstr "Клавіатура для комп'ютерів Compaq (напр., Armada)"
++msgstr "Клавіатура для лептопів/ноутбуків Compaq (напр., Armada)"
  
 -#: ../rules/base.xml.in.h:230
-+#: ../rules/base.xml.in.h:209
++#: ../rules/base.xml.in.h:256
  msgid "Laptop/notebook Compaq (eg. Presario) Internet Keyboard"
  msgstr "Інтернет-клавіатура для ноутбуків Compaq (напр., Presario)"
  
 -#: ../rules/base.xml.in.h:231
 -#, fuzzy
--msgid "Laptop/notebook Dell Inspiron 6xxx/8xxx"
++#: ../rules/base.xml.in.h:257
+ msgid "Laptop/notebook Dell Inspiron 6xxx/8xxx"
 -msgstr "Для ноутбуків Dell Inspiron 8xxx"
--
++msgstr "Лептоп/ноутбук Dell Inspiron 6xxx/8xxx"
+ 
 -#: ../rules/base.xml.in.h:232
 -#, fuzzy
--msgid "Laptop/notebook eMachines m68xx"
-+#: ../rules/base.xml.in.h:210
-+msgid "Laptop/notebook Dell Inspiron 8xxx"
- msgstr "Для ноутбуків Dell Inspiron 8xxx"
++#: ../rules/base.xml.in.h:258
+ msgid "Laptop/notebook eMachines m68xx"
+-msgstr "Для ноутбуків Dell Inspiron 8xxx"
++msgstr "Лептоп/ноутбук eMachines m68xx"
  
 -#: ../rules/base.xml.in.h:233
-+#: ../rules/base.xml.in.h:211
++#: ../rules/base.xml.in.h:259
  msgid "Latin"
  msgstr "Латинська"
  
 -#: ../rules/base.xml.in.h:234
 -#, fuzzy
-+#: ../rules/base.xml.in.h:212
++#: ../rules/base.xml.in.h:260
  msgid "Latin American"
  msgstr "Латиноамериканська"
  
 -#: ../rules/base.xml.in.h:235
 -#, fuzzy
-+#: ../rules/base.xml.in.h:213
++#: ../rules/base.xml.in.h:261
  msgid "Latin Unicode"
 -msgstr "Латиноамериканська"
-+msgstr "Латинь Юнікод"
++msgstr "Латинська Unicode"
  
 -#: ../rules/base.xml.in.h:236
 -#, fuzzy
-+#: ../rules/base.xml.in.h:214
++#: ../rules/base.xml.in.h:262
  msgid "Latin Unicode qwerty"
 -msgstr "Латиноамериканська"
-+msgstr "Латинь Юнікод (qwerty)"
++msgstr "Латинська Unicode (qwerty)"
  
 -#: ../rules/base.xml.in.h:237
 -#, fuzzy
-+#: ../rules/base.xml.in.h:215
++#: ../rules/base.xml.in.h:263
  msgid "Latin qwerty"
 -msgstr "Угорська (qwerty)"
-+msgstr "Латинь (qwerty)"
++msgstr "Латинська (qwerty)"
  
 -#: ../rules/base.xml.in.h:238
-+#: ../rules/base.xml.in.h:216
++#: ../rules/base.xml.in.h:264
  msgid "Latin with guillemots"
 -msgstr ""
-+msgstr "Латинська з кайрою"
++msgstr "Латинська з кутовими лапками"
  
 -#: ../rules/base.xml.in.h:239
 -#, fuzzy
-+#: ../rules/base.xml.in.h:217
++#: ../rules/base.xml.in.h:265
  msgid "Latvia"
 -msgstr "Латишська"
 +msgstr "Латвія"
  
 -#: ../rules/base.xml.in.h:240
 -#, fuzzy
-+#: ../rules/base.xml.in.h:218
++#: ../rules/base.xml.in.h:266
  msgid "Left Alt key changes group."
 -msgstr "Ліва клавіша Alt міняє групу"
 +msgstr "Ліва клавіша Alt міняє групу."
  
 -#: ../rules/base.xml.in.h:241
 -#, fuzzy
-+#: ../rules/base.xml.in.h:219
++#: ../rules/base.xml.in.h:267
  msgid "Left Alt key switches group while pressed."
 -msgstr "Ліва клавіша Win переключає групу на час натиснення"
 +msgstr "Ліва клавіша Alt перемикає групу при натисканні."
  
 -#: ../rules/base.xml.in.h:242
 -#, fuzzy
-+#: ../rules/base.xml.in.h:220
++#: ../rules/base.xml.in.h:268
  msgid "Left Ctrl key changes group."
 -msgstr "Ліва клавіша Ctrl міняє групу"
 +msgstr "Ліва клавіша Ctrl перемикає розкладку."
  
 -#: ../rules/base.xml.in.h:243
 -#, fuzzy
-+#: ../rules/base.xml.in.h:221
++#: ../rules/base.xml.in.h:269
  msgid "Left Shift key changes group."
 -msgstr "Ліва клавіша Shift міняє групу"
 +msgstr "Ліва клавіша Shift перемикає розкладку."
  
 -#: ../rules/base.xml.in.h:244
 -#, fuzzy
-+#: ../rules/base.xml.in.h:222
++#: ../rules/base.xml.in.h:270
  msgid "Left Win-key changes group."
 -msgstr "Ліва клавіша Win міняє групу"
 +msgstr "Ліва клавіша Win міняє групу."
  
 -#: ../rules/base.xml.in.h:245
 -#, fuzzy
-+#: ../rules/base.xml.in.h:223
++#: ../rules/base.xml.in.h:271
++msgid "Left Win-key is Compose."
++msgstr "Ліва клавіша Win відповідає Compose."
++
++#: ../rules/base.xml.in.h:272
  msgid "Left Win-key switches group while pressed."
 -msgstr "Ліва клавіша Win переключає групу на час натиснення"
--
--#: ../rules/base.xml.in.h:246
--msgid "Left handed Dvorak"
--msgstr ""
 +msgstr "Ліва клавіша Win перемикає групу на час натискання."
  
+-#: ../rules/base.xml.in.h:246
++#: ../rules/base.xml.in.h:273
+ msgid "Left handed Dvorak"
+-msgstr ""
++msgstr "Dvorak для лівші"
+ 
 -#: ../rules/base.xml.in.h:247
-+#: ../rules/base.xml.in.h:224
++#: ../rules/base.xml.in.h:274
  msgid "Lithuania"
 -msgstr ""
-+msgstr "Литовська"
++msgstr "Литва"
  
 -#: ../rules/base.xml.in.h:248
 -#, fuzzy
-+#: ../rules/base.xml.in.h:225
++#: ../rules/base.xml.in.h:275
  msgid "Logitech Access Keyboard"
 -msgstr "Logitech Deluxe Access Keyboard"
 +msgstr "Logitech Access Keyboard"
  
 -#: ../rules/base.xml.in.h:249
-+#: ../rules/base.xml.in.h:226
++#: ../rules/base.xml.in.h:276
  msgid "Logitech Cordless Desktop"
  msgstr "Logitech Cordless Desktop"
  
 -#: ../rules/base.xml.in.h:250
-+#: ../rules/base.xml.in.h:227
++#: ../rules/base.xml.in.h:277
++msgid "Logitech Cordless Desktop LX-300"
++msgstr "Logitech Cordless Desktop LX-300"
++
++#: ../rules/base.xml.in.h:278
  msgid "Logitech Cordless Desktop Navigator"
  msgstr "Logitech Cordless Desktop Navigator"
  
 -#: ../rules/base.xml.in.h:251
-+#: ../rules/base.xml.in.h:228
++#: ../rules/base.xml.in.h:279
  msgid "Logitech Cordless Desktop Optical"
  msgstr "Logitech Cordless Desktop Optical"
  
 -#: ../rules/base.xml.in.h:252
-+#: ../rules/base.xml.in.h:229
++#: ../rules/base.xml.in.h:280
  msgid "Logitech Cordless Desktop Pro"
  msgstr "Logitech Cordless Desktop Pro"
  
 -#: ../rules/base.xml.in.h:253
-+#: ../rules/base.xml.in.h:230
++#: ../rules/base.xml.in.h:281
  msgid "Logitech Cordless Desktop Pro (alternate option)"
  msgstr "Logitech Cordless Desktop Pro (альтернативний варіант)"
  
 -#: ../rules/base.xml.in.h:254
-+#: ../rules/base.xml.in.h:231
++#: ../rules/base.xml.in.h:282
  msgid "Logitech Cordless Desktop Pro (alternate option2)"
  msgstr "Logitech Cordless Desktop Pro (альтернативний варіант 2)"
  
 -#: ../rules/base.xml.in.h:255
-+#: ../rules/base.xml.in.h:232
++#: ../rules/base.xml.in.h:283
  msgid "Logitech Cordless Desktop iTouch"
  msgstr "Logitech Cordless Desktop iTouch"
  
 -#: ../rules/base.xml.in.h:256
-+#: ../rules/base.xml.in.h:233
++#: ../rules/base.xml.in.h:284
  msgid "Logitech Cordless Freedom/Desktop Navigator"
  msgstr "Logitech Cordless Freedom/Desktop Navigator"
  
 -#: ../rules/base.xml.in.h:257
-+#: ../rules/base.xml.in.h:234
- msgid "Logitech Deluxe Access Keyboard"
- msgstr "Logitech Deluxe Access Keyboard"
- 
+-msgid "Logitech Deluxe Access Keyboard"
+-msgstr "Logitech Deluxe Access Keyboard"
+-
 -#: ../rules/base.xml.in.h:258
-+#: ../rules/base.xml.in.h:235
++#: ../rules/base.xml.in.h:285
  msgid "Logitech Internet Keyboard"
  msgstr "Logitech Internet Keyboard"
  
 -#: ../rules/base.xml.in.h:259
-+#: ../rules/base.xml.in.h:236
++#: ../rules/base.xml.in.h:286
  msgid "Logitech Internet Navigator Keyboard"
  msgstr "Logitech Internet Navigator Keyboard"
  
 -#: ../rules/base.xml.in.h:260
 -#, fuzzy
-+#: ../rules/base.xml.in.h:237
++#: ../rules/base.xml.in.h:287
  msgid "Logitech Ultra-X Keyboard"
 -msgstr "Logitech Internet Keyboard"
 +msgstr "Logitech Ultra-X Keyboard"
  
 -#: ../rules/base.xml.in.h:261
-+#: ../rules/base.xml.in.h:238
++#: ../rules/base.xml.in.h:288
++msgid "Logitech diNovo Keyboard"
++msgstr "Logitech diNovo Keyboard"
++
++#: ../rules/base.xml.in.h:289
  msgid "Logitech iTouch"
  msgstr "Logitech iTouch"
  
 -#: ../rules/base.xml.in.h:262
-+#: ../rules/base.xml.in.h:239
++#: ../rules/base.xml.in.h:290
  msgid "Logitech iTouch Cordless Keyboard (model Y-RB6)"
- msgstr "Logitech iTouch Cordless Keyboard (модель Y-RB6)"
+-msgstr "Logitech iTouch Cordless Keyboard (модель Y-RB6)"
++msgstr "Бездротова клавіатура Logitech iTouch (модель Y-RB6)"
  
 -#: ../rules/base.xml.in.h:263
-+#: ../rules/base.xml.in.h:240
- msgid "Logitech iTouch keyboard Internet Navigator"
- msgstr "Logitech iTouch keyboard Internet Navigator"
+-msgid "Logitech iTouch keyboard Internet Navigator"
+-msgstr "Logitech iTouch keyboard Internet Navigator"
++#: ../rules/base.xml.in.h:291
++msgid "Logitech iTouch Internet Navigator Keyboard SE"
++msgstr "Logitech iTouch Internet Navigator Keyboard SE"
  
 -#: ../rules/base.xml.in.h:264
-+#: ../rules/base.xml.in.h:241
++#: ../rules/base.xml.in.h:292
++msgid "Logitech iTouch Internet Navigator Keyboard SE (USB)"
++msgstr "Logitech iTouch Internet Navigator Keyboard SE (USB)"
++
++#: ../rules/base.xml.in.h:293
  msgid "Ltu"
  msgstr "Лит"
  
 -#: ../rules/base.xml.in.h:265
-+#: ../rules/base.xml.in.h:242
++#: ../rules/base.xml.in.h:294
  msgid "Lva"
  msgstr "Латв"
  
 -#: ../rules/base.xml.in.h:266
 -#, fuzzy
--msgid "Macedonia"
-+#: ../rules/base.xml.in.h:243
-+msgid "Macedonian"
- msgstr "Македонська"
++#: ../rules/base.xml.in.h:295
+ msgid "Macedonia"
+-msgstr "Македонська"
++msgstr "Македонія"
  
 -#: ../rules/base.xml.in.h:267
-+#: ../rules/base.xml.in.h:244
++#: ../rules/base.xml.in.h:296
  msgid "Macintosh"
  msgstr "Macintosh"
  
 -#: ../rules/base.xml.in.h:268
-+#: ../rules/base.xml.in.h:245
++#: ../rules/base.xml.in.h:297
  msgid "Macintosh Old"
  msgstr "Старий Macintosh"
  
 -#: ../rules/base.xml.in.h:269
 -#, fuzzy
--msgid "Make CapsLock an additional Ctrl."
++#: ../rules/base.xml.in.h:298
++msgid "Macintosh layout"
++msgstr "Розкладка Macintosh"
++
++#: ../rules/base.xml.in.h:299
++msgid "Macintosh layout, eliminate dead keys"
++msgstr "Розкладка Macintosh, без сліпих клавіш"
++
++#: ../rules/base.xml.in.h:300
+ msgid "Make CapsLock an additional Ctrl."
 -msgstr "Caps Lock как додаткова клавіша Control"
--
++msgstr "Зробити Caps Lock додатковою Ctrl."
+ 
 -#: ../rules/base.xml.in.h:270
--msgid "Mal"
++#: ../rules/base.xml.in.h:301
+ msgid "Mal"
 -msgstr "Малаз"
-+#: ../rules/base.xml.in.h:246
-+msgid "Make CapsLock an additional Control."
-+msgstr "Caps Lock як додаткова клавіша Control"
++msgstr "Мал"
  
 -#: ../rules/base.xml.in.h:271
 -#, fuzzy
-+#: ../rules/base.xml.in.h:247
++#: ../rules/base.xml.in.h:302
  msgid "Malayalam"
  msgstr "Малайська"
  
 -#: ../rules/base.xml.in.h:272
 -#, fuzzy
--msgid "Maldives"
++#: ../rules/base.xml.in.h:303
+ msgid "Maldives"
 -msgstr "Мальтійська"
--
++msgstr "Мальдіви"
+ 
 -#: ../rules/base.xml.in.h:273
 -#, fuzzy
-+#: ../rules/base.xml.in.h:248
++#: ../rules/base.xml.in.h:304
  msgid "Malta"
 -msgstr "Малаз"
 +msgstr "Мальта"
  
 -#: ../rules/base.xml.in.h:274
 -#, fuzzy
-+#: ../rules/base.xml.in.h:249
++#: ../rules/base.xml.in.h:305
++msgid "Maltese keyboard with US layout"
++msgstr "Мальтійська клавіатура з розкладкою США"
++
++#: ../rules/base.xml.in.h:306
  msgid "Mao"
 -msgstr "Малаз"
 +msgstr "Мао"
  
 -#: ../rules/base.xml.in.h:275
 -#, fuzzy
-+#: ../rules/base.xml.in.h:250
++#: ../rules/base.xml.in.h:307
  msgid "Maori"
 -msgstr "Фарсі"
 +msgstr "Маорі"
  
 -#: ../rules/base.xml.in.h:276
-+#: ../rules/base.xml.in.h:251
++#: ../rules/base.xml.in.h:308
  msgid "Memorex MX1998"
  msgstr "Memorex MX1998"
  
 -#: ../rules/base.xml.in.h:277
-+#: ../rules/base.xml.in.h:252
++#: ../rules/base.xml.in.h:309
  msgid "Memorex MX2500 EZ-Access Keyboard"
  msgstr "Memorex MX2500 EZ-Access Keyboard"
  
 -#: ../rules/base.xml.in.h:278
-+#: ../rules/base.xml.in.h:253
++#: ../rules/base.xml.in.h:310
  msgid "Memorex MX2750"
  msgstr "Memorex MX2750"
  
 -#: ../rules/base.xml.in.h:279
 -#, fuzzy
-+#: ../rules/base.xml.in.h:254
++#: ../rules/base.xml.in.h:311
  msgid "Menu is Compose."
  msgstr "Клавіша Menu відповідає клавіші Compose"
  
 -#: ../rules/base.xml.in.h:280
 -#, fuzzy
-+#: ../rules/base.xml.in.h:255
++#: ../rules/base.xml.in.h:312
  msgid "Menu key changes group."
 -msgstr "Клавіша Menu міняє групу"
 +msgstr "Клавіша Menu міняє групу."
  
 -#: ../rules/base.xml.in.h:281
-+#: ../rules/base.xml.in.h:256
++#: ../rules/base.xml.in.h:313
  msgid "Meta is mapped to the Win-keys."
  msgstr "Клавіша Meta відповідає клавішам Win"
  
 -#: ../rules/base.xml.in.h:282
-+#: ../rules/base.xml.in.h:257
++#: ../rules/base.xml.in.h:314
  msgid "Meta is mapped to the left Win-key."
  msgstr "Клавіша Meta відповідає лівій клавіші Win"
  
 -#: ../rules/base.xml.in.h:283
-+#: ../rules/base.xml.in.h:258
++#: ../rules/base.xml.in.h:315
  msgid "Microsoft Internet Keyboard"
  msgstr "Microsoft Internet Keyboard"
  
 -#: ../rules/base.xml.in.h:284
-+#: ../rules/base.xml.in.h:259
++#: ../rules/base.xml.in.h:316
  msgid "Microsoft Internet Keyboard Pro, Swedish"
  msgstr "Microsoft Internet Keyboard Pro, шведська"
  
 -#: ../rules/base.xml.in.h:285
-+#: ../rules/base.xml.in.h:260
++#: ../rules/base.xml.in.h:317
  msgid "Microsoft Natural"
  msgstr "Microsoft Natural"
  
 -#: ../rules/base.xml.in.h:286
-+#: ../rules/base.xml.in.h:261
++#: ../rules/base.xml.in.h:318
  msgid "Microsoft Natural Keyboard Pro / Microsoft Internet Keyboard Pro"
  msgstr "Microsoft Natural Keyboard Pro / Microsoft Internet Keyboard Pro"
  
 -#: ../rules/base.xml.in.h:287
-+#: ../rules/base.xml.in.h:262
++#: ../rules/base.xml.in.h:319
  msgid "Microsoft Natural Keyboard Pro OEM"
  msgstr "Microsoft Natural Keyboard Pro OEM"
  
 -#: ../rules/base.xml.in.h:288
 -#, fuzzy
-+#: ../rules/base.xml.in.h:263
++#: ../rules/base.xml.in.h:320
  msgid "Microsoft Natural Keyboard Pro USB / Microsoft Internet Keyboard Pro"
 -msgstr "Microsoft Natural Keyboard Pro / Microsoft Internet Keyboard Pro"
 +msgstr "Microsoft Natural Keyboard Pro USB / Microsoft Internet Keyboard Pro"
  
 -#: ../rules/base.xml.in.h:289
-+#: ../rules/base.xml.in.h:264
++#: ../rules/base.xml.in.h:321
  msgid "Microsoft Office Keyboard"
  msgstr "Microsoft Office Keyboard"
  
 -#: ../rules/base.xml.in.h:290
 -#, fuzzy
-+#: ../rules/base.xml.in.h:265
++#: ../rules/base.xml.in.h:322
  msgid "Microsoft Wireless Multimedia Keyboard 1.0A"
 -msgstr "Microsoft Internet Keyboard"
 +msgstr "Microsoft Wireless Multimedia Keyboard 1.0A"
  
 -#: ../rules/base.xml.in.h:291
-+#: ../rules/base.xml.in.h:266
++#: ../rules/base.xml.in.h:323
  msgid "Miscellaneous compatibility options"
 -msgstr "Різна параметри сумісності"
 +msgstr "Різні параметри сумісності"
  
 -#: ../rules/base.xml.in.h:292
-+#: ../rules/base.xml.in.h:267
++#: ../rules/base.xml.in.h:324
  msgid "Mkd"
  msgstr "Мкд"
  
 -#: ../rules/base.xml.in.h:293
-+#: ../rules/base.xml.in.h:268
++#: ../rules/base.xml.in.h:325
  msgid "Mlt"
  msgstr "Мальт"
  
 -#: ../rules/base.xml.in.h:294
-+#: ../rules/base.xml.in.h:269
++#: ../rules/base.xml.in.h:326
  msgid "Mmr"
 -msgstr "Мьянм"
 +msgstr "М'янм"
  
 -#: ../rules/base.xml.in.h:295
-+#: ../rules/base.xml.in.h:270
++#: ../rules/base.xml.in.h:327
  msgid "Mng"
  msgstr "Монг"
  
 -#: ../rules/base.xml.in.h:296
 -#, fuzzy
-+#: ../rules/base.xml.in.h:271
++#: ../rules/base.xml.in.h:328
  msgid "Mongolia"
 -msgstr "Монгольська"
 +msgstr "Монголія"
  
 -#: ../rules/base.xml.in.h:297
-+#: ../rules/base.xml.in.h:272
++#: ../rules/base.xml.in.h:329
  msgid "Multilingual"
--msgstr ""
--
--#: ../rules/base.xml.in.h:298
--msgid "Multilingual, first part"
 -msgstr ""
 +msgstr "Багатомовна"
  
+-#: ../rules/base.xml.in.h:298
++#: ../rules/base.xml.in.h:330
+ msgid "Multilingual, first part"
+-msgstr ""
++msgstr "Багатомовна, перша частина"
+ 
 -#: ../rules/base.xml.in.h:299
-+#: ../rules/base.xml.in.h:273
++#: ../rules/base.xml.in.h:331
  msgid "Multilingual, second part"
 -msgstr ""
 +msgstr "Багатомовна, друга частина"
  
 -#: ../rules/base.xml.in.h:300
 -#, fuzzy
-+#: ../rules/base.xml.in.h:274
++#: ../rules/base.xml.in.h:332
  msgid "Myanmar"
 -msgstr "Датська"
 +msgstr "М'янма"
  
 -#: ../rules/base.xml.in.h:301
-+#: ../rules/base.xml.in.h:275
- msgid "Netherlands"
--msgstr ""
-+msgstr "Голандська"
+-msgid "Netherlands"
++#: ../rules/base.xml.in.h:333
++msgid "Neostyle"
+ msgstr ""
  
 -#: ../rules/base.xml.in.h:302
-+#: ../rules/base.xml.in.h:276
++#: ../rules/base.xml.in.h:334
++msgid "Nep"
++msgstr "Неп"
++
++#: ../rules/base.xml.in.h:335
++msgid "Nepal"
++msgstr "Непал"
++
++#: ../rules/base.xml.in.h:336
++msgid "Netherlands"
++msgstr "Голландська"
++
++#: ../rules/base.xml.in.h:337
  msgid "Nld"
  msgstr "Флам"
  
 -#: ../rules/base.xml.in.h:303
-+#: ../rules/base.xml.in.h:277
++#: ../rules/base.xml.in.h:338
  msgid "Nor"
  msgstr "Нор"
  
 -#: ../rules/base.xml.in.h:304
 -#, fuzzy
-+#: ../rules/base.xml.in.h:278
++#: ../rules/base.xml.in.h:339
  msgid "Northern Saami"
 -msgstr "Саамська (Норвегія)"
 +msgstr "Північне Саамі"
  
 -#: ../rules/base.xml.in.h:305
 -#, fuzzy
-+#: ../rules/base.xml.in.h:279
++#: ../rules/base.xml.in.h:340
  msgid "Northern Saami, eliminate dead keys"
 -msgstr "Вилучити спеціальні клавіші (dead keys)"
-+msgstr "Північне Саамі, вилучити спеціальні клавіші (dead keys)"
++msgstr "Північне Саамі, без сліпих клавіш"
  
 -#: ../rules/base.xml.in.h:306
-+#: ../rules/base.xml.in.h:280
++#: ../rules/base.xml.in.h:341
  msgid "Northgate OmniKey 101"
  msgstr "Northgate OmniKey 101"
  
 -#: ../rules/base.xml.in.h:307
 -#, fuzzy
-+#: ../rules/base.xml.in.h:281
++#: ../rules/base.xml.in.h:342
  msgid "Norway"
 -msgstr "Норвезька"
 +msgstr "Норвегія"
  
 -#: ../rules/base.xml.in.h:308
 -#, fuzzy
-+#: ../rules/base.xml.in.h:282
++#: ../rules/base.xml.in.h:343
  msgid "NumLock LED shows alternative group."
 -msgstr "Індикатор Num Lock відображає додаткову групу"
-+msgstr "Індикатор NumLock відображає альтернативну групу."
++msgstr "Індикатор NumLock показує альтернативну групу."
  
 -#: ../rules/base.xml.in.h:309
-+#: ../rules/base.xml.in.h:283
++#: ../rules/base.xml.in.h:344
  msgid "Ogham"
  msgstr "Огхам (давньоірландська)"
  
 -#: ../rules/base.xml.in.h:310
 -#, fuzzy
-+#: ../rules/base.xml.in.h:284
++#: ../rules/base.xml.in.h:345
  msgid "Ogham IS434"
 -msgstr "IS434"
 +msgstr "Ogham IS434"
  
 -#: ../rules/base.xml.in.h:311
-+#: ../rules/base.xml.in.h:285
++#: ../rules/base.xml.in.h:346
  msgid "Oretec MCK-800 MM/Internet keyboard"
  msgstr "Oretec MCK-800 MM/Internet keyboard"
  
 -#: ../rules/base.xml.in.h:312
-+#: ../rules/base.xml.in.h:286
++#: ../rules/base.xml.in.h:347
  msgid "Oriya"
  msgstr "Орія"
  
 -#: ../rules/base.xml.in.h:313
-+#: ../rules/base.xml.in.h:287
++#: ../rules/base.xml.in.h:348
  msgid "PC-98xx Series"
  msgstr "Моделі PC-98xx"
  
 -#: ../rules/base.xml.in.h:314
-+#: ../rules/base.xml.in.h:288
++#: ../rules/base.xml.in.h:349
  msgid "Pak"
 -msgstr ""
 +msgstr "Пак"
  
 -#: ../rules/base.xml.in.h:315
 -#, fuzzy
-+#: ../rules/base.xml.in.h:289
++#: ../rules/base.xml.in.h:350
  msgid "Pakistan"
 -msgstr "Таджицька"
 +msgstr "Пакистан"
  
 -#: ../rules/base.xml.in.h:316
--msgid "Pashto"
++#: ../rules/base.xml.in.h:351
+ msgid "Pashto"
 -msgstr ""
--
++msgstr "Пашто"
+ 
 -#: ../rules/base.xml.in.h:317
 -#, fuzzy
-+#: ../rules/base.xml.in.h:290
++#: ../rules/base.xml.in.h:352
  msgid "Pattachote"
  msgstr "Таїландська (Паттачот)"
  
 -#: ../rules/base.xml.in.h:318
-+#: ../rules/base.xml.in.h:291
++#: ../rules/base.xml.in.h:353
  msgid "Phonetic"
  msgstr "Фонетична"
  
 -#: ../rules/base.xml.in.h:319
-+#: ../rules/base.xml.in.h:292
++#: ../rules/base.xml.in.h:354
  msgid "Pol"
  msgstr "Пол"
  
 -#: ../rules/base.xml.in.h:320
 -#, fuzzy
-+#: ../rules/base.xml.in.h:293
++#: ../rules/base.xml.in.h:355
  msgid "Poland"
 -msgstr "Пан"
 +msgstr "Польща"
  
 -#: ../rules/base.xml.in.h:321
-+#: ../rules/base.xml.in.h:294
++#: ../rules/base.xml.in.h:356
  msgid "Polytonic"
  msgstr "Поліфонічна"
  
 -#: ../rules/base.xml.in.h:322
 -#, fuzzy
-+#: ../rules/base.xml.in.h:295
++#: ../rules/base.xml.in.h:357
  msgid "Portugal"
 -msgstr "Португальська"
--
--#: ../rules/base.xml.in.h:323
--#, fuzzy
--msgid "Power G5"
--msgstr "PowerPC PS/2"
 +msgstr "Португалія"
  
+-#: ../rules/base.xml.in.h:323
+-#, fuzzy
++#: ../rules/base.xml.in.h:358
+ msgid "Power G5"
+-msgstr "PowerPC PS/2"
++msgstr "Power G5"
+ 
 -#: ../rules/base.xml.in.h:324
-+#: ../rules/base.xml.in.h:296
++#: ../rules/base.xml.in.h:359
  msgid "PowerPC PS/2"
  msgstr "PowerPC PS/2"
  
 -#: ../rules/base.xml.in.h:325
 -#, fuzzy
-+#: ../rules/base.xml.in.h:297
++#: ../rules/base.xml.in.h:360
  msgid "Press Left Alt key to choose 3rd level."
 -msgstr "Вибір 3-го рівня натисненням лівої клавіші Win"
 +msgstr "Вибір 3-го рівня натисненням лівої клавіші Alt."
  
 -#: ../rules/base.xml.in.h:326
 -#, fuzzy
-+#: ../rules/base.xml.in.h:298
++#: ../rules/base.xml.in.h:361
  msgid "Press Left Win-key to choose 3rd level."
 -msgstr "Вибір 3-го рівня натисненням лівої клавіші Win"
 +msgstr "Вибір 3-го рівня натисненням лівої клавіші Win."
  
 -#: ../rules/base.xml.in.h:327
 -#, fuzzy
-+#: ../rules/base.xml.in.h:299
++#: ../rules/base.xml.in.h:362
  msgid "Press Menu key to choose 3rd level."
 -msgstr "Вибір 3-го рівня натисненням клавіші Menu"
 +msgstr "Вибір 3-го рівня натисненням клавіші Menu."
  
 -#: ../rules/base.xml.in.h:328
 -#, fuzzy
-+#: ../rules/base.xml.in.h:300
++#: ../rules/base.xml.in.h:363
  msgid "Press Right Alt key to choose 3rd level."
 -msgstr "Вибір 3-го рівня натисненням правої клавіші Win"
 +msgstr "Вибір 3-го рівня натисненням правої клавіші Alt"
  
 -#: ../rules/base.xml.in.h:329
 -#, fuzzy
--msgid "Press Right Ctrl to choose 3rd level."
++#: ../rules/base.xml.in.h:364
+ msgid "Press Right Ctrl to choose 3rd level."
 -msgstr "Вибір 3-го рівня натисненням правої клавіші Control"
-+#: ../rules/base.xml.in.h:301
-+msgid "Press Right Control to choose 3rd level."
-+msgstr "Вибір 3-го рівня натисненням правої клавіші Control."
++msgstr "Вибір 3-го рівня натисненням правого Ctrl."
  
 -#: ../rules/base.xml.in.h:330
 -#, fuzzy
-+#: ../rules/base.xml.in.h:302
++#: ../rules/base.xml.in.h:365
  msgid "Press Right Win-key to choose 3rd level."
 -msgstr "Вибір 3-го рівня натисненням правої клавіші Win"
 +msgstr "Вибір 3-го рівня натисненням правої клавіші Win."
  
 -#: ../rules/base.xml.in.h:331
 -#, fuzzy
-+#: ../rules/base.xml.in.h:303
++#: ../rules/base.xml.in.h:366
  msgid "Press any of Alt keys to choose 3rd level."
 -msgstr "Вибір 3-го рівня натисненням довільної клавіші Win"
 +msgstr "Вибір 3-го рівня натисненням довільної клавіші Alt."
  
 -#: ../rules/base.xml.in.h:332
 -#, fuzzy
-+#: ../rules/base.xml.in.h:304
++#: ../rules/base.xml.in.h:367
  msgid "Press any of Win-keys to choose 3rd level."
 -msgstr "Вибір 3-го рівня натисненням довільної клавіші Win"
 +msgstr "Вибір 3-го рівня натисненням довільної клавіші Win."
  
 -#: ../rules/base.xml.in.h:333
 -#, fuzzy
--msgid "Pro"
++#: ../rules/base.xml.in.h:368
+ msgid "Pro"
 -msgstr "Порт"
--
++msgstr "Pro"
+ 
 -#: ../rules/base.xml.in.h:334
--msgid "Pro Keypad"
++#: ../rules/base.xml.in.h:369
+ msgid "Pro Keypad"
 -msgstr ""
--
++msgstr "Pro з доп. панеллю"
+ 
 -#: ../rules/base.xml.in.h:335
 -#, fuzzy
-+#: ../rules/base.xml.in.h:305
++#: ../rules/base.xml.in.h:370
  msgid "Probhat"
 -msgstr "Порт"
 +msgstr "Бенгальська (Probhat)"
  
 -#: ../rules/base.xml.in.h:336
-+#: ../rules/base.xml.in.h:306
++#: ../rules/base.xml.in.h:371
  msgid "Propeller Voyager (KTEZ-1000)"
  msgstr "Propeller Voyager (KTEZ-1000)"
  
 -#: ../rules/base.xml.in.h:337
-+#: ../rules/base.xml.in.h:307
++#: ../rules/base.xml.in.h:372
  msgid "Prt"
  msgstr "Порт"
  
 -#: ../rules/base.xml.in.h:338
-+#: ../rules/base.xml.in.h:308
++#: ../rules/base.xml.in.h:373
  msgid "QTronix Scorpius 98N+"
  msgstr "QTronix Scorpius 98N+"
  
 -#: ../rules/base.xml.in.h:339
 -#, fuzzy
-+#: ../rules/base.xml.in.h:309
++#: ../rules/base.xml.in.h:374
  msgid "R-Alt switches group while pressed."
 -msgstr "Права клавіша Alt переключає групу на час натиснення"
 +msgstr "Права клавіша Alt перемикає групу на час натиснення."
  
 -#: ../rules/base.xml.in.h:340
 -#, fuzzy
-+#: ../rules/base.xml.in.h:310
++#: ../rules/base.xml.in.h:375
  msgid "Right Alt is Compose."
 -msgstr "Права клавіша Alt відповідає клавіші Alt"
 +msgstr "Права клавіша Alt відповідає Compose."
  
 -#: ../rules/base.xml.in.h:341
 -#, fuzzy
-+#: ../rules/base.xml.in.h:311
++#: ../rules/base.xml.in.h:376
  msgid "Right Alt key changes group."
 -msgstr "Права клавіша Alt міняє групу"
 +msgstr "Права клавіша Alt міняє групу."
  
 -#: ../rules/base.xml.in.h:342
 -#, fuzzy
-+#: ../rules/base.xml.in.h:312
-+msgid "Right Control key works as Right Alt."
-+msgstr "Права клавіша Control функціонує як права клавіша Alt."
-+
-+#: ../rules/base.xml.in.h:313
++#: ../rules/base.xml.in.h:377
  msgid "Right Ctrl is Compose."
 -msgstr "Права клавіша Alt відповідає клавіші Alt"
-+msgstr "Права клавіша Ctrl Compose"
++msgstr "Права клавіша Ctrl відповідає Compose."
  
 -#: ../rules/base.xml.in.h:343
 -#, fuzzy
-+#: ../rules/base.xml.in.h:314
++#: ../rules/base.xml.in.h:378
  msgid "Right Ctrl key changes group."
 -msgstr "Права клавіша Ctrl міняє групу"
 +msgstr "Права клавіша Ctrl перемикає групу."
  
 -#: ../rules/base.xml.in.h:344
 -#, fuzzy
-+#: ../rules/base.xml.in.h:315
++#: ../rules/base.xml.in.h:379
  msgid "Right Ctrl key switches group while pressed."
 -msgstr "Права клавіша Win переключає групу на час натиснення"
--
++msgstr "Права клавіша Ctrl перемикає групу на час натискання."
+ 
 -#: ../rules/base.xml.in.h:345
 -#, fuzzy
--msgid "Right Ctrl key works as Right Alt."
++#: ../rules/base.xml.in.h:380
+ msgid "Right Ctrl key works as Right Alt."
 -msgstr "Права клавіша Control функціонує як права клавіша Alt"
-+msgstr "Права клавіша Ctrl перемикає групу на час натискання."
++msgstr "Права клавіша Ctrl функціонує, як правий Alt."
  
 -#: ../rules/base.xml.in.h:346
 -#, fuzzy
-+#: ../rules/base.xml.in.h:316
++#: ../rules/base.xml.in.h:381
  msgid "Right Shift key changes group."
 -msgstr "Права клавіша Shift міняє групу"
 +msgstr "Права клавіша Shift перемикає групу."
  
 -#: ../rules/base.xml.in.h:347
 -#, fuzzy
-+#: ../rules/base.xml.in.h:317
++#: ../rules/base.xml.in.h:382
  msgid "Right Win-key changes group."
 -msgstr "Права клавіша Win міняє групу"
 +msgstr "Права клавіша Win міняє групу."
  
 -#: ../rules/base.xml.in.h:348
 -#, fuzzy
-+#: ../rules/base.xml.in.h:318
++#: ../rules/base.xml.in.h:383
  msgid "Right Win-key is Compose."
 -msgstr "Права клавіша Win відповідає клавіші Compose"
-+msgstr "Права клавіша Win відповідає клавіші Compose."
++msgstr "Права клавіша Win відповідає Compose."
  
 -#: ../rules/base.xml.in.h:349
 -#, fuzzy
-+#: ../rules/base.xml.in.h:319
++#: ../rules/base.xml.in.h:384
  msgid "Right Win-key switches group while pressed."
 -msgstr "Права клавіша Win переключає групу на час натиснення"
 +msgstr "Права клавіша Win перемикає групу на час натискання."
  
 -#: ../rules/base.xml.in.h:350
--msgid "Right handed Dvorak"
++#: ../rules/base.xml.in.h:385
+ msgid "Right handed Dvorak"
 -msgstr ""
--
++msgstr "Dvorak для правші"
+ 
 -#: ../rules/base.xml.in.h:351
 -#, fuzzy
-+#: ../rules/base.xml.in.h:320
++#: ../rules/base.xml.in.h:386
  msgid "Romania"
 -msgstr "Румунська"
 +msgstr "Румунія"
  
 -#: ../rules/base.xml.in.h:352
 -#, fuzzy
-+#: ../rules/base.xml.in.h:321
++#: ../rules/base.xml.in.h:387
  msgid "Romanian keyboard with German letters"
 -msgstr "Клавіатура США з румунськими буквами"
 +msgstr "Румунська клавіатура  з німецькими літерами"
  
 -#: ../rules/base.xml.in.h:353
 -#, fuzzy
-+#: ../rules/base.xml.in.h:322
++#: ../rules/base.xml.in.h:388
  msgid "Romanian keyboard with German letters, eliminate dead keys"
 -msgstr "Клавіатура США з румунськими буквами"
-+msgstr "Румунська клавіатура  з німецькими літерами, вимикати спеціальні клавіші"
++msgstr "Румунська клавіатура  з німецькими літерами, без сліпих клавіш"
  
 -#: ../rules/base.xml.in.h:354
-+#: ../rules/base.xml.in.h:323
++#: ../rules/base.xml.in.h:389
  msgid "Rou"
  msgstr "Рум"
  
 -#: ../rules/base.xml.in.h:355
-+#: ../rules/base.xml.in.h:324
++#: ../rules/base.xml.in.h:390
  msgid "Rus"
  msgstr "Рос"
  
 -#: ../rules/base.xml.in.h:356
 -#, fuzzy
-+#: ../rules/base.xml.in.h:325
++#: ../rules/base.xml.in.h:391
  msgid "Russia"
 -msgstr "Російська"
 +msgstr "Росія"
  
 -#: ../rules/base.xml.in.h:357
-+#: ../rules/base.xml.in.h:326
++#: ../rules/base.xml.in.h:392
  msgid "Russian"
  msgstr "Російська"
  
 -#: ../rules/base.xml.in.h:358
 -#, fuzzy
-+#: ../rules/base.xml.in.h:327
++#: ../rules/base.xml.in.h:393
  msgid "Russian phonetic"
 -msgstr "Російська"
 +msgstr "Російська (фонетична)"
  
 -#: ../rules/base.xml.in.h:359
 -#, fuzzy
-+#: ../rules/base.xml.in.h:328
++#: ../rules/base.xml.in.h:394
  msgid "Russian phonetic, eliminate dead keys"
 -msgstr "Вилучити спеціальні клавіші (dead keys)"
--
++msgstr "Російська фонетична, без сліпих клавіш"
+ 
 -#: ../rules/base.xml.in.h:360
--msgid "Russian with Kazakh"
++#: ../rules/base.xml.in.h:395
+ msgid "Russian with Kazakh"
 -msgstr ""
-+msgstr "Російська фонетична, вилучити спеціальні клавіші"
++msgstr "Російська з казахською"
  
 -#: ../rules/base.xml.in.h:361
--msgid "SCG"
++#: ../rules/base.xml.in.h:396
+ msgid "SCG"
 -msgstr ""
--
++msgstr "SCG"
+ 
 -#: ../rules/base.xml.in.h:362
--msgid "SILVERCREST Multimedia Wireless Keyboard"
++#: ../rules/base.xml.in.h:397
+ msgid "SILVERCREST Multimedia Wireless Keyboard"
 -msgstr ""
--
++msgstr "Мультимедійна бездротова клавіатура SILVERCREST"
+ 
 -#: ../rules/base.xml.in.h:363
-+#: ../rules/base.xml.in.h:329
++#: ../rules/base.xml.in.h:398
  msgid "SK-1300"
  msgstr "SK-1300"
  
 -#: ../rules/base.xml.in.h:364
-+#: ../rules/base.xml.in.h:330
++#: ../rules/base.xml.in.h:399
  msgid "SK-2500"
  msgstr "SK-2500"
  
 -#: ../rules/base.xml.in.h:365
-+#: ../rules/base.xml.in.h:331
++#: ../rules/base.xml.in.h:400
  msgid "SK-6200"
  msgstr "SK-6200"
  
 -#: ../rules/base.xml.in.h:366
-+#: ../rules/base.xml.in.h:332
++#: ../rules/base.xml.in.h:401
  msgid "SK-7100"
  msgstr "SK-7100"
  
 -#: ../rules/base.xml.in.h:367
-+#: ../rules/base.xml.in.h:333
++#: ../rules/base.xml.in.h:402
  msgid "SVEN Ergonomic 2500"
  msgstr "SVEN Ergonomic 2500"
  
 -#: ../rules/base.xml.in.h:368
-+#: ../rules/base.xml.in.h:334
++#: ../rules/base.xml.in.h:403
  msgid "Samsung SDM 4500P"
  msgstr "Samsung SDM 4500P"
  
 -#: ../rules/base.xml.in.h:369
-+#: ../rules/base.xml.in.h:335
++#: ../rules/base.xml.in.h:404
  msgid "Samsung SDM 4510P"
  msgstr "Samsung SDM 4510P"
  
 -#: ../rules/base.xml.in.h:370
 -#, fuzzy
-+#: ../rules/base.xml.in.h:336
++#: ../rules/base.xml.in.h:405
  msgid "ScrollLock LED shows alternative group."
 -msgstr "Індикатор Scroll Lock відображає додаткову групу"
-+msgstr "Індикатор ScollLock відображає альтернативну групу."
++msgstr "Індикатор ScollLock показує альтернативну групу."
  
 -#: ../rules/base.xml.in.h:371
--msgid "Serbia and Montenegro"
++#: ../rules/base.xml.in.h:406
+ msgid "Serbia and Montenegro"
 -msgstr ""
-+#: ../rules/base.xml.in.h:337
-+msgid "Serbian"
-+msgstr "Сербська"
++msgstr "Сербія і Монтенегро"
  
 -#: ../rules/base.xml.in.h:372
 -#, fuzzy
-+#: ../rules/base.xml.in.h:338
++#: ../rules/base.xml.in.h:407
  msgid "Shift with numpad keys works as in MS Windows."
 -msgstr ""
 -"Клавіша Shift з клавішами на додатковій цифровій клавіатурі функціонує як в "
 -"MS Windows"
-+msgstr "Shift з цифровою клавіатурою працює як в Microsoft Windows."
++msgstr "Shift з цифровою клавіатурою працює, як в MS Windows."
  
 -#: ../rules/base.xml.in.h:373
 -#, fuzzy
-+#: ../rules/base.xml.in.h:339
++#: ../rules/base.xml.in.h:408
  msgid "Shift+CapsLock changes group."
 -msgstr "Клавіша Caps Lock міняє групу"
 +msgstr "Shift+CapsLock міняють групу."
  
 -#: ../rules/base.xml.in.h:374
 -#, fuzzy
-+#: ../rules/base.xml.in.h:340
++#: ../rules/base.xml.in.h:409
  msgid "Slovakia"
 -msgstr "Словацька"
 +msgstr "Словаччина"
  
 -#: ../rules/base.xml.in.h:375
 -#, fuzzy
-+#: ../rules/base.xml.in.h:341
++#: ../rules/base.xml.in.h:410
  msgid "Slovenia"
 -msgstr "Словенська"
--
--#: ../rules/base.xml.in.h:376
--msgid "South Africa"
--msgstr ""
 +msgstr "Словенія"
  
--#: ../rules/base.xml.in.h:377
--msgid "Southern Uzbek"
+-#: ../rules/base.xml.in.h:376
++#: ../rules/base.xml.in.h:411
+ msgid "South Africa"
 -msgstr ""
--
++msgstr "ПАР"
+ 
+-#: ../rules/base.xml.in.h:377
++#: ../rules/base.xml.in.h:412
+ msgid "Southern Uzbek"
+-msgstr ""
++msgstr "Південна узбецька"
+ 
 -#: ../rules/base.xml.in.h:378
 -#, fuzzy
-+#: ../rules/base.xml.in.h:342
++#: ../rules/base.xml.in.h:413
  msgid "Spain"
 -msgstr "Словен"
 +msgstr "Іспанія"
  
 -#: ../rules/base.xml.in.h:379
-+#: ../rules/base.xml.in.h:343
++#: ../rules/base.xml.in.h:414
  msgid "Special keys (Ctrl+Alt+&lt;key&gt;) handled in a server."
  msgstr "Спеціальні клавіші (Ctrl+Alt+&lt;key&gt;) обробляються на сервері."
  
 -#: ../rules/base.xml.in.h:380
 -#, fuzzy
-+#: ../rules/base.xml.in.h:344
++#: ../rules/base.xml.in.h:415
  msgid "SrL"
 -msgstr "Сир"
-+msgstr "ШріЛ"
++msgstr "ШрЛ"
  
 -#: ../rules/base.xml.in.h:381
 -#, fuzzy
-+#: ../rules/base.xml.in.h:345
++#: ../rules/base.xml.in.h:416
  msgid "Sri Lanka"
 -msgstr "Сербська"
 +msgstr "Шрі Ланка"
  
 -#: ../rules/base.xml.in.h:382
-+#: ../rules/base.xml.in.h:346
-+msgid "Srp"
-+msgstr "Срп"
-+
-+#: ../rules/base.xml.in.h:347
++#: ../rules/base.xml.in.h:417
  msgid "Standard"
  msgstr "Стандартна"
  
  #. RSTU 2019-91
 -#: ../rules/base.xml.in.h:384
 -#, fuzzy
-+#: ../rules/base.xml.in.h:349
++#: ../rules/base.xml.in.h:419
  msgid "Standard RSTU"
 -msgstr "Стандартна"
 +msgstr "Стандартна RSTU"
  
  #. RSTU 2019-91
 -#: ../rules/base.xml.in.h:386
-+#: ../rules/base.xml.in.h:351
++#: ../rules/base.xml.in.h:421
  msgid "Standard RSTU on Russian layout"
 -msgstr ""
 +msgstr "Стандартна RSTU на російській розкладці"
  
 -#: ../rules/base.xml.in.h:387
-+#: ../rules/base.xml.in.h:352
++#: ../rules/base.xml.in.h:422
  msgid "Sun dead keys"
- msgstr "Спеціальні клавіші (dead keys) Sun"
+-msgstr "Спеціальні клавіші (dead keys) Sun"
++msgstr "Сліпі клавіші Sun"
  
 -#: ../rules/base.xml.in.h:388
 -#, fuzzy
-+#: ../rules/base.xml.in.h:353
++#: ../rules/base.xml.in.h:423
  msgid "Super Power Multimedia Keyboard"
 -msgstr "Hewlett-Packard SK-2501 Multimedia Keyboard"
 +msgstr "Super Power Multimedia Keyboard"
  
 -#: ../rules/base.xml.in.h:389
-+#: ../rules/base.xml.in.h:354
++#: ../rules/base.xml.in.h:424
  msgid "Super is mapped to the Win-keys (default)."
  msgstr "Super відповідає клавішам Win (типово)."
  
 -#: ../rules/base.xml.in.h:390
-+#: ../rules/base.xml.in.h:355
++#: ../rules/base.xml.in.h:425
  msgid "Svk"
 -msgstr "Слов"
-+msgstr "Словац"
++msgstr "Словак"
  
 -#: ../rules/base.xml.in.h:391
-+#: ../rules/base.xml.in.h:356
++#: ../rules/base.xml.in.h:426
  msgid "Svn"
  msgstr "Словен"
  
 -#: ../rules/base.xml.in.h:392
 -#, fuzzy
--msgid "Swap Ctrl and CapsLock."
++#: ../rules/base.xml.in.h:427
+ msgid "Swap Ctrl and CapsLock."
 -msgstr "Замінити містами клавіші Control і Caps Lock"
-+#: ../rules/base.xml.in.h:357
-+msgid "Swap Control and CapsLock."
-+msgstr "Замінити містами клавіші Control і Caps Lock."
++msgstr "Поміняти Ctrl і Caps Lock."
  
 -#: ../rules/base.xml.in.h:393
-+#: ../rules/base.xml.in.h:358
++#: ../rules/base.xml.in.h:428
  msgid "Swe"
  msgstr "Швед"
  
 -#: ../rules/base.xml.in.h:394
 -#, fuzzy
-+#: ../rules/base.xml.in.h:359
++#: ../rules/base.xml.in.h:429
  msgid "Sweden"
 -msgstr "Швед"
-+msgstr "Шведська"
++msgstr "Швеція"
  
 -#: ../rules/base.xml.in.h:395
 -#, fuzzy
-+#: ../rules/base.xml.in.h:360
++#: ../rules/base.xml.in.h:430
  msgid "Switzerland"
 -msgstr "Німецька (Швейцарія)"
 +msgstr "Швейцарія"
  
 -#: ../rules/base.xml.in.h:396
-+#: ../rules/base.xml.in.h:361
++#: ../rules/base.xml.in.h:431
  msgid "Symplon PaceBook (tablet PC)"
- msgstr "Symplon PaceBook (переносний ПК)"
+-msgstr "Symplon PaceBook (переносний ПК)"
++msgstr "Symplon PaceBook (планшетний ПК)"
  
 -#: ../rules/base.xml.in.h:397
-+#: ../rules/base.xml.in.h:362
++#: ../rules/base.xml.in.h:432
  msgid "Syr"
  msgstr "Сир"
  
 -#: ../rules/base.xml.in.h:398
 -#, fuzzy
-+#: ../rules/base.xml.in.h:363
++#: ../rules/base.xml.in.h:433
  msgid "Syria"
 -msgstr "Сирійська"
 +msgstr "Сирія"
  
 -#: ../rules/base.xml.in.h:399
-+#: ../rules/base.xml.in.h:364
++#: ../rules/base.xml.in.h:434
  msgid "Syriac"
  msgstr "Сирійська"
  
 -#: ../rules/base.xml.in.h:400
 -#, fuzzy
-+#: ../rules/base.xml.in.h:365
++#: ../rules/base.xml.in.h:435
  msgid "Syriac phonetic"
 -msgstr "Російська"
 +msgstr "Сирійська фонетична"
  
 -#: ../rules/base.xml.in.h:401
 -#, fuzzy
-+#: ../rules/base.xml.in.h:366
++#: ../rules/base.xml.in.h:436
  msgid "TIS-820.2538"
 -msgstr "Таїландська (TIS-820.2538)"
 +msgstr "TIS-820.2538"
  
 -#: ../rules/base.xml.in.h:402
 -#, fuzzy
-+#: ../rules/base.xml.in.h:367
++#: ../rules/base.xml.in.h:437
  msgid "Tajikistan"
 -msgstr "Таджицька"
 +msgstr "Таджикистан"
  
 -#: ../rules/base.xml.in.h:403
-+#: ../rules/base.xml.in.h:368
++#: ../rules/base.xml.in.h:438
  msgid "Tamil"
  msgstr "Тамільська"
  
 -#: ../rules/base.xml.in.h:404
 -#, fuzzy
-+#: ../rules/base.xml.in.h:369
-+msgid "Tamil INSCRIPT"
-+msgstr "Тамільська (Інскрипт)"
-+
-+#: ../rules/base.xml.in.h:370
++#: ../rules/base.xml.in.h:439
  msgid "Tamil TAB Typewriter"
 -msgstr "\"Друкарська машинка\""
-+msgstr "Тамільська TAB (Машинописна)"
++msgstr "Тамільська TAB (машинописна)"
  
 -#: ../rules/base.xml.in.h:405
-+#: ../rules/base.xml.in.h:371
++#: ../rules/base.xml.in.h:440
  msgid "Tamil TSCII Typewriter"
 -msgstr ""
-+msgstr "Тамільська TSCII (Машинописна)"
++msgstr "Тамільська TSCII (машинописна)"
  
 -#: ../rules/base.xml.in.h:406
 -#, fuzzy
-+#: ../rules/base.xml.in.h:372
++#: ../rules/base.xml.in.h:441
  msgid "Tamil Unicode"
 -msgstr "Латиноамериканська"
--
++msgstr "Тамільська Unicode"
+ 
 -#: ../rules/base.xml.in.h:407
--msgid "Tatar"
++#: ../rules/base.xml.in.h:442
+ msgid "Tatar"
 -msgstr ""
-+msgstr "Тамільська Юнікод"
++msgstr "Татарський"
  
 -#: ../rules/base.xml.in.h:408
-+#: ../rules/base.xml.in.h:373
++#: ../rules/base.xml.in.h:443
  msgid "Telugu"
  msgstr "Телугу"
  
 -#: ../rules/base.xml.in.h:409
-+#: ../rules/base.xml.in.h:374
++#: ../rules/base.xml.in.h:444
  msgid "Tha"
- msgstr "Тай"
+-msgstr "Тай"
++msgstr "Таїл"
  
 -#: ../rules/base.xml.in.h:410
 -#, fuzzy
-+#: ../rules/base.xml.in.h:375
++#: ../rules/base.xml.in.h:445
  msgid "Thailand"
 -msgstr "Тай"
 +msgstr "Таїланд"
  
 -#: ../rules/base.xml.in.h:411
-+#: ../rules/base.xml.in.h:376
++#: ../rules/base.xml.in.h:446
  msgid "Third level choosers"
  msgstr "Вибір 3-го рівня"
  
 -#: ../rules/base.xml.in.h:412
-+#: ../rules/base.xml.in.h:377
++#: ../rules/base.xml.in.h:447
  msgid "Tilde (~) variant"
 -msgstr ""
-+msgstr "Варіанти з тільдою (~)"
++msgstr "Варіанти з тильдою (~)"
  
 -#: ../rules/base.xml.in.h:413
-+#: ../rules/base.xml.in.h:378
++#: ../rules/base.xml.in.h:448
  msgid "Tjk"
  msgstr "Тдж"
  
 -#: ../rules/base.xml.in.h:414
-+#: ../rules/base.xml.in.h:379
++#: ../rules/base.xml.in.h:449
  msgid "Toshiba Satellite S3000"
  msgstr "Toshiba Satellite S3000"
  
 -#: ../rules/base.xml.in.h:415
-+#: ../rules/base.xml.in.h:380
++#: ../rules/base.xml.in.h:450
  msgid "Trust Direct Access Keyboard"
  msgstr "Trust Direct Access Keyboard"
  
 -#: ../rules/base.xml.in.h:416
-+#: ../rules/base.xml.in.h:381
++#: ../rules/base.xml.in.h:451
  msgid "Trust Wireless Keyboard Classic"
  msgstr "Trust Wireless Keyboard Classic"
  
 -#: ../rules/base.xml.in.h:417
-+#: ../rules/base.xml.in.h:382
++#: ../rules/base.xml.in.h:452
  msgid "Tur"
  msgstr "Тур"
  
 -#: ../rules/base.xml.in.h:418
 -#, fuzzy
--msgid "Turkey"
++#: ../rules/base.xml.in.h:453
+ msgid "Turkey"
 -msgstr "Тур"
-+#: ../rules/base.xml.in.h:383
-+msgid "Turkish"
-+msgstr "Турецька"
++msgstr "Туреччина"
  
 -#: ../rules/base.xml.in.h:419
 -#, fuzzy
-+#: ../rules/base.xml.in.h:384
++#: ../rules/base.xml.in.h:454
  msgid "Typewriter"
 -msgstr "\"Друкарська машинка\""
 +msgstr "Машинописна"
  
 -#: ../rules/base.xml.in.h:420
-+#: ../rules/base.xml.in.h:385
++#: ../rules/base.xml.in.h:455
  msgid "U.S. English"
  msgstr "Англійська (США)"
  
 -#: ../rules/base.xml.in.h:421
 -#, fuzzy
--msgid "US keyboard with Bosnian digraphs"
++#: ../rules/base.xml.in.h:456
+ msgid "US keyboard with Bosnian digraphs"
 -msgstr "Клавіатура США з румунськими буквами"
--
++msgstr "Клавіатура США з боснійськими диграфами"
+ 
 -#: ../rules/base.xml.in.h:422
 -#, fuzzy
--msgid "US keyboard with Bosnian letters"
++#: ../rules/base.xml.in.h:457
+ msgid "US keyboard with Bosnian letters"
 -msgstr "Клавіатура США з румунськими буквами"
--
++msgstr "Клавіатура США з боснійськими літерами"
+ 
 -#: ../rules/base.xml.in.h:423
 -#, fuzzy
--msgid "US keyboard with Croatian digraphs"
++#: ../rules/base.xml.in.h:458
+ msgid "US keyboard with Croatian digraphs"
 -msgstr "Клавіатура США з румунськими буквами"
--
++msgstr "Клавіатура США з хорватськими диграфами"
+ 
 -#: ../rules/base.xml.in.h:424
 -#, fuzzy
-+#: ../rules/base.xml.in.h:386
++#: ../rules/base.xml.in.h:459
  msgid "US keyboard with Croatian letters"
 -msgstr "Клавіатура США з румунськими буквами"
 +msgstr "Клавіатура США з хорватськими буквами"
  
 -#: ../rules/base.xml.in.h:425
 -#, fuzzy
-+#: ../rules/base.xml.in.h:387
++#: ../rules/base.xml.in.h:460
  msgid "US keyboard with Lithuanian letters"
 -msgstr "Клавіатура США з румунськими буквами"
-+msgstr "Клавіатура США з литовськими буквами"
- 
+-
 -#: ../rules/base.xml.in.h:426
 -#, fuzzy
-+#: ../rules/base.xml.in.h:388
- msgid "US keyboard with Maltian letters"
+-msgid "US keyboard with Maltian letters"
 -msgstr "Клавіатура США з румунськими буквами"
--
++msgstr "Клавіатура США з литовськими літерами"
+ 
 -#: ../rules/base.xml.in.h:427
 -#, fuzzy
--msgid "US keyboard with Slovenian digraphs"
++#: ../rules/base.xml.in.h:461
+ msgid "US keyboard with Slovenian digraphs"
 -msgstr "Клавіатура США з румунськими буквами"
-+msgstr "Клавіатура США з мальтійськими буквами"
++msgstr "Клавіатура США зі словенськими диграфами"
  
 -#: ../rules/base.xml.in.h:428
 -#, fuzzy
--msgid "US keyboard with Slovenian letters"
-+#: ../rules/base.xml.in.h:389
-+msgid "US keyboard with Romanian letters"
- msgstr "Клавіатура США з румунськими буквами"
++#: ../rules/base.xml.in.h:462
+ msgid "US keyboard with Slovenian letters"
+-msgstr "Клавіатура США з румунськими буквами"
++msgstr "Клавіатура США зі словенськими літерами"
  
 -#: ../rules/base.xml.in.h:429
-+#: ../rules/base.xml.in.h:390
++#: ../rules/base.xml.in.h:463
  msgid "USA"
  msgstr "США"
  
 -#: ../rules/base.xml.in.h:430
-+#: ../rules/base.xml.in.h:391
++#: ../rules/base.xml.in.h:464
  msgid "Ukr"
  msgstr "Укр"
  
 -#: ../rules/base.xml.in.h:431
 -#, fuzzy
-+#: ../rules/base.xml.in.h:392
++#: ../rules/base.xml.in.h:465
  msgid "Ukraine"
 -msgstr "Українська"
 +msgstr "Україна"
  
 -#: ../rules/base.xml.in.h:432
-+#: ../rules/base.xml.in.h:393
++#: ../rules/base.xml.in.h:466
  msgid "UnicodeExpert"
  msgstr "UnicodeExpert"
  
 -#: ../rules/base.xml.in.h:433
-+#: ../rules/base.xml.in.h:394
++#: ../rules/base.xml.in.h:467
  msgid "United Kingdom"
  msgstr "Англійська (Великобританія)"
  
 -#: ../rules/base.xml.in.h:434
-+#: ../rules/base.xml.in.h:395
++#: ../rules/base.xml.in.h:468
  msgid "Urdu"
--msgstr ""
--
--#: ../rules/base.xml.in.h:435
--msgid "Use Bosnian digraphs"
--msgstr ""
--
--#: ../rules/base.xml.in.h:436
--msgid "Use Croatian digraphs"
--msgstr ""
--
--#: ../rules/base.xml.in.h:437
--msgid "Use Slovenian digraphs"
--msgstr ""
--
--#: ../rules/base.xml.in.h:438
--msgid "Use guillemots for quotes"
 -msgstr ""
 +msgstr "Урду"
  
+-#: ../rules/base.xml.in.h:435
++#: ../rules/base.xml.in.h:469
+ msgid "Use Bosnian digraphs"
+-msgstr ""
++msgstr "Вживати боснійські диграфи"
+ 
+-#: ../rules/base.xml.in.h:436
++#: ../rules/base.xml.in.h:470
+ msgid "Use Croatian digraphs"
+-msgstr ""
++msgstr "Вживати хорватські диграфи"
+ 
+-#: ../rules/base.xml.in.h:437
++#: ../rules/base.xml.in.h:471
+ msgid "Use Slovenian digraphs"
+-msgstr ""
++msgstr "Вживати словенські диграфи"
+ 
+-#: ../rules/base.xml.in.h:438
++#: ../rules/base.xml.in.h:472
+ msgid "Use guillemots for quotes"
+-msgstr ""
++msgstr "Вживати кутові лапки"
+ 
 -#: ../rules/base.xml.in.h:439
 -#, fuzzy
-+#: ../rules/base.xml.in.h:396
++#: ../rules/base.xml.in.h:473
  msgid "Use keyboard LED to show alternative group."
 -msgstr ""
 -"Використовувати клавіатурні індикатори для відображення додаткових груп"
-+msgstr "Використовувати клавіатурні індикатори для відображення альтернативних груп."
++msgstr "Вживати індикатори клавіатури для відображення альтернативних груп."
  
 -#: ../rules/base.xml.in.h:440
-+#: ../rules/base.xml.in.h:397
++#: ../rules/base.xml.in.h:474
  msgid "Uzb"
  msgstr "Узб"
  
 -#: ../rules/base.xml.in.h:441
 -#, fuzzy
-+#: ../rules/base.xml.in.h:398
++#: ../rules/base.xml.in.h:475
  msgid "Uzbekistan"
 -msgstr "Узбецька"
 +msgstr "Узбекистан"
  
 -#: ../rules/base.xml.in.h:442
 -#, fuzzy
-+#: ../rules/base.xml.in.h:399
++#: ../rules/base.xml.in.h:476
  msgid "Vietnam"
  msgstr "В'єтнамська"
  
 -#: ../rules/base.xml.in.h:443
-+#: ../rules/base.xml.in.h:400
++#: ../rules/base.xml.in.h:477
  msgid "Vnm"
 -msgstr "Вьет"
 +msgstr "В'єт"
  
 -#: ../rules/base.xml.in.h:444
-+#: ../rules/base.xml.in.h:401
++#: ../rules/base.xml.in.h:478
++msgid "Wang model 724 azerty"
++msgstr "Модель Wang 724 azerty"
++
++#: ../rules/base.xml.in.h:479
  msgid "Winbook Model XP5"
  msgstr "Winbook Model XP5"
  
 -#: ../rules/base.xml.in.h:445
-+#: ../rules/base.xml.in.h:402
++#: ../rules/base.xml.in.h:480
  msgid "Winkeys"
  msgstr "Розкладка Windows"
  
 -#: ../rules/base.xml.in.h:446
-+#: ../rules/base.xml.in.h:403
++#: ../rules/base.xml.in.h:481
  msgid "With &lt;\\|&gt; key"
 -msgstr ""
 +msgstr "З клавішею &lt;\\|&gt;"
  
 -#: ../rules/base.xml.in.h:447
-+#: ../rules/base.xml.in.h:404
++#: ../rules/base.xml.in.h:482
  msgid "With guillemots"
 -msgstr ""
-+msgstr "З кайрою"
++msgstr "З кутовими лапками"
  
 -#: ../rules/base.xml.in.h:448
-+#: ../rules/base.xml.in.h:405
++#: ../rules/base.xml.in.h:483
  msgid "Yahoo! Internet Keyboard"
  msgstr "Yahoo! Internet Keyboard"
  
 -#: ../rules/base.xml.in.h:449
-+#: ../rules/base.xml.in.h:406
++#: ../rules/base.xml.in.h:484
  msgid "Z and ZHE swapped"
--msgstr ""
--
--#: ../rules/base.xml.in.h:450
--msgid "Zar"
 -msgstr ""
 +msgstr "Z та ZHE поміняні місцями"
  
+-#: ../rules/base.xml.in.h:450
++#: ../rules/base.xml.in.h:485
+ msgid "Zar"
+-msgstr ""
++msgstr "ПАР"
+ 
 -#: ../rules/base.xml.in.h:451
-+#: ../rules/base.xml.in.h:407
++#: ../rules/base.xml.in.h:486
  msgid "azerty"
  msgstr "azerty"
  
 -#: ../rules/base.xml.in.h:452
-+#: ../rules/base.xml.in.h:408
++#: ../rules/base.xml.in.h:487
  msgid "azerty/digits"
  msgstr "azerty/цифри"
  
 -#: ../rules/base.xml.in.h:453
-+#: ../rules/base.xml.in.h:409
++#: ../rules/base.xml.in.h:488
  msgid "digits"
  msgstr "цифри"
  
 -#: ../rules/base.xml.in.h:454
-+#: ../rules/base.xml.in.h:410
++#: ../rules/base.xml.in.h:489
  msgid "lyx"
  msgstr "lyx"
  
 -#: ../rules/base.xml.in.h:455
-+#: ../rules/base.xml.in.h:411
++#: ../rules/base.xml.in.h:490
  msgid "qwerty"
  msgstr "qwerty"
  
 -#: ../rules/base.xml.in.h:456
-+#: ../rules/base.xml.in.h:412
++#: ../rules/base.xml.in.h:491
  msgid "qwerty, extended Backslash"
 -msgstr ""
 +msgstr "qwerty, розширений Backslash"
  
 -#: ../rules/base.xml.in.h:457
-+#: ../rules/base.xml.in.h:413
++#: ../rules/base.xml.in.h:492
  msgid "qwerty/digits"
  msgstr "qwerty/цифри"
  
 -#: ../rules/base.xml.in.h:458
 -#, fuzzy
-+#: ../rules/base.xml.in.h:414
++#: ../rules/base.xml.in.h:493
  msgid "qwertz"
 -msgstr "qwerty"
-+msgstr "qwertz"
- 
+-
 -#: ../rules/base.xml.in.h:459
-+#: ../rules/base.xml.in.h:415
- msgid "si1452"
- msgstr "si1452"
+-msgid "si1452"
+-msgstr "si1452"
 -
 -#~ msgid "Turkish"
 -#~ msgstr "Турецька"
@@ -57130,7 +58051,8 @@ Index: xkb-data/po/uk.po
 -
 -#~ msgid "uni/102/qwertz/comma"
 -#~ msgstr "Unicode pc102, qwertz, кома"
--
++msgstr "qwertz"
+ 
 -#~ msgid "uni/102/qwertz/dot"
 -#~ msgstr "Unicode pc102, qwertz, точка"
 Index: xkb-data/po/vi.po
@@ -64054,7 +64976,7 @@ Index: xkb-data/rules/base
 ===================================================================
 --- xkb-data.orig/rules/base
 +++ xkb-data/rules/base
-@@ -11,10 +11,13 @@
+@@ -11,43 +11,57 @@
  // If you want non-latin layouts implicitly include the en_US layout
  // uncomment lines below
  //! $nonlatin = am ara ben bd bg bt by cs deva ge gh gr guj guru il \
@@ -64062,197 +64984,23 @@ Index: xkb-data/rules/base
 +//              in ir iku jp kan kh kr la lao lk mk mm mn mv mal ori pk \
  //              ru scc sy syr tel th tj tam ua uz
  
++// PC models
  ! $pcmodels = pc101 pc102 pc104 pc105
+-! $maclaptop = ibook powerbook
+-! $mac = macintosh macintosh_old ibook powerbook
 +
-+! $pcgeometries = abnt2 latitude microsoft jp106 kr106
++// Microsoft models (using MS geometry)
++! $msmodels = microsoft microsoftpro microsoftprousb microsoftprose
 +
- ! $maclaptop = ibook powerbook
- ! $mac = macintosh macintosh_old ibook powerbook
- 
-@@ -23,22 +26,25 @@
- ! $azerty = be fr
- ! $qwertz = al cz de hr hu ro si sk 
- 
--! $inetkbds = a4techKB21 a4techKBS8 acer_tm_800 acpi airkey azonaRF2300 \
-+! $inetkbds = a4techKB21 a4techKBS8 a4_rfkb23 \
-+              acer_ferrari4k acer_tm_800 acpi airkey armada azonaRF2300 \
-               brother \
--              btc5113rf btc5126t btc9000 btc9000a btc9001ah btc5090\
-+              btc5113rf btc5126t btc9000 btc9000a btc9001ah btc5090 \
-               cherryblue cherrybluea cherryblueb cherrycyboard \
-               chicony chicony9885 \
--              compaqeak8 compaqik7 compaqik13 compaqik18 cymotionlinux \
--              armada presario ipaq \
-+              compaqeak8 compaqik7 compaqik13 compaqik18 \
-+              cymotionlinux \
-+              presario ipaq \
-               dell inspiron dellusbmm dtk2000 \
--              dexxa diamond genius geniuscomfy geniuscomfy2 \
-+              dexxa diamond \
-+              genius geniuscomfy geniuscomfy2 genius_kb19e_nb \
-               emachines ennyah_dkb1008 gyration \
-               hpi6 hp2501 hp2505 hp5181 hpxe3gc hpxe3gf hpxe4xxx hpzt11xx \
-               hp500fa hp5xx hp5185 \
-               honeywell_euroboard \
-               rapidaccess rapidaccess2 rapidaccess2a \
--              ltcd logiaccess logicdp logicdpa logicdit logicink logiciink \
--              logiinkse logiinkseusb logiitc logiik itouch logiultrax \
-+              ltcd logiaccess logicdp logicdpa logicdit logicink logiciink logiclx300 \
-+              logiinkse logiinkseusb logiitc logiik itouch logiultrax dinovo \
-               mx1998 mx2500 mx2750 \
-               microsoftinet microsoftpro microsoftprousb microsoftprooem microsoftprose \
-               microsoftoffice microsoftmult \
-@@ -80,7 +86,8 @@
-   ataritt	=	ataritt(de)
-   sun4		=	sun(type4_euro)
-   sun5		=	sun(type5_euro)
--  macintosh_old	=	macintosh
-+  macintosh_old	=	macintosh(old)
-+  macintosh	=	macintosh
-   powerpcps2	=	powerpcps2
-   pc98		=	xfree98(pc98)
-   abnt2		=	xfree86(abnt2)
-@@ -99,7 +106,6 @@
-   *             =       +aliases(qwerty)
- 
- ! model		=	geometry
--  microsoft	=	microsoft(natural)
-   microsoftpro	=	microsoft(natural)
-   microsoftprousb =	microsoft(natural)
-   microsoftprose =	microsoft(natural)
-@@ -109,11 +115,10 @@
-   omnikey101	=	northgate(omnikey101)
-   thinkpad	=	ibm_vndr/thinkpad(common)
-  $pcmodels	=	pc(%m)
--  jp106		=	pc(jp106)
-+ $pcgeometries	=	pc(%m)
-   everex	=	everex(STEPnote)
-   winbook	=	winbook(XP5)
-   pc98		=	nec(pc98)
--  abnt2		=	pc(abnt2)
-  $mac		=	macintosh(macintosh)
-   *		=       pc(pc104)
- 
-@@ -144,6 +149,8 @@
-   *		ie		laptop		=	pc(pc105)+ie(basic)
-   $pcmodels	ie		CloGaelachLaptop		=	pc(%m)+ie(CloGaelach)
-   *		ie		CloGaelachLaptop		=	pc(pc105)+ie(CloGaelach)
-+  $pcmodels	il		si1452		=	pc(%m)+ie(basic)
-+  *		il		si1452		=	pc(pc105)+ie(basic)
-   $pcmodels	iu		basic		=	pc(%m)+ca(ike)
-   *		iu		basic		=	pc(pc105)+ca(ike)
-   $pcmodels	lo		basic		=	pc(%m)+la(basic)
-@@ -279,6 +286,8 @@
-   *		ie(laptop)			=	pc(pc105)+ie(basic)
-   $pcmodels	ie(CloGaelachLaptop)			=	pc(%m)+ie(CloGaelach)
-   *		ie(CloGaelachLaptop)			=	pc(pc105)+ie(CloGaelach)
-+  $pcmodels	il(si1452)			=	pc(%m)+ie(basic)
-+  *		il(si1452)			=	pc(pc105)+ie(basic)
-   $pcmodels	iu(basic)			=	pc(%m)+ca(ike)
-   *		iu(basic)			=	pc(pc105)+ca(ike)
-   $pcmodels	lo(basic)			=	pc(%m)+la(basic)
-@@ -437,6 +446,8 @@
-   *		ie(laptop)			=	pc(pc105)+ie(basic)
-   $pcmodels	ie(CloGaelachLaptop)			=	pc(%m)+ie(CloGaelach)
-   *		ie(CloGaelachLaptop)			=	pc(pc105)+ie(CloGaelach)
-+  $pcmodels	il(si1452)			=	pc(%m)+ie(basic)
-+  *		il(si1452)			=	pc(pc105)+ie(basic)
-   $pcmodels	iu(basic)			=	pc(%m)+ca(ike)
-   *		iu(basic)			=	pc(pc105)+ca(ike)
-   $pcmodels	lo(basic)			=	pc(%m)+la(basic)
-@@ -529,6 +540,8 @@
-   *		ie		laptop		=	pc(pc105)+ie(basic)
-   $pcmodels	ie		CloGaelachLaptop		=	pc(%m)+ie(CloGaelach)
-   *		ie		CloGaelachLaptop		=	pc(pc105)+ie(CloGaelach)
-+  $pcmodels	il		si1452		=	pc(%m)+ie(basic)
-+  *		il		si1452		=	pc(pc105)+ie(basic)
-   $pcmodels	iu		basic		=	pc(%m)+ca(ike)
-   *		iu		basic		=	pc(pc105)+ca(ike)
-   $pcmodels	lo		basic		=	pc(%m)+la(basic)
-@@ -624,6 +637,7 @@
-   gur(basic)	=	+in(guru):2
-   ie(laptop)	=	+ie(basic):2
-   ie(CloGaelachLaptop)	=	+ie(CloGaelach):2
-+  il(si1452)	=	+ie(basic):2
-   iu(basic)	=	+ca(ike):2
-   lo(basic)	=	+la(basic):2
-   kan(basic)	=	+in(kan):2
-@@ -693,6 +707,7 @@
-   gur(basic)	=	+in(guru):3
-   ie(laptop)	=	+ie(basic):3
-   ie(CloGaelachLaptop)	=	+ie(CloGaelach):3
-+  il(si1452)	=	+ie(basic):3
-   iu(basic)	=	+ca(ike):3
-   lo(basic)	=	+la(basic):3
-   kan(basic)	=	+in(kan):3
-@@ -762,6 +777,7 @@
-   gur(basic)	=	+in(guru):4
-   ie(laptop)	=	+ie(basic):4
-   ie(CloGaelachLaptop)	=	+ie(CloGaelach):4
-+  il(si1452)	=	+ie(basic):4
-   iu(basic)	=	+ca(ike):4
-   lo(basic)	=	+la(basic):4
-   kan(basic)	=	+in(kan):4
-@@ -805,6 +821,7 @@
-   gur		basic	=	+in(guru):2
-   ie		laptop	=	+ie(basic):2
-   ie		CloGaelachLaptop	=	+ie(CloGaelach):2
-+  il		si1452	=	+ie(basic):2
-   iu		basic	=	+ca(ike):2
-   lo		basic	=	+la(basic):2
-   kan		basic	=	+in(kan):2
-@@ -847,6 +864,7 @@
-   gur		basic	=	+in(guru):3
-   ie		laptop	=	+ie(basic):3
-   ie		CloGaelachLaptop	=	+ie(CloGaelach):3
-+  il		si1452	=	+ie(basic):3
-   iu		basic	=	+ca(ike):3
-   lo		basic	=	+la(basic):3
-   kan		basic	=	+in(kan):3
-@@ -889,6 +907,7 @@
-   gur		basic	=	+in(guru):4
-   ie		laptop	=	+ie(basic):4
-   ie		CloGaelachLaptop	=	+ie(CloGaelach):4
-+  il		si1452	=	+ie(basic):4
-   iu		basic	=	+ca(ike):4
-   lo		basic	=	+la(basic):4
-   kan		basic	=	+in(kan):4
-@@ -923,6 +942,7 @@
- 
- ! model		layout		=	compat
-   pc98		nec_vndr/jp	=	pc98(basic)
-+  *		jp		=	complete+japan
-   *		*		=	complete
- 
- ! model		layout[1]	=	compat
-@@ -994,6 +1014,7 @@
-   altwin:hyper_win	=	+altwin(hyper_win)
-   altwin:alt_super_win	=	+altwin(alt_super_win)
-   compose:ralt		=	+compose(ralt)
-+  compose:lwin		=	+compose(lwin)
-   compose:rwin		=	+compose(rwin)
-   compose:menu		=	+compose(menu)
-   compose:rctrl		=	+compose(rctrl)
-Index: xkb-data/rules/base.lists.part
-===================================================================
---- xkb-data.orig/rules/base.lists.part
-+++ xkb-data/rules/base.lists.part
-@@ -2,10 +2,13 @@
- // If you want non-latin layouts implicitly include the en_US layout
- // uncomment lines below
- //! $nonlatin = am ara ben bd bg bt by cs deva ge gh gr guj guru il \
--//              in ir iku jp kan kh la lao lk mk mm mn mv mal ori pk \
-+//              in ir iku jp kan kh kr la lao lk mk mm mn mv mal ori pk \
- //              ru scc sy syr tel th tj tam ua uz
- 
- ! $pcmodels = pc101 pc102 pc104 pc105
++// PC geometries - they have special geometry but symbols are mostly pc105
++! $pcgeometries = abnt2 latitude jp106 kr106
 +
-+! $pcgeometries = abnt2 latitude microsoft jp106 kr106
-+
- ! $maclaptop = ibook powerbook
- ! $mac = macintosh macintosh_old ibook powerbook
++! $macbooks = macbook78 macbook79
++! $maclaptop = ibook powerbook macbook78 macbook79
++! $macs = macintosh macintosh_old ibook powerbook macbook78 macbook79
  
-@@ -14,22 +17,26 @@
+ ! $macvendorlayouts = ch de dk es fi fr gb is it nl no pt se us
+ 
  ! $azerty = be fr
  ! $qwertz = al cz de hr hu ro si sk 
  
@@ -64286,7 +65034,303 @@ Index: xkb-data/rules/base.lists.part
                mx1998 mx2500 mx2750 \
                microsoftinet microsoftpro microsoftprousb microsoftprooem microsoftprose \
                microsoftoffice microsoftmult \
-@@ -38,7 +45,8 @@
+               oretec \
+-              power_g5 propeller silvercrest scorpius \
++              propeller silvercrest scorpius \
+               qtronix \
+               samsung4500 samsung4510 \
+               sk1300 sk2500 sk6200 sk7100 sp_inet \
+-              sven symplon toshiba_s3000 trust trustda yahoo
++              sven symplon toshiba_s3000 trust trustda yahoo \
++              evdev
+ 
+ // all layouts with 3rd and 4th groups
+ ! $threelevellayouts = al az \
+@@ -80,12 +94,15 @@
+   ataritt	=	ataritt(de)
+   sun4		=	sun(type4_euro)
+   sun5		=	sun(type5_euro)
+-  macintosh_old	=	macintosh
++  macintosh_old	=	macintosh(old)
++  macintosh	=	macintosh
+   powerpcps2	=	powerpcps2
+   pc98		=	xfree98(pc98)
+   abnt2		=	xfree86(abnt2)
+   jp106		=	xfree86(jp106)
+   evdev		=	evdev
++ $macbooks	=	macintosh(macbook)
++ $macs   	=	macintosh
+   *		=	xfree86
+ 
+ ! layout[1]	=	keycodes
+@@ -99,22 +116,19 @@
+   *             =       +aliases(qwerty)
+ 
+ ! model		=	geometry
+-  microsoft	=	microsoft(natural)
+-  microsoftpro	=	microsoft(natural)
+-  microsoftprousb =	microsoft(natural)
+-  microsoftprose =	microsoft(natural)
++ $msmodels	=	microsoft(natural)
+   dell101	=	dell(dell101)
+   flexpro	=	keytronic(FlexPro)
+   hp6000	=	hp(omnibook)
+   omnikey101	=	northgate(omnikey101)
+   thinkpad	=	ibm_vndr/thinkpad(common)
+  $pcmodels	=	pc(%m)
+-  jp106		=	pc(jp106)
++ $pcgeometries	=	pc(%m)
+   everex	=	everex(STEPnote)
+   winbook	=	winbook(XP5)
+   pc98		=	nec(pc98)
+-  abnt2		=	pc(abnt2)
+- $mac		=	macintosh(macintosh)
++ $macbooks      =       macintosh(%m)
++ $macs		=	macintosh(macintosh)
+   *		=       pc(pc104)
+ 
+ ! model		layout		variant		=	symbols
+@@ -144,6 +158,8 @@
+   *		ie		laptop		=	pc(pc105)+ie(basic)
+   $pcmodels	ie		CloGaelachLaptop		=	pc(%m)+ie(CloGaelach)
+   *		ie		CloGaelachLaptop		=	pc(pc105)+ie(CloGaelach)
++  $pcmodels	il		si1452		=	pc(%m)+ie(basic)
++  *		il		si1452		=	pc(pc105)+ie(basic)
+   $pcmodels	iu		basic		=	pc(%m)+ca(ike)
+   *		iu		basic		=	pc(pc105)+ca(ike)
+   $pcmodels	lo		basic		=	pc(%m)+la(basic)
+@@ -198,7 +214,7 @@
+   *		yu		yz		=	pc(pc105)+srp(latinyz)
+   $pcmodels	yu		unicodeyz		=	pc(%m)+srp(latinunicodeyz)
+   *		yu		unicodeyz		=	pc(pc105)+srp(latinunicodeyz)
+- $mac		$macvendorlayouts	nodeadkeys	=	macintosh_vndr/us(extended)+macintosh_vndr/%l%(v)
++ $macs		$macvendorlayouts	nodeadkeys	=	macintosh_vndr/us(extended)+macintosh_vndr/%l%(v)
+ 
+ ! model		layout				=	symbols
+   $pcmodels	ar			=	pc(%m)+ara
+@@ -279,6 +295,8 @@
+   *		ie(laptop)			=	pc(pc105)+ie(basic)
+   $pcmodels	ie(CloGaelachLaptop)			=	pc(%m)+ie(CloGaelach)
+   *		ie(CloGaelachLaptop)			=	pc(pc105)+ie(CloGaelach)
++  $pcmodels	il(si1452)			=	pc(%m)+ie(basic)
++  *		il(si1452)			=	pc(pc105)+ie(basic)
+   $pcmodels	iu(basic)			=	pc(%m)+ca(ike)
+   *		iu(basic)			=	pc(pc105)+ca(ike)
+   $pcmodels	lo(basic)			=	pc(%m)+la(basic)
+@@ -348,8 +366,9 @@
+   old_macintosh	$macvendorlayouts	=	macintosh_vndr/us(extended)+macintosh_vndr/%l%(v)
+   old_macintosh	$nonlatin		=	macintosh_vndr/us(extended)+%l%(v):2
+   old_macintosh	*			=	macintosh_vndr/us(extended)+%l%(v)
+- $mac		en_US			=	pc(pc105)+macintosh_vndr/us(extended)
+- $mac		$macvendorlayouts	=	pc(pc105)+macintosh_vndr/%l%(v)
++ $macbooks	*			=	pc(pc105)+%l%(v)
++ $macs		en_US			=	pc(pc105)+macintosh_vndr/us(extended)
++ $macs		$macvendorlayouts	=	pc(pc105)+macintosh_vndr/%l%(v)
+  $pcmodels      intl   			=       us(%mcompose)
+   *		intl			=	us(pc104compose)
+   *		jp			=	pc(pc102)+jp(latin)+jp:2
+@@ -437,6 +456,8 @@
+   *		ie(laptop)			=	pc(pc105)+ie(basic)
+   $pcmodels	ie(CloGaelachLaptop)			=	pc(%m)+ie(CloGaelach)
+   *		ie(CloGaelachLaptop)			=	pc(pc105)+ie(CloGaelach)
++  $pcmodels	il(si1452)			=	pc(%m)+ie(basic)
++  *		il(si1452)			=	pc(pc105)+ie(basic)
+   $pcmodels	iu(basic)			=	pc(%m)+ca(ike)
+   *		iu(basic)			=	pc(pc105)+ca(ike)
+   $pcmodels	lo(basic)			=	pc(%m)+la(basic)
+@@ -498,7 +519,7 @@
+   old_macintosh	us			=	macintosh_vndr/us(extended)
+   old_macintosh	$macvendorlayouts	=	macintosh_vndr/us(extended)+macintosh_vndr/%l[1]%(v[1])
+   old_macintosh	*			=	macintosh_vndr/us(extended)+%l[1]%(v[1])
+- $mac		$macvendorlayouts	=	pc(pc105)+macintosh_vndr/%l[1]%(v[1])
++ $macs		$macvendorlayouts	=	pc(pc105)+macintosh_vndr/%l[1]%(v[1])
+  $pcmodels	*			=	pc(%m)+%l[1]%(v[1])
+   *		*			=	pc(pc105)+%l[1]%(v[1])
+ 
+@@ -529,6 +550,8 @@
+   *		ie		laptop		=	pc(pc105)+ie(basic)
+   $pcmodels	ie		CloGaelachLaptop		=	pc(%m)+ie(CloGaelach)
+   *		ie		CloGaelachLaptop		=	pc(pc105)+ie(CloGaelach)
++  $pcmodels	il		si1452		=	pc(%m)+ie(basic)
++  *		il		si1452		=	pc(pc105)+ie(basic)
+   $pcmodels	iu		basic		=	pc(%m)+ca(ike)
+   *		iu		basic		=	pc(pc105)+ca(ike)
+   $pcmodels	lo		basic		=	pc(%m)+la(basic)
+@@ -624,6 +647,7 @@
+   gur(basic)	=	+in(guru):2
+   ie(laptop)	=	+ie(basic):2
+   ie(CloGaelachLaptop)	=	+ie(CloGaelach):2
++  il(si1452)	=	+ie(basic):2
+   iu(basic)	=	+ca(ike):2
+   lo(basic)	=	+la(basic):2
+   kan(basic)	=	+in(kan):2
+@@ -693,6 +717,7 @@
+   gur(basic)	=	+in(guru):3
+   ie(laptop)	=	+ie(basic):3
+   ie(CloGaelachLaptop)	=	+ie(CloGaelach):3
++  il(si1452)	=	+ie(basic):3
+   iu(basic)	=	+ca(ike):3
+   lo(basic)	=	+la(basic):3
+   kan(basic)	=	+in(kan):3
+@@ -762,6 +787,7 @@
+   gur(basic)	=	+in(guru):4
+   ie(laptop)	=	+ie(basic):4
+   ie(CloGaelachLaptop)	=	+ie(CloGaelach):4
++  il(si1452)	=	+ie(basic):4
+   iu(basic)	=	+ca(ike):4
+   lo(basic)	=	+la(basic):4
+   kan(basic)	=	+in(kan):4
+@@ -805,6 +831,7 @@
+   gur		basic	=	+in(guru):2
+   ie		laptop	=	+ie(basic):2
+   ie		CloGaelachLaptop	=	+ie(CloGaelach):2
++  il		si1452	=	+ie(basic):2
+   iu		basic	=	+ca(ike):2
+   lo		basic	=	+la(basic):2
+   kan		basic	=	+in(kan):2
+@@ -847,6 +874,7 @@
+   gur		basic	=	+in(guru):3
+   ie		laptop	=	+ie(basic):3
+   ie		CloGaelachLaptop	=	+ie(CloGaelach):3
++  il		si1452	=	+ie(basic):3
+   iu		basic	=	+ca(ike):3
+   lo		basic	=	+la(basic):3
+   kan		basic	=	+in(kan):3
+@@ -889,6 +917,7 @@
+   gur		basic	=	+in(guru):4
+   ie		laptop	=	+ie(basic):4
+   ie		CloGaelachLaptop	=	+ie(CloGaelach):4
++  il		si1452	=	+ie(basic):4
+   iu		basic	=	+ca(ike):4
+   lo		basic	=	+la(basic):4
+   kan		basic	=	+in(kan):4
+@@ -918,11 +947,13 @@
+   yu		unicodeyz	=	+srp(latinunicodeyz):4
+ 
+ ! model		=	symbols
+-  $maclaptop	=	+macintosh_vndr/apple(laptop_bad_switch)
+   $inetkbds     =       +inet(%m)
++  $maclaptop	=	+inet(apple_laptop)
++  $macs	        =	+inet(apple)
+ 
+ ! model		layout		=	compat
+   pc98		nec_vndr/jp	=	pc98(basic)
++  *		jp		=	complete+japan
+   *		*		=	complete
+ 
+ ! model		layout[1]	=	compat
+@@ -948,6 +979,14 @@
+ 
+ ! option	=	symbols
+   grp:shift_toggle	=	+group(shifts_toggle)
++  altwin:menu		=	+altwin(menu)
++  altwin:meta_alt	=	+altwin(meta_alt)
++  altwin:meta_win	=	+altwin(meta_win)
++  altwin:left_meta_win	=	+altwin(left_meta_win)
++  altwin:super_win	=	+altwin(super_win)
++  altwin:hyper_win	=	+altwin(hyper_win)
++  altwin:alt_super_win	=	+altwin(alt_super_win)
++  altwin:swap_lalt_lwin	=	+altwin(swap_lalt_lwin)
+   grp:switch		=	+group(switch)
+   grp:lswitch		=	+group(lswitch)
+   grp:win_switch	=	+group(win_switch)
+@@ -960,6 +999,7 @@
+   grp:ctrl_shift_toggle	=	+group(ctrl_shift_toggle)
+   grp:caps_toggle	=	+group(caps_toggle)
+   grp:shift_caps_toggle	=	+group(shift_caps_toggle)
++  grp:alt_caps_toggle   =       +group(alt_caps_toggle)
+   grp:ctrl_alt_toggle	=	+group(ctrl_alt_toggle)
+   grp:alt_shift_toggle	=	+group(alt_shift_toggle)
+   grp:menu_toggle	=	+group(menu_toggle)
+@@ -972,6 +1012,7 @@
+   grp:lalt_toggle	=	+group(lalt_toggle)
+   lv3:switch		=	+level3(switch)
+   lv3:ralt_switch	=	+level3(ralt_switch)
++  lv3:ralt_switch_multikey	=	+level3(ralt_switch_multikey)
+   lv3:lalt_switch	=	+level3(lalt_switch)
+   lv3:alt_switch	=	+level3(alt_switch)
+   lv3:menu_switch	=	+level3(menu_switch)
+@@ -986,14 +1027,8 @@
+   ctrl:ctrl_ac		=	+ctrl(ctrl_ac)
+   ctrl:ctrl_aa		=	+ctrl(ctrl_aa)
+   ctrl:ctrl_ra		=	+ctrl(ctrl_ra)
+-  altwin:menu		=	+altwin(menu)
+-  altwin:meta_alt	=	+altwin(meta_alt)
+-  altwin:meta_win	=	+altwin(meta_win)
+-  altwin:left_meta_win	=	+altwin(left_meta_win)
+-  altwin:super_win	=	+altwin(super_win)
+-  altwin:hyper_win	=	+altwin(hyper_win)
+-  altwin:alt_super_win	=	+altwin(alt_super_win)
+   compose:ralt		=	+compose(ralt)
++  compose:lwin		=	+compose(lwin)
+   compose:rwin		=	+compose(rwin)
+   compose:menu		=	+compose(menu)
+   compose:rctrl		=	+compose(rctrl)
+Index: xkb-data/rules/base.lists.part
+===================================================================
+--- xkb-data.orig/rules/base.lists.part
++++ xkb-data/rules/base.lists.part
+@@ -2,43 +2,57 @@
+ // If you want non-latin layouts implicitly include the en_US layout
+ // uncomment lines below
+ //! $nonlatin = am ara ben bd bg bt by cs deva ge gh gr guj guru il \
+-//              in ir iku jp kan kh la lao lk mk mm mn mv mal ori pk \
++//              in ir iku jp kan kh kr la lao lk mk mm mn mv mal ori pk \
+ //              ru scc sy syr tel th tj tam ua uz
+ 
++// PC models
+ ! $pcmodels = pc101 pc102 pc104 pc105
+-! $maclaptop = ibook powerbook
+-! $mac = macintosh macintosh_old ibook powerbook
++
++// Microsoft models (using MS geometry)
++! $msmodels = microsoft microsoftpro microsoftprousb microsoftprose
++
++// PC geometries - they have special geometry but symbols are mostly pc105
++! $pcgeometries = abnt2 latitude jp106 kr106
++
++! $macbooks = macbook78 macbook79
++! $maclaptop = ibook powerbook macbook78 macbook79
++! $macs = macintosh macintosh_old ibook powerbook macbook78 macbook79
+ 
+ ! $macvendorlayouts = ch de dk es fi fr gb is it nl no pt se us
+ 
+ ! $azerty = be fr
+ ! $qwertz = al cz de hr hu ro si sk 
+ 
+-! $inetkbds = a4techKB21 a4techKBS8 acer_tm_800 acpi airkey azonaRF2300 \
++! $inetkbds = a4techKB21 a4techKBS8 a4_rfkb23 \
++              acer_c300 acer_ferrari4k acer_tm_800 \
++              acpi airkey armada azonaRF2300 \
+               brother \
+-              btc5113rf btc5126t btc9000 btc9000a btc9001ah btc5090\
++              btc5113rf btc5126t btc9000 btc9000a btc9001ah btc5090 \
+               cherryblue cherrybluea cherryblueb cherrycyboard \
+               chicony chicony9885 \
+-              compaqeak8 compaqik7 compaqik13 compaqik18 cymotionlinux \
+-              armada presario ipaq \
++              compaqeak8 compaqik7 compaqik13 compaqik18 \
++              cymotionlinux \
++              presario ipaq \
+               dell inspiron dellusbmm dtk2000 \
+-              dexxa diamond genius geniuscomfy geniuscomfy2 \
++              dexxa diamond \
++              genius geniuscomfy geniuscomfy2 genius_kb19e_nb \
+               emachines ennyah_dkb1008 gyration \
+               hpi6 hp2501 hp2505 hp5181 hpxe3gc hpxe3gf hpxe4xxx hpzt11xx \
+               hp500fa hp5xx hp5185 \
+               honeywell_euroboard \
+               rapidaccess rapidaccess2 rapidaccess2a \
+-              ltcd logiaccess logicdp logicdpa logicdit logicink logiciink \
+-              logiinkse logiinkseusb logiitc logiik itouch logiultrax \
++              ltcd logiaccess logicdp logicdpa logicdit logicink logiciink logiclx300 \
++              logiinkse logiinkseusb logiitc logiik itouch logiultrax dinovo \
+               mx1998 mx2500 mx2750 \
+               microsoftinet microsoftpro microsoftprousb microsoftprooem microsoftprose \
+               microsoftoffice microsoftmult \
+               oretec \
+-              power_g5 propeller silvercrest scorpius \
++              propeller silvercrest scorpius \
                qtronix \
                samsung4500 samsung4510 \
                sk1300 sk2500 sk6200 sk7100 sp_inet \
@@ -64300,12 +65344,15 @@ Index: xkb-data/rules/base.m_g.part
 ===================================================================
 --- xkb-data.orig/rules/base.m_g.part
 +++ xkb-data/rules/base.m_g.part
-@@ -1,4 +1,3 @@
+@@ -1,17 +1,14 @@
 -  microsoft	=	microsoft(natural)
-   microsoftpro	=	microsoft(natural)
-   microsoftprousb =	microsoft(natural)
-   microsoftprose =	microsoft(natural)
-@@ -8,10 +7,9 @@
+-  microsoftpro	=	microsoft(natural)
+-  microsoftprousb =	microsoft(natural)
+-  microsoftprose =	microsoft(natural)
++ $msmodels	=	microsoft(natural)
+   dell101	=	dell(dell101)
+   flexpro	=	keytronic(FlexPro)
+   hp6000	=	hp(omnibook)
    omnikey101	=	northgate(omnikey101)
    thinkpad	=	ibm_vndr/thinkpad(common)
   $pcmodels	=	pc(%m)
@@ -64315,13 +65362,15 @@ Index: xkb-data/rules/base.m_g.part
    winbook	=	winbook(XP5)
    pc98		=	nec(pc98)
 -  abnt2		=	pc(abnt2)
-  $mac		=	macintosh(macintosh)
+- $mac		=	macintosh(macintosh)
++ $macbooks      =       macintosh(%m)
++ $macs		=	macintosh(macintosh)
    *		=       pc(pc104)
 Index: xkb-data/rules/base.m_k.part
 ===================================================================
 --- xkb-data.orig/rules/base.m_k.part
 +++ xkb-data/rules/base.m_k.part
-@@ -2,7 +2,8 @@
+@@ -2,10 +2,13 @@
    ataritt	=	ataritt(de)
    sun4		=	sun(type4_euro)
    sun5		=	sun(type5_euro)
@@ -64331,6 +65380,32 @@ Index: xkb-data/rules/base.m_k.part
    powerpcps2	=	powerpcps2
    pc98		=	xfree98(pc98)
    abnt2		=	xfree86(abnt2)
+   jp106		=	xfree86(jp106)
+   evdev		=	evdev
++ $macbooks	=	macintosh(macbook)
++ $macs   	=	macintosh
+   *		=	xfree86
+Index: xkb-data/rules/base.m_s.part
+===================================================================
+--- xkb-data.orig/rules/base.m_s.part
++++ xkb-data/rules/base.m_s.part
+@@ -1,2 +1,3 @@
+-  $maclaptop	=	+macintosh_vndr/apple(laptop_bad_switch)
+   $inetkbds     =       +inet(%m)
++  $maclaptop	=	+inet(apple_laptop)
++  $macs	        =	+inet(apple)
+Index: xkb-data/rules/base.ml1_s.part
+===================================================================
+--- xkb-data.orig/rules/base.ml1_s.part
++++ xkb-data/rules/base.ml1_s.part
+@@ -5,6 +5,6 @@
+   old_macintosh	us			=	macintosh_vndr/us(extended)
+   old_macintosh	$macvendorlayouts	=	macintosh_vndr/us(extended)+macintosh_vndr/%l[1]%(v[1])
+   old_macintosh	*			=	macintosh_vndr/us(extended)+%l[1]%(v[1])
+- $mac		$macvendorlayouts	=	pc(pc105)+macintosh_vndr/%l[1]%(v[1])
++ $macs		$macvendorlayouts	=	pc(pc105)+macintosh_vndr/%l[1]%(v[1])
+  $pcmodels	*			=	pc(%m)+%l[1]%(v[1])
+   *		*			=	pc(pc105)+%l[1]%(v[1])
 Index: xkb-data/rules/base.ml_c.part
 ===================================================================
 --- xkb-data.orig/rules/base.ml_c.part
@@ -64339,13 +65414,72 @@ Index: xkb-data/rules/base.ml_c.part
    pc98		nec_vndr/jp	=	pc98(basic)
 +  *		jp		=	complete+japan
    *		*		=	complete
+Index: xkb-data/rules/base.ml_s.part
+===================================================================
+--- xkb-data.orig/rules/base.ml_s.part
++++ xkb-data/rules/base.ml_s.part
+@@ -13,8 +13,9 @@
+   old_macintosh	$macvendorlayouts	=	macintosh_vndr/us(extended)+macintosh_vndr/%l%(v)
+   old_macintosh	$nonlatin		=	macintosh_vndr/us(extended)+%l%(v):2
+   old_macintosh	*			=	macintosh_vndr/us(extended)+%l%(v)
+- $mac		en_US			=	pc(pc105)+macintosh_vndr/us(extended)
+- $mac		$macvendorlayouts	=	pc(pc105)+macintosh_vndr/%l%(v)
++ $macbooks	*			=	pc(pc105)+%l%(v)
++ $macs		en_US			=	pc(pc105)+macintosh_vndr/us(extended)
++ $macs		$macvendorlayouts	=	pc(pc105)+macintosh_vndr/%l%(v)
+  $pcmodels      intl   			=       us(%mcompose)
+   *		intl			=	us(pc104compose)
+   *		jp			=	pc(pc102)+jp(latin)+jp:2
+Index: xkb-data/rules/base.mlv_s.part
+===================================================================
+--- xkb-data.orig/rules/base.mlv_s.part
++++ xkb-data/rules/base.mlv_s.part
+@@ -1 +1 @@
+- $mac		$macvendorlayouts	nodeadkeys	=	macintosh_vndr/us(extended)+macintosh_vndr/%l%(v)
++ $macs		$macvendorlayouts	nodeadkeys	=	macintosh_vndr/us(extended)+macintosh_vndr/%l%(v)
 Index: xkb-data/rules/base.o_s.part
 ===================================================================
 --- xkb-data.orig/rules/base.o_s.part
 +++ xkb-data/rules/base.o_s.part
-@@ -44,6 +44,7 @@
-   altwin:hyper_win	=	+altwin(hyper_win)
-   altwin:alt_super_win	=	+altwin(alt_super_win)
+@@ -1,3 +1,11 @@
++  altwin:menu		=	+altwin(menu)
++  altwin:meta_alt	=	+altwin(meta_alt)
++  altwin:meta_win	=	+altwin(meta_win)
++  altwin:left_meta_win	=	+altwin(left_meta_win)
++  altwin:super_win	=	+altwin(super_win)
++  altwin:hyper_win	=	+altwin(hyper_win)
++  altwin:alt_super_win	=	+altwin(alt_super_win)
++  altwin:swap_lalt_lwin	=	+altwin(swap_lalt_lwin)
+   grp:switch		=	+group(switch)
+   grp:lswitch		=	+group(lswitch)
+   grp:win_switch	=	+group(win_switch)
+@@ -10,6 +18,7 @@
+   grp:ctrl_shift_toggle	=	+group(ctrl_shift_toggle)
+   grp:caps_toggle	=	+group(caps_toggle)
+   grp:shift_caps_toggle	=	+group(shift_caps_toggle)
++  grp:alt_caps_toggle   =       +group(alt_caps_toggle)
+   grp:ctrl_alt_toggle	=	+group(ctrl_alt_toggle)
+   grp:alt_shift_toggle	=	+group(alt_shift_toggle)
+   grp:menu_toggle	=	+group(menu_toggle)
+@@ -22,6 +31,7 @@
+   grp:lalt_toggle	=	+group(lalt_toggle)
+   lv3:switch		=	+level3(switch)
+   lv3:ralt_switch	=	+level3(ralt_switch)
++  lv3:ralt_switch_multikey	=	+level3(ralt_switch_multikey)
+   lv3:lalt_switch	=	+level3(lalt_switch)
+   lv3:alt_switch	=	+level3(alt_switch)
+   lv3:menu_switch	=	+level3(menu_switch)
+@@ -36,14 +46,8 @@
+   ctrl:ctrl_ac		=	+ctrl(ctrl_ac)
+   ctrl:ctrl_aa		=	+ctrl(ctrl_aa)
+   ctrl:ctrl_ra		=	+ctrl(ctrl_ra)
+-  altwin:menu		=	+altwin(menu)
+-  altwin:meta_alt	=	+altwin(meta_alt)
+-  altwin:meta_win	=	+altwin(meta_win)
+-  altwin:left_meta_win	=	+altwin(left_meta_win)
+-  altwin:super_win	=	+altwin(super_win)
+-  altwin:hyper_win	=	+altwin(hyper_win)
+-  altwin:alt_super_win	=	+altwin(alt_super_win)
    compose:ralt		=	+compose(ralt)
 +  compose:lwin		=	+compose(lwin)
    compose:rwin		=	+compose(rwin)
@@ -64463,7 +65597,26 @@ Index: xkb-data/rules/base.xml.in
        </configItem>
      </model>
      <model>
-@@ -682,18 +700,42 @@
+@@ -664,6 +682,18 @@
+     </model>
+     <model>
+       <configItem>
++        <name>macbook78</name>
++        <description>MacBook/MacBook Pro</description>
++      </configItem>
++    </model>
++    <model>
++      <configItem>
++        <name>macbook79</name>
++        <description>MacBook/MacBook Pro (Intl)</description>
++      </configItem>
++    </model>
++    <model>
++      <configItem>
+         <name>macintosh</name>
+         <_description>Macintosh</_description>
+       </configItem>
+@@ -682,14 +712,32 @@
      </model>
      <model>
        <configItem>
@@ -64479,18 +65632,14 @@ Index: xkb-data/rules/base.xml.in
      </model>
      <model>
        <configItem>
+-        <name>power_g5</name>
+-        <_description>Power G5</_description>
 +        <name>acer_ferrari4k</name>
 +        <_description>Acer Ferrari 4000</_description>
 +      </configItem>
 +    </model>
 +    <model>
 +      <configItem>
-         <name>power_g5</name>
-         <_description>Power G5</_description>
-       </configItem>
-     </model>
-     <model>
-       <configItem>
 +        <name>apple</name>
 +        <_description>Apple</_description>
 +      </configItem>
@@ -64499,14 +65648,10 @@ Index: xkb-data/rules/base.xml.in
 +      <configItem>
 +        <name>apple_laptop</name>
 +        <_description>Apple Laptop</_description>
-+      </configItem>
-+    </model>
-+    <model>
-+      <configItem>
-         <name>silvercrest</name>
-         <_description>SILVERCREST Multimedia Wireless Keyboard</_description>
        </configItem>
-@@ -704,6 +746,18 @@
+     </model>
+     <model>
+@@ -704,6 +752,18 @@
          <_description>Laptop/notebook eMachines m68xx</_description>
        </configItem>
      </model>
@@ -64525,7 +65670,7 @@ Index: xkb-data/rules/base.xml.in
    </modelList>
    <layoutList>
      <layout>
-@@ -745,6 +799,12 @@
+@@ -745,6 +805,12 @@
          </variant>
          <variant>
            <configItem>
@@ -64538,7 +65683,7 @@ Index: xkb-data/rules/base.xml.in
              <name>rus</name>
              <_description>Russian phonetic</_description>
            </configItem>
-@@ -903,6 +963,12 @@
+@@ -903,6 +969,12 @@
              <_description>Sun dead keys</_description>
            </configItem>
          </variant>
@@ -64551,7 +65696,16 @@ Index: xkb-data/rules/base.xml.in
        </variantList>
      </layout>
      <layout>
-@@ -1125,6 +1191,14 @@
+@@ -1017,7 +1089,7 @@
+         <variant>
+           <configItem>
+             <name>alternatequotes</name>
+-            <_description> Use guillemots for quotes</_description>
++            <_description> Use guillemets for quotes</_description>
+           </configItem>
+         </variant>
+         <variant>
+@@ -1125,6 +1197,14 @@
      </layout>
      <layout>
        <configItem>
@@ -64566,7 +65720,16 @@ Index: xkb-data/rules/base.xml.in
          <name>hr</name>
          <_shortDescription>Hrv</_shortDescription>
          <_description>Croatia</_description>
-@@ -1266,6 +1340,51 @@
+@@ -1133,7 +1213,7 @@
+         <variant>
+           <configItem>
+             <name>alternatequotes</name>
+-            <_description>Use guillemots for quotes</_description>
++            <_description>Use guillemets for quotes</_description>
+           </configItem>
+         </variant>
+         <variant>
+@@ -1266,6 +1346,63 @@
              <_description>Pro Keypad</_description>
            </configItem>
          </variant>
@@ -64586,6 +65749,12 @@ Index: xkb-data/rules/base.xml.in
 +          <configItem>
 +            <name>ku_alt</name>
 +            <_description>Kurdish, Latin Alt-Q</_description>
++          </configItem>
++        </variant>
++        <variant>
++          <configItem>
++            <name>ku_ara</name>
++            <_description>Kurdish, Arabic-Latin</_description>
 +          </configItem>
 +        </variant>
 +      </variantList>
@@ -64615,10 +65784,16 @@ Index: xkb-data/rules/base.xml.in
 +            <_description>Kurdish, Latin Alt-Q</_description>
 +          </configItem>
 +        </variant>
++        <variant>
++          <configItem>
++            <name>ku_ara</name>
++            <_description>Kurdish, Arabic-Latin</_description>
++          </configItem>
++        </variant>
        </variantList>
      </layout>
      <layout>
-@@ -1302,6 +1421,12 @@
+@@ -1302,6 +1439,12 @@
              <_description>Northern Saami</_description>
            </configItem>
          </variant>
@@ -64631,7 +65806,7 @@ Index: xkb-data/rules/base.xml.in
        </variantList>
      </layout>
      <layout>
-@@ -1458,6 +1583,24 @@
+@@ -1458,6 +1601,24 @@
              <_description>Sun dead keys</_description>
            </configItem>
          </variant>
@@ -64656,7 +65831,7 @@ Index: xkb-data/rules/base.xml.in
        </variantList>
      </layout>
      <layout>
-@@ -1613,8 +1756,6 @@
+@@ -1613,8 +1774,6 @@
              <_description>102/qwerty/dot/Eliminate dead keys</_description>
            </configItem>
          </variant>
@@ -64665,7 +65840,7 @@ Index: xkb-data/rules/base.xml.in
        </variantList>
      </layout>
      <layout>
-@@ -1653,12 +1794,6 @@
+@@ -1653,12 +1812,6 @@
          </variant>
          <variant>
            <configItem>
@@ -64678,7 +65853,20 @@ Index: xkb-data/rules/base.xml.in
              <name>phonetic</name>
              <_description>Phonetic</_description>
            </configItem>
-@@ -1835,7 +1970,7 @@
+@@ -1773,6 +1926,12 @@
+             <_description>US keyboard with Lithuanian letters</_description>
+           </configItem>
+         </variant>
++        <variant>
++          <configItem>
++            <name>ibm</name>
++            <_description>IBM (LST 1205-92)</_description>
++          </configItem>
++        </variant>
+       </variantList>
+     </layout>
+     <layout>
+@@ -1835,7 +1994,7 @@
          <variant>
            <configItem>
              <name>us</name>
@@ -64687,7 +65875,7 @@ Index: xkb-data/rules/base.xml.in
            </configItem>
          </variant>
        </variantList>
-@@ -1912,6 +2047,12 @@
+@@ -1912,6 +2071,12 @@
              <_description>Dvorak, Polish quotes on key "1/!"</_description>
            </configItem>
          </variant>
@@ -64700,7 +65888,51 @@ Index: xkb-data/rules/base.xml.in
        </variantList>
      </layout>
      <layout>
-@@ -2209,6 +2350,18 @@
+@@ -1987,6 +2152,18 @@
+             <_description>Tatar</_description>
+           </configItem>
+         </variant>
++        <variant>
++          <configItem>
++            <name>os</name>
++            <_description>Ossetian</_description>
++          </configItem>
++        </variant>
++        <variant>
++          <configItem>
++            <name>os_winkeys</name>
++            <_description>Ossetian, Winkeys</_description>
++          </configItem>
++        </variant>
+       </variantList>
+     </layout>
+     <layout>
+@@ -2029,13 +2206,13 @@
+         <variant>
+           <configItem>
+             <name>alternatequotes</name>
+-            <_description>With guillemots</_description>
++            <_description>With guillemets</_description>
+           </configItem>
+         </variant>
+         <variant>
+           <configItem>
+             <name>latinalternatequotes</name>
+-            <_description>Latin with guillemots</_description>
++            <_description>Latin with guillemets</_description>
+           </configItem>
+         </variant>
+       </variantList>
+@@ -2050,7 +2227,7 @@
+         <variant>
+           <configItem>
+             <name>alternatequotes</name>
+-            <_description>Use guillemots for quotes</_description>
++            <_description>Use guillemets for quotes</_description>
+           </configItem>
+         </variant>
+         <variant>
+@@ -2209,6 +2386,18 @@
              <_description>French, Sun dead keys</_description>
            </configItem>
          </variant>
@@ -64719,7 +65951,7 @@ Index: xkb-data/rules/base.xml.in
        </variantList>
      </layout>
      <layout>
-@@ -2230,6 +2383,24 @@
+@@ -2230,6 +2419,24 @@
              <_description>Syriac phonetic</_description>
            </configItem>
          </variant>
@@ -64744,7 +65976,7 @@ Index: xkb-data/rules/base.xml.in
        </variantList>
      </layout>
      <layout>
-@@ -2307,6 +2478,24 @@
+@@ -2307,6 +2514,24 @@
              <_description>Sun dead keys</_description>
            </configItem>
          </variant>
@@ -64769,7 +66001,7 @@ Index: xkb-data/rules/base.xml.in
        </variantList>
      </layout>
      <layout>
-@@ -2388,10 +2577,25 @@
+@@ -2388,10 +2613,25 @@
        <variantList/>
      </layout>
      <layout>
@@ -64796,7 +66028,7 @@ Index: xkb-data/rules/base.xml.in
        </configItem>
        <variantList/>
      </layout>
-@@ -2458,6 +2662,13 @@
+@@ -2458,6 +2698,13 @@
  	<_description>Esperanto</_description>
        </configItem>
      </layout>
@@ -64810,7 +66042,46 @@ Index: xkb-data/rules/base.xml.in
    </layoutList>
    <optionList>
      <group allowMultipleSelection="true">
-@@ -2837,6 +3048,12 @@
+@@ -2528,6 +2775,12 @@
+       </option>
+       <option>
+         <configItem>
++          <name>grp:alt_caps_toggle</name>
++          <_description>Alt+CapsLock changes group.</_description>
++        </configItem>
++      </option>
++      <option>
++        <configItem>
+           <name>grp:shifts_toggle</name>
+           <_description>Both Shift keys together change group.</_description>
+         </configItem>
+@@ -2660,6 +2913,12 @@
+           <_description>Press Right Alt key to choose 3rd level.</_description>
+         </configItem>
+       </option>
++      <option>
++        <configItem>
++          <name>lv3:ralt_switch_multikey</name>
++          <_description>Press Right Alt key to choose 3rd level, Shift+Right Alt key is Multi_Key.</_description>
++        </configItem>
++      </option>
+     </group>
+     <group allowMultipleSelection="false">
+       <!-- Tweaking the position of the "Ctrl" key -->
+@@ -2822,6 +3081,12 @@
+           <_description>Alt is mapped to the right Win-key and Super to Menu.</_description>
+         </configItem>
+       </option>
++      <option>
++        <configItem>
++          <name>altwin:swap_lalt_lwin</name>
++          <_description>Left Alt is swapped with left Win-key.</_description>
++        </configItem>
++      </option>
+     </group>
+     <group allowMultipleSelection="true">
+       <!-- Tweaking the position of the "Compose" key: mapping to existing PC keys -->
+@@ -2837,6 +3102,12 @@
        </option>
        <option>
          <configItem>
@@ -65492,10 +66763,21 @@ Index: xkb-data/symbols/altwin
 +++ xkb-data/symbols/altwin
 @@ -1,4 +1,4 @@
 -// $XKeyboardConfig: xkbdesc/symbols/altwin,v 1.4 2005/10/01 12:20:31 svu Exp $
-+// $XKeyboardConfig: xkbdesc/symbols/altwin,v 1.4 2005-10-01 12:20:31 svu Exp $
++// $XKeyboardConfig: xkbdesc/symbols/altwin,v 1.6 2006-09-01 22:08:58 svu Exp $
  
  // $XFree86: xc/programs/xkbcomp/symbols/altwin,v 1.5 2003/12/03 14:09:08 pascal Exp $
  
+@@ -58,3 +58,10 @@
+     modifier_map Mod1   { Alt_L, Alt_R, Meta_L, Meta_R };
+     modifier_map Mod4   { Super_L, Super_R };
+ };
++
++partial modifier_keys 
++xkb_symbols "swap_lalt_lwin" {
++    key <LALT> {	[ 	Super_L			]	};
++    key <LWIN> {	[	Alt_L,	Meta_L		]	};
++    modifier_map Mod1 { <LWIN> };
++};
 Index: xkb-data/symbols/am
 ===================================================================
 --- xkb-data.orig/symbols/am
@@ -65788,10 +67070,19 @@ Index: xkb-data/symbols/ca
 +++ xkb-data/symbols/ca
 @@ -1,4 +1,4 @@
 -// $XKeyboardConfig: xkbdesc/symbols/ca,v 1.13 2005/10/17 00:38:54 svu Exp $
-+// $XKeyboardConfig: xkbdesc/symbols/ca,v 1.13 2005-10-17 00:38:54 svu Exp $
++// $XKeyboardConfig: xkbdesc/symbols/ca,v 1.14 2006-09-04 20:25:10 svu Exp $
  
  default partial
  xkb_symbols "fr" {
+@@ -445,7 +445,7 @@
+     key <AB10>	{ [    eacute,     Eacute,     dead_acute, NoSymbol,
+     		   NoSymbol, dead_abovedot ]	};
+ 
+-    key <SPCE>	{ type= "FOUR_LEVEL", [     space,      space,   nobreakspace, NoSymbol ]	};
++    key <SPCE>	{ type[Group1]= "FOUR_LEVEL", [     space,      space,   nobreakspace, NoSymbol ]	};
+ 
+     modifier_map Control{ Control_L };
+ 
 Index: xkb-data/symbols/capslock
 ===================================================================
 --- xkb-data.orig/symbols/capslock
@@ -65807,7 +67098,7 @@ Index: xkb-data/symbols/cd
 --- /dev/null
 +++ xkb-data/symbols/cd
 @@ -0,0 +1,71 @@
-+// $XKeyboardConfig: xkbdesc/symbols/cd,v 1.1 2006-03-28 22:44:06 svu Exp $
++// $XKeyboardConfig: xkbdesc/symbols/cd,v 1.2 2006-09-04 20:25:10 svu Exp $
 +
 +// based on us_intl keyboard map file and a Sinhala keyboard map
 +// version 0.3
@@ -65817,7 +67108,7 @@ Index: xkb-data/symbols/cd
 +
 +    name[Group1]= "Congo, Democratic Republic of the";
 +
-+    key.type = "FOUR_LEVEL";
++    key.type[Group1] = "FOUR_LEVEL";
 +
 +    // Alphanumeric section
 +    // TILDE, COMBINING TILDE
@@ -66628,17 +67919,35 @@ Index: xkb-data/symbols/gr
 +++ xkb-data/symbols/gr
 @@ -1,4 +1,4 @@
 -// $XKeyboardConfig: xkbdesc/symbols/gr,v 1.7 2005/10/04 17:32:19 svu Exp $
-+// $XKeyboardConfig: xkbdesc/symbols/gr,v 1.7 2005-10-04 17:32:19 svu Exp $
++// $XKeyboardConfig: xkbdesc/symbols/gr,v 1.8 2006-09-04 20:25:10 svu Exp $
  
  // $XFree86: xc/programs/xkbcomp/symbols/el,v 1.2 2002/11/15 02:26:41 dawes Exp $
  //
+@@ -88,7 +88,7 @@
+ 
+     name[Group1] = "Greece - Extended";
+ 
+-    key.type = "THREE_LEVEL";
++    key.type[Group1] = "THREE_LEVEL";
+ 
+     key <AE05> { [	5,		percent,	EuroSign	] };
+ 
+@@ -108,7 +108,7 @@
+ 
+     name[Group1] = "Greece - Polytonic";
+ 
+-    key.type = "THREE_LEVEL";
++    key.type[Group1] = "THREE_LEVEL";
+ 
+     key <AD11> { [ 	dead_tilde,	dead_diaeresis,	dead_macron	] };
+     key <AD12> { [	dead_iota,	VoidSymbol,	dead_breve	] };
 Index: xkb-data/symbols/group
 ===================================================================
 --- xkb-data.orig/symbols/group
 +++ xkb-data/symbols/group
 @@ -1,4 +1,4 @@
 -// $XKeyboardConfig: xkbdesc/symbols/group,v 1.7 2005/11/26 23:23:29 svu Exp $
-+// $XKeyboardConfig: xkbdesc/symbols/group,v 1.8 2006-03-23 22:20:28 svu Exp $
++// $XKeyboardConfig: xkbdesc/symbols/group,v 1.9 2006-08-30 23:47:26 svu Exp $
  // $Xorg: group,v 1.3 2000/08/17 19:54:43 cpqbld Exp $
  // using the group(switch) map, the right alt key temporarily chooses 
  // the second keyboard group (until it is released).
@@ -66725,6 +68034,22 @@ Index: xkb-data/symbols/group
  	symbols[Group1]= [ NoSymbol,	ISO_Next_Group ],
  	virtualMods= Alt
      };
+@@ -293,3 +293,15 @@
+ 	virtualMods= AltGr
+     };
+ };
++
++// using the group(alt_caps_toggle) map, pressing:
++//     Alt+Caps Lock toggles group
++//     Caps Lock toggles caps lock
++partial modifier_keys
++xkb_symbols "alt_caps_toggle" {
++    key        <CAPS> {
++       type="PC_SYSRQ",
++       symbols[Group1]= [  Caps_Lock,  ISO_Next_Group]
++    };
++};
++
 Index: xkb-data/symbols/hp_vndr/Makefile.in
 ===================================================================
 --- xkb-data.orig/symbols/hp_vndr/Makefile.in
@@ -66784,7 +68109,21 @@ Index: xkb-data/symbols/hr
 ===================================================================
 --- xkb-data.orig/symbols/hr
 +++ xkb-data/symbols/hr
-@@ -12,6 +12,8 @@
+@@ -5,6 +5,13 @@
+     name[Group1]="Croatia";
+ 
+     include "cs(latin)"
++
++    // Redefine these keys to match XFree86 Croatian layout
++    key <AE01> { [         1,     exclam,   asciitilde,   dead_tilde ] };
++    key <AE03> { [         3, numbersign,  asciicircum, dead_circumflex ] };
++    key <AE05> { [         5,    percent,       degree, dead_abovering ] };
++    key <AE07> { [         7,      slash,        grave,   dead_grave ] };
++    key <AB10> { [     minus, underscore, dead_belowdot, dead_abovedot ] };
+ };
+ 
+ partial alphanumeric_keys 
+@@ -12,6 +19,8 @@
  
      name[Group1]= "Croatia - US keyboard with Croatian letters";
  
@@ -66822,7 +68161,7 @@ Index: xkb-data/symbols/il
 +++ xkb-data/symbols/il
 @@ -1,18 +1,19 @@
 -// $XKeyboardConfig: xkbdesc/symbols/il,v 1.9 2005/08/01 22:11:07 svu Exp $
-+// $XKeyboardConfig: xkbdesc/symbols/il,v 1.10 2006-03-25 14:33:42 svu Exp $
++// $XKeyboardConfig: xkbdesc/symbols/il,v 1.11 2006-09-04 20:25:10 svu Exp $
  
  // based on a keyboard map from an 'xkb/symbols/il' file
  //
@@ -66856,7 +68195,7 @@ Index: xkb-data/symbols/il
 -    key <AE09> { [ 9         ,	parenright	]       };
 -    key <AE10> { [ 0         ,	parenleft	]       };
 -    key <BKSL> { [ backslash,    bar             ]       };
-+    key.type = "THREE_LEVEL";
++    key.type[Group1] = "THREE_LEVEL";
 +    
 +    key <TLDE> { [ semicolon,	asciitilde,0x10005b0	]}; // Sheva
 +    key <AB10> { [ period,	question,  0x10005c3	]}; // Sof Pasuq
@@ -66953,7 +68292,7 @@ Index: xkb-data/symbols/inet
 +++ xkb-data/symbols/inet
 @@ -1,4 +1,4 @@
 -// $XKeyboardConfig: xkbdesc/symbols/inet,v 1.26 2006/02/21 22:32:36 svu Exp $
-+// $XKeyboardConfig: xkbdesc/symbols/inet,v 1.41 2006-08-02 23:16:21 svu Exp $
++// $XKeyboardConfig: xkbdesc/symbols/inet,v 1.42 2006-08-31 21:44:13 svu Exp $
  
  // $XFree86: xc/programs/xkbcomp/symbols/inet,v 1.38 2004/01/17 14:59:37 pascal Exp $
  
@@ -67306,27 +68645,31 @@ Index: xkb-data/symbols/inet
  // Acer Travelmate 800
  xkb_symbols "acer_tm_800" { 
      key <I20>   {       [ XF86AudioMute         ]       };
-@@ -1916,8 +2155,11 @@
+@@ -1916,23 +2155,47 @@
  // don't generate scancodes. It is possible to map them to whatever user wants.
  };
  
 -// Power G5
-+// Apple PowerMac G5
- xkb_symbols "power_g5" {
+-xkb_symbols "power_g5" {
++// Apple keyboards (macbooks, powerbooks, powermac G5, etc)
++partial xkb_symbols "apple" {
++// Really brightness up/down
++    key <II65>  {       [ XF86BrightnessAdjust  ]       };
++    key <I54>   {       [ XF86BrightnessAdjust  ]       };
 +    key <I20>	{	[ XF86AudioMute		]	};
 +    key <I2E>	{	[ XF86AudioLowerVolume	]	};
 +    key <I30>	{	[ XF86AudioRaiseVolume	]	};
++    key <I56>   {       [ XF86RotateWindows	]	};
++// Really keyboard backlight off/up/down
++    key <I57>   {       [ XF86Launch0		]	};
++    key <I58>	{	[ XF86Launch1    	]	};
++    key <I59>	{	[ XF86Launch2   	]	};
      key <K5D>	{	[ F13 ]    };
      key <K5E>	{	[ F14 ]    };
      key <K5F>	{	[ F15 ]    };
-@@ -1925,14 +2167,32 @@
+     key <K6C>	{	[ XF86Eject ]    };
      key <MDSW>	{	[ F16 ]    };
- };
- 
-+// Apple keyboard
-+partial modifier_keys
-+xkb_symbols "apple" {
-+    key <KPEQ> { [ KP_Equal ] };
++    key <KPEQ>  {       [ KP_Equal ] };
 +};
 +
 +partial modifier_keys
@@ -67339,8 +68682,8 @@ Index: xkb-data/symbols/inet
 +    // and use fn+Enter (Apple's code for Menu) for KP_Enter.
 +    replace key <KPEN> { [ ISO_Level3_Shift ] };
 +    modifier_map Mod2  { ISO_Level3_Shift };
-+};
-+
+ };
+ 
  partial alphanumeric_keys
  xkb_symbols "cymotionlinux" {
 +    key	<RWIN>	{	[	at		]	};
@@ -67354,7 +68697,7 @@ Index: xkb-data/symbols/inet
      key <I0F>	{	[	XF86ScrollDown		]	};
      key <I10>	{	[	XF86AudioPrev		]	};
      key <I17>	{	[	XF86Launch2		]	};
-@@ -1940,18 +2200,23 @@
+@@ -1940,18 +2203,23 @@
      key <I1F>	{	[	XF86Launch1		]	};
      key <I20>	{	[	XF86AudioMute		]	};
      key <I21>	{	[	XF86Calculator		]	};
@@ -67379,7 +68722,7 @@ Index: xkb-data/symbols/inet
      key <XFER>	{	[	XF86AudioMedia		]	};
  };
  
-@@ -2028,3 +2293,4 @@
+@@ -2028,3 +2296,4 @@
      key <K67>  { [ XF86MyComputer ] };
      key <XFER> { [ XF86AudioMedia ] };
  };
@@ -67388,8 +68731,8 @@ Index: xkb-data/symbols/iq
 ===================================================================
 --- /dev/null
 +++ xkb-data/symbols/iq
-@@ -0,0 +1,28 @@
-+// $XKeyboardConfig: xkbdesc/symbols/iq,v 1.1 2006-05-04 21:52:51 svu Exp $
+@@ -0,0 +1,34 @@
++// $XKeyboardConfig: xkbdesc/symbols/iq,v 1.2 2006-08-31 23:07:37 svu Exp $
 +// Iraque keyboard layout,
 +
 +// 3-Level layout
@@ -67417,13 +68760,19 @@ Index: xkb-data/symbols/iq
 +    include "tr(ku_alt)"
 +    name[Group1]= "Iraq - Kurdish, Latin Alt-Q";
 +};
++
++partial alphanumeric_keys
++xkb_symbols "ku_ara" {
++    include "ir(ku_ara)"
++    name[Group1]= "Iraq - Kurdish, Arabic-Latin";
++};
 Index: xkb-data/symbols/ir
 ===================================================================
 --- xkb-data.orig/symbols/ir
 +++ xkb-data/symbols/ir
 @@ -1,23 +1,10 @@
 -// $XKeyboardConfig: xkbdesc/symbols/ir,v 1.5 2005/08/15 23:26:07 svu Exp $
-+// $XKeyboardConfig: xkbdesc/symbols/ir,v 1.6 2006-05-04 21:52:51 svu Exp $
++// $XKeyboardConfig: xkbdesc/symbols/ir,v 1.7 2006-08-31 23:07:37 svu Exp $
  // Iranian keyboard layout,
  // based on National Iranian Keyboard Standard (ISIRI 2901:1994),
  // with additions.
@@ -67446,7 +68795,7 @@ Index: xkb-data/symbols/ir
  // Author: Behnam Esfahbod <behnam@esfahbod.info>
  //
  
-@@ -165,3 +152,20 @@
+@@ -165,3 +152,93 @@
  
  };
  
@@ -67466,6 +68815,79 @@ Index: xkb-data/symbols/ir
 +xkb_symbols "ku_alt" {
 +    include "tr(ku_alt)"
 +    name[Group1]= "Iran - Kurdish, Latin Alt-Q";
++};
++
++// Kurdish Soranî Bahdînî (Arabic) keyboard layout,
++// based on the Kurdî Soranî Bahdînî keyboard from KurdITGroup
++// which is based on National Iranian Keyboard Standard (ISIRI 2901:1994),
++// with additions.
++//
++// Copyright (C) 2006 Erdal Ronahî, published under the GPL v2
++//
++// Author: Erdal Ronahî  <erdal.ronahi@gmail.com>
++//
++// Kurdish Arabic-Latin Layout for Soranî
++partial alphanumeric_keys
++xkb_symbols "ku_ara" {
++    name[Group1]= "Iran - Kurdish, Arabic-Latin";
++
++    // Other 3-Level symbols
++    key <TLDE> { [ 0x100200d,		division,		asciitilde	] };
++    key <BKSL> { [ backslash,		bar,			ccedilla, Ccedilla	] };
++    key <SPCE> { [ space,		0x100200c,		nobreakspace	] };
++
++    // Digits
++    key <AE01> { [ 1,	exclam,		0x10006f1,	quoteleft	] };
++    key <AE02> { [ 2,	at, 		0x10006f2,	at		] };
++    key <AE03> { [ 3,	numbersign,	0x10006f3,	0x100066b	] };
++    key <AE04> { [ 4,	dollar,		0x10006f4, 	0x100fdfc	] };
++    key <AE05> { [ 5,	percent,	0x10006f5,	0x100066a	] };
++    key <AE06> { [ 6,	asciicircum,	0x10006f6,	multiply	] };
++    key <AE07> { [ 7,	ampersand,	0x10006f7, 	Arabic_comma	] };
++    key <AE08> { [ 8,	asterisk,	0x10006f8,	enfilledcircbullet	] };
++    key <AE09> { [ 9,	parenright,	0x10006f9,	0x100200e	] };
++    key <AE10> { [ 0,	parenleft,	0x10006f0,	0x100200f	] };
++    key <AE11> { [ minus,		Arabic_tatweel,		underscore	] };
++    key <AE12> { [ equal,		plus,			0x1002212	] };
++
++    key <AD01> { [         Arabic_qaf,            X,  q,  Q ] };
++    key <AD02> { [         Arabic_waw,            X,  w,  W ] };
++    key <AD03> { [          0x10006d5,   Arabic_heh,  e,  E ] };
++    key <AD04> { [         Arabic_ra ,    0x1000695,  r,  R ] };
++    key <AD05> { [         Arabic_teh,   Arabic_tah,  t,  T ] };
++    key <AD06> { [          0x10006cc,    0x10006ce,  y,  Y ] };
++    key <AD07> { [  Arabic_hamzaonyeh, Arabic_hamza,  u,  U ] };
++    key <AD08> { [         Arabic_hah,   Arabic_ain,  i,  I ] };
++    key <AD09> { [          0x10006c6, Arabic_hamzaonwaw,  o,  O ] };
++    key <AD10> { [          0x100067e,  Arabic_theh,  p,  P ] };
++    key <AD11> { [ bracketright,	braceright,	ucircumflex, Ucircumflex	] };
++    key <AD12> { [ bracketleft,		braceleft,	scedilla, Scedilla	] };
++
++    key <AC01> { [ Arabic_alef,	Arabic_maddaonalef,	a, A	] };
++    key <AC02> { [ Arabic_seen,		Arabic_sheen,	s, S	] };
++    key <AC03> { [  Arabic_dal,		Arabic_thal,	d, D	] };
++    key <AC04> { [  Arabic_feh,	Arabic_hamzaunderalef,	f, F	] };
++    key <AC05> { [   0x10006af,		Arabic_ghain,	g, G	] };
++    key <AC06> { [  Arabic_heh,		0x100200c,	h, H	] };
++    key <AC07> { [   0x1000698,	Arabic_hamzaonalef,	j, J	] };
++    key <AC08> { [   0x10006a9,		Arabic_kaf,	k, K	] };
++    key <AC09> { [  Arabic_lam,		0x10006b5,	l, L	] };
++    key <AC10> { [  Arabic_semicolon, 	colon,		ecircumflex, Ecircumflex	] };
++    key <AC11> { [  apostrophe, 	quotedbl,	icircumflex, Icircumflex	] };
++
++    key <AB01> { [ Arabic_zain,		Arabic_dad,	z, Z	] };
++    key <AB02> { [ Arabic_khah,		Arabic_sad,	x, X	] };
++    key <AB03> { [ Arabic_jeem,		0x1000686,	c, C	] };
++    key <AB04> { [   0x10006a4,		Arabic_zah,	v, V	] };
++    key <AB05> { [ Arabic_beh,		0x1000649,	b, B	] };
++    key <AB06> { [ Arabic_noon,	Arabic_tehmarbuta,	n, N	] };
++    key <AB07> { [ Arabic_meem,	Arabic_tatweel,		m, M	] };
++    key <AB08> { [ Arabic_comma,	greater,	comma		] };
++    key <AB09> { [ period,		less,		apostrophe	] };
++    key <AB10> { [ slash,		Arabic_question_mark, 	question	] };
++
++    include "level3(ralt_switch)"
++
 +};
 Index: xkb-data/symbols/is
 ===================================================================
@@ -67493,10 +68915,70 @@ Index: xkb-data/symbols/jp
 +++ xkb-data/symbols/jp
 @@ -1,4 +1,4 @@
 -// $XKeyboardConfig: xkbdesc/symbols/jp,v 1.5 2005/08/11 05:46:54 svu Exp $
-+// $XKeyboardConfig: xkbdesc/symbols/jp,v 1.5 2005-08-11 05:46:54 svu Exp $
++// $XKeyboardConfig: xkbdesc/symbols/jp,v 1.6 2006-09-04 20:25:10 svu Exp $
  
  // based on:
  // symbols for a Japanese 106 keyboard(by tsuka@kawalab.dnj.ynu.ac.jp)
+@@ -10,7 +10,7 @@
+ 
+     // Alphanumeric section
+     key <HZTG> {
+-	type="PC_SYSRQ",
++	type[Group1]="PC_SYSRQ",
+ 	symbols[Group1]= [ Zenkaku_Hankaku, Kanji ]
+     };
+     key <AE01> { [ kana_NU		]	};
+@@ -69,18 +69,18 @@
+     key <NFER> { [ Muhenkan		]	};
+ 
+     key <XFER> {
+-	type="PC_SYSRQ",
++	type[Group1]="PC_SYSRQ",
+ 	symbols[Group1]= [ Henkan, Mode_switch ]
+     };
+     key <HKTG> {
+-	type="PC_SYSRQ",
++	type[Group1]="PC_SYSRQ",
+ 	symbols[Group1]= [ Hiragana_Katakana, Romaji ]
+     };
+ 
+     // End alphanumeric section
+ 
+     key <PRSC> {
+-        type= "PC_SYSRQ",
++        type[Group1]= "PC_SYSRQ",
+         symbols[Group1]= [ Print, Execute ]
+     };
+ };
+@@ -92,7 +92,7 @@
+     include "us"
+     // Alphanumeric section
+     key <HZTG> {
+-	type="PC_SYSRQ",
++	type[Group1]="PC_SYSRQ",
+ 	symbols[Group1]= [ Zenkaku_Hankaku, Kanji ]
+     };
+ 
+@@ -121,16 +121,16 @@
+     key <NFER> { [ Muhenkan		]	};
+ 
+     key <XFER> {
+-	type="PC_SYSRQ",
++	type[Group1]="PC_SYSRQ",
+ 	symbols[Group1]= [ Henkan, Mode_switch ]
+     };
+     key <HKTG> {
+-	type="PC_SYSRQ",
++	type[Group1]="PC_SYSRQ",
+ 	symbols[Group1]= [ Hiragana_Katakana, Romaji ]
+     };
+ 
+     key <PRSC> {
+-        type= "PC_SYSRQ",
++        type[Group1]= "PC_SYSRQ",
+         symbols[Group1]= [ Print, Execute ]
+     };
+ };
 Index: xkb-data/symbols/keypad
 ===================================================================
 --- xkb-data.orig/symbols/keypad
@@ -67575,10 +69057,24 @@ Index: xkb-data/symbols/la
 +++ xkb-data/symbols/la
 @@ -1,4 +1,4 @@
 -// $XKeyboardConfig: xkbdesc/symbols/la,v 1.4 2005/07/31 00:34:53 svu Exp $
-+// $XKeyboardConfig: xkbdesc/symbols/la,v 1.4 2005-07-31 00:34:53 svu Exp $
++// $XKeyboardConfig: xkbdesc/symbols/la,v 1.5 2006-09-04 20:25:10 svu Exp $
  
  // $XConsortium: lo 2002/11/28 $
  //
+@@ -67,11 +67,11 @@
+     key <AB10> { [ 0x1000e9d,       parenright	]};
+ 
+ override key <LFSH> {
+-	type="PC_SYSRQ",
++	type[Group1]="PC_SYSRQ",
+ 	[ 	 Shift_L,		ISO_First_Group		]
+     };
+ override key <RTSH> {
+-	type="PC_SYSRQ",
++	type[Group1]="PC_SYSRQ",
+ 	[ 	Shift_R,		ISO_Last_Group 		]
+     };
+ };
 Index: xkb-data/symbols/latam
 ===================================================================
 --- xkb-data.orig/symbols/latam
@@ -67605,11 +69101,26 @@ Index: xkb-data/symbols/level3
 +++ xkb-data/symbols/level3
 @@ -1,4 +1,4 @@
 -// $XKeyboardConfig: xkbdesc/symbols/level3,v 1.9 2005/11/26 23:19:41 svu Exp $
-+// $XKeyboardConfig: xkbdesc/symbols/level3,v 1.10 2006-03-21 23:41:29 svu Exp $
++// $XKeyboardConfig: xkbdesc/symbols/level3,v 1.11 2006-09-04 17:39:23 svu Exp $
  
  // these variants assign various XKB keycodes to ISO_Level3_Shift so that
  // the third shift level can be reached
-@@ -26,7 +26,7 @@
+@@ -17,6 +17,14 @@
+   modifier_map Mod5   { ISO_Level3_Shift };
+ };
+ 
++partial modifier_keys
++xkb_symbols "ralt_switch_multikey" {
++  key <RALT> {
++    type[Group1]="TWO_LEVEL",
++    symbols[Group1] = [ ISO_Level3_Shift, Multi_key ]
++    };
++};
++
+ // special case or right Alt switch - for use with grp:alts_toggle
+ //
+ partial hidden modifier_keys
+@@ -26,7 +34,7 @@
      symbols[Group1] = [ Alt_L,  ISO_Prev_Group,  ISO_Prev_Group ]
    };
    key <RALT> {
@@ -67644,7 +69155,7 @@ Index: xkb-data/symbols/lk
 +++ xkb-data/symbols/lk
 @@ -1,8 +1,8 @@
 -// $XKeyboardConfig: xkbdesc/symbols/lk,v 1.6 2006/01/09 21:43:27 svu Exp $
-+// $XKeyboardConfig: xkbdesc/symbols/lk,v 1.7 2006-07-29 18:45:56 svu Exp $
++// $XKeyboardConfig: xkbdesc/symbols/lk,v 1.8 2006-09-04 20:25:10 svu Exp $
  
  // X Keyboard Extension file for Sinhala (Sri Lanka) (2004-04-22)
 -// Maintainer  : Harshula Jayasuriya <hash@jayasolutions.cjb.net>
@@ -67669,6 +69180,15 @@ Index: xkb-data/symbols/lk
  
  // Where,
  // AL = Al Lakuna = Alt-a
+@@ -33,7 +36,7 @@
+   include "us"
+ // it is default - no details in the name
+   name[Group1] = "Sri Lanka";
+-  key.type = "FOUR_LEVEL";
++  key.type[Group1] = "FOUR_LEVEL";
+ 
+   // q - p
+   key <AD01> { [ 0x01000d8d, 0x01000d8e, 0x01000dd8, 0x01000df2 ] };
 @@ -51,9 +54,9 @@
    key <AC01> { [ 0x01000d85, 0x01000d86, 0x01000dca, 0x01000dcf ] };
    key <AC02> { [ 0x01000dc3, 0x01000dc2, 0x01000dc1, NoSymbol ] };
@@ -67699,10 +69219,59 @@ Index: xkb-data/symbols/lt
 +++ xkb-data/symbols/lt
 @@ -1,4 +1,4 @@
 -// $XKeyboardConfig: xkbdesc/symbols/lt,v 1.8 2005/01/16 02:18:20 svu Exp $
-+// $XKeyboardConfig: xkbdesc/symbols/lt,v 1.8 2005-01-16 02:18:20 svu Exp $
++// $XKeyboardConfig: xkbdesc/symbols/lt,v 1.9 2006-09-02 00:34:17 svu Exp $
  
  // based on
  // Lithuanian keyboard map by Ričardas Čepas <rch@richard.eu.org>
+@@ -112,3 +112,48 @@
+ 
+     include "level3(ralt_switch)"
+ };
++
++// Lithuanian keyboard map by Piter PUNK <piterpk@terra.com.br> 
++// Describes Lithuanian keymap LST 1205-92
++//
++// This keyboard is also know as IBM layout.
++// We follow the map found at: http://www.kada.lt/litwin/Kbdlta.gif
++// and info from Edis Tamoshauskas <linas_lietus@yahoo.com>
++ 
++partial alphanumeric_keys modifier_keys
++xkb_symbols "ibm" {
++
++    include "latin"
++
++    name[Group1]= "Lithuania - IBM (LST 1205-92)";
++
++    key <TLDE> {[	grave,		asciitilde	]};
++    key <AE01> {[	exclam,		1		]};
++    key <AE02> {[	quotedbl,	2,		at		]};
++    key <AE03> {[	slash,		3,		numbersign	]};
++    key <AE04> {[	semicolon,	4,		dollar		]};
++    key <AE05> {[	colon,		5,		percent		]};
++    key <AE06> {[	comma,		6,		asciicircum	]};
++    key <AE07> {[	period,		7,		ampersand	]};
++    key <AE08> {[	question,	8,		asterisk	]};
++    key <AE09> {[	parenleft,	9		]};
++    key <AE10> {[	parenright,	0		]};
++    key <AE11> {[	underscore,	minus		]};
++    key <AE12> {[	plus,		equal		]};
++    key <AD01> {[	aogonek,	Aogonek,	q,		Q		]};
++    key <AD02> {[	zcaron,		Zcaron,		w,		W		]};
++    key <AD03> {[	e,		E,		EuroSign	]};
++    key <AD11> {[	iogonek,	Iogonek,	bracketleft,	braceleft	]};
++    key <AD12> {[ doublelowquotemark, leftdoublequotemark, bracketright, braceright	]};
++    key <AC10> {[	uogonek,	Uogonek,	semicolon,	colon		]};
++    key <AC11> {[	eabovedot,	Eabovedot,	apostrophe,	quotedbl	]};
++    key <AB02> {[	umacron,	Umacron,	x,		X		]};
++    key <AB08> {[	ccaron,		Ccaron,		comma,		less		]};
++    key <AB09> {[	scaron,		Scaron,		period,		greater		]};
++    key <AB10> {[	eogonek,	Eogonek,	slash,		question	]};
++    key <SPCE> {[	space,		space,		nobreakspace,	nobreakspace	]};
++
++    key <LSGT> {[	less,		greater,	endash		]};
++
++    include "level3(ralt_switch)"
++};
 Index: xkb-data/symbols/lv
 ===================================================================
 --- xkb-data.orig/symbols/lv
@@ -68214,10 +69783,45 @@ Index: xkb-data/symbols/ru
 +++ xkb-data/symbols/ru
 @@ -1,4 +1,4 @@
 -// $XKeyboardConfig: xkbdesc/symbols/ru,v 1.9 2006/02/26 03:33:08 svu Exp $
-+// $XKeyboardConfig: xkbdesc/symbols/ru,v 1.9 2006-02-26 03:33:08 svu Exp $
++// $XKeyboardConfig: xkbdesc/symbols/ru,v 1.11 2006-09-04 20:25:10 svu Exp $
  
  // based on
  // russian standard keyboard
+@@ -165,7 +165,7 @@
+     include "ru(winkeys)"
+     name[Group1]= "Russia - Tatar";
+ 
+-    key.type[group2]="FOUR_LEVEL";
++    key.type[group1]="FOUR_LEVEL";
+ 
+     key <TLDE> {       [      0x010004bb,      0x010004ba,
+                              Cyrillic_io,     Cyrillic_IO      ]       };
+@@ -183,3 +183,25 @@
+     include "level3(ralt_switch)"
+ 
+ };
++
++partial alphanumeric_keys 
++xkb_symbols "os" {
++    include "ru(basic)"
++
++    name[Group1]= "Russia - Ossetian";
++
++    key	<TLDE> {	[      Cyrillic_e,      Cyrillic_E	]	};
++    key	<AC07> {	[      Cyrillic_o,	Cyrillic_O, Cyrillic_io, Cyrillic_IO	]	};
++    key	<AC11> {	[      0x010004D5,      0x010004D4      ]	};
++};
++
++partial alphanumeric_keys 
++xkb_symbols "os_winkeys" {
++    include "ru(winkeys)"
++
++    name[Group1]= "Russia - Ossetian, Winkeys";
++
++    key	<TLDE> {	[      Cyrillic_e,      Cyrillic_E	]	};
++    key	<AC07> {	[      Cyrillic_o,	Cyrillic_O, Cyrillic_io, Cyrillic_IO	]	};
++    key	<AC11> {	[      0x010004D5,      0x010004D4      ]	};
++};
 Index: xkb-data/symbols/se
 ===================================================================
 --- xkb-data.orig/symbols/se
@@ -68641,10 +70245,45 @@ Index: xkb-data/symbols/vn
 +++ xkb-data/symbols/vn
 @@ -1,4 +1,4 @@
 -// $XKeyboardConfig: xkbdesc/symbols/vn,v 1.5 2004/12/22 21:51:19 svu Exp $
-+// $XKeyboardConfig: xkbdesc/symbols/vn,v 1.5 2004-12-22 21:51:19 svu Exp $
++// $XKeyboardConfig: xkbdesc/symbols/vn,v 1.6 2006-09-03 22:25:14 svu Exp $
  
  // based on:
  // vn,  TCVN 5712:1993
+@@ -17,21 +17,21 @@
+ 
+     // Alphanumeric section
+     key <TLDE> { [ quoteleft, asciitilde  ]	};
+-    key <AE01> { [	   1, exclam,     abreve,	Abreve		] };
+-    key <AE02> { [	   2, at,         acircumflex,  Acircumflex	] };
+-    key <AE03> { [	   3, numbersign, ecircumflex,	Ecircumflex	] };
+-    key <AE04> { [	   4, dollar,     ocircumflex,	Ocircumflex	] };
+-    key <AE05> { [	   5, percent,    dead_grave,	percent		] };
+-    key <AE06> { [	   6, asciicircum,dead_hook,	asciicircum	] };
+-    key <AE07> { [	   7, ampersand,  dead_tilde,	ampersand	] };
+-    key <AE08> { [	   8, asterisk,   dead_acute,	asterisk	] };
+-    key <AE09> { [	   9, parenlef,   dead_belowdot,parenleft	] };
+-    key <AE10> { [	   0, parenright, dstroke,	Dstroke		] };
++    key <AE01> { [	   abreve,	Abreve		] };
++    key <AE02> { [	   acircumflex,  Acircumflex	] };
++    key <AE03> { [	   ecircumflex,	Ecircumflex	] };
++    key <AE04> { [	   ocircumflex,	Ocircumflex	] };
++    key <AE05> { [	   dead_grave,	percent		] };
++    key <AE06> { [	   dead_hook,	asciicircum	] };
++    key <AE07> { [	   dead_tilde,	ampersand	] };
++    key <AE08> { [	   dead_acute,	asterisk	] };
++    key <AE09> { [	   dead_belowdot,parenleft	] };
++    key <AE10> { [	   dstroke,	Dstroke		] };
+     key <AE11> { [     minus, underscore  ]	};
+-    key <AE12> { [     equal, plus,       DongSign ]	};
++    key <AE12> { [     DongSign, plus ]	};
+ 
+-    key <AD11> { [ bracketleft,	 braceleft,  uhorn,	Uhorn	] };
+-    key <AD12> { [ bracketright, braceright, ohorn,	Ohorn	] };
++    key <AD11> { [ uhorn,	Uhorn	] };
++    key <AD12> { [ ohorn,	Ohorn	] };
+ 
+     // End alphanumeric section
+ 
 Index: xkb-data/symbols/xfree68_vndr/Makefile.in
 ===================================================================
 --- xkb-data.orig/symbols/xfree68_vndr/Makefile.in

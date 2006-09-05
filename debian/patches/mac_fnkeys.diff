@@ -156,7 +156,7 @@ Index: rules/base.ml1_s.part
 +  old_macintosh	us			=	macintosh_vndr/us(oldmac)
 +  old_macintosh	$macvendorlayouts	=	macintosh_vndr/us(oldmac)+macintosh_vndr/%l[1]%(v[1])
 +  old_macintosh	*			=	macintosh_vndr/us(oldmac)+%l[1]%(v[1])
-  $mac		$macvendorlayouts	=	pc(pc105)+macintosh_vndr/%l[1]%(v[1])
+  $macs		$macvendorlayouts	=	pc(pc105)+macintosh_vndr/%l[1]%(v[1])
   $pcmodels	*			=	pc(%m)+%l[1]%(v[1])
    *		*			=	pc(pc105)+%l[1]%(v[1])
 Index: rules/base.ml_s.part
@@ -177,6 +177,6 @@ Index: rules/base.ml_s.part
 +  old_macintosh	$macvendorlayouts	=	macintosh_vndr/us(oldmac)+macintosh_vndr/%l%(v)
 +  old_macintosh	$nonlatin		=	macintosh_vndr/us(oldmac)+%l%(v):2
 +  old_macintosh	*			=	macintosh_vndr/us(oldmac)+%l%(v)
-  $mac		en_US			=	pc(pc105)+macintosh_vndr/us(extended)
-  $mac		$macvendorlayouts	=	pc(pc105)+macintosh_vndr/%l%(v)
+  $macs		en_US			=	pc(pc105)+macintosh_vndr/us(extended)
+  $macs		$macvendorlayouts	=	pc(pc105)+macintosh_vndr/%l%(v)
   $pcmodels      intl   			=       us(%mcompose)

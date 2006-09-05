@@ -1,5 +1,5 @@
-  * debian/patches/inet.diff: New patch to add apple, apple_laptop,
-    hpxt1000 and latitude to $inetkbds.  Closes: #381882
+  * debian/patches/inet.diff: New patch to add hpxt1000 and latitude
+    to $inetkbds.  Closes: #381882
     Thanks Steinar H. Gunderson
 
 Submitted upstream: https://bugs.freedesktop.org/show_bug.cgi?id=7816
@@ -22,12 +22,3 @@ Index: xkb-data/rules/base.lists.part
                hp500fa hp5xx hp5185 \
                honeywell_euroboard \
                rapidaccess rapidaccess2 rapidaccess2a \
-@@ -41,7 +41,7 @@
-               microsoftinet microsoftpro microsoftprousb microsoftprooem microsoftprose \
-               microsoftoffice microsoftmult \
-               oretec \
--              power_g5 propeller silvercrest scorpius \
-+              power_g5 apple apple_laptop propeller silvercrest scorpius \
-               qtronix \
-               samsung4500 samsung4510 \
-               sk1300 sk2500 sk6200 sk7100 sp_inet \

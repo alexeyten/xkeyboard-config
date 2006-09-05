@@ -7,11 +7,10 @@ Index: xkb-data/symbols/group
 ===================================================================
 --- xkb-data.orig/symbols/group
 +++ xkb-data/symbols/group
-@@ -293,3 +293,16 @@
- 	virtualMods= AltGr
+@@ -305,3 +305,15 @@
      };
  };
-+
+ 
 +
 +// using the group(sclk_toggle) map, pressing the Scroll Lock key
 +// toggles groups.
@@ -28,19 +27,19 @@ Index: xkb-data/rules/base.o_s.part
 ===================================================================
 --- xkb-data.orig/rules/base.o_s.part
 +++ xkb-data/rules/base.o_s.part
-@@ -20,6 +20,7 @@
+@@ -29,6 +29,7 @@
    grp:lctrl_toggle	=	+group(lctrl_toggle)
    grp:rctrl_toggle	=	+group(rctrl_toggle)
    grp:lalt_toggle	=	+group(lalt_toggle)
 +  grp:sclk_toggle	=	+group(sclk_toggle)
    lv3:switch		=	+level3(switch)
    lv3:ralt_switch	=	+level3(ralt_switch)
-   lv3:lalt_switch	=	+level3(lalt_switch)
+   lv3:ralt_switch_multikey	=	+level3(ralt_switch_multikey)
 Index: xkb-data/rules/base.xml.in
 ===================================================================
 --- xkb-data.orig/rules/base.xml.in
 +++ xkb-data/rules/base.xml.in
-@@ -2815,6 +2815,12 @@
+@@ -2845,6 +2845,12 @@
            <_description>Right Ctrl key changes group.</_description>
          </configItem>
        </option>

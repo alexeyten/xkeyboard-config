@@ -1,14 +1,10 @@
 cvs.diff
+cvs_revert.diff
 docs.diff
 sclk_toggle.diff
 macintosh-gb.diff
 macintosh.diff
-fix_symbols_hr.diff -p0
-fix_symbols_key_type.diff
 mac_fnkeys.diff -p0
-ralt_switch_multikey.diff
-rearrange_options.diff
-microsoft.diff
 inet.diff
 mac_swap_kp.diff
 #mac_level3.diff

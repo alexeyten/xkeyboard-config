@@ -1,3 +1,16 @@
+xkeyboard-config (0.8-12) unstable; urgency=low
+
+  * Sync to CVS 2006-09-05.
+    + Closes: #362850: support alt-caps to toggle groups
+    Drop patches merged upstream:
+    + debian/patches/fix_symbols_hr.diff
+    + debian/patches/fix_symbols_key_type.diff
+    + debian/patches/ralt_switch_multikey.diff
+    + debian/patches/rearrange_options.diff
+    + debian/patches/microsoft.diff
+
+ -- Denis Barbier <barbier@debian.org>  Tue,  5 Sep 2006 19:48:57 +0200
+
 xkeyboard-config (0.8-11) unstable; urgency=low
 
   * debian/patches/rearrange_options.diff: New patch to modify options
