@@ -33,6 +33,8 @@
 -d------ -------- hp(hp-101)
 -------- -------- ibm(rs6k-101)
 -------- -------- ibm(rs6k-102)
+-------- -------- macintosh(badmap)
+-------- -------- macintosh(goodmap)
 -d------ -------- macintosh(macintosh)
 -------- -------- macintosh(old)
 -d------ -------- powerpcps2(powerpcps2)

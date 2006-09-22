@@ -1,0 +1,23 @@
+Notes about the Debian xkb-data package
+=======================================
+
+Support of Apple keyboards
+--------------------------
+
+Apple keyboards have been mostly unusable with XKB for years,
+and many unofficial files spread around the Internet to fix
+this mess.  Fortunately this issue has been fixed now, thanks
+to testers on the debian-powerpc mailing list, and changes
+have been merged upstream.
+
+Mac users have now to try XKB settings.  As different people
+have been used to different files, the current behavior cannot
+satisfy everybody, and concessions have to be made.
+
+Fortunately XKB has many options, so the keyboard can be most
+of the time customized by setting the right options.  If you
+believe that the current behavior is broken, for instance
+because keys engraved on your keyboard are not rendered, please
+file a bug against xkb-data.
+
+Denis Barbier <barbier@debian.org>  Sat, 23 Sep 2006 00:18:38 +0200

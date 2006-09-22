@@ -1,0 +1,12 @@
+Index: xkb-data/symbols/macintosh_vndr/gb
+===================================================================
+--- xkb-data.orig/symbols/macintosh_vndr/gb
++++ xkb-data/symbols/macintosh_vndr/gb
+@@ -10,6 +10,7 @@
+ 
+     name[Group1]= "United Kingdom - Mac";
+ 
++    key <AE02> {	[               2,              at,         Eurosign	]	};
+     key <AE03> {	[               3,        sterling,       numbersign	]	};
+ 
+     // End alphanumeric section

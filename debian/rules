@@ -34,6 +34,7 @@ $(stamp)patch: $(stamp)
 	else \
 	  echo "No patches to apply"; \
 	fi
+	: > rules/base.mlv_s.part
 
 unpatch:
 	@echo -n "Unapplying patches..."

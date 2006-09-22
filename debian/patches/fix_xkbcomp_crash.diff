@@ -1,0 +1,226 @@
+Index: xkb-data/types/numpad
+===================================================================
+--- xkb-data.orig/types/numpad
++++ xkb-data/types/numpad
+@@ -1,7 +1,9 @@
+ 
+ default
+ xkb_types "pc" {
+-    type "KEYPAD" {
++    virtual_modifiers LevelThree;
++
++    override type "KEYPAD" {
+ 	modifiers = Shift+NumLock;
+ 	map[None] = Level1;
+ 	map[Shift] = Level2;
+@@ -10,12 +12,29 @@
+ 	level_name[Level1] = "Base";
+ 	level_name[Level2] = "Number";
+     };
+-    include "extra(keypad)"
++
++    override type "FOUR_LEVEL_KEYPAD" {
++	modifiers = Shift+NumLock+LevelThree;
++	map[None] = Level1;
++	map[Shift] = Level2;
++	map[NumLock] = Level2;
++	map[Shift+NumLock] = Level1;
++	map[LevelThree] = Level3;
++	map[Shift+LevelThree] = Level4;
++	map[NumLock+LevelThree] = Level4;
++	map[Shift+NumLock+LevelThree] = Level3;
++	level_name[Level1] = "Base";
++	level_name[Level2] = "Number";
++	level_name[Level3] = "Alt Base";
++	level_name[Level4] = "Alt Number";
++    };       
+ };
+ 
+ // On Mac keypads, level 1 and 2 are swapped
+ xkb_types "mac" {
+-    type "KEYPAD" {
++    virtual_modifiers LevelThree;
++
++    override type "KEYPAD" {
+ 	modifiers = Shift+NumLock;
+ 	map[None] = Level2;
+ 	map[Shift] = Level1;
+@@ -24,11 +43,28 @@
+ 	level_name[Level2] = "Base";
+ 	level_name[Level1] = "Number";
+     };
+-    include "extra(mac_keypad)"
++
++    override type "FOUR_LEVEL_KEYPAD" {
++	modifiers = Shift+NumLock+LevelThree;
++	map[None] = Level2;
++	map[Shift] = Level1;
++	map[NumLock] = Level1;
++	map[Shift+NumLock] = Level2;
++	map[LevelThree] = Level4;
++	map[Shift+LevelThree] = Level3;
++	map[NumLock+LevelThree] = Level3;
++	map[Shift+NumLock+LevelThree] = Level4;
++	level_name[Level2] = "Base";
++	level_name[Level1] = "Number";
++	level_name[Level4] = "Alt Base";
++	level_name[Level3] = "Alt Number";
++    };       
+ };
+ 
+ xkb_types "microsoft" {
+-    type "KEYPAD" {
++    virtual_modifiers LevelThree;
++
++    override type "KEYPAD" {
+         modifiers = Shift+NumLock;
+         map[None] = Level1;
+         preserve[Shift] = Shift;
+@@ -36,6 +72,21 @@
+         level_name[Level1] = "Base";
+         level_name[Level2] = "Number";
+     };
+-    include "extra(keypad)"
++
++    override type "FOUR_LEVEL_KEYPAD" {
++	modifiers = Shift+NumLock+LevelThree;
++	map[None] = Level1;
++	map[Shift] = Level2;
++	map[NumLock] = Level2;
++	map[Shift+NumLock] = Level1;
++	map[LevelThree] = Level3;
++	map[Shift+LevelThree] = Level4;
++	map[NumLock+LevelThree] = Level4;
++	map[Shift+NumLock+LevelThree] = Level3;
++	level_name[Level1] = "Base";
++	level_name[Level2] = "Number";
++	level_name[Level3] = "Alt Base";
++	level_name[Level4] = "Alt Number";
++    };       
+ };
+ 
+Index: xkb-data/types/extra
+===================================================================
+--- xkb-data.orig/types/extra
++++ xkb-data/types/extra
+@@ -51,6 +51,23 @@
+ 	level_name[Level4] = "Shift Alt";
+     };
+ 
++    // This enables the four level shifting also for the keypad.
++    type "FOUR_LEVEL_KEYPAD" {
++	modifiers = Shift+NumLock+LevelThree;
++	map[None] = Level1;
++	map[Shift] = Level2;
++	map[NumLock] = Level2;
++	map[Shift+NumLock] = Level1;
++	map[LevelThree] = Level3;
++	map[Shift+LevelThree] = Level4;
++	map[NumLock+LevelThree] = Level4;
++	map[Shift+NumLock+LevelThree] = Level3;
++	level_name[Level1] = "Base";
++	level_name[Level2] = "Number";
++	level_name[Level3] = "Alt Base";
++	level_name[Level4] = "Alt Number";
++    };       
++
+ // Special type for keys used in Serbian Latin Unicode map
+ // It makes it possible to use all three forms of latin letters 
+ // present in Unicode that are made up of two separate letters 
+@@ -73,46 +90,3 @@
+         level_name[Level4] = "Shift AltGr";
+     };
+ };
+-
+-// This enables the four level shifting also for the keypad.
+-partial xkb_types "keypad" {
+-    virtual_modifiers LevelThree;
+-
+-    type "FOUR_LEVEL_KEYPAD" {
+-	modifiers = Shift+NumLock+LevelThree;
+-	map[None] = Level1;
+-	map[Shift] = Level2;
+-	map[NumLock] = Level2;
+-	map[Shift+NumLock] = Level1;
+-	map[LevelThree] = Level3;
+-	map[Shift+LevelThree] = Level4;
+-	map[NumLock+LevelThree] = Level4;
+-	map[Shift+NumLock+LevelThree] = Level3;
+-	level_name[Level1] = "Base";
+-	level_name[Level2] = "Number";
+-	level_name[Level3] = "Alt Base";
+-	level_name[Level4] = "Alt Number";
+-    };       
+-};
+-
+-// This enables the four level shifting also for the keypad,
+-// but levels 1 and 2, and 3 and 4 are swapped on Mac keypads.
+-partial xkb_types "mac_keypad" {
+-    virtual_modifiers LevelThree;
+-
+-    type "FOUR_LEVEL_KEYPAD" {
+-	modifiers = Shift+NumLock+LevelThree;
+-	map[None] = Level2;
+-	map[Shift] = Level1;
+-	map[NumLock] = Level1;
+-	map[Shift+NumLock] = Level2;
+-	map[LevelThree] = Level4;
+-	map[Shift+LevelThree] = Level3;
+-	map[NumLock+LevelThree] = Level3;
+-	map[Shift+NumLock+LevelThree] = Level4;
+-	level_name[Level2] = "Base";
+-	level_name[Level1] = "Number";
+-	level_name[Level4] = "Alt Base";
+-	level_name[Level3] = "Alt Number";
+-    };       
+-};
+Index: xkb-data/types/basic
+===================================================================
+--- xkb-data.orig/types/basic
++++ xkb-data/types/basic
+@@ -28,4 +28,13 @@
+         level_name[Level2] = "Caps";
+     };
+ 
++    type "KEYPAD" {
++	modifiers = Shift+NumLock;
++	map[None] = Level1;
++	map[Shift] = Level2;
++	map[NumLock] = Level2;
++	map[Shift+NumLock] = Level1;
++	level_name[Level1] = "Base";
++	level_name[Level2] = "Number";
++    };
+ };
+Index: xkb-data/types/complete
+===================================================================
+--- xkb-data.orig/types/complete
++++ xkb-data/types/complete
+@@ -8,10 +8,10 @@
+ 
+ default xkb_types "complete" {
+     include "basic"
+-    include "numpad"
+     include "mousekeys"
+     include "pc"
+     include "iso9995"
+     include "level5"
+     include "extra"
++    include "numpad"
+ };
+Index: xkb-data/types/default
+===================================================================
+--- xkb-data.orig/types/default
++++ xkb-data/types/default
+@@ -3,10 +3,10 @@
+ 
+ default xkb_types "default" {
+     include "basic"
+-    include "numpad"
+     include "pc"
+     include "iso9995"
+     include "extra"
++    include "numpad"
+     include "level5"
+     include "mousekeys"
+ };

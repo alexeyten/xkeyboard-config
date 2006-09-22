@@ -1,3 +1,41 @@
+xkeyboard-config (0.8-13) unstable; urgency=low
+
+  * Sync to CVS 2006-09-18.
+    Support for Macintosh keyboards has been fully reworked, deeply
+    tested by debian-powerpc readers and merged upstream.  Macintosh
+    layouts can now be as customized as PC ones with options.
+    Closes: #121297, #111905, #166478, #234113, #319423, #256442
+
+  * These patches are removed because they are obsolete:
+    + debian/patches/cvs_revert.diff
+    + debian/patches/inet.diff
+    + debian/patches/mac_fnkeys.diff
+    + debian/patches/macintosh.diff
+    + debian/patches/macintosh-gb.diff
+    + debian/patches/mac_swap_kp.diff
+    + debian/patches/mac_nodeadkeys.diff
+
+  * debian/README.Debian: Replace its obsolete content by informations 
+    to powerpc users.
+
+  * debian/patches/fix_xkbcomp_crash.diff: New patch to fix an
+    xkbcomp crash introduced in CVS and not fixed yet.
+    Closes: #387917 Thanks Helge Kreutzmann and Wolfgang Pfeiffer.
+
+  * debian/patches/mac_poweroff.diff: Add the power key to Apple
+    laptops.  Thanks Jörg Sommer.
+
+  * debian/patches/macbook_layouts.diff: For MacBook models, load
+    symbols from symbols/macintosh_vndr/* instead of symbols/*.
+
+  * debian/patches/mac-gb-euro.diff: New patch to add the Euro sign
+    on key 2 for the Macintosh gb layout.
+
+  * debian/patches/fr.po.diff: Fix po/fr.po, the version currently
+    in CVS is broken.
+
+ -- Denis Barbier <barbier@debian.org>  Sat, 23 Sep 2006 00:18:38 +0200
+
 xkeyboard-config (0.8-12) unstable; urgency=low
 
   * Sync to CVS 2006-09-05.

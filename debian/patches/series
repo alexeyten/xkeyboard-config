@@ -1,15 +1,11 @@
 cvs.diff
-cvs_revert.diff
+fix_xkbcomp_crash.diff
+clean.diff
 docs.diff
 sclk_toggle.diff
-macintosh-gb.diff
-macintosh.diff
-mac_fnkeys.diff -p0
-inet.diff
-mac_swap_kp.diff
-#mac_level3.diff
 latin_quotes.diff
-mac_nodeadkeys.diff
-#macbook_keycodes.diff
-#generic_symbols_pc.diff
+macbook_layouts.diff
+mac_poweroff.diff
+mac-gb-euro.diff
+fr.po.diff
 resync_rules_base.diff

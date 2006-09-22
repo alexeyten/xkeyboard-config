@@ -1,0 +1,15 @@
+Add the power key, as requested by Jörg Sommer in
+  http://lists.debian.org/debian-powerpc/2006/09/msg00227.html
+
+Index: xkb-data/symbols/inet
+===================================================================
+--- xkb-data.orig/symbols/inet
++++ xkb-data/symbols/inet
+@@ -2187,6 +2187,7 @@
+     key <I2E>	{	[ XF86AudioLowerVolume	]	};
+     key <I30>	{	[ XF86AudioRaiseVolume	]	};
+     key <I56>   {       [ XF86RotateWindows	]	};
++    key <I5E>	{	[ XF86PowerOff		]	};
+ // Really keyboard backlight off/up/down
+     key <I57>   {       [ XF86Launch0		]	};
+     key <I58>	{	[ XF86Launch1    	]	};
