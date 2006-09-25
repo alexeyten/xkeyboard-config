@@ -8042,12 +8042,6 @@ Index: xkb-data/po/Makevars
 +# This is the list of locale categories, beyond LC_MESSAGES, for which the
 +# message catalogs shall be used.  It is usually empty.
 +EXTRA_LOCALE_CATEGORIES =
-Index: xkb-data/po/POTFILES
-===================================================================
---- xkb-data.orig/po/POTFILES
-+++ /dev/null
-@@ -1 +0,0 @@
--	../rules/base.xml.in
 Index: xkb-data/po/af.po
 ===================================================================
 --- xkb-data.orig/po/af.po

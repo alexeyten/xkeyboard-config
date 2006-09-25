@@ -28,7 +28,8 @@ Index: xkb-data/rules/base
  ! $pcmodels = pc101 pc102 pc104 pc105
 -! $maclaptop = ibook powerbook
 -! $mac = macintosh macintosh_old ibook powerbook
-+
+ 
+-! $macvendorlayouts = ch de dk es fi fr gb is it nl no pt se us
 +// Microsoft models (using MS geometry)
 +! $msmodels = microsoft microsoftpro microsoftprousb microsoftprose
 +
@@ -38,8 +39,8 @@ Index: xkb-data/rules/base
 +! $macbooks = macbook78 macbook79
 +! $maclaptop = ibook powerbook macbook78 macbook79
 +! $macs = macintosh macintosh_old ibook powerbook macbook78 macbook79
- 
- ! $macvendorlayouts = ch de dk es fi fr gb is it nl no pt se us
++
++! $macvendorlayouts = ch de dk es fi fr gb is it latam nl no pt se us
  
  ! $azerty = be fr
  ! $qwertz = al cz de hr hu ro si sk 
@@ -963,7 +964,16 @@ Index: xkb-data/rules/base
    compose:rwin		=	+compose(rwin)
    compose:menu		=	+compose(menu)
    compose:rctrl		=	+compose(rctrl)
-@@ -1016,4 +836,6 @@
+@@ -1002,6 +822,8 @@
+   eurosign:e		=	+eurosign(e)
+   eurosign:5		=	+eurosign(5)
+   eurosign:2		=	+eurosign(2)
++  keypad:oss            =       +keypad(oss)
++  keypad:legacy         =	+keypad(legacy)
+ 
+ ! option	=	compat
+   grp_led:num		=	+lednum(group_lock)
+@@ -1016,4 +838,6 @@
    caps:internal_nocancel	=	+caps(internal_nocancel)
    caps:shift			=	+caps(shift)
    caps:shift_nocancel		=	+caps(shift_nocancel)
@@ -1099,15 +1109,18 @@ Index: xkb-data/rules/base.lst
    rus             us: Russian phonetic
    ps              af: Pashto
    uz              af: Southern Uzbek
-@@ -205,6 +222,7 @@
+@@ -205,13 +222,18 @@
    digits          ara: digits
    qwerty          ara: qwerty
    qwerty_digits   ara: qwerty/digits
 +  buckwalter      ara: Buckwalter
    phonetic        am: Phonetic
++  eastern         am: Eastern
++  western         am: Western
++  eastern-alt     am: Alternative Eastern
    cyrillic        az: Cyrillic
    winkeys         by: Winkeys
-@@ -212,6 +230,7 @@
+   latin           by: Latin
    iso-alternate   be: ISO Alternate
    nodeadkeys      be: Eliminate dead keys
    sundeadkeys     be: Sun dead keys
@@ -1115,7 +1128,7 @@ Index: xkb-data/rules/base.lst
    probhat         bd: Probhat
    ben             in: Bengali
    ben_probhat     in: Bengali Probhat
-@@ -226,7 +245,7 @@
+@@ -226,7 +248,7 @@
    tam             in: Tamil
    tel             in: Telugu
    urd             in: Urdu
@@ -1124,7 +1137,7 @@ Index: xkb-data/rules/base.lst
    unicode         ba: Use Bosnian digraphs
    unicodeus       ba: US keyboard with Bosnian digraphs
    us              ba: US keyboard with Bosnian letters
-@@ -238,7 +257,7 @@
+@@ -238,7 +260,7 @@
    multi           ca: Multilingual, first part
    multi-2gr       ca: Multilingual, second part
    ike             ca: Inuktitut
@@ -1133,7 +1146,7 @@ Index: xkb-data/rules/base.lst
    unicode         hr: Use Croatian digraphs
    unicodeus       hr: US keyboard with Croatian digraphs
    us              hr: US keyboard with Croatian letters
-@@ -252,9 +271,18 @@
+@@ -252,14 +274,27 @@
    pro             ir: Pro
    keypad          ir: Keypad
    pro_keypad      ir: Pro Keypad
@@ -1151,8 +1164,20 @@ Index: xkb-data/rules/base.lst
 +  kotoistus       fi: Kotoistus
    nodeadkeys      fr: Eliminate dead keys
    sundeadkeys     fr: Sun dead keys
-   latin9          fr: Alternative
-@@ -275,6 +303,9 @@
+-  latin9          fr: Alternative
+-  latin9_nodeadkeys fr: Alternative, eliminate dead keys
+-  latin9_sundeadkeys fr: Alternative, Sun dead keys
++  oss             fr: Alternative
++  oss_latin9      fr: Alternative, latin-9 only
++  oss_nodeadkeys  fr: Alternative, eliminate dead keys
++  oss_sundeadkeys fr: Alternative, Sun dead keys
++  latin9          fr: (Legacy) Alternative
++  latin9_nodeadkeys fr: (Legacy) Alternative, eliminate dead keys
++  latin9_sundeadkeys fr: (Legacy) Alternative, Sun dead keys
+   dvorak          fr: Dvorak
+   generic         gh: Multilingual
+   akan            gh: Akan
+@@ -275,6 +310,9 @@
    ro_nodeadkeys   de: Romanian keyboard with German letters, eliminate dead keys
    dvorak          de: Dvorak
    sundeadkeys     de: Sun dead keys
@@ -1162,7 +1187,7 @@ Index: xkb-data/rules/base.lst
    extended        gr: Extended
    nodeadkeys      gr: Eliminate dead keys
    polytonic       gr: Polytonic
-@@ -300,7 +331,6 @@
+@@ -300,7 +338,6 @@
    Sundeadkeys     is: Sun dead keys
    nodeadkeys      is: Eliminate dead keys
    lyx             il: lyx
@@ -1170,7 +1195,7 @@ Index: xkb-data/rules/base.lst
    phonetic        il: Phonetic
    nodeadkeys      it: Eliminate dead keys
    ruskaz          kz: Russian with Kazakh
-@@ -309,11 +339,12 @@
+@@ -309,11 +346,12 @@
    sundeadkeys     latam: Sun dead keys
    std             lt: Standard
    us              lt: US keyboard with Lithuanian letters
@@ -1184,7 +1209,7 @@ Index: xkb-data/rules/base.lst
    nodeadkeys      no: Eliminate dead keys
    dvorak          no: Dvorak
    smi             no: Northern Saami
-@@ -322,6 +353,7 @@
+@@ -322,6 +360,7 @@
    dvorak          pl: Dvorak
    dvorak_quotes   pl: Dvorak, Polish quotes on quotemark key
    dvorak_altquotes pl: Dvorak, Polish quotes on key "1/!"
@@ -1192,7 +1217,7 @@ Index: xkb-data/rules/base.lst
    nodeadkeys      pt: Eliminate dead keys
    sundeadkeys     pt: Sun dead keys
    std             ro: Standard
-@@ -330,14 +362,16 @@
+@@ -330,14 +369,16 @@
    typewriter      ru: Typewriter
    winkeys         ru: Winkeys
    tt              ru: Tatar
@@ -1212,7 +1237,7 @@ Index: xkb-data/rules/base.lst
    unicode         si: Use Slovenian digraphs
    unicodeus       si: US keyboard with Slovenian digraphs
    us              si: US keyboard with Slovenian letters
-@@ -358,8 +392,13 @@
+@@ -358,8 +399,13 @@
    fr              ch: French
    fr_nodeadkeys   ch: French, eliminate dead keys
    fr_sundeadkeys  ch: French, Sun dead keys
@@ -1226,7 +1251,7 @@ Index: xkb-data/rules/base.lst
    tam_unicode     lk: Tamil Unicode
    tam_TAB         lk: Tamil TAB Typewriter
    tis             th: TIS-820.2538
-@@ -367,6 +406,9 @@
+@@ -367,6 +413,9 @@
    f               tr: (F)
    alt             tr: Alt-Q
    sundeadkeys     tr: Sun dead keys
@@ -1236,7 +1261,7 @@ Index: xkb-data/rules/base.lst
    phonetic        ua: Phonetic
    typewriter      ua: Typewriter
    winkeys         ua: Winkeys
-@@ -374,6 +416,7 @@
+@@ -374,6 +423,7 @@
    rstu_ru         ua: Standard RSTU on Russian layout
    intl            gb: International (with dead keys)
    dvorak          gb: Dvorak
@@ -1244,7 +1269,7 @@ Index: xkb-data/rules/base.lst
    CloGaelach      ie: CloGaelach
    UnicodeExpert   ie: UnicodeExpert
    ogam            ie: Ogham
-@@ -391,6 +434,7 @@
+@@ -391,6 +441,7 @@
    grp:lalt_toggle      Left Alt key changes group.
    grp:caps_toggle      CapsLock key changes group.
    grp:shift_caps_toggle Shift+CapsLock changes group.
@@ -1252,7 +1277,7 @@ Index: xkb-data/rules/base.lst
    grp:shifts_toggle    Both Shift keys together change group.
    grp:alts_toggle      Both Alt keys together change group.
    grp:ctrls_toggle     Both Ctrl keys together change group.
-@@ -404,6 +448,7 @@
+@@ -404,6 +455,7 @@
    grp:rshift_toggle    Right Shift key changes group.
    grp:lctrl_toggle     Left Ctrl key changes group.
    grp:rctrl_toggle     Right Ctrl key changes group.
@@ -1260,7 +1285,7 @@ Index: xkb-data/rules/base.lst
    lv3                  Third level choosers
    lv3:switch           Press Right Ctrl to choose 3rd level.
    lv3:menu_switch      Press Menu key to choose 3rd level.
-@@ -413,6 +458,7 @@
+@@ -413,6 +465,7 @@
    lv3:alt_switch       Press any of Alt keys to choose 3rd level.
    lv3:lalt_switch      Press Left Alt key to choose 3rd level.
    lv3:ralt_switch      Press Right Alt key to choose 3rd level.
@@ -1268,7 +1293,7 @@ Index: xkb-data/rules/base.lst
    ctrl                 Ctrl key position
    ctrl:nocaps          Make CapsLock an additional Ctrl.
    ctrl:swapcaps        Swap Ctrl and CapsLock.
-@@ -424,10 +470,10 @@
+@@ -424,10 +477,10 @@
    grp_led:caps         CapsLock LED shows alternative group.
    grp_led:scroll       ScrollLock LED shows alternative group.
    caps                 CapsLock key behavior
@@ -1283,7 +1308,7 @@ Index: xkb-data/rules/base.lst
    caps:shift_lock      CapsLock just locks the Shift modifier.
    caps:capslock        CapsLock toggles normal capitalization of alphabetic characters.
    caps:shiftlock       CapsLock toggles Shift so all keys are affected.
-@@ -439,15 +485,20 @@
+@@ -439,15 +492,20 @@
    altwin:super_win     Super is mapped to the Win-keys (default).
    altwin:hyper_win     Hyper is mapped to the Win-keys.
    altwin:alt_super_win Alt is mapped to the right Win-key and Super to Menu.

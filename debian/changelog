@@ -1,9 +1,14 @@
-xkeyboard-config (0.8-14) UNRELEASED; urgency=low
+xkeyboard-config (0.8-14) unstable; urgency=low
 
   * Sync to CVS 2006-09-25.
   * These patches have been merged upstream and are removed:
     + debian/patches/macbook_layouts.diff
     + debian/patches/fr.po.diff
+
+  * debian/patches/bz1576.diff: Minor fixes in Macintosh layouts.
+
+  * debian/patches/thinkpad.diff: Fix geometry/thinkpad.
+    Closes: #389358  Thanks Wouter Cloetens
 
  -- Denis Barbier <barbier@debian.org>  Mon, 25 Sep 2006 21:38:39 +0200
 
