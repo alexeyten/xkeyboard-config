@@ -1,4 +1,4 @@
-xkeyboard-config (0.8-15) UNRELEASED; urgency=low
+xkeyboard-config (0.8-15) unstable; urgency=low
 
   * debian/patches/greek.diff: New patch to replace dead_horn and
     dead_ogonek by U0313/U0314, which are the correct breathing
@@ -6,7 +6,11 @@ xkeyboard-config (0.8-15) UNRELEASED; urgency=low
     that an updated el_GR.UTF-8/Compose file hit testing.
     Closes: #386385  Thanks Jan Willem Stumpel.
 
- -- Denis Barbier <barbier@debian.org>  Tue, 26 Sep 2006 23:45:18 +0200
+  * debian/patches/compatibility.diff: Add compatibility rules to
+    make sure that changes in symbols/pc do not cause trouble.
+    Closes: #389589  Thanks Robert Bihlmeyer.
+
+ -- Denis Barbier <barbier@debian.org>  Wed, 27 Sep 2006 23:19:39 +0200
 
 xkeyboard-config (0.8-14) unstable; urgency=low
 

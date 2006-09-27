@@ -1,0 +1,132 @@
+Add backward compatibility rules.
+This patch can be dropped after etch.
+
+Submitted upstream: https://bugs.freedesktop.org/show_bug.cgi?id=8321
+
+Index: xkb-data/rules/base.ml1_s.part
+===================================================================
+--- xkb-data.orig/rules/base.ml1_s.part
++++ xkb-data/rules/base.ml1_s.part
+@@ -5,5 +5,5 @@
+   macintosh_old	us			=	macintosh_vndr/us(oldmac)
+   macintosh_old	$macvendorlayouts	=	macintosh_vndr/us(oldmac)+macintosh_vndr/%l[1]%(v[1])
+   macintosh_old	*			=	macintosh_vndr/us(oldmac)+%l[1]%(v[1])
+- $macs		$macvendorlayouts	=	pc+macintosh_vndr/%l[1]%(v[1])
+-  *		*			=	pc+%l[1]%(v[1])
++ $macs		$macvendorlayouts	=	pc(pc105)+macintosh_vndr/%l[1]%(v[1])
++  *		*			=	pc(pc105)+%l[1]%(v[1])
+Index: xkb-data/rules/base.ml_s.part
+===================================================================
+--- xkb-data.orig/rules/base.ml_s.part
++++ xkb-data/rules/base.ml_s.part
+@@ -7,14 +7,14 @@
+   sun5		$nonlatin		=	latin+sun_vndr/us(sun5)+%l%(v):2
+   sun5		*			=	latin+sun_vndr/us(sun5)+%l%(v)
+   pc98		nec_vndr/jp		=	nec_vndr/jp(pc98)
+-  abnt2		br			=	pc+br
++  abnt2		br			=	pc(pc105)+br
+   macintosh_old	us			=	macintosh_vndr/us(oldmac)
+   macintosh_old	en_US			=	macintosh_vndr/us(oldmac)
+   macintosh_old	$macvendorlayouts	=	macintosh_vndr/us(oldmac)+macintosh_vndr/%l%(v)
+   macintosh_old	$nonlatin		=	macintosh_vndr/us(oldmac)+%l%(v):2
+   macintosh_old	*			=	macintosh_vndr/us(oldmac)+%l%(v)
+- $macs		en_US			=	pc+macintosh_vndr/us(extended)
+- $macs		$macvendorlayouts	=	pc+macintosh_vndr/%l%(v)
+-  *		jp			=	pc+jp(latin)+jp:2
+-  *	   	$nonlatin		=	pc+us+%l%(v):2
+-  *		*			=	pc+%l%(v)
++ $macs		en_US			=	pc(pc105)+macintosh_vndr/us(extended)
++ $macs		$macvendorlayouts	=	pc(pc105)+macintosh_vndr/%l%(v)
++  *		jp			=	pc(pc105)+jp(latin)+jp:2
++  *	   	$nonlatin		=	pc(pc105)+us+%l%(v):2
++  *		*			=	pc(pc105)+%l%(v)
+Index: xkb-data/rules/compat/ml1_s.sh
+===================================================================
+--- xkb-data.orig/rules/compat/ml1_s.sh
++++ xkb-data/rules/compat/ml1_s.sh
+@@ -5,9 +5,9 @@
+ > $OUTFILE
+ 
+ awk '{ 
+-  printf "  *		%s			=	pc+%s%%(v[1])\n", $1, $2; 
++  printf "  *		%s			=	pc(pc105)+%s%%(v[1])\n", $1, $2; 
+ }' < layoutRename.lst >> $OUTFILE
+ 
+ awk '{ 
+-  printf "  *		%s(%s)			=	pc+%s(%s)\n", $1, $2, $3, $4; 
++  printf "  *		%s(%s)			=	pc(pc105)+%s(%s)\n", $1, $2, $3, $4; 
+ }' < variantRename.lst >> $OUTFILE
+Index: xkb-data/rules/compat/ml1v1_s.sh
+===================================================================
+--- xkb-data.orig/rules/compat/ml1v1_s.sh
++++ xkb-data/rules/compat/ml1v1_s.sh
+@@ -5,5 +5,5 @@
+ > $OUTFILE
+ 
+ awk '{ 
+-  printf "  *		%s		%s		=	pc+%s(%s)\n", $1, $2, $3, $4; 
++  printf "  *		%s		%s		=	pc(pc105)+%s(%s)\n", $1, $2, $3, $4; 
+ }' < variantRename.lst >> $OUTFILE
+Index: xkb-data/rules/compat/ml1v_s.sh
+===================================================================
+--- xkb-data.orig/rules/compat/ml1v_s.sh
++++ xkb-data/rules/compat/ml1v_s.sh
+@@ -5,5 +5,5 @@
+ > $OUTFILE
+ 
+ awk '{ 
+-  printf "  *		%s		%s		=	pc+%s(%s)\n", $1, $2, $3, $4; 
++  printf "  *		%s		%s		=	pc(pc105)+%s(%s)\n", $1, $2, $3, $4; 
+ }' < variantRename.lst >> $OUTFILE
+Index: xkb-data/rules/compat/ml_s.sh
+===================================================================
+--- xkb-data.orig/rules/compat/ml_s.sh
++++ xkb-data/rules/compat/ml_s.sh
+@@ -5,9 +5,9 @@
+ > $OUTFILE
+ 
+ awk '{ 
+-  printf "  *		%s			=	pc+%s\n", $1, $2; 
++  printf "  *		%s			=	pc(pc105)+%s\n", $1, $2; 
+ }' < layoutRename.lst >> $OUTFILE
+ 
+ awk '{ 
+-  printf "  *		%s(%s)			=	pc+%s(%s)\n", $1, $2, $3, $4; 
++  printf "  *		%s(%s)			=	pc(pc105)+%s(%s)\n", $1, $2, $3, $4; 
+ }' < variantRename.lst >> $OUTFILE
+Index: xkb-data/rules/compat/mlv_s.sh
+===================================================================
+--- xkb-data.orig/rules/compat/mlv_s.sh
++++ xkb-data/rules/compat/mlv_s.sh
+@@ -5,5 +5,5 @@
+ > $OUTFILE
+ 
+ awk '{ 
+-  printf "  *		%s		%s		=	pc+%s(%s)\n", $1, $2, $3, $4; 
++  printf "  *		%s		%s		=	pc(pc105)+%s(%s)\n", $1, $2, $3, $4; 
+ }' < variantRename.lst >> $OUTFILE
+Index: xkb-data/symbols/pc
+===================================================================
+--- xkb-data.orig/symbols/pc
++++ xkb-data/symbols/pc
+@@ -143,3 +143,20 @@
+     key <RGHT> {	[  Right		]	};
+ };
+ 
++// Compatibility with previous versions
++partial hidden
++xkb_symbols "basic" {
++    include "pc"
++};
++partial hidden
++xkb_symbols "pc101" {
++    include "pc"
++};
++partial hidden
++xkb_symbols "pc102" {
++    include "pc"
++};
++partial hidden
++xkb_symbols "pc104" {
++    include "pc"
++};
