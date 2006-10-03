@@ -6,8 +6,11 @@ sclk_toggle.diff
 latin_quotes.diff
 mac_poweroff.diff
 bz1576.diff
+unhide_lv3_enter_switch.diff
 mac-gb-euro.diff
-thinkpad.diff
+symbols-typos.diff
+finnish-macron.diff
+rewrite-mac.diff
 greek.diff
 compatibility.diff
 resync_rules_base.diff

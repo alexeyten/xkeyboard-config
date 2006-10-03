@@ -1,3 +1,32 @@
+xkeyboard-config (0.8-17) unstable; urgency=low
+
+  * debian/patches/finnish-macron.diff: In symbols.fi, replace macron
+    by dead_macron.  Closes: #387320  Thanks Martin-Éric Racine.
+
+  * debian/patches/symbols-typos.diff: Fix typos in keysym names.
+    Closes: #390876  Thanks Sam Hocevar.
+
+  * debian/patches/rewrite-mac.diff: Add includes to mac layouts in
+    symbols/* to reduce key definitions.
+
+ -- Denis Barbier <barbier@debian.org>  Tue,  3 Oct 2006 22:18:31 +0200
+
+xkeyboard-config (0.8-16) unstable; urgency=low
+
+  * Sync to CVS 2006-10-02.
+    + Macintosh layouts are also available for PC models.
+    + New nbsp:* options to add nobreakspace keysym on space key.
+      Closes: #361777  Thanks Samuel Thibault.
+
+  * Thix patch has been merged upstream and is removed:
+    + debian/patches/thinkpad.diff
+
+  * debian/patches/unhide_lv3_enter_switch.diff: New patch to
+    expose lv3:enter_switch, it can be useful when using pc105
+    model on a Mac laptop.
+
+ -- Denis Barbier <barbier@debian.org>  Tue,  3 Oct 2006 00:35:01 +0200
+
 xkeyboard-config (0.8-15) unstable; urgency=low
 
   * debian/patches/greek.diff: New patch to replace dead_horn and

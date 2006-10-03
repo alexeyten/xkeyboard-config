@@ -720,7 +720,7 @@ Index: xkb-data/rules/base
    grp:ctrl_alt_toggle	=	+group(ctrl_alt_toggle)
    grp:alt_shift_toggle	=	+group(alt_shift_toggle)
    grp:menu_toggle	=	+group(menu_toggle)
-@@ -970,8 +794,10 @@
+@@ -970,14 +794,17 @@
    grp:lctrl_toggle	=	+group(lctrl_toggle)
    grp:rctrl_toggle	=	+group(rctrl_toggle)
    grp:lalt_toggle	=	+group(lalt_toggle)
@@ -731,7 +731,14 @@ Index: xkb-data/rules/base
    lv3:lalt_switch	=	+level3(lalt_switch)
    lv3:alt_switch	=	+level3(alt_switch)
    lv3:menu_switch	=	+level3(menu_switch)
-@@ -986,14 +812,8 @@
+   lv3:win_switch	=	+level3(win_switch)
+   lv3:lwin_switch	=	+level3(lwin_switch)
+   lv3:rwin_switch	=	+level3(rwin_switch)
++  lv3:enter_switch	=	+level3(enter_switch)
+   caps:capslock		=	+capslock(capslock)
+   caps:shiftlock	=	+capslock(shiftlock)
+   caps:grouplock	=	+capslock(grouplock)
+@@ -986,14 +813,8 @@
    ctrl:ctrl_ac		=	+ctrl(ctrl_ac)
    ctrl:ctrl_aa		=	+ctrl(ctrl_aa)
    ctrl:ctrl_ra		=	+ctrl(ctrl_ra)
@@ -747,16 +754,20 @@ Index: xkb-data/rules/base
    compose:rwin		=	+compose(rwin)
    compose:menu		=	+compose(menu)
    compose:rctrl		=	+compose(rctrl)
-@@ -1002,6 +822,8 @@
+@@ -1002,6 +823,12 @@
    eurosign:e		=	+eurosign(e)
    eurosign:5		=	+eurosign(5)
    eurosign:2		=	+eurosign(2)
 +  keypad:oss            =       +keypad(oss)
 +  keypad:legacy         =	+keypad(legacy)
++  nbsp:none             =	+nbsp(none)
++  nbsp:level2           =	+nbsp(level2)
++  nbsp:level3           =	+nbsp(level3)
++  nbsp:level4           =	+nbsp(level4)
  
  ! option	=	compat
    grp_led:num		=	+lednum(group_lock)
-@@ -1016,4 +838,6 @@
+@@ -1016,4 +843,6 @@
    caps:internal_nocancel	=	+caps(internal_nocancel)
    caps:shift			=	+caps(shift)
    caps:shift_nocancel		=	+caps(shift_nocancel)
@@ -868,7 +879,7 @@ Index: xkb-data/rules/base.lst
    fo              Faroe Islands
    fi              Finland
    fr              France
-@@ -184,12 +198,14 @@
+@@ -184,12 +198,15 @@
    gb              United Kingdom
    uz              Uzbekistan
    vn              Vietnam
@@ -881,18 +892,21 @@ Index: xkb-data/rules/base.lst
    za              South Africa
    epo             Esperanto
 +  np              Nepal
++  ng              Nigeria
  
  ! variant
    intl            us: International (with dead keys)
-@@ -197,6 +213,7 @@
+@@ -197,7 +214,9 @@
    dvorak          us: Dvorak
    dvorak-l        us: Left handed Dvorak
    dvorak-r        us: Right handed Dvorak
 +  dvorak-classic  us: Classic Dvorak
    rus             us: Russian phonetic
++  mac             us: Macintosh
    ps              af: Pashto
    uz              af: Southern Uzbek
-@@ -205,13 +222,18 @@
+   azerty          ara: azerty
+@@ -205,13 +224,18 @@
    digits          ara: digits
    qwerty          ara: qwerty
    qwerty_digits   ara: qwerty/digits
@@ -911,7 +925,7 @@ Index: xkb-data/rules/base.lst
    probhat         bd: Probhat
    ben             in: Bengali
    ben_probhat     in: Bengali Probhat
-@@ -226,7 +248,7 @@
+@@ -226,7 +250,7 @@
    tam             in: Tamil
    tel             in: Telugu
    urd             in: Urdu
@@ -920,7 +934,7 @@ Index: xkb-data/rules/base.lst
    unicode         ba: Use Bosnian digraphs
    unicodeus       ba: US keyboard with Bosnian digraphs
    us              ba: US keyboard with Bosnian letters
-@@ -238,7 +260,7 @@
+@@ -238,7 +262,7 @@
    multi           ca: Multilingual, first part
    multi-2gr       ca: Multilingual, second part
    ike             ca: Inuktitut
@@ -929,7 +943,16 @@ Index: xkb-data/rules/base.lst
    unicode         hr: Use Croatian digraphs
    unicodeus       hr: US keyboard with Croatian digraphs
    us              hr: US keyboard with Croatian letters
-@@ -252,14 +274,27 @@
+@@ -246,21 +270,39 @@
+   qwerty          cz: qwerty
+   qwerty_bksl     cz: qwerty, extended Backslash
+   nodeadkeys      dk: Eliminate dead keys
++  mac             dk: Macintosh
++  mac_nodeadkeys  dk: Macintosh, eliminate dead keys
+   sundeadkeys     nl: Sun dead keys
++  mac             nl: Macintosh
+   nodeadkeys      ee: Eliminate dead keys
+   dvorak          ee: Dvorak
    pro             ir: Pro
    keypad          ir: Keypad
    pro_keypad      ir: Pro Keypad
@@ -945,6 +968,7 @@ Index: xkb-data/rules/base.lst
    nodeadkeys      fi: Eliminate dead keys
    smi             fi: Northern Saami
 +  kotoistus       fi: Kotoistus
++  mac             fi: Macintosh
    nodeadkeys      fr: Eliminate dead keys
    sundeadkeys     fr: Sun dead keys
 -  latin9          fr: Alternative
@@ -958,27 +982,33 @@ Index: xkb-data/rules/base.lst
 +  latin9_nodeadkeys fr: (Legacy) Alternative, eliminate dead keys
 +  latin9_sundeadkeys fr: (Legacy) Alternative, Sun dead keys
    dvorak          fr: Dvorak
++  mac             fr: Macintosh
    generic         gh: Multilingual
    akan            gh: Akan
-@@ -275,6 +310,9 @@
+   ewe             gh: Ewe
+@@ -275,6 +317,9 @@
    ro_nodeadkeys   de: Romanian keyboard with German letters, eliminate dead keys
    dvorak          de: Dvorak
    sundeadkeys     de: Sun dead keys
 +  neo             de: Neostyle
-+  mac             de: Macintosh layout
-+  mac_nodeadkeys  de: Macintosh layout, eliminate dead keys
++  mac             de: Macintosh
++  mac_nodeadkeys  de: Macintosh, eliminate dead keys
    extended        gr: Extended
    nodeadkeys      gr: Eliminate dead keys
    polytonic       gr: Polytonic
-@@ -300,7 +338,6 @@
+@@ -299,45 +344,55 @@
+   102_qwerty_dot_nodead hu: 102/qwerty/dot/Eliminate dead keys
    Sundeadkeys     is: Sun dead keys
    nodeadkeys      is: Eliminate dead keys
++  mac             is: Macintosh
    lyx             il: lyx
 -  si1452          il: si1452
    phonetic        il: Phonetic
    nodeadkeys      it: Eliminate dead keys
++  mac             it: Macintosh
    ruskaz          kz: Russian with Kazakh
-@@ -309,11 +346,12 @@
+   kazrus          kz: Kazakh with Russian
+   nodeadkeys      latam: Eliminate dead keys
    sundeadkeys     latam: Sun dead keys
    std             lt: Standard
    us              lt: US keyboard with Lithuanian letters
@@ -992,15 +1022,22 @@ Index: xkb-data/rules/base.lst
    nodeadkeys      no: Eliminate dead keys
    dvorak          no: Dvorak
    smi             no: Northern Saami
-@@ -322,6 +360,7 @@
+   smi_nodeadkeys  no: Northern Saami, eliminate dead keys
++  mac             no: Macintosh
++  mac_nodeadkeys  no: Macintosh, eliminate dead keys
+   qwertz          pl: qwertz
    dvorak          pl: Dvorak
    dvorak_quotes   pl: Dvorak, Polish quotes on quotemark key
    dvorak_altquotes pl: Dvorak, Polish quotes on key "1/!"
 +  csb             pl: Kashubian
    nodeadkeys      pt: Eliminate dead keys
    sundeadkeys     pt: Sun dead keys
++  mac             pt: Macintosh
++  mac_nodeadkeys  pt: Macintosh, eliminate dead keys
++  mac_sundeadkeys pt: Macintosh, Sun dead keys
    std             ro: Standard
-@@ -330,14 +369,16 @@
+   winkeys         ro: Winkeys
+   phonetic        ru: Phonetic
    typewriter      ru: Typewriter
    winkeys         ru: Winkeys
    tt              ru: Tatar
@@ -1020,7 +1057,19 @@ Index: xkb-data/rules/base.lst
    unicode         si: Use Slovenian digraphs
    unicodeus       si: US keyboard with Slovenian digraphs
    us              si: US keyboard with Slovenian letters
-@@ -358,8 +399,13 @@
+@@ -348,18 +403,25 @@
+   sundeadkeys     es: Sun dead keys
+   dvorak          es: Dvorak
+   cat             es: Catalan variant with middle-dot L
++  mac             es: Macintosh
+   nodeadkeys      se: Eliminate dead keys
+   dvorak          se: Dvorak
+   rus             se: Russian phonetic
+   rus_nodeadkeys  se: Russian phonetic, eliminate dead keys
+   smi             se: Northern Saami
++  mac             se: Macintosh
+   de_nodeadkeys   ch: German, eliminate dead keys
+   de_sundeadkeys  ch: German, Sun dead keys
    fr              ch: French
    fr_nodeadkeys   ch: French, eliminate dead keys
    fr_sundeadkeys  ch: French, Sun dead keys
@@ -1034,7 +1083,7 @@ Index: xkb-data/rules/base.lst
    tam_unicode     lk: Tamil Unicode
    tam_TAB         lk: Tamil TAB Typewriter
    tis             th: TIS-820.2538
-@@ -367,6 +413,9 @@
+@@ -367,6 +429,9 @@
    f               tr: (F)
    alt             tr: Alt-Q
    sundeadkeys     tr: Sun dead keys
@@ -1044,15 +1093,23 @@ Index: xkb-data/rules/base.lst
    phonetic        ua: Phonetic
    typewriter      ua: Typewriter
    winkeys         ua: Winkeys
-@@ -374,6 +423,7 @@
+@@ -374,10 +439,15 @@
    rstu_ru         ua: Standard RSTU on Russian layout
    intl            gb: International (with dead keys)
    dvorak          gb: Dvorak
++  mac             gb: Macintosh
 +  kr104           kr: 101/104 key Compatible
    CloGaelach      ie: CloGaelach
    UnicodeExpert   ie: UnicodeExpert
    ogam            ie: Ogham
-@@ -391,6 +441,7 @@
+   ogam_is434      ie: Ogham IS434
++  igbo            ng: Igbo
++  yoruba          ng: Yoruba
++  hausa           ng: Hausa
+ 
+ ! option
+   grp                  Group Shift/Lock behavior
+@@ -391,6 +461,7 @@
    grp:lalt_toggle      Left Alt key changes group.
    grp:caps_toggle      CapsLock key changes group.
    grp:shift_caps_toggle Shift+CapsLock changes group.
@@ -1060,7 +1117,7 @@ Index: xkb-data/rules/base.lst
    grp:shifts_toggle    Both Shift keys together change group.
    grp:alts_toggle      Both Alt keys together change group.
    grp:ctrls_toggle     Both Ctrl keys together change group.
-@@ -404,6 +455,7 @@
+@@ -404,6 +475,7 @@
    grp:rshift_toggle    Right Shift key changes group.
    grp:lctrl_toggle     Left Ctrl key changes group.
    grp:rctrl_toggle     Right Ctrl key changes group.
@@ -1068,17 +1125,22 @@ Index: xkb-data/rules/base.lst
    lv3                  Third level choosers
    lv3:switch           Press Right Ctrl to choose 3rd level.
    lv3:menu_switch      Press Menu key to choose 3rd level.
-@@ -413,6 +465,7 @@
+@@ -413,6 +485,8 @@
    lv3:alt_switch       Press any of Alt keys to choose 3rd level.
    lv3:lalt_switch      Press Left Alt key to choose 3rd level.
    lv3:ralt_switch      Press Right Alt key to choose 3rd level.
 +  lv3:ralt_switch_multikey Press Right Alt key to choose 3rd level, Shift+Right Alt key is Multi_Key.
++  lv3:enter_switch     Press Enter key on keypad to choose 3rd level.
    ctrl                 Ctrl key position
    ctrl:nocaps          Make CapsLock an additional Ctrl.
    ctrl:swapcaps        Swap Ctrl and CapsLock.
-@@ -424,10 +477,10 @@
+@@ -423,11 +497,14 @@
+   grp_led:num          NumLock LED shows alternative group.
    grp_led:caps         CapsLock LED shows alternative group.
    grp_led:scroll       ScrollLock LED shows alternative group.
++  keypad               Keypad layout selection
++  keypad:legacy        Force standard legacy keypad
++  keypad:oss           Use keypad with unicode additions (arrows and math operators)
    caps                 CapsLock key behavior
 -  caps:internal        CapsLock uses internal capitalization. Shift cancels CapsLock.
 -  caps:internal_nocancel CapsLock uses internal capitalization. Shift doesn't cancel CapsLock.
@@ -1091,7 +1153,7 @@ Index: xkb-data/rules/base.lst
    caps:shift_lock      CapsLock just locks the Shift modifier.
    caps:capslock        CapsLock toggles normal capitalization of alphabetic characters.
    caps:shiftlock       CapsLock toggles Shift so all keys are affected.
-@@ -439,15 +492,20 @@
+@@ -439,18 +516,28 @@
    altwin:super_win     Super is mapped to the Win-keys (default).
    altwin:hyper_win     Hyper is mapped to the Win-keys.
    altwin:alt_super_win Alt is mapped to the right Win-key and Super to Menu.
@@ -1108,10 +1170,18 @@ Index: xkb-data/rules/base.lst
 +  numpad:mac           Numpad keys work as with Mac.
    numpad:microsoft     Shift with numpad keys works as in MS Windows.
    srvrkeys:none        Special keys (Ctrl+Alt+&lt;key&gt;) handled in a server.
-+  apple:badmap         Swap keycodes of two keys when Mac keboards are misdetected by kernel.
++  apple:badmap         Swap keycodes of two keys when Mac keyboards are misdetected by kernel.
    eurosign             Adding the EuroSign to certain keys
    eurosign:e           Add the EuroSign to the E key.
    eurosign:5           Add the EuroSign to the 5 key.
+   eurosign:2           Add the EuroSign to the 2 key.
++  nbsp                 Adding the nobreakspace keysym to space key
++  nbsp:none            Space key output space at any level.
++  nbsp:level2          Space key output nobreakspace at second level.
++  nbsp:level3          Space key output nobreakspace at third level.
++  nbsp:level4          Space key output nobreakspace at fourth level.
+   japan                Japanese Keyboard Options
+   japan:kana_lock      Kana Lock key is locking
 Index: xkb-data/rules/compat/base.l2_s.part
 ===================================================================
 --- /dev/null
