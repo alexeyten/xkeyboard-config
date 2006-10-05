@@ -1,3 +1,8 @@
+Unhide lv3:enter_switch option, it can be useful if a pc105 model
+is selected with an Apple laptop.
+
+Not submitted upstream.
+
 Index: xkb-data/rules/base.o_s.part
 ===================================================================
 --- xkb-data.orig/rules/base.o_s.part

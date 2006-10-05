@@ -1,3 +1,8 @@
+Current CVS triggers nasty bugs in xkbcomp.  This patch prevents
+xkbcomp from crashing.
+
+Submitted upstream: https://bugs.freedesktop.org/show_bug.cgi?id=8402
+
 Index: xkb-data/types/numpad
 ===================================================================
 --- xkb-data.orig/types/numpad

@@ -390,7 +390,7 @@ Index: xkb-data/rules/base
 +  macintosh_old	*			=	macintosh_vndr/us(oldmac)+%l%(v)
 + $macs		en_US			=	pc(pc105)+macintosh_vndr/us(extended)
 + $macs		$macvendorlayouts	=	pc(pc105)+macintosh_vndr/%l%(v)
-+  *		jp			=	pc(pc105)+jp(latin)+jp:2
++  *		jp			=	pc(pc105)+jp(latin)+jp(jp106):2
    *	   	$nonlatin		=	pc(pc105)+us+%l%(v):2
    *		*			=	pc(pc105)+%l%(v)
  

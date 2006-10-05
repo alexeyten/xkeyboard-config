@@ -1,3 +1,17 @@
+xkeyboard-config (0.8-18) unstable; urgency=low
+
+  * Sync to CVS 2006-10-05.
+    Drop patches merged upstream:
+    + debian/patches/mac-gb-euro.diff
+    + debian/patches/symbols-typos.diff
+    + debian/patches/finnish-macron.diff
+    + debian/patches/rewrite-mac.diff
+
+  * debian/patches/japan.diff: New patch so that the latin variant of
+    jp layout is selected with multiple layouts.
+
+ -- Denis Barbier <barbier@debian.org>  Thu,  5 Oct 2006 22:12:56 +0200
+
 xkeyboard-config (0.8-17) unstable; urgency=low
 
   * debian/patches/finnish-macron.diff: In symbols.fi, replace macron

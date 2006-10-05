@@ -1,3 +1,6 @@
+Apply patch found in
+   https://bugs.freedesktop.org/show_bug.cgi?id=1576
+
 Index: xkb-data/rules/base.lists.part
 ===================================================================
 --- xkb-data.orig/rules/base.lists.part

@@ -10,14 +10,39 @@ this mess.  Fortunately this issue has been fixed now, thanks
 to testers on the debian-powerpc mailing list, and changes
 have been merged upstream.
 
-Mac users have now to try XKB settings.  As different people
-have been used to different files, the current behavior cannot
-satisfy everybody, and concessions have to be made.
+The following models are available:
+ * macintosh_old
+   For old kernels with ADB keycodes
+ * ibook powerbook macbook78 macbook79
+   Laptop, 3rd and 4th levels are obtained by the small Enter key.
+ * macintosh
+   Default Macintosh
+These models look for symbols in /usr/share/X11/xkb/symbols/macintosh_vndr,
+which means that the following layouts can be selected:
+   ch de dk es fi fr gb is it latam nl no pt se us
 
-Fortunately XKB has many options, so the keyboard can be most
-of the time customized by setting the right options.  If you
-believe that the current behavior is broken, for instance
-because keys engraved on your keyboard are not rendered, please
-file a bug against xkb-data.
+PC models can be selected, to have access to more layouts.  Some options
+may then be added to have the same behavior as with Macintosh keyboards.
+Here is a (non exhaustive) list of relevant options:
+ * lv3:lwin_switch   Press left Apple-key to choose 3rd level.
+ * lv3:enter_switch  Press Enter key on keypad to choose 3rd level.
+ * numpad:mac        Numpad keys work as with Macintosh keyboards.
+ * apple:badmap      Swap keycodes of two keys when Mac keyboards are
+                     misdetected by kernel.
 
-Denis Barbier <barbier@debian.org>  Sat, 23 Sep 2006 00:18:38 +0200
+Variants have been added to PC layouts to emulate Macintosh layouts.
+For instance,
+
+    Option     "XkbRules"    "xorg"
+    Option     "XkbModel"    "ibook"
+    Option     "XkbLayout"   "fr"
+
+in /etc/X11/xorg.conf can be replaced by
+
+    Option     "XkbRules"    "xorg"
+    Option     "XkbModel"    "pc105"
+    Option     "XkbLayout"   "fr"
+    Option     "XkbVariant"  "mac"
+    Option     "XkbOptions"  "lv3:enter_switch,apple:badmap,numpad:mac"
+
+Denis Barbier <barbier@debian.org>  Thu,  5 Oct 2006 22:51:12 +0200

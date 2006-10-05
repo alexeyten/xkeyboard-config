@@ -1,3 +1,7 @@
+Let 'make clean' remove generated files.
+
+Not submitted upstream.
+
 Index: xkb-data/rules/compat/Makefile.am
 ===================================================================
 --- xkb-data.orig/rules/compat/Makefile.am
