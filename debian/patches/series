@@ -1,9 +1,8 @@
 cvs.diff
-fix_xkbcomp_crash.diff
+#fix_xkbcomp_crash.diff
 clean.diff
 docs.diff
 sclk_toggle.diff
-latin_quotes.diff
 mac_poweroff.diff
 bz1576.diff
 unhide_lv3_enter_switch.diff

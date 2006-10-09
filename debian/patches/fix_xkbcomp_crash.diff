@@ -1,5 +1,7 @@
-Current CVS triggers nasty bugs in xkbcomp.  This patch prevents
-xkbcomp from crashing.
+At some point, CVS triggered nasty bugs in xkbcomp.  A patch has been
+submitted upstream, but a different fix has been applied.  For now
+fix_xkbcomp_crash.diff is disabled, but if xkbcomp crashes again,
+it can be reenabled.
 
 Submitted upstream: https://bugs.freedesktop.org/show_bug.cgi?id=8402
 
@@ -7,18 +9,19 @@ Index: xkb-data/types/numpad
 ===================================================================
 --- xkb-data.orig/types/numpad
 +++ xkb-data/types/numpad
-@@ -1,7 +1,9 @@
+@@ -1,6 +1,9 @@
  
- default
- xkb_types "pc" {
+-partial default xkb_types "pc" {
 -    type "KEYPAD" {
++default
++xkb_types "pc" {
 +    virtual_modifiers LevelThree;
 +
 +    override type "KEYPAD" {
  	modifiers = Shift+NumLock;
  	map[None] = Level1;
  	map[Shift] = Level2;
-@@ -10,12 +12,29 @@
+@@ -9,12 +12,29 @@
  	level_name[Level1] = "Base";
  	level_name[Level2] = "Number";
      };
@@ -42,15 +45,16 @@ Index: xkb-data/types/numpad
  };
  
  // On Mac keypads, level 1 and 2 are swapped
- xkb_types "mac" {
+-partial xkb_types "mac" {
 -    type "KEYPAD" {
++xkb_types "mac" {
 +    virtual_modifiers LevelThree;
 +
 +    override type "KEYPAD" {
  	modifiers = Shift+NumLock;
  	map[None] = Level2;
  	map[Shift] = Level1;
-@@ -24,11 +43,28 @@
+@@ -23,11 +43,28 @@
  	level_name[Level2] = "Base";
  	level_name[Level1] = "Number";
      };
@@ -73,15 +77,16 @@ Index: xkb-data/types/numpad
 +    };       
  };
  
- xkb_types "microsoft" {
+-partial xkb_types "microsoft" {
 -    type "KEYPAD" {
++xkb_types "microsoft" {
 +    virtual_modifiers LevelThree;
 +
 +    override type "KEYPAD" {
          modifiers = Shift+NumLock;
          map[None] = Level1;
          preserve[Shift] = Shift;
-@@ -36,6 +72,21 @@
+@@ -35,6 +72,21 @@
          level_name[Level1] = "Base";
          level_name[Level2] = "Number";
      };
@@ -108,8 +113,8 @@ Index: xkb-data/types/extra
 ===================================================================
 --- xkb-data.orig/types/extra
 +++ xkb-data/types/extra
-@@ -51,6 +51,23 @@
- 	level_name[Level4] = "Shift Alt";
+@@ -85,6 +85,23 @@
+ 	level_name[Level4] = "Ctrl+Alt";
      };
  
 +    // This enables the four level shifting also for the keypad.
@@ -132,7 +137,7 @@ Index: xkb-data/types/extra
  // Special type for keys used in Serbian Latin Unicode map
  // It makes it possible to use all three forms of latin letters 
  // present in Unicode that are made up of two separate letters 
-@@ -73,46 +90,3 @@
+@@ -107,46 +124,3 @@
          level_name[Level4] = "Shift AltGr";
      };
  };
@@ -196,36 +201,4 @@ Index: xkb-data/types/basic
 +	level_name[Level1] = "Base";
 +	level_name[Level2] = "Number";
 +    };
- };
-Index: xkb-data/types/complete
-===================================================================
---- xkb-data.orig/types/complete
-+++ xkb-data/types/complete
-@@ -8,10 +8,10 @@
- 
- default xkb_types "complete" {
-     include "basic"
--    include "numpad"
-     include "mousekeys"
-     include "pc"
-     include "iso9995"
-     include "level5"
-     include "extra"
-+    include "numpad"
- };
-Index: xkb-data/types/default
-===================================================================
---- xkb-data.orig/types/default
-+++ xkb-data/types/default
-@@ -3,10 +3,10 @@
- 
- default xkb_types "default" {
-     include "basic"
--    include "numpad"
-     include "pc"
-     include "iso9995"
-     include "extra"
-+    include "numpad"
-     include "level5"
-     include "mousekeys"
  };
