@@ -34,6 +34,12 @@
     </model>
     <model>
       <configItem>
+        <name>latitude</name>
+        <_description>Dell Latitude series laptop</_description>
+      </configItem>
+    </model>
+    <model>
+      <configItem>
         <name>everex</name>
         <_description>Everex STEPnote</_description>
       </configItem>
@@ -84,6 +90,12 @@
       <configItem>
         <name>a4techKBS8</name>
         <_description>A4Tech KBS-8</_description>
+      </configItem>
+    </model>
+    <model>
+      <configItem>
+        <name>a4_rfkb23</name>
+        <_description>A4Tech Wireless Desktop RFKB-23</_description>
       </configItem>
     </model>
     <model>
@@ -156,6 +168,12 @@
       <configItem>
         <name>btc5090</name>
         <_description>BTC 5090</_description>
+      </configItem>
+    </model>
+    <model>
+      <configItem>
+        <name>btc9019u</name>
+	<_description>BTC 9019U</_description>
       </configItem>
     </model>
     <model>
@@ -304,6 +322,12 @@
     </model>
     <model>
       <configItem>
+        <name>geniuskb19e</name>
+        <_description>Genius KB-19e NB</_description>
+      </configItem>
+    </model>
+    <model>
+      <configItem>
         <name>gyration</name>
         <_description>Gyration</_description>
       </configItem>
@@ -400,6 +424,12 @@
     </model>
     <model>
       <configItem>
+        <name>thinkpadintl</name>
+        <_description>IBM ThinkPad 560Z/600/600E/A22E, Intl</_description>
+      </configItem>
+    </model>
+    <model>
+      <configItem>
         <name>logiaccess</name>
         <_description>Logitech Access Keyboard</_description>
       </configItem>
@@ -414,6 +444,12 @@
       <configItem>
         <name>logicdit</name>
         <_description>Logitech Cordless Desktop iTouch</_description>
+      </configItem>
+    </model>
+    <model>
+      <configItem>
+        <name>logiclx300</name>
+        <_description>Logitech Cordless Desktop LX-300</_description>
       </configItem>
     </model>
     <model>
@@ -454,12 +490,6 @@
     </model>
     <model>
       <configItem>
-        <name>logidak</name>
-        <_description>Logitech Deluxe Access Keyboard</_description>
-      </configItem>
-    </model>
-    <model>
-      <configItem>
         <name>logiitc</name>
         <_description>Logitech iTouch Cordless Keyboard (model Y-RB6)</_description>
       </configItem>
@@ -478,32 +508,32 @@
     </model>
     <model>
       <configItem>
-        <name>logiitc</name>
-        <_description>Logitech iTouch Cordless Keyboard (model Y-RB6)</_description>
-      </configItem>
-    </model>
-    <model>
-      <configItem>
-        <name>logiik</name>
-        <_description>Logitech Internet Keyboard</_description>
-      </configItem>
-    </model>
-    <model>
-      <configItem>
-        <name>logiink</name>
+        <name>logicink</name>
         <_description>Logitech Internet Navigator Keyboard</_description>
       </configItem>
     </model>
     <model>
       <configItem>
-        <name>itouchin</name>
-        <_description>Logitech iTouch keyboard Internet Navigator</_description>
+        <name>logiinkse</name>
+        <_description>Logitech iTouch Internet Navigator Keyboard SE</_description>
+      </configItem>
+    </model>
+    <model>
+      <configItem>
+        <name>logiinkseusb</name>
+        <_description>Logitech iTouch Internet Navigator Keyboard SE (USB)</_description>
       </configItem>
     </model>
     <model>
       <configItem>
         <name>logiultrax</name>
         <_description>Logitech Ultra-X Keyboard</_description>
+      </configItem>
+    </model>
+    <model>
+      <configItem>
+        <name>dinovo</name>
+        <_description>Logitech diNovo Keyboard</_description>
       </configItem>
     </model>
     <model>
@@ -664,6 +694,18 @@
     </model>
     <model>
       <configItem>
+        <name>macbook78</name>
+        <description>MacBook/MacBook Pro</description>
+      </configItem>
+    </model>
+    <model>
+      <configItem>
+        <name>macbook79</name>
+        <description>MacBook/MacBook Pro (Intl)</description>
+      </configItem>
+    </model>
+    <model>
+      <configItem>
         <name>macintosh</name>
         <_description>Macintosh</_description>
       </configItem>
@@ -682,14 +724,32 @@
     </model>
     <model>
       <configItem>
+        <name>acer_c300</name>
+        <_description>Acer C300</_description>
+      </configItem>
+    </model>
+    <model>
+      <configItem>
         <name>acer_tm_800</name>
         <_description>Acer TravelMate 800</_description>
       </configItem>
     </model>
     <model>
       <configItem>
-        <name>power_g5</name>
-        <_description>Power G5</_description>
+        <name>acer_ferrari4k</name>
+        <_description>Acer Ferrari 4000</_description>
+      </configItem>
+    </model>
+    <model>
+      <configItem>
+        <name>apple</name>
+        <_description>Apple</_description>
+      </configItem>
+    </model>
+    <model>
+      <configItem>
+        <name>apple_laptop</name>
+        <_description>Apple Laptop</_description>
       </configItem>
     </model>
     <model>
@@ -702,6 +762,18 @@
       <configItem>
         <name>emachines</name>
         <_description>Laptop/notebook eMachines m68xx</_description>
+      </configItem>
+    </model>
+    <model>
+      <configItem>
+	<name>kr106</name>
+	<_description>Korean 106-key</_description>
+      </configItem>
+    </model>
+    <model>
+      <configItem>
+	<name>evdev</name>
+	<_description>Evdev-managed keyboard</_description>
       </configItem>
     </model>
   </modelList>
@@ -745,8 +817,20 @@
         </variant>
         <variant>
           <configItem>
+            <name>dvorak-classic</name>
+            <_description>Classic Dvorak</_description>
+          </configItem>
+        </variant>
+        <variant>
+          <configItem>
             <name>rus</name>
             <_description>Russian phonetic</_description>
+          </configItem>
+        </variant>
+        <variant>
+          <configItem>
+            <name>mac</name>
+            <_description>Macintosh</_description>
           </configItem>
         </variant>
       </variantList>
@@ -817,6 +901,12 @@
             <_description>qwerty/digits</_description>
           </configItem>
         </variant>
+        <variant>
+          <configItem>
+            <name>buckwalter</name>
+            <_description>Buckwalter</_description>
+          </configItem>
+        </variant>
       </variantList>
     </layout>
     <layout>
@@ -838,6 +928,24 @@
           <configItem>
             <name>phonetic</name>
             <_description>Phonetic</_description>
+          </configItem>
+        </variant>
+        <variant>
+          <configItem>
+            <name>eastern</name>
+            <_description>Eastern</_description>
+          </configItem>
+        </variant>
+        <variant>
+          <configItem>
+            <name>western</name>
+            <_description>Western</_description>
+          </configItem>
+        </variant>
+        <variant>
+          <configItem>
+            <name>eastern-alt</name>
+            <_description>Alternative Eastern</_description>
           </configItem>
         </variant>
       </variantList>
@@ -901,6 +1009,12 @@
           <configItem>
             <name>sundeadkeys</name>
             <_description>Sun dead keys</_description>
+          </configItem>
+        </variant>
+        <variant>
+          <configItem>
+            <name>wang</name>
+            <_description>Wang model 724 azerty</_description>
           </configItem>
         </variant>
       </variantList>
@@ -1017,7 +1131,7 @@
         <variant>
           <configItem>
             <name>alternatequotes</name>
-            <_description> Use guillemots for quotes</_description>
+            <_description> Use guillemets for quotes</_description>
           </configItem>
         </variant>
         <variant>
@@ -1125,6 +1239,14 @@
     </layout>
     <layout>
       <configItem>
+        <name>cd</name>
+        <_shortDescription>DRC</_shortDescription>
+        <_description>Congo, Democratic Republic of the</_description>
+      </configItem>
+      <variantList/>
+    </layout>
+    <layout>
+      <configItem>
         <name>hr</name>
         <_shortDescription>Hrv</_shortDescription>
         <_description>Croatia</_description>
@@ -1133,7 +1255,7 @@
         <variant>
           <configItem>
             <name>alternatequotes</name>
-            <_description>Use guillemots for quotes</_description>
+            <_description>Use guillemets for quotes</_description>
           </configItem>
         </variant>
         <variant>
@@ -1196,6 +1318,18 @@
             <_description>Eliminate dead keys</_description>
           </configItem>
         </variant>
+        <variant>
+          <configItem>
+            <name>mac</name>
+            <_description>Macintosh</_description>
+          </configItem>
+        </variant>
+        <variant>
+          <configItem>
+            <name>mac_nodeadkeys</name>
+            <_description>Macintosh, eliminate dead keys</_description>
+          </configItem>
+        </variant>
       </variantList>
     </layout>
     <layout>
@@ -1209,6 +1343,12 @@
           <configItem>
             <name>sundeadkeys</name>
             <_description>Sun dead keys</_description>
+          </configItem>
+        </variant>
+        <variant>
+          <configItem>
+            <name>mac</name>
+            <_description>Macintosh</_description>
           </configItem>
         </variant>
       </variantList>
@@ -1266,6 +1406,63 @@
             <_description>Pro Keypad</_description>
           </configItem>
         </variant>
+        <variant>
+          <configItem>
+            <name>ku</name>
+            <_description>Kurdish, Latin Q</_description>
+          </configItem>
+        </variant>
+        <variant>
+          <configItem>
+            <name>ku_f</name>
+            <_description>Kurdish, (F)</_description>
+          </configItem>
+        </variant>
+        <variant>
+          <configItem>
+            <name>ku_alt</name>
+            <_description>Kurdish, Latin Alt-Q</_description>
+          </configItem>
+        </variant>
+        <variant>
+          <configItem>
+            <name>ku_ara</name>
+            <_description>Kurdish, Arabic-Latin</_description>
+          </configItem>
+        </variant>
+      </variantList>
+    </layout>
+    <layout>
+      <configItem>
+        <name>iq</name>
+        <_shortDescription>Irq</_shortDescription>
+        <_description>Iraq</_description>
+      </configItem>
+      <variantList>
+        <variant>
+          <configItem>
+            <name>ku</name>
+            <_description>Kurdish, Latin Q</_description>
+          </configItem>
+        </variant>
+        <variant>
+          <configItem>
+            <name>ku_f</name>
+            <_description>Kurdish, (F)</_description>
+          </configItem>
+        </variant>
+        <variant>
+          <configItem>
+            <name>ku_alt</name>
+            <_description>Kurdish, Latin Alt-Q</_description>
+          </configItem>
+        </variant>
+        <variant>
+          <configItem>
+            <name>ku_ara</name>
+            <_description>Kurdish, Arabic-Latin</_description>
+          </configItem>
+        </variant>
       </variantList>
     </layout>
     <layout>
@@ -1302,6 +1499,18 @@
             <_description>Northern Saami</_description>
           </configItem>
         </variant>
+        <variant>
+          <configItem>
+            <name>kotoistus</name>
+            <_description>Kotoistus</_description>
+          </configItem>
+        </variant>
+        <variant>
+          <configItem>
+            <name>mac</name>
+            <_description>Macintosh</_description>
+          </configItem>
+        </variant>
       </variantList>
     </layout>
     <layout>
@@ -1325,26 +1534,56 @@
         </variant>
         <variant>
           <configItem>
-            <name>latin9</name>
+            <name>oss</name>
             <_description>Alternative</_description>
           </configItem>
         </variant>
         <variant>
           <configItem>
-            <name>latin9_nodeadkeys</name>
+            <name>oss_latin9</name>
+            <_description>Alternative, latin-9 only</_description>
+          </configItem>
+        </variant>
+        <variant>
+          <configItem>
+            <name>oss_nodeadkeys</name>
             <_description>Alternative, eliminate dead keys</_description>
           </configItem>
         </variant>
         <variant>
           <configItem>
-            <name>latin9_sundeadkeys</name>
+            <name>oss_sundeadkeys</name>
             <_description>Alternative, Sun dead keys</_description>
+          </configItem>
+        </variant>
+        <variant>
+          <configItem>
+            <name>latin9</name>
+            <_description>(Legacy) Alternative</_description>
+          </configItem>
+        </variant>
+        <variant>
+          <configItem>
+            <name>latin9_nodeadkeys</name>
+            <_description>(Legacy) Alternative, eliminate dead keys</_description>
+          </configItem>
+        </variant>
+        <variant>
+          <configItem>
+            <name>latin9_sundeadkeys</name>
+            <_description>(Legacy) Alternative, Sun dead keys</_description>
           </configItem>
         </variant>
         <variant>
           <configItem>
             <name>dvorak</name>
             <_description>Dvorak</_description>
+          </configItem>
+        </variant>
+        <variant>
+          <configItem>
+            <name>mac</name>
+            <_description>Macintosh</_description>
           </configItem>
         </variant>
       </variantList>
@@ -1456,6 +1695,24 @@
           <configItem>
             <name>sundeadkeys</name>
             <_description>Sun dead keys</_description>
+          </configItem>
+        </variant>
+        <variant>
+          <configItem>
+            <name>neo</name>
+            <_description>Neostyle</_description>
+          </configItem>
+        </variant>
+        <variant>
+          <configItem>
+            <name>mac</name>
+            <_description>Macintosh</_description>
+          </configItem>
+        </variant>
+        <variant>
+          <configItem>
+            <name>mac_nodeadkeys</name>
+            <_description>Macintosh, eliminate dead keys</_description>
           </configItem>
         </variant>
       </variantList>
@@ -1613,8 +1870,6 @@
             <_description>102/qwerty/dot/Eliminate dead keys</_description>
           </configItem>
         </variant>
-
-
       </variantList>
     </layout>
     <layout>
@@ -1636,6 +1891,12 @@
             <_description>Eliminate dead keys</_description>
           </configItem>
         </variant>
+        <variant>
+          <configItem>
+            <name>mac</name>
+            <_description>Macintosh</_description>
+          </configItem>
+        </variant>
       </variantList>
     </layout>
     <layout>
@@ -1649,12 +1910,6 @@
           <configItem>
             <name>lyx</name>
             <_description>lyx</_description>
-          </configItem>
-        </variant>
-        <variant>
-          <configItem>
-            <name>si1452</name>
-            <_description>si1452</_description>
           </configItem>
         </variant>
         <variant>
@@ -1676,6 +1931,12 @@
           <configItem>
             <name>nodeadkeys</name>
             <_description>Eliminate dead keys</_description>
+          </configItem>
+        </variant>
+        <variant>
+          <configItem>
+            <name>mac</name>
+            <_description>Macintosh</_description>
           </configItem>
         </variant>
       </variantList>
@@ -1773,6 +2034,12 @@
             <_description>US keyboard with Lithuanian letters</_description>
           </configItem>
         </variant>
+        <variant>
+          <configItem>
+            <name>ibm</name>
+            <_description>IBM (LST 1205-92)</_description>
+          </configItem>
+        </variant>
       </variantList>
     </layout>
     <layout>
@@ -1835,7 +2102,7 @@
         <variant>
           <configItem>
             <name>us</name>
-            <_description>US keyboard with Maltian letters</_description>
+            <_description>Maltese keyboard with US layout</_description>
           </configItem>
         </variant>
       </variantList>
@@ -1879,6 +2146,18 @@
             <_description>Northern Saami, eliminate dead keys</_description>
           </configItem>
         </variant>
+        <variant>
+          <configItem>
+            <name>mac</name>
+            <_description>Macintosh</_description>
+          </configItem>
+        </variant>
+        <variant>
+          <configItem>
+            <name>mac_nodeadkeys</name>
+            <_description>Macintosh, eliminate dead keys</_description>
+          </configItem>
+        </variant>
       </variantList>
     </layout>
     <layout>
@@ -1912,6 +2191,12 @@
             <_description>Dvorak, Polish quotes on key "1/!"</_description>
           </configItem>
         </variant>
+        <variant>
+          <configItem>
+            <name>csb</name>
+            <_description>Kashubian</_description>
+          </configItem>
+        </variant>
       </variantList>
     </layout>
     <layout>
@@ -1931,6 +2216,24 @@
           <configItem>
             <name>sundeadkeys</name>
             <_description>Sun dead keys</_description>
+          </configItem>
+        </variant>
+        <variant>
+          <configItem>
+            <name>mac</name>
+            <_description>Macintosh</_description>
+          </configItem>
+        </variant>
+        <variant>
+          <configItem>
+            <name>mac_nodeadkeys</name>
+            <_description>Macintosh, eliminate dead keys</_description>
+          </configItem>
+        </variant>
+        <variant>
+          <configItem>
+            <name>mac_sundeadkeys</name>
+            <_description>Macintosh, Sun dead keys</_description>
           </configItem>
         </variant>
       </variantList>
@@ -1987,6 +2290,18 @@
             <_description>Tatar</_description>
           </configItem>
         </variant>
+        <variant>
+          <configItem>
+            <name>os</name>
+            <_description>Ossetian</_description>
+          </configItem>
+        </variant>
+        <variant>
+          <configItem>
+            <name>os_winkeys</name>
+            <_description>Ossetian, Winkeys</_description>
+          </configItem>
+        </variant>
       </variantList>
     </layout>
     <layout>
@@ -2029,13 +2344,13 @@
         <variant>
           <configItem>
             <name>alternatequotes</name>
-            <_description>With guillemots</_description>
+            <_description>With guillemets</_description>
           </configItem>
         </variant>
         <variant>
           <configItem>
             <name>latinalternatequotes</name>
-            <_description>Latin with guillemots</_description>
+            <_description>Latin with guillemets</_description>
           </configItem>
         </variant>
       </variantList>
@@ -2050,7 +2365,7 @@
         <variant>
           <configItem>
             <name>alternatequotes</name>
-            <_description>Use guillemots for quotes</_description>
+            <_description>Use guillemets for quotes</_description>
           </configItem>
         </variant>
         <variant>
@@ -2131,6 +2446,12 @@
             <_description>Catalan variant with middle-dot L</_description>
           </configItem>
         </variant>
+        <variant>
+          <configItem>
+            <name>mac</name>
+            <_description>Macintosh</_description>
+          </configItem>
+        </variant>
       </variantList>
     </layout>
     <layout>
@@ -2168,6 +2489,12 @@
           <configItem>
             <name>smi</name>
             <_description>Northern Saami</_description>
+          </configItem>
+        </variant>
+        <variant>
+          <configItem>
+            <name>mac</name>
+            <_description>Macintosh</_description>
           </configItem>
         </variant>
       </variantList>
@@ -2209,6 +2536,18 @@
             <_description>French, Sun dead keys</_description>
           </configItem>
         </variant>
+        <variant>
+          <configItem>
+            <name>fr_mac</name>
+            <_description>French (Macintosh)</_description>
+          </configItem>
+        </variant>
+        <variant>
+          <configItem>
+            <name>de_mac</name>
+            <_description>German (Macintosh)</_description>
+          </configItem>
+        </variant>
       </variantList>
     </layout>
     <layout>
@@ -2228,6 +2567,24 @@
           <configItem>
             <name>syc_phonetic</name>
             <_description>Syriac phonetic</_description>
+          </configItem>
+        </variant>
+        <variant>
+          <configItem>
+            <name>ku</name>
+            <_description>Kurdish, Latin Q</_description>
+          </configItem>
+        </variant>
+        <variant>
+          <configItem>
+            <name>ku_f</name>
+            <_description>Kurdish, (F)</_description>
+          </configItem>
+        </variant>
+        <variant>
+          <configItem>
+            <name>ku_alt</name>
+            <_description>Kurdish, Latin Alt-Q</_description>
           </configItem>
         </variant>
       </variantList>
@@ -2307,6 +2664,24 @@
             <_description>Sun dead keys</_description>
           </configItem>
         </variant>
+        <variant>
+          <configItem>
+            <name>ku</name>
+            <_description>Kurdish, Latin Q</_description>
+          </configItem>
+        </variant>
+        <variant>
+          <configItem>
+            <name>ku_f</name>
+            <_description>Kurdish, (F)</_description>
+          </configItem>
+        </variant>
+        <variant>
+          <configItem>
+            <name>ku_alt</name>
+            <_description>Kurdish, Latin Alt-Q</_description>
+          </configItem>
+        </variant>
       </variantList>
     </layout>
     <layout>
@@ -2369,6 +2744,12 @@
             <_description>Dvorak</_description>
           </configItem>
         </variant>
+        <variant>
+          <configItem>
+            <name>mac</name>
+            <_description>Macintosh</_description>
+          </configItem>
+        </variant>
       </variantList>
     </layout>
     <layout>
@@ -2388,10 +2769,25 @@
       <variantList/>
     </layout>
     <layout>
+       <configItem>
+        <name>kr</name>
+        <_shortDescription>Kor</_shortDescription>
+        <_description>Korea, Republic of</_description>
+      </configItem>
+      <variantList>
+	<variant>
+	  <configItem>
+	    <name>kr104</name>
+	    <_description>101/104 key Compatible</_description>
+	  </configItem>
+	</variant>
+      </variantList>
+    </layout>
+    <layout>
       <configItem>
         <name>nec_vndr/jp</name>
         <_shortDescription>Jpn</_shortDescription>
-        <_description>PC-98xx Series</_description>
+        <_description>Japan (PC-98xx Series)</_description>
       </configItem>
       <variantList/>
     </layout>
@@ -2457,6 +2853,40 @@
         <_shortDescription>Epo</_shortDescription>
 	<_description>Esperanto</_description>
       </configItem>
+    </layout>
+    <layout>
+      <configItem>
+        <name>np</name>
+        <_shortDescription>Nep</_shortDescription>
+	<_description>Nepal</_description>
+      </configItem>
+    </layout>
+    <layout>
+      <configItem>
+        <name>ng</name>
+        <_shortDescription>Nigeria</_shortDescription>
+	<_description>Nigeria</_description>
+      </configItem>
+      <variantList>
+        <variant>
+          <configItem>
+            <name>igbo</name>
+            <_description>Igbo</_description>
+          </configItem>
+        </variant>
+        <variant>
+          <configItem>
+            <name>yoruba</name>
+            <_description>Yoruba</_description>
+          </configItem>
+        </variant>
+        <variant>
+          <configItem>
+            <name>hausa</name>
+            <_description>Hausa</_description>
+          </configItem>
+        </variant>
+      </variantList>
     </layout>
   </layoutList>
   <optionList>
@@ -2524,6 +2954,12 @@
         <configItem>
           <name>grp:shift_caps_toggle</name>
           <_description>Shift+CapsLock changes group.</_description>
+        </configItem>
+      </option>
+      <option>
+        <configItem>
+          <name>grp:alt_caps_toggle</name>
+          <_description>Alt+CapsLock changes group.</_description>
         </configItem>
       </option>
       <option>
@@ -2660,6 +3096,12 @@
           <_description>Press Right Alt key to choose 3rd level.</_description>
         </configItem>
       </option>
+      <option>
+        <configItem>
+          <name>lv3:ralt_switch_multikey</name>
+          <_description>Press Right Alt key to choose 3rd level, Shift+Right Alt key is Multi_Key.</_description>
+        </configItem>
+      </option>
     </group>
     <group allowMultipleSelection="false">
       <!-- Tweaking the position of the "Ctrl" key -->
@@ -2724,6 +3166,25 @@
       </option>
     </group>
     <group allowMultipleSelection="false">
+      <!-- Select a keypad type -->
+      <configItem>
+        <name>keypad</name>
+        <description>Keypad layout selection</description>
+      </configItem>
+      <option>
+        <configItem>
+          <name>keypad:legacy</name>
+          <description>Force standard legacy keypad</description>
+       </configItem>
+      </option>
+      <option>
+        <configItem>
+          <name>keypad:oss</name>
+          <description>Use keypad with unicode additions (arrows and math operators)</description>
+       </configItem>
+      </option>
+    </group>
+    <group allowMultipleSelection="false">
       <!-- CapsLock tweaks. 
 	   "Internal" capitalization means capitalization using some internal tables.
 	   Otherwise "as Shift" - means using next group. -->
@@ -2734,25 +3195,25 @@
       <option>
         <configItem>
           <name>caps:internal</name>
-          <_description>CapsLock uses internal capitalization. Shift cancels CapsLock.</_description>
+          <_description>CapsLock uses internal capitalization. Shift "pauses" CapsLock.</_description>
         </configItem>
       </option>
       <option>
         <configItem>
           <name>caps:internal_nocancel</name>
-          <_description>CapsLock uses internal capitalization. Shift doesn't cancel CapsLock.</_description>
+          <_description>CapsLock uses internal capitalization. Shift doesn't affect CapsLock.</_description>
         </configItem>
       </option>
       <option>
         <configItem>
           <name>caps:shift</name>
-          <_description>CapsLock acts as Shift with locking. Shift cancels CapsLock.</_description>
+          <_description>CapsLock acts as Shift with locking. Shift "pauses" CapsLock.</_description>
         </configItem>
       </option>
       <option>
         <configItem>
           <name>caps:shift_nocancel</name>
-          <_description>CapsLock acts as Shift with locking. Shift doesn't cancel CapsLock.</_description>
+          <_description>CapsLock acts as Shift with locking. Shift doesn't affect CapsLock.</_description>
         </configItem>
       </option>
       <option>
@@ -2822,6 +3283,12 @@
           <_description>Alt is mapped to the right Win-key and Super to Menu.</_description>
         </configItem>
       </option>
+      <option>
+        <configItem>
+          <name>altwin:swap_lalt_lwin</name>
+          <_description>Left Alt is swapped with left Win-key.</_description>
+        </configItem>
+      </option>
     </group>
     <group allowMultipleSelection="true">
       <!-- Tweaking the position of the "Compose" key: mapping to existing PC keys -->
@@ -2833,6 +3300,12 @@
         <configItem>
           <name>compose:ralt</name>
           <_description>Right Alt is Compose.</_description>
+        </configItem>
+      </option>
+      <option>
+        <configItem>
+          <name>compose:lwin</name>
+          <_description>Left Win-key is Compose.</_description>
         </configItem>
       </option>
       <option>
@@ -2867,6 +3340,18 @@
       </configItem>
       <option>
         <configItem>
+          <name>numpad:pc</name>
+          <_description>Default numpad keys.</_description>
+        </configItem>
+      </option>
+      <option>
+        <configItem>
+          <name>numpad:mac</name>
+          <_description>Numpad keys work as with Mac.</_description>
+        </configItem>
+      </option>
+      <option>
+        <configItem>
           <name>numpad:microsoft</name>
           <_description>Shift with numpad keys works as in MS Windows.</_description>
         </configItem>
@@ -2875,6 +3360,12 @@
         <configItem>
           <name>srvrkeys:none</name>
           <_description>Special keys (Ctrl+Alt+&lt;key&gt;) handled in a server.</_description>
+        </configItem>
+      </option>
+      <option>
+        <configItem>
+          <name>apple:badmap</name>
+          <_description>Swap keycodes of two keys when Mac keyboards are misdetected by kernel.</_description>
         </configItem>
       </option>
     </group>
@@ -2900,6 +3391,37 @@
         <configItem>
           <name>eurosign:2</name>
           <_description>Add the EuroSign to the 2 key.</_description>
+        </configItem>
+      </option>
+    </group>
+    <group allowMultipleSelection="false">
+      <!-- Let space output nobreakspace for the desired level -->
+      <configItem>
+        <name>nbsp</name>
+        <_description>Adding the nobreakspace keysym to space key</_description>
+      </configItem>
+      <option>
+        <configItem>
+          <name>nbsp:none</name>
+          <_description>Space key output space at any level.</_description>
+        </configItem>
+      </option>
+      <option>
+        <configItem>
+          <name>nbsp:level2</name>
+          <_description>Space key output nobreakspace at second level.</_description>
+        </configItem>
+      </option>
+      <option>
+        <configItem>
+          <name>nbsp:level3</name>
+          <_description>Space key output nobreakspace at third level.</_description>
+        </configItem>
+      </option>
+      <option>
+        <configItem>
+          <name>nbsp:level4</name>
+          <_description>Space key output nobreakspace at fourth level.</_description>
         </configItem>
       </option>
     </group>

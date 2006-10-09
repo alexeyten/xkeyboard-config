@@ -1,4 +1,4 @@
-// $XKeyboardConfig: xkbdesc/symbols/group,v 1.7 2005/11/26 23:23:29 svu Exp $
+// $XKeyboardConfig: xkbdesc/symbols/group,v 1.9 2006/08/30 23:47:26 svu Exp $
 // $Xorg: group,v 1.3 2000/08/17 19:54:43 cpqbld Exp $
 // using the group(switch) map, the right alt key temporarily chooses 
 // the second keyboard group (until it is released).
@@ -102,11 +102,11 @@ xkb_symbols "shifts_toggle" {
 partial modifier_keys 
 xkb_symbols "ctrl_shift_toggle" {
     key <LFSH> {
-	type="PC_BREAK",
+	type[Group1]="PC_BREAK",
 	symbols[Group1]= [ Shift_L,	ISO_Prev_Group ]
     };
     key <RTSH> {
-	type="PC_BREAK",
+	type[Group1]="PC_BREAK",
 	symbols[Group1]= [ Shift_R,	ISO_Next_Group ]
     };
     key <LCTL>	{	[	Control_L,	ISO_Prev_Group ]	};
@@ -137,21 +137,21 @@ partial modifier_keys
 xkb_symbols "ctrl_alt_toggle" {
     virtual_modifiers Alt;
     key <LALT> {
-	type="PC_BREAK",
+	type[Group1]="PC_BREAK",
 	symbols[Group1]= [ NoSymbol,	ISO_Prev_Group ],
 	virtualMods= Alt
     };
     key <RALT> {
-	type="PC_BREAK",
+	type[Group1]="PC_BREAK",
 	symbols[Group1]= [ NoSymbol,	ISO_Next_Group ],
 	virtualMods= Alt
     };
     key <LCTL> {
-	type="PC_SYSRQ",
+	type[Group1]="PC_SYSRQ",
 	symbols[Group1]= [ Control_L,	ISO_Prev_Group ]
     };
     key <RCTL> {
-	type="PC_SYSRQ",
+	type[Group1]="PC_SYSRQ",
 	symbols[Group1]= [ Control_R,	ISO_Next_Group ]
     };
 };
@@ -173,11 +173,11 @@ xkb_symbols "alt_shift_toggle" {
 	virtualMods= Alt
     };
     key <LFSH> {
-	type="PC_SYSRQ",
+	type[Group1]="PC_SYSRQ",
 	symbols[Group1]= [ Shift_L,	ISO_Prev_Group ]
     };
     key <RTSH> {
-	type="PC_SYSRQ",
+	type[Group1]="PC_SYSRQ",
 	symbols[Group1]= [ Shift_R,	ISO_Next_Group ]
     };
 };
@@ -219,11 +219,11 @@ partial modifier_keys
 xkb_symbols "ctrls_toggle" {
   virtual_modifiers AltGr;
     key <LCTL> {
-	type="PC_BREAK",
+	type[Group1]="PC_BREAK",
 	symbols[Group1]= [ NoSymbol,	ISO_Prev_Group ]
     };
     key <RCTL> {
-	type="PC_BREAK",
+	type[Group1]="PC_BREAK",
 	symbols[Group1]= [ NoSymbol,	ISO_Next_Group ]
     };
 };
@@ -233,12 +233,12 @@ partial modifier_keys
 xkb_symbols "alts_toggle" {
   virtual_modifiers Alt;
     key <LALT> {
-	type="PC_SYSRQ",
+	type[Group1]="PC_SYSRQ",
 	symbols[Group1]= [ NoSymbol,	ISO_Prev_Group ],
 	virtualMods= Alt
     };
     key <RALT> {
-	type="PC_SYSRQ",
+	type[Group1]="PC_SYSRQ",
 	symbols[Group1]= [ NoSymbol,	ISO_Next_Group ],
 	virtualMods= Alt
     };
@@ -293,3 +293,15 @@ xkb_symbols "rctrl_toggle" {
 	virtualMods= AltGr
     };
 };
+
+// using the group(alt_caps_toggle) map, pressing:
+//     Alt+Caps Lock toggles group
+//     Caps Lock toggles caps lock
+partial modifier_keys
+xkb_symbols "alt_caps_toggle" {
+    key        <CAPS> {
+       type="PC_SYSRQ",
+       symbols[Group1]= [  Caps_Lock,  ISO_Next_Group]
+    };
+};
+
