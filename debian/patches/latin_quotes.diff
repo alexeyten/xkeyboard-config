@@ -20,3 +20,18 @@ Index: xkb-data/symbols/latin
      key <AB06>	{ [         n,          N ]	};
      key <AB07>	{ [         m,          M,           mu,    masculine ]	};
      key <AB08>	{ [     comma,       less, horizconnector,   multiply ]	};
+Index: xkb-data/symbols/us
+===================================================================
+--- xkb-data.orig/symbols/us
++++ xkb-data/symbols/us
+@@ -157,8 +157,8 @@
+   key <TLDE> { [ dead_grave, dead_tilde,    grave,	      asciitilde    ] };
+   key <AE05> { [          5, percent,	    EuroSign			    ] };
+   key <AE06> { [	  6, dead_circumflex, asciicircum,    asciicircum   ] };
+-  key <AE09> { [	  9, parenleft,	    dead_breve,	      dead_breve    ] };
+-  key <AE10> { [	  0, parenright,    dead_abovering,   dead_abovering] };
++  key <AE09> { [	  9, parenleft, leftsinglequotemark,  dead_breve ] };
++  key <AE10> { [	  0, parenright, rightsinglequotemark, dead_abovering ] };
+   key <AE11> { [      minus, underscore,    dead_macron,      dead_belowdot ] };
+   key <AE12> { [      equal, plus,	    dead_doubleacute, dead_horn	    ] };
+ 

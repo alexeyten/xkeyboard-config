@@ -1,3 +1,11 @@
+xkeyboard-config (0.8-19) UNRELEASED; urgency=low
+
+  * debian/patches/latin_quotes.diff: Also add leftsinglequotemark
+    and rightsinglequotemark to symbols/us(alt-intl).  Closes: #391995
+    Thanks Jan Willem Stumpel.
+
+ -- Denis Barbier <barbier@debian.org>  Mon,  9 Oct 2006 23:29:25 +0200
+
 xkeyboard-config (0.8-18) unstable; urgency=low
 
   * Sync to CVS 2006-10-05.
