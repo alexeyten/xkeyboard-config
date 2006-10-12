@@ -1,4 +1,4 @@
-xkeyboard-config (0.9-1) UNRELEASED; urgency=low
+xkeyboard-config (0.9-1) unstable; urgency=low
 
   * New upstream release.
     Almost all upstream fixes were already backported, this package
@@ -11,7 +11,7 @@ xkeyboard-config (0.9-1) UNRELEASED; urgency=low
   * This version adds leftsinglequotemark and rightsinglequotemark to
     symbols/us(alt-intl).  Closes: #391995 Thanks Jan Willem Stumpel.
 
- -- Denis Barbier <barbier@debian.org>  Mon,  9 Oct 2006 23:29:25 +0200
+ -- Denis Barbier <barbier@debian.org>  Wed, 11 Oct 2006 22:50:37 +0200
 
 xkeyboard-config (0.8-18) unstable; urgency=low
 

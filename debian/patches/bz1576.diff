@@ -187,3 +187,16 @@ Index: xkb-data/symbols/macintosh_vndr/se
      include "level3(ralt_switch)"
  };
  
+Index: xkb-data/symbols/it
+===================================================================
+--- xkb-data.orig/symbols/it
++++ xkb-data/symbols/it
+@@ -89,7 +89,7 @@
+ 
+     key <AD01> {	[           q,  Q 		]	};
+     key <AD02> {	[	    z,  Z		]	};
+-    key <AD03> {	[	    e,  E		]	};
++    key <AD03> {	[	    e,  E,     EuroSign		]	};
+     key <AD04> {	[	    r,  R,   registered			] 	};
+     key <AD05> {	[	    t,  T		]	};
+     key <AD06> {	[	    y,  Y,       Uacute,	ydiaeresis      ] 	};
