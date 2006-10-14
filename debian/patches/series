@@ -1,5 +1,6 @@
 #cvs.diff
 #fix_xkbcomp_crash.diff
+po.diff
 clean.diff
 docs.diff
 sclk_toggle.diff
