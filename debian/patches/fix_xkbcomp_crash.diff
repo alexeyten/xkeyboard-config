@@ -1,7 +1,7 @@
 At some point, CVS triggered nasty bugs in xkbcomp.  A patch has been
-submitted upstream, but a different fix has been applied.  For now
-fix_xkbcomp_crash.diff is disabled, but if xkbcomp crashes again,
-it can be reenabled.
+tested in Debian and submitted upstream, but a different fix has been
+applied.  For now fix_xkbcomp_crash.diff is disabled, but if xkbcomp
+crashes again, it can be reenabled to get back to the previous fix.
 
 Submitted upstream: https://bugs.freedesktop.org/show_bug.cgi?id=8402
 
