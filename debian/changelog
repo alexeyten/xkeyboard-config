@@ -1,3 +1,10 @@
+xkeyboard-config (0.9-3) UNRELEASED; urgency=low
+
+  * debian/patches/resync_rules_base.diff: Regenerate to fix FTBFS.
+    Closes: #393166  Thanks Andreas Jochens.
+
+ -- Denis Barbier <barbier@debian.org>  Sun, 15 Oct 2006 14:45:11 +0200
+
 xkeyboard-config (0.9-2) unstable; urgency=low
 
   + debian/patches/po.diff: Update Hungarian PO file.
