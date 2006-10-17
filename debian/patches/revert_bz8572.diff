@@ -3,6 +3,8 @@ debian/patches/revert_bz8572.diff: New patch to revert changes
   combinations.  This seems to be an X server bug, but this
   patch is added until this issue is fixed.  Closes: #392911.
 
+Fixed in CVS.
+
 Index: xkb-data/symbols/level3
 ===================================================================
 --- xkb-data.orig/symbols/level3
@@ -16,15 +18,6 @@ Index: xkb-data/symbols/level3
  };
  
  partial modifier_keys
-@@ -55,7 +55,7 @@
-     type[Group1]="ONE_LEVEL",
-     symbols[Group1] = [ ISO_Level3_Shift ]
-     };
--  modifier_map Mod5   { <LALT> };
-+  modifier_map Mod5   { ISO_Level3_Shift };
- };
- 
- // using the level(switch) map, the right Control key temporarily
 @@ -66,7 +66,7 @@
      type[Group1]="ONE_LEVEL",
      symbols[Group1] = [ ISO_Level3_Shift ]
