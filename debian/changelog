@@ -1,5 +1,6 @@
-xkeyboard-config (0.9-3) UNRELEASED; urgency=high
+xkeyboard-config (0.9-3) unstable; urgency=high
 
+  [ Denis Barbier ]
   * debian/patches/resync_rules_base.diff: Regenerate to fix FTBFS.
     Closes: #393166  Thanks Andreas Jochens.
     Urgency set to high because of the FTBFS.
@@ -11,7 +12,10 @@ xkeyboard-config (0.9-3) UNRELEASED; urgency=high
 
   * debian/patches/revert_bz8572.diff: Sync to CVS.
 
- -- Denis Barbier <barbier@debian.org>  Tue, 17 Oct 2006 19:52:39 +0200
+  [ Drew Parsons ]
+  * Thank you to Denis for the hard work keeping the keyboards typing.
+
+ -- Drew Parsons <dparsons@debian.org>  Wed, 18 Oct 2006 10:55:11 +1000
 
 xkeyboard-config (0.9-2) unstable; urgency=low
 
