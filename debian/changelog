@@ -1,3 +1,10 @@
+xkeyboard-config (0.9-4) UNRELEASED; urgency=low
+
+  + debian/patches/po.diff: Escape <> characters in Slovenian
+    PO file, base.xml was not a valid XML file.  Closes: #394060
+
+ -- Denis Barbier <barbier@debian.org>  Fri, 20 Oct 2006 19:14:18 +0200
+
 xkeyboard-config (0.9-3) unstable; urgency=high
 
   [ Denis Barbier ]

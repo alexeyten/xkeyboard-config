@@ -1,6 +1,9 @@
 Downloaded from http://www.iro.umontreal.ca/translation/maint/xkeyboard-config/hu.po
 2006-10-13
 
+Copied po/sl.po from CVS, the version in the Free TP does not produce valid XML files.
+2006-10-20
+
 Index: xkb-data/po/hu.po
 ===================================================================
 --- xkb-data.orig/po/hu.po
@@ -1445,17 +1448,15 @@ Index: xkb-data/po/sl.po
  
  #: ../rules/base.xml.in.h:273
  msgid "Latin"
-@@ -1171,18 +1126,16 @@
+@@ -1171,7 +1126,6 @@
  msgstr "Latinski qwerty"
  
  #: ../rules/base.xml.in.h:278
 -#, fuzzy
  msgid "Latin with guillemets"
--msgstr "Latinska z dvojnimi &lt;&gt; (Guillemots)"
-+msgstr "Latinska z dvojnimi <> (Guillemots)"
+ msgstr "Latinska z dvojnimi &lt;&gt; (Guillemots)"
  
- #: ../rules/base.xml.in.h:279
- msgid "Latvia"
+@@ -1180,9 +1134,8 @@
  msgstr "Latvija"
  
  #: ../rules/base.xml.in.h:280
@@ -1879,7 +1880,7 @@ Index: xkb-data/po/sl.po
  #: ../rules/base.xml.in.h:496
  msgid "Use guillemets for quotes"
 -msgstr ""
-+msgstr "Dvojni <> (guillemets) namesto navednic"
++msgstr "Dvojni &lt;&gt; (guillemets) namesto navednic"
  
  #: ../rules/base.xml.in.h:497
  msgid "Use keyboard LED to show alternative group."
@@ -1897,17 +1898,14 @@ Index: xkb-data/po/sl.po
  
  #: ../rules/base.xml.in.h:504
  msgid "Winbook Model XP5"
-@@ -2110,9 +2036,8 @@
+@@ -2110,7 +2036,6 @@
  msgstr "Z &lt;\\|&gt; tipkami"
  
  #: ../rules/base.xml.in.h:507
 -#, fuzzy
  msgid "With guillemets"
--msgstr "Z dvojnimi &lt;&gt; (Guillemots)"
-+msgstr "Z dvojnimi <> (Guillemots)"
+ msgstr "Z dvojnimi &lt;&gt; (Guillemots)"
  
- #: ../rules/base.xml.in.h:508
- msgid "Yahoo! Internet Keyboard"
 @@ -2120,7 +2045,7 @@
  
  #: ../rules/base.xml.in.h:509
