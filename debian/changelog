@@ -1,3 +1,9 @@
+xkeyboard-config (0.9-5) unstable; urgency=low
+
+  * Add myself to Uploaders. (Closes: #401777)
+
+ -- Mohammed Adnène Trojette <adn+deb@diwi.org>  Sat, 21 Apr 2007 22:50:42 +0200
+
 xkeyboard-config (0.9-4) unstable; urgency=low
 
   [ Denis Barbier ]

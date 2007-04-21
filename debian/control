@@ -2,6 +2,7 @@ Source: xkeyboard-config
 Section: x11
 Priority: extra
 Maintainer: Debian X Strike Force <debian-x@lists.debian.org>
+Uploaders: Mohammed Adnène Trojette <adn+deb@diwi.org>
 Build-Depends: debhelper (>= 4.0.0), quilt
 Build-Depends-Indep: libxml-parser-perl
 Standards-Version: 3.7.2
