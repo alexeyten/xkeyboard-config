@@ -1,21 +1,19 @@
-# -*- mode:po; coding:utf-8; -*- Slovenian message catalogue for xkeyboard-config-0.6.
+# -*- mode:po; coding:utf-8; -*- Slovenian message catalogue for xkeyboard-config-0.9.
 # Copyright (C) 2005 Free Software Foundation, Inc.
-# Matej Urbančič <matej.urban@gmail.com>, 2005.
+# Matej Urbančič <matej.urban@gmail.com>, 2006.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: xkeyboard-config-0.6\n"
+"Project-Id-Version: xkeyboard-config-0.9\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-10-02 19:47+0100\n"
-"PO-Revision-Date: 2005-09-30 13:58+0100\n"
+"POT-Creation-Date: 2006-10-01 23:44+0100\n"
+"PO-Revision-Date: 2006-10-17 11:15+0100\n"
 "Last-Translator: Matej Urbančič <matej.urban@gmail.com>\n"
 "Language-Team: Slovenian <translation-team-sl@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
-"%100==4 ? 3 : 0);\n"
-"X-Poedit-Language: Slovenian\n"
+"Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n%100==4 ? 3 : 0);\n"
 "X-Poedit-Country: SLOVENIA\n"
 "X-Poedit-SourceCharset: utf-8\n"
 
@@ -24,23 +22,20 @@ msgid "(F)"
 msgstr "(F)"
 
 #: ../rules/base.xml.in.h:2
-#, fuzzy
 msgid "(Legacy) Alternative"
-msgstr "Alternativna"
+msgstr "(Podedovano) Alternativna"
 
 #: ../rules/base.xml.in.h:3
-#, fuzzy
 msgid "(Legacy) Alternative, Sun dead keys"
-msgstr "Alternativna, Sun mrtve tipke."
+msgstr "(Podedovano) Alternativna, Sun mrtve tipke"
 
 #: ../rules/base.xml.in.h:4
-#, fuzzy
 msgid "(Legacy) Alternative, eliminate dead keys"
-msgstr "Alternativno, izloči mrtve tipke"
+msgstr "(Podedovano) Alternativno, izloči mrtve tipke"
 
 #: ../rules/base.xml.in.h:5
 msgid "101/104 key Compatible"
-msgstr ""
+msgstr "Kompatibilna 101/104 tipke"
 
 #: ../rules/base.xml.in.h:6
 msgid "101/qwerty/comma/Dead keys"
@@ -115,9 +110,8 @@ msgid "A4Tech KBS-8"
 msgstr "A4Tech KBS-8"
 
 #: ../rules/base.xml.in.h:24
-#, fuzzy
 msgid "A4Tech Wireless Desktop RFKB-23"
-msgstr "Dexxa Wireless Desktop Tipkovnica"
+msgstr "A4Tech Wireless Desktop RFKB-23"
 
 #: ../rules/base.xml.in.h:25
 msgid "ACPI Standard"
@@ -129,11 +123,11 @@ msgstr "Acer AirKey V"
 
 #: ../rules/base.xml.in.h:27
 msgid "Acer C300"
-msgstr ""
+msgstr "Acer C300"
 
 #: ../rules/base.xml.in.h:28
 msgid "Acer Ferrari 4000"
-msgstr ""
+msgstr "Acer Ferrari 4000"
 
 #: ../rules/base.xml.in.h:29
 msgid "Acer TravelMate 800"
@@ -161,7 +155,7 @@ msgstr "Dodaj simbol za Evro določeni tipki"
 
 #: ../rules/base.xml.in.h:35
 msgid "Adding the nobreakspace keysym to space key"
-msgstr ""
+msgstr "Dodajanje brezpresledni znak preslednici"
 
 #: ../rules/base.xml.in.h:36
 msgid "Advance Scorpius KI"
@@ -169,16 +163,15 @@ msgstr "Advance Scorpius KI"
 
 #: ../rules/base.xml.in.h:37
 msgid "Afg"
-msgstr ""
+msgstr "Afg"
 
 #: ../rules/base.xml.in.h:38
-#, fuzzy
 msgid "Afghanistan"
-msgstr "Pakistan"
+msgstr "Afghanistan"
 
 #: ../rules/base.xml.in.h:39
 msgid "Akan"
-msgstr ""
+msgstr "Akan"
 
 #: ../rules/base.xml.in.h:40
 msgid "Alb"
@@ -197,12 +190,10 @@ msgid "Alt is mapped to the right Win-key and Super to Menu."
 msgstr "Alt določi na desno Win tipko in Super na Menu tipko."
 
 #: ../rules/base.xml.in.h:44
-#, fuzzy
 msgid "Alt+CapsLock changes group."
 msgstr "Shift+CapsLock zamenjata skupino."
 
 #: ../rules/base.xml.in.h:45
-#, fuzzy
 msgid "Alt+Ctrl changes group."
 msgstr "Alt+Ctrl zamenjata skupino."
 
@@ -223,9 +214,8 @@ msgid "Alternative"
 msgstr "Alternativna"
 
 #: ../rules/base.xml.in.h:50
-#, fuzzy
 msgid "Alternative Eastern"
-msgstr "Alternativna"
+msgstr "Alternativno vzhodno"
 
 #: ../rules/base.xml.in.h:51
 msgid "Alternative international (former us_intl)"
@@ -240,19 +230,16 @@ msgid "Alternative, eliminate dead keys"
 msgstr "Alternativno, izloči mrtve tipke"
 
 #: ../rules/base.xml.in.h:54
-#, fuzzy
 msgid "Alternative, latin-9 only"
-msgstr "Alternativno, izloči mrtve tipke"
+msgstr "Alternativno, latinsko-9"
 
 #: ../rules/base.xml.in.h:55
-#, fuzzy
 msgid "And"
-msgstr "IND"
+msgstr "And"
 
 #: ../rules/base.xml.in.h:56
-#, fuzzy
 msgid "Andorra"
-msgstr "ARA"
+msgstr "Andora"
 
 #: ../rules/base.xml.in.h:57
 msgid "Apostrophe (') variant"
@@ -260,11 +247,11 @@ msgstr "Apostrof (') varianta"
 
 #: ../rules/base.xml.in.h:58
 msgid "Apple"
-msgstr ""
+msgstr "Apple"
 
 #: ../rules/base.xml.in.h:59
 msgid "Apple Laptop"
-msgstr ""
+msgstr "Apple Laptop"
 
 #: ../rules/base.xml.in.h:60
 msgid "Ara"
@@ -319,9 +306,8 @@ msgid "BTC 9001AH"
 msgstr "BTC 9001AH"
 
 #: ../rules/base.xml.in.h:73
-#, fuzzy
 msgid "BTC 9019U"
-msgstr "BTC 9001AH"
+msgstr "BTC 9019U"
 
 #: ../rules/base.xml.in.h:74
 msgid "Ban"
@@ -409,7 +395,7 @@ msgstr "Brother Internet Tipkovnica"
 
 #: ../rules/base.xml.in.h:95
 msgid "Buckwalter"
-msgstr ""
+msgstr "Buckwalter"
 
 #: ../rules/base.xml.in.h:96
 msgid "Bulgaria"
@@ -417,7 +403,7 @@ msgstr "Bolgarija"
 
 #: ../rules/base.xml.in.h:97
 msgid "Cambodia"
-msgstr ""
+msgstr "Kambodža"
 
 #: ../rules/base.xml.in.h:98
 msgid "Can"
@@ -428,24 +414,20 @@ msgid "Canada"
 msgstr "Kanada"
 
 #: ../rules/base.xml.in.h:100
-#, fuzzy
 msgid "Caps Lock is Compose."
-msgstr "Menu deluje kot "
+msgstr "CapsLock je pred-tipka (Compose)"
 
 #: ../rules/base.xml.in.h:101
 msgid "CapsLock LED shows alternative group."
 msgstr "CapsLock LED kaže alternativno skupino."
 
 #: ../rules/base.xml.in.h:102
-#, fuzzy
 msgid "CapsLock acts as Shift with locking. Shift \"pauses\" CapsLock."
 msgstr "CapsLock se obnaša kot zaklenjena Shift tipka. Shift prekine CapsLock."
 
 #: ../rules/base.xml.in.h:103
-#, fuzzy
 msgid "CapsLock acts as Shift with locking. Shift doesn't affect CapsLock."
-msgstr ""
-"CapsLock se obnaša kot Shift z zaklepanjem. Shift ne prekliče CapsLock tipke."
+msgstr "CapsLock se obnaša kot Shift z zaklepanjem. Shift ne prekliče CapsLock tipke."
 
 #: ../rules/base.xml.in.h:104
 msgid "CapsLock just locks the Shift modifier."
@@ -468,19 +450,16 @@ msgid "CapsLock toggles normal capitalization of alphabetic characters."
 msgstr "CapsLock izmenjuje velikost črk (velike in male črke)."
 
 #: ../rules/base.xml.in.h:109
-#, fuzzy
 msgid "CapsLock uses internal capitalization. Shift \"pauses\" CapsLock."
 msgstr "CapsLock uporablja notranjo kapitalizacijo. Shift prekliče CapsLock."
 
 #: ../rules/base.xml.in.h:110
-#, fuzzy
 msgid "CapsLock uses internal capitalization. Shift doesn't affect CapsLock."
-msgstr ""
-"CapsLock uporablja notranjo kapitalizacijo. Shift ne prekliče CapsLock."
+msgstr "CapsLock uporablja notranjo kapitalizacijo. Shift ne prekliče CapsLock."
 
 #: ../rules/base.xml.in.h:111
 msgid "Catalan variant with middle-dot L"
-msgstr ""
+msgstr "Katalanska varianta z L s srednjo piko"
 
 #: ../rules/base.xml.in.h:112
 msgid "Che"
@@ -495,9 +474,8 @@ msgid "Cherry Blue Line CyBo@rd (alternate option)"
 msgstr "Cherry Blue Line CyBo@rd (druga izbira)"
 
 #: ../rules/base.xml.in.h:115
-#, fuzzy
 msgid "Cherry CyBo@rd USB-Hub"
-msgstr "Cherry Blue Line CyBo@rd"
+msgstr "Cherry CyBo@rd USB-Hub"
 
 #: ../rules/base.xml.in.h:116
 msgid "Cherry CyMotion Master Linux"
@@ -512,7 +490,6 @@ msgid "Chicony KB-9885"
 msgstr "Chicony KB-9885"
 
 #: ../rules/base.xml.in.h:119
-#, fuzzy
 msgid "Classic Dvorak"
 msgstr "Dvorak nabor"
 
@@ -546,29 +523,25 @@ msgstr "Položaj pred-tipke (Compose)"
 
 #: ../rules/base.xml.in.h:127
 msgid "Congo, Democratic Republic of the"
-msgstr ""
+msgstr "Kongo, Demokratična Republika"
 
 #: ../rules/base.xml.in.h:128
 msgid "Croatia"
 msgstr "Hrvaška"
 
 #: ../rules/base.xml.in.h:129
-#, fuzzy
 msgid "Ctrl key at bottom left"
 msgstr "Ctrl tipka leži levo spodaj"
 
 #: ../rules/base.xml.in.h:130
-#, fuzzy
 msgid "Ctrl key at left of 'A'"
 msgstr "Tipka Ctrl je levo of tipke 'A'"
 
 #: ../rules/base.xml.in.h:131
-#, fuzzy
 msgid "Ctrl key position"
 msgstr "Položaj Ctrl Tipke"
 
 #: ../rules/base.xml.in.h:132
-#, fuzzy
 msgid "Ctrl+Shift changes group."
 msgstr "Ctrl+Shift zamenjata skupino."
 
@@ -586,7 +559,7 @@ msgstr "Češka"
 
 #: ../rules/base.xml.in.h:136
 msgid "DRC"
-msgstr ""
+msgstr "DRC"
 
 #: ../rules/base.xml.in.h:137
 msgid "DTK2000"
@@ -602,7 +575,7 @@ msgstr "Mrtvi krativec"
 
 #: ../rules/base.xml.in.h:140
 msgid "Default numpad keys."
-msgstr ""
+msgstr "Privzete tipke številčnice"
 
 #: ../rules/base.xml.in.h:141
 msgid "Dell"
@@ -614,12 +587,11 @@ msgstr "Dell tipkovnica s 101 tipko PC"
 
 #: ../rules/base.xml.in.h:143
 msgid "Dell Latitude series laptop"
-msgstr ""
+msgstr "Dell Latitude serijski laptop"
 
 #: ../rules/base.xml.in.h:144
-#, fuzzy
 msgid "Dell USB Multimedia Keybard"
-msgstr "Super Power Multimedijska tipkovnica"
+msgstr "Dell USB Multimedia tipkovnica"
 
 #: ../rules/base.xml.in.h:145
 msgid "Denmark"
@@ -654,9 +626,8 @@ msgid "Dvorak, Polish quotes on quotemark key"
 msgstr "Dvorak, Poljska - narekovaj na quotemark tipki"
 
 #: ../rules/base.xml.in.h:153
-#, fuzzy
 msgid "Eastern"
-msgstr "EST"
+msgstr "Vzhodni"
 
 #: ../rules/base.xml.in.h:154
 msgid "Eliminate dead keys"
@@ -667,9 +638,8 @@ msgid "Ennyah DKB-1008"
 msgstr "Ennyah DKB-1008"
 
 #: ../rules/base.xml.in.h:156
-#, fuzzy
 msgid "Epo"
-msgstr "ESP"
+msgstr "Epo"
 
 #: ../rules/base.xml.in.h:157
 msgid "Esp"
@@ -677,7 +647,7 @@ msgstr "ESP"
 
 #: ../rules/base.xml.in.h:158
 msgid "Esperanto"
-msgstr ""
+msgstr "Esperanto"
 
 #: ../rules/base.xml.in.h:159
 msgid "Est"
@@ -689,16 +659,15 @@ msgstr "Estonija"
 
 #: ../rules/base.xml.in.h:161
 msgid "Evdev-managed keyboard"
-msgstr ""
+msgstr "Evdev tipkovnica"
 
 #: ../rules/base.xml.in.h:162
 msgid "Everex STEPnote"
 msgstr "Everex STEPnote"
 
 #: ../rules/base.xml.in.h:163
-#, fuzzy
 msgid "Ewe"
-msgstr "SWE"
+msgstr "Ewe"
 
 #: ../rules/base.xml.in.h:164
 msgid "Extended"
@@ -741,9 +710,8 @@ msgid "French"
 msgstr "Francoska"
 
 #: ../rules/base.xml.in.h:174
-#, fuzzy
 msgid "French (Macintosh)"
-msgstr "Macintosh"
+msgstr "Francosko (Macintosh)"
 
 #: ../rules/base.xml.in.h:175
 msgid "French (legacy)"
@@ -763,7 +731,7 @@ msgstr "Francoska, izloči mrtve tipke"
 
 #: ../rules/base.xml.in.h:179
 msgid "Fula"
-msgstr ""
+msgstr "Fula"
 
 #: ../rules/base.xml.in.h:180
 msgid "GBr"
@@ -771,7 +739,7 @@ msgstr "GBR"
 
 #: ../rules/base.xml.in.h:181
 msgid "Ga"
-msgstr ""
+msgstr "Ga"
 
 #: ../rules/base.xml.in.h:182
 msgid "Generic 101-key PC"
@@ -790,9 +758,8 @@ msgid "Generic 105-key (Intl) PC"
 msgstr "Splošna tipkovnica s 105 tipkami (Intl) PC"
 
 #: ../rules/base.xml.in.h:186
-#, fuzzy
 msgid "Genius Comfy KB-12e"
-msgstr "Genius Comfy KB-21e-Scroll"
+msgstr "Genius Comfy KB-12e"
 
 #: ../rules/base.xml.in.h:187
 msgid "Genius Comfy KB-16M / Genius MM Keyboard KWD-910"
@@ -803,9 +770,8 @@ msgid "Genius Comfy KB-21e-Scroll"
 msgstr "Genius Comfy KB-21e-Scroll"
 
 #: ../rules/base.xml.in.h:189
-#, fuzzy
 msgid "Genius KB-19e NB"
-msgstr "Genius Comfy KB-21e-Scroll"
+msgstr "Genius KB-19e NB"
 
 #: ../rules/base.xml.in.h:190
 msgid "Geo"
@@ -816,9 +782,8 @@ msgid "Georgia"
 msgstr "Gruzija"
 
 #: ../rules/base.xml.in.h:192
-#, fuzzy
 msgid "German (Macintosh)"
-msgstr "Macintosh"
+msgstr "Nemško (Macintosh)"
 
 #: ../rules/base.xml.in.h:193
 msgid "German, Sun dead keys"
@@ -833,13 +798,12 @@ msgid "Germany"
 msgstr "Nemčija"
 
 #: ../rules/base.xml.in.h:196
-#, fuzzy
 msgid "Gha"
-msgstr "THA"
+msgstr "Gha"
 
 #: ../rules/base.xml.in.h:197
 msgid "Ghana"
-msgstr ""
+msgstr "Gana"
 
 #: ../rules/base.xml.in.h:198
 msgid "Gre"
@@ -867,7 +831,7 @@ msgstr "Gyration tipkovnica"
 
 #: ../rules/base.xml.in.h:204
 msgid "Hausa"
-msgstr ""
+msgstr "Hausa"
 
 #: ../rules/base.xml.in.h:205
 msgid "Hewlett-Packard Internet Keyboard"
@@ -931,7 +895,7 @@ msgstr "Hiper tipko prevzameta Win tipki."
 
 #: ../rules/base.xml.in.h:220
 msgid "IBM (LST 1205-92)"
-msgstr ""
+msgstr "IBM (LST 1205-92)"
 
 #: ../rules/base.xml.in.h:221
 msgid "IBM Rapid Access"
@@ -950,9 +914,8 @@ msgid "IBM ThinkPad 560Z/600/600E/A22E"
 msgstr "IBM ThinkPad 560Z/600/600E/A22E"
 
 #: ../rules/base.xml.in.h:225
-#, fuzzy
 msgid "IBM ThinkPad 560Z/600/600E/A22E, Intl"
-msgstr "IBM ThinkPad 560Z/600/600E/A22E"
+msgstr "IBM ThinkPad 560Z/600/600E/A22E, Intl"
 
 #: ../rules/base.xml.in.h:226
 msgid "ISO Alternate"
@@ -964,7 +927,7 @@ msgstr "Islandija"
 
 #: ../rules/base.xml.in.h:228
 msgid "Igbo"
-msgstr ""
+msgstr "Igbo"
 
 #: ../rules/base.xml.in.h:229
 msgid "Ind"
@@ -987,9 +950,8 @@ msgid "Iran"
 msgstr "Iran"
 
 #: ../rules/base.xml.in.h:234
-#, fuzzy
 msgid "Iraq"
-msgstr "Iran"
+msgstr "Iraq"
 
 #: ../rules/base.xml.in.h:235
 msgid "Ireland"
@@ -1004,9 +966,8 @@ msgid "Irn"
 msgstr "IRN"
 
 #: ../rules/base.xml.in.h:238
-#, fuzzy
 msgid "Irq"
-msgstr "ISR"
+msgstr "Irq"
 
 #: ../rules/base.xml.in.h:239
 msgid "Isl"
@@ -1033,9 +994,8 @@ msgid "Japan"
 msgstr "Japonska"
 
 #: ../rules/base.xml.in.h:245
-#, fuzzy
 msgid "Japan (PC-98xx Series)"
-msgstr "PC-98xx Serije"
+msgstr "Japonska (PC-98xx Serija)"
 
 #: ../rules/base.xml.in.h:246
 msgid "Japanese 106-key"
@@ -1051,24 +1011,23 @@ msgstr "Kannada (Indija)"
 
 #: ../rules/base.xml.in.h:249
 msgid "Kashubian"
-msgstr ""
+msgstr "Kasubija"
 
 #: ../rules/base.xml.in.h:250
 msgid "Kaz"
-msgstr ""
+msgstr "Kaz"
 
 #: ../rules/base.xml.in.h:251
 msgid "Kazakh with Russian"
-msgstr ""
+msgstr "Kazahstanščina z Rusščino"
 
 #: ../rules/base.xml.in.h:252
-#, fuzzy
 msgid "Kazakhstan"
-msgstr "Pakistan"
+msgstr "Kazakhstan"
 
 #: ../rules/base.xml.in.h:253
 msgid "Keypad"
-msgstr ""
+msgstr "Tipkovna plošča"
 
 #: ../rules/base.xml.in.h:254
 msgid "Keytronic FlexPro"
@@ -1076,41 +1035,39 @@ msgstr "Keytronic FlexPro"
 
 #: ../rules/base.xml.in.h:255
 msgid "Khm"
-msgstr ""
+msgstr "Khm"
 
 #: ../rules/base.xml.in.h:256
-#, fuzzy
 msgid "Kor"
-msgstr "NOR"
+msgstr "Kor"
 
 #: ../rules/base.xml.in.h:257
 msgid "Korea, Republic of"
-msgstr ""
+msgstr "Koreja, Republika"
 
 #: ../rules/base.xml.in.h:258
-#, fuzzy
 msgid "Korean 106-key"
-msgstr "Japonska tipkovnica s 106 tipkami"
+msgstr "Korejska tipkovnica s 106 tipkami"
 
 #: ../rules/base.xml.in.h:259
 msgid "Kotoistus"
-msgstr ""
+msgstr "Kotoistus"
 
 #: ../rules/base.xml.in.h:260
 msgid "Kurdish, (F)"
-msgstr ""
+msgstr "Kurdščina, (F)"
 
 #: ../rules/base.xml.in.h:261
 msgid "Kurdish, Arabic-Latin"
-msgstr ""
+msgstr "Kurdščina, Arabska-Latinska"
 
 #: ../rules/base.xml.in.h:262
 msgid "Kurdish, Latin Alt-Q"
-msgstr ""
+msgstr "Kurdska, Latinska Alt-Q"
 
 #: ../rules/base.xml.in.h:263
 msgid "Kurdish, Latin Q"
-msgstr ""
+msgstr "Kurdščina, Latinsko Q"
 
 #: ../rules/base.xml.in.h:264
 msgid "Kyr"
@@ -1141,14 +1098,12 @@ msgid "Laptop/notebook Compaq (eg. Presario) Internet Keyboard"
 msgstr "Laptop/notebook Compaq (eg. Presario) Internet Tipkovnica"
 
 #: ../rules/base.xml.in.h:271
-#, fuzzy
 msgid "Laptop/notebook Dell Inspiron 6xxx/8xxx"
-msgstr "Laptop/notebook Dell Inspiron 8xxxw"
+msgstr "Laptop/notebook Dell Inspiron 6xxx/8xxx"
 
 #: ../rules/base.xml.in.h:272
-#, fuzzy
 msgid "Laptop/notebook eMachines m68xx"
-msgstr "Laptop/notebook Dell Inspiron 8xxxw"
+msgstr "Laptop/notebook eMachines m68xx"
 
 #: ../rules/base.xml.in.h:273
 msgid "Latin"
@@ -1171,7 +1126,6 @@ msgid "Latin qwerty"
 msgstr "Latinski qwerty"
 
 #: ../rules/base.xml.in.h:278
-#, fuzzy
 msgid "Latin with guillemets"
 msgstr "Latinska z dvojnimi &lt;&gt; (Guillemots)"
 
@@ -1180,9 +1134,8 @@ msgid "Latvia"
 msgstr "Latvija"
 
 #: ../rules/base.xml.in.h:280
-#, fuzzy
 msgid "Left Alt is swapped with left Win-key."
-msgstr "Meta funkcionalnost prevzame leva Win tipka."
+msgstr "Levi Alt zamenja leva Win tipka."
 
 #: ../rules/base.xml.in.h:281
 msgid "Left Alt key changes group."
@@ -1205,9 +1158,8 @@ msgid "Left Win-key changes group."
 msgstr "Leva Win tipka zamenja skupino."
 
 #: ../rules/base.xml.in.h:286
-#, fuzzy
 msgid "Left Win-key is Compose."
-msgstr "Desna Win tipka je pred-tipka (Compose)"
+msgstr "Leva Win tipka je pred-tipka (Compose)"
 
 #: ../rules/base.xml.in.h:287
 msgid "Left Win-key switches group while pressed."
@@ -1215,7 +1167,7 @@ msgstr "Leva Win tipka zamenja skupino ob stisku."
 
 #: ../rules/base.xml.in.h:288
 msgid "Left handed Dvorak"
-msgstr ""
+msgstr "Levoročni Dvorak"
 
 #: ../rules/base.xml.in.h:289
 msgid "Lithuania"
@@ -1230,9 +1182,8 @@ msgid "Logitech Cordless Desktop"
 msgstr "Logitech Cordless Desktop"
 
 #: ../rules/base.xml.in.h:292
-#, fuzzy
 msgid "Logitech Cordless Desktop LX-300"
-msgstr "Logitech Cordless Desktop"
+msgstr "Logitech Cordless Desktop LX-300"
 
 #: ../rules/base.xml.in.h:293
 msgid "Logitech Cordless Desktop Navigator"
@@ -1275,9 +1226,8 @@ msgid "Logitech Ultra-X Keyboard"
 msgstr "Logitech Ultra-X Tipkovnica"
 
 #: ../rules/base.xml.in.h:303
-#, fuzzy
 msgid "Logitech diNovo Keyboard"
-msgstr "Logitech Access Tipkovnica"
+msgstr "Logitech diNovo Tipkovnica"
 
 #: ../rules/base.xml.in.h:304
 msgid "Logitech iTouch"
@@ -1288,14 +1238,12 @@ msgid "Logitech iTouch Cordless Keyboard (model Y-RB6)"
 msgstr "Logitech iTouch Brezžična Tipkovnica (model Y-RB6)"
 
 #: ../rules/base.xml.in.h:306
-#, fuzzy
 msgid "Logitech iTouch Internet Navigator Keyboard SE"
-msgstr "Logitech Internet NavigatorTipkovnica"
+msgstr "Logitech Internet NavigatorTipkovnica SE"
 
 #: ../rules/base.xml.in.h:307
-#, fuzzy
 msgid "Logitech iTouch Internet Navigator Keyboard SE (USB)"
-msgstr "Logitech Internet NavigatorTipkovnica"
+msgstr "Logitech Internet NavigatorTipkovnica SE (USB)"
 
 #: ../rules/base.xml.in.h:308
 msgid "Ltu"
@@ -1306,7 +1254,6 @@ msgid "Lva"
 msgstr "LVA"
 
 #: ../rules/base.xml.in.h:310
-#, fuzzy
 msgid "Macedonia"
 msgstr "Makedonija"
 
@@ -1319,24 +1266,20 @@ msgid "Macintosh Old"
 msgstr "Macintosh Old"
 
 #: ../rules/base.xml.in.h:313
-#, fuzzy
 msgid "Macintosh, Sun dead keys"
-msgstr "Nemška, Sun mrtve tipke"
+msgstr "Macintosh, Sun mrtve tipke"
 
 #: ../rules/base.xml.in.h:314
-#, fuzzy
 msgid "Macintosh, eliminate dead keys"
-msgstr "Francoska, izloči mrtve tipke"
+msgstr "Macintosh, izloči mrtve tipke"
 
 #: ../rules/base.xml.in.h:315
-#, fuzzy
 msgid "Make CapsLock an additional Ctrl."
 msgstr "CapsLock je dodatna Ctrl tipka."
 
 #: ../rules/base.xml.in.h:316
-#, fuzzy
 msgid "Mal"
-msgstr "Malta"
+msgstr "Mal"
 
 #: ../rules/base.xml.in.h:317
 msgid "Malayalam"
@@ -1344,7 +1287,7 @@ msgstr "Malajalam"
 
 #: ../rules/base.xml.in.h:318
 msgid "Maldives"
-msgstr ""
+msgstr "Maldivi"
 
 #: ../rules/base.xml.in.h:319
 msgid "Malta"
@@ -1352,7 +1295,7 @@ msgstr "Malta"
 
 #: ../rules/base.xml.in.h:320
 msgid "Maltese keyboard with US layout"
-msgstr ""
+msgstr "Malteška tipkovnica z US naborom"
 
 #: ../rules/base.xml.in.h:321
 msgid "Mao"
@@ -1412,8 +1355,7 @@ msgstr "Microsoft Natural Tipkovnica Pro OEM"
 
 #: ../rules/base.xml.in.h:335
 msgid "Microsoft Natural Keyboard Pro USB / Microsoft Internet Keyboard Pro"
-msgstr ""
-"Microsoft Natural Tipkovnica Pro USB / Microsoft Internet Tipkovnica Pro"
+msgstr "Microsoft Natural Tipkovnica Pro USB / Microsoft Internet Tipkovnica Pro"
 
 #: ../rules/base.xml.in.h:336
 msgid "Microsoft Office Keyboard"
@@ -1452,9 +1394,8 @@ msgid "Multilingual"
 msgstr "Večjezično"
 
 #: ../rules/base.xml.in.h:345
-#, fuzzy
 msgid "Multilingual, first part"
-msgstr "Večjezično, drugi del"
+msgstr "Večjezično, prvi del"
 
 #: ../rules/base.xml.in.h:346
 msgid "Multilingual, second part"
@@ -1466,15 +1407,15 @@ msgstr "Myanmar (Burma)"
 
 #: ../rules/base.xml.in.h:348
 msgid "Neostyle"
-msgstr ""
+msgstr "Neostil"
 
 #: ../rules/base.xml.in.h:349
 msgid "Nep"
-msgstr ""
+msgstr "Nep"
 
 #: ../rules/base.xml.in.h:350
 msgid "Nepal"
-msgstr ""
+msgstr "Nepal"
 
 #: ../rules/base.xml.in.h:351
 msgid "Netherlands"
@@ -1482,7 +1423,7 @@ msgstr "Nizozemska"
 
 #: ../rules/base.xml.in.h:352
 msgid "Nigeria"
-msgstr ""
+msgstr "Nigerija"
 
 #: ../rules/base.xml.in.h:353
 msgid "Nld"
@@ -1513,9 +1454,8 @@ msgid "NumLock LED shows alternative group."
 msgstr "NumLock LED kaže alternativno skupino."
 
 #: ../rules/base.xml.in.h:360
-#, fuzzy
 msgid "Numpad keys work as with Mac."
-msgstr "Shift in številčnica delujeta kot pod MS Okni."
+msgstr "Številčnica deluje kot pod MacOS."
 
 #: ../rules/base.xml.in.h:361
 msgid "Ogham"
@@ -1534,13 +1474,12 @@ msgid "Oriya"
 msgstr "Oriya (Indija)"
 
 #: ../rules/base.xml.in.h:365
-#, fuzzy
 msgid "Ossetian"
-msgstr "Rusija"
+msgstr "Osetija"
 
 #: ../rules/base.xml.in.h:366
 msgid "Ossetian, Winkeys"
-msgstr ""
+msgstr "Osetijščina, Wintipke"
 
 #: ../rules/base.xml.in.h:367
 msgid "PC-98xx Series"
@@ -1556,7 +1495,7 @@ msgstr "Pakistan"
 
 #: ../rules/base.xml.in.h:370
 msgid "Pashto"
-msgstr ""
+msgstr "Pašto"
 
 #: ../rules/base.xml.in.h:371
 msgid "Pattachote"
@@ -1599,17 +1538,14 @@ msgid "Press Menu key to choose 3rd level."
 msgstr "Pritisni menu tipko za izbiro tretjega nivoja."
 
 #: ../rules/base.xml.in.h:381
-#, fuzzy
-msgid ""
-"Press Right Alt key to choose 3rd level, Shift+Right Alt key is Multi_Key."
-msgstr "Pritisni desno Alt tipko za izbiro tretjega nivoja."
+msgid "Press Right Alt key to choose 3rd level, Shift+Right Alt key is Multi_Key."
+msgstr "Pritisni desno Alt tipko za izbiro tretjega nivoja, Shift+Desni Alt predstavlja kombinacijo."
 
 #: ../rules/base.xml.in.h:382
 msgid "Press Right Alt key to choose 3rd level."
 msgstr "Pritisni desno Alt tipko za izbiro tretjega nivoja."
 
 #: ../rules/base.xml.in.h:383
-#, fuzzy
 msgid "Press Right Ctrl to choose 3rd level."
 msgstr "Pritisni desno Ctrl tipko za izbiro tretjega nivoja."
 
@@ -1626,13 +1562,12 @@ msgid "Press any of Win-keys to choose 3rd level."
 msgstr "Pritisni katerokoli Win tipko za izbiro tretjega nivoja."
 
 #: ../rules/base.xml.in.h:387
-#, fuzzy
 msgid "Pro"
-msgstr "POL"
+msgstr "Pro"
 
 #: ../rules/base.xml.in.h:388
 msgid "Pro Keypad"
-msgstr ""
+msgstr "Pro Tipkovnica"
 
 #: ../rules/base.xml.in.h:389
 msgid "Probhat"
@@ -1675,9 +1610,8 @@ msgid "Right Ctrl key switches group while pressed."
 msgstr "Desni Ctrl zamenja skupine ob stisku."
 
 #: ../rules/base.xml.in.h:399
-#, fuzzy
 msgid "Right Ctrl key works as Right Alt."
-msgstr "Desna Ctrl tipka deluje kot desna Alt."
+msgstr "Desna Ctrl tipka deluje kot desni Alt."
 
 #: ../rules/base.xml.in.h:400
 msgid "Right Shift key changes group."
@@ -1697,7 +1631,7 @@ msgstr "Desna Win tipka zamenja skupino ob pritisku."
 
 #: ../rules/base.xml.in.h:404
 msgid "Right handed Dvorak"
-msgstr ""
+msgstr "Desnoročni Dvorak"
 
 #: ../rules/base.xml.in.h:405
 msgid "Romania"
@@ -1737,15 +1671,15 @@ msgstr "Ruska fonetična, Izloči mrtve tipke"
 
 #: ../rules/base.xml.in.h:414
 msgid "Russian with Kazakh"
-msgstr ""
+msgstr "Ruščina s Kazahstanščino"
 
 #: ../rules/base.xml.in.h:415
 msgid "SCG"
-msgstr ""
+msgstr "SCG"
 
 #: ../rules/base.xml.in.h:416
 msgid "SILVERCREST Multimedia Wireless Keyboard"
-msgstr ""
+msgstr "SILVERCREST Multimedia Wireless tipkovnica"
 
 #: ../rules/base.xml.in.h:417
 msgid "SK-1300"
@@ -1781,7 +1715,7 @@ msgstr "ScrollLock LED kaže alternativno skupino."
 
 #: ../rules/base.xml.in.h:425
 msgid "Serbia and Montenegro"
-msgstr ""
+msgstr "Srbija in Črna gora"
 
 #: ../rules/base.xml.in.h:426
 msgid "Shift with numpad keys works as in MS Windows."
@@ -1801,27 +1735,27 @@ msgstr "Slovenija"
 
 #: ../rules/base.xml.in.h:430
 msgid "South Africa"
-msgstr ""
+msgstr "Južna Afrika"
 
 #: ../rules/base.xml.in.h:431
 msgid "Southern Uzbek"
-msgstr ""
+msgstr "Južno uzbeško"
 
 #: ../rules/base.xml.in.h:432
 msgid "Space key output nobreakspace at fourth level."
-msgstr ""
+msgstr "Preslednica izpiše brezpresledni znak v četrti stopnji."
 
 #: ../rules/base.xml.in.h:433
 msgid "Space key output nobreakspace at second level."
-msgstr ""
+msgstr "Preslednica izpiše brezpresledni znak v drugi stopnji."
 
 #: ../rules/base.xml.in.h:434
 msgid "Space key output nobreakspace at third level."
-msgstr ""
+msgstr "Preslednica izpiše brezpresledni znak v tretji stopnji."
 
 #: ../rules/base.xml.in.h:435
 msgid "Space key output space at any level."
-msgstr ""
+msgstr "Preslednica izpiše brezpresledni znak na vsaki stopnji."
 
 #: ../rules/base.xml.in.h:436
 msgid "Spain"
@@ -1874,13 +1808,12 @@ msgid "Svn"
 msgstr "SVN"
 
 #: ../rules/base.xml.in.h:450
-#, fuzzy
 msgid "Swap Ctrl and CapsLock."
 msgstr "Zamenjaj Ctrl in CapsLock tipki."
 
 #: ../rules/base.xml.in.h:451
 msgid "Swap keycodes of two keys when Mac keyboards are misdetected by kernel."
-msgstr ""
+msgstr "Zamenjaj tipkovne kode dveh tipk ob napačni zaznavi Mac tipkovnic."
 
 #: ../rules/base.xml.in.h:452
 msgid "Swe"
@@ -1939,9 +1872,8 @@ msgid "Tamil Unicode"
 msgstr "Tamilski Unicode"
 
 #: ../rules/base.xml.in.h:466
-#, fuzzy
 msgid "Tatar"
-msgstr "Malta"
+msgstr "Tatar"
 
 #: ../rules/base.xml.in.h:467
 msgid "Telugu"
@@ -1984,9 +1916,8 @@ msgid "Tur"
 msgstr "TUR"
 
 #: ../rules/base.xml.in.h:477
-#, fuzzy
 msgid "Turkey"
-msgstr "TUR"
+msgstr "Turčija"
 
 #: ../rules/base.xml.in.h:478
 msgid "Typewriter"
@@ -1997,19 +1928,16 @@ msgid "U.S. English"
 msgstr "U.S. Angleška"
 
 #: ../rules/base.xml.in.h:480
-#, fuzzy
 msgid "US keyboard with Bosnian digraphs"
-msgstr "US tipkovnica s Romunskimi črkami"
+msgstr "US tipkovnica s Bosanskimi digrafi"
 
 #: ../rules/base.xml.in.h:481
-#, fuzzy
 msgid "US keyboard with Bosnian letters"
-msgstr "US tipkovnica s Romunskimi črkami"
+msgstr "US tipkovnica s Bosanskimi črkami"
 
 #: ../rules/base.xml.in.h:482
-#, fuzzy
 msgid "US keyboard with Croatian digraphs"
-msgstr "US tipkovnica s Hrvaškimi črkami "
+msgstr "US tipkovnica s Hrvaškimi digrafi"
 
 #: ../rules/base.xml.in.h:483
 msgid "US keyboard with Croatian letters"
@@ -2020,14 +1948,12 @@ msgid "US keyboard with Lithuanian letters"
 msgstr "US tipkovnica s Latvijskimi črkami"
 
 #: ../rules/base.xml.in.h:485
-#, fuzzy
 msgid "US keyboard with Slovenian digraphs"
-msgstr "US tipkovnica s Romunskimi črkami"
+msgstr "US tipkovnica s Slovenskimi digrafi"
 
 #: ../rules/base.xml.in.h:486
-#, fuzzy
 msgid "US keyboard with Slovenian letters"
-msgstr "US tipkovnica s Romunskimi črkami"
+msgstr "US tipkovnica s Slovenskimi črkami"
 
 #: ../rules/base.xml.in.h:487
 msgid "USA"
@@ -2055,19 +1981,19 @@ msgstr "Urdu (Indija)"
 
 #: ../rules/base.xml.in.h:493
 msgid "Use Bosnian digraphs"
-msgstr ""
+msgstr "Uporabi bosanske digrafe"
 
 #: ../rules/base.xml.in.h:494
 msgid "Use Croatian digraphs"
-msgstr ""
+msgstr "Uporabi hrvaške digrafe"
 
 #: ../rules/base.xml.in.h:495
 msgid "Use Slovenian digraphs"
-msgstr ""
+msgstr "Uporabi slovenske digrafe"
 
 #: ../rules/base.xml.in.h:496
 msgid "Use guillemets for quotes"
-msgstr ""
+msgstr "Dvojni &lt;&gt; (guillemets) namesto navednic"
 
 #: ../rules/base.xml.in.h:497
 msgid "Use keyboard LED to show alternative group."
@@ -2091,11 +2017,11 @@ msgstr "VNM"
 
 #: ../rules/base.xml.in.h:502
 msgid "Wang model 724 azerty"
-msgstr ""
+msgstr "Wang model 724 azerty"
 
 #: ../rules/base.xml.in.h:503
 msgid "Western"
-msgstr ""
+msgstr "Zahodni"
 
 #: ../rules/base.xml.in.h:504
 msgid "Winbook Model XP5"
@@ -2110,7 +2036,6 @@ msgid "With &lt;\\|&gt; key"
 msgstr "Z &lt;\\|&gt; tipkami"
 
 #: ../rules/base.xml.in.h:507
-#, fuzzy
 msgid "With guillemets"
 msgstr "Z dvojnimi &lt;&gt; (Guillemots)"
 
@@ -2120,7 +2045,7 @@ msgstr "Yahoo! Internet Tipkovnica"
 
 #: ../rules/base.xml.in.h:509
 msgid "Yoruba"
-msgstr ""
+msgstr "Joruba"
 
 #: ../rules/base.xml.in.h:510
 msgid "Z and ZHE swapped"
@@ -2128,7 +2053,7 @@ msgstr "Z in ZHE zamenjani"
 
 #: ../rules/base.xml.in.h:511
 msgid "Zar"
-msgstr ""
+msgstr "Zar"
 
 #: ../rules/base.xml.in.h:512
 msgid "azerty"
@@ -2162,25 +2087,6 @@ msgstr "qwerty/cifre"
 msgid "qwertz"
 msgstr "qwertz"
 
-#, fuzzy
-#~ msgid "Macintosh layout"
-#~ msgstr "Macintosh Old"
-
-#~ msgid "Logitech Deluxe Access Keyboard"
-#~ msgstr "Logitech Deluxe Access Tipkovnica"
-
-#~ msgid "Logitech iTouch keyboard Internet Navigator"
-#~ msgstr "Logitech iTouch tipkovnica Internet Navigator"
-
-#~ msgid "Turkish"
-#~ msgstr "Turško"
-
-#~ msgid "US keyboard with Maltian letters"
-#~ msgstr "US tipkovnica s Malteškimi črkami"
-
-#~ msgid "si1452"
-#~ msgstr "si1452"
-
 #~ msgid "\"Standard\""
 #~ msgstr "\"Standard\""
 
@@ -2190,6 +2096,12 @@ msgstr "qwertz"
 #~ msgid "Div"
 #~ msgstr "DIV"
 
+#~ msgid "Logitech Deluxe Access Keyboard"
+#~ msgstr "Logitech Deluxe Access Tipkovnica"
+
+#~ msgid "Logitech iTouch keyboard Internet Navigator"
+#~ msgstr "Logitech iTouch tipkovnica Internet Navigator"
+
 #~ msgid "Serbian"
 #~ msgstr "Srbsko"
 
@@ -2198,3 +2110,12 @@ msgstr "qwertz"
 
 #~ msgid "Tamil INSCRIPT"
 #~ msgstr "Tamilski Inskript"
+
+#~ msgid "Turkish"
+#~ msgstr "Turško"
+
+#~ msgid "US keyboard with Maltian letters"
+#~ msgstr "US tipkovnica s Malteškimi črkami"
+
+#~ msgid "si1452"
+#~ msgstr "si1452"

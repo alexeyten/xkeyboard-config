@@ -5,7 +5,7 @@
 // Adds suport for dead-keys in I18N applications
 // by Conectiva  (http://www.conectiva.com.br)"
 //
-// $XKeyboardConfig: xkbdesc/symbols/br,v 1.9 2006/04/08 01:18:27 svu Exp $
+// $XKeyboardConfig: xkeyboard-config/symbols/br,v 1.10 2006-11-20 19:18:02 svu Exp $
 // $XdotOrg: xc/programs/xkbcomp/symbols/br,v 1.1.4.3 2004/03/05 13:41:32 eich Exp $
 // $XFree86: xc/programs/xkbcomp/symbols/br,v 1.3 2003/04/19 12:22:11 pascal Exp $
 
@@ -35,7 +35,7 @@ xkb_symbols "abnt2" {
 
     key <TLDE>	{ [apostrophe,   quotedbl,      notsign,      notsign ]	};
 
-    key <AC13>	{ [ backslash,        bar,    masculine,   dead_breve ]	};
+    key <LSGT>	{ [ backslash,        bar,    masculine,   dead_breve ]	};
     key <AB03>	{ [         c,          C,    copyright,    copyright ]	};
     key <AB07>  { [         m,          M,           mu,           mu ] };
     key <AB10>	{ [ semicolon,    colon, dead_belowdot, dead_abovedot ]	};

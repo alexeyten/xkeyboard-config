@@ -1,4 +1,4 @@
-// $XKeyboardConfig: xkbdesc/symbols/us,v 1.22 2006/10/09 21:37:13 svu Exp $
+// $XKeyboardConfig: xkeyboard-config/symbols/us,v 1.27 2007-03-06 22:58:42 svu Exp $
 
 //
 // $XdotOrg: xc/programs/xkbcomp/symbols/us,v 1.1.4.3 2004/03/05 13:41:33 eich Exp $
@@ -64,6 +64,18 @@ xkb_symbols "basic" {
     // End alphanumeric section
 };
 
+partial alphanumeric_keys
+xkb_symbols "euro" {
+
+    name[Group1]= "U.S. English - With EuroSign on 5";
+
+    include "us(basic)"
+
+    include "eurosign(5)"
+
+    include "level3(ralt_switch)"
+};
+
 
 partial alphanumeric_keys
 xkb_symbols "intl" {
@@ -103,6 +115,7 @@ xkb_symbols "intl" {
     key <AC01> { [	   a,          A,        aacute,           Aacute ] };
     key <AC02> { [	   s,          S,        ssharp,          section ] };
     key <AC03> { [	   d,          D,           eth,              ETH ] };
+    key <AC08> { [	   k,          K,            oe,               OE ] };
 
     key <AC09> { [	   l,          L,        oslash,         Ooblique ] };
     key <AC10> { [ semicolon,      colon,     paragraph,           degree ] };
@@ -235,6 +248,8 @@ xkb_symbols "dvorak" {
     key <AB08> { [	    w,	W		]	};
     key <AB09> { [	    v,	V		]	};
     key <AB10> { [	    z,	Z		]	};
+
+    key <BKSL> { [  backslash,  bar             ]       };
 };
 
 // Left and right handed dvorak layouts
@@ -427,6 +442,7 @@ xkb_symbols "dvorak-classic" {
     key <AB08> { [	    w,	W		]	};
     key <AB09> { [	    v,	V		]	};
     key <AB10> { [	    z,	Z		]	};
+    key <BKSL> { [  backslash,  bar             ]       };
 };
 
 // phonetic layout for Russian letters on an US keyboard

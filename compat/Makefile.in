@@ -46,7 +46,7 @@ ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
 am__aclocal_m4_deps = $(top_srcdir)/configure.in
 am__configure_deps = $(am__aclocal_m4_deps) $(CONFIGURE_DEPENDENCIES) \
 	$(ACLOCAL_M4)
-mkinstalldirs = $(SHELL) $(top_srcdir)/mkinstalldirs
+mkinstalldirs = $(install_sh) -d
 CONFIG_CLEAN_FILES =
 SOURCES =
 DIST_SOURCES =
@@ -63,20 +63,29 @@ DATA = $(dist_compat_DATA) $(dist_dir_DATA)
 DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
 ACLOCAL = @ACLOCAL@
 ALL_LINGUAS = @ALL_LINGUAS@
+AMDEP_FALSE = @AMDEP_FALSE@
+AMDEP_TRUE = @AMDEP_TRUE@
 AMTAR = @AMTAR@
 AUTOCONF = @AUTOCONF@
 AUTOHEADER = @AUTOHEADER@
 AUTOMAKE = @AUTOMAKE@
 AWK = @AWK@
+CC = @CC@
+CCDEPMODE = @CCDEPMODE@
+CFLAGS = @CFLAGS@
+CPPFLAGS = @CPPFLAGS@
 CREATE_RULES_SYMLINK_FALSE = @CREATE_RULES_SYMLINK_FALSE@
 CREATE_RULES_SYMLINK_TRUE = @CREATE_RULES_SYMLINK_TRUE@
 CREATE_XKBCOMP_SYMLINK_FALSE = @CREATE_XKBCOMP_SYMLINK_FALSE@
 CREATE_XKBCOMP_SYMLINK_TRUE = @CREATE_XKBCOMP_SYMLINK_TRUE@
 CYGPATH_W = @CYGPATH_W@
+DATADIRNAME = @DATADIRNAME@
 DEFS = @DEFS@
+DEPDIR = @DEPDIR@
 ECHO_C = @ECHO_C@
 ECHO_N = @ECHO_N@
 ECHO_T = @ECHO_T@
+EXEEXT = @EXEEXT@
 INSTALL_DATA = @INSTALL_DATA@
 INSTALL_PROGRAM = @INSTALL_PROGRAM@
 INSTALL_SCRIPT = @INSTALL_SCRIPT@
@@ -107,6 +116,7 @@ INTLTOOL_XAM_RULE = @INTLTOOL_XAM_RULE@
 INTLTOOL_XGETTEXT = @INTLTOOL_XGETTEXT@
 INTLTOOL_XML_NOMERGE_RULE = @INTLTOOL_XML_NOMERGE_RULE@
 INTLTOOL_XML_RULE = @INTLTOOL_XML_RULE@
+LDFLAGS = @LDFLAGS@
 LIBOBJS = @LIBOBJS@
 LIBS = @LIBS@
 LTLIBOBJS = @LTLIBOBJS@
@@ -114,6 +124,7 @@ MAINT = @MAINT@
 MAINTAINER_MODE_FALSE = @MAINTAINER_MODE_FALSE@
 MAINTAINER_MODE_TRUE = @MAINTAINER_MODE_TRUE@
 MAKEINFO = @MAKEINFO@
+OBJEXT = @OBJEXT@
 PACKAGE = @PACKAGE@
 PACKAGE_BUGREPORT = @PACKAGE_BUGREPORT@
 PACKAGE_NAME = @PACKAGE_NAME@
@@ -128,7 +139,12 @@ USE_COMPAT_RULES_FALSE = @USE_COMPAT_RULES_FALSE@
 USE_COMPAT_RULES_TRUE = @USE_COMPAT_RULES_TRUE@
 VERSION = @VERSION@
 XKBCOMP = @XKBCOMP@
+ac_ct_CC = @ac_ct_CC@
+am__fastdepCC_FALSE = @am__fastdepCC_FALSE@
+am__fastdepCC_TRUE = @am__fastdepCC_TRUE@
+am__include = @am__include@
 am__leading_dot = @am__leading_dot@
+am__quote = @am__quote@
 am__tar = @am__tar@
 am__untar = @am__untar@
 bindir = @bindir@
@@ -184,9 +200,9 @@ $(srcdir)/Makefile.in: @MAINTAINER_MODE_TRUE@ $(srcdir)/Makefile.am $(top_srcdir
 	      exit 1;; \
 	  esac; \
 	done; \
-	echo ' cd $(top_srcdir) && $(AUTOMAKE) --foreign  compat/Makefile'; \
+	echo ' cd $(top_srcdir) && $(AUTOMAKE) --gnu  compat/Makefile'; \
 	cd $(top_srcdir) && \
-	  $(AUTOMAKE) --foreign  compat/Makefile
+	  $(AUTOMAKE) --gnu  compat/Makefile
 .PRECIOUS: Makefile
 Makefile: $(srcdir)/Makefile.in $(top_builddir)/config.status
 	@case '$?' in \
@@ -366,7 +382,7 @@ uninstall-am: uninstall-dist_compatDATA uninstall-dist_dirDATA \
 
 $(subdir).dir:
 	-rm -f $@
-	$(XKBCOMP) -lfhlpR -o $@ '*'
+	here=$$(pwd); cd $(srcdir) && $(XKBCOMP) -lfhlpR -o $${here}/$@ '*'
 # Tell versions [3.59,3.63) of GNU make to not export all variables.
 # Otherwise a system limit (for SysV at least) may be exceeded.
 .NOEXPORT:

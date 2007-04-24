@@ -1,4 +1,4 @@
-// $XKeyboardConfig: xkbdesc/symbols/level3,v 1.14 2006/10/09 21:53:27 svu Exp $
+// $XKeyboardConfig: xkeyboard-config/symbols/level3,v 1.16 2006-12-19 00:18:37 svu Exp $
 
 // these variants assign various XKB keycodes to ISO_Level3_Shift so that
 // the third shift level can be reached
@@ -14,7 +14,26 @@ xkb_symbols "ralt_switch" {
     type[Group1]="ONE_LEVEL",
     symbols[Group1] = [ ISO_Level3_Shift ]
     };
-  modifier_map Mod5   { <RALT> };
+  modifier_map Mod5   { ISO_Level3_Shift };
+};
+
+// Right Alt key never chooses 3rd level.
+// This option attempts to undo the effect of a layout's
+// including ralt_switch.  You may also want to select another
+// level3 option that maps the level3 shift to some other key.
+partial modifier_keys
+xkb_symbols "ralt_alt" {
+  key <RALT> { 
+    type[Group1]="TWO_LEVEL",
+    type[Group2]="TWO_LEVEL",
+    type[Group3]="TWO_LEVEL",
+    type[Group4]="TWO_LEVEL",
+    symbols[Group1] = [ Alt_R, Meta_R ], 
+    symbols[Group2] = [ Alt_R, Meta_R ], 
+    symbols[Group3] = [ Alt_R, Meta_R ], 
+    symbols[Group4] = [ Alt_R, Meta_R ]
+    };
+  modifier_map Mod1    { <RALT> };
 };
 
 partial modifier_keys
@@ -66,7 +85,7 @@ xkb_symbols "switch" {
     type[Group1]="ONE_LEVEL",
     symbols[Group1] = [ ISO_Level3_Shift ]
     };
-  modifier_map Mod5   { <RCTL> };
+  modifier_map Mod5   { ISO_Level3_Shift };
 };
 
 // using the level(menu_switch) map, the Menu key temporarily
@@ -77,7 +96,7 @@ xkb_symbols "menu_switch" {
     type[Group1]="ONE_LEVEL",
     symbols[Group1] = [ ISO_Level3_Shift ]
     };
-  modifier_map Mod5   { <MENU> };
+  modifier_map Mod5   { ISO_Level3_Shift };
 };
 
 // using the level3(win_switch) map, the either Windows' logo key
@@ -96,7 +115,7 @@ xkb_symbols "lwin_switch" {
     type[Group1]="ONE_LEVEL",
     symbols[Group1] = [ ISO_Level3_Shift ]
     };
-  modifier_map Mod5   { <LWIN> };
+  modifier_map Mod5   { ISO_Level3_Shift };
 };
 
 // using the level(rwin_switch) map, the right Windows' logo key
@@ -109,7 +128,7 @@ xkb_symbols "rwin_switch" {
     type[Group1]="ONE_LEVEL",
     symbols[Group1] = [ ISO_Level3_Shift ]
     };
-  modifier_map Mod5   { <RWIN> };
+  modifier_map Mod5   { ISO_Level3_Shift };
 };
 
 // using the level3(enter_switch) map, the Enter key on the keypad
@@ -121,5 +140,5 @@ xkb_symbols "enter_switch" {
     type[Group1]="ONE_LEVEL",
     symbols[Group1] = [ ISO_Level3_Shift ]
     };
-  modifier_map Mod5   { <KPEN> };
+  modifier_map Mod5   { ISO_Level3_Shift };
 };

@@ -3,11 +3,11 @@ is selected with an Apple laptop.
 
 Not submitted upstream.
 
-Index: xkb-data/rules/base.o_s.part
+Index: xkb-data-experimental/rules/base.o_s.part
 ===================================================================
---- xkb-data.orig/rules/base.o_s.part
-+++ xkb-data/rules/base.o_s.part
-@@ -39,6 +39,7 @@
+--- xkb-data-experimental.orig/rules/base.o_s.part
++++ xkb-data-experimental/rules/base.o_s.part
+@@ -42,6 +42,7 @@
    lv3:win_switch	=	+level3(win_switch)
    lv3:lwin_switch	=	+level3(lwin_switch)
    lv3:rwin_switch	=	+level3(rwin_switch)
@@ -15,11 +15,11 @@ Index: xkb-data/rules/base.o_s.part
    caps:capslock		=	+capslock(capslock)
    caps:shiftlock	=	+capslock(shiftlock)
    caps:grouplock	=	+capslock(grouplock)
-Index: xkb-data/symbols/level3
+Index: xkb-data-experimental/symbols/level3
 ===================================================================
---- xkb-data.orig/symbols/level3
-+++ xkb-data/symbols/level3
-@@ -115,7 +115,7 @@
+--- xkb-data-experimental.orig/symbols/level3
++++ xkb-data-experimental/symbols/level3
+@@ -134,7 +134,7 @@
  // using the level3(enter_switch) map, the Enter key on the keypad
  // temporarily chooses the third shift level.  This is especially
  // useful for Mac laptops which miss the right Alt key.
@@ -28,12 +28,12 @@ Index: xkb-data/symbols/level3
  xkb_symbols "enter_switch" {
    key <KPEN> {
      type[Group1]="ONE_LEVEL",
-Index: xkb-data/rules/base.xml.in
+Index: xkb-data-experimental/rules/base.xml.in
 ===================================================================
---- xkb-data.orig/rules/base.xml.in
-+++ xkb-data/rules/base.xml.in
-@@ -3108,6 +3108,12 @@
-           <_description>Press Right Alt key to choose 3rd level, Shift+Right Alt key is Multi_Key.</_description>
+--- xkb-data-experimental.orig/rules/base.xml.in
++++ xkb-data-experimental/rules/base.xml.in
+@@ -3288,6 +3288,12 @@
+           <_description>Right Alt key never chooses 3rd level.</_description>
          </configItem>
        </option>
 +      <option>

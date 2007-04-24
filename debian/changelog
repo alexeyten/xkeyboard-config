@@ -1,9 +1,9 @@
-xkeyboard-config (0.9-5) unstable; urgency=low
+xkeyboard-config (0.9+cvs.20070424-1) experimental; urgency=low
 
   * Add myself to Uploaders. (Closes: #401777)
-  * Backport fixes:
-     + uz.diff: fix Uzbek layout. (Closes: #412528)
-     + compat-misc.diff: fix typo. (Closes: #412352)
+  * CVS Snapshot from April 24 2007:
+     + fix Uzbek layout. (Closes: #412528)
+     + fix typo in compat/misc. (Closes: #412352)
 
  -- Mohammed Adnène Trojette <adn+deb@diwi.org>  Sat, 21 Apr 2007 23:47:20 +0200
 

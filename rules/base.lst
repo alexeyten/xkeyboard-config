@@ -44,7 +44,10 @@
   ipaq            Compaq iPaq Keyboard
   dell            Dell
   dellusbmm       Dell USB Multimedia Keybard
-  inspiron        Laptop/notebook Dell Inspiron 6xxx/8xxx
+  inspiron        Dell Laptop/notebook Inspiron 6xxx/8xxx
+  precision_m     Dell Laptop/notebook Precision M series
+  sk8125          Dell SK-8125 USB Multimedia Keybard
+  sk8135          Dell SK-8135 USB Multimedia Keybard
   dexxa           Dexxa Wireless Desktop Keyboard
   diamond         Diamond 9801 / 9802 series
   dtk2000         DTK2000
@@ -54,6 +57,7 @@
   geniuscomfy2    Genius Comfy KB-21e-Scroll
   geniuskb19e     Genius KB-19e NB
   gyration        Gyration
+  logitech_g15    Logitech G15 extra keys via G15daemon
   hpi6            Hewlett-Packard Internet Keyboard
   hp2501          Hewlett-Packard SK-2501 Multimedia Keyboard
   hp2505          Hewlett-Packard SK-2505 Internet Keyboard
@@ -118,7 +122,6 @@
   macbook79       MacBook/MacBook Pro (Intl)
   macintosh       Macintosh
   macintosh_old   Macintosh Old
-  powerpcps2      PowerPC PS/2
   acer_c300       Acer C300
   acer_tm_800     Acer TravelMate 800
   acer_ferrari4k  Acer Ferrari 4000
@@ -128,6 +131,8 @@
   emachines       Laptop/notebook eMachines m68xx
   kr106           Korean 106-key
   evdev           Evdev-managed keyboard
+  benqx730        BenQ X-Touch 730
+  benqx800        BenQ X-Touch 800
 
 ! layout
   us              U.S. English
@@ -144,6 +149,7 @@
   ba              Bosnia and Herzegovina
   br              Brazil
   bg              Bulgaria
+  ma              Morocco
   mm              Myanmar
   ca              Canada
   cd              Congo, Democratic Republic of the
@@ -209,6 +215,7 @@
   ng              Nigeria
 
 ! variant
+  euro            us: With EuroSign on 5
   intl            us: International (with dead keys)
   alt-intl        us: Alternative international (former us_intl)
   dvorak          us: Dvorak
@@ -226,6 +233,7 @@
   qwerty_digits   ara: qwerty/digits
   buckwalter      ara: Buckwalter
   phonetic        am: Phonetic
+  phonetic-alt    am: Alternative Phonetic
   eastern         am: Eastern
   western         am: Western
   eastern-alt     am: Alternative Eastern
@@ -256,6 +264,13 @@
   us              ba: US keyboard with Bosnian letters
   nodeadkeys      br: Eliminate dead keys
   phonetic        bg: Phonetic
+  french          ma: French
+  tifinagh        ma: Tifinagh
+  tifinagh-alt    ma: Tifinagh Alternative
+  tifinagh-alt-phonetic ma: Tifinagh Alternative Phonetic
+  tifinagh-extended ma: Tifinagh Extended
+  tifinagh-phonetic ma: Tifinagh Phonetic
+  tifinagh-extended-phonetic ma: Tifinagh Extended Phonetic
   fr-dvorak       ca: French Dvorak
   fr-legacy       ca: French (legacy)
   multix          ca: Multilingual
@@ -274,6 +289,7 @@
   mac_nodeadkeys  dk: Macintosh, eliminate dead keys
   sundeadkeys     nl: Sun dead keys
   mac             nl: Macintosh
+  std             nl: Standard
   nodeadkeys      ee: Eliminate dead keys
   dvorak          ee: Dvorak
   pro             ir: Pro
@@ -301,7 +317,9 @@
   latin9          fr: (Legacy) Alternative
   latin9_nodeadkeys fr: (Legacy) Alternative, eliminate dead keys
   latin9_sundeadkeys fr: (Legacy) Alternative, Sun dead keys
-  dvorak          fr: Dvorak
+  bepo            fr: Bepo, ergonomic, Dvorak way
+  bepo_latin9     fr: Bepo, ergonomic, Dvorak way, latin-9 only
+  dvorak          fr: (Legacy) Dvorak
   mac             fr: Macintosh
   generic         gh: Multilingual
   akan            gh: Akan
@@ -309,6 +327,9 @@
   fula            gh: Fula
   ga              gh: Ga
   hausa           gh: Hausa
+  azerty_tskapo   ge: AZERTY Tskapo
+  ergonomic       ge: Ergonomic
+  mess            ge: MESS
   ru              ge: Russian
   deadacute       de: Dead acute
   deadgraveacute  de: Dead grave acute
@@ -347,8 +368,11 @@
   mac             is: Macintosh
   lyx             il: lyx
   phonetic        il: Phonetic
+  biblical        il: Biblical Hebrew (Tiro)
   nodeadkeys      it: Eliminate dead keys
   mac             it: Macintosh
+  kana            jp: Kana
+  OADG109A        jp: OADG 109A
   ruskaz          kz: Russian with Kazakh
   kazrus          kz: Kazakh with Russian
   nodeadkeys      latam: Eliminate dead keys
@@ -410,6 +434,7 @@
   rus_nodeadkeys  se: Russian phonetic, eliminate dead keys
   smi             se: Northern Saami
   mac             se: Macintosh
+  svdvorak        se: Svdvorak
   de_nodeadkeys   ch: German, eliminate dead keys
   de_sundeadkeys  ch: German, Sun dead keys
   fr              ch: French
@@ -440,11 +465,13 @@
   intl            gb: International (with dead keys)
   dvorak          gb: Dvorak
   mac             gb: Macintosh
+  latin           uz: Latin
   kr104           kr: 101/104 key Compatible
   CloGaelach      ie: CloGaelach
   UnicodeExpert   ie: UnicodeExpert
   ogam            ie: Ogham
   ogam_is434      ie: Ogham IS434
+  legacy          epo: displaced semicolon and quote (obsolete)
   igbo            ng: Igbo
   yoruba          ng: Yoruba
   hausa           ng: Hausa
@@ -466,6 +493,7 @@
   grp:alts_toggle      Both Alt keys together change group.
   grp:ctrls_toggle     Both Ctrl keys together change group.
   grp:ctrl_shift_toggle Ctrl+Shift changes group.
+  grp:lctrl_lshift_toggle LCtrl+LShift changes group.
   grp:ctrl_alt_toggle  Alt+Ctrl changes group.
   grp:alt_shift_toggle Alt+Shift changes group.
   grp:menu_toggle      Menu key changes group.
@@ -475,6 +503,7 @@
   grp:rshift_toggle    Right Shift key changes group.
   grp:lctrl_toggle     Left Ctrl key changes group.
   grp:rctrl_toggle     Right Ctrl key changes group.
+  grp:sclk_toggle      ScrollLock key changes group.
   lv3                  Third level choosers
   lv3:switch           Press Right Ctrl to choose 3rd level.
   lv3:menu_switch      Press Menu key to choose 3rd level.
@@ -485,6 +514,8 @@
   lv3:lalt_switch      Press Left Alt key to choose 3rd level.
   lv3:ralt_switch      Press Right Alt key to choose 3rd level.
   lv3:ralt_switch_multikey Press Right Alt key to choose 3rd level, Shift+Right Alt key is Multi_Key.
+  lv3:ralt_alt         Right Alt key never chooses 3rd level.
+  lv3:enter_switch     Press Enter key on keypad to choose 3rd level.
   ctrl                 Ctrl key position
   ctrl:nocaps          Make CapsLock an additional Ctrl.
   ctrl:swapcaps        Swap Ctrl and CapsLock.
@@ -508,10 +539,11 @@
   caps:shiftlock       CapsLock toggles Shift so all keys are affected.
   altwin               Alt/Win key behavior
   altwin:menu          Add the standard behavior to Menu key.
-  altwin:meta_alt      Alt and Meta are on the Alt keys (default).
+  altwin:meta_alt      Alt and Meta are on the Alt keys.
+  altwin:ctrl_win      Control is mapped to the Win-keys (and the usual Ctrl keys).
   altwin:meta_win      Meta is mapped to the Win-keys.
   altwin:left_meta_win Meta is mapped to the left Win-key.
-  altwin:super_win     Super is mapped to the Win-keys (default).
+  altwin:super_win     Super is mapped to the Win-keys.
   altwin:hyper_win     Hyper is mapped to the Win-keys.
   altwin:alt_super_win Alt is mapped to the right Win-key and Super to Menu.
   altwin:swap_lalt_lwin Left Alt is swapped with left Win-key.
@@ -536,6 +568,9 @@
   nbsp:none            Space key output space at any level.
   nbsp:level2          Space key output nobreakspace at second level.
   nbsp:level3          Space key output nobreakspace at third level.
+  nbsp:level3s         Space key output nobreakspace at third level, nothing at fourth level.
+  nbsp:level3n         Space key output nobreakspace at third level, thin nobreakspace at fourth level
   nbsp:level4          Space key output nobreakspace at fourth level.
+  nbsp:level4n         Space key output nobreakspace at fourth level, thin nobreakspace at sixth level
   japan                Japanese Keyboard Options
   japan:kana_lock      Kana Lock key is locking

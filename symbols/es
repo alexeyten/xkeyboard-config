@@ -1,4 +1,4 @@
-// $XKeyboardConfig: xkbdesc/symbols/es,v 1.12 2006/10/03 22:47:43 svu Exp $
+// $XKeyboardConfig: xkeyboard-config/symbols/es,v 1.13 2007-01-26 23:02:18 svu Exp $
 
 // based on a keyboard
 // Modified for a real Spanish Keyboard by Jon Tombs
@@ -14,7 +14,7 @@ xkb_symbols "basic" {
 
     key <AE01>	{ [         1,     exclam,          bar,   exclamdown ]	};
     key <AE03>	{ [         3, periodcentered, numbersign,   sterling ]	};
-    key <AE04>	{ [         4,     dollar,   asciitilde,       dollar ]	};
+    key <AE04>	{ [         4,     dollar,   dead_tilde,       dollar ]	};
     key <AE06>	{ [         6,  ampersand,      notsign,  fiveeighths ]	};
     key <AE11>	{ [apostrophe,   question,    backslash, questiondown ]	};
     key <AE12>	{ [exclamdown, questiondown, asciitilde,   asciitilde ]	};
@@ -55,6 +55,7 @@ xkb_symbols "nodeadkeys" {
 
     name[Group1]="Spain - Eliminate dead keys";
 
+    key <AE04>	{ [         4,     dollar,   asciitilde,       dollar ]	};
     key <AD11>	{ [     grave, asciicircum,  bracketleft,      degree ]	};
     key <AD12>	{ [      plus,   asterisk, bracketright,       macron ]	};
     key <AC10>	{ [    ntilde,     Ntilde,   asciitilde,  doubleacute ]	};

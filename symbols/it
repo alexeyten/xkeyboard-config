@@ -1,4 +1,4 @@
-// $XKeyboardConfig: xkbdesc/symbols/it,v 1.8 2006/10/01 21:35:25 svu Exp $
+// $XKeyboardConfig: xkeyboard-config/symbols/it,v 1.10 2006-10-15 21:17:04 svu Exp $
 
 // based on a keyboard map from an 'xkb/symbols/it' file
 // 17 May 2003 Modified by Sebastiano Vigna (vigna@dsi.unimi.it)
@@ -89,7 +89,7 @@ xkb_symbols "mac" {
 
     key <AD01> {	[           q,  Q 		]	};
     key <AD02> {	[	    z,  Z		]	};
-    key <AD03> {	[	    e,  E		]	};
+    key <AD03> {	[	    e,  E,	EuroSign	]	};
     key <AD04> {	[	    r,  R,   registered			] 	};
     key <AD05> {	[	    t,  T		]	};
     key <AD06> {	[	    y,  Y,       Uacute,	ydiaeresis      ] 	};

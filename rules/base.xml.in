@@ -185,7 +185,7 @@
     <model>
       <configItem>
         <name>cherryblueb</name>
-        <description>Cherry CyMotion Master XPress</description>
+        <_description>Cherry CyMotion Master XPress</_description>
       </configItem>
     </model>
     <model>
@@ -275,7 +275,25 @@
     <model>
       <configItem>
         <name>inspiron</name>
-        <_description>Laptop/notebook Dell Inspiron 6xxx/8xxx</_description>
+        <_description>Dell Laptop/notebook Inspiron 6xxx/8xxx</_description>
+      </configItem>
+    </model>
+    <model>
+      <configItem>
+        <name>precision_m</name>
+        <_description>Dell Laptop/notebook Precision M series</_description>
+      </configItem>
+    </model>
+    <model>
+      <configItem>
+        <name>sk8125</name>
+        <_description>Dell SK-8125 USB Multimedia Keybard</_description>
+      </configItem>
+    </model>
+    <model>
+      <configItem>
+        <name>sk8135</name>
+        <_description>Dell SK-8135 USB Multimedia Keybard</_description>
       </configItem>
     </model>
     <model>
@@ -330,6 +348,12 @@
       <configItem>
         <name>gyration</name>
         <_description>Gyration</_description>
+      </configItem>
+    </model>
+    <model>
+      <configItem>
+        <name>logitech_g15</name>
+        <_description>Logitech G15 extra keys via G15daemon</_description>
       </configItem>
     </model>
     <model>
@@ -695,13 +719,13 @@
     <model>
       <configItem>
         <name>macbook78</name>
-        <description>MacBook/MacBook Pro</description>
+        <_description>MacBook/MacBook Pro</_description>
       </configItem>
     </model>
     <model>
       <configItem>
         <name>macbook79</name>
-        <description>MacBook/MacBook Pro (Intl)</description>
+        <_description>MacBook/MacBook Pro (Intl)</_description>
       </configItem>
     </model>
     <model>
@@ -714,12 +738,6 @@
       <configItem>
         <name>macintosh_old</name>
         <_description>Macintosh Old</_description>
-      </configItem>
-    </model>
-    <model>
-      <configItem>
-        <name>powerpcps2</name>
-        <_description>PowerPC PS/2</_description>
       </configItem>
     </model>
     <model>
@@ -776,6 +794,18 @@
 	<_description>Evdev-managed keyboard</_description>
       </configItem>
     </model>
+    <model>
+      <configItem>
+	<name>benqx730</name>
+	<_description>BenQ X-Touch 730</_description>
+      </configItem>
+    </model>
+    <model>
+      <configItem>
+	<name>benqx800</name>
+	<_description>BenQ X-Touch 800</_description>
+      </configItem>
+    </model>
   </modelList>
   <layoutList>
     <layout>
@@ -785,6 +815,12 @@
         <_description>U.S. English</_description>
       </configItem>
       <variantList>
+        <variant>
+          <configItem>
+            <name>euro</name>
+            <_description>With EuroSign on 5</_description>
+          </configItem>
+        </variant>
         <variant>
           <configItem>
             <name>intl</name>
@@ -928,6 +964,12 @@
           <configItem>
             <name>phonetic</name>
             <_description>Phonetic</_description>
+          </configItem>
+        </variant>
+        <variant>
+          <configItem>
+            <name>phonetic-alt</name>
+            <_description>Alternative Phonetic</_description>
           </configItem>
         </variant>
         <variant>
@@ -1186,6 +1228,56 @@
     </layout>
     <layout>
       <configItem>
+        <name>ma</name>
+        <_description>Morocco</_description>
+      </configItem>
+      <variantList>
+        <variant>
+          <configItem>
+            <name>french</name>
+            <_description>French</_description>
+          </configItem>
+        </variant>
+        <variant>
+          <configItem>
+            <name>tifinagh</name>
+            <_description>Tifinagh</_description>
+          </configItem>
+        </variant>
+        <variant>
+          <configItem>
+            <name>tifinagh-alt</name>
+            <_description>Tifinagh Alternative</_description>
+          </configItem>
+        </variant>
+        <variant>
+          <configItem>
+            <name>tifinagh-alt-phonetic</name>
+            <_description>Tifinagh Alternative Phonetic</_description>
+          </configItem>
+        </variant>
+        <variant>
+          <configItem>
+            <name>tifinagh-extended</name>
+            <_description>Tifinagh Extended</_description>
+          </configItem>
+        </variant>
+        <variant>
+          <configItem>
+            <name>tifinagh-phonetic</name>
+            <_description>Tifinagh Phonetic</_description>
+          </configItem>
+        </variant>
+        <variant>
+          <configItem>
+            <name>tifinagh-extended-phonetic</name>
+            <_description>Tifinagh Extended Phonetic</_description>
+          </configItem>
+        </variant>
+      </variantList>
+    </layout>
+    <layout>
+      <configItem>
         <name>mm</name>
         <_shortDescription>Mmr</_shortDescription>
         <_description>Myanmar</_description>
@@ -1349,6 +1441,12 @@
           <configItem>
             <name>mac</name>
             <_description>Macintosh</_description>
+          </configItem>
+        </variant>
+        <variant>
+          <configItem>
+            <name>std</name>
+            <_description>Standard</_description>
           </configItem>
         </variant>
       </variantList>
@@ -1576,8 +1674,20 @@
         </variant>
         <variant>
           <configItem>
+            <name>bepo</name>
+            <_description>Bepo, ergonomic, Dvorak way</_description>
+          </configItem>
+        </variant>
+        <variant>
+          <configItem>
+            <name>bepo_latin9</name>
+            <_description>Bepo, ergonomic, Dvorak way, latin-9 only</_description>
+          </configItem>
+        </variant>
+        <variant>
+          <configItem>
             <name>dvorak</name>
-            <_description>Dvorak</_description>
+            <_description>(Legacy) Dvorak</_description>
           </configItem>
         </variant>
         <variant>
@@ -1640,6 +1750,24 @@
         <_description>Georgia</_description>
       </configItem>
       <variantList>
+        <variant>
+          <configItem>
+            <name>azerty_tskapo</name>
+            <_description>AZERTY Tskapo</_description>
+          </configItem>
+        </variant>
+        <variant>
+          <configItem>
+            <name>ergonomic</name>
+            <_description>Ergonomic</_description>
+          </configItem>
+        </variant>
+        <variant>
+          <configItem>
+            <name>mess</name>
+            <_description>MESS</_description>
+          </configItem>
+        </variant>
         <variant>
           <configItem>
             <name>ru</name>
@@ -1918,6 +2046,12 @@
             <_description>Phonetic</_description>
           </configItem>
         </variant>
+        <variant>
+          <configItem>
+            <name>biblical</name>
+            <_description>Biblical Hebrew (Tiro)</_description>
+          </configItem>
+        </variant>
       </variantList>
     </layout>
     <layout>
@@ -1947,7 +2081,20 @@
         <_shortDescription>Jpn</_shortDescription>
         <_description>Japan</_description>
       </configItem>
-      <variantList/>
+      <variantList>
+        <variant>
+          <configItem>
+            <name>kana</name>
+            <_description>Kana</_description>
+          </configItem>
+        </variant>
+	<variant>
+          <configItem>
+            <name>OADG109A</name>
+            <_description>OADG 109A</_description>
+          </configItem>
+	</variant>
+      </variantList>
     </layout>
     <layout>
       <configItem>
@@ -2497,6 +2644,12 @@
             <_description>Macintosh</_description>
           </configItem>
         </variant>
+        <variant>
+          <configItem>
+            <name>svdvorak</name>
+            <_description>Svdvorak</_description>
+          </configItem>
+        </variant>
       </variantList>
     </layout>
     <layout>
@@ -2758,7 +2911,14 @@
         <_shortDescription>Uzb</_shortDescription>
         <_description>Uzbekistan</_description>
       </configItem>
-      <variantList/>
+      <variantList>
+        <variant>
+          <configItem>
+            <name>latin</name>
+            <_description>Latin</_description>
+          </configItem>
+        </variant>
+      </variantList>
     </layout>
     <layout>
       <configItem>
@@ -2853,6 +3013,14 @@
         <_shortDescription>Epo</_shortDescription>
 	<_description>Esperanto</_description>
       </configItem>
+      <variantList>
+        <variant>
+          <configItem>
+            <name>legacy</name>
+            <_description>displaced semicolon and quote (obsolete)</_description>
+          </configItem>
+        </variant>
+      </variantList>
     </layout>
     <layout>
       <configItem>
@@ -2988,6 +3156,12 @@
       </option>
       <option>
         <configItem>
+          <name>grp:lctrl_lshift_toggle</name>
+          <_description>LCtrl+LShift changes group.</_description>
+        </configItem>
+      </option>
+      <option>
+        <configItem>
           <name>grp:ctrl_alt_toggle</name>
           <_description>Alt+Ctrl changes group.</_description>
         </configItem>
@@ -3102,6 +3276,12 @@
           <_description>Press Right Alt key to choose 3rd level, Shift+Right Alt key is Multi_Key.</_description>
         </configItem>
       </option>
+      <option>
+        <configItem>
+          <name>lv3:ralt_alt</name>
+          <_description>Right Alt key never chooses 3rd level.</_description>
+        </configItem>
+      </option>
     </group>
     <group allowMultipleSelection="false">
       <!-- Tweaking the position of the "Ctrl" key -->
@@ -3169,18 +3349,18 @@
       <!-- Select a keypad type -->
       <configItem>
         <name>keypad</name>
-        <description>Keypad layout selection</description>
+        <_description>Keypad layout selection</_description>
       </configItem>
       <option>
         <configItem>
           <name>keypad:legacy</name>
-          <description>Force standard legacy keypad</description>
+          <_description>Force standard legacy keypad</_description>
        </configItem>
       </option>
       <option>
         <configItem>
           <name>keypad:oss</name>
-          <description>Use keypad with unicode additions (arrows and math operators)</description>
+          <_description>Use keypad with unicode additions (arrows and math operators)</_description>
        </configItem>
       </option>
     </group>
@@ -3250,7 +3430,13 @@
       <option>
         <configItem>
           <name>altwin:meta_alt</name>
-          <_description>Alt and Meta are on the Alt keys (default).</_description>
+          <_description>Alt and Meta are on the Alt keys.</_description>
+        </configItem>
+      </option>
+      <option>
+        <configItem>
+          <name>altwin:ctrl_win</name>
+          <_description>Control is mapped to the Win-keys (and the usual Ctrl keys).</_description>
         </configItem>
       </option>
       <option>
@@ -3268,7 +3454,7 @@
       <option>
         <configItem>
           <name>altwin:super_win</name>
-          <_description>Super is mapped to the Win-keys (default).</_description>
+          <_description>Super is mapped to the Win-keys.</_description>
         </configItem>
       </option>
       <option>
@@ -3420,20 +3606,38 @@
       </option>
       <option>
         <configItem>
+          <name>nbsp:level3s</name>
+          <_description>Space key output nobreakspace at third level, nothing at fourth level.</_description>
+        </configItem>
+      </option>
+      <option>
+        <configItem>
+          <name>nbsp:level3n</name>
+          <_description>Space key output nobreakspace at third level, thin nobreakspace at fourth level</_description>
+        </configItem>
+      </option>
+      <option>
+        <configItem>
           <name>nbsp:level4</name>
           <_description>Space key output nobreakspace at fourth level.</_description>
+        </configItem>
+      </option>
+      <option>
+        <configItem>
+          <name>nbsp:level4n</name>
+          <_description>Space key output nobreakspace at fourth level, thin nobreakspace at sixth level</_description>
         </configItem>
       </option>
     </group>
     <group allowMultipleSelection="true">
       <configItem>
         <name>japan</name>
-        <description>Japanese Keyboard Options</description>
+        <_description>Japanese Keyboard Options</_description>
       </configItem>
       <option>
         <configItem>
           <name>japan:kana_lock</name>
-          <description>Kana Lock key is locking</description>
+          <_description>Kana Lock key is locking</_description>
        </configItem>
       </option>
     </group>

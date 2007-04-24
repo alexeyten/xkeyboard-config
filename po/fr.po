@@ -8,13 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xkeyboard-config 0.9\n"
 "Report-Msgid-Bugs-To: \n"
-<<<<<<< fr.po
-"POT-Creation-Date: 2006-10-02 19:47+0100\n"
-"PO-Revision-Date: 2006-09-20 22:01+0200\n"
-=======
 "POT-Creation-Date: 2006-10-01 23:44+0100\n"
 "PO-Revision-Date: 2006-10-02 23:14+0200\n"
->>>>>>> 1.12
 "Last-Translator: Denis Barbier <barbier@linuxfr.org>\n"
 "Language-Team: French <traduc@traduc.org>\n"
 "MIME-Version: 1.0\n"
@@ -27,23 +22,6 @@ msgid "(F)"
 msgstr "(F)"
 
 #: ../rules/base.xml.in.h:2
-<<<<<<< fr.po
-#, fuzzy
-msgid "(Legacy) Alternative"
-msgstr "Autre"
-
-#: ../rules/base.xml.in.h:3
-#, fuzzy
-msgid "(Legacy) Alternative, Sun dead keys"
-msgstr "Autre, touches mortes Sun"
-
-#: ../rules/base.xml.in.h:4
-#, fuzzy
-msgid "(Legacy) Alternative, eliminate dead keys"
-msgstr "Autre, sans touches mortes"
-
-#: ../rules/base.xml.in.h:5
-=======
 msgid "(Legacy) Alternative"
 msgstr "(Obsolète) Autre"
 
@@ -56,7 +34,6 @@ msgid "(Legacy) Alternative, eliminate dead keys"
 msgstr "(Obsolète) Autre, sans touches mortes"
 
 #: ../rules/base.xml.in.h:5
->>>>>>> 1.12
 msgid "101/104 key Compatible"
 msgstr "Compatible 101/104 touches"
 
@@ -176,19 +153,11 @@ msgstr "Ajouter le comportement standard sur la touche Menu."
 msgid "Adding the EuroSign to certain keys"
 msgstr "Ajout du signe Euro sur certaines touches"
 
-<<<<<<< fr.po
-#: ../rules/base.xml.in.h:35
-msgid "Adding the nobreakspace keysym to space key"
-msgstr ""
-
-#: ../rules/base.xml.in.h:36
-=======
 #: ../rules/base.xml.in.h:35
 msgid "Adding the nobreakspace keysym to space key"
 msgstr "Ajout de l'espace insécable sur la barre d'espace"
 
 #: ../rules/base.xml.in.h:36
->>>>>>> 1.12
 msgid "Advance Scorpius KI"
 msgstr "Advance Scorpius KI"
 
@@ -244,20 +213,11 @@ msgstr "Comportement des touches Alt/Logo"
 msgid "Alternative"
 msgstr "Autre"
 
-<<<<<<< fr.po
-#: ../rules/base.xml.in.h:50
-#, fuzzy
-msgid "Alternative Eastern"
-msgstr "Autre"
-
-#: ../rules/base.xml.in.h:51
-=======
 #: ../rules/base.xml.in.h:50
 msgid "Alternative Eastern"
 msgstr "Orientale, autre variante"
 
 #: ../rules/base.xml.in.h:51
->>>>>>> 1.12
 msgid "Alternative international (former us_intl)"
 msgstr "International (auparavant us_intl)"
 
@@ -269,20 +229,11 @@ msgstr "Autre, touches mortes Sun"
 msgid "Alternative, eliminate dead keys"
 msgstr "Autre, sans touches mortes"
 
-<<<<<<< fr.po
-#: ../rules/base.xml.in.h:54
-#, fuzzy
-msgid "Alternative, latin-9 only"
-msgstr "Autre, sans touches mortes"
-
-#: ../rules/base.xml.in.h:55
-=======
 #: ../rules/base.xml.in.h:54
 msgid "Alternative, latin-9 only"
 msgstr "Autre, latin-9 seulement"
 
 #: ../rules/base.xml.in.h:55
->>>>>>> 1.12
 msgid "And"
 msgstr "And"
 
@@ -354,12 +305,7 @@ msgstr "BTC 9000A"
 msgid "BTC 9001AH"
 msgstr "BTC 9001AH"
 
-<<<<<<< fr.po
 #: ../rules/base.xml.in.h:73
-#, fuzzy
-=======
-#: ../rules/base.xml.in.h:73
->>>>>>> 1.12
 msgid "BTC 9019U"
 msgstr "BTC 9019U"
 
@@ -447,19 +393,11 @@ msgstr "ABNT2 brésilien"
 msgid "Brother Internet Keyboard"
 msgstr "Brother Internet"
 
-<<<<<<< fr.po
-#: ../rules/base.xml.in.h:95
-msgid "Buckwalter"
-msgstr ""
-
-#: ../rules/base.xml.in.h:96
-=======
 #: ../rules/base.xml.in.h:95
 msgid "Buckwalter"
 msgstr "Buckwalter"
 
 #: ../rules/base.xml.in.h:96
->>>>>>> 1.12
 msgid "Bulgaria"
 msgstr "Bulgarie"
 
@@ -511,21 +449,11 @@ msgstr "Verr. maj. agit comme Maj. verrouillé, pour toutes les touches."
 msgid "CapsLock toggles normal capitalization of alphabetic characters."
 msgstr "Verr. maj. utilise la mise en majuscule usuelle des catactères alphabétiques."
 
-<<<<<<< fr.po
 #: ../rules/base.xml.in.h:109
-#, fuzzy
-=======
-#: ../rules/base.xml.in.h:109
->>>>>>> 1.12
 msgid "CapsLock uses internal capitalization. Shift \"pauses\" CapsLock."
 msgstr "Verr. maj. utilise la mise en majuscule interne. Maj. l'annule temporairement."
 
-<<<<<<< fr.po
 #: ../rules/base.xml.in.h:110
-#, fuzzy
-=======
-#: ../rules/base.xml.in.h:110
->>>>>>> 1.12
 msgid "CapsLock uses internal capitalization. Shift doesn't affect CapsLock."
 msgstr "Verr. maj. utilise la mise en majuscule interne. Maj. n'a pas d'effet dessus."
 
@@ -697,20 +625,11 @@ msgstr "Dvorak, guillemets polonais sur la touche « 1/! »"
 msgid "Dvorak, Polish quotes on quotemark key"
 msgstr "Dvorak, guillemets polonais sur la touche des guillemets"
 
-<<<<<<< fr.po
-#: ../rules/base.xml.in.h:153
-#, fuzzy
-msgid "Eastern"
-msgstr "Esperanto"
-
-#: ../rules/base.xml.in.h:154
-=======
 #: ../rules/base.xml.in.h:153
 msgid "Eastern"
 msgstr "Orientale"
 
 #: ../rules/base.xml.in.h:154
->>>>>>> 1.12
 msgid "Eliminate dead keys"
 msgstr "Éliminer les touches mortes"
 
@@ -1006,19 +925,11 @@ msgstr "Autre ISO"
 msgid "Iceland"
 msgstr "Islande"
 
-<<<<<<< fr.po
-#: ../rules/base.xml.in.h:228
-msgid "Igbo"
-msgstr ""
-
-#: ../rules/base.xml.in.h:229
-=======
 #: ../rules/base.xml.in.h:228
 msgid "Igbo"
 msgstr "Igbo"
 
 #: ../rules/base.xml.in.h:229
->>>>>>> 1.12
 msgid "Ind"
 msgstr "Ind"
 
@@ -1038,12 +949,7 @@ msgstr "Inuktitut"
 msgid "Iran"
 msgstr "Iran"
 
-<<<<<<< fr.po
 #: ../rules/base.xml.in.h:234
-#, fuzzy
-=======
-#: ../rules/base.xml.in.h:234
->>>>>>> 1.12
 msgid "Iraq"
 msgstr "Irak"
 
@@ -1059,12 +965,7 @@ msgstr "Irl"
 msgid "Irn"
 msgstr "Irn"
 
-<<<<<<< fr.po
 #: ../rules/base.xml.in.h:238
-#, fuzzy
-=======
-#: ../rules/base.xml.in.h:238
->>>>>>> 1.12
 msgid "Irq"
 msgstr "Irq"
 
@@ -1364,27 +1265,13 @@ msgstr "Apple-Macintosh"
 msgid "Macintosh Old"
 msgstr "Apple-Macintosh ancien"
 
-<<<<<<< fr.po
-#: ../rules/base.xml.in.h:313
-#, fuzzy
-msgid "Macintosh, Sun dead keys"
-msgstr "Allemand, touches mortes Sun"
-=======
 #: ../rules/base.xml.in.h:313
 msgid "Macintosh, Sun dead keys"
 msgstr "Macintosh, touches mortes Sun"
->>>>>>> 1.12
 
-<<<<<<< fr.po
-#: ../rules/base.xml.in.h:314
-#, fuzzy
-msgid "Macintosh, eliminate dead keys"
-msgstr "Disposition Apple-Macintosh, sans touches mortes"
-=======
 #: ../rules/base.xml.in.h:314
 msgid "Macintosh, eliminate dead keys"
 msgstr "Macintosh, sans touches mortes"
->>>>>>> 1.12
 
 #: ../rules/base.xml.in.h:315
 msgid "Make CapsLock an additional Ctrl."
@@ -1534,19 +1421,11 @@ msgstr "Népal"
 msgid "Netherlands"
 msgstr "Pays-Bas"
 
-<<<<<<< fr.po
-#: ../rules/base.xml.in.h:352
-msgid "Nigeria"
-msgstr ""
-
-#: ../rules/base.xml.in.h:353
-=======
 #: ../rules/base.xml.in.h:352
 msgid "Nigeria"
 msgstr "Nigeria"
 
 #: ../rules/base.xml.in.h:353
->>>>>>> 1.12
 msgid "Nld"
 msgstr "Nld"
 
@@ -1658,18 +1537,9 @@ msgstr "La touche Logo de gauche sélectionne le 3e niveau."
 msgid "Press Menu key to choose 3rd level."
 msgstr "La touche Menu sélectionne le 3e niveau."
 
-<<<<<<< fr.po
-#: ../rules/base.xml.in.h:381
-msgid ""
-"Press Right Alt key to choose 3rd level, Shift+Right Alt key is Multi_Key."
-msgstr ""
-"La touche Alt de droite (AltGr) sélectionne le 3e niveau, une touche Maj. et "
-"la touche Atl de droite est la touche Compose."
-=======
 #: ../rules/base.xml.in.h:381
 msgid "Press Right Alt key to choose 3rd level, Shift+Right Alt key is Multi_Key."
 msgstr "La touche Alt de droite (AltGr) sélectionne le 3e niveau, une touche Maj. et la touche Atl de droite est la touche Compose."
->>>>>>> 1.12
 
 #: ../rules/base.xml.in.h:382
 msgid "Press Right Alt key to choose 3rd level."
@@ -1871,25 +1741,6 @@ msgstr "Afrique du Sud"
 msgid "Southern Uzbek"
 msgstr "Ouzbek du Sud"
 
-<<<<<<< fr.po
-#: ../rules/base.xml.in.h:432
-msgid "Space key output nobreakspace at fourth level."
-msgstr ""
-
-#: ../rules/base.xml.in.h:433
-msgid "Space key output nobreakspace at second level."
-msgstr ""
-
-#: ../rules/base.xml.in.h:434
-msgid "Space key output nobreakspace at third level."
-msgstr ""
-
-#: ../rules/base.xml.in.h:435
-msgid "Space key output space at any level."
-msgstr ""
-
-#: ../rules/base.xml.in.h:436
-=======
 #: ../rules/base.xml.in.h:432
 msgid "Space key output nobreakspace at fourth level."
 msgstr "Espace insécable sur le 4e niveau de la barre d'espace."
@@ -1907,7 +1758,6 @@ msgid "Space key output space at any level."
 msgstr "Pas d'espace insécable sur la barre d'espace."
 
 #: ../rules/base.xml.in.h:436
->>>>>>> 1.12
 msgid "Spain"
 msgstr "Espagne"
 
@@ -1961,19 +1811,11 @@ msgstr "Svn"
 msgid "Swap Ctrl and CapsLock."
 msgstr "Interchanger Ctrl et Verr. maj."
 
-<<<<<<< fr.po
-#: ../rules/base.xml.in.h:451
-msgid "Swap keycodes of two keys when Mac keyboards are misdetected by kernel."
-msgstr ""
-
-#: ../rules/base.xml.in.h:452
-=======
 #: ../rules/base.xml.in.h:451
 msgid "Swap keycodes of two keys when Mac keyboards are misdetected by kernel."
 msgstr "Échange les codes de deux touches pour les claviers Mac mal reconnus par le noyau."
 
 #: ../rules/base.xml.in.h:452
->>>>>>> 1.12
 msgid "Swe"
 msgstr "Sué"
 
@@ -2181,15 +2023,7 @@ msgstr "Modèle Wang 724 azerty"
 msgid "Western"
 msgstr "Occidentale"
 
-<<<<<<< fr.po
-#: ../rules/base.xml.in.h:503
-msgid "Western"
-msgstr ""
-
 #: ../rules/base.xml.in.h:504
-=======
-#: ../rules/base.xml.in.h:504
->>>>>>> 1.12
 msgid "Winbook Model XP5"
 msgstr "Winbook Model XP5"
 
@@ -2209,19 +2043,11 @@ msgstr "Avec guillemets"
 msgid "Yahoo! Internet Keyboard"
 msgstr "Yahoo! Internet"
 
-<<<<<<< fr.po
-#: ../rules/base.xml.in.h:509
-msgid "Yoruba"
-msgstr ""
-
-#: ../rules/base.xml.in.h:510
-=======
 #: ../rules/base.xml.in.h:509
 msgid "Yoruba"
 msgstr "Yoruba"
 
 #: ../rules/base.xml.in.h:510
->>>>>>> 1.12
 msgid "Z and ZHE swapped"
 msgstr "Z et ZHE permutés"
 

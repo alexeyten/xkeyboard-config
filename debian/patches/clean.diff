@@ -2,10 +2,10 @@ Let 'make clean' remove generated files.
 
 Not submitted upstream.
 
-Index: xkb-data/rules/compat/Makefile.am
+Index: xkb-data-experimental/rules/compat/Makefile.am
 ===================================================================
---- xkb-data.orig/rules/compat/Makefile.am
-+++ xkb-data/rules/compat/Makefile.am
+--- xkb-data-experimental.orig/rules/compat/Makefile.am
++++ xkb-data-experimental/rules/compat/Makefile.am
 @@ -7,15 +7,17 @@
  
  if USE_COMPAT_RULES
@@ -31,13 +31,13 @@ Index: xkb-data/rules/compat/Makefile.am
  
  EXTRA_DIST=base.lists.part $(transform_files) $(transform_scripts) $(dist_parts)
 +CLEANFILES=$(gen_parts)
-Index: xkb-data/rules/compat/Makefile.in
+Index: xkb-data-experimental/rules/compat/Makefile.in
 ===================================================================
---- xkb-data.orig/rules/compat/Makefile.in
-+++ xkb-data/rules/compat/Makefile.in
-@@ -148,14 +148,17 @@
+--- xkb-data-experimental.orig/rules/compat/Makefile.in
++++ xkb-data-experimental/rules/compat/Makefile.in
+@@ -164,14 +164,17 @@
  transform_files = layoutRename.lst variantRename.lst
- transform_scripts = ln_s.sh lnv_s.sh ml_s.sh mlv_s.sh ml1_s.sh ml1v1_s.sh 
+ transform_scripts = ln_s.sh lnv_s.sh ml_s.sh mlv_s.sh ml1_s.sh ml1v_s.sh ml1v1_s.sh
  dist_parts = base.o_s.part
 -@USE_COMPAT_RULES_FALSE@noinst_SCRIPTS = 
 -@USE_COMPAT_RULES_TRUE@noinst_SCRIPTS = base.l2_s.part base.l3_s.part base.l4_s.part \
@@ -56,7 +56,7 @@ Index: xkb-data/rules/compat/Makefile.in
  all: all-am
  
  .SUFFIXES:
-@@ -244,6 +247,7 @@
+@@ -260,6 +263,7 @@
  mostlyclean-generic:
  
  clean-generic:

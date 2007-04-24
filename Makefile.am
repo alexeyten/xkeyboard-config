@@ -10,11 +10,7 @@ EXTRA_DIST=config.rpath COPYING CREDITS README \
 
 DISTCLEANFILES=intltool-extract intltool-merge intltool-update
 
-dnl ACLOCAL_AMFLAGS = -I m4
-
-install-compiled:
-	rm -f $(DESTDIR)$(xkb_base)/compiled
-	ln -sf /var/lib/xkb $(DESTDIR)$(xkb_base)/compiled
+# ACLOCAL_AMFLAGS = -I m4
 
 if CREATE_XKBCOMP_SYMLINK
 install-xkbcomp:
@@ -25,4 +21,4 @@ install-xkbcomp:
 
 endif
 
-install-data-hook: install-compiled install-xkbcomp
+install-data-hook: install-xkbcomp

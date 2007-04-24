@@ -1,109 +1,106 @@
-# translation of uk1.po to Ukrainian
 # Ukrainian translation to xkeyboard-config
-# Copyright (C) 2002, 2006 Free Software Foundation, Inc.
+# Copyright (C) 2002, 2007 Free Software Foundation, Inc.
 # Sergey V. Udaltsov <svu@users.sourceforge.net>
 #
-# Maxim V. Dziumanenko <mvd@mylinux.com.ua>, 2004-2006.
-# Andriy Rysin <arysin@bcsii.com>, 2006.
+# Maxim V. Dziumanenko <dziumanenko@gmail.com>, 2004-2006.
+# Andriy Rysin <rysin@kde.org>, 2007.
 msgid ""
 msgstr ""
-"Project-Id-Version: uk1\n"
+"Project-Id-Version: xkeyboard-config 0.9\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-10-02 19:47+0100\n"
-"PO-Revision-Date: 2006-08-30 23:39-0400\n"
-"Last-Translator: Andriy Rysin <arysin@bcsii.com>\n"
-"Language-Team: Ukrainian <uk@li.org>\n"
+"POT-Creation-Date: 2006-10-01 23:44+0100\n"
+"PO-Revision-Date: 2007-01-11 23:05-0500\n"
+"Last-Translator: Andriy Rysin <rysin@kde.org>\n"
+"Language-Team: Ukrainian <translation-team-uk@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: KBabel 1.11.4\n"
+"Plural-Forms:  nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 
 #: ../rules/base.xml.in.h:1
 msgid "(F)"
 msgstr "(F)"
 
 #: ../rules/base.xml.in.h:2
-#, fuzzy
 msgid "(Legacy) Alternative"
-msgstr "Альтернативна"
+msgstr "(Застаріла) Альтернативна"
 
 #: ../rules/base.xml.in.h:3
-#, fuzzy
 msgid "(Legacy) Alternative, Sun dead keys"
-msgstr "Альтернативна, сліпі клавіші Sun"
+msgstr "(Застаріла) Альтернативна, Sun (dead keys)"
 
 #: ../rules/base.xml.in.h:4
-#, fuzzy
 msgid "(Legacy) Alternative, eliminate dead keys"
-msgstr "Альтернативна, без сліпих клавіш"
+msgstr "(Застаріла) Альтернативна, вимикати спеціальні клавіші"
 
 #: ../rules/base.xml.in.h:5
 msgid "101/104 key Compatible"
-msgstr "Сумісна з 101/104-клавішними моделями"
+msgstr "Сумісна з 101/104 клавішною"
 
 #: ../rules/base.xml.in.h:6
 msgid "101/qwerty/comma/Dead keys"
-msgstr "101/qwerty/comma/Сліпі клавіші"
+msgstr "101/qwerty/comma/Спеціальні клавіші"
 
 #: ../rules/base.xml.in.h:7
 msgid "101/qwerty/comma/Eliminate dead keys"
-msgstr "101/qwerty/comma/Без сліпих клавіш"
+msgstr "101/qwerty/comma/Вимкнути спеціальні клавіші (dead keys)"
 
 #: ../rules/base.xml.in.h:8
 msgid "101/qwerty/dot/Dead keys"
-msgstr "101/qwerty/dot/Сліпі клавіші"
+msgstr "101/qwerty/dot/Спеціальні клавіші"
 
 #: ../rules/base.xml.in.h:9
 msgid "101/qwerty/dot/Eliminate dead keys"
-msgstr "101/qwerty/dot/Без сліпих клавіш"
+msgstr "101/qwerty/dot/Вимкнути спеціальні клавіші (dead keys)"
 
 #: ../rules/base.xml.in.h:10
 msgid "101/qwertz/comma/Dead keys"
-msgstr "101/qwertz/comma/Сліпі клавіші"
+msgstr "101/qwertz/comma/Спеціальні клавіші"
 
 #: ../rules/base.xml.in.h:11
 msgid "101/qwertz/comma/Eliminate dead keys"
-msgstr "101/qwertz/comma/Без сліпих клавіш"
+msgstr "101/qwertz/comma/Вимкнути спеціальні клавіші (dead keys)"
 
 #: ../rules/base.xml.in.h:12
 msgid "101/qwertz/dot/Dead keys"
-msgstr "101/qwertz/dot/Сліпі клавіші"
+msgstr "101/qwertz/dot/Спеціальні клавіші"
 
 #: ../rules/base.xml.in.h:13
 msgid "101/qwertz/dot/Eliminate dead keys"
-msgstr "101/qwertz/dot/Без сліпих клавіш"
+msgstr "101/qwertz/dot/Вимкнути спеціальні клавіші (dead keys)"
 
 #: ../rules/base.xml.in.h:14
 msgid "102/qwerty/comma/Dead keys"
-msgstr "102/qwerty/comma/Сліпі клавіші"
+msgstr "102/qwerty/comma/Спеціальні клавіші"
 
 #: ../rules/base.xml.in.h:15
 msgid "102/qwerty/comma/Eliminate dead keys"
-msgstr "102/qwerty/comma/Без сліпих клавіш"
+msgstr "102/qwerty/comma/Вимкнути спеціальні клавіші (dead keys)"
 
 #: ../rules/base.xml.in.h:16
 msgid "102/qwerty/dot/Dead keys"
-msgstr "102/qwerty/dot/Сліпі клавіші"
+msgstr "102/qwerty/dot/Спеціальні клавіші"
 
 #: ../rules/base.xml.in.h:17
 msgid "102/qwerty/dot/Eliminate dead keys"
-msgstr "102/qwerty/dot/Без сліпих клавіш"
+msgstr "102/qwerty/dot/Вимкнути спеціальні клавіші (dead keys)"
 
 #: ../rules/base.xml.in.h:18
 msgid "102/qwertz/comma/Dead keys"
-msgstr "102/qwertz/comma/Сліпі клавіші"
+msgstr "102/qwertz/comma/Спеціальні клавіші"
 
 #: ../rules/base.xml.in.h:19
 msgid "102/qwertz/comma/Eliminate dead keys"
-msgstr "102/qwertz/comma/Без сліпих клавіш"
+msgstr "102/qwertz/comma/Вимкнути спеціальні клавіші (dead keys)"
 
 #: ../rules/base.xml.in.h:20
 msgid "102/qwertz/dot/Dead keys"
-msgstr "102/qwertz/dot/Сліпі клавіші"
+msgstr "102/qwertz/dot/Спеціальні клавіші"
 
 #: ../rules/base.xml.in.h:21
 msgid "102/qwertz/dot/Eliminate dead keys"
-msgstr "102/qwertz/dot/Без сліпих клавіш"
+msgstr "102/qwertz/dot/Вимкнути спеціальні клавіші (dead keys)"
 
 #: ../rules/base.xml.in.h:22
 msgid "A4Tech KB-21"
@@ -151,15 +148,15 @@ msgstr "Призначити знак євро на клавішу E."
 
 #: ../rules/base.xml.in.h:33
 msgid "Add the standard behavior to Menu key."
-msgstr "Надає клавіші Menu типову поведінку."
+msgstr "Надає клавіші Menu типову функцію."
 
 #: ../rules/base.xml.in.h:34
 msgid "Adding the EuroSign to certain keys"
-msgstr "Додавання знаку євро до певних клавіш"
+msgstr "Призначити знак євро певним клавішам"
 
 #: ../rules/base.xml.in.h:35
 msgid "Adding the nobreakspace keysym to space key"
-msgstr ""
+msgstr "Призначити символ нерозривного пробілу клавіші пробіл"
 
 #: ../rules/base.xml.in.h:36
 msgid "Advance Scorpius KI"
@@ -191,7 +188,7 @@ msgstr "Alt і Meta на клавішах Alt (типово)."
 
 #: ../rules/base.xml.in.h:43
 msgid "Alt is mapped to the right Win-key and Super to Menu."
-msgstr "Клавіша Alt призначена правій клавіші Win, а Super - клавіші Menu."
+msgstr "Клавіша Alt призначена правій клавіші Win а Super клавіші Menu."
 
 #: ../rules/base.xml.in.h:44
 msgid "Alt+CapsLock changes group."
@@ -211,33 +208,31 @@ msgstr "Alt-Q"
 
 #: ../rules/base.xml.in.h:48
 msgid "Alt/Win key behavior"
-msgstr "Поведінка Alt/Win"
+msgstr "Клавіші Alt/Win"
 
 #: ../rules/base.xml.in.h:49
 msgid "Alternative"
 msgstr "Альтернативна"
 
 #: ../rules/base.xml.in.h:50
-#, fuzzy
 msgid "Alternative Eastern"
-msgstr "Альтернативна"
+msgstr "Альтернативна східна"
 
 #: ../rules/base.xml.in.h:51
 msgid "Alternative international (former us_intl)"
-msgstr "Альтернативна міжнародна (колишня us_intl)"
+msgstr "Альтернативна інтернаціональна (колишня us_intl)"
 
 #: ../rules/base.xml.in.h:52
 msgid "Alternative, Sun dead keys"
-msgstr "Альтернативна, сліпі клавіші Sun"
+msgstr "Альтернативна, Sun (dead keys)"
 
 #: ../rules/base.xml.in.h:53
 msgid "Alternative, eliminate dead keys"
-msgstr "Альтернативна, без сліпих клавіш"
+msgstr "Альтернативна, вимикати спеціальні клавіші"
 
 #: ../rules/base.xml.in.h:54
-#, fuzzy
 msgid "Alternative, latin-9 only"
-msgstr "Альтернативна, без сліпих клавіш"
+msgstr "Альтернативна, лише latin-9"
 
 #: ../rules/base.xml.in.h:55
 msgid "And"
@@ -257,7 +252,7 @@ msgstr "Apple"
 
 #: ../rules/base.xml.in.h:59
 msgid "Apple Laptop"
-msgstr "Лептоп Apple"
+msgstr "Apple Laptop"
 
 #: ../rules/base.xml.in.h:60
 msgid "Ara"
@@ -312,9 +307,8 @@ msgid "BTC 9001AH"
 msgstr "BTC 9001AH"
 
 #: ../rules/base.xml.in.h:73
-#, fuzzy
 msgid "BTC 9019U"
-msgstr "BTC 9001AH"
+msgstr "BTC 9019U"
 
 #: ../rules/base.xml.in.h:74
 msgid "Ban"
@@ -322,7 +316,7 @@ msgstr "Банг"
 
 #: ../rules/base.xml.in.h:75
 msgid "Bangladesh"
-msgstr "Бангладеш"
+msgstr "Бангладеська"
 
 #: ../rules/base.xml.in.h:76
 msgid "Bel"
@@ -330,11 +324,11 @@ msgstr "Бельг"
 
 #: ../rules/base.xml.in.h:77
 msgid "Belarus"
-msgstr "Білорусь"
+msgstr "Білоруська"
 
 #: ../rules/base.xml.in.h:78
 msgid "Belgium"
-msgstr "Бельгія"
+msgstr "Бельгійська"
 
 #: ../rules/base.xml.in.h:79
 msgid "Bengali"
@@ -354,7 +348,7 @@ msgstr "Бут"
 
 #: ../rules/base.xml.in.h:83
 msgid "Bhutan"
-msgstr "Бутан"
+msgstr "Бутанська"
 
 #: ../rules/base.xml.in.h:84
 msgid "Bih"
@@ -370,19 +364,19 @@ msgstr "Боснія та Герцеговина"
 
 #: ../rules/base.xml.in.h:87
 msgid "Both Alt keys together change group."
-msgstr "Обидві клавіші Alt разом міняють групу."
+msgstr "Дві клавіші Alt разом міняють групу."
 
 #: ../rules/base.xml.in.h:88
 msgid "Both Ctrl keys together change group."
-msgstr "Обидві клавіші Ctrl разом міняють групу."
+msgstr "Дві клавіші Ctrl разом міняють групу."
 
 #: ../rules/base.xml.in.h:89
 msgid "Both Shift keys together change group."
-msgstr "Обидві клавіші Shift разом міняють групу."
+msgstr "Дві клавіші Shift разом міняють групу."
 
 #: ../rules/base.xml.in.h:90
 msgid "Both Win-keys switch group while pressed."
-msgstr "Обидві клавіші Win перемикають групу на час натискання."
+msgstr "Дві клавіші Win перемикають групу на час натискання."
 
 #: ../rules/base.xml.in.h:91
 msgid "Bra"
@@ -402,11 +396,11 @@ msgstr "Brother Internet Keyboard"
 
 #: ../rules/base.xml.in.h:95
 msgid "Buckwalter"
-msgstr ""
+msgstr "Buckwalter"
 
 #: ../rules/base.xml.in.h:96
 msgid "Bulgaria"
-msgstr "Болгарія"
+msgstr "Болгарська"
 
 #: ../rules/base.xml.in.h:97
 msgid "Cambodia"
@@ -422,29 +416,27 @@ msgstr "Канадська"
 
 #: ../rules/base.xml.in.h:100
 msgid "Caps Lock is Compose."
-msgstr "Клавіша Menu відповідає Compose."
+msgstr "Клавіша Caps Lock відповідає клавіші Compose"
 
 #: ../rules/base.xml.in.h:101
 msgid "CapsLock LED shows alternative group."
-msgstr "Індикатор Caps Lock показує альтернативну групу."
+msgstr "Індикатор Caps Lock відображає альтернативну групу."
 
 #: ../rules/base.xml.in.h:102
-#, fuzzy
 msgid "CapsLock acts as Shift with locking. Shift \"pauses\" CapsLock."
-msgstr "CapsLock діє як Shift з блокуванням. Shift скасовує CapsLock."
+msgstr "CapsLock діє як Shift з блокуванням. Shift \"призупиняє\" CapsLock."
 
 #: ../rules/base.xml.in.h:103
-#, fuzzy
 msgid "CapsLock acts as Shift with locking. Shift doesn't affect CapsLock."
-msgstr "CapsLock діє як Shift з блокуванням. Shift не скасовує CapsLock."
+msgstr "CapsLock діє як Shift з блокуванням. Shift не впливає на CapsLock."
 
 #: ../rules/base.xml.in.h:104
 msgid "CapsLock just locks the Shift modifier."
-msgstr "CapsLock просто блокує модифікатор Shift."
+msgstr "CapsLock просто блокує модифікатор Shift"
 
 #: ../rules/base.xml.in.h:105
 msgid "CapsLock key behavior"
-msgstr "Поведінка CapsLock"
+msgstr "Клавіша CapsLock"
 
 #: ../rules/base.xml.in.h:106
 msgid "CapsLock key changes group."
@@ -452,27 +444,23 @@ msgstr "Клавіша CapsLock міняє групу."
 
 #: ../rules/base.xml.in.h:107
 msgid "CapsLock toggles Shift so all keys are affected."
-msgstr "CapsLock перемикає Shift і впливає на усі символи."
+msgstr "CapsLock перемикає Shift та впливає на усі символи."
 
 #: ../rules/base.xml.in.h:108
 msgid "CapsLock toggles normal capitalization of alphabetic characters."
-msgstr "CapsLock перемикає нормальну капіталізацію алфавітних символів."
+msgstr "CapsLock перемикає регістр алфавітних символів."
 
 #: ../rules/base.xml.in.h:109
-#, fuzzy
 msgid "CapsLock uses internal capitalization. Shift \"pauses\" CapsLock."
-msgstr ""
-"CapsLock вживає внутрішню капіталізацію літер. Shift скасовує CapsLock."
+msgstr "CapsLock використовує внутрішнє збільшення літер. Shift \"призупиняє\" CapsLock."
 
 #: ../rules/base.xml.in.h:110
-#, fuzzy
 msgid "CapsLock uses internal capitalization. Shift doesn't affect CapsLock."
-msgstr ""
-"CapsLock вживає внутрішню капіталізацію літер. Shift не скасовує CapsLock."
+msgstr "CapsLock використовує внутрішнє збільшення літер. Shift не впливає на CapsLock."
 
 #: ../rules/base.xml.in.h:111
 msgid "Catalan variant with middle-dot L"
-msgstr "Каталонський варіант з середньою L"
+msgstr "Каталонський варіант з L із середньою точкою"
 
 #: ../rules/base.xml.in.h:112
 msgid "Che"
@@ -504,7 +492,7 @@ msgstr "Chicony KB-9885"
 
 #: ../rules/base.xml.in.h:119
 msgid "Classic Dvorak"
-msgstr "Класичний Dvorak"
+msgstr "Класична дворак"
 
 #: ../rules/base.xml.in.h:120
 msgid "CloGaelach"
@@ -536,11 +524,11 @@ msgstr "Розташування клавіші Compose"
 
 #: ../rules/base.xml.in.h:127
 msgid "Congo, Democratic Republic of the"
-msgstr "Конго, демократична республіка"
+msgstr "Конго"
 
 #: ../rules/base.xml.in.h:128
 msgid "Croatia"
-msgstr "Хорватія"
+msgstr "Хорватська"
 
 #: ../rules/base.xml.in.h:129
 msgid "Ctrl key at bottom left"
@@ -548,7 +536,7 @@ msgstr "Клавіша Ctrl знизу зліва"
 
 #: ../rules/base.xml.in.h:130
 msgid "Ctrl key at left of 'A'"
-msgstr "Клавіша Ctrl зліва від 'A'"
+msgstr "Клавіша Ctrl зліва від 'Ф'"
 
 #: ../rules/base.xml.in.h:131
 msgid "Ctrl key position"
@@ -560,7 +548,7 @@ msgstr "Ctrl+Shift змінюють групу."
 
 #: ../rules/base.xml.in.h:133
 msgid "Cyrillic"
-msgstr "Кирилиця"
+msgstr "Кирилічна"
 
 #: ../rules/base.xml.in.h:134
 msgid "Cze"
@@ -568,7 +556,7 @@ msgstr "Чес"
 
 #: ../rules/base.xml.in.h:135
 msgid "Czechia"
-msgstr "Чехія"
+msgstr "Чеська"
 
 #: ../rules/base.xml.in.h:136
 msgid "DRC"
@@ -580,15 +568,15 @@ msgstr "DTK2000"
 
 #: ../rules/base.xml.in.h:138
 msgid "Dead acute"
-msgstr ""
+msgstr "Спец. символ Dead acute"
 
 #: ../rules/base.xml.in.h:139
 msgid "Dead grave acute"
-msgstr ""
+msgstr "Спец. символ Dead grave acute"
 
 #: ../rules/base.xml.in.h:140
 msgid "Default numpad keys."
-msgstr ""
+msgstr "Типові клавіші цифрової клавіатури."
 
 #: ../rules/base.xml.in.h:141
 msgid "Dell"
@@ -596,11 +584,11 @@ msgstr "Dell"
 
 #: ../rules/base.xml.in.h:142
 msgid "Dell 101-key PC"
-msgstr "Dell 101 клавіша для ПК"
+msgstr "Dell 101-клавішна для ПК"
 
 #: ../rules/base.xml.in.h:143
 msgid "Dell Latitude series laptop"
-msgstr "Лептоп моделі Dell Latitude"
+msgstr "Ноутбук Dell Latitude"
 
 #: ../rules/base.xml.in.h:144
 msgid "Dell USB Multimedia Keybard"
@@ -628,24 +616,23 @@ msgstr "Дат"
 
 #: ../rules/base.xml.in.h:150
 msgid "Dvorak"
-msgstr "Dvorak"
+msgstr "Дворак"
 
 #: ../rules/base.xml.in.h:151
 msgid "Dvorak, Polish quotes on key \"1/!\""
-msgstr "Dvorak, польські лапки на клавіші \"1/!\""
+msgstr "Дворак, польські лапки на клавіші \"1/!\""
 
 #: ../rules/base.xml.in.h:152
 msgid "Dvorak, Polish quotes on quotemark key"
-msgstr "Dvorak, польські лапки на клавіші лапок"
+msgstr "Дворак, польські лапки на знаку лапки"
 
 #: ../rules/base.xml.in.h:153
-#, fuzzy
 msgid "Eastern"
-msgstr "Есперанто"
+msgstr "Східна"
 
 #: ../rules/base.xml.in.h:154
 msgid "Eliminate dead keys"
-msgstr "Вилучити сліпі клавіші"
+msgstr "Вилучити спеціальні клавіші (dead keys)"
 
 #: ../rules/base.xml.in.h:155
 msgid "Ennyah DKB-1008"
@@ -673,7 +660,7 @@ msgstr "Естонська"
 
 #: ../rules/base.xml.in.h:161
 msgid "Evdev-managed keyboard"
-msgstr "ґ"
+msgstr "Клавіатура, керована Evdev"
 
 #: ../rules/base.xml.in.h:162
 msgid "Everex STEPnote"
@@ -681,7 +668,7 @@ msgstr "Everex STEPnote"
 
 #: ../rules/base.xml.in.h:163
 msgid "Ewe"
-msgstr "Еве"
+msgstr "Ewe"
 
 #: ../rules/base.xml.in.h:164
 msgid "Extended"
@@ -733,15 +720,15 @@ msgstr "Французька (застаріла)"
 
 #: ../rules/base.xml.in.h:176
 msgid "French Dvorak"
-msgstr "Французька Dvorak"
+msgstr "Французький дворак"
 
 #: ../rules/base.xml.in.h:177
 msgid "French, Sun dead keys"
-msgstr "Французька, Sun зі сліпими клавішами"
+msgstr "Французька, Sun зі спеціальними клавішами"
 
 #: ../rules/base.xml.in.h:178
 msgid "French, eliminate dead keys"
-msgstr "Французька, без сліпих клавіш"
+msgstr "Французька, вимикати спеціальні клавіші (dead keys)"
 
 #: ../rules/base.xml.in.h:179
 msgid "Fula"
@@ -757,23 +744,23 @@ msgstr "Га"
 
 #: ../rules/base.xml.in.h:182
 msgid "Generic 101-key PC"
-msgstr "Звичайна 101 клавіша для ПК"
+msgstr "Звичайна 101-клавішна для ПК"
 
 #: ../rules/base.xml.in.h:183
 msgid "Generic 102-key (Intl) PC"
-msgstr "Звичайна 102 клавіші (міжнар.) для ПК"
+msgstr "Звичайна 102-клавішна для ПК"
 
 #: ../rules/base.xml.in.h:184
 msgid "Generic 104-key PC"
-msgstr "Звичайна 104 клавіш для ПК"
+msgstr "Звичайна 104-клавішна для ПК"
 
 #: ../rules/base.xml.in.h:185
 msgid "Generic 105-key (Intl) PC"
-msgstr "Звичайна 105 клавіш (міжнар.) для ПК"
+msgstr "Звичайна 105-клавішна для ПК"
 
 #: ../rules/base.xml.in.h:186
 msgid "Genius Comfy KB-12e"
-msgstr "Genius Comfy KB-12e"
+msgstr "Genius Comfy KB-21e"
 
 #: ../rules/base.xml.in.h:187
 msgid "Genius Comfy KB-16M / Genius MM Keyboard KWD-910"
@@ -801,11 +788,11 @@ msgstr "Німецька (Macintosh)"
 
 #: ../rules/base.xml.in.h:193
 msgid "German, Sun dead keys"
-msgstr "Німецька Sun зі сліпими клавішами"
+msgstr "Німецька Sun зі спеціальними клавішами"
 
 #: ../rules/base.xml.in.h:194
 msgid "German, eliminate dead keys"
-msgstr "Німецька, без сліпих клавіш"
+msgstr "Німецька, вимикати спеціальні клавіші (dead keys)"
 
 #: ../rules/base.xml.in.h:195
 msgid "Germany"
@@ -813,7 +800,7 @@ msgstr "Німеччина"
 
 #: ../rules/base.xml.in.h:196
 msgid "Gha"
-msgstr "Гана"
+msgstr "Ган"
 
 #: ../rules/base.xml.in.h:197
 msgid "Ghana"
@@ -829,7 +816,7 @@ msgstr "Греція"
 
 #: ../rules/base.xml.in.h:200
 msgid "Group Shift/Lock behavior"
-msgstr "Поведінка зміни групи"
+msgstr "Функція зміни групи"
 
 #: ../rules/base.xml.in.h:201
 msgid "Gujarati"
@@ -837,11 +824,11 @@ msgstr "Гуяраті"
 
 #: ../rules/base.xml.in.h:202
 msgid "Gurmukhi"
-msgstr "Гурмукхі"
+msgstr "Гурмухі"
 
 #: ../rules/base.xml.in.h:203
 msgid "Gyration"
-msgstr "Gyration"
+msgstr "Циклічна зміна"
 
 #: ../rules/base.xml.in.h:204
 msgid "Hausa"
@@ -905,11 +892,11 @@ msgstr "Угорщина"
 
 #: ../rules/base.xml.in.h:219
 msgid "Hyper is mapped to the Win-keys."
-msgstr "Hyper відповідає клавішам Win."
+msgstr "Hyper відповідає клавішам Win"
 
 #: ../rules/base.xml.in.h:220
 msgid "IBM (LST 1205-92)"
-msgstr ""
+msgstr "IBM (LST 1205-92)"
 
 #: ../rules/base.xml.in.h:221
 msgid "IBM Rapid Access"
@@ -928,13 +915,12 @@ msgid "IBM ThinkPad 560Z/600/600E/A22E"
 msgstr "IBM ThinkPad 560Z/600/600E/A22E"
 
 #: ../rules/base.xml.in.h:225
-#, fuzzy
 msgid "IBM ThinkPad 560Z/600/600E/A22E, Intl"
-msgstr "IBM ThinkPad 560Z/600/600E/A22E"
+msgstr "IBM ThinkPad 560Z/600/600E/A22E, Intl"
 
 #: ../rules/base.xml.in.h:226
 msgid "ISO Alternate"
-msgstr "Альтернативна ISO"
+msgstr "Додаткова ISO"
 
 #: ../rules/base.xml.in.h:227
 msgid "Iceland"
@@ -942,7 +928,7 @@ msgstr "Ісландія"
 
 #: ../rules/base.xml.in.h:228
 msgid "Igbo"
-msgstr ""
+msgstr "Igbo"
 
 #: ../rules/base.xml.in.h:229
 msgid "Ind"
@@ -954,11 +940,11 @@ msgstr "Індія"
 
 #: ../rules/base.xml.in.h:231
 msgid "International (with dead keys)"
-msgstr "Міжнародна (зі сліпими клавішами)"
+msgstr "Інтернаціональна (зі спеціальними клавішами)"
 
 #: ../rules/base.xml.in.h:232
 msgid "Inuktitut"
-msgstr "Іннуітська"
+msgstr "Інуктітут"
 
 #: ../rules/base.xml.in.h:233
 msgid "Iran"
@@ -982,7 +968,7 @@ msgstr "Іран"
 
 #: ../rules/base.xml.in.h:238
 msgid "Irq"
-msgstr "Ірак"
+msgstr "Ірк"
 
 #: ../rules/base.xml.in.h:239
 msgid "Isl"
@@ -1010,7 +996,7 @@ msgstr "Японія"
 
 #: ../rules/base.xml.in.h:245
 msgid "Japan (PC-98xx Series)"
-msgstr "Японія (моделі PC-98xx)"
+msgstr "Японська (Моделі PC-98xx)"
 
 #: ../rules/base.xml.in.h:246
 msgid "Japanese 106-key"
@@ -1022,11 +1008,11 @@ msgstr "Япо"
 
 #: ../rules/base.xml.in.h:248
 msgid "Kannada"
-msgstr "Каннадська"
+msgstr "Канадська"
 
 #: ../rules/base.xml.in.h:249
 msgid "Kashubian"
-msgstr "Кашубська"
+msgstr "Кашубинська"
 
 #: ../rules/base.xml.in.h:250
 msgid "Kaz"
@@ -1034,7 +1020,7 @@ msgstr "Каз"
 
 #: ../rules/base.xml.in.h:251
 msgid "Kazakh with Russian"
-msgstr "Казахська з російською"
+msgstr "Казахська з російськими"
 
 #: ../rules/base.xml.in.h:252
 msgid "Kazakhstan"
@@ -1042,7 +1028,7 @@ msgstr "Казахстан"
 
 #: ../rules/base.xml.in.h:253
 msgid "Keypad"
-msgstr "Додаткова панель"
+msgstr "Keypad"
 
 #: ../rules/base.xml.in.h:254
 msgid "Keytronic FlexPro"
@@ -1050,7 +1036,7 @@ msgstr "Keytronic FlexPro"
 
 #: ../rules/base.xml.in.h:255
 msgid "Khm"
-msgstr "Кхм"
+msgstr "Khm"
 
 #: ../rules/base.xml.in.h:256
 msgid "Kor"
@@ -1058,32 +1044,31 @@ msgstr "Кор"
 
 #: ../rules/base.xml.in.h:257
 msgid "Korea, Republic of"
-msgstr "Республіка Корея"
+msgstr "Корея (південна)"
 
 #: ../rules/base.xml.in.h:258
 msgid "Korean 106-key"
-msgstr "Корейська 106-клавішна"
+msgstr "Японська 106-клавішна"
 
 #: ../rules/base.xml.in.h:259
 msgid "Kotoistus"
-msgstr ""
+msgstr "Котоістус"
 
 #: ../rules/base.xml.in.h:260
 msgid "Kurdish, (F)"
 msgstr "Курдська, (F)"
 
 #: ../rules/base.xml.in.h:261
-#, fuzzy
 msgid "Kurdish, Arabic-Latin"
-msgstr "Курдська, Латинська Q"
+msgstr "Курдська, арабсько-латинська"
 
 #: ../rules/base.xml.in.h:262
 msgid "Kurdish, Latin Alt-Q"
-msgstr "Курдська, Латинська Alt-Q"
+msgstr "Курдська, Latin Alt-Q"
 
 #: ../rules/base.xml.in.h:263
 msgid "Kurdish, Latin Q"
-msgstr "Курдська, Латинська Q"
+msgstr "Курдська, Latin Q"
 
 #: ../rules/base.xml.in.h:264
 msgid "Kyr"
@@ -1107,7 +1092,7 @@ msgstr "Лаос"
 
 #: ../rules/base.xml.in.h:269
 msgid "Laptop/notebook Compaq (eg. Armada) Laptop Keyboard"
-msgstr "Клавіатура для лептопів/ноутбуків Compaq (напр., Armada)"
+msgstr "Клавіатура для комп'ютерів Compaq (напр., Armada)"
 
 #: ../rules/base.xml.in.h:270
 msgid "Laptop/notebook Compaq (eg. Presario) Internet Keyboard"
@@ -1115,11 +1100,11 @@ msgstr "Інтернет-клавіатура для ноутбуків Compaq (
 
 #: ../rules/base.xml.in.h:271
 msgid "Laptop/notebook Dell Inspiron 6xxx/8xxx"
-msgstr "Лептоп/ноутбук Dell Inspiron 6xxx/8xxx"
+msgstr "Ноутбуки Dell Inspiron 6xxx/8xxx"
 
 #: ../rules/base.xml.in.h:272
 msgid "Laptop/notebook eMachines m68xx"
-msgstr "Лептоп/ноутбук eMachines m68xx"
+msgstr "Ноутбуки eMachines m68xx"
 
 #: ../rules/base.xml.in.h:273
 msgid "Latin"
@@ -1131,18 +1116,17 @@ msgstr "Латиноамериканська"
 
 #: ../rules/base.xml.in.h:275
 msgid "Latin Unicode"
-msgstr "Латинська Unicode"
+msgstr "Латинь Unicode"
 
 #: ../rules/base.xml.in.h:276
 msgid "Latin Unicode qwerty"
-msgstr "Латинська Unicode (qwerty)"
+msgstr "Латинь Unicode (qwerty)"
 
 #: ../rules/base.xml.in.h:277
 msgid "Latin qwerty"
-msgstr "Латинська (qwerty)"
+msgstr "Латинь (qwerty)"
 
 #: ../rules/base.xml.in.h:278
-#, fuzzy
 msgid "Latin with guillemets"
 msgstr "Латинська з кутовими лапками"
 
@@ -1151,9 +1135,8 @@ msgid "Latvia"
 msgstr "Латвія"
 
 #: ../rules/base.xml.in.h:280
-#, fuzzy
 msgid "Left Alt is swapped with left Win-key."
-msgstr "Клавіша Meta відповідає лівій клавіші Win"
+msgstr "Ліва Alt міняється з лівою клавішею Win"
 
 #: ../rules/base.xml.in.h:281
 msgid "Left Alt key changes group."
@@ -1165,11 +1148,11 @@ msgstr "Ліва клавіша Alt перемикає групу при нат�
 
 #: ../rules/base.xml.in.h:283
 msgid "Left Ctrl key changes group."
-msgstr "Ліва клавіша Ctrl перемикає розкладку."
+msgstr "Ліва клавіша Ctrl перемикає групу."
 
 #: ../rules/base.xml.in.h:284
 msgid "Left Shift key changes group."
-msgstr "Ліва клавіша Shift перемикає розкладку."
+msgstr "Ліва клавіша Shift перемикає групу."
 
 #: ../rules/base.xml.in.h:285
 msgid "Left Win-key changes group."
@@ -1177,7 +1160,7 @@ msgstr "Ліва клавіша Win міняє групу."
 
 #: ../rules/base.xml.in.h:286
 msgid "Left Win-key is Compose."
-msgstr "Ліва клавіша Win відповідає Compose."
+msgstr "Ліва клавіша Win відповідає клавіші Compose."
 
 #: ../rules/base.xml.in.h:287
 msgid "Left Win-key switches group while pressed."
@@ -1185,11 +1168,11 @@ msgstr "Ліва клавіша Win перемикає групу на час н
 
 #: ../rules/base.xml.in.h:288
 msgid "Left handed Dvorak"
-msgstr "Dvorak для лівші"
+msgstr "Дворак для лівши"
 
 #: ../rules/base.xml.in.h:289
 msgid "Lithuania"
-msgstr "Литва"
+msgstr "Литовська"
 
 #: ../rules/base.xml.in.h:290
 msgid "Logitech Access Keyboard"
@@ -1253,7 +1236,7 @@ msgstr "Logitech iTouch"
 
 #: ../rules/base.xml.in.h:305
 msgid "Logitech iTouch Cordless Keyboard (model Y-RB6)"
-msgstr "Бездротова клавіатура Logitech iTouch (модель Y-RB6)"
+msgstr "Logitech iTouch Cordless Keyboard (модель Y-RB6)"
 
 #: ../rules/base.xml.in.h:306
 msgid "Logitech iTouch Internet Navigator Keyboard SE"
@@ -1273,7 +1256,7 @@ msgstr "Латв"
 
 #: ../rules/base.xml.in.h:310
 msgid "Macedonia"
-msgstr "Македонія"
+msgstr "Македонська"
 
 #: ../rules/base.xml.in.h:311
 msgid "Macintosh"
@@ -1284,18 +1267,16 @@ msgid "Macintosh Old"
 msgstr "Старий Macintosh"
 
 #: ../rules/base.xml.in.h:313
-#, fuzzy
 msgid "Macintosh, Sun dead keys"
-msgstr "Німецька Sun зі сліпими клавішами"
+msgstr "Macintosh, Sun зі спеціальними клавішами"
 
 #: ../rules/base.xml.in.h:314
-#, fuzzy
 msgid "Macintosh, eliminate dead keys"
-msgstr "Розкладка Macintosh, без сліпих клавіш"
+msgstr "Macintosh, вимикати спеціальні клавіші (dead keys)"
 
 #: ../rules/base.xml.in.h:315
 msgid "Make CapsLock an additional Ctrl."
-msgstr "Зробити Caps Lock додатковою Ctrl."
+msgstr "Caps Lock як додаткова клавіша Ctrl."
 
 #: ../rules/base.xml.in.h:316
 msgid "Mal"
@@ -1303,7 +1284,7 @@ msgstr "Мал"
 
 #: ../rules/base.xml.in.h:317
 msgid "Malayalam"
-msgstr "Малайська"
+msgstr "Малаялам"
 
 #: ../rules/base.xml.in.h:318
 msgid "Maldives"
@@ -1339,7 +1320,7 @@ msgstr "Memorex MX2750"
 
 #: ../rules/base.xml.in.h:326
 msgid "Menu is Compose."
-msgstr "Клавіша Menu відповідає клавіші Compose"
+msgstr "Menu відповідає Compose."
 
 #: ../rules/base.xml.in.h:327
 msgid "Menu key changes group."
@@ -1347,11 +1328,11 @@ msgstr "Клавіша Menu міняє групу."
 
 #: ../rules/base.xml.in.h:328
 msgid "Meta is mapped to the Win-keys."
-msgstr "Клавіша Meta відповідає клавішам Win"
+msgstr "Клавіша Meta відповідає клавішам Win."
 
 #: ../rules/base.xml.in.h:329
 msgid "Meta is mapped to the left Win-key."
-msgstr "Клавіша Meta відповідає лівій клавіші Win"
+msgstr "Клавіша Meta відповідає лівій клавіші Win."
 
 #: ../rules/base.xml.in.h:330
 msgid "Microsoft Internet Keyboard"
@@ -1427,7 +1408,7 @@ msgstr "М'янма"
 
 #: ../rules/base.xml.in.h:348
 msgid "Neostyle"
-msgstr ""
+msgstr "Neostyle"
 
 #: ../rules/base.xml.in.h:349
 msgid "Nep"
@@ -1439,11 +1420,11 @@ msgstr "Непал"
 
 #: ../rules/base.xml.in.h:351
 msgid "Netherlands"
-msgstr "Голландська"
+msgstr "Нідерландська"
 
 #: ../rules/base.xml.in.h:352
 msgid "Nigeria"
-msgstr ""
+msgstr "Нігерія"
 
 #: ../rules/base.xml.in.h:353
 msgid "Nld"
@@ -1459,7 +1440,7 @@ msgstr "Північне Саамі"
 
 #: ../rules/base.xml.in.h:356
 msgid "Northern Saami, eliminate dead keys"
-msgstr "Північне Саамі, без сліпих клавіш"
+msgstr "Північне Саамі, вилучити спеціальні клавіші (dead keys)"
 
 #: ../rules/base.xml.in.h:357
 msgid "Northgate OmniKey 101"
@@ -1474,9 +1455,8 @@ msgid "NumLock LED shows alternative group."
 msgstr "Індикатор NumLock показує альтернативну групу."
 
 #: ../rules/base.xml.in.h:360
-#, fuzzy
 msgid "Numpad keys work as with Mac."
-msgstr "Shift з цифровою клавіатурою працює, як в MS Windows."
+msgstr "Цифрова клавіатура працює як на Mac."
 
 #: ../rules/base.xml.in.h:361
 msgid "Ogham"
@@ -1495,13 +1475,12 @@ msgid "Oriya"
 msgstr "Орія"
 
 #: ../rules/base.xml.in.h:365
-#, fuzzy
 msgid "Ossetian"
-msgstr "Російська"
+msgstr "Осетинська"
 
 #: ../rules/base.xml.in.h:366
 msgid "Ossetian, Winkeys"
-msgstr ""
+msgstr "Осетинська, Winkeys"
 
 #: ../rules/base.xml.in.h:367
 msgid "PC-98xx Series"
@@ -1560,10 +1539,8 @@ msgid "Press Menu key to choose 3rd level."
 msgstr "Вибір 3-го рівня натисненням клавіші Menu."
 
 #: ../rules/base.xml.in.h:381
-#, fuzzy
-msgid ""
-"Press Right Alt key to choose 3rd level, Shift+Right Alt key is Multi_Key."
-msgstr "Вибір 3-го рівня натисненням правої клавіші Alt"
+msgid "Press Right Alt key to choose 3rd level, Shift+Right Alt key is Multi_Key."
+msgstr "Вибір 3-го рівня натисненням правої клавіші Alt, Shift+права клавіша Alt діє як Multi_Key."
 
 #: ../rules/base.xml.in.h:382
 msgid "Press Right Alt key to choose 3rd level."
@@ -1571,7 +1548,7 @@ msgstr "Вибір 3-го рівня натисненням правої кла�
 
 #: ../rules/base.xml.in.h:383
 msgid "Press Right Ctrl to choose 3rd level."
-msgstr "Вибір 3-го рівня натисненням правого Ctrl."
+msgstr "Вибір 3-го рівня натисненням правої клавіші Ctrl."
 
 #: ../rules/base.xml.in.h:384
 msgid "Press Right Win-key to choose 3rd level."
@@ -1591,7 +1568,7 @@ msgstr "Pro"
 
 #: ../rules/base.xml.in.h:388
 msgid "Pro Keypad"
-msgstr "Pro з доп. панеллю"
+msgstr "Pro Keypad"
 
 #: ../rules/base.xml.in.h:389
 msgid "Probhat"
@@ -1623,7 +1600,7 @@ msgstr "Права клавіша Alt міняє групу."
 
 #: ../rules/base.xml.in.h:396
 msgid "Right Ctrl is Compose."
-msgstr "Права клавіша Ctrl відповідає Compose."
+msgstr "Права клавіша Ctrl Compose"
 
 #: ../rules/base.xml.in.h:397
 msgid "Right Ctrl key changes group."
@@ -1635,7 +1612,7 @@ msgstr "Права клавіша Ctrl перемикає групу на час
 
 #: ../rules/base.xml.in.h:399
 msgid "Right Ctrl key works as Right Alt."
-msgstr "Права клавіша Ctrl функціонує, як правий Alt."
+msgstr "Права клавіша Ctrl функціонує як права клавіша Alt."
 
 #: ../rules/base.xml.in.h:400
 msgid "Right Shift key changes group."
@@ -1647,7 +1624,7 @@ msgstr "Права клавіша Win міняє групу."
 
 #: ../rules/base.xml.in.h:402
 msgid "Right Win-key is Compose."
-msgstr "Права клавіша Win відповідає Compose."
+msgstr "Права клавіша Win відповідає клавіші Compose."
 
 #: ../rules/base.xml.in.h:403
 msgid "Right Win-key switches group while pressed."
@@ -1655,7 +1632,7 @@ msgstr "Права клавіша Win перемикає групу на час 
 
 #: ../rules/base.xml.in.h:404
 msgid "Right handed Dvorak"
-msgstr "Dvorak для правші"
+msgstr "Дворак для правши"
 
 #: ../rules/base.xml.in.h:405
 msgid "Romania"
@@ -1663,11 +1640,11 @@ msgstr "Румунія"
 
 #: ../rules/base.xml.in.h:406
 msgid "Romanian keyboard with German letters"
-msgstr "Румунська клавіатура  з німецькими літерами"
+msgstr "Румунська клавіатура з німецькими літерами"
 
 #: ../rules/base.xml.in.h:407
 msgid "Romanian keyboard with German letters, eliminate dead keys"
-msgstr "Румунська клавіатура  з німецькими літерами, без сліпих клавіш"
+msgstr "Румунська клавіатура з німецькими літерами, вимикати спеціальні клавіші"
 
 #: ../rules/base.xml.in.h:408
 msgid "Rou"
@@ -1691,7 +1668,7 @@ msgstr "Російська (фонетична)"
 
 #: ../rules/base.xml.in.h:413
 msgid "Russian phonetic, eliminate dead keys"
-msgstr "Російська фонетична, без сліпих клавіш"
+msgstr "Російська фонетична, вилучити спеціальні клавіші"
 
 #: ../rules/base.xml.in.h:414
 msgid "Russian with Kazakh"
@@ -1703,7 +1680,7 @@ msgstr "SCG"
 
 #: ../rules/base.xml.in.h:416
 msgid "SILVERCREST Multimedia Wireless Keyboard"
-msgstr "Мультимедійна бездротова клавіатура SILVERCREST"
+msgstr "SILVERCREST Multimedia Wireless Keyboard"
 
 #: ../rules/base.xml.in.h:417
 msgid "SK-1300"
@@ -1739,11 +1716,11 @@ msgstr "Індикатор ScollLock показує альтернативну �
 
 #: ../rules/base.xml.in.h:425
 msgid "Serbia and Montenegro"
-msgstr "Сербія і Монтенегро"
+msgstr "Сербія та Чорногорія"
 
 #: ../rules/base.xml.in.h:426
 msgid "Shift with numpad keys works as in MS Windows."
-msgstr "Shift з цифровою клавіатурою працює, як в MS Windows."
+msgstr "Shift з цифровою клавіатурою працює як в Microsoft Windows."
 
 #: ../rules/base.xml.in.h:427
 msgid "Shift+CapsLock changes group."
@@ -1759,27 +1736,27 @@ msgstr "Словенія"
 
 #: ../rules/base.xml.in.h:430
 msgid "South Africa"
-msgstr "ПАР"
+msgstr "Південна Африка"
 
 #: ../rules/base.xml.in.h:431
 msgid "Southern Uzbek"
-msgstr "Південна узбецька"
+msgstr "Південний Узбекистан"
 
 #: ../rules/base.xml.in.h:432
 msgid "Space key output nobreakspace at fourth level."
-msgstr ""
+msgstr "Клавіша пробіл - нерозривний пробіл на 4-му рівні."
 
 #: ../rules/base.xml.in.h:433
 msgid "Space key output nobreakspace at second level."
-msgstr ""
+msgstr "Клавіша пробіл - нерозривний пробіл на 2-му рівні."
 
 #: ../rules/base.xml.in.h:434
 msgid "Space key output nobreakspace at third level."
-msgstr ""
+msgstr "Клавіша пробіл - нерозривний пробіл на 3-му рівні."
 
 #: ../rules/base.xml.in.h:435
 msgid "Space key output space at any level."
-msgstr ""
+msgstr "Клавіша пробіл - нерозривний пробіл на будь-якому рівні."
 
 #: ../rules/base.xml.in.h:436
 msgid "Spain"
@@ -1791,7 +1768,7 @@ msgstr "Спеціальні клавіші (Ctrl+Alt+&lt;key&gt;) обробл�
 
 #: ../rules/base.xml.in.h:438
 msgid "SrL"
-msgstr "ШрЛ"
+msgstr "ШріЛ"
 
 #: ../rules/base.xml.in.h:439
 msgid "Sri Lanka"
@@ -1813,7 +1790,7 @@ msgstr "Стандартна RSTU на російській розкладці"
 
 #: ../rules/base.xml.in.h:445
 msgid "Sun dead keys"
-msgstr "Сліпі клавіші Sun"
+msgstr "Спеціальні клавіші (dead keys) Sun"
 
 #: ../rules/base.xml.in.h:446
 msgid "Super Power Multimedia Keyboard"
@@ -1825,19 +1802,19 @@ msgstr "Super відповідає клавішам Win (типово)."
 
 #: ../rules/base.xml.in.h:448
 msgid "Svk"
-msgstr "Словак"
+msgstr "Словац"
 
 #: ../rules/base.xml.in.h:449
 msgid "Svn"
-msgstr "Словен"
+msgstr "Слвн"
 
 #: ../rules/base.xml.in.h:450
 msgid "Swap Ctrl and CapsLock."
-msgstr "Поміняти Ctrl і Caps Lock."
+msgstr "Поміняти місцями клавіші Control та Caps Lock."
 
 #: ../rules/base.xml.in.h:451
 msgid "Swap keycodes of two keys when Mac keyboards are misdetected by kernel."
-msgstr ""
+msgstr "Міняти місцями дві клавіші, коли Mac-клавіатури неправильно визначаються ядром."
 
 #: ../rules/base.xml.in.h:452
 msgid "Swe"
@@ -1845,7 +1822,7 @@ msgstr "Швед"
 
 #: ../rules/base.xml.in.h:453
 msgid "Sweden"
-msgstr "Швеція"
+msgstr "Шведська"
 
 #: ../rules/base.xml.in.h:454
 msgid "Switzerland"
@@ -1853,7 +1830,7 @@ msgstr "Швейцарія"
 
 #: ../rules/base.xml.in.h:455
 msgid "Symplon PaceBook (tablet PC)"
-msgstr "Symplon PaceBook (планшетний ПК)"
+msgstr "Symplon PaceBook (переносний ПК)"
 
 #: ../rules/base.xml.in.h:456
 msgid "Syr"
@@ -1885,11 +1862,11 @@ msgstr "Тамільська"
 
 #: ../rules/base.xml.in.h:463
 msgid "Tamil TAB Typewriter"
-msgstr "Тамільська TAB (машинописна)"
+msgstr "Тамільська TAB (Машинописна)"
 
 #: ../rules/base.xml.in.h:464
 msgid "Tamil TSCII Typewriter"
-msgstr "Тамільська TSCII (машинописна)"
+msgstr "Тамільська TSCII (Машинописна)"
 
 #: ../rules/base.xml.in.h:465
 msgid "Tamil Unicode"
@@ -1897,7 +1874,7 @@ msgstr "Тамільська Unicode"
 
 #: ../rules/base.xml.in.h:466
 msgid "Tatar"
-msgstr "Татарський"
+msgstr "Татарська"
 
 #: ../rules/base.xml.in.h:467
 msgid "Telugu"
@@ -1905,7 +1882,7 @@ msgstr "Телугу"
 
 #: ../rules/base.xml.in.h:468
 msgid "Tha"
-msgstr "Таїл"
+msgstr "Тай"
 
 #: ../rules/base.xml.in.h:469
 msgid "Thailand"
@@ -1941,7 +1918,7 @@ msgstr "Тур"
 
 #: ../rules/base.xml.in.h:477
 msgid "Turkey"
-msgstr "Туреччина"
+msgstr "Турецька"
 
 #: ../rules/base.xml.in.h:478
 msgid "Typewriter"
@@ -1965,19 +1942,19 @@ msgstr "Клавіатура США з хорватськими диграфам
 
 #: ../rules/base.xml.in.h:483
 msgid "US keyboard with Croatian letters"
-msgstr "Клавіатура США з хорватськими буквами"
+msgstr "Клавіатура США з хорватськими літерами"
 
 #: ../rules/base.xml.in.h:484
 msgid "US keyboard with Lithuanian letters"
-msgstr "Клавіатура США з литовськими літерами"
+msgstr "Клавіатура США з литовськими буквами"
 
 #: ../rules/base.xml.in.h:485
 msgid "US keyboard with Slovenian digraphs"
-msgstr "Клавіатура США зі словенськими диграфами"
+msgstr "Клавіатура США із словенськими диграфами"
 
 #: ../rules/base.xml.in.h:486
 msgid "US keyboard with Slovenian letters"
-msgstr "Клавіатура США зі словенськими літерами"
+msgstr "Клавіатура США із словенськими буквами"
 
 #: ../rules/base.xml.in.h:487
 msgid "USA"
@@ -2005,20 +1982,19 @@ msgstr "Урду"
 
 #: ../rules/base.xml.in.h:493
 msgid "Use Bosnian digraphs"
-msgstr "Вживати боснійські диграфи"
+msgstr "З боснійськими диграфами"
 
 #: ../rules/base.xml.in.h:494
 msgid "Use Croatian digraphs"
-msgstr "Вживати хорватські диграфи"
+msgstr "З хорватськими диграфами"
 
 #: ../rules/base.xml.in.h:495
 msgid "Use Slovenian digraphs"
-msgstr "Вживати словенські диграфи"
+msgstr "Із словенськими диграфами"
 
 #: ../rules/base.xml.in.h:496
-#, fuzzy
 msgid "Use guillemets for quotes"
-msgstr "Вживати кутові лапки"
+msgstr "Кутові лапки у якості лапок"
 
 #: ../rules/base.xml.in.h:497
 msgid "Use keyboard LED to show alternative group."
@@ -2034,7 +2010,7 @@ msgstr "Узбекистан"
 
 #: ../rules/base.xml.in.h:500
 msgid "Vietnam"
-msgstr "В'єтнамська"
+msgstr "В'єтнам"
 
 #: ../rules/base.xml.in.h:501
 msgid "Vnm"
@@ -2042,11 +2018,11 @@ msgstr "В'єт"
 
 #: ../rules/base.xml.in.h:502
 msgid "Wang model 724 azerty"
-msgstr "Модель Wang 724 azerty"
+msgstr "Wang model 724 azerty"
 
 #: ../rules/base.xml.in.h:503
 msgid "Western"
-msgstr ""
+msgstr "Західна"
 
 #: ../rules/base.xml.in.h:504
 msgid "Winbook Model XP5"
@@ -2054,14 +2030,13 @@ msgstr "Winbook Model XP5"
 
 #: ../rules/base.xml.in.h:505
 msgid "Winkeys"
-msgstr "Розкладка Windows"
+msgstr "Winkeys"
 
 #: ../rules/base.xml.in.h:506
 msgid "With &lt;\\|&gt; key"
 msgstr "З клавішею &lt;\\|&gt;"
 
 #: ../rules/base.xml.in.h:507
-#, fuzzy
 msgid "With guillemets"
 msgstr "З кутовими лапками"
 
@@ -2071,7 +2046,7 @@ msgstr "Yahoo! Internet Keyboard"
 
 #: ../rules/base.xml.in.h:509
 msgid "Yoruba"
-msgstr ""
+msgstr "Йоруба"
 
 #: ../rules/base.xml.in.h:510
 msgid "Z and ZHE swapped"
@@ -2079,7 +2054,7 @@ msgstr "Z та ZHE поміняні місцями"
 
 #: ../rules/base.xml.in.h:511
 msgid "Zar"
-msgstr "ПАР"
+msgstr "Зар"
 
 #: ../rules/base.xml.in.h:512
 msgid "azerty"
@@ -2113,8 +2088,3 @@ msgstr "qwerty/цифри"
 msgid "qwertz"
 msgstr "qwertz"
 
-#~ msgid "Macintosh layout"
-#~ msgstr "Розкладка Macintosh"
-
-#~ msgid "Power G5"
-#~ msgstr "Power G5"

@@ -27,7 +27,7 @@
 ! $maclaptop = ibook powerbook macbook78 macbook79
 ! $macs = macintosh macintosh_old ibook powerbook macbook78 macbook79
 
-! $macvendorlayouts = ch de dk es fi fr gb is it nl no pt se us
+! $macvendorlayouts = ch de dk es fi fr gb is it latam nl no pt se us
 
 ! $azerty = be fr
 ! $qwertz = al cz de hr hu ro si sk 
@@ -36,28 +36,29 @@
               acer_c300 acer_ferrari4k acer_tm_800 \
               acpi airkey armada azonaRF2300 \
               apple \
-              brother \
+              benqx730 benqx800 brother \
               btc5113rf btc5126t btc9000 btc9000a btc9001ah btc5090 btc9019u \
               cherryblue cherrybluea cherryblueb cherrycyboard \
               chicony chicony9885 \
               compaqeak8 compaqik7 compaqik13 compaqik18 \
               cymotionlinux \
-              dell dellusbmm dexxa diamond dinovo dtk2000 \
+              dell inspiron precision_m dellusbmm dtk2000 sk8125 sk8135 \
               emachines ennyah_dkb1008 evdev \
               genius geniuscomfy geniuscomfy2 geniuskb19e \
               gyration honeywell_euroboard \
               hp2501 hp2505 hp5xx hp500fa hp5181 hp5185 \
               hpi6 hpxe3gc hpxe3gf hpxe4xxx hpxt1000 hpzt11xx \
               ipaq inspiron latitude \
-              logiaccess logicdp logicdpa logicdit logicink logiciink logiclx300 \
+              logiaccess logicdp logicdpa logicdit logicdo logicink logiciink logiclx300 \
               logiinkse logiinkseusb logiitc logiik itouch logiultrax ltcd \
+              logitech_g15 \
               microsoftinet microsoftpro microsoftprousb microsoftprooem microsoftprose \
               microsoftoffice microsoftmult \
               mx1998 mx2500 mx2750 \
               oretec \
               presario propeller \
               qtronix \
-              rapidaccess rapidaccess2 rapidaccess2a \
+              rapidaccess rapidaccess2 rapidaccess2a thinkpad \
               samsung4500 samsung4510 \
               scorpius silvercrest \
               sk1300 sk2500 sk6200 sk7100 sp_inet \
@@ -96,7 +97,6 @@
   ataritt	=	ataritt(de)
   sun4		=	sun(type4_euro)
   sun5		=	sun(type5_euro)
-  powerpcps2	=	powerpcps2
   pc98		=	xfree98(pc98)
   abnt2		=	xfree86(abnt2)
   jp106		=	xfree86(jp106)
@@ -120,14 +120,16 @@
   apple:badmap		=	+macintosh(badmap)
   apple:goodmap		=	+macintosh(goodmap)
 
+! model		layout	=	geometry
+  thinkpad     us              =       thinkpad(us)
+  thinkpad     *               =       thinkpad(intl)
+
 ! model		=	geometry
  $msmodels	=	microsoft(natural)
   dell101	=	dell(dell101)
   flexpro	=	keytronic(FlexPro)
   hp6000	=	hp(omnibook)
   omnikey101	=	northgate(omnikey101)
-  thinkpad	=	thinkpad(us)
-  thinkpadintl	=	thinkpad(intl)
  $pcmodels	=	pc(%m)
  $pcgeometries	=	pc(%m)
   everex	=	everex(STEPnote)
@@ -257,7 +259,6 @@
   sun5		$nonlatin		=	latin+sun_vndr/us(sun5)+%l%(v):2
   sun5		*			=	latin+sun_vndr/us(sun5)+%l%(v)
   pc98		nec_vndr/jp		=	nec_vndr/jp(pc98)
-  abnt2		br			=	pc+br
   macintosh_old	us			=	macintosh_vndr/us(oldmac)
   macintosh_old	en_US			=	macintosh_vndr/us(oldmac)
   macintosh_old	$macvendorlayouts	=	macintosh_vndr/us(oldmac)+macintosh_vndr/%l%(v)
@@ -265,7 +266,6 @@
   macintosh_old	*			=	macintosh_vndr/us(oldmac)+%l%(v)
  $macs		en_US			=	pc+macintosh_vndr/us(extended)
  $macs		$macvendorlayouts	=	pc+macintosh_vndr/%l%(v)
-  *		jp			=	pc+jp(latin)+jp:2
   *	   	$nonlatin		=	pc+us+%l%(v):2
   *		*			=	pc+%l%(v)
 
@@ -765,6 +765,7 @@
   grp:shift_toggle	=	+group(shifts_toggle)
   altwin:menu		=	+altwin(menu)
   altwin:meta_alt	=	+altwin(meta_alt)
+  altwin:ctrl_win	=	+altwin(ctrl_win)
   altwin:meta_win	=	+altwin(meta_win)
   altwin:left_meta_win	=	+altwin(left_meta_win)
   altwin:super_win	=	+altwin(super_win)
@@ -781,6 +782,7 @@
   grp:ctrls_toggle	=	+group(ctrls_toggle)
   grp:alts_toggle	=	+group(alts_toggle)
   grp:ctrl_shift_toggle	=	+group(ctrl_shift_toggle)
+  grp:lctrl_lshift_toggle	=	+group(lctrl_lshift_toggle)
   grp:caps_toggle	=	+group(caps_toggle)
   grp:shift_caps_toggle	=	+group(shift_caps_toggle)
   grp:alt_caps_toggle   =       +group(alt_caps_toggle)
@@ -794,15 +796,18 @@
   grp:lctrl_toggle	=	+group(lctrl_toggle)
   grp:rctrl_toggle	=	+group(rctrl_toggle)
   grp:lalt_toggle	=	+group(lalt_toggle)
+  grp:sclk_toggle	=	+group(sclk_toggle)
   lv3:switch		=	+level3(switch)
   lv3:ralt_switch	=	+level3(ralt_switch)
   lv3:ralt_switch_multikey	=	+level3(ralt_switch_multikey)
+  lv3:ralt_alt		=	+level3(ralt_alt)
   lv3:lalt_switch	=	+level3(lalt_switch)
   lv3:alt_switch	=	+level3(alt_switch)
   lv3:menu_switch	=	+level3(menu_switch)
   lv3:win_switch	=	+level3(win_switch)
   lv3:lwin_switch	=	+level3(lwin_switch)
   lv3:rwin_switch	=	+level3(rwin_switch)
+  lv3:enter_switch	=	+level3(enter_switch)
   caps:capslock		=	+capslock(capslock)
   caps:shiftlock	=	+capslock(shiftlock)
   caps:grouplock	=	+capslock(grouplock)
@@ -826,7 +831,10 @@
   nbsp:none             =	+nbsp(none)
   nbsp:level2           =	+nbsp(level2)
   nbsp:level3           =	+nbsp(level3)
+  nbsp:level3s          =	+nbsp(level3s)
+  nbsp:level3n          =	+nbsp(level3n)
   nbsp:level4           =	+nbsp(level4)
+  nbsp:level4n          =	+nbsp(level4n)
 
 ! option	=	compat
   grp_led:num		=	+lednum(group_lock)

@@ -1,4 +1,4 @@
-// $XKeyboardConfig: xkbdesc/symbols/cd,v 1.2 2006/09/04 20:25:10 svu Exp $
+// $XKeyboardConfig: xkeyboard-config/symbols/cd,v 1.4 2007-04-03 21:23:56 svu Exp $
 
 // based on us_intl keyboard map file and a Sinhala keyboard map
 // version 0.3
@@ -22,12 +22,12 @@ xkb_symbols "basic" {
     key <AE07> { [parenright,          7, bracketright                    ] };
     key <AE08> { [0x01000302,          8, guillemotright                  ] };
     key <AE09> { [0x0100030c,          9                                  ] };
-    key <AE10> { [0x01000308,          0                                  ] };
+    key <AE10> { [0x01000308,          0, at                              ] };
     key <AE11> { [     minus,      underscore,   percent                  ] };
     key <AE12> { [     equal,      plus,       multiply,        division  ] };
 
     key <AD01> { [         a,          A                                  ] };
-    key <AD02> { [	   w,          W                                  ] };
+    key <AD02> { [	   z,          Z                                  ] };
     key <AD03> { [	   e,          E                                  ] };
     key <AD04> { [         r,          R                                  ] };
     key <AD05> { [	   t,          T                                  ] };
@@ -36,7 +36,7 @@ xkb_symbols "basic" {
     key <AD08> { [	   i,          I,    0x01000268,       0x01000197 ] };
     key <AD09> { [	   o,          O,        oslash,         Ooblique ] };
     key <AD10> { [	   p,          P                                  ] };
-    key <AD11> { [0x0100025B, 0x01000190 ] };
+    key <AD11> { [0x0100025B,      0x01000190,     asciicircum ] };
     key <AD12> { [ asterisk, asciicircum, dollar                ] };
 
     key <AC01> { [	   q,          Q                                  ] };
@@ -52,16 +52,16 @@ xkb_symbols "basic" {
     key <AC11> { [0x01000254, 0x01000186                                  ] };
     key <LSGT> { [    backslash,     bar                                  ] };
 
-    key <AB01> { [	   z,          Z                                  ] };
+    key <AB01> { [	   w,          W                                  ] };
     key <AB02> { [         x,          X                                  ] };
     key <AB03> { [	   c,          C,       ccedilla,       Ccedilla  ] };
     key <AB04> { [	   v,          V                                  ] };
     key <AB05> { [	   b,          B                                  ] };
     key <AB06> { [	   n,          N                                  ] };
-    key <AB07> { [     comma,     period                                  ] };
-    key <AB08> { [ semicolon,      colon                                  ] };
-    key <AB09> { [    exclam,   question                                  ] };
-    key <AB10> { [apostrophe,      slash,     0x01002019                  ] };
+    key <AB07> { [     comma,   question                              ] };
+    key <AB08> { [ semicolon,     period                              ] };
+    key <AB09> { [     colon,      slash                              ] };
+    key <AB10> { [    exclam,   apostrophe,     0x01002019           ] };
     key <BKSL> { [  quotedbl,  backslash,            bar                  ] };
 
     // SPACE, SPACE, SPACE, NO-BREAK SPACE, SPACE

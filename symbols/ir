@@ -1,9 +1,7 @@
-// $XKeyboardConfig: xkbdesc/symbols/ir,v 1.7 2006/08/31 23:07:37 svu Exp $
+// $XKeyboardConfig: xkeyboard-config/symbols/ir,v 1.9 2007-01-04 23:41:09 svu Exp $
 // Iranian keyboard layout,
 // based on National Iranian Keyboard Standard (ISIRI 2901:1994),
 // with additions.
-//
-// Copyright (C) 2004,2005  Sharif FarsiWeb, Inc.
 //
 // Author: Behnam Esfahbod <behnam@esfahbod.info>
 //
@@ -176,6 +174,10 @@ xkb_symbols "ku_alt" {
 // with additions.
 //
 // Copyright (C) 2006 Erdal Ronahî, published under the GPL v2
+//
+// Special copyright note: author explicitly permitted to license this 
+// layout under MIT/X11 license, for details see
+// https://bugs.freedesktop.org/show_bug.cgi?id=9541
 //
 // Author: Erdal Ronahî  <erdal.ronahi@gmail.com>
 //

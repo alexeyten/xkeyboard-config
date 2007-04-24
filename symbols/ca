@@ -1,4 +1,4 @@
-// $XKeyboardConfig: xkbdesc/symbols/ca,v 1.14 2006/09/04 20:25:10 svu Exp $
+// $XKeyboardConfig: xkeyboard-config/symbols/ca,v 1.15 2007-01-04 23:31:30 svu Exp $
 
 default partial
 xkb_symbols "fr" {
@@ -445,7 +445,7 @@ xkb_symbols "multix" {
     key <AB10>	{ [    eacute,     Eacute,     dead_acute, NoSymbol,
     		   NoSymbol, dead_abovedot ]	};
 
-    key <SPCE>	{ type[Group1]= "FOUR_LEVEL", [     space,      space,   nobreakspace, NoSymbol ]	};
+    include "nbsp(level3s)"
 
     modifier_map Control{ Control_L };
 

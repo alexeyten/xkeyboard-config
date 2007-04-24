@@ -18,7 +18,7 @@
 ! $maclaptop = ibook powerbook macbook78 macbook79
 ! $macs = macintosh macintosh_old ibook powerbook macbook78 macbook79
 
-! $macvendorlayouts = ch de dk es fi fr gb is it nl no pt se us
+! $macvendorlayouts = ch de dk es fi fr gb is it latam nl no pt se us
 
 ! $azerty = be fr
 ! $qwertz = al cz de hr hu ro si sk 
@@ -27,28 +27,29 @@
               acer_c300 acer_ferrari4k acer_tm_800 \
               acpi airkey armada azonaRF2300 \
               apple \
-              brother \
+              benqx730 benqx800 brother \
               btc5113rf btc5126t btc9000 btc9000a btc9001ah btc5090 btc9019u \
               cherryblue cherrybluea cherryblueb cherrycyboard \
               chicony chicony9885 \
               compaqeak8 compaqik7 compaqik13 compaqik18 \
               cymotionlinux \
-              dell dellusbmm dexxa diamond dinovo dtk2000 \
+              dell inspiron precision_m dellusbmm dtk2000 sk8125 sk8135 \
               emachines ennyah_dkb1008 evdev \
               genius geniuscomfy geniuscomfy2 geniuskb19e \
               gyration honeywell_euroboard \
               hp2501 hp2505 hp5xx hp500fa hp5181 hp5185 \
               hpi6 hpxe3gc hpxe3gf hpxe4xxx hpxt1000 hpzt11xx \
               ipaq inspiron latitude \
-              logiaccess logicdp logicdpa logicdit logicink logiciink logiclx300 \
+              logiaccess logicdp logicdpa logicdit logicdo logicink logiciink logiclx300 \
               logiinkse logiinkseusb logiitc logiik itouch logiultrax ltcd \
+              logitech_g15 \
               microsoftinet microsoftpro microsoftprousb microsoftprooem microsoftprose \
               microsoftoffice microsoftmult \
               mx1998 mx2500 mx2750 \
               oretec \
               presario propeller \
               qtronix \
-              rapidaccess rapidaccess2 rapidaccess2a \
+              rapidaccess rapidaccess2 rapidaccess2a thinkpad \
               samsung4500 samsung4510 \
               scorpius silvercrest \
               sk1300 sk2500 sk6200 sk7100 sp_inet \

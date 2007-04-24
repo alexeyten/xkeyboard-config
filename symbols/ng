@@ -1,3 +1,6 @@
+// $XKeyboardConfig: xkeyboard-config/symbols/ng,v 1.2 2006-10-11 19:32:35 svu Exp $
+//
+
 partial default alphanumeric_keys  
 xkb_symbols "basic" {
 
