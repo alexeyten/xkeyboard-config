@@ -1,11 +1,31 @@
-xkeyboard-config (0.9+cvs.20070424-1) experimental; urgency=low
+xkeyboard-config (0.9+cvs.20070428-1) experimental; urgency=low
 
   * Add myself to Uploaders. (Closes: #401777)
   * CVS Snapshot from April 24 2007:
      + fix Uzbek layout. (Closes: #412528)
      + fix typo in compat/misc. (Closes: #412352)
+     + adjust Dutch layout. (Closes: #286581)
+     + fix keymap on iBook G4 Japanese keyboard. (Closes: #374070)
+     + fix <K6C> key in symbols/inet. (Closes: #409982)
+     + update Finnish layout. (Closes: #405207)
+     + add Logitech Media Elite keyboard support. (Closes: #384801)
+     + add Logitech Cordless Desktop Optical support. (Closes: #391192)
+     + fix a jp106 backslash/yen issue. (Closes: #280579)
+  * Patches refreshed:
+     + resync_rules_base.diff.
+  * Patches obsoleted or merged upstream:
+     + revert_bz8572.diff
+     + po.diff
+     + bz1576.diff
+     + bz8668.diff
+     + compatibility.diff
+     + japan.diff
+  * Patches to send upstream:
+     + 001_keypad_comma.diff: add keypad:comma option. (Closes: #409117)
+  * Bump debhelper compatibility to 5.
+  * Remove reference to xlibs. (Closes: #413620)
 
- -- Mohammed Adnène Trojette <adn+deb@diwi.org>  Sat, 21 Apr 2007 23:47:20 +0200
+ -- Mohammed Adnène Trojette <adn+deb@diwi.org>  Sat, 28 Apr 2007 20:35:01 +0200
 
 xkeyboard-config (0.9-4) unstable; urgency=low
 

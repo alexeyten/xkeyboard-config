@@ -3,7 +3,7 @@ Section: x11
 Priority: extra
 Maintainer: Debian X Strike Force <debian-x@lists.debian.org>
 Uploaders: Mohammed Adnène Trojette <adn+deb@diwi.org>
-Build-Depends: debhelper (>= 4.0.0), quilt
+Build-Depends: debhelper (>= 5.0.0), quilt
 Build-Depends-Indep: libxml-parser-perl
 Standards-Version: 3.7.2
 
@@ -18,7 +18,5 @@ Description: X Keyboard Extension (XKB) configuration data
  designers have to send their layouts to several places.  The
  xkeyboard-config project has been launched at FreeDesktop in order
  to provide a central repository that could be used by all vendors.
- This package comes from xkeyboard-config, and thus conflicts with
- and replaces the xlibs package which is part of the XFree86 server.
  .
   Homepage: http://www.freedesktop.org/Software/XKeyboardConfig

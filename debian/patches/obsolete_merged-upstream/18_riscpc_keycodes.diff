@@ -1,0 +1,155 @@
+$Id: 300_riscpc_xkb_keycodes.diff 1169 2006-02-06 03:08:41Z dnusinow $
+
+Add support for RiscPC keycodes.  See Debian #141392.
+
+This patch by Phil Blundell.
+
+Not submitted to XFree86 upstream.
+
+Index: xkbdata-X11R7.0-1.0.1/keycodes/Makefile.am
+===================================================================
+--- xkbdata-X11R7.0-1.0.1.orig/keycodes/Makefile.am	2006-02-28 21:02:18.000000000 -0500
++++ xkbdata-X11R7.0-1.0.1/keycodes/Makefile.am	2006-02-28 21:10:50.000000000 -0500
+@@ -12,6 +12,7 @@
+ 	macintosh \
+ 	powerpcps2 \
+ 	README \
++	riscpc \
+ 	sony \
+ 	sun \
+ 	xfree86 \
+Index: xkbdata-X11R7.0-1.0.1/keycodes/riscpc
+===================================================================
+--- /dev/null	1970-01-01 00:00:00.000000000 +0000
++++ xkbdata-X11R7.0-1.0.1/keycodes/riscpc	2006-02-28 21:10:15.000000000 -0500
+@@ -0,0 +1,130 @@
++// XFree86 codes for RiscPC
++
++default xkb_keycodes "xfree86" {
++    minimum = 8;
++    maximum = 127;
++
++    <TLDE>  =  24;
++    <AE01>  =  25;
++    <AE02>  =  26;
++    <AE03>  =  27;
++    <AE04>  =  28;
++    <AE05>  =  29;
++    <AE06>  =  30;
++    <AE07>  =  31;
++    <AE08>  =  32;
++    <AE09>  =  33;
++    <AE10>  =  34;
++    <AE11>  =  35;
++    <AE12>  =  36;
++    <BKSP>  =  38;
++
++    <TAB>   =  46;
++    <AD01>  =  47;
++    <AD02>  =  48;
++    <AD03>  =  49;
++    <AD04>  =  50;
++    <AD05>  =  51;
++    <AD06>  =  52;
++    <AD07>  =  53;
++    <AD08>  =  54;
++    <AD09>  =  55;
++    <AD10>  =  56;
++    <AD11>  =  57;
++    <AD12>  =  58;
++    <RTRN>  =  79;
++
++    <CAPS>  =  101;
++    <AC01>  =  68;
++    <AC02>  =  69;
++    <AC03>  =  70;
++    <AC04>  =  71;
++    <AC05>  =  72;
++    <AC06>  =  73;
++    <AC07>  =  74;
++    <AC08>  =  75;
++    <AC09>  =  76;
++    <AC10>  =  77;
++    <AC11>  =  78;
++
++    <LFSH>  =  84;
++    <BKSL>  =  37;
++    <LSGT>  =  59;
++    <AB01>  =  86;
++    <AB02>  =  87;
++    <AB03>  =  88;
++    <AB04>  =  89;
++    <AB05>  =  90;
++    <AB06>  =  91;
++    <AB07>  =  92;
++    <AB08>  =  93;
++    <AB09>  =  94;
++    <AB10>  =  95;
++    <RTSH>  =  96;
++
++    <LALT>  =  102;
++    <LCTL>  =  67;
++    <SPCE>  =  103;
++    //<RCTL>  =  54;
++    <RALT>  = 127;
++
++    <PRSC>  =  21;
++    //<SYRQ>  =  22;
++    <SCLK>  =  22;
++    //<PAUS>  =  31;
++    <BRK>   =  23;
++
++    <INS>   =  39;
++    <HOME>  =  40;
++    <PGUP>  =  41;
++    <DELE>  =  60;
++    <END>   =  61;
++    <PGDN>  =  62;
++
++    <UP>    =  97;
++    <LEFT>  = 106;
++    <DOWN>  = 107;
++    <RGHT>  = 108;
++
++    <NMLK>  =  42;
++    <KPDV>  =  43;
++    <KPMU>  =  44;
++    <KPSU>  =  45;
++
++    <KP7>   =  63;
++    <KP8>   =  64;
++    <KP9>   =  65;
++    <KPAD>  =  83;
++
++    <KP4>   =  80;
++    <KP5>   =  81;
++    <KP6>   =  82;
++
++    <KP1>   =  98;
++    <KP2>   =  99;
++    <KP3>   = 100;
++    <KPEN>  = 111;
++
++    <KP0>   = 109;
++    <KPDL>  = 110;
++
++    <ESC>     =   8;
++    <FK01>    =   9;
++    <FK02>    =  10;
++    <FK03>    =  11;
++    <FK04>    =  12;
++    <FK05>    =  13;
++    <FK06>    =  14;
++    <FK07>    =  15;
++    <FK08>    =  16;
++    <FK09>    =  17;
++    <FK10>    =  18;
++    <FK11>    =  19;
++    <FK12>    =  20;
++
++    indicator 1 = "Caps Lock";
++    indicator 2 = "Num Lock";
++    indicator 3 = "Scroll Lock";
++
++    alias <ALGR> = <RALT>;
++};

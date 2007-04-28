@@ -13,3 +13,4 @@ greek.diff
 #compatibility.diff
 #japan.diff
 resync_rules_base.diff
+send-upstream/001_keypad_comma.diff

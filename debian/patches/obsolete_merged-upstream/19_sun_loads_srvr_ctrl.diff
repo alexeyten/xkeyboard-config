@@ -1,0 +1,65 @@
+$Id: 101b_xkb_sun_loads_srvr_ctrl.diff 395 2005-07-22 21:34:44Z dnusinow $
+
+This patch by Denis Barbier
+
+Add support for standard Ctrl+Alt sequences to Sun keyboards.
+Closes: #236086, #274607, #286268
+
+Not submitted to XFree86.
+
+diff -ruN xc-old/programs/xkbcomp/symbols/sun/se xc/programs/xkbcomp/symbols/sun/se
+--- xc-old/programs/xkbcomp/symbols/sun/se	2004-04-23 19:54:56.000000000 +0000
++++ xc/programs/xkbcomp/symbols/sun/se	2004-10-27 05:00:16.426625176 +0000
+@@ -93,6 +93,9 @@
+     key <POWR> { [  SunPowerSwitch,	SunPowerSwitchShift	]	};
+     // End "four keys up on the right"
+ 
++    // Override these settings by default xfree86 Ctrl+Alt combinations
++    include "srvr_ctrl(xfree86)"
++
+     // Begin modifier mappings
+     modifier_map Shift  { Shift_R };
+     modifier_map Mod1	{ Meta_L, Meta_R };
+@@ -182,6 +185,9 @@
+     key <KPDL> { [  KP_Delete,	KP_Decimal ]				};
+     // End "Keypad" section, 
+ 
++    // Override these settings by default xfree86 Ctrl+Alt combinations
++    include "srvr_ctrl(xfree86)"
++
+     // Begin modifier mappings
+     modifier_map Shift	{ Shift_R };
+     modifier_map Mod1	{ Alt_L };
+diff -ruN xc-old/programs/xkbcomp/symbols/sun/us xc/programs/xkbcomp/symbols/sun/us
+--- xc-old/programs/xkbcomp/symbols/sun/us	2004-04-23 19:54:56.000000000 +0000
++++ xc/programs/xkbcomp/symbols/sun/us	2004-10-27 05:00:16.427625024 +0000
+@@ -99,6 +99,9 @@
+     key <KPDL> { [  KP_Delete,	KP_Decimal ]	};
+     // End "Keypad" section
+ 
++    // Override these settings by default xfree86 Ctrl+Alt combinations
++    include "srvr_ctrl(xfree86)"
++
+ 
+     // begin modifier mappings
+     modifier_map Shift 	{ Shift_R };
+@@ -217,6 +220,9 @@
+     key <VOL+> { [  SunAudioRaiseVolume,SunVideoRaiseBrightness	]	};
+     key <POWR> { [  SunPowerSwitch,	SunPowerSwitchShift	]	};
+ 
++    // Override these settings by default xfree86 Ctrl+Alt combinations
++    include "srvr_ctrl(xfree86)"
++
+     // begin modifier mappings
+     modifier_map Shift  { Shift_R };
+     modifier_map Mod1	{ Alt_L };
+@@ -323,6 +329,9 @@
+     key <CUT>  { [ SunCut      ],      [ F20           ]       };
+     key <HELP> { [ Help                ]       };
+ 
++    // Override these settings by default xfree86 Ctrl+Alt combinations
++    include "srvr_ctrl(xfree86)"
++
+     // begin modifier mappings
+     modifier_map Shift { Shift_R };
+     modifier_map Mod1  { Meta_L, Meta_R };

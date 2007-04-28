@@ -1,0 +1,143 @@
+See https://bugs.freedesktop.org/show_bug.cgi?id=8503
+Fixed in CVS.
+
+Index: xkb-data/symbols/jp
+===================================================================
+--- xkb-data.orig/symbols/jp
++++ xkb-data/symbols/jp
+@@ -3,9 +3,11 @@
+ // based on:
+ // symbols for a Japanese 106 keyboard(by tsuka@kawalab.dnj.ynu.ac.jp)
+ 
+-default xkb_symbols "jp106" {
+-    include "srvr_ctrl(xfree86)"
++// latin part of jp keyboard map
++partial default
++xkb_symbols "latin" {
+ 
++    include "us"
+     name[Group1]= "Japan";
+ 
+     // Alphanumeric section
+@@ -13,6 +15,55 @@
+ 	type[Group1]="PC_SYSRQ",
+ 	symbols[Group1]= [ Zenkaku_Hankaku, Kanji ]
+     };
++
++    key <AE02> { [ 2, quotedbl		] };
++
++    key <AE06> { [ 6, ampersand		] };
++    key <AE07> { [ 7, apostrophe	] };
++    key <AE08> { [ 8, parenleft		] };
++    key <AE09> { [ 9, parenright	] };
++    key <AE10> { [ 0,asciitilde		] };
++    key <AE11> { [ minus, equal		] };
++    key <AE12> { [ asciicircum,	asciitilde] };
++    key <AE13> { [ backslash, bar 	] };
++
++    key <AD11> { [ at, grave		] };
++    key <AD12> { [ bracketleft,	braceleft ] };
++
++    key <CAPS> { [ Eisu_toggle, Caps_Lock ] };
++
++    key <AC10> { [ semicolon, plus	] };
++    key <AC11> { [ colon, asterisk	] };
++    key <AC12> { [ bracketright, braceright ] };
++
++    key <AB11> { [ backslash, underscore ] };
++
++    key <NFER> { [ Muhenkan		]	};
++
++    key <XFER> {
++	type[Group1]="PC_SYSRQ",
++	symbols[Group1]= [ Henkan, Mode_switch ]
++    };
++    key <HKTG> {
++	type[Group1]="PC_SYSRQ",
++	symbols[Group1]= [ Hiragana_Katakana, Romaji ]
++    };
++
++    key <PRSC> {
++        type[Group1]= "PC_SYSRQ",
++        symbols[Group1]= [ Print, Execute ]
++    };
++};
++
++partial hidden
++xkb_symbols "jp106" {
++    include "srvr_ctrl(xfree86)"
++
++    // Alphanumeric section
++    key <HZTG> {
++	type[Group1]="PC_SYSRQ",
++	symbols[Group1]= [ Zenkaku_Hankaku, Kanji ]
++    };
+     key <AE01> { [ kana_NU		]	};
+     key <AE02> { [ kana_FU		]	};
+     key <AE03> { [ kana_A, kana_a	]	};
+@@ -84,53 +135,3 @@
+         symbols[Group1]= [ Print, Execute ]
+     };
+ };
+-
+-// latin part of jp keyboard map
+-partial hidden
+-xkb_symbols "latin" {
+-
+-    include "us"
+-    // Alphanumeric section
+-    key <HZTG> {
+-	type[Group1]="PC_SYSRQ",
+-	symbols[Group1]= [ Zenkaku_Hankaku, Kanji ]
+-    };
+-
+-    key <AE02> { [ 2, quotedbl		] };
+-
+-    key <AE06> { [ 6, ampersand		] };
+-    key <AE07> { [ 7, apostrophe	] };
+-    key <AE08> { [ 8, parenleft		] };
+-    key <AE09> { [ 9, parenright	] };
+-    key <AE10> { [ 0,asciitilde		] };
+-    key <AE11> { [ minus, equal		] };
+-    key <AE12> { [ asciicircum,	asciitilde] };
+-    key <AE13> { [ backslash, bar 	] };
+-
+-    key <AD11> { [ at, grave		] };
+-    key <AD12> { [ bracketleft,	braceleft ] };
+-
+-    key <CAPS> { [ Eisu_toggle, Caps_Lock ] };
+-
+-    key <AC10> { [ semicolon, plus	] };
+-    key <AC11> { [ colon, asterisk	] };
+-    key <AC12> { [ bracketright, braceright ] };
+-
+-    key <AB11> { [ backslash, underscore ] };
+-
+-    key <NFER> { [ Muhenkan		]	};
+-
+-    key <XFER> {
+-	type[Group1]="PC_SYSRQ",
+-	symbols[Group1]= [ Henkan, Mode_switch ]
+-    };
+-    key <HKTG> {
+-	type[Group1]="PC_SYSRQ",
+-	symbols[Group1]= [ Hiragana_Katakana, Romaji ]
+-    };
+-
+-    key <PRSC> {
+-        type[Group1]= "PC_SYSRQ",
+-        symbols[Group1]= [ Print, Execute ]
+-    };
+-};
+Index: xkb-data/rules/base.ml_s.part
+===================================================================
+--- xkb-data.orig/rules/base.ml_s.part
++++ xkb-data/rules/base.ml_s.part
+@@ -15,6 +15,6 @@
+   macintosh_old	*			=	macintosh_vndr/us(oldmac)+%l%(v)
+  $macs		en_US			=	pc(pc105)+macintosh_vndr/us(extended)
+  $macs		$macvendorlayouts	=	pc(pc105)+macintosh_vndr/%l%(v)
+-  *		jp			=	pc(pc105)+jp(latin)+jp:2
++  *		jp			=	pc(pc105)+jp(latin)+jp(jp106):2
+   *	   	$nonlatin		=	pc(pc105)+us+%l%(v):2
+   *		*			=	pc(pc105)+%l%(v)

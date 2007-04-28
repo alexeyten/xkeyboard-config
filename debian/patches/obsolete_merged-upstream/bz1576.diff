@@ -1,0 +1,202 @@
+Apply patch found in
+   https://bugs.freedesktop.org/show_bug.cgi?id=1576
+
+Index: xkb-data/rules/base.lists.part
+===================================================================
+--- xkb-data.orig/rules/base.lists.part
++++ xkb-data/rules/base.lists.part
+@@ -18,7 +18,7 @@
+ ! $maclaptop = ibook powerbook macbook78 macbook79
+ ! $macs = macintosh macintosh_old ibook powerbook macbook78 macbook79
+ 
+-! $macvendorlayouts = ch de dk es fi fr gb is it nl no pt se us
++! $macvendorlayouts = ch de dk es fi fr gb is it latam nl no pt se us
+ 
+ ! $azerty = be fr
+ ! $qwertz = al cz de hr hu ro si sk 
+Index: xkb-data/symbols/macintosh_vndr/Makefile.am
+===================================================================
+--- xkb-data.orig/symbols/macintosh_vndr/Makefile.am
++++ xkb-data/symbols/macintosh_vndr/Makefile.am
+@@ -4,5 +4,5 @@
+ apple ch de dk \
+ es fi fr \
+ gb is it \
+-nl no pt \
++latam nl no pt \
+ se us
+Index: xkb-data/symbols/macintosh_vndr/Makefile.in
+===================================================================
+--- xkb-data.orig/symbols/macintosh_vndr/Makefile.in
++++ xkb-data/symbols/macintosh_vndr/Makefile.in
+@@ -159,7 +159,7 @@
+ apple ch de dk \
+ es fi fr \
+ gb is it \
+-nl no pt \
++latam nl no pt \
+ se us
+ 
+ all: all-am
+Index: xkb-data/symbols/macintosh_vndr/dk
+===================================================================
+--- xkb-data.orig/symbols/macintosh_vndr/dk
++++ xkb-data/symbols/macintosh_vndr/dk
+@@ -29,7 +29,7 @@
+     key <AB10> {	[    minus,      underscore,           hyphen,          macron	]};
+     key <AC01> {        [        a,               A,      ordfeminine,       masculine      ]};
+     key <AC03> {        [        d,               D,              eth,             ETH      ]};
+-    key <AD03> {        [        e,               E,         NoSymbol,            cent      ]};
++    key <AD03> {        [        e,               E,         EuroSign,            cent      ]};
+     key <AD04> {        [        r,               R,       registered,        NoSymbol      ]};
+     key <AD05> {        [        t,               T,            thorn,           THORN      ]};
+     key <AD08> {        [        i,               I,         NoSymbol,        NoSymbol      ]};
+Index: xkb-data/symbols/macintosh_vndr/es
+===================================================================
+--- xkb-data.orig/symbols/macintosh_vndr/es
++++ xkb-data/symbols/macintosh_vndr/es
+@@ -1,38 +1,6 @@
+ 
+ partial default alphanumeric_keys 
+ xkb_symbols "basic" {
+-
+-    // Describes the differences between a very simple mac_US
+-    // keyboard and a very simple Spanish keybaord
+-
+-    include "latin"
++    include "es"
+     name[Group1]= "Spain - Mac";
+-
+-    key <TLDE> {	[     bracketleft,    bracketright,        braceleft,      braceright	]	};
+-    key <LSGT> {	[            less,         greater,      bracketleft,       braceleft	]	};
+-    key <AE01> {	[               1,          exclam 	]	};
+-    key <AE02> {	[               2,      exclamdown,               at,       oneeighth	]	};
+-    key <AE03> {	[               3,      numbersign,    guillemotleft,  guillemotright	]	};
+-    key <AE04> {	[               4,          dollar,              yen,     Icircumflex	]	};
+-    key <AE05> {	[               5,         percent	]	};
+-    key <AE06> {	[               6,           slash,        backslash,      Idiaeresis	]	};
+-    key <AE07> {	[               7,       ampersand,              bar,          Iacute	]	};
+-    key <AE08> {	[               8,        asterisk,           degree	]	};
+-    key <AE09> {	[               9,       parenleft,         sterling,     Ocircumflex	]	};
+-    key <AE10> {	[               0,      parenright     	]	};
+-    key <AE11> {	[           minus,      underscore	]	};
+-    key <AE12> {	[           equal,            plus,        plusminus	]	};
+-    key <AD11> {	[      dead_grave,          degree 	]	};
+-    key <AD12> {	[      dead_acute,  dead_diaeresis,              bar	]	};
+-
+-    key <AB08> {	[           comma,    questiondown   	]	};
+-    key <AB09> {	[          period,        question     	]	};
+-    key <AB10> {	[        ccedilla,        Ccedilla     	]	};
+-    key	<AC10> {	[	   ntilde,          Ntilde,       asciitilde, dead_doubleacute	]	};
+-    key <AC11> {	[       semicolon,    	     colon 	]	};
+-    key <BKSL> {	[      apostrophe,        quotedbl	]	};
+-
+-    // End alphanumeric section
+-
+-    include "level3(ralt_switch)"
+ };
+Index: xkb-data/symbols/macintosh_vndr/it
+===================================================================
+--- xkb-data.orig/symbols/macintosh_vndr/it
++++ xkb-data/symbols/macintosh_vndr/it
+@@ -21,7 +21,7 @@
+ 
+     key <AD01> {	[           q,  Q 		]	};
+     key <AD02> {	[	    z,  Z		]	};
+-    key <AD03> {	[	    e,  E		]	};
++    key <AD03> {	[	    e,  E,     EuroSign		]	};
+     key <AD04> {	[	    r,  R,   registered			] 	};
+     key <AD05> {	[	    t,  T		]	};
+     key <AD06> {	[	    y,  Y,       Uacute,	ydiaeresis      ] 	};
+Index: xkb-data/symbols/macintosh_vndr/latam
+===================================================================
+--- /dev/null
++++ xkb-data/symbols/macintosh_vndr/latam
+@@ -0,0 +1,38 @@
++
++partial default alphanumeric_keys 
++xkb_symbols "basic" {
++
++    // Describes the differences between a very simple mac_US
++    // keyboard and a very simple Spanish keybaord
++
++    include "latin"
++    name[Group1]= "Latin American - Mac";
++
++    key <TLDE> {	[     bracketleft,    bracketright,        braceleft,      braceright	]	};
++    key <LSGT> {	[            less,         greater,      bracketleft,       braceleft	]	};
++    key <AE01> {	[               1,      exclamdown 	]	};
++    key <AE02> {	[               2,          exclam,               at,       oneeighth	]	};
++    key <AE03> {	[               3,      numbersign,    guillemotleft,  guillemotright	]	};
++    key <AE04> {	[               4,          dollar,              yen,     Icircumflex	]	};
++    key <AE05> {	[               5,         percent	]	};
++    key <AE06> {	[               6,           slash,        backslash,      Idiaeresis	]	};
++    key <AE07> {	[               7,       ampersand,              bar,          Iacute	]	};
++    key <AE08> {	[               8,        asterisk,           degree	]	};
++    key <AE09> {	[               9,       parenleft,         sterling,     Ocircumflex	]	};
++    key <AE10> {	[               0,      parenright     	]	};
++    key <AE11> {	[           minus,      underscore	]	};
++    key <AE12> {	[           equal,            plus,        plusminus	]	};
++    key <AD11> {	[      dead_grave,          degree 	]	};
++    key <AD12> {	[      dead_acute,  dead_diaeresis,              bar	]	};
++
++    key <AB08> {	[           comma,    questiondown   	]	};
++    key <AB09> {	[          period,        question     	]	};
++    key <AB10> {	[        ccedilla,        Ccedilla     	]	};
++    key	<AC10> {	[	   ntilde,          Ntilde,       asciitilde, dead_doubleacute	]	};
++    key <AC11> {	[       semicolon,    	     colon 	]	};
++    key <BKSL> {	[      apostrophe,        quotedbl	]	};
++
++    // End alphanumeric section
++
++    include "level3(ralt_switch)"
++};
+Index: xkb-data/symbols/macintosh_vndr/no
+===================================================================
+--- xkb-data.orig/symbols/macintosh_vndr/no
++++ xkb-data/symbols/macintosh_vndr/no
+@@ -34,6 +34,7 @@
+ 
+     // End alphanumeric section
+ 
++    include "eurosign(e)"
+     include "level3(ralt_switch)"
+ };
+ 
+Index: xkb-data/symbols/macintosh_vndr/pt
+===================================================================
+--- xkb-data.orig/symbols/macintosh_vndr/pt
++++ xkb-data/symbols/macintosh_vndr/pt
+@@ -33,6 +33,7 @@
+     key <AD12> {	[      dead_acute,      dead_grave 	]	};
+     // End alphanumeric section
+ 
++    include "eurosign(e)"
+     include "level3(ralt_switch)"
+ };
+ 
+Index: xkb-data/symbols/macintosh_vndr/se
+===================================================================
+--- xkb-data.orig/symbols/macintosh_vndr/se
++++ xkb-data/symbols/macintosh_vndr/se
+@@ -34,6 +34,7 @@
+     key <LSGT> {        [            less,         greater,              bar,       brokenbar      ]       };
+ 
+     include "keypad(comma)"
++    include "eurosign(e)"
+     include "level3(ralt_switch)"
+ };
+ 
+Index: xkb-data/symbols/it
+===================================================================
+--- xkb-data.orig/symbols/it
++++ xkb-data/symbols/it
+@@ -89,7 +89,7 @@
+ 
+     key <AD01> {	[           q,  Q 		]	};
+     key <AD02> {	[	    z,  Z		]	};
+-    key <AD03> {	[	    e,  E		]	};
++    key <AD03> {	[	    e,  E,     EuroSign		]	};
+     key <AD04> {	[	    r,  R,   registered			] 	};
+     key <AD05> {	[	    t,  T		]	};
+     key <AD06> {	[	    y,  Y,       Uacute,	ydiaeresis      ] 	};

@@ -18,20 +18,11 @@
   quilt refresh --sort
   exit 0
 
-Index: xkb-data/rules/base
+Index: xkb-data-experimental/rules/base
 ===================================================================
---- xkb-data.orig/rules/base
-+++ xkb-data/rules/base
-@@ -27,7 +27,7 @@
- ! $maclaptop = ibook powerbook macbook78 macbook79
- ! $macs = macintosh macintosh_old ibook powerbook macbook78 macbook79
- 
--! $macvendorlayouts = ch de dk es fi fr gb is it nl no pt se us
-+! $macvendorlayouts = ch de dk es fi fr gb is it latam nl no pt se us
- 
- ! $azerty = be fr
- ! $qwertz = al cz de hr hu ro si sk 
-@@ -138,116 +138,116 @@
+--- xkb-data-experimental.orig/rules/base
++++ xkb-data-experimental/rules/base
+@@ -140,116 +140,116 @@
    *		=       pc(pc104)
  
  ! model		layout		variant		=	symbols
@@ -256,27 +247,8 @@ Index: xkb-data/rules/base
    ataritt	$nonlatin		=	xfree68_vndr/ataritt(us)+%l%(v):2
    ataritt	*			=	xfree68_vndr/ataritt(us)+%l%(v)
    amiga		$nonlatin		=	xfree68_vndr/amiga(usa1)+%l%(v):2
-@@ -257,86 +257,86 @@
-   sun5		$nonlatin		=	latin+sun_vndr/us(sun5)+%l%(v):2
-   sun5		*			=	latin+sun_vndr/us(sun5)+%l%(v)
-   pc98		nec_vndr/jp		=	nec_vndr/jp(pc98)
--  abnt2		br			=	pc+br
-+  abnt2		br			=	pc(pc105)+br
-   macintosh_old	us			=	macintosh_vndr/us(oldmac)
-   macintosh_old	en_US			=	macintosh_vndr/us(oldmac)
-   macintosh_old	$macvendorlayouts	=	macintosh_vndr/us(oldmac)+macintosh_vndr/%l%(v)
-   macintosh_old	$nonlatin		=	macintosh_vndr/us(oldmac)+%l%(v):2
-   macintosh_old	*			=	macintosh_vndr/us(oldmac)+%l%(v)
-- $macs		en_US			=	pc+macintosh_vndr/us(extended)
-- $macs		$macvendorlayouts	=	pc+macintosh_vndr/%l%(v)
--  *		jp			=	pc+jp(latin)+jp:2
--  *	   	$nonlatin		=	pc+us+%l%(v):2
--  *		*			=	pc+%l%(v)
-+ $macs		en_US			=	pc(pc105)+macintosh_vndr/us(extended)
-+ $macs		$macvendorlayouts	=	pc(pc105)+macintosh_vndr/%l%(v)
-+  *		jp			=	pc(pc105)+jp(latin)+jp(jp106):2
-+  *	   	$nonlatin		=	pc(pc105)+us+%l%(v):2
-+  *		*			=	pc(pc105)+%l%(v)
+@@ -270,73 +270,73 @@
+   *		*			=	pc+%l%(v)
  
  ! model		layout[1]			=	symbols
 -  *		ar			=	pc+ara%(v[1])
@@ -416,14 +388,8 @@ Index: xkb-data/rules/base
    ataritt	*			=	xfree68_vndr/ataritt(us)+%l[1]%(v[1])
    amiga		*			=	xfree68_vndr/amiga(usa1)+%l[1]%(v[1])
    sun4		*			=	latin+sun_vndr/us(sun4)+%l[1]%(v[1])
-@@ -344,51 +344,51 @@
-   macintosh_old	us			=	macintosh_vndr/us(oldmac)
-   macintosh_old	$macvendorlayouts	=	macintosh_vndr/us(oldmac)+macintosh_vndr/%l[1]%(v[1])
-   macintosh_old	*			=	macintosh_vndr/us(oldmac)+%l[1]%(v[1])
-- $macs		$macvendorlayouts	=	pc+macintosh_vndr/%l[1]%(v[1])
--  *		*			=	pc+%l[1]%(v[1])
-+ $macs		$macvendorlayouts	=	pc(pc105)+macintosh_vndr/%l[1]%(v[1])
-+  *		*			=	pc(pc105)+%l[1]%(v[1])
+@@ -348,47 +348,47 @@
+   *		*			=	pc+%l[1]%(v[1])
  
  ! model		layout[1]	variant[1]	=	symbols
 -  *		ben		basic		=	pc+in(ben)
@@ -511,46 +477,10 @@ Index: xkb-data/rules/base
  
  ! layout[2]	=	symbols
    ar		=	+ara%(v[2]):2
-@@ -794,6 +794,7 @@
-   grp:lctrl_toggle	=	+group(lctrl_toggle)
-   grp:rctrl_toggle	=	+group(rctrl_toggle)
-   grp:lalt_toggle	=	+group(lalt_toggle)
-+  grp:sclk_toggle	=	+group(sclk_toggle)
-   lv3:switch		=	+level3(switch)
-   lv3:ralt_switch	=	+level3(ralt_switch)
-   lv3:ralt_switch_multikey	=	+level3(ralt_switch_multikey)
-@@ -803,6 +804,7 @@
-   lv3:win_switch	=	+level3(win_switch)
-   lv3:lwin_switch	=	+level3(lwin_switch)
-   lv3:rwin_switch	=	+level3(rwin_switch)
-+  lv3:enter_switch	=	+level3(enter_switch)
-   caps:capslock		=	+capslock(capslock)
-   caps:shiftlock	=	+capslock(shiftlock)
-   caps:grouplock	=	+capslock(grouplock)
-Index: xkb-data/rules/base.lst
+Index: xkb-data-experimental/rules/compat/base.ml1_s.part
 ===================================================================
---- xkb-data.orig/rules/base.lst
-+++ xkb-data/rules/base.lst
-@@ -475,6 +475,7 @@
-   grp:rshift_toggle    Right Shift key changes group.
-   grp:lctrl_toggle     Left Ctrl key changes group.
-   grp:rctrl_toggle     Right Ctrl key changes group.
-+  grp:sclk_toggle      ScrollLock key changes group.
-   lv3                  Third level choosers
-   lv3:switch           Press Right Ctrl to choose 3rd level.
-   lv3:menu_switch      Press Menu key to choose 3rd level.
-@@ -485,6 +486,7 @@
-   lv3:lalt_switch      Press Left Alt key to choose 3rd level.
-   lv3:ralt_switch      Press Right Alt key to choose 3rd level.
-   lv3:ralt_switch_multikey Press Right Alt key to choose 3rd level, Shift+Right Alt key is Multi_Key.
-+  lv3:enter_switch     Press Enter key on keypad to choose 3rd level.
-   ctrl                 Ctrl key position
-   ctrl:nocaps          Make CapsLock an additional Ctrl.
-   ctrl:swapcaps        Swap Ctrl and CapsLock.
-Index: xkb-data/rules/compat/base.ml1_s.part
-===================================================================
---- xkb-data.orig/rules/compat/base.ml1_s.part
-+++ xkb-data/rules/compat/base.ml1_s.part
+--- xkb-data-experimental.orig/rules/compat/base.ml1_s.part
++++ xkb-data-experimental/rules/compat/base.ml1_s.part
 @@ -1,67 +1,67 @@
 -  *		ar			=	pc+ara%(v[1])
 -  *		ben			=	pc+in(ben)%(v[1])
@@ -686,10 +616,10 @@ Index: xkb-data/rules/compat/base.ml1_s.part
 +  *		yu(unicode)			=	pc(pc105)+srp(latinunicode)
 +  *		yu(yz)			=	pc(pc105)+srp(latinyz)
 +  *		yu(unicodeyz)			=	pc(pc105)+srp(latinunicodeyz)
-Index: xkb-data/rules/compat/base.ml1v1_s.part
+Index: xkb-data-experimental/rules/compat/base.ml1v1_s.part
 ===================================================================
---- xkb-data.orig/rules/compat/base.ml1v1_s.part
-+++ xkb-data/rules/compat/base.ml1v1_s.part
+--- xkb-data-experimental.orig/rules/compat/base.ml1v1_s.part
++++ xkb-data-experimental/rules/compat/base.ml1v1_s.part
 @@ -1,41 +1,41 @@
 -  *		ben		basic		=	pc+in(ben)
 -  *		ben		probhat		=	pc+in(ben_probhat)
@@ -773,10 +703,10 @@ Index: xkb-data/rules/compat/base.ml1v1_s.part
 +  *		yu		unicode		=	pc(pc105)+srp(latinunicode)
 +  *		yu		yz		=	pc(pc105)+srp(latinyz)
 +  *		yu		unicodeyz		=	pc(pc105)+srp(latinunicodeyz)
-Index: xkb-data/rules/compat/base.ml_s.part
+Index: xkb-data-experimental/rules/compat/base.ml_s.part
 ===================================================================
---- xkb-data.orig/rules/compat/base.ml_s.part
-+++ xkb-data/rules/compat/base.ml_s.part
+--- xkb-data-experimental.orig/rules/compat/base.ml_s.part
++++ xkb-data-experimental/rules/compat/base.ml_s.part
 @@ -1,67 +1,67 @@
 -  *		ar			=	pc+ara
 -  *		ben			=	pc+in(ben)
@@ -912,10 +842,10 @@ Index: xkb-data/rules/compat/base.ml_s.part
 +  *		yu(unicode)			=	pc(pc105)+srp(latinunicode)
 +  *		yu(yz)			=	pc(pc105)+srp(latinyz)
 +  *		yu(unicodeyz)			=	pc(pc105)+srp(latinunicodeyz)
-Index: xkb-data/rules/compat/base.mlv_s.part
+Index: xkb-data-experimental/rules/compat/base.mlv_s.part
 ===================================================================
---- xkb-data.orig/rules/compat/base.mlv_s.part
-+++ xkb-data/rules/compat/base.mlv_s.part
+--- xkb-data-experimental.orig/rules/compat/base.mlv_s.part
++++ xkb-data-experimental/rules/compat/base.mlv_s.part
 @@ -1,41 +1,41 @@
 -  *		ben		basic		=	pc+in(ben)
 -  *		ben		probhat		=	pc+in(ben_probhat)

@@ -1,0 +1,21 @@
+$Id: 094_xkb_fix_dead_diaresis.diff 1027 2006-01-06 23:19:46Z barbier $
+
+Fix unknown keysym.
+
+This patch by Denis Barbier.
+
+Not submitted upstream to X.Org.
+
+Index: xorg-x11/xc/programs/xkbcomp/symbols/pc/de
+===================================================================
+--- xorg-x11.orig/xc/programs/xkbcomp/symbols/pc/de	2006-01-06 23:06:44.000000000 +0100
++++ xorg-x11/xc/programs/xkbcomp/symbols/pc/de	2006-01-06 23:11:32.000000000 +0100
+@@ -140,7 +140,7 @@
+     key <AE12> { [ less, greater, dead_grave ] };
+ 
+     key <AD01> { [ udiaeresis, Udiaeresis, at ] };
+-    key <AD02> { [ comma, semicolon, dead_diaresis ] };
++    key <AD02> { [ comma, semicolon, dead_diaeresis ] };
+     key <AD03> { [ period, colon ] };
+     key <AD08> { [ c, C, copyright, Cacute ] };
+     key <AD09> { [ t, T, trademark ] };

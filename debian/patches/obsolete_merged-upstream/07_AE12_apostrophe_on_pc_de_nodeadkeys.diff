@@ -1,0 +1,22 @@
+$Id: 082_xkb_AE12_apostrophe_on_pc_de_nodeadkeys.diff 689 2005-10-19 22:11:30Z dnusinow $
+
+German keyboards using the "nodeadkeys" variant should produce an
+apostrophe, not an acute accent, when <AE12> is pressed.  This change is
+also consistent with the existing xc/programs/xkbcomp/symbols/de file.
+See Debian bug #241127.
+
+This patch by Andreas Metzler.
+
+Index: xc/programs/xkbcomp/symbols/pc/de
+===================================================================
+--- xc/programs/xkbcomp/symbols/pc/de.orig	2005-10-18 19:45:33.000000000 -0400
++++ xc/programs/xkbcomp/symbols/pc/de	2005-10-18 21:32:56.000000000 -0400
+@@ -42,7 +42,7 @@
+     name[Group1]="Germany - Eliminate dead keys";
+ 
+     key <TLDE>	{ [asciicircum,    degree,      notsign,      notsign ]	};
+-    key <AE12>	{ [     acute,      grave,      cedilla,      cedilla ]	};
++    key <AE12>	{ [apostrophe,      grave,      cedilla,      cedilla ]	};
+     key <AD11>	{ [udiaeresis, Udiaeresis,    diaeresis,    diaeresis ]	};
+     key <AD12>	{ [      plus,   asterisk,   asciitilde,       macron ]	};
+     key <AC10>	{ [odiaeresis, Odiaeresis,  doubleacute,  doubleacute ]	};

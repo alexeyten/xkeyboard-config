@@ -1,0 +1,63 @@
+debian/patches/revert_bz8572.diff: New patch to revert changes
+  introduced in BZ8572, they cause trouble with Ctrl-Alt-F*
+  combinations.  This seems to be an X server bug, but this
+  patch is added until this issue is fixed.  Closes: #392911.
+
+Fixed in CVS.
+
+Index: xkb-data/symbols/level3
+===================================================================
+--- xkb-data.orig/symbols/level3
++++ xkb-data/symbols/level3
+@@ -14,7 +14,7 @@
+     type[Group1]="ONE_LEVEL",
+     symbols[Group1] = [ ISO_Level3_Shift ]
+     };
+-  modifier_map Mod5   { <RALT> };
++  modifier_map Mod5   { ISO_Level3_Shift };
+ };
+ 
+ partial modifier_keys
+@@ -66,7 +66,7 @@
+     type[Group1]="ONE_LEVEL",
+     symbols[Group1] = [ ISO_Level3_Shift ]
+     };
+-  modifier_map Mod5   { <RCTL> };
++  modifier_map Mod5   { ISO_Level3_Shift };
+ };
+ 
+ // using the level(menu_switch) map, the Menu key temporarily
+@@ -77,7 +77,7 @@
+     type[Group1]="ONE_LEVEL",
+     symbols[Group1] = [ ISO_Level3_Shift ]
+     };
+-  modifier_map Mod5   { <MENU> };
++  modifier_map Mod5   { ISO_Level3_Shift };
+ };
+ 
+ // using the level3(win_switch) map, the either Windows' logo key
+@@ -96,7 +96,7 @@
+     type[Group1]="ONE_LEVEL",
+     symbols[Group1] = [ ISO_Level3_Shift ]
+     };
+-  modifier_map Mod5   { <LWIN> };
++  modifier_map Mod5   { ISO_Level3_Shift };
+ };
+ 
+ // using the level(rwin_switch) map, the right Windows' logo key
+@@ -109,7 +109,7 @@
+     type[Group1]="ONE_LEVEL",
+     symbols[Group1] = [ ISO_Level3_Shift ]
+     };
+-  modifier_map Mod5   { <RWIN> };
++  modifier_map Mod5   { ISO_Level3_Shift };
+ };
+ 
+ // using the level3(enter_switch) map, the Enter key on the keypad
+@@ -121,5 +121,5 @@
+     type[Group1]="ONE_LEVEL",
+     symbols[Group1] = [ ISO_Level3_Shift ]
+     };
+-  modifier_map Mod5   { <KPEN> };
++  modifier_map Mod5   { ISO_Level3_Shift };
+ };

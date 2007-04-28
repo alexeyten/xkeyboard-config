@@ -1,0 +1,50 @@
+$Id: 090_xkb_fix_uk_macintosh_problems.diff 396 2005-07-22 21:45:02Z dnusinow $
+
+Fix a few problems with the U.K. Macintosh keyboard layout:
+  * Map <TLDE> key to "section, plusminus".
+  * Map <LSGT> key to "quoteleft, asciitilde".
+  * Map AltGr+<AE02> to "EuroSign".
+  * Include group(switch) symbols so that the already-defined mapping
+    of AltGr+<AE03) to "numbersign" can be used.
+
+Also see Debian #201737.
+
+This patch by Branden Robinson.  Thanks to Mark Brown, Frank Murphy, and
+Sebastien Bacher for their assistance.
+
+Not submitted to XFree86.
+
+diff -ruN xc-old/programs/xkbcomp/symbols/macintosh/gb xc/programs/xkbcomp/symbols/macintosh/gb
+--- xc-old/programs/xkbcomp/symbols/macintosh/gb	2004-04-23 19:54:54.000000000 +0000
++++ xc/programs/xkbcomp/symbols/macintosh/gb	2004-10-26 11:40:11.728581296 +0000
+@@ -1,19 +1,20 @@
+ // $XConsortium: gb /main/3 1996/08/31 12:19:51 kaleb $
+ // $XFree86: xc/programs/xkbcomp/symbols/gb,v 3.3 1996/12/23 07:13:25 dawes Exp $
+-partial default alphanumeric_keys 
+-xkb_symbols "basic" {
+ 
+-    // Describes the differences between a very simple en_US
+-    // keyboard and a very simple U.K. keyboard layout
++partial default alphanumeric_keys
++xkb_symbols "basic" {
+ 
++    // Describe the differences between a U.S. Extended Macintosh keyboard
++    // and a U.K. Extended Macintosh keyboard.
+ 
+-    name[Group1]= "Great Britain";
++    name[Group1]="Great Britain";
+ 
+-    key <AE03> {	[               3,        sterling     	],
++    key <TLDE> {	[	  section,	plusminus	]	};
++    key <AE02> {	[],
++			[	 EuroSign			]	};
++    key <AE03> {	[		3,	sterling	],
+ 			[      numbersign			]	};
++    key <LSGT> {	[	quoteleft,	asciitilde	]	};
+ 
+-    // End alphanumeric section
+-    
++    include "group(switch)"
+ };
+-
+-

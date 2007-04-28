@@ -1,0 +1,75 @@
+$Id: 084_xkb_implement_grp:sclk_toggle.diff 1169 2006-02-06 03:08:41Z dnusinow $
+
+Provide XKB configuration option for Scroll Lock to be used as a group
+toggle key.
+
+This patch by Michal Kaspar.
+
+Not submitted upstream.
+
+Index: xkbdata-X11R7.0-1.0.1/rules/xorg
+===================================================================
+--- xkbdata-X11R7.0-1.0.1.orig/rules/xorg	2006-02-26 21:37:54.000000000 -0500
++++ xkbdata-X11R7.0-1.0.1/rules/xorg	2006-02-26 21:51:14.000000000 -0500
+@@ -908,6 +908,7 @@
+   grp:menu_toggle	=	+group(menu_toggle)
+   grp:lwin_toggle	=	+group(lwin_toggle)
+   grp:rwin_toggle	=	+group(rwin_toggle)
++  grp:sclk_toggle	=	+group(sclk_toggle)
+   grp:lshift_toggle	=	+group(lshift_toggle)
+   grp:rshift_toggle	=	+group(rshift_toggle)
+   grp:lctrl_toggle	=	+group(lctrl_toggle)
+Index: xkbdata-X11R7.0-1.0.1/rules/xorg.lst
+===================================================================
+--- xkbdata-X11R7.0-1.0.1.orig/rules/xorg.lst	2006-01-26 21:46:48.000000000 -0500
++++ xkbdata-X11R7.0-1.0.1/rules/xorg.lst	2006-02-26 21:51:14.000000000 -0500
+@@ -357,6 +357,7 @@
+   grp:menu_toggle      Menu key changes group.
+   grp:lwin_toggle      Left Win-key changes group.
+   grp:rwin_toggle      Right Win-key changes group.
++  grp:sclk_toggle  Scroll Lock changes group
+   grp:lshift_toggle    Left Shift key changes group.
+   grp:rshift_toggle    Right Shift key changes group.
+   grp:lctrl_toggle     Left Ctrl key changes group.
+Index: xkbdata-X11R7.0-1.0.1/rules/xorg.xml
+===================================================================
+--- xkbdata-X11R7.0-1.0.1.orig/rules/xorg.xml	2006-02-26 20:17:40.000000000 -0500
++++ xkbdata-X11R7.0-1.0.1/rules/xorg.xml	2006-02-26 21:51:14.000000000 -0500
+@@ -7191,6 +7191,14 @@
+       </option>
+       <option>
+         <configItem>
++          <name>grp:sclk_toggle</name>
++          <description>Scroll Lock changes group</description>
++          <description xml:lang="bg">Scroll Lock сменя групата</description>
++          <description xml:lang="ru">Scroll Lock меняет группу</description>
++        </configItem>
++      </option>
++      <option>
++        <configItem>
+           <name>grp:lshift_toggle</name>
+           <description>Left Shift key changes group.</description>
+           <description xml:lang="en_GB">Left Shift key changes group.</description>
+Index: xkbdata-X11R7.0-1.0.1/symbols/group
+===================================================================
+--- xkbdata-X11R7.0-1.0.1.orig/symbols/group	2006-01-26 21:46:48.000000000 -0500
++++ xkbdata-X11R7.0-1.0.1/symbols/group	2006-02-26 21:51:14.000000000 -0500
+@@ -215,6 +215,18 @@
+     };
+ };
+ 
++// using the group(sclk_toggle) map, pressing the Scroll Lock key
++// toggles groups.
++partial modifier_keys
++xkb_symbols "sclk_toggle" {
++  virtual_modifiers AltGr;
++  key <SCLK> {
++    virtualMods= AltGr,
++    symbols[Group1] = [ ISO_Next_Group ]
++    };
++};
++
++
+ // Both Ctrls pressed together toggle group
+ partial modifier_keys
+ xkb_symbols "ctrls_toggle" {
