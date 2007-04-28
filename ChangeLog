@@ -1,3 +1,13 @@
+2007-04-27  Sergey Udaltsov
+
+	* geometry/microsoft: replacing non-defined AE00 with TLDE,
+	http://bugzilla.gnome.org/show_bug.cgi?id=429907
+
+2007-04-24  Sergey Udaltsov
+
+	* symbols/ma: fixing alt in Tifinagh, closing
+	https://bugs.freedesktop.org/show_bug.cgi?id=10736
+
 2007-04-23  Sergey Udaltsov
 
 	* geometry/pc: fix for abnt2, closing
@@ -1430,7 +1440,7 @@
 
 2004-09-13 22:39  svu
 
-	* symbols/tj: new local cvs keyword seems to be ok - no more $Id: ChangeLog,v 1.277 2007-04-23 22:09:06 svu Exp $
+	* symbols/tj: new local cvs keyword seems to be ok - no more $Id: ChangeLog,v 1.279 2007-04-27 19:15:42 svu Exp $
 
 2004-09-13 22:38  svu
 

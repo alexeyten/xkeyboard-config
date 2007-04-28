@@ -503,7 +503,6 @@
   grp:rshift_toggle    Right Shift key changes group.
   grp:lctrl_toggle     Left Ctrl key changes group.
   grp:rctrl_toggle     Right Ctrl key changes group.
-  grp:sclk_toggle      ScrollLock key changes group.
   lv3                  Third level choosers
   lv3:switch           Press Right Ctrl to choose 3rd level.
   lv3:menu_switch      Press Menu key to choose 3rd level.
@@ -515,7 +514,6 @@
   lv3:ralt_switch      Press Right Alt key to choose 3rd level.
   lv3:ralt_switch_multikey Press Right Alt key to choose 3rd level, Shift+Right Alt key is Multi_Key.
   lv3:ralt_alt         Right Alt key never chooses 3rd level.
-  lv3:enter_switch     Press Enter key on keypad to choose 3rd level.
   ctrl                 Ctrl key position
   ctrl:nocaps          Make CapsLock an additional Ctrl.
   ctrl:swapcaps        Swap Ctrl and CapsLock.
