@@ -1,3 +1,13 @@
+xkeyboard-config (0.9+cvs.20070428-2) UNRELEASED; urgency=low
+
+  * Patches to send upstream.
+     + 002_add_asus6000.diff: add Asus A6000 series Keyboard
+                              support. (Closes: #383953)
+  * Patches backported from upstream:
+     + 001_fix_us.diff: fix us layout. (Closes: #421532)
+
+ -- Mohammed Adnène Trojette <adn+deb@diwi.org>  Mon, 30 Apr 2007 00:12:26 +0200
+
 xkeyboard-config (0.9+cvs.20070428-1) experimental; urgency=low
 
   * Add myself to Uploaders. (Closes: #401777)
@@ -8,7 +18,6 @@ xkeyboard-config (0.9+cvs.20070428-1) experimental; urgency=low
      + fix keymap on iBook G4 Japanese keyboard. (Closes: #374070)
      + fix <K6C> key in symbols/inet. (Closes: #409982)
      + update Finnish layout. (Closes: #405207)
-     + add Logitech Media Elite keyboard support. (Closes: #384801)
      + add Logitech Cordless Desktop Optical support. (Closes: #391192)
      + fix a jp106 backslash/yen issue. (Closes: #280579)
   * Patches refreshed:

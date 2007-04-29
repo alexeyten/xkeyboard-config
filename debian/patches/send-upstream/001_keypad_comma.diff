@@ -2,7 +2,7 @@ Index: xkb-data-experimental/rules/base
 ===================================================================
 --- xkb-data-experimental.orig/rules/base
 +++ xkb-data-experimental/rules/base
-@@ -828,6 +828,7 @@
+@@ -826,6 +826,7 @@
    eurosign:2		=	+eurosign(2)
    keypad:oss            =       +keypad(oss)
    keypad:legacy         =	+keypad(legacy)

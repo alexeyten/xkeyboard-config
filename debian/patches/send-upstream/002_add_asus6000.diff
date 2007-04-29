@@ -1,0 +1,69 @@
+Index: xkb-data-experimental/rules/base
+===================================================================
+--- xkb-data-experimental.orig/rules/base
++++ xkb-data-experimental/rules/base
+@@ -34,7 +34,7 @@
+ 
+ ! $inetkbds = a4techKB21 a4techKBS8 a4_rfkb23 \
+               acer_c300 acer_ferrari4k acer_tm_800 \
+-              acpi airkey armada azonaRF2300 \
++              acpi airkey armada azonaRF2300 asus_6000 \
+               apple \
+               benqx730 benqx800 brother \
+               btc5113rf btc5126t btc9000 btc9000a btc9001ah btc5090 btc9019u \
+Index: xkb-data-experimental/rules/base.xml.in
+===================================================================
+--- xkb-data-experimental.orig/rules/base.xml.in
++++ xkb-data-experimental/rules/base.xml.in
+@@ -119,6 +119,12 @@
+     <model>
+       <configItem>
+         <name>azonaRF2300</name>
++        <_description>Asus A6000 series Keyboard</_description>
++      </configItem>
++    </model>
++    <model>
++      <configItem>
++        <name>asus_6000</name>
+         <_description>Azona RF2300 wireless Internet Keyboard</_description>
+       </configItem>
+     </model>
+Index: xkb-data-experimental/symbols/inet
+===================================================================
+--- xkb-data-experimental.orig/symbols/inet
++++ xkb-data-experimental/symbols/inet
+@@ -229,6 +229,22 @@
+     key <I74>   {       [ XF86Launch4           ]       };
+ };
+ 
++// Asus
++
++// Asus A6000 series Keyboard
++partial alphanumeric_keys
++xkb_symbols "asus_6000" {
++  key <I20>   {       [ XF86AudioMute         ]       };
++  key <I2E>   {       [ XF86AudioLowerVolume  ]       };
++  key <I30>   {       [ XF86AudioRaiseVolume  ]       };
++  key <I6C>   {       [ XF86Mail              ]       };
++  key <I32>   {       [ XF86WWW               ]       };
++  key <I10>   {       [ XF86AudioPrev         ]       };
++  key <I19>   {       [ XF86AudioNext         ]       };
++  key <I24>   {       [ XF86AudioStop         ]       };
++  key <I22>   {       [ XF86AudioPlay         ]       };
++};
++
+ // Azona
+ 
+ // Azona RF2300 wireless Internet Keyboard
+Index: xkb-data-experimental/symbols/symbols.dir
+===================================================================
+--- xkb-data-experimental.orig/symbols/symbols.dir
++++ xkb-data-experimental/symbols/symbols.dir
+@@ -282,6 +282,7 @@
+ --p----- a------- inet(airkey)
+ --p----- -------- inet(apple)
+ --p----- a------- inet(armada)
++--p----- a------- inet(asus_6000)
+ --p----- a------- inet(azonaRF2300)
+ --p----- a------- inet(brother)
+ --p----- a------- inet(btc5090)

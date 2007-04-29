@@ -1,0 +1,18 @@
+Index: xkb-data-experimental/symbols/us
+===================================================================
+--- xkb-data-experimental.orig/symbols/us
++++ xkb-data-experimental/symbols/us
+@@ -61,6 +61,8 @@
+     key <AB09> {	[    period,	greater		]	};
+     key <AB10> {	[     slash,	question	]	};
+ 
++    key <BKSL> {	[ backslash,         bar	]	};
++    key <CAPS> {	[ Caps_Lock	]	};
+     // End alphanumeric section
+ };
+ 
+@@ -507,4 +509,3 @@
+     include "us"
+     name[Group1]= "U.S. English - Macintosh";
+ };
+-
