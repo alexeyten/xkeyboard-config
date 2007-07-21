@@ -1,4 +1,4 @@
-// $XKeyboardConfig: xkeyboard-config/symbols/gr,v 1.8 2006-09-04 20:25:10 svu Exp $
+// $XKeyboardConfig: xkeyboard-config/symbols/gr,v 1.11 2007-07-20 23:30:15 svu Exp $
 
 // $XFree86: xc/programs/xkbcomp/symbols/el,v 1.2 2002/11/15 02:26:41 dawes Exp $
 //
@@ -41,7 +41,7 @@ xkb_symbols "basic" {
     key <AB10> {	[     slash,	question	]	};
     key <BKSL> {	[ backslash,	bar		]	};
 
-    include "keypad(comma)"
+    include "kpdl(comma)"
 };
 
 hidden partial alphanumeric_keys alternate_group
@@ -90,7 +90,7 @@ xkb_symbols "extended" {
 
     key.type[Group1] = "THREE_LEVEL";
 
-    key <AE05> { [	5,		percent,	EuroSign	] };
+    key <AE03> { [	3,		numbersign,	sterling	] };
 
     key <AD01> { [	semicolon,	colon,		periodcentered	] };
     key <AD03> { [	Greek_epsilon,	Greek_EPSILON,	EuroSign	] };
@@ -99,6 +99,7 @@ xkb_symbols "extended" {
     key <AB09> { [	period,		greater,	guillemotright	] };
 
     include "level3(ralt_switch)"
+    include "eurosign(5)"
 };
 
 partial alphanumeric_keys alternate_group
@@ -113,8 +114,8 @@ xkb_symbols "polytonic" {
     key <AD11> { [ 	dead_tilde,	dead_diaeresis,	dead_macron	] };
     key <AD12> { [	dead_iota,	VoidSymbol,	dead_breve	] };
 
-    key <AC10> { [	dead_acute,		dead_horn	] };
-    key <AC11> { [	dead_grave,		dead_ogonek	] };
+    key <AC10> { [	dead_acute,		U0313	] };
+    key <AC11> { [	dead_grave,		U0314	] };
 
 };
 

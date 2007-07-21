@@ -1,4 +1,4 @@
-// $XKeyboardConfig: xkeyboard-config/symbols/ru,v 1.11 2006-09-04 20:25:10 svu Exp $
+// $XKeyboardConfig: xkeyboard-config/symbols/ru,v 1.15 2007-07-15 22:12:12 svu Exp $
 
 // based on
 // russian standard keyboard
@@ -65,7 +65,7 @@ xkb_symbols "basic" {
 
     key.type[group1]="TWO_LEVEL";
 
-    include "keypad(comma)"
+    include "kpdl(comma)"
 };
 
 partial alphanumeric_keys
@@ -205,3 +205,63 @@ xkb_symbols "os_winkeys" {
     key	<AC07> {	[      Cyrillic_o,	Cyrillic_O, Cyrillic_io, Cyrillic_IO	]	};
     key	<AC11> {	[      0x010004D5,      0x010004D4      ]	};
 };
+
+partial alphanumeric_keys
+xkb_symbols "cv" {
+    include "ru(winkeys)"
+
+    name[Group1]= "Russia - Chuvash";
+
+    key.type[group1]="FOUR_LEVEL";
+
+    key        <AD03> {        [      Cyrillic_u,	Cyrillic_U,
+                            0x010004f3,    0x010004f2      ]       };
+    key        <AD05> {        [      Cyrillic_ie,     Cyrillic_IE,
+                       ebreve,	Ebreve     ]       };
+    key        <AC04> {        [      Cyrillic_a,	Cyrillic_A,
+                          abreve,  Abreve      ]       };
+    key        <AB03> {        [      Cyrillic_es,     Cyrillic_ES,
+                            ccedilla,    Ccedilla      ]       };
+
+    include "level3(ralt_switch)"
+};
+
+partial alphanumeric_keys
+xkb_symbols "udm" {
+    include "ru(winkeys)"
+
+    name[Group1]= "Russia - Udmurt";
+
+    key.type[group1]="FOUR_LEVEL";
+
+    key	<AE01> {	[	 question,	    exclam,    1,       1 	]	};
+    key	<AE02> {	[	parenleft,        quotedbl,    2,       2	]	};
+    key	<AE03> {	[      parenright,      numbersign,    3,       3	]	};
+    key	<AE04> {	[	    colon,       semicolon,    4,       4	]	};
+    key	<AE05> {	[	 asterisk,	   percent,    5,       5	]	};
+    key	<AE06> {	[      0x010004dd,	0x010004dc,    6,       6	]	};
+    key	<AE07> {	[      0x010004e7,	0x010004e6,    7,       7	]	};
+    key	<AE08> {	[      0x010004f5,	0x010004f4,    8,       8	]	};
+    key	<AE09> {	[      0x010004e5,	0x010004e4,    9,       9	]	};
+    key	<AE10> {	[      0x010004df,	0x010004de,    0,       0	]	};
+
+    include "level3(ralt_switch)"
+};
+
+partial alphanumeric_keys
+xkb_symbols "cv_latin" {
+    include "us(alt-intl)"
+
+    name[Group1]= "Russia - Chuvash Latin";
+
+    key.type[group1]="FOUR_LEVEL";
+
+    key        <AD02> {	[	  w,	W,    udiaeresis,       Udiaeresis ] };
+    key        <AD03> { [         e,	E,        ebreve,           Ebreve ] };
+    key        <AC01> { [	  a,    A,        abreve,           Abreve ] };
+    key        <AC02> { [	  s,    S,      scedilla,         Scedilla ] };
+
+    include "level3(ralt_switch)"
+
+};
+

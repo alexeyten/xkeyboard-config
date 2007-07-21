@@ -1,6 +1,6 @@
 Name:		xkeyboard-config
 Summary:	XML-based XKB configuration registry
-Version:	0.9
+Version:	1.0
 Release:	1
 License:	X11/MIT
 Group:		User Interface/X

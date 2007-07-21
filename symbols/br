@@ -5,7 +5,7 @@
 // Adds suport for dead-keys in I18N applications
 // by Conectiva  (http://www.conectiva.com.br)"
 //
-// $XKeyboardConfig: xkeyboard-config/symbols/br,v 1.10 2006-11-20 19:18:02 svu Exp $
+// $XKeyboardConfig: xkeyboard-config/symbols/br,v 1.11 2007-07-15 22:12:12 svu Exp $
 // $XdotOrg: xc/programs/xkbcomp/symbols/br,v 1.1.4.3 2004/03/05 13:41:32 eich Exp $
 // $XFree86: xc/programs/xkbcomp/symbols/br,v 1.3 2003/04/19 12:22:11 pascal Exp $
 
@@ -46,7 +46,7 @@ xkb_symbols "abnt2" {
 
     key <KPPT>	{ [ KP_Decimal ]	};
 
-    include "keypad(comma)"
+    include "kpdl(comma)"
 
     include "level3(ralt_switch)"
 };

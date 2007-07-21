@@ -1,3 +1,111 @@
+2007-07-20  Sergey Udaltsov
+
+	* symbols/gr: adding pound sign,
+	https://bugs.freedesktop.org/show_bug.cgi?id=11608
+
+2007-07-16  Sergey Udaltsov
+
+	* rules/base.o_s.part, rules/base.xml.in, symbols/be, symbols/keypad:
+	modularized wang kbd,
+	https://bugs.freedesktop.org/show_bug.cgi?id=8852
+
+2007-07-15  Sergey Udaltsov
+
+	* symbols/kpdl, symbols/*, rules/base.xml.in, rules/base.o_s.part:
+	introducing separate KPDL handling,
+	https://bugs.freedesktop.org/show_bug.cgi?id=11611
+
+2007-07-12  Sergey Udaltsov
+
+	* NEWS: preparing release 1.0
+
+2007-07-10  Sergey Udaltsov
+
+	*  geometry/hhk, rules/base.m_g.part, rules/base.xml.in,
+	geometry/Makefile.am: adding hhk geometry,
+	https://bugs.freedesktop.org/show_bug.cgi?id=11519
+
+2007-07-09  Sergey Udaltsov
+
+	*  symbols/de: fixed AE12, closing
+	https://bugs.freedesktop.org/show_bug.cgi?id=11514
+
+2007-06-29  Sergey Udaltsov
+
+	*  symbols/lk: another fix from
+	https://bugs.freedesktop.org/show_bug.cgi?id=11284
+	*  symbols/us, rules/base.xml.in: added us(colemak),
+	https://bugs.freedesktop.org/show_bug.cgi?id=11416
+
+2007-06-25  Sergey Udaltsov
+
+	*  symbols/Makefile.am, symbols/braille, rules/base.xml.in: added
+	Braille layout, https://bugs.freedesktop.org/show_bug.cgi?id=11356
+
+2007-06-18  Sergey Udaltsov
+
+	*  symbols/Makefile.am, symbols/et, rules/base.xml.in: added
+	et(basic), part of the OLPC works
+
+2007-06-16  Sergey Udaltsov
+
+	*  symbols/lk: fixed Sinhala, closing
+	https://bugs.freedesktop.org/show_bug.cgi?id=11284
+
+2007-06-15  Sergey Udaltsov
+
+	*  symbols/ru, rules/base.xml.in: added ru(cv_latin), closing
+	https://bugs.freedesktop.org/show_bug.cgi?id=11246
+
+2007-06-13  Sergey Udaltsov
+
+	*  symbols/ru, rules/base.xml.in: added ru(cv), closing
+	https://bugs.freedesktop.org/show_bug.cgi?id=11246
+	*  symbols/ge, rules/base.xml.in: added ge(os), again closing
+	https://bugs.freedesktop.org/show_bug.cgi?id=8092
+	*  symbols/ru, rules/base.xml.in: added ru(udm), closing
+	https://bugs.freedesktop.org/show_bug.cgi?id=11257
+
+2007-06-07  Sergey Udaltsov
+
+	*  symbols/in, rules/base.xml.in: added Hindi phonetic,
+	https://bugs.freedesktop.org/show_bug.cgi?id=11195
+
+2007-06-06  Sergey Udaltsov
+
+	*  rules/xfree98: fixed nec_vndr, closing
+	https://bugs.freedesktop.org/show_bug.cgi?id=11176
+
+2007-05-26  Sergey Udaltsov
+
+	*  rules/base.o_s.part, rules/base.xml.in, symbols/jp: Add
+	"NICOLA-F style Backspace" to "Japanese keyboard options", closing
+	https://bugs.freedesktop.org/show_bug.cgi?id=11064
+
+2007-05-14  Sergey Udaltsov
+
+	*  rules/base.xml.in, rules/xkb.dtd: introducing vendor into
+	configItem
+
+2007-05-13  Sergey Udaltsov
+
+	* symbols/il: replaced backslash with bar, reclosing
+	https://bugs.freedesktop.org/show_bug.cgi?id=6375
+
+2007-05-02  Sergey Udaltsov
+
+	* symbols/gr: using Unicode since it is more appropriate for polytonic
+	Greek, https://bugs.freedesktop.org/show_bug.cgi?id=10824
+
+2007-04-30  Sergey Udaltsov
+
+	* rules/base.xml.in: make descriptions less technical
+
+2007-04-29  Sergey Udaltsov
+
+	* symbols/us: adding explicit BKSL, closing
+	https://bugs.freedesktop.org/show_bug.cgi?id=10811
+
 2007-04-27  Sergey Udaltsov
 
 	* geometry/microsoft: replacing non-defined AE00 with TLDE,
@@ -1440,7 +1548,7 @@
 
 2004-09-13 22:39  svu
 
-	* symbols/tj: new local cvs keyword seems to be ok - no more $Id: ChangeLog,v 1.279 2007-04-27 19:15:42 svu Exp $
+	* symbols/tj: new local cvs keyword seems to be ok - no more $Id: ChangeLog,v 1.302 2007-07-20 23:30:14 svu Exp $
 
 2004-09-13 22:38  svu
 

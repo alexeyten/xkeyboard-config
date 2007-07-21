@@ -1,4 +1,4 @@
-// $XKeyboardConfig: xkeyboard-config/symbols/it,v 1.10 2006-10-15 21:17:04 svu Exp $
+// $XKeyboardConfig: xkeyboard-config/symbols/it,v 1.11 2007-07-15 22:12:12 svu Exp $
 
 // based on a keyboard map from an 'xkb/symbols/it' file
 // 17 May 2003 Modified by Sebastiano Vigna (vigna@dsi.unimi.it)
@@ -126,7 +126,7 @@ xkb_symbols "mac" {
 
     // End alphanumeric section
 
-    include "keypad(dot)"
+    include "kpdl(dot)"
     include "level3(ralt_switch)"
 };
 

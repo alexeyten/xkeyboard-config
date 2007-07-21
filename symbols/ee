@@ -1,4 +1,4 @@
-// $XKeyboardConfig: xkeyboard-config/symbols/ee,v 1.9 2006-03-16 22:58:05 svu Exp $
+// $XKeyboardConfig: xkeyboard-config/symbols/ee,v 1.10 2007-07-15 22:12:12 svu Exp $
 
 // based on
 // Estonian XKB-keymap by Ville Hallik <ville@linux.ee>
@@ -75,5 +75,5 @@ xkb_symbols "dvorak" {
     key <AB10>	{ [         z,          Z,     zcaron,     Zcaron ]	};
 
     include "level3(ralt_switch)"
-    include "keypad(comma)"
+    include "kpdl(comma)"
 };

@@ -1,4 +1,4 @@
-// $XKeyboardConfig: xkeyboard-config/symbols/il,v 1.12 2006-11-19 13:15:56 svu Exp $
+// $XKeyboardConfig: xkeyboard-config/symbols/il,v 1.13 2007-05-13 11:23:38 svu Exp $
 
 // based on a keyboard map from an 'xkb/symbols/il' file
 //
@@ -76,7 +76,7 @@ xkb_symbols "basic" {
     key <AD11> { [ bracketright, braceright, 0x10005bf	]}; // Rafe
     key <AD12> { [ bracketleft,  braceleft,  0x10005bd	]}; // Meteg
                                       
-    key <BKSL> { [ backslash,    backslash,  0x10005bb	]}; // Qubuts    
+    key <BKSL> { [ backslash,    bar,  0x10005bb	]}; // Qubuts    
 };
 
 

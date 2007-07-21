@@ -1,4 +1,4 @@
-// $XKeyboardConfig: xkeyboard-config/symbols/ro,v 1.12 2006-07-02 21:05:20 svu Exp $
+// $XKeyboardConfig: xkeyboard-config/symbols/ro,v 1.13 2007-07-15 22:12:12 svu Exp $
 // $XFree86: xc/programs/xkbcomp/symbols/ro,v 1.6 2003/09/08 13:12:51 pascal Exp $
 //
 // Complete set of Romanian keyboards as described in the new Romanian standard
@@ -186,7 +186,7 @@ xkb_symbols "winkeys" {
     key <BKSL> { [ acircumflex, Acircumflex             ]       };
 
     // End alphanumeric section, begin "Keypad"
-    include "keypad(comma)"
+    include "kpdl(comma)"
     // End "Keypad" section
 
     include "level3(ralt_switch)"

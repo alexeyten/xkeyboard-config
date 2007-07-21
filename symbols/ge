@@ -1,4 +1,4 @@
-// $XKeyboardConfig: xkeyboard-config/symbols/ge,v 1.6 2007-04-11 22:30:54 svu Exp $
+// $XKeyboardConfig: xkeyboard-config/symbols/ge,v 1.7 2007-06-13 21:59:46 svu Exp $
 
 // Georgian Keyboard Layouts by Aiet Kolkhi <aietkolkhi@gmail.com>
 // Full layout descriptions available at http://www.gakartuleba.org/layouts/
@@ -323,3 +323,13 @@ xkb_symbols "ru" {
     key <AB10> { [ 0x010010f0,  question        ]       };
 
 };
+
+partial alphanumeric_keys
+xkb_symbols "os" {
+
+    include "ru(os)"
+
+    name[Group1]= "Georgia - Ossetian";
+
+};
+

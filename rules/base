@@ -42,7 +42,7 @@
               chicony chicony9885 \
               compaqeak8 compaqik7 compaqik13 compaqik18 \
               cymotionlinux \
-              dell inspiron precision_m dellusbmm dtk2000 sk8125 sk8135 \
+              dell inspiron precision_m dellusbmm dtk2000 dell8125 dell8135 \
               emachines ennyah_dkb1008 evdev \
               genius geniuscomfy geniuscomfy2 geniuskb19e \
               gyration honeywell_euroboard \
@@ -137,6 +137,7 @@
   pc98		=	nec(pc98)
  $macbooks      =       macintosh(%m)
  $macs		=	macintosh(macintosh)
+  hhk		=	hhk(basic)
   *		=       pc(pc104)
 
 ! model		layout		variant		=	symbols
@@ -826,6 +827,9 @@
   eurosign:2		=	+eurosign(2)
   keypad:oss            =       +keypad(oss)
   keypad:legacy         =	+keypad(legacy)
+  keypad:legacy_wang         =	+keypad(legacy_wang)
+  keypad:oss_wang         =	+keypad(oss_wang)
+  keypad:future_wang         =	+keypad(future_wang)
   nbsp:none             =	+nbsp(none)
   nbsp:level2           =	+nbsp(level2)
   nbsp:level3           =	+nbsp(level3)
@@ -833,6 +837,15 @@
   nbsp:level3n          =	+nbsp(level3n)
   nbsp:level4           =	+nbsp(level4)
   nbsp:level4n          =	+nbsp(level4n)
+  japan:nicola_f_bs     =	+jp(nicola_f_bs)
+  kpdl:dot              =	+kpdl(dot)
+  kpdl:comma            =	+kpdl(comma)
+  kpdl:dotoss           =	+kpdl(dotoss)
+  kpdl:dotoss_latin9    =	+kpdl(dotoss_latin9)
+  kpdl:commaoss         =	+kpdl(commaoss)
+  kpdl:momayyezoss      =	+kpdl(momayyezoss)
+  kpdl:kposs            =	+kpdl(kposs)
+
 
 ! option	=	compat
   grp_led:num		=	+lednum(group_lock)

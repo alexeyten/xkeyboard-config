@@ -1,7 +1,7 @@
 
 // based on a keyboard map from an 'xkb/symbols/se' file
 //
-// $XKeyboardConfig: xkeyboard-config/symbols/se,v 1.15 2007-04-04 23:03:15 svu Exp $
+// $XKeyboardConfig: xkeyboard-config/symbols/se,v 1.17 2007-07-15 22:12:12 svu Exp $
 // $XFree86: xc/programs/xkbcomp/symbols/se,v 1.5 2003/01/26 02:01:48 dawes Exp $
 
 partial default alphanumeric_keys
@@ -28,7 +28,7 @@ xkb_symbols "se" {
 
     key <SPCE>	{ [     space,      space,        space, nobreakspace ]	};
 
-    include "keypad(comma)"
+    include "kpdl(comma)"
 
     include "level3(ralt_switch)"
 };
@@ -203,13 +203,13 @@ xkb_symbols "mac" {
     key <AD12> {	[       diaeresis,     asciicircum, 	asciitilde			]	};
     key <BKSL> {	[      apostrophe,        asterisk,               at			]	};
 
-    include "keypad(comma)"
+    include "kpdl(comma)"
     include "level3(ralt_switch)"
 };
 
 // Svdvorak
 // This version of Dvorak follows danish and norwegian style in hope for a
-Scandinavian standard.
+// Scandinavian standard.
 partial alphanumeric_keys
 xkb_symbols "svdvorak" {
 
