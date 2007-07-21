@@ -11,9 +11,6 @@ xkeyboard-config (1.0~cvs.20070721-1) UNRELEASED; urgency=low
      + fix de+nodeadkey layout. (Closes: #432297)
   * Patches refreshed:
      + fix FTBFS. (Closes: #424112)
-  * Patches to send upstream.
-     + 002_add_asus6000.diff: add Asus A6000 series Keyboard support.
-      (Closes: #383953)
   * Patches obsoleted:
      + greek.diff.
 
