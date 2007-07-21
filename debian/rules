@@ -76,7 +76,7 @@ clean: $(stamp) unpatch
 	dh_testroot
 	rm -rf $(stamp)
 
-	-$(MAKE) distclean
+	[ ! -f Makefile ] || $(MAKE) distclean
 	# Files not cleaned up
 	-rm -f intltool-extract intltool-merge intltool-update
 	-rm -f rules/base.xml
