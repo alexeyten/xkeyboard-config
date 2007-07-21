@@ -18,11 +18,11 @@
   quilt refresh --sort
   exit 0
 
-Index: xkb-data-experimental/rules/base
+Index: xkb-data/rules/base
 ===================================================================
---- xkb-data-experimental.orig/rules/base
-+++ xkb-data-experimental/rules/base
-@@ -140,116 +140,116 @@
+--- xkb-data.orig/rules/base	2007-07-21 20:04:00.000000000 +0200
++++ xkb-data/rules/base	2007-07-21 20:04:12.000000000 +0200
+@@ -141,116 +141,116 @@
    *		=       pc(pc104)
  
  ! model		layout		variant		=	symbols
@@ -247,7 +247,7 @@ Index: xkb-data-experimental/rules/base
    ataritt	$nonlatin		=	xfree68_vndr/ataritt(us)+%l%(v):2
    ataritt	*			=	xfree68_vndr/ataritt(us)+%l%(v)
    amiga		$nonlatin		=	xfree68_vndr/amiga(usa1)+%l%(v):2
-@@ -270,73 +270,73 @@
+@@ -271,73 +271,73 @@
    *		*			=	pc+%l%(v)
  
  ! model		layout[1]			=	symbols
@@ -388,7 +388,7 @@ Index: xkb-data-experimental/rules/base
    ataritt	*			=	xfree68_vndr/ataritt(us)+%l[1]%(v[1])
    amiga		*			=	xfree68_vndr/amiga(usa1)+%l[1]%(v[1])
    sun4		*			=	latin+sun_vndr/us(sun4)+%l[1]%(v[1])
-@@ -348,47 +348,47 @@
+@@ -349,47 +349,47 @@
    *		*			=	pc+%l[1]%(v[1])
  
  ! model		layout[1]	variant[1]	=	symbols
@@ -477,10 +477,10 @@ Index: xkb-data-experimental/rules/base
  
  ! layout[2]	=	symbols
    ar		=	+ara%(v[2]):2
-Index: xkb-data-experimental/rules/compat/base.ml1_s.part
+Index: xkb-data/rules/compat/base.ml1_s.part
 ===================================================================
---- xkb-data-experimental.orig/rules/compat/base.ml1_s.part
-+++ xkb-data-experimental/rules/compat/base.ml1_s.part
+--- xkb-data.orig/rules/compat/base.ml1_s.part	2007-07-21 20:04:00.000000000 +0200
++++ xkb-data/rules/compat/base.ml1_s.part	2007-07-21 20:04:12.000000000 +0200
 @@ -1,67 +1,67 @@
 -  *		ar			=	pc+ara%(v[1])
 -  *		ben			=	pc+in(ben)%(v[1])
@@ -616,10 +616,10 @@ Index: xkb-data-experimental/rules/compat/base.ml1_s.part
 +  *		yu(unicode)			=	pc(pc105)+srp(latinunicode)
 +  *		yu(yz)			=	pc(pc105)+srp(latinyz)
 +  *		yu(unicodeyz)			=	pc(pc105)+srp(latinunicodeyz)
-Index: xkb-data-experimental/rules/compat/base.ml1v1_s.part
+Index: xkb-data/rules/compat/base.ml1v1_s.part
 ===================================================================
---- xkb-data-experimental.orig/rules/compat/base.ml1v1_s.part
-+++ xkb-data-experimental/rules/compat/base.ml1v1_s.part
+--- xkb-data.orig/rules/compat/base.ml1v1_s.part	2007-07-21 20:04:00.000000000 +0200
++++ xkb-data/rules/compat/base.ml1v1_s.part	2007-07-21 20:04:12.000000000 +0200
 @@ -1,41 +1,41 @@
 -  *		ben		basic		=	pc+in(ben)
 -  *		ben		probhat		=	pc+in(ben_probhat)
@@ -703,10 +703,10 @@ Index: xkb-data-experimental/rules/compat/base.ml1v1_s.part
 +  *		yu		unicode		=	pc(pc105)+srp(latinunicode)
 +  *		yu		yz		=	pc(pc105)+srp(latinyz)
 +  *		yu		unicodeyz		=	pc(pc105)+srp(latinunicodeyz)
-Index: xkb-data-experimental/rules/compat/base.ml_s.part
+Index: xkb-data/rules/compat/base.ml_s.part
 ===================================================================
---- xkb-data-experimental.orig/rules/compat/base.ml_s.part
-+++ xkb-data-experimental/rules/compat/base.ml_s.part
+--- xkb-data.orig/rules/compat/base.ml_s.part	2007-07-21 20:04:00.000000000 +0200
++++ xkb-data/rules/compat/base.ml_s.part	2007-07-21 20:04:12.000000000 +0200
 @@ -1,67 +1,67 @@
 -  *		ar			=	pc+ara
 -  *		ben			=	pc+in(ben)
@@ -842,10 +842,10 @@ Index: xkb-data-experimental/rules/compat/base.ml_s.part
 +  *		yu(unicode)			=	pc(pc105)+srp(latinunicode)
 +  *		yu(yz)			=	pc(pc105)+srp(latinyz)
 +  *		yu(unicodeyz)			=	pc(pc105)+srp(latinunicodeyz)
-Index: xkb-data-experimental/rules/compat/base.mlv_s.part
+Index: xkb-data/rules/compat/base.mlv_s.part
 ===================================================================
---- xkb-data-experimental.orig/rules/compat/base.mlv_s.part
-+++ xkb-data-experimental/rules/compat/base.mlv_s.part
+--- xkb-data.orig/rules/compat/base.mlv_s.part	2007-07-21 20:04:00.000000000 +0200
++++ xkb-data/rules/compat/base.mlv_s.part	2007-07-21 20:04:12.000000000 +0200
 @@ -1,41 +1,41 @@
 -  *		ben		basic		=	pc+in(ben)
 -  *		ben		probhat		=	pc+in(ben_probhat)

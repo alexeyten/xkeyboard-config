@@ -1,32 +1,32 @@
-Index: xkb-data-experimental/rules/base
+Index: xkb-data/rules/base
 ===================================================================
---- xkb-data-experimental.orig/rules/base
-+++ xkb-data-experimental/rules/base
-@@ -826,6 +826,7 @@
-   eurosign:2		=	+eurosign(2)
-   keypad:oss            =       +keypad(oss)
-   keypad:legacy         =	+keypad(legacy)
-+  keypad:comma         =	+keypad(comma)
+--- xkb-data.orig/rules/base	2007-07-21 19:54:58.000000000 +0200
++++ xkb-data/rules/base	2007-07-21 20:01:31.000000000 +0200
+@@ -830,6 +830,7 @@
+   keypad:legacy_wang         =	+keypad(legacy_wang)
+   keypad:oss_wang         =	+keypad(oss_wang)
+   keypad:future_wang         =	+keypad(future_wang)
++  keypad:comma         =       +keypad(comma)
    nbsp:none             =	+nbsp(none)
    nbsp:level2           =	+nbsp(level2)
    nbsp:level3           =	+nbsp(level3)
-Index: xkb-data-experimental/rules/base.o_s.part
+Index: xkb-data/rules/base.o_s.part
 ===================================================================
---- xkb-data-experimental.orig/rules/base.o_s.part
-+++ xkb-data-experimental/rules/base.o_s.part
-@@ -63,6 +63,7 @@
-   eurosign:2		=	+eurosign(2)
-   keypad:oss            =       +keypad(oss)
-   keypad:legacy         =	+keypad(legacy)
-+  keypad:comma         =	+keypad(comma)
+--- xkb-data.orig/rules/base.o_s.part	2007-07-21 19:54:58.000000000 +0200
++++ xkb-data/rules/base.o_s.part	2007-07-21 20:01:49.000000000 +0200
+@@ -66,6 +66,7 @@
+   keypad:legacy_wang         =	+keypad(legacy_wang)
+   keypad:oss_wang         =	+keypad(oss_wang)
+   keypad:future_wang         =	+keypad(future_wang)
++  keypad:comma          =       +keypad(comma)
    nbsp:none             =	+nbsp(none)
    nbsp:level2           =	+nbsp(level2)
    nbsp:level3           =	+nbsp(level3)
-Index: xkb-data-experimental/rules/base.xml.in
+Index: xkb-data/rules/base.xml.in
 ===================================================================
---- xkb-data-experimental.orig/rules/base.xml.in
-+++ xkb-data-experimental/rules/base.xml.in
-@@ -3371,6 +3371,12 @@
+--- xkb-data.orig/rules/base.xml.in	2007-07-21 19:54:58.000000000 +0200
++++ xkb-data/rules/base.xml.in	2007-07-21 20:01:04.000000000 +0200
+@@ -3573,6 +3573,12 @@
        </option>
        <option>
          <configItem>
@@ -37,5 +37,5 @@ Index: xkb-data-experimental/rules/base.xml.in
 +      <option>
 +        <configItem>
            <name>keypad:oss</name>
-           <_description>Use keypad with unicode additions (arrows and math operators)</_description>
+           <_description>Keypad with unicode additions (arrows and math operators)</_description>
         </configItem>

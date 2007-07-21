@@ -1,7 +1,7 @@
-Index: xkb-data-experimental/rules/base
+Index: xkb-data/rules/base
 ===================================================================
---- xkb-data-experimental.orig/rules/base
-+++ xkb-data-experimental/rules/base
+--- xkb-data.orig/rules/base	2007-07-21 20:01:31.000000000 +0200
++++ xkb-data/rules/base	2007-07-21 20:02:26.000000000 +0200
 @@ -34,7 +34,7 @@
  
  ! $inetkbds = a4techKB21 a4techKBS8 a4_rfkb23 \
@@ -11,11 +11,11 @@ Index: xkb-data-experimental/rules/base
                apple \
                benqx730 benqx800 brother \
                btc5113rf btc5126t btc9000 btc9000a btc9001ah btc5090 btc9019u \
-Index: xkb-data-experimental/rules/base.xml.in
+Index: xkb-data/rules/base.xml.in
 ===================================================================
---- xkb-data-experimental.orig/rules/base.xml.in
-+++ xkb-data-experimental/rules/base.xml.in
-@@ -119,6 +119,12 @@
+--- xkb-data.orig/rules/base.xml.in	2007-07-21 20:01:04.000000000 +0200
++++ xkb-data/rules/base.xml.in	2007-07-21 20:02:26.000000000 +0200
+@@ -138,6 +138,12 @@
      <model>
        <configItem>
          <name>azonaRF2300</name>
@@ -26,12 +26,12 @@ Index: xkb-data-experimental/rules/base.xml.in
 +      <configItem>
 +        <name>asus_6000</name>
          <_description>Azona RF2300 wireless Internet Keyboard</_description>
+         <vendor>Azona</vendor>
        </configItem>
-     </model>
-Index: xkb-data-experimental/symbols/inet
+Index: xkb-data/symbols/inet
 ===================================================================
---- xkb-data-experimental.orig/symbols/inet
-+++ xkb-data-experimental/symbols/inet
+--- xkb-data.orig/symbols/inet	2007-07-21 19:54:58.000000000 +0200
++++ xkb-data/symbols/inet	2007-07-21 20:02:26.000000000 +0200
 @@ -229,6 +229,22 @@
      key <I74>   {       [ XF86Launch4           ]       };
  };
@@ -55,15 +55,15 @@ Index: xkb-data-experimental/symbols/inet
  // Azona
  
  // Azona RF2300 wireless Internet Keyboard
-Index: xkb-data-experimental/symbols/symbols.dir
+Index: xkb-data/symbols/symbols.dir
 ===================================================================
---- xkb-data-experimental.orig/symbols/symbols.dir
-+++ xkb-data-experimental/symbols/symbols.dir
-@@ -282,6 +282,7 @@
+--- xkb-data.orig/symbols/symbols.dir	2007-07-21 19:39:52.000000000 +0200
++++ xkb-data/symbols/symbols.dir	2007-07-21 20:03:15.000000000 +0200
+@@ -450,6 +450,7 @@
+ --p----- a------- inet(a4_rfkb23)
  --p----- a------- inet(airkey)
- --p----- -------- inet(apple)
- --p----- a------- inet(armada)
+ --p----- a------- inet(acer_ferrari4k)
 +--p----- a------- inet(asus_6000)
  --p----- a------- inet(azonaRF2300)
- --p----- a------- inet(brother)
- --p----- a------- inet(btc5090)
+ --p----- a------- inet(acpi)
+ --p----- a------- inet(scorpius)

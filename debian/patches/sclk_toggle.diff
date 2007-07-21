@@ -3,10 +3,10 @@
 
 Not submitted yet.
 
-Index: xkb-data-experimental/symbols/group
+Index: xkb-data/symbols/group
 ===================================================================
---- xkb-data-experimental.orig/symbols/group
-+++ xkb-data-experimental/symbols/group
+--- xkb-data.orig/symbols/group	2007-07-21 20:04:00.000000000 +0200
++++ xkb-data/symbols/group	2007-07-21 20:04:04.000000000 +0200
 @@ -318,3 +318,15 @@
      };
  };
@@ -23,10 +23,10 @@ Index: xkb-data-experimental/symbols/group
 +    };
 +};
 +
-Index: xkb-data-experimental/rules/base.o_s.part
+Index: xkb-data/rules/base.o_s.part
 ===================================================================
---- xkb-data-experimental.orig/rules/base.o_s.part
-+++ xkb-data-experimental/rules/base.o_s.part
+--- xkb-data.orig/rules/base.o_s.part	2007-07-21 20:04:00.000000000 +0200
++++ xkb-data/rules/base.o_s.part	2007-07-21 20:04:04.000000000 +0200
 @@ -31,6 +31,7 @@
    grp:lctrl_toggle	=	+group(lctrl_toggle)
    grp:rctrl_toggle	=	+group(rctrl_toggle)
@@ -35,12 +35,12 @@ Index: xkb-data-experimental/rules/base.o_s.part
    lv3:switch		=	+level3(switch)
    lv3:ralt_switch	=	+level3(ralt_switch)
    lv3:ralt_switch_multikey	=	+level3(ralt_switch_multikey)
-Index: xkb-data-experimental/rules/base.xml.in
+Index: xkb-data/rules/base.xml.in
 ===================================================================
---- xkb-data-experimental.orig/rules/base.xml.in
-+++ xkb-data-experimental/rules/base.xml.in
-@@ -3214,6 +3214,12 @@
-           <_description>Right Ctrl key changes group.</_description>
+--- xkb-data.orig/rules/base.xml.in	2007-07-21 20:04:00.000000000 +0200
++++ xkb-data/rules/base.xml.in	2007-07-21 20:04:04.000000000 +0200
+@@ -3416,6 +3416,12 @@
+           <_description>Right Ctrl key changes layout.</_description>
          </configItem>
        </option>
 +      <option>
