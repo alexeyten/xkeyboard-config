@@ -164,14 +164,17 @@ xkb_rules_symlink = @xkb_rules_symlink@
 transform_files = layoutRename.lst variantRename.lst
 transform_scripts = ln_s.sh lnv_s.sh ml_s.sh mlv_s.sh ml1_s.sh ml1v_s.sh ml1v1_s.sh
 dist_parts = base.o_s.part
-@USE_COMPAT_RULES_FALSE@noinst_SCRIPTS = 
-@USE_COMPAT_RULES_TRUE@noinst_SCRIPTS = base.l2_s.part base.l3_s.part base.l4_s.part \
+@USE_COMPAT_RULES_FALSE@gen_parts = 
+@USE_COMPAT_RULES_TRUE@gen_parts = base.l2_s.part base.l3_s.part base.l4_s.part \
 @USE_COMPAT_RULES_TRUE@base.l2v2_s.part base.l3v3_s.part base.l4v4_s.part \
 @USE_COMPAT_RULES_TRUE@base.ml_s.part base.ml1_s.part \
 @USE_COMPAT_RULES_TRUE@base.mlv_s.part base.ml1v1_s.part \
-@USE_COMPAT_RULES_TRUE@base.ml_s.part $(dist_parts)
+@USE_COMPAT_RULES_TRUE@base.ml_s.part
 
+@USE_COMPAT_RULES_FALSE@noinst_SCRIPTS = 
+@USE_COMPAT_RULES_TRUE@noinst_SCRIPTS = $(gen_parts) $(dist_parts)
 EXTRA_DIST = base.lists.part $(transform_files) $(transform_scripts) $(dist_parts)
+CLEANFILES = $(gen_parts)
 all: all-am
 
 .SUFFIXES:
@@ -260,6 +263,7 @@ install-strip:
 mostlyclean-generic:
 
 clean-generic:
+	-test -z "$(CLEANFILES)" || rm -f $(CLEANFILES)
 
 distclean-generic:
 	-test -z "$(CONFIG_CLEAN_FILES)" || rm -f $(CONFIG_CLEAN_FILES)

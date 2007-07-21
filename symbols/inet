@@ -2261,6 +2261,7 @@ partial xkb_symbols "apple" {
     key <I2E>	{	[ XF86AudioLowerVolume	]	};
     key <I30>	{	[ XF86AudioRaiseVolume	]	};
     key <I56>   {       [ XF86RotateWindows	]	};
+    key <I5E>	{	[ XF86PowerOff		]	};
 // Really keyboard backlight off/up/down
     key <I57>   {       [ XF86Launch0		]	};
     key <I58>	{	[ XF86Launch1    	]	};

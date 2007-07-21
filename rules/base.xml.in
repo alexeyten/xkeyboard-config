@@ -3416,6 +3416,12 @@
           <_description>Right Ctrl key changes layout.</_description>
         </configItem>
       </option>
+      <option>
+        <configItem>
+          <name>grp:sclk_toggle</name>
+          <_description>ScrollLock key changes group.</_description>
+        </configItem>
+      </option>
     </group>
     <group allowMultipleSelection="true">
       <!-- The key combination used to choose the 3rd (and 4th, together with Shift)
@@ -3482,6 +3488,12 @@
         <configItem>
           <name>lv3:ralt_alt</name>
           <_description>Right Alt key never chooses 3rd level.</_description>
+        </configItem>
+      </option>
+      <option>
+        <configItem>
+          <name>lv3:enter_switch</name>
+          <_description>Press Enter key on keypad to choose 3rd level.</_description>
         </configItem>
       </option>
     </group>
@@ -3557,6 +3569,12 @@
         <configItem>
           <name>keypad:legacy</name>
           <_description>Legacy keypad</_description>
+       </configItem>
+      </option>
+      <option>
+        <configItem>
+          <name>keypad:comma</name>
+          <_description>Force standard comma keypad</_description>
        </configItem>
       </option>
       <option>

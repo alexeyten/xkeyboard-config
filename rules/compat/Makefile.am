@@ -7,15 +7,17 @@ dist_parts=base.o_s.part
 
 if USE_COMPAT_RULES
 
-noinst_SCRIPTS=base.l2_s.part base.l3_s.part base.l4_s.part \
+gen_parts=base.l2_s.part base.l3_s.part base.l4_s.part \
 base.l2v2_s.part base.l3v3_s.part base.l4v4_s.part \
 base.ml_s.part base.ml1_s.part \
 base.mlv_s.part base.ml1v1_s.part \
-base.ml_s.part $(dist_parts)
+base.ml_s.part
+noinst_SCRIPTS=$(gen_parts) $(dist_parts)
 
 else
 
 noinst_SCRIPTS=
+gen_parts=
 
 endif
 
@@ -50,3 +52,4 @@ base.ml1v1_s.part: ml1v1_s.sh $(transform_files)
 	sh $<
 
 EXTRA_DIST=base.lists.part $(transform_files) $(transform_scripts) $(dist_parts)
+CLEANFILES=$(gen_parts)
