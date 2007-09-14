@@ -5,9 +5,9 @@ Not submitted yet.
 
 Index: xkb-data/symbols/group
 ===================================================================
---- xkb-data.orig/symbols/group	2007-07-21 20:04:00.000000000 +0200
-+++ xkb-data/symbols/group	2007-07-21 20:04:04.000000000 +0200
-@@ -318,3 +318,15 @@
+--- xkb-data.orig/symbols/group	2007-09-14 19:16:53.000000000 +0200
++++ xkb-data/symbols/group	2007-09-14 19:17:28.000000000 +0200
+@@ -317,3 +317,15 @@
      };
  };
  
@@ -25,8 +25,8 @@ Index: xkb-data/symbols/group
 +
 Index: xkb-data/rules/base.o_s.part
 ===================================================================
---- xkb-data.orig/rules/base.o_s.part	2007-07-21 20:04:00.000000000 +0200
-+++ xkb-data/rules/base.o_s.part	2007-07-21 20:04:04.000000000 +0200
+--- xkb-data.orig/rules/base.o_s.part	2007-09-14 19:16:53.000000000 +0200
++++ xkb-data/rules/base.o_s.part	2007-09-14 19:17:28.000000000 +0200
 @@ -31,6 +31,7 @@
    grp:lctrl_toggle	=	+group(lctrl_toggle)
    grp:rctrl_toggle	=	+group(rctrl_toggle)
@@ -37,9 +37,9 @@ Index: xkb-data/rules/base.o_s.part
    lv3:ralt_switch_multikey	=	+level3(ralt_switch_multikey)
 Index: xkb-data/rules/base.xml.in
 ===================================================================
---- xkb-data.orig/rules/base.xml.in	2007-07-21 20:04:00.000000000 +0200
-+++ xkb-data/rules/base.xml.in	2007-07-21 20:04:04.000000000 +0200
-@@ -3416,6 +3416,12 @@
+--- xkb-data.orig/rules/base.xml.in	2007-09-14 19:16:53.000000000 +0200
++++ xkb-data/rules/base.xml.in	2007-09-14 19:17:28.000000000 +0200
+@@ -3461,6 +3461,12 @@
            <_description>Right Ctrl key changes layout.</_description>
          </configItem>
        </option>

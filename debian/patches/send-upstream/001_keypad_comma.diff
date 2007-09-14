@@ -1,35 +1,7 @@
-Index: xkb-data/rules/base
-===================================================================
---- xkb-data.orig/rules/base	2007-07-21 20:11:44.000000000 +0200
-+++ xkb-data/rules/base	2007-07-21 20:12:02.000000000 +0200
-@@ -797,6 +797,7 @@
-   grp:lctrl_toggle	=	+group(lctrl_toggle)
-   grp:rctrl_toggle	=	+group(rctrl_toggle)
-   grp:lalt_toggle	=	+group(lalt_toggle)
-+  grp:sclk_toggle	=	+group(sclk_toggle)
-   lv3:switch		=	+level3(switch)
-   lv3:ralt_switch	=	+level3(ralt_switch)
-   lv3:ralt_switch_multikey	=	+level3(ralt_switch_multikey)
-@@ -807,6 +808,7 @@
-   lv3:win_switch	=	+level3(win_switch)
-   lv3:lwin_switch	=	+level3(lwin_switch)
-   lv3:rwin_switch	=	+level3(rwin_switch)
-+  lv3:enter_switch	=	+level3(enter_switch)
-   caps:capslock		=	+capslock(capslock)
-   caps:shiftlock	=	+capslock(shiftlock)
-   caps:grouplock	=	+capslock(grouplock)
-@@ -830,6 +832,7 @@
-   keypad:legacy_wang         =	+keypad(legacy_wang)
-   keypad:oss_wang         =	+keypad(oss_wang)
-   keypad:future_wang         =	+keypad(future_wang)
-+  keypad:comma          =       +keypad(comma)
-   nbsp:none             =	+nbsp(none)
-   nbsp:level2           =	+nbsp(level2)
-   nbsp:level3           =	+nbsp(level3)
 Index: xkb-data/rules/base.o_s.part
 ===================================================================
---- xkb-data.orig/rules/base.o_s.part	2007-07-21 20:11:44.000000000 +0200
-+++ xkb-data/rules/base.o_s.part	2007-07-21 20:11:44.000000000 +0200
+--- xkb-data.orig/rules/base.o_s.part	2007-09-14 19:19:09.000000000 +0200
++++ xkb-data/rules/base.o_s.part	2007-09-14 19:20:40.000000000 +0200
 @@ -66,6 +66,7 @@
    keypad:legacy_wang         =	+keypad(legacy_wang)
    keypad:oss_wang         =	+keypad(oss_wang)
@@ -40,9 +12,9 @@ Index: xkb-data/rules/base.o_s.part
    nbsp:level3           =	+nbsp(level3)
 Index: xkb-data/rules/base.xml.in
 ===================================================================
---- xkb-data.orig/rules/base.xml.in	2007-07-21 20:11:44.000000000 +0200
-+++ xkb-data/rules/base.xml.in	2007-07-21 20:11:44.000000000 +0200
-@@ -3573,6 +3573,12 @@
+--- xkb-data.orig/rules/base.xml.in	2007-09-14 19:19:09.000000000 +0200
++++ xkb-data/rules/base.xml.in	2007-09-14 19:20:40.000000000 +0200
+@@ -3618,6 +3618,12 @@
        </option>
        <option>
          <configItem>
