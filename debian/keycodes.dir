@@ -37,7 +37,6 @@
 -------- -------- macintosh(goodmap)
 -d------ -------- macintosh(macintosh)
 -------- -------- macintosh(old)
--d------ -------- powerpcps2(powerpcps2)
 -d------ -------- sgi_vndr/indigo(pc101)
 -------- -------- sgi_vndr/indigo(pc102)
 -------- -------- sgi_vndr/indy(jp106)
