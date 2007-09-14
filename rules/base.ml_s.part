@@ -2,6 +2,8 @@
   ataritt	*			=	xfree68_vndr/ataritt(us)+%l%(v)
   amiga		$nonlatin		=	xfree68_vndr/amiga(usa1)+%l%(v):2
   amiga		*			=	xfree68_vndr/amiga(usa1)+%l%(v)
+
+  classmate	us			=	pc+%l(classmate)
   sun4		$nonlatin		=	latin+sun_vndr/us(sun4)+%l%(v):2
   sun4		*			=	latin+sun_vndr/us(sun4)+%l%(v)
   sun5		$nonlatin		=	latin+sun_vndr/us(sun5)+%l%(v):2
@@ -14,5 +16,6 @@
   macintosh_old	*			=	macintosh_vndr/us(oldmac)+%l%(v)
  $macs		en_US			=	pc+macintosh_vndr/us(extended)
  $macs		$macvendorlayouts	=	pc+macintosh_vndr/%l%(v)
+  thinkpad   	br			=	pc+br(thinkpad)
   *	   	$nonlatin		=	pc+us+%l%(v):2
   *		*			=	pc+%l%(v)

@@ -46,6 +46,12 @@
     </model>
     <model>
       <configItem>
+        <name>dellm65</name>
+        <_description>Dell Precision M65</_description>
+      </configItem>
+    </model>
+    <model>
+      <configItem>
         <name>everex</name>
         <_description>Everex STEPnote</_description>
         <vendor>Everex</vendor>
@@ -331,20 +337,6 @@
     </model>
     <model>
       <configItem>
-        <name>dell8125</name>
-        <_description>Dell SK-8125 USB Multimedia Keybard</_description>
-        <vendor>Dell</vendor>
-      </configItem>
-    </model>
-    <model>
-      <configItem>
-        <name>dell8135</name>
-        <_description>Dell SK-8135 USB Multimedia Keybard</_description>
-        <vendor>Dell</vendor>
-      </configItem>
-    </model>
-    <model>
-      <configItem>
         <name>dexxa</name>
         <_description>Dexxa Wireless Desktop Keyboard</_description>
         <vendor>Dexxa</vendor>
@@ -533,20 +525,6 @@
     </model>
     <model>
       <configItem>
-        <name>ltcd</name>
-        <_description>Logitech Cordless Desktop</_description>
-        <vendor>Logitech</vendor>
-      </configItem>
-    </model>
-    <model>
-      <configItem>
-        <name>logicdit</name>
-        <_description>Logitech Cordless Desktop iTouch</_description>
-        <vendor>Logitech</vendor>
-      </configItem>
-    </model>
-    <model>
-      <configItem>
         <name>logiclx300</name>
         <_description>Logitech Cordless Desktop LX-300</_description>
         <vendor>Logitech</vendor>
@@ -554,15 +532,15 @@
     </model>
     <model>
       <configItem>
-        <name>logicdp</name>
-        <_description>Logitech Cordless Desktop Pro</_description>
+        <name>logicd</name>
+        <_description>Logitech Cordless Desktop</_description>
         <vendor>Logitech</vendor>
       </configItem>
     </model>
     <model>
       <configItem>
-        <name>logicdpa</name>
-        <_description>Logitech Cordless Desktop Pro (alternate option)</_description>
+        <name>logicda</name>
+        <_description>Logitech Cordless Desktop (alternate option)</_description>
         <vendor>Logitech</vendor>
       </configItem>
     </model>
@@ -570,13 +548,6 @@
       <configItem>
         <name>logicdpa2</name>
         <_description>Logitech Cordless Desktop Pro (alternate option2)</_description>
-        <vendor>Logitech</vendor>
-      </configItem>
-    </model>
-    <model>
-      <configItem>
-        <name>logicdo</name>
-        <_description>Logitech Cordless Desktop Optical</_description>
         <vendor>Logitech</vendor>
       </configItem>
     </model>
@@ -619,6 +590,13 @@
       <configItem>
         <name>logicink</name>
         <_description>Logitech Internet Navigator Keyboard</_description>
+        <vendor>Logitech</vendor>
+      </configItem>
+    </model>
+    <model>
+      <configItem>
+        <name>logiex110</name>
+        <_description>Logitech Cordless Desktop EX110</_description>
         <vendor>Logitech</vendor>
       </configItem>
     </model>
@@ -861,15 +839,15 @@
     </model>
     <model>
       <configItem>
-        <name>acer_c300</name>
-        <_description>Acer C300</_description>
-	<vendor>Acer</vendor>
+        <name>macintosh_hhk</name>
+        <_description>Happy Hacking Keyboard for Mac</_description>
+	<vendor>Fujitsu</vendor>
       </configItem>
     </model>
     <model>
       <configItem>
-        <name>acer_tm_800</name>
-        <_description>Acer TravelMate 800</_description>
+        <name>acer_c300</name>
+        <_description>Acer C300</_description>
 	<vendor>Acer</vendor>
       </configItem>
     </model>
@@ -878,6 +856,20 @@
         <name>acer_ferrari4k</name>
         <_description>Acer Ferrari 4000</_description>
 	<vendor>Acer</vendor>
+      </configItem>
+    </model>
+    <model>
+      <configItem>
+        <name>acer_laptop</name>
+        <_description>Acer Laptop</_description>
+	<vendor>Acer</vendor>
+      </configItem>
+    </model>
+    <model>
+      <configItem>
+        <name>asus_laptop</name>
+        <_description>Asus Laptop</_description>
+	<vendor>Asus</vendor>
       </configItem>
     </model>
     <model>
@@ -924,15 +916,8 @@
     </model>
     <model>
       <configItem>
-	<name>benqx730</name>
-	<_description>BenQ X-Touch 730</_description>
-	<vendor>BenQ</vendor>
-      </configItem>
-    </model>
-    <model>
-      <configItem>
-	<name>benqx800</name>
-	<_description>BenQ X-Touch 800</_description>
+	<name>benqx</name>
+	<_description>BenQ X-Touch</_description>
 	<vendor>BenQ</vendor>
       </configItem>
     </model>
@@ -941,6 +926,13 @@
 	<name>hhk</name>
 	<_description>Happy Hacking Keyboard</_description>
 	<vendor>Fujitsu</vendor>
+      </configItem>
+    </model>
+    <model>
+      <configItem>
+	<name>classmate</name>
+	<_description>Classmate PC</_description>
+	<vendor>Intel</vendor>
       </configItem>
     </model>
   </modelList>
@@ -1010,6 +1002,12 @@
           <configItem>
             <name>mac</name>
             <_description>Macintosh</_description>
+          </configItem>
+        </variant>
+        <variant>
+          <configItem>
+            <name>altgr-intl</name>
+            <_description>International (AltGr dead keys)</_description>
           </configItem>
         </variant>
       </variantList>
@@ -1488,6 +1486,27 @@
     </layout>
     <layout>
       <configItem>
+        <name>cn</name>
+        <_shortDescription>China</_shortDescription>
+        <_description>China</_description>
+      </configItem>
+      <variantList>
+        <variant>
+          <configItem>
+            <name>tib</name>
+            <_description>Tibetan</_description>
+          </configItem>
+        </variant>
+        <variant>
+          <configItem>
+            <name>tib_asciinum</name>
+            <_description>Tibetan (with ASCII numerals)</_description>
+          </configItem>
+        </variant>
+      </variantList>
+    </layout>
+    <layout>
+      <configItem>
         <name>hr</name>
         <_shortDescription>Hrv</_shortDescription>
         <_description>Croatia</_description>
@@ -1894,6 +1913,14 @@
     </layout>
     <layout>
       <configItem>
+        <name>gn</name>
+        <_shortDescription>Gui</_shortDescription>
+        <_description>Guinea</_description>
+      </configItem>
+      <variantList/>
+    </layout>
+    <layout>
+      <configItem>
         <name>ge</name>
         <_shortDescription>Geo</_shortDescription>
         <_description>Georgia</_description>
@@ -2228,6 +2255,12 @@
             <_description>Macintosh</_description>
           </configItem>
         </variant>
+        <variant>
+          <configItem>
+            <name>geo</name>
+            <_description>Georgian</_description>
+          </configItem>
+        </variant>
       </variantList>
     </layout>
     <layout>
@@ -2549,8 +2582,20 @@
       <variantList>
         <variant>
           <configItem>
+            <name>comma</name>
+            <_description>Commabelow</_description>
+          </configItem>
+        </variant>
+        <variant>
+          <configItem>
             <name>std</name>
             <_description>Standard</_description>
+          </configItem>
+        </variant>
+        <variant>
+          <configItem>
+            <name>academic</name>
+            <_description>Standard (Commabelow)</_description>
           </configItem>
         </variant>
         <variant>

@@ -1,4 +1,4 @@
-// $XKeyboardConfig: xkeyboard-config/symbols/it,v 1.11 2007-07-15 22:12:12 svu Exp $
+// $XKeyboardConfig: xkeyboard-config/symbols/it,v 1.12 2007-09-04 06:39:22 svu Exp $
 
 // based on a keyboard map from an 'xkb/symbols/it' file
 // 17 May 2003 Modified by Sebastiano Vigna (vigna@dsi.unimi.it)
@@ -128,5 +128,28 @@ xkb_symbols "mac" {
 
     include "kpdl(dot)"
     include "level3(ralt_switch)"
+};
+
+// Used by Georgian people in Italy, 
+// contributed by Vladimer Sichinava
+partial alphanumeric_keys 
+xkb_symbols "geo" {
+    include "it"
+    include "ge(basic)"
+
+    name[Group1]= "Italy - Georgian";
+
+    key <AD11> { [    egrave,     eacute,  bracketleft,    braceleft ]	};
+    key <AD12> { [      plus,   asterisk, bracketright,   braceright ]	};
+   
+    key <AC10> { [    ograve,   ccedilla,           at, dead_cedilla ] };
+    key <AC11> { [    agrave,     degree,   numbersign,       degree ] };
+    key <BKSL> { [    ugrave,    section,   dead_grave,   dead_breve ]	};
+    key <LSGT> { [ less,	greater		]       };
+
+    key <AB08> { [     comma,  semicolon  	]	};    
+    key <AB09> { [    period,  colon		] 	};
+    key <AB10> { [     minus, 	underscore	]	};
+
 };
 

@@ -5,6 +5,7 @@
   pc105           Generic 105-key (Intl) PC
   dell101         Dell 101-key PC
   latitude        Dell Latitude series laptop
+  dellm65         Dell Precision M65
   everex          Everex STEPnote
   flexpro         Keytronic FlexPro
   microsoft       Microsoft Natural
@@ -46,8 +47,6 @@
   dellusbmm       Dell USB Multimedia Keybard
   inspiron        Dell Laptop/notebook Inspiron 6xxx/8xxx
   precision_m     Dell Laptop/notebook Precision M series
-  dell8125        Dell SK-8125 USB Multimedia Keybard
-  dell8135        Dell SK-8135 USB Multimedia Keybard
   dexxa           Dexxa Wireless Desktop Keyboard
   diamond         Diamond 9801 / 9802 series
   dtk2000         DTK2000
@@ -75,19 +74,17 @@
   thinkpad        IBM ThinkPad 560Z/600/600E/A22E
   thinkpadintl    IBM ThinkPad 560Z/600/600E/A22E, Intl
   logiaccess      Logitech Access Keyboard
-  ltcd            Logitech Cordless Desktop
-  logicdit        Logitech Cordless Desktop iTouch
   logiclx300      Logitech Cordless Desktop LX-300
-  logicdp         Logitech Cordless Desktop Pro
-  logicdpa        Logitech Cordless Desktop Pro (alternate option)
+  logicd          Logitech Cordless Desktop
+  logicda         Logitech Cordless Desktop (alternate option)
   logicdpa2       Logitech Cordless Desktop Pro (alternate option2)
-  logicdo         Logitech Cordless Desktop Optical
   logicfn         Logitech Cordless Freedom/Desktop Navigator
   logicdn         Logitech Cordless Desktop Navigator
   logiitc         Logitech iTouch Cordless Keyboard (model Y-RB6)
   logiik          Logitech Internet Keyboard
   itouch          Logitech iTouch
   logicink        Logitech Internet Navigator Keyboard
+  logiex110       Logitech Cordless Desktop EX110
   logiinkse       Logitech iTouch Internet Navigator Keyboard SE
   logiinkseusb    Logitech iTouch Internet Navigator Keyboard SE (USB)
   logiultrax      Logitech Ultra-X Keyboard
@@ -122,18 +119,20 @@
   macbook79       MacBook/MacBook Pro (Intl)
   macintosh       Macintosh
   macintosh_old   Macintosh Old
+  macintosh_hhk   Happy Hacking Keyboard for Mac
   acer_c300       Acer C300
-  acer_tm_800     Acer TravelMate 800
   acer_ferrari4k  Acer Ferrari 4000
+  acer_laptop     Acer Laptop
+  asus_laptop     Asus Laptop
   apple           Apple
   apple_laptop    Apple Laptop
   silvercrest     SILVERCREST Multimedia Wireless Keyboard
   emachines       Laptop/notebook eMachines m68xx
   kr106           Korean 106-key
   evdev           Evdev-managed keyboard
-  benqx730        BenQ X-Touch 730
-  benqx800        BenQ X-Touch 800
+  benqx           BenQ X-Touch
   hhk             Happy Hacking Keyboard
+  classmate       Classmate PC
 
 ! layout
   us              U.S. English
@@ -154,6 +153,7 @@
   mm              Myanmar
   ca              Canada
   cd              Congo, Democratic Republic of the
+  cn              China
   hr              Croatia
   cz              Czechia
   dk              Denmark
@@ -166,6 +166,7 @@
   fi              Finland
   fr              France
   gh              Ghana
+  gn              Guinea
   ge              Georgia
   de              Germany
   gr              Greece
@@ -228,6 +229,7 @@
   dvorak-classic  us: Classic Dvorak
   rus             us: Russian phonetic
   mac             us: Macintosh
+  altgr-intl      us: International (AltGr dead keys)
   ps              af: Pashto
   uz              af: Southern Uzbek
   azerty          ara: azerty
@@ -282,6 +284,8 @@
   multi           ca: Multilingual, first part
   multi-2gr       ca: Multilingual, second part
   ike             ca: Inuktitut
+  tib             cn: Tibetan
+  tib_asciinum    cn: Tibetan (with ASCII numerals)
   alternatequotes hr: Use guillemets for quotes
   unicode         hr: Use Croatian digraphs
   unicodeus       hr: US keyboard with Croatian digraphs
@@ -377,6 +381,7 @@
   biblical        il: Biblical Hebrew (Tiro)
   nodeadkeys      it: Eliminate dead keys
   mac             it: Macintosh
+  geo             it: Georgian
   kana            jp: Kana
   OADG109A        jp: OADG 109A
   ruskaz          kz: Russian with Kazakh
@@ -407,7 +412,9 @@
   mac             pt: Macintosh
   mac_nodeadkeys  pt: Macintosh, eliminate dead keys
   mac_sundeadkeys pt: Macintosh, Sun dead keys
+  comma           ro: Commabelow
   std             ro: Standard
+  academic        ro: Standard (Commabelow)
   winkeys         ro: Winkeys
   phonetic        ru: Phonetic
   typewriter      ru: Typewriter

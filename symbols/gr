@@ -1,4 +1,4 @@
-// $XKeyboardConfig: xkeyboard-config/symbols/gr,v 1.11 2007-07-20 23:30:15 svu Exp $
+// $XKeyboardConfig: xkeyboard-config/symbols/gr,v 1.12 2007-08-20 20:37:51 uid2570 Exp $
 
 // $XFree86: xc/programs/xkbcomp/symbols/el,v 1.2 2002/11/15 02:26:41 dawes Exp $
 //
@@ -114,8 +114,8 @@ xkb_symbols "polytonic" {
     key <AD11> { [ 	dead_tilde,	dead_diaeresis,	dead_macron	] };
     key <AD12> { [	dead_iota,	VoidSymbol,	dead_breve	] };
 
-    key <AC10> { [	dead_acute,		U0313	] };
-    key <AC11> { [	dead_grave,		U0314	] };
+    key <AC10> { [	dead_acute,		dead_horn	] };
+    key <AC11> { [	dead_grave,		dead_ogonek	] };
 
 };
 

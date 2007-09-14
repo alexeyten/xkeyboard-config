@@ -1,4 +1,4 @@
-// $XKeyboardConfig: xkeyboard-config/symbols/pc,v 1.7 2007-01-02 20:56:55 svu Exp $
+// $XKeyboardConfig: xkeyboard-config/symbols/pc,v 1.9 2007-08-29 22:01:48 svu Exp $
 
 //
 // $XFree86: xc/programs/xkbcomp/symbols/pc,v 1.9 2003/06/09 19:59:46 dawes Exp $
@@ -65,6 +65,11 @@ xkb_symbols "pc105" {
 
     key <HYPR> {	[ NoSymbol, Hyper_L	]	};
     modifier_map Mod4   { <HYPR> };
+
+    key <OUTP> { [ XF86Display ] };
+    key <KITG> { [ XF86KbdLightOnOff ] };
+    key <KIDN> { [ XF86KbdBrightnessDown ] };
+    key <KIUP> { [ XF86KbdBrightnessUp ] };
 };
 
 partial hidden alphanumeric_keys
@@ -122,12 +127,12 @@ xkb_symbols "function" {
 partial hidden alphanumeric_keys
 xkb_symbols "editing" {
     key <PRSC> {
-	type= "PC_SYSRQ",
+	type= "PC_ALT_LEVEL2",
 	symbols[Group1]= [ Print, Sys_Req ]
     };
     key <SCLK> {  [  Scroll_Lock	]	};
     key <PAUS> {
-	type= "PC_BREAK",
+	type= "PC_CONTROL_LEVEL2",
 	symbols[Group1]= [ Pause, Break ]
     };
     key  <INS> {	[  Insert		]	};

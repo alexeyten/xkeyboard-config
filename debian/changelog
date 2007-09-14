@@ -1,3 +1,17 @@
+xkeyboard-config (1.0~cvs.20070914-1) unstable; urgency=low
+
+  * New upstream CVS snapshot from September 14th 2007:
+     + advertise all Romanian layouts. Thanks Eddy Petrișor for the
+       patch. (Closes: #436993)
+     + fix ctrl:swapcaps. (Closes: #410060)
+     + add missing virtual keys from evdev keycodes. Thanks Yann
+       Vernier for the patch. (Closes: #432613)
+     + support Asus 6000 series laptop keyboard. Thanks Arnout Boelens
+     for the patch. (Closes: #383953)
+  * Update debian/*.dir files.
+
+ -- Mohammed Adnène Trojette <adn+deb@diwi.org>  Fri, 14 Sep 2007 19:12:27 +0200
+
 xkeyboard-config (1.0~cvs.20070721-1) unstable; urgency=low
 
   [ Julien Cristau ]

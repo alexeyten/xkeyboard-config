@@ -1,4 +1,4 @@
-// $XKeyboardConfig: xkeyboard-config/symbols/et,v 1.1 2007-06-18 21:48:36 svu Exp $
+// $XKeyboardConfig: xkeyboard-config/symbols/et,v 1.3 2007-09-07 17:42:27 svu Exp $
 
 //
 // Ethiopia
@@ -23,6 +23,7 @@ xkb_symbols "basic" {
     key <AE09>	{ [        0x01001371,  0x0100137a ] }; // 9
     key <AE10>	{ [        0x0100137b,  0x0100137c ] }; // 0
     key <AE11>	{ [        minus,       underscore ] }; // -_
+    key <AE12>	{ [        equal,       plus       ] }; // =+
 
     key <AD01>	{ [        0x01001240,  0x01001250 ]	}; // q
     key <AD02>	{ [        0x010012C8,  VoidSymbol ]	}; // w
@@ -37,7 +38,7 @@ xkb_symbols "basic" {
     key <AD11>	{ [        0x01001340,  0x01001338 ]	}; // [
     key <AD12>	{ [        0x01001328,  0x01001280 ]	}; // ]
 
-    key <AC01>	{ [        a,           A          ]	}; // A
+    key <AC01>	{ [        a,           A          ]	}; // a
     key <AC02>	{ [        0x01001230,  0x01001220 ]	}; // s
     key <AC03>	{ [        0x010012F0,  0x010012F8 ]	}; // d
     key <AC04>	{ [        0x01001348,  VoidSymbol ]	}; // f
@@ -52,6 +53,7 @@ xkb_symbols "basic" {
 
     key <AB01>	{ [        0x010012D8,  0x010012E0 ]	}; // z
     key <AB02>	{ [        0x010012A0,  0x010012D0 ]	}; // x
+    key <AB03>	{ [        c,           C          ]	}; // c
     key <AB04>	{ [        0x01001238,  0x01001268 ]	}; // v
     key <AB05>	{ [        0x01001260,  VoidSymbol ]	}; // b
     key <AB06>	{ [        0x01001290,  0x01001298 ]	}; // n

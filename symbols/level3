@@ -1,4 +1,4 @@
-// $XKeyboardConfig: xkeyboard-config/symbols/level3,v 1.16 2006-12-19 00:18:37 svu Exp $
+// $XKeyboardConfig: xkeyboard-config/symbols/level3,v 1.17 2007-08-28 22:04:38 svu Exp $
 
 // these variants assign various XKB keycodes to ISO_Level3_Shift so that
 // the third shift level can be reached
@@ -48,8 +48,9 @@ xkb_symbols "ralt_switch_multikey" {
 //
 partial hidden modifier_keys
 xkb_symbols "ralt_switch_for_alts_toggle" {
+ virtual_modifiers LAlt, AlGr;
   key <LALT> {
-    type[Group1]="PC_SYSRQ",
+    type[Group1]="PC_ALT_LEVEL2",
     symbols[Group1] = [ Alt_L,  ISO_Prev_Group,  ISO_Prev_Group ]
   };
   key <RALT> {

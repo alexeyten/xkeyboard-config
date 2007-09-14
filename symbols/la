@@ -1,4 +1,4 @@
-// $XKeyboardConfig: xkeyboard-config/symbols/la,v 1.5 2006-09-04 20:25:10 svu Exp $
+// $XKeyboardConfig: xkeyboard-config/symbols/la,v 1.6 2007-08-28 22:04:38 svu Exp $
 
 // $XConsortium: lo 2002/11/28 $
 //
@@ -67,11 +67,11 @@ xkb_symbols "basic" {
     key <AB10> { [ 0x1000e9d,       parenright	]};
 
 override key <LFSH> {
-	type[Group1]="PC_SYSRQ",
+	type[Group1]="PC_ALT_LEVEL2",
 	[ 	 Shift_L,		ISO_First_Group		]
     };
 override key <RTSH> {
-	type[Group1]="PC_SYSRQ",
+	type[Group1]="PC_ALT_LEVEL2",
 	[ 	Shift_R,		ISO_Last_Group 		]
     };
 };

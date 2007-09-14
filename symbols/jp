@@ -1,4 +1,4 @@
-// $XKeyboardConfig: xkeyboard-config/symbols/jp,v 1.15 2007-05-28 20:26:53 svu Exp $
+// $XKeyboardConfig: xkeyboard-config/symbols/jp,v 1.16 2007-08-28 22:04:38 svu Exp $
 
 // based on:
 // symbols for a Japanese 106 keyboard(by tsuka@kawalab.dnj.ynu.ac.jp)
@@ -19,7 +19,7 @@ xkb_symbols "common" {
 
     // Alphanumeric section
     key <HZTG> {
-	type[Group1]="PC_SYSRQ",
+	type[Group1]="PC_ALT_LEVEL2",
 	symbols[Group1]= [ Zenkaku_Hankaku, Kanji ]
     };
 
@@ -80,27 +80,27 @@ xkb_symbols "common" {
     key <NFER> { [ Muhenkan		] };
 
     key <XFER> {
-	type[Group1]="PC_SYSRQ",
+	type[Group1]="PC_ALT_LEVEL2",
 	symbols[Group1]= [ Henkan, Mode_switch ]
     };
     key <HKTG> {
-	type[Group1]="PC_SYSRQ",
+	type[Group1]="PC_ALT_LEVEL2",
 	symbols[Group1]= [ Hiragana_Katakana, Romaji ]
     };
 
     key <EISU> {
-       type[Group1]="PC_SYSRQ",
+       type[Group1]="PC_ALT_LEVEL2",
        symbols[Group1]= [ Eisu_toggle ]
     };
 
     key <KANA> {
-       type[Group1]="PC_SYSRQ",
+       type[Group1]="PC_ALT_LEVEL2",
        symbols[Group1]= [ Hiragana_Katakana ]
     };
 
 
     key <PRSC> {
-        type[Group1]= "PC_SYSRQ",
+        type[Group1]= "PC_ALT_LEVEL2",
         symbols[Group1]= [ Print, Execute ]
     };
 };
@@ -122,7 +122,7 @@ xkb_symbols "kana" {
 
     // Alphanumeric section
     key <HZTG> {
-	type[Group1]="PC_SYSRQ",
+	type[Group1]="PC_ALT_LEVEL2",
 	symbols[Group1]= [ Zenkaku_Hankaku, Kanji ]
     };
     key <AE01> { [ kana_NU		]	};
@@ -182,18 +182,18 @@ xkb_symbols "kana" {
     key <NFER> { [ Muhenkan		]	};
 
     key <XFER> {
-	type[Group1]="PC_SYSRQ",
+	type[Group1]="PC_ALT_LEVEL2",
 	symbols[Group1]= [ Henkan, Mode_switch ]
     };
     key <HKTG> {
-	type[Group1]="PC_SYSRQ",
+	type[Group1]="PC_ALT_LEVEL2",
 	symbols[Group1]= [ Hiragana_Katakana, Romaji ]
     };
 
     // End alphanumeric section
 
     key <PRSC> {
-        type[Group1]= "PC_SYSRQ",
+        type[Group1]= "PC_ALT_LEVEL2",
         symbols[Group1]= [ Print, Execute ]
     };
 };
