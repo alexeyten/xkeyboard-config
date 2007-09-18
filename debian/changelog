@@ -1,3 +1,10 @@
+xkeyboard-config (1.0~cvs.20070916-1) unstable; urgency=low
+
+  * New upstream CVS snapshot from September 16th 2007:
+     + fix evdev layout. (Closes: #442479)
+
+ -- Mohammed Adnène Trojette <adn+deb@diwi.org>  Sun, 16 Sep 2007 18:51:30 +0200
+
 xkeyboard-config (1.0~cvs.20070914-1) unstable; urgency=low
 
   * New upstream CVS snapshot from September 14th 2007:
