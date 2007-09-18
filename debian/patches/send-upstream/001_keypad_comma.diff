@@ -1,7 +1,7 @@
 Index: xkb-data/rules/base.o_s.part
 ===================================================================
---- xkb-data.orig/rules/base.o_s.part	2007-09-14 19:19:09.000000000 +0200
-+++ xkb-data/rules/base.o_s.part	2007-09-14 19:20:40.000000000 +0200
+--- xkb-data.orig/rules/base.o_s.part	2007-09-18 17:03:25.000000000 +0200
++++ xkb-data/rules/base.o_s.part	2007-09-18 17:03:37.000000000 +0200
 @@ -66,6 +66,7 @@
    keypad:legacy_wang         =	+keypad(legacy_wang)
    keypad:oss_wang         =	+keypad(oss_wang)
@@ -12,8 +12,8 @@ Index: xkb-data/rules/base.o_s.part
    nbsp:level3           =	+nbsp(level3)
 Index: xkb-data/rules/base.xml.in
 ===================================================================
---- xkb-data.orig/rules/base.xml.in	2007-09-14 19:19:09.000000000 +0200
-+++ xkb-data/rules/base.xml.in	2007-09-14 19:20:40.000000000 +0200
+--- xkb-data.orig/rules/base.xml.in	2007-09-18 17:03:25.000000000 +0200
++++ xkb-data/rules/base.xml.in	2007-09-18 17:03:37.000000000 +0200
 @@ -3618,6 +3618,12 @@
        </option>
        <option>
