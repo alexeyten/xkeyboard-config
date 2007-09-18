@@ -1,3 +1,9 @@
+xkeyboard-config (1.0~cvs.20070916-2) UNRELEASED; urgency=low
+
+  * Refresh resync_rules_base.diff. (Closes: #442942)
+
+ -- Mohammed Adnène Trojette <adn+deb@diwi.org>  Tue, 18 Sep 2007 16:54:39 +0200
+
 xkeyboard-config (1.0~cvs.20070916-1) unstable; urgency=low
 
   * New upstream CVS snapshot from September 16th 2007:
