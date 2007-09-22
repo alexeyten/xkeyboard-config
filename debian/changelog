@@ -1,8 +1,11 @@
 xkeyboard-config (1.0~cvs.20070916-2) UNRELEASED; urgency=low
 
   * Refresh resync_rules_base.diff. (Closes: #442942)
+  * Document the creation of a custom layout in README.Debian and
+    make /usr/share/X11/xkb/rules/base.xml a configuration file.
+    (Closes: #410628, #410903, #438940)
 
- -- Mohammed Adnène Trojette <adn+deb@diwi.org>  Tue, 18 Sep 2007 16:54:39 +0200
+ -- Mohammed Adnène Trojette <adn+deb@diwi.org>  Fri, 21 Sep 2007 17:58:59 +0200
 
 xkeyboard-config (1.0~cvs.20070916-1) unstable; urgency=low
 
