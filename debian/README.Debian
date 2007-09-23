@@ -47,15 +47,17 @@ in /etc/X11/xorg.conf can be replaced by
 
 Denis Barbier <barbier@debian.org>  Thu,  5 Oct 2006 22:51:12 +0200
 
-Create a new layout
--------------------
+Customised layouts
+------------------
 
-Since 0.8-1, layouts are read from /usr/share/X11/xkb/ and no more
-/etc/X11/xkb. Thus, layouts are no more conffiles. The best way to
-have a custom layout is to create one's own layout that includes other
-layouts and customises some keys you want to modify.
+Since 0.8-1, layouts are read from /usr/share/X11/xkb/symbols and no
+more from /etc/X11/xkb/symbols. Thus, layouts are no more conffiles.
+The good way to have a custom layout is to create one's own layout that
+includes other layouts and customises some keys you want to modify.
 
-To create a French layout modifying the 'a' key, create a
+Do not modify directly files /usr/share/X11/xkb/symbols.
+
+For instance, to create a French layout altering the 'a' key, create a
 /usr/share/X11/xkb/symbols/my_fr file containing the following lines
 (without the pipes):
 
@@ -65,8 +67,25 @@ To create a French layout modifying the 'a' key, create a
    |       key <AD01> { [ a, A, oe, OE ] };
    |   };
 
-To have it appear in your desktop environment layout manager, don't
-forget to add "my_fr" in /usr/share/X11/xkb/rules/base.xml as a new
-layout.
+To have it appear in your desktop environment layout manager, add
+"my_fr" in /usr/share/X11/xkb/rules/base.xml as a new layout. For
+example, insert the following lines (without the pipes):
+
+   |    <layout>
+   |      <configItem>
+   |        <name>my_fr</name>
+   |        <shortDescription>MyFr</shortDescription>
+   |      </configItem>
+   |      <variantList>
+   |        <variant>
+   |          <configItem>
+   |            <name>my_fr</name>
+   |            <description>My customised French layout</description>
+   |          </configItem>
+   |        </variant>
+   |      </variantList>
+   |    </layout>
+
+/usr/share/X11/xkb/rules/base.xml is a configuration file.
 
 Mohammed Adnène Trojette <adn+deb@diwi.org>  Sun, 23 Sep 2007 00:05:50 +0200
