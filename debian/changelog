@@ -4,6 +4,9 @@ xkeyboard-config (1.0~cvs.20070916-2) UNRELEASED; urgency=low
   * Document the creation of a custom layout in README.Debian and
     make /usr/share/X11/xkb/rules/base.xml a configuration file.
     (Closes: #410628, #410903, #438940)
+  * New patch: add_void_definition_pl-324647.diff
+     + don't use rules/latin's definitions for alt+{w,q,f}.
+       (Closes: #324647)
 
  -- Mohammed Adnène Trojette <adn+deb@diwi.org>  Fri, 21 Sep 2007 17:58:59 +0200
 
