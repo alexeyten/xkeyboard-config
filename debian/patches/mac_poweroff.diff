@@ -3,9 +3,9 @@ Add the power key, as requested by Jörg Sommer in
 
 Index: xkb-data/symbols/inet
 ===================================================================
---- xkb-data.orig/symbols/inet	2007-09-14 19:16:52.000000000 +0200
-+++ xkb-data/symbols/inet	2007-09-14 19:17:35.000000000 +0200
-@@ -2025,6 +2025,7 @@
+--- xkb-data.orig/symbols/inet	2008-01-05 00:35:36.000000000 +0100
++++ xkb-data/symbols/inet	2008-01-05 00:36:33.000000000 +0100
+@@ -2037,6 +2037,7 @@
      key <I2E>	{	[ XF86AudioLowerVolume	]	};
      key <I30>	{	[ XF86AudioRaiseVolume	]	};
      key <I56>   {       [ XF86RotateWindows	]	};

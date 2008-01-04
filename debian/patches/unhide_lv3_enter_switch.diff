@@ -5,8 +5,8 @@ Not submitted upstream.
 
 Index: xkb-data/rules/base.o_s.part
 ===================================================================
---- xkb-data.orig/rules/base.o_s.part	2007-09-14 19:17:28.000000000 +0200
-+++ xkb-data/rules/base.o_s.part	2007-09-14 19:17:46.000000000 +0200
+--- xkb-data.orig/rules/base.o_s.part	2008-01-05 00:36:32.000000000 +0100
++++ xkb-data/rules/base.o_s.part	2008-01-05 00:36:38.000000000 +0100
 @@ -42,6 +42,7 @@
    lv3:win_switch	=	+level3(win_switch)
    lv3:lwin_switch	=	+level3(lwin_switch)
@@ -17,9 +17,9 @@ Index: xkb-data/rules/base.o_s.part
    caps:grouplock	=	+capslock(grouplock)
 Index: xkb-data/symbols/level3
 ===================================================================
---- xkb-data.orig/symbols/level3	2007-09-14 19:16:52.000000000 +0200
-+++ xkb-data/symbols/level3	2007-09-14 19:17:46.000000000 +0200
-@@ -135,7 +135,7 @@
+--- xkb-data.orig/symbols/level3	2008-01-05 00:35:36.000000000 +0100
++++ xkb-data/symbols/level3	2008-01-05 00:36:38.000000000 +0100
+@@ -136,7 +136,7 @@
  // using the level3(enter_switch) map, the Enter key on the keypad
  // temporarily chooses the third shift level.  This is especially
  // useful for Mac laptops which miss the right Alt key.
@@ -30,9 +30,9 @@ Index: xkb-data/symbols/level3
      type[Group1]="ONE_LEVEL",
 Index: xkb-data/rules/base.xml.in
 ===================================================================
---- xkb-data.orig/rules/base.xml.in	2007-09-14 19:17:28.000000000 +0200
-+++ xkb-data/rules/base.xml.in	2007-09-14 19:17:46.000000000 +0200
-@@ -3535,6 +3535,12 @@
+--- xkb-data.orig/rules/base.xml.in	2008-01-05 00:36:32.000000000 +0100
++++ xkb-data/rules/base.xml.in	2008-01-05 00:36:38.000000000 +0100
+@@ -3765,6 +3765,12 @@
            <_description>Right Alt key never chooses 3rd level.</_description>
          </configItem>
        </option>
