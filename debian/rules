@@ -108,8 +108,8 @@ install: build
 
         # Move base.xml to /etc/X11/xkb/ and make
         # /usr/share/X11/xkb/rules/base.xml links to it
-	mv debian/usr/share/X11/xkb/rules/base.xml debian/etc/X11/xkb/
-	dh_link debian/etc/X11/xkb/base.xml debian/usr/share/X11/xkb/rules/base.xml
+	mv debian/xkb-data/usr/share/X11/xkb/rules/base.xml debian/xkb-data/etc/X11/xkb/
+	dh_link debian/xkb-data/etc/X11/xkb/base.xml debian/xkb-data/usr/share/X11/xkb/rules/base.xml
 
 # Build architecture-dependent files here.
 binary-arch: build install
