@@ -2,6 +2,8 @@
 
 	* symbols/inet, rules/base.lists.part, rules/base.xml.in: adding BTC
 	6301URF, https://bugs.freedesktop.org/show_bug.cgi?id=13913
+	* symbols/macintosh_vndr/fr: added nodeadkeys,
+	https://bugs.freedesktop.org/show_bug.cgi?id=13934
 
 2008-01-03  Sergey Udaltsov
 
@@ -1904,7 +1906,7 @@
 
 2004-09-13 22:39  svu
 
-	* symbols/tj: new local cvs keyword seems to be ok - no more $Id: ChangeLog,v 1.387 2008-01-04 21:07:52 svu Exp $
+	* symbols/tj: new local cvs keyword seems to be ok - no more $Id: ChangeLog,v 1.388 2008-01-04 22:34:04 svu Exp $
 
 2004-09-13 22:38  svu
 

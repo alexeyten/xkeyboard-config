@@ -68,7 +68,7 @@ For instance, to create a French layout altering the 'a' key, create a
    |   };
 
 To have it appear in your desktop environment layout manager, add
-"my_fr" in /usr/share/X11/xkb/rules/base.xml as a new layout. For
+"my_fr" in /etc/X11/xkb/base.xml as a new layout. For
 example, insert the following lines (without the pipes):
 
     |    <layout>
@@ -80,6 +80,6 @@ example, insert the following lines (without the pipes):
     |      <variantList/>
     |    </layout>
 
-/usr/share/X11/xkb/rules/base.xml is a configuration file.
+/etc/X11/xkb/base.xml is a configuration file.
 
 Mohammed Adnène Trojette <adn+deb@diwi.org>  Sun, 23 Sep 2007 00:05:50 +0200
