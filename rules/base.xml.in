@@ -48,6 +48,7 @@
       <configItem>
         <name>dellm65</name>
         <_description>Dell Precision M65</_description>
+        <vendor>Dell</vendor>
       </configItem>
     </model>
     <model>
@@ -178,6 +179,13 @@
     </model>
     <model>
       <configItem>
+        <name>btc6301urf</name>
+        <_description>BTC 6301URF</_description>
+        <vendor>BTC</vendor>
+      </configItem>
+    </model>
+    <model>
+      <configItem>
         <name>btc9000</name>
         <_description>BTC 9000</_description>
         <vendor>BTC</vendor>
@@ -235,12 +243,20 @@
       <configItem>
         <name>cherrycyboard</name>
         <_description>Cherry CyBo@rd USB-Hub</_description>
+        <vendor>Cherry</vendor>
       </configItem>
     </model>
     <model>
       <configItem>
         <name>chicony</name>
         <_description>Chicony Internet Keyboard</_description>
+        <vendor>Chicony</vendor>
+      </configItem>
+    </model>
+    <model>
+      <configItem>
+        <name>chicony0108</name>
+        <_description>Chicony KU-0108</_description>
         <vendor>Chicony</vendor>
       </configItem>
     </model>
@@ -360,6 +376,13 @@
         <name>ennyah_dkb1008</name>
         <_description>Ennyah DKB-1008</_description>
         <vendor>Ennyah</vendor>
+      </configItem>
+    </model>
+    <model>
+      <configItem>
+        <name>fscaa1667g</name>
+        <_description>Fujitsu-Siemens Computers AMILO A1667G laptop</_description>
+        <vendor>Fujitsu-Siemens</vendor>
       </configItem>
     </model>
     <model>
@@ -623,8 +646,22 @@
     </model>
     <model>
       <configItem>
-        <name>dinovo</name>
+        <name>logiultraxc</name>
+        <_description>Logitech Ultra-X Cordless Media Desktop Keyboard</_description>
+        <vendor>Logitech</vendor>
+      </configItem>
+    </model>
+    <model>
+      <configItem>
+        <name>logidinovo</name>
         <_description>Logitech diNovo Keyboard</_description>
+        <vendor>Logitech</vendor>
+      </configItem>
+    </model>
+    <model>
+      <configItem>
+        <name>logidinovoedge</name>
+        <_description>Logitech diNovo Edge Keyboard</_description>
         <vendor>Logitech</vendor>
       </configItem>
     </model>
@@ -700,6 +737,13 @@
     </model>
     <model>
       <configItem>
+        <name>microsoftelite</name> 
+        <_description>Microsoft Natural Keyboard Elite</_description>
+        <vendor>Microsoft Inc.</vendor>
+      </configItem>
+    </model>
+    <model>
+      <configItem>
         <name>oretec</name>
         <_description>Ortek MCK-800 MM/Internet keyboard</_description>
         <vendor>Ortek</vendor>
@@ -730,6 +774,7 @@
       <configItem>
         <name>samsung4510</name>
         <_description>Samsung SDM 4510P</_description>
+        <vendor>Samsung</vendor>
       </configItem>
     </model>
     <model>
@@ -935,13 +980,20 @@
 	<vendor>Intel</vendor>
       </configItem>
     </model>
+    <model>
+      <configItem>
+	<name>olpc</name>
+	<_description>OLPC</_description>
+	<vendor>OLPC</vendor>
+      </configItem>
+    </model>
   </modelList>
   <layoutList>
     <layout>
       <configItem>
         <name>us</name>
         <_shortDescription>USA</_shortDescription>
-        <_description>U.S. English</_description>
+        <_description>USA</_description>
       </configItem>
       <variantList>
         <variant>
@@ -972,6 +1024,12 @@
           <configItem>
             <name>dvorak</name>
             <_description>Dvorak</_description>
+          </configItem>
+        </variant>
+        <variant>
+          <configItem>
+            <name>dvorak-intl</name>
+            <_description>Dvorak international</_description>
           </configItem>
         </variant>
         <variant>
@@ -1010,6 +1068,12 @@
             <_description>International (AltGr dead keys)</_description>
           </configItem>
         </variant>
+        <variant>
+          <configItem>
+            <name>olpc2</name>
+            <_description>Group toggle on multiply/divide key</_description>
+          </configItem>
+        </variant>
       </variantList>
     </layout>
     <layout>
@@ -1037,6 +1101,24 @@
           <configItem>
             <name>uz</name>
             <_description>Southern Uzbek</_description>
+          </configItem>
+        </variant>
+        <variant>
+          <configItem>
+            <name>olpc-ps</name>
+            <_description>OLPC Pashto</_description>
+          </configItem>
+        </variant>
+        <variant>
+          <configItem>
+            <name>olpc-da</name>
+            <_description>OLPC Dari</_description>
+          </configItem>
+        </variant>
+        <variant>
+          <configItem>
+            <name>olpc-uz</name>
+            <_description>OLPC Southern Uzbek</_description>
           </configItem>
         </variant>
       </variantList>
@@ -1260,6 +1342,12 @@
             <_description>Malayalam</_description>
          </configItem>
         </variant>
+	<variant>
+          <configItem>
+            <name>mal_lalitha</name>
+            <_description>Malayalam Lalitha</_description>
+         </configItem>
+        </variant>
         <variant>
           <configItem>
             <name>ori</name>
@@ -1354,6 +1442,36 @@
           <configItem>
             <name>nodeadkeys</name>
             <_description>Eliminate dead keys</_description>
+          </configItem>
+        </variant>
+        <variant>
+          <configItem>
+            <name>thinkpad</name>
+            <description>Thinkpad</description>
+          </configItem>
+        </variant>
+        <variant>
+          <configItem>
+            <name>dvorak</name>
+            <description>Dvorak</description>
+          </configItem>
+        </variant>
+        <variant>
+          <configItem>
+            <name>nativo</name>
+            <description>Nativo</description>
+          </configItem>
+        </variant>
+        <variant>
+          <configItem>
+            <name>nativo-us</name>
+            <description>Nativo for USA keyboards</description>
+          </configItem>
+        </variant>
+        <variant>
+          <configItem>
+            <name>nativo-epo</name>
+            <description>Nativo for Esperanto</description>
           </configItem>
         </variant>
       </variantList>
@@ -1590,6 +1708,12 @@
             <_description>Macintosh, eliminate dead keys</_description>
           </configItem>
         </variant>
+        <variant>
+          <configItem>
+            <name>dvorak</name>
+            <_description>Dvorak</_description>
+          </configItem>
+        </variant>
       </variantList>
     </layout>
     <layout>
@@ -1643,6 +1767,12 @@
           <configItem>
             <name>dvorak</name>
             <_description>Dvorak</_description>
+          </configItem>
+        </variant>
+        <variant>
+          <configItem>
+            <name>us</name>
+            <_description>US keyboard with Estonian letters</_description>
           </configItem>
         </variant>
       </variantList>
@@ -1767,8 +1897,8 @@
         </variant>
         <variant>
           <configItem>
-            <name>kotoistus</name>
-            <_description>Kotoistus</_description>
+            <name>classic</name>
+            <_description>Classic</_description>
           </configItem>
         </variant>
         <variant>
@@ -1864,6 +1994,12 @@
             <_description>Macintosh</_description>
           </configItem>
         </variant>
+        <variant>
+          <configItem>
+            <name>geo</name>
+            <_description>Georgian AZERTY Tskapo</_description>
+          </configItem>
+        </variant>
       </variantList>
     </layout>
     <layout>
@@ -1926,12 +2062,6 @@
         <_description>Georgia</_description>
       </configItem>
       <variantList>
-        <variant>
-          <configItem>
-            <name>azerty_tskapo</name>
-            <_description>AZERTY Tskapo</_description>
-          </configItem>
-        </variant>
         <variant>
           <configItem>
             <name>ergonomic</name>
@@ -2414,6 +2544,57 @@
     </layout>
     <layout>
       <configItem>
+        <name>me</name>
+        <_shortDescription>MNE</_shortDescription>
+        <_description>Montenegro</_description>
+      </configItem>
+      <variantList>
+        <variant>
+          <configItem>
+            <name>cyrillic</name>
+            <_description>Cyrillic</_description>
+          </configItem>
+        </variant>
+        <variant>
+          <configItem>
+            <name>cyrillicyz</name>
+            <_description>Cyrillic, Z and ZHE swapped</_description>
+          </configItem>
+        </variant>
+        <variant>
+          <configItem>
+            <name>latinunicode</name>
+            <_description>Latin unicode</_description>
+          </configItem>
+        </variant>
+        <variant>
+          <configItem>
+            <name>latinyz</name>
+            <_description>Latin qwerty</_description>
+          </configItem>
+        </variant>
+        <variant>
+          <configItem>
+            <name>latinunicodeyz</name>
+            <_description>Latin unicode qwerty</_description>
+          </configItem>
+        </variant>
+        <variant>
+          <configItem>
+            <name>cyrillicalternatequotes</name>
+            <_description>Cyrillic with guillemets</_description>
+          </configItem>
+        </variant>
+        <variant>
+          <configItem>
+            <name>latinalternatequotes</name>
+            <_description>Latin with guillemets</_description>
+          </configItem>
+        </variant>
+      </variantList>
+    </layout>
+    <layout>
+      <configItem>
         <name>mk</name>
         <_shortDescription>Mkd</_shortDescription>
         <_description>Macedonia</_description>
@@ -2532,6 +2713,12 @@
             <_description>Kashubian</_description>
           </configItem>
         </variant>
+        <variant>
+          <configItem>
+            <name>ru_phonetic_dvorak</name>
+            <_description>Russian phonetic Dvorak</_description>
+          </configItem>
+        </variant>
       </variantList>
     </layout>
     <layout>
@@ -2571,6 +2758,24 @@
             <_description>Macintosh, Sun dead keys</_description>
           </configItem>
         </variant>
+        <variant>
+          <configItem>
+            <name>nativo</name>
+            <description>Nativo</description>
+          </configItem>
+        </variant>
+        <variant>
+          <configItem>
+            <name>nativo-us</name>
+            <description>Nativo for USA keyboards</description>
+          </configItem>
+        </variant>
+        <variant>
+          <configItem>
+            <name>nativo-epo</name>
+            <description>Nativo for Esperanto</description>
+          </configItem>
+        </variant>
       </variantList>
     </layout>
     <layout>
@@ -2588,14 +2793,14 @@
         </variant>
         <variant>
           <configItem>
-            <name>std</name>
-            <_description>Standard</_description>
+            <name>std_comma</name>
+            <_description>Standard (Commabelow)</_description>
           </configItem>
         </variant>
         <variant>
           <configItem>
-            <name>academic</name>
-            <_description>Standard (Commabelow)</_description>
+            <name>std_cedilla</name>
+            <_description>Standard (Cedilla)</_description>
           </configItem>
         </variant>
         <variant>
@@ -2667,13 +2872,19 @@
             <_description>Udmurt</_description>
           </configItem>
         </variant>
+        <variant>
+          <configItem>
+            <name>kom</name>
+            <_description>Komi</_description>
+          </configItem>
+        </variant>
       </variantList>
     </layout>
     <layout>
       <configItem>
-        <name>cs</name>
-        <_shortDescription>SCG</_shortDescription>
-        <_description>Serbia and Montenegro</_description>
+        <name>rs</name>
+        <_shortDescription>SRB</_shortDescription>
+        <_description>Serbia</_description>
       </configItem>
       <variantList>
         <variant>
@@ -3053,6 +3264,12 @@
             <_description>Kurdish, Latin Alt-Q</_description>
           </configItem>
         </variant>
+        <variant>
+          <configItem>
+            <name>intl</name>
+            <_description>International (with dead keys)</_description>
+          </configItem>
+        </variant>
       </variantList>
     </layout>
     <layout>
@@ -3078,6 +3295,12 @@
           <configItem>
             <name>winkeys</name>
             <_description>Winkeys</_description>
+          </configItem>
+        </variant>
+        <variant>
+          <configItem>
+            <name>unicode</name>
+            <description>Unicode</description>
           </configItem>
         </variant>
         <variant>
@@ -3208,7 +3431,14 @@
         <_shortDescription>Pak</_shortDescription>
         <_description>Pakistan</_description>
       </configItem>
-      <variantList/>
+      <variantList>
+        <variant>
+          <configItem>
+            <name>ara</name>
+            <_description>Arabic</_description>
+          </configItem>
+        </variant>
+      </variantList>
     </layout>
     <layout>
       <configItem>
@@ -3729,6 +3959,12 @@
       </option>
       <option>
         <configItem>
+          <name>caps:swapescape</name>
+          <_description>Swap ESC and CapsLock.</_description>
+        </configItem>
+      </option>
+      <option>
+        <configItem>
           <name>caps:shiftlock</name>
           <_description>CapsLock toggles Shift so all keys are affected.</_description>
         </configItem>
@@ -3873,6 +4109,12 @@
           <_description>Swap keycodes of two keys when Mac keyboards are misdetected by kernel.</_description>
         </configItem>
       </option>
+      <option>
+        <configItem>
+          <name>shift:breaks_caps</name>
+          <_description>Shift cancels CapsLock.</_description>
+        </configItem>
+      </option>
     </group>
     <group allowMultipleSelection="true">
       <!-- Special shortcuts for the Euro character -->
@@ -3888,14 +4130,20 @@
       </option>
       <option>
         <configItem>
-          <name>eurosign:5</name>
-          <_description>Add the EuroSign to the 5 key.</_description>
+          <name>eurosign:2</name>
+          <_description>Add the EuroSign to the 2 key.</_description>
         </configItem>
       </option>
       <option>
         <configItem>
-          <name>eurosign:2</name>
-          <_description>Add the EuroSign to the 2 key.</_description>
+          <name>eurosign:4</name>
+          <_description>Add the EuroSign to the 4 key.</_description>
+        </configItem>
+      </option>
+      <option>
+        <configItem>
+          <name>eurosign:5</name>
+          <_description>Add the EuroSign to the 5 key.</_description>
         </configItem>
       </option>
     </group>

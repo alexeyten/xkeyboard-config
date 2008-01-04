@@ -71,20 +71,14 @@ To have it appear in your desktop environment layout manager, add
 "my_fr" in /usr/share/X11/xkb/rules/base.xml as a new layout. For
 example, insert the following lines (without the pipes):
 
-   |    <layout>
-   |      <configItem>
-   |        <name>my_fr</name>
-   |        <shortDescription>MyFr</shortDescription>
-   |      </configItem>
-   |      <variantList>
-   |        <variant>
-   |          <configItem>
-   |            <name>my_fr</name>
-   |            <description>My customised French layout</description>
-   |          </configItem>
-   |        </variant>
-   |      </variantList>
-   |    </layout>
+    |    <layout>
+    |      <configItem>
+    |        <name>my_fr</name>
+    |        <shortDescription>MyFr</shortDescription>
+    |        <description>French (customized)</description>
+    |      </configItem>
+    |      <variantList/>
+    |    </layout>
 
 /usr/share/X11/xkb/rules/base.xml is a configuration file.
 

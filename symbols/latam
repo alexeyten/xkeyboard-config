@@ -1,4 +1,4 @@
-// $XKeyboardConfig: xkeyboard-config/symbols/latam,v 1.5 2005-01-16 02:18:20 svu Exp $
+// $XKeyboardConfig: xkeyboard-config/symbols/latam,v 1.6 2007-09-26 14:45:59 svu Exp $
 
 // based on a keyboard
 // Modified for a real Latin American Keyboard by Fabian Mandelbaum
@@ -20,7 +20,7 @@ xkb_symbols "basic" {
     key <AE12>	{ [questiondown, exclamdown, dead_cedilla, dead_ogonek]	};
 
     key <AD11>	{ [dead_acute, dead_diaeresis, dead_diaeresis, dead_abovering ]	};
-    key <AD12>	{ [      plus,   asterisk,   asciitilde,  dead_macron ]	};
+    key <AD12>	{ [      plus,   asterisk,   dead_tilde,  dead_macron ]	};
 
     key <AC10>	{ [    ntilde,     Ntilde,   asciitilde, dead_doubleacute ] };
     key <AC11>	{ [ braceleft, bracketleft, dead_circumflex, braceleft]	};

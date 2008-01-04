@@ -1,6 +1,7 @@
 -dp----- -------- pc(pc)
 -dp----- -------- misc(misc)
 -d------ -------- pc98(basic)
+-d------ -------- olpc(olpc)
 -d------ -------- default(default)
 -dp----- -------- ledscroll(scroll_lock)
 --p----- -------- ledscroll(group_lock)

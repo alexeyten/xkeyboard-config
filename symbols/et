@@ -1,4 +1,4 @@
-// $XKeyboardConfig: xkeyboard-config/symbols/et,v 1.3 2007-09-07 17:42:27 svu Exp $
+// $XKeyboardConfig: xkeyboard-config/symbols/et,v 1.4 2007-11-21 23:02:37 svu Exp $
 
 //
 // Ethiopia
@@ -9,6 +9,12 @@
 
 partial default alphanumeric_keys
 xkb_symbols "basic" {
+    include "et(olpc)"
+    name[Group1]="Ethiopia";
+};
+
+partial alphanumeric_keys
+xkb_symbols "olpc" {
 
     name[Group1]="Ethiopia";
 

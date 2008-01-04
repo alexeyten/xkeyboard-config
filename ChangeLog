@@ -1,3 +1,225 @@
+2008-01-04  Sergey Udaltsov
+
+	* symbols/inet, rules/base.lists.part, rules/base.xml.in: adding BTC
+	6301URF, https://bugs.freedesktop.org/show_bug.cgi?id=13913
+
+2008-01-03  Sergey Udaltsov
+
+	* symbols/pl, rules/base.xml.in: added pl(ru_phonetic_dvorak),
+	https://bugs.freedesktop.org/show_bug.cgi?id=13900
+
+2008-01-02  Sergey Udaltsov
+
+	* symbols/ro, rules/base.xml.in: small fixes for Romanian visible
+	strings from
+	https://bugs.freedesktop.org/show_bug.cgi?id=13277
+	* rules/base.xml.in, rules/compat/variantRename.lst, symbols/fr,
+	symbols/ge: moving ge(azerty_tscapo) to fr(geo), since that layout is
+	only used in France, closing
+	https://bugs.freedesktop.org/show_bug.cgi?id=13644
+	* symbols/ara: remove presentation forms from Arabic layout,
+	https://bugs.freedesktop.org/show_bug.cgi?id=13894
+
+2007-12-31  Sergey Udaltsov
+
+	* symbols/ro, rules/base.xml.in, rules/compat/variantRename.lst:
+	temporarily (partially) reverting
+	https://bugs.freedesktop.org/show_bug.cgi?id=13277
+
+2007-12-27  Sergey Udaltsov
+
+	* rules/base.o_s.part, rules/base.xml.in, symbols/capslock: adding xkb
+	option caps:swapescape,
+	https://bugs.freedesktop.org/show_bug.cgi?id=13824
+
+2007-12-26  Sergey Udaltsov
+
+	* symbols/ee, rules/base.xml.in: adding ee(us), polishing eurosign
+	usage in ee, https://bugs.freedesktop.org/show_bug.cgi?id=13799
+
+2007-12-25  Sergey Udaltsov
+
+	* symbols/eurosign, rules/base.xml.in, rules/base.o_s.part: add
+	eurosign(4)
+
+2007-12-23  Sergey Udaltsov
+
+	* symbols/inet, rules/base.xml.in: add logiultrax model,
+	https://bugs.freedesktop.org/show_bug.cgi?id=13028
+	* symbols/me, rules/base.xml.in: use Latin as default Montenegro
+	variant, https://bugs.freedesktop.org/show_bug.cgi?id=13777
+	* symbols/inet, keycodes/evdev: Kill off the I211 key in evdev
+
+2007-12-17  Sergey Udaltsov
+
+	* keycodes/sun, rules/base.m_k.part, rules/base.ml_s.part,
+	symbols/sun_vndr/cs, symbols/sun_vndr/cz, symbols/sun_vndr/de,
+	symbols/sun_vndr/dk, symbols/sun_vndr/fr, symbols/sun_vndr/gb,
+	symbols/sun_vndr/gr, symbols/sun_vndr/it, symbols/sun_vndr/jp,
+	symbols/sun_vndr/ko, symbols/sun_vndr/nl, symbols/sun_vndr/no,
+	symbols/sun_vndr/pl, symbols/sun_vndr/ru, symbols/sun_vndr/sw,
+	symbols/sun_vndr/tr, symbols/sun_vndr/tuv, symbols/sun_vndr/tw,
+	symbols/sun_vndr/us: added sun type 6 support,
+	https://bugs.freedesktop.org/show_bug.cgi?id=13664
+
+2007-12-10  Sergey Udaltsov
+
+	* symbols/inet: fixed thinkpad,
+	https://bugs.freedesktop.org/show_bug.cgi?id=13461
+
+2007-12-08  Sergey Udaltsov
+
+	* symbols/inet, rules/base.xml.in, rules/base.lists.part: added
+	fscaa1667g model, thanks to Matthew W. S. Bell
+	* symbols/gr: updated greek symbols,
+	https://bugs.freedesktop.org/show_bug.cgi?id=13570
+
+2007-11-30  Sergey Udaltsov
+
+	* symbols/us: small olpc fix
+	* symbols/inet: introducing nav_common and media_nav_common,
+	https://bugs.freedesktop.org/show_bug.cgi?id=13461
+
+2007-11-21  Sergey Udaltsov
+
+	* symbols/np, rules/base.lists.part: added np(olpc)
+	* symbols/et, rules/base.lists.part: added et(olpc)
+	* symbols/in: small fix in in(ben_probhat),
+	https://bugs.freedesktop.org/show_bug.cgi?id=12038
+
+2007-11-20  Sergey Udaltsov
+
+	* symbols/af, symbols/kz, symbols/ng, rules/base.xml.in: OLPC fixes
+	from Bernardo
+	* symbols/pk, rules/base.xml.in: fixing pk(ara) - it is not default
+
+2007-11-18  Sergey Udaltsov
+
+	* symbols/ro, rules/base.xml.in, rules/compat/variantRename.lst:
+	ro(comma), ro(academic) --> ro(cedilla), ro(std_cedilla),
+	https://bugs.freedesktop.org/show_bug.cgi?id=13277
+
+2007-11-17  Sergey Udaltsov
+
+	* symbols/ua, rules/base.xml.in: added ua(unicode)
+
+2007-11-15  Sergey Udaltsov
+
+	* symbols/olpc, keycodes/es: small OLPC fixes
+
+2007-11-14  Sergey Udaltsov
+
+	* symbols/inet, keycodes/evdev: revert #12203
+	https://bugs.freedesktop.org/show_bug.cgi?id=12227
+
+2007-11-01  Sergey Udaltsov
+
+	* symbols/fi, rules/base.xml.in: swapping fi(basic) and fi(kotoistus),
+	https://bugs.freedesktop.org/show_bug.cgi?id=12764
+
+2007-10-28  Sergey Udaltsov
+
+	* symbols/ara, symbols/us, symbols/es, symbols/us, symbols/ng: OLPC
+	fixlets
+
+2007-10-23  Sergey Udaltsov
+
+	* symbols/ru, rules/base.xml.in: added ru(kom),
+	https://bugs.freedesktop.org/show_bug.cgi?id=12893
+
+2007-10-21  Sergey Udaltsov
+
+	* symbols/us, rules/base.xml.in: added us(dvorak-intl),
+	https://bugs.freedesktop.org/show_bug.cgi?id=12867
+	* symbols/macintosh_vndr/dk: dk(macbookpro),
+	https://bugs.freedesktop.org/show_bug.cgi?id=12716
+
+2007-10-19  Sergey Udaltsov
+
+	* symbols/tr, rules/base.xml.in: added tr(intl),
+	https://bugs.freedesktop.org/show_bug.cgi?id=12856
+
+2007-10-18  Sergey Udaltsov
+
+	* geometry/pc, rules/base.xml.in, rules/compat/base.lists.part,
+	symbols/br, symbols/pt: added some br and pt layouts,
+	https://bugs.freedesktop.org/show_bug.cgi?id=12816
+	* rules/base.xml.in symbols/dk: added dk(dvorak),
+	https://bugs.freedesktop.org/show_bug.cgi?id=12837
+
+2007-10-13  Sergey Udaltsov
+
+	* symbols/inet, rules/base.lists.part, rules/base.xml.in: added diNovo
+	Edge, https://bugs.freedesktop.org/show_bug.cgi?id=12789
+
+2007-10-10  Sergey Udaltsov
+
+	* rules/base.xml.in, rules/base.m_g.part: added microsoftelite model,
+	https://bugs.freedesktop.org/show_bug.cgi?id=12753
+	* symbols/fi: fixed fi(kotoistus),
+	https://bugs.freedesktop.org/show_bug.cgi?id=12764
+
+2007-10-09  Sergey Udaltsov
+
+	* geometry/microsoft: added "elite" geometry,
+	https://bugs.freedesktop.org/show_bug.cgi?id=12753
+	* symbols/us: fix for olpc
+
+2007-10-07  Sergey Udaltsov
+
+	* symbols/kz, rules/base.lists.part: added kz(olpc)
+	* symbols/pk: fixed pk(olpc)
+	* rules/base.xml.in: lost vendors,
+	https://bugs.freedesktop.org/show_bug.cgi?id=12719
+	* symbols/inet, rules/base.lists.part, rules/base.xml.in: added
+	chicony0108 model,
+	https://bugs.freedesktop.org/show_bug.cgi?id=6914
+	* symbols/de, types/extra: SS hangling,
+	https://bugs.freedesktop.org/show_bug.cgi?id=7642
+
+2007-10-04  Sergey Udaltsov
+
+	* symbols/us: s/U.S. English/USA/
+	* rules/base.o_s.part, rules/base.xml.in,
+	rules/compat/layoutRename.lst, symbols/Makefile.am, symbols/cs,
+	symbols/me, symbols/rs, symbols/ba, symbols/hr, symbols/si: splitting
+	Serbia and Montenegro 
+	https://bugs.freedesktop.org/show_bug.cgi?id=12390
+
+2007-10-02  Sergey Udaltsov
+
+	* symbols/inet: fixing dell inspiron,
+	https://bugs.freedesktop.org/show_bug.cgi?id=12653
+	* configure.in, rules/Makefile.am, po/ChangeLog: dropping translations
+	from base.xml, let apps/libs use .gmo files instead
+
+2007-09-27  Sergey Udaltsov
+
+	* symbols/shift, symbols/Makefile.am, rules/base.o_s.part: added
+	shift:breaks_caps, https://bugs.freedesktop.org/show_bug.cgi?id=9546
+
+2007-09-26  Sergey Udaltsov
+
+	* symbols/latam: no dead_tilde,
+	https://bugs.freedesktop.org/show_bug.cgi?id=12568
+	* rules/base.xml.in, symbols/in: added mal_lalitha, small fixes,
+	https://bugs.freedesktop.org/show_bug.cgi?id=12426
+	* rules/base.lists.part, rules/base.m_k.part, rules/base.ml_c.part,
+	rules/base.ml_s.part, rules/base.xml.in, rules/merge.sh,
+	symbols/Makefile.am, symbols/ara, symbols/br, symbols/es,
+	symbols/group, symbols/inet, symbols/level3, symbols/ng, symbols/olpc,
+	symbols/pk, symbols/ru, symbols/th, symbols/tr, symbols/us: massive
+	patch from OLPC project
+
+2007-09-25  Sergey Udaltsov
+
+	* NEWS, configure.in: preparing release 1.1
+
+2007-09-24  Sergey Udaltsov
+
+	* symbols/inet: added extra key for nx9020
+	https://bugs.freedesktop.org/show_bug.cgi?id=7310
+
 2007-09-14  Sergey Udaltsov
 
 	* symbols/inet: small fixes in cymotionlinux,
@@ -1682,7 +1904,7 @@
 
 2004-09-13 22:39  svu
 
-	* symbols/tj: new local cvs keyword seems to be ok - no more $Id: ChangeLog,v 1.331 2007-09-14 22:12:47 svu Exp $
+	* symbols/tj: new local cvs keyword seems to be ok - no more $Id: ChangeLog,v 1.387 2008-01-04 21:07:52 svu Exp $
 
 2004-09-13 22:38  svu
 
