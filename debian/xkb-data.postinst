@@ -6,11 +6,9 @@ set -e
 
 case "$1" in
     configure)
-        if [ -d /etc/X11/xkb/ \
-		-a `find /etc/X11/xkb/ | grep -v '/etc/X11/xkb/base.xml' | wc -l` -ne 1 \
-		-a `find /etc/X11/xkb/ | grep '/etc/X11/xkb/base.xml' | wc -l` -ne 1 ]
+        if [ -d /etc/X11/xkb/ -a `find /etc/X11/xkb/ | wc -l` -ne 1 ]
         then
-           find /etc/X11/xkb/* | grep -v '/etc/X11/xkb/base.xml' | xargs rm
+           find /etc/X11/xkb/* | grep -v '/etc/X11/xkb/base.xml' | xargs --no-run-if-empty rm
         fi
     ;;
 
