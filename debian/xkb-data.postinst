@@ -6,7 +6,10 @@ set -e
 
 case "$1" in
     configure)
-    	find /etc/X11/xkb/* | grep -v '/etc/X11/xkb/base.xml' | xargs rm
+        if [ -d /etc/X11/xkb/ -a `find /etc/X11/xkb/|wc -l` -ne 1 ]
+        then
+           find /etc/X11/xkb/* | grep -v '/etc/X11/xkb/base.xml' | xargs rm
+        fi
     ;;
 
     abort-upgrade|abort-remove|abort-deconfigure)
