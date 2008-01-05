@@ -8,6 +8,7 @@ Build-Depends-Indep: libxml-parser-perl
 Standards-Version: 3.7.3
 Vcs-Git: git://git.debian.org/git/pkg-xorg/data/xkb-data
 Vcs-Browser: http://git.debian.org/?p=pkg-xorg/data/xkb-data.git
+Homepage: http://www.freedesktop.org/Software/XKeyboardConfig
 
 Package: xkb-data
 Architecture: all
@@ -20,5 +21,3 @@ Description: X Keyboard Extension (XKB) configuration data
  designers have to send their layouts to several places.  The
  xkeyboard-config project has been launched at FreeDesktop in order
  to provide a central repository that could be used by all vendors.
- .
-  Homepage: http://www.freedesktop.org/Software/XKeyboardConfig

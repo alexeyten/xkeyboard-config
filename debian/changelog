@@ -4,22 +4,23 @@ xkeyboard-config (1.1~cvs.20080104.1-1) UNRELEASED; urgency=low
      + fixed Latin American layout. (Closes: #444035)
      + fixed Cherry CyMotion Master Linux layout. (Closes: #343929)
      + fixed HP Compaq nx9020 layout. (Closes: #395883)
-     + splitted Serbia and Montenegro. (Closes: #451622)
+     + split Serbia and Montenegro. (Closes: #451622)
      + added fr(nodeadkeys) to mac. (Closes: #456942)
      + fixed mapping for shift+backslash in "il" keyboard. (Closes: #457927)
      + added English quotation marks to intl keymaps. (Closes: #453675)
+  * debian/control:
+     + bumped Standards-Version to 3.7.3.
+     + used Vcs-Git and Vcs-Browser fields.
+     + use a Homepage field.
   * Refreshed resync_rules_base.diff. (Closes: #442942)
   * Documented the creation of a custom layout in README.Debian and
-    make /usr/share/X11/xkb/rules/base.xml a symlink to
-    /etc/X11/xkb/base.xml configuration file.
+    made /usr/share/X11/xkb/rules/base.xml a symlink to
+    /etc/X11/xkb/base.xml.
     (Closes: #410628, #410903, #438940)
   * Remove files left in /etc/X11/xkb/. (Closes: #366180)
   * New patch: add_void_definition_pl-324647.diff
      + don't use rules/latin's definitions for alt+{w,q,f}.
        (Closes: #324647)
-  * debian/control:
-     + bumped Standards-Version to 3.7.3.
-     + used Vcs-Git and Vcs-Browser fields.
 
  -- Mohammed Adnène Trojette <adn+deb@diwi.org>  Fri, 04 Jan 2008 22:47:11 +0100
 
