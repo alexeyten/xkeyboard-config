@@ -7,6 +7,7 @@ xkeyboard-config (1.1~cvs.20080104.1-1) UNRELEASED; urgency=low
      + splitted Serbia and Montenegro. (Closes: #451622)
      + added fr(nodeadkeys) to mac. (Closes: #456942)
      + fixed mapping for shift+backslash in "il" keyboard. (Closes: #457927)
+     + added English quotation marks to intl keymaps. (Closes: #453675)
   * Refreshed resync_rules_base.diff. (Closes: #442942)
   * Documented the creation of a custom layout in README.Debian and
     make /usr/share/X11/xkb/rules/base.xml a symlink to
