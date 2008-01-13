@@ -1,4 +1,4 @@
-xkeyboard-config (1.1~cvs.20080104.1-1) UNRELEASED; urgency=low
+xkeyboard-config (1.1~cvs.20080104.1-1) unstable; urgency=low
 
   * New upstream CVS snapshot from January 4th 2008:
      + fixed Latin American layout. (Closes: #444035)
@@ -22,7 +22,7 @@ xkeyboard-config (1.1~cvs.20080104.1-1) UNRELEASED; urgency=low
      + don't use rules/latin's definitions for alt+{w,q,f}.
        (Closes: #324647)
 
- -- Mohammed Adnène Trojette <adn+deb@diwi.org>  Fri, 04 Jan 2008 22:47:11 +0100
+ -- Mohammed Adnène Trojette <adn+deb@diwi.org>  Sun, 13 Jan 2008 15:33:54 +0100
 
 xkeyboard-config (1.0~cvs.20070916-1) unstable; urgency=low
 
