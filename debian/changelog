@@ -17,7 +17,7 @@ xkeyboard-config (1.1~cvs.20080104.1-1) UNRELEASED; urgency=low
     made /usr/share/X11/xkb/rules/base.xml a symlink to
     /etc/X11/xkb/base.xml.
     (Closes: #410628, #410903, #438940)
-  * Remove files left in /etc/X11/xkb/. (Closes: #366180)
+  * Remove conffiles left in /etc/X11/xkb/ in preinst. (Closes: #366180)
   * New patch: add_void_definition_pl-324647.diff
      + don't use rules/latin's definitions for alt+{w,q,f}.
        (Closes: #324647)
