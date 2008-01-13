@@ -47,6 +47,13 @@ in /etc/X11/xorg.conf can be replaced by
 
 Denis Barbier <barbier@debian.org>  Thu,  5 Oct 2006 22:51:12 +0200
 
+Cleaning /etc/X11/xkb
+---------------------
+
+Since 0.8-3, all the files in /etc/X11/xkb/ were moved to
+/usr/share/X11/xkb/symbols. If you want to clean /etc/X11/xkb/, you need
+to run dpkg -P xlibs.
+
 Customised layouts
 ------------------
 
