@@ -1,4 +1,4 @@
-// $XKeyboardConfig: xkeyboard-config/symbols/et,v 1.4 2007-11-21 23:02:37 svu Exp $
+// $XKeyboardConfig: xkeyboard-config/symbols/et,v 1.5 2008-01-24 23:21:06 svu Exp $
 
 //
 // Ethiopia
@@ -69,7 +69,7 @@ xkb_symbols "olpc" {
     key <AB09>	{ [        0x01001364,  VoidSymbol ]	}; // >
     key <AB10>  { [        VoidSymbol,  question   ]    }; // ?
 
-
     key <BKSL> {  [        backslash,   VoidSymbol ]    }; // bksl
 
+    include "group(olpc)"
 };

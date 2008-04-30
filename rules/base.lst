@@ -46,6 +46,8 @@
   presario        Laptop/notebook Compaq (eg. Presario) Internet Keyboard
   ipaq            Compaq iPaq Keyboard
   dell            Dell
+  dellsk8125      Dell SK-8125
+  dellsk8135      Dell SK-8135
   dellusbmm       Dell USB Multimedia Keybard
   inspiron        Dell Laptop/notebook Inspiron 6xxx/8xxx
   precision_m     Dell Laptop/notebook Precision M series
@@ -59,6 +61,7 @@
   geniuscomfy2    Genius Comfy KB-21e-Scroll
   geniuskb19e     Genius KB-19e NB
   gyration        Gyration
+  logitech_base   Logitech Generic Keyboard
   logitech_g15    Logitech G15 extra keys via G15daemon
   hpi6            Hewlett-Packard Internet Keyboard
   hp2501          Hewlett-Packard SK-2501 Multimedia Keyboard
@@ -69,6 +72,9 @@
   hpzt11xx        Hewlett-Packard Pavilion ZT11xx
   hp500fa         Hewlett-Packard Omnibook 500 FA
   hp5xx           Hewlett-Packard Omnibook 5xx
+  hp5181          Hewlett-Packard Internet Keyboard 5181
+  hp5185          Hewlett-Packard Internet Keyboard 5185
+  hpnx9020        Hewlett-Packard nx9020
   hp6000          Hewlett-Packard Omnibook 6000/6100
   honeywell_euroboard Honeywell Euroboard
   rapidaccess     IBM Rapid Access
@@ -76,9 +82,15 @@
   rapidaccess2a   IBM Rapid Access II (alternate option)
   thinkpad        IBM ThinkPad 560Z/600/600E/A22E
   thinkpadintl    IBM ThinkPad 560Z/600/600E/A22E, Intl
+  thinkpad60      IBM ThinkPad R60/T60/Z60m/Z60t/R61/T61/Z61m/Z61t
   logiaccess      Logitech Access Keyboard
   logiclx300      Logitech Cordless Desktop LX-300
+  logii350        Logitech Internet 350 Keyboard
+  logimel         Logitech Media Elite Keyboard
   logicd          Logitech Cordless Desktop
+  logicd_it       Logitech Cordless Desktop iTouch
+  logicd_nav      Logitech Cordless Desktop Navigator
+  logicd_opt      Logitech Cordless Desktop Optical
   logicda         Logitech Cordless Desktop (alternate option)
   logicdpa2       Logitech Cordless Desktop Pro (alternate option2)
   logicfn         Logitech Cordless Freedom/Desktop Navigator
@@ -101,6 +113,7 @@
   microsoftpro    Microsoft Natural Keyboard Pro / Microsoft Internet Keyboard Pro
   microsoftprousb Microsoft Natural Keyboard Pro USB / Microsoft Internet Keyboard Pro
   microsoftprooem Microsoft Natural Keyboard Pro OEM
+  vsonku306       ViewSonic KU-306 Internet Keyboard
   microsoftprose  Microsoft Internet Keyboard Pro, Swedish
   microsoftoffice Microsoft Office Keyboard
   microsoftmult   Microsoft Wireless Multimedia Keyboard 1.0A
@@ -137,9 +150,12 @@
   kr106           Korean 106-key
   evdev           Evdev-managed keyboard
   benqx           BenQ X-Touch
+  benqx730        BenQ X-Touch 730
+  benqx800        BenQ X-Touch 800
   hhk             Happy Hacking Keyboard
   classmate       Classmate PC
   olpc            OLPC
+  sun6            Sun Type 5/6
 
 ! layout
   us              USA
@@ -236,6 +252,7 @@
   dvorak-l        us: Left handed Dvorak
   dvorak-r        us: Right handed Dvorak
   dvorak-classic  us: Classic Dvorak
+  dvp             us: Programmer Dvorak
   rus             us: Russian phonetic
   mac             us: Macintosh
   altgr-intl      us: International (AltGr dead keys)
@@ -243,7 +260,7 @@
   ps              af: Pashto
   uz              af: Southern Uzbek
   olpc-ps         af: OLPC Pashto
-  olpc-da         af: OLPC Dari
+  olpc-fa         af: OLPC Dari
   olpc-uz         af: OLPC Southern Uzbek
   azerty          ara: azerty
   azerty_digits   ara: azerty/digits
@@ -268,6 +285,7 @@
   ben_probhat     in: Bengali Probhat
   guj             in: Gujarati
   guru            in: Gurmukhi
+  jhelum          in: Gurmukhi Jhelum
   kan             in: Kannada
   mal             in: Malayalam
   mal_lalitha     in: Malayalam Lalitha
@@ -303,6 +321,7 @@
   multi           ca: Multilingual, first part
   multi-2gr       ca: Multilingual, second part
   ike             ca: Inuktitut
+  shs             ca: Secwepemctsin
   tib             cn: Tibetan
   tib_asciinum    cn: Tibetan (with ASCII numerals)
   alternatequotes hr: Use guillemets for quotes
@@ -412,6 +431,9 @@
   std             lt: Standard
   us              lt: US keyboard with Lithuanian letters
   ibm             lt: IBM (LST 1205-92)
+  lekp            lt: LEKP
+  lekpa           lt: LEKPa
+  balticplus      lt: Baltic+
   apostrophe      lv: Apostrophe (') variant
   tilde           lv: Tilde (~) variant
   fkey            lv: F-letter (F) variant
@@ -450,9 +472,9 @@
   winkeys         ro: Winkeys
   phonetic        ru: Phonetic
   typewriter      ru: Typewriter
-  winkeys         ru: Winkeys
+  legacy          ru: Legacy
   tt              ru: Tatar
-  os              ru: Ossetian
+  os_legacy       ru: Ossetian, legacy
   os_winkeys      ru: Ossetian, Winkeys
   cv              ru: Chuvash
   cv_latin        ru: Chuvash Latin
@@ -475,6 +497,7 @@
   nodeadkeys      es: Eliminate dead keys
   sundeadkeys     es: Sun dead keys
   dvorak          es: Dvorak
+  ast             es: Asturian variant with bottom-dot H and bottom-dot L
   cat             es: Catalan variant with middle-dot L
   mac             es: Macintosh
   nodeadkeys      se: Eliminate dead keys
@@ -513,6 +536,7 @@
   unicode         ua: Unicode
   rstu            ua: Standard RSTU
   rstu_ru         ua: Standard RSTU on Russian layout
+  homophonic      ua: Homophonic
   intl            gb: International (with dead keys)
   dvorak          gb: Dvorak
   mac             gb: Macintosh
@@ -542,6 +566,7 @@
   grp:lalt_toggle      Left Alt key changes layout.
   grp:caps_toggle      CapsLock key changes layout.
   grp:shift_caps_toggle Shift+CapsLock changes layout.
+  grp:shift_caps_switch CapsLock switch to first layout, Shift+CapsLock switch to last layout.
   grp:alt_caps_toggle  Alt+CapsLock changes layout.
   grp:shifts_toggle    Both Shift keys together change layout.
   grp:alts_toggle      Both Alt keys together change layout.
@@ -618,6 +643,7 @@
   compose:menu         Menu is Compose.
   compose:rctrl        Right Ctrl is Compose.
   compose:caps         Caps Lock is Compose.
+  compose:102          Less-than/Greater-than is Compose.
   compat               Miscellaneous compatibility options
   numpad:pc            Default numeric keypad keys.
   numpad:mac           Numeric keypad keys work as with Mac.
@@ -638,6 +664,7 @@
   nbsp:level3n         Space key outputs non-breakable space character at third level, thin non-breakable space character at fourth level
   nbsp:level4          Space key outputs non-breakable space character at fourth level.
   nbsp:level4n         Space key outputs non-breakable space character at fourth level, thin non-breakable space character at sixth level
+  nbsp:level4nl        Space key outputs non-breakable space character at fourth level, thin non-breakable space character at sixth level (via Ctrl+Shift
   japan                Japanese keyboard options
   japan:kana_lock      Kana Lock key is locking
   japan:nicola_f_bs    NICOLA-F style Backspace

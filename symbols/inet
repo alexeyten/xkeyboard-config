@@ -1,4 +1,4 @@
-// $XKeyboardConfig: xkeyboard-config/symbols/inet,v 1.79 2008-01-04 21:07:53 svu Exp $
+// $XKeyboardConfig: xkeyboard-config/symbols/inet,v 1.81 2008-03-01 21:01:56 svu Exp $
 
 // $XFree86: xc/programs/xkbcomp/symbols/inet,v 1.38 2004/01/17 14:59:37 pascal Exp $
 
@@ -1256,10 +1256,19 @@ xkb_symbols "thinkpad" {
 };
 
 
+// IBM ThinkPad 60 series
+partial alphanumeric_keys
+xkb_symbols "thinkpad60" {
+    include "inet(media_nav_common)"
+
+    key <I1F> { [ XF86VendorHome ] };
+};
+
+
 // Logitech
 
 // Logitech common definitions
-partial hidden alphanumeric_keys
+partial alphanumeric_keys
 xkb_symbols "logitech_base" {
 
     include "inet(media_nav_common)"
@@ -1314,12 +1323,6 @@ xkb_symbols "logiaccess" {
     key <I65>	{	[ XF86Search		]	}; 
 };
 
-// Logitech Cordless Desktop
-partial alphanumeric_keys
-xkb_symbols "logicd" {
-    include "inet(logitech_base)"
-};
-
 // Logitech Cordless Desktop (alternate option)
 partial alphanumeric_keys
 xkb_symbols "logicda" {
@@ -1335,14 +1338,6 @@ xkb_symbols "logicink" {
     key <I12>	{	[ XF86VendorHome	]	};
     key <I13>	{	[ XF86Finance		]	};
     key <I14>	{	[ XF86Start		]	};
-};
-
-// Logitech Cordless Desktop LX-300
-partial alphanumeric_keys
-xkb_symbols "logiclx300" {
-    include "inet(logitech_base)"
-
-    key <I21>	{	[ XF86Calculator	]	};
 };
 
 // Logitech Cordless Desktop EX110
@@ -1438,11 +1433,6 @@ xkb_symbols "itouch" {
     key <I1F>	{	[ XF86AudioMute		]	};
     key <I2B>	{	[ XF86AudioLowerVolume	]	};
     key <I2D>	{	[ XF86AudioRaiseVolume	]	};
-};
-
-partial alphanumeric_keys
-xkb_symbols "logiultrax" {
-    include "inet(logitech_base)"
 };
 
 // Logitech UltraX Cordless Media Desktop

@@ -1,3 +1,176 @@
+2008-04-30  Sergey Udaltsov
+
+	* rules/base.xml.in, symbols/us: added us(dvp),
+	http://bugs.freedesktop.org/show_bug.cgi?id=15727
+
+2008-04-29  Sergey Udaltsov
+
+	* symbols/ca: fixed ca(shs),
+	http://bugs.freedesktop.org/show_bug.cgi?id=15756
+
+2008-04-23  Sergey Udaltsov
+
+	* symbols/es: revert broken idea about dead tilde,
+	http://bugs.freedesktop.org/show_bug.cgi?id=9763
+	* symbols/latam: revert broken idea about dead tilde,
+	http://bugs.freedesktop.org/show_bug.cgi?id=12568
+
+2008-04-22  Sergey Udaltsov
+
+	* rules/base.o_s.part, rules/base.xml.in, symbols/fr, symbols/nbsp,
+	types/pc: options for nonbreakspace handling,
+	http://bugs.freedesktop.org/show_bug.cgi?id=9529
+	* symbols/fi: dropping bad nbsp mapping,
+	http://bugs.freedesktop.org/show_bug.cgi?id=12764
+
+2008-04-21  Sergey Udaltsov
+
+	* rules/base.xml.in: fixed some ISO codes
+
+2008-04-19  Sergey Udaltsov
+
+	* symbols/ru, rules/base.xml.in, rules/compat/variantRename.lst:
+	changed ru(winkeys) to default
+	* rules/base.xml.in: put a lot of country/language info in
+
+2008-04-12  Sergey Udaltsov
+
+	* symbols/it: fixed it(geo),
+	https://bugs.freedesktop.org/show_bug.cgi?id=15058
+
+2008-04-07  Sergey Udaltsov
+
+	* symbols/group, rules/base.xml.in, rules/base.o_s.part: added
+	group(shift_caps_switch)
+	http://bugs.freedesktop.org/show_bug.cgi?id=15383
+
+2008-04-01  Sergey Udaltsov
+
+	* rules/base.xml.in, symbols/gb: added gb(colemak),
+	http://bugs.freedesktop.org/show_bug.cgi?id=15303
+
+2008-03-30  Sergey Udaltsov
+
+	* symbols/gn, symbols/ng: fixed unicode sequences,
+	http://bugs.freedesktop.org/show_bug.cgi?id=15273
+	* rules/base.xml.in, symbols/ua: added ua(homophonic),
+	http://bugs.freedesktop.org/show_bug.cgi?id=15240
+
+2008-03-28  Sergey Udaltsov
+
+	* rules/base.o_s.part, rules/base.xml.in, symbols/compose: added
+	compose:102, http://bugs.freedesktop.org/show_bug.cgi?id=15246
+
+2008-03-22  Sergey Udaltsov
+
+	* symbols/fr: fixed fr(oss_nodeadkeys),
+	http://bugs.freedesktop.org/show_bug.cgi?id=15140
+
+2008-03-06  Sergey Udaltsov
+
+	* rules/base.lists.part, symbols/ca, symbols/fr: added ca(olpc),
+	removed fr(olpc), http://bugs.freedesktop.org/show_bug.cgi?id=14749
+
+2008-03-03  Sergey Udaltsov
+
+	* rules/base.lists.part, symbols/fr: added fr(olpc),
+	http://bugs.freedesktop.org/show_bug.cgi?id=14749
+	* symbols/lv: fixed lv accented characters,
+	http://bugs.freedesktop.org/show_bug.cgi?id=14765
+	* rules/base.lists.part, symbols/it: added it(olpc),
+	http://bugs.freedesktop.org/show_bug.cgi?id=14793
+
+2008-03-01  Sergey Udaltsov
+
+	* rules/base.lists.part, rules/base.m_s.part, rules/base.xml.in,
+	symbols/inet: reorganizing keyboard in symbols/inet. Some models are
+	now implemented as "virtual" (by rules only).
+	http://bugs.freedesktop.org/show_bug.cgi?id=14665
+
+2008-02-28  Sergey Udaltsov
+
+	* rules/base.xml.in, symbols/in: added in(jhelum), other indian fixes,
+	http://bugs.freedesktop.org/show_bug.cgi?id=14595
+	* symbols/jp: small fix,
+	http://bugs.freedesktop.org/show_bug.cgi?id=8648
+
+2008-02-16  Sergey Udaltsov
+
+	* symbols/cz, symbols/sk: dropping KPDL mapping,
+	http://bugs.freedesktop.org/show_bug.cgi?id=14479
+
+2008-02-12  Sergey Udaltsov
+
+	* keycodes/sun, symbols/sun_vndr/us, rules/base.ml_s.part,
+	rules/base.xml.in: sun type6 kbd,
+	http://bugs.freedesktop.org/show_bug.cgi?id=13664
+
+2008-02-05  Sergey Udaltsov
+
+	* symbols/af: fixed AE09 in af(olpc-ps),
+	http://bugs.freedesktop.org/show_bug.cgi?id=14379
+
+2008-02-04  Sergey Udaltsov
+
+	* symbols/kh, rules/base.lists.part: added kh(olpc),
+	http://bugs.freedesktop.org/show_bug.cgi?id=14376
+
+2008-02-02  Sergey Udaltsov
+
+	* symbols/lt, rules/base.xml.in: added lt(lekp) etc,
+	http://bugs.freedesktop.org/show_bug.cgi?id=14096
+
+2008-01-31  Sergey Udaltsov
+
+	* symbols/af, rules/base.xml.in, rules/base.lists.part: changing
+	af(olpc-da) to af(olpc-fa),
+	http://bugs.freedesktop.org/show_bug.cgi?id=14319
+	* symbols/in: fixed space in in(olpc),
+	http://bugs.freedesktop.org/show_bug.cgi?id=14224
+
+2008-01-30  Sergey Udaltsov
+
+	* symbols/ca, rules/base.xml.in: adding ca(shs), closing
+	http://bugs.freedesktop.org/show_bug.cgi?id=14308
+	* symbols/mn: added mn(olpc),
+	http://bugs.freedesktop.org/show_bug.cgi?id=14307
+	* symbols/tr: fixed Turkish layouts,
+	http://bugs.freedesktop.org/show_bug.cgi?id=14286
+	* symbols/es, rules/base.xml.in: added es(ast),
+	http://bugs.freedesktop.org/show_bug.cgi?id=14277
+	* symbols/am, rules/base.lists.part: added am(olpc),
+	http://bugs.freedesktop.org/show_bug.cgi?id=14226
+	* symbols/af: fixed some keysyms,
+	http://bugs.freedesktop.org/show_bug.cgi?id=14309
+
+2008-01-29  Sergey Udaltsov
+
+	* NEWS, configure.in: preparing release 1.2
+
+2008-01-24  Sergey Udaltsov
+
+	* symbols/af, symbols/ara, symbols/et, symbols/group, symbols/in,
+	symbols/kz, symbols/np, symbols/pk, symbols/ru, symbols/th,
+	symbols/us: separating group(olpc), closing
+	http://bugs.freedesktop.org/show_bug.cgi?id=14225
+
+2008-01-21  Sergey Udaltsov
+
+	* symbols/gr: Polytonic Greek: Use new keysyms for dead psili and
+	dasia, http://bugs.freedesktop.org/show_bug.cgi?id=13275
+
+2008-01-11  Sergey Udaltsov
+
+	* rules/base.lists.part, symbols/in: added in(olpc), by Bernardo
+	Innocenti
+
+2008-01-07  Sergey Udaltsov
+
+	* geometry/thinkpad, keycodes/xfree86, rules/base.lists.part,
+	rules/base.m_g.part, rules/base.m_k.part, rules/base.xml.in,
+	symbols/inet: added thinkpad60 model (with geometry),
+	https://bugs.freedesktop.org/show_bug.cgi?id=13954
+
 2008-01-05  Sergey Udaltsov
 
 	* symbols/us: add (left,right)singlequotemark to us(-altgr)-intl
@@ -1911,7 +2084,7 @@
 
 2004-09-13 22:39  svu
 
-	* symbols/tj: new local cvs keyword seems to be ok - no more $Id: ChangeLog,v 1.389 2008-01-05 00:40:38 svu Exp $
+	* symbols/tj: new local cvs keyword seems to be ok - no more $Id: ChangeLog,v 1.429 2008-04-30 21:29:08 svu Exp $
 
 2004-09-13 22:38  svu
 

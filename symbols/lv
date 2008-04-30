@@ -1,4 +1,4 @@
-// $XKeyboardConfig: xkeyboard-config/symbols/lv,v 1.7 2005-01-16 02:18:20 svu Exp $
+// $XKeyboardConfig: xkeyboard-config/symbols/lv,v 1.8 2008-03-03 20:39:12 svu Exp $
 
 // Latvian keymap version 1.1
 // Copyright (C) Dmitry Golubev <lastguru@mail.ru>, 2003-2004
@@ -85,9 +85,8 @@ xkb_symbols "basic" {
         key <BKSL>      {[backslash, bar, grave, breve]};
         
         key <SPCE>	{[space, space, space, space]};
-	key <RALT>	{type[Group1]="ONE_LEVEL", [ISO_Level3_Shift]};
-	modifier_map Mod5 { <RALT> };
 
+	include "level3(ralt_switch)"
 };
 
 partial alphanumeric_keys modifier_keys

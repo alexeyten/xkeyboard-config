@@ -15,7 +15,7 @@
 ! $pcgeometries = abnt2 latitude jp106 kr106
 
 // Layouts that provide further specializations for the OLPC
-! $olpclayouts = ara br es et kz np ru th tr us
+! $olpclayouts = af am ara br ca es et it kh kz in mn np ru th tr us 
 
 ! $macbooks = macbook78 macbook79
 ! $maclaptop = ibook powerbook macbook78 macbook79
@@ -43,9 +43,10 @@
               hp2501 hp2505 hp5xx hp500fa hp5181 hp5185 \
               hpi6 hpxe3gc hpxe3gf hpxe4xxx hpxt1000 hpzt11xx \
               ipaq inspiron intel latitude \
-              logiaccess logicd logicda logicink \
+              logiaccess logicda logicink \
               logiex110 logiclx300 \
-              logiinkse logiinkseusb logiitc logiik itouch logiultrax \
+              logiinkse logiinkseusb logiitc logiik \
+              logitech_base itouch logiultrax \
               logitech_g15 \
 	      logidinovo logidinovoedge \
               microsoftinet microsoftpro microsoftprousb microsoftprooem microsoftprose \
@@ -54,7 +55,7 @@
               oretec \
               presario propeller \
               qtronix \
-              rapidaccess rapidaccess2 rapidaccess2a thinkpad \
+              rapidaccess rapidaccess2 rapidaccess2a thinkpad thinkpad60 \
               samsung4500 samsung4510 \
               scorpius silvercrest \
               sk1300 sk2500 sk6200 sk7100 sp_inet \

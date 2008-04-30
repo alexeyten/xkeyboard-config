@@ -1,4 +1,4 @@
-// $XKeyboardConfig: xkeyboard-config/symbols/kh,v 1.2 2005-12-31 02:02:46 svu Exp $
+// $XKeyboardConfig: xkeyboard-config/symbols/kh,v 1.3 2008-02-04 23:28:42 svu Exp $
 //
 //   khmer unicode keyboard for XFree86 4.3 or XOrg 
 //   (might work with older versions, not tested)
@@ -95,4 +95,20 @@ xkb_symbols "basic" {
 // third level with right-Alt
     include "level3(ralt_switch)"
     
+};
+
+partial alphanumeric_keys
+xkb_symbols "olpc" {
+    include "kh(basic)"
+    
+// Contact Walter@laptop.org
+
+    key <AC10> { [ 0x10017be,		0x10017c8,		0x10017d6, 	0x10019f5	] };
+    key <AE01> { [ 0x10017e1,		0x100200c,		exclam, 	0x10017f1	] };
+    key <AE03> { [ 0x10017e3,		0x10017d1,		quotedbl, 	0x10017f3	] };
+    key <AE05> { [ 0x10017e5,		EuroSign,		percent, 	0x10017f5	] };
+    key <AE12> { [ 0x10017b2,		0x10017ce,		equal, 	 	voidsymbol	] };
+
+   //language key
+   include "group(olpc)"
 };

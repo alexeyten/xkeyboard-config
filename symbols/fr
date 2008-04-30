@@ -1,4 +1,4 @@
-// $XKeyboardConfig: xkeyboard-config/symbols/fr,v 1.17 2008-01-02 21:21:43 svu Exp $
+// $XKeyboardConfig: xkeyboard-config/symbols/fr,v 1.21 2008-04-22 19:54:11 svu Exp $
 
 // based on a keyboard map from an 'xkb/symbols/fr' file
 //
@@ -85,11 +85,11 @@ xkb_symbols "nodeadkeys" {
 // Unicode French derivative
 // Loose refactoring of the historic Linux French keyboard layout
 //
-// Copyright © 2006 Nicolas Mailhot <nicolas.mailhot @ laposte.net>
+// Copyright © 2006-2008 Nicolas Mailhot <nicolas.mailhot @ laposte.net>
 //
 // Credits (fr-latin1, fr-latin0, fr-latin9)
 //   © 199x-1996 René Cougnenc ✝
-//   © 1997-2002 Guylhem Aznar <clavier @ externe.net> 
+//   © 1997-2002 Guylhem Aznar <clavier @ externe.net>
 //   © 2003-2006 Nicolas Mailhot <nicolas.mailhot @ laposte.net>
 //
 // ┌─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┲━━━━━━━━━┓
@@ -113,8 +113,7 @@ xkb_symbols "oss" {
 
     include "latin"
     include "level3(ralt_switch)"
-    include "level5(rctrl_switch)"
-    include "nbsp(level4n)"
+    include "nbsp(level4nl)"
     include "keypad(oss)"
 
     name[Group1]="France - Alternative";
@@ -255,7 +254,7 @@ xkb_symbols "oss_nodeadkeys" {
     key <AE03>	{ [         quotedbl,                3,           numbersign,                 breve ] }; // " 3 # ˘
 
     // Second row
-    key <AD11>	{ [  dead_circumflex,   dead_diaeresis,           asciitilde,                 Aring ] }; // ^ ̈ ̃ Å
+    key <AD11>	{ [  circumflex,   diaeresis,           asciitilde,                 Aring ] }; // ^ ̈ ̃ Å
     key <AC11>	{ [           ugrave,          percent,                acute,                Ugrave ] }; // ù % ' Ù
     key <BKSL>	{ [         asterisk,               mu,                grave,                macron ] }; // * µ ` ̄
 };

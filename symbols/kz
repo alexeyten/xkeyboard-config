@@ -1,4 +1,4 @@
-// $XKeyboardConfig: xkeyboard-config/symbols/kz,v 1.4 2007-11-20 22:00:07 svu Exp $
+// $XKeyboardConfig: xkeyboard-config/symbols/kz,v 1.5 2008-01-24 23:21:06 svu Exp $
 
 // Based on http://www.sci.kz/~sairan/keyboard/kzkbd.html
 // Baurzhan Ismagulov <ibr@radix50.net>
@@ -213,5 +213,6 @@ xkb_symbols "olpc" {
 
    key <TLDE> { [ parenleft,               parenright ] };
    key <BKSL> { [ Cyrillic_io,             Cyrillic_IO ] };
-   key <I219> { [ ISO_Next_Group,          ISO_Prev_Group ] };
+
+   include "group(olpc)"
 };

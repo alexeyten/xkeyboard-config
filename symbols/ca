@@ -1,4 +1,4 @@
-// $XKeyboardConfig: xkeyboard-config/symbols/ca,v 1.15 2007-01-04 23:31:30 svu Exp $
+// $XKeyboardConfig: xkeyboard-config/symbols/ca,v 1.18 2008-04-29 20:38:44 svu Exp $
 
 default partial
 xkb_symbols "fr" {
@@ -453,3 +453,30 @@ xkb_symbols "multix" {
     include "level5(rctrl_switch)"
 };
 
+// Secwepemctsin keyboard for X11
+// written by Neskie Manuel <neskiem@gmail.com>
+
+partial alphanumeric_keys  
+xkb_symbols "shs" {
+
+    include "us"
+
+    name[Group1]= "Canada - Secwepemctsin";
+
+    //Using Dead key to get COMBINING COMMA ABOVE for ejectives on
+    //q, l, t, s, m, g, k, p, w, y, r
+    //XCompose key is used for the other accute and grave.
+
+    key <AB08> {        [ comma, less, U0313    ]	};
+
+    include "level3(ralt_switch)"
+    include "compose(rctrl)"
+};
+
+// OLPC Section
+xkb_symbols "olpc" {
+
+    include "fr"
+
+    key <AE03>	{ [          3,    slash,          ograve,        Ograve ] };
+};

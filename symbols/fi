@@ -1,6 +1,6 @@
 // based on a keyboard map from an 'xkb/symbols/fi' file
 //
-// $XKeyboardConfig: xkeyboard-config/symbols/fi,v 1.17 2007-11-01 22:31:18 svu Exp $
+// $XKeyboardConfig: xkeyboard-config/symbols/fi,v 1.19 2008-04-22 22:12:12 svu Exp $
 // $XFree86: xc/programs/xkbcomp/symbols/fi,v 1.9 2003/01/29 17:17:31 dawes Exp $
 
 // Troy Korjuslommi, 
@@ -48,7 +48,6 @@ xkb_symbols "kotoistus" {
 
     name[Group1]="Finland";
 
-    key <SPCE> { [  space,           space,            nobreakspace,         nobreakspace         ] };
     key <TLDE> { [  section,         onehalf,          dead_stroke,          NoSymbol             ] };
     key <AE01> { [  1,               exclam,           NoSymbol,             exclamdown           ] };
     key <AE02> { [  2,               quotedbl,         at,                   rightdoublequotemark ] };
@@ -97,6 +96,8 @@ xkb_symbols "kotoistus" {
     key <AB08> { [  comma,           semicolon,        rightsinglequotemark, leftsinglequotemark  ] };
     key <AB09> { [  period,          colon,            dead_belowdot,        dead_abovedot        ] };
     key <AB10> { [  minus,           underscore,       endash,               dead_abovedot        ] };
+
+    key <SPCE> { [  space,           space,            space,                 nobreakspace        ] };
 
     include "kpdl(comma)"
 

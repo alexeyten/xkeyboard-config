@@ -1,4 +1,4 @@
-// $XKeyboardConfig: xkeyboard-config/symbols/pk,v 1.5 2007-11-20 22:09:59 svu Exp $
+// $XKeyboardConfig: xkeyboard-config/symbols/pk,v 1.6 2008-01-24 23:21:06 svu Exp $
 
 // Urdu keymap
 // Developed by:
@@ -216,6 +216,5 @@ xkb_symbols "olpc" {
    key <AB09> {  [ 0x10006D4, 0x1000656 ] };
    key <AB10> {  [ slash,     0x100061F ] };
 
-   //language key
-   key <I219> {  [ISO_Next_Group  ,  ISO_Prev_Group      ]     };
+   include "group(olpc)"
 };
