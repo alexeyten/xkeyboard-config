@@ -2,8 +2,9 @@ xkeyboard-config (1.2~cvs.20080501.1-1) unstable; urgency=low
 
   * New upstream CVS snapshot from May 1st 2008:
      + revert Latin American layout. (Closes: #477197)
+  * Clean up add_void_definition_pl-324647.diff.
 
- -- Mohammed Adnène Trojette <adn+deb@diwi.org>  Thu, 01 May 2008 00:22:22 +0200
+ -- Mohammed Adnène Trojette <adn+deb@diwi.org>  Thu, 01 May 2008 01:29:51 +0200
 
 xkeyboard-config (1.1~cvs.20080104.1-1) unstable; urgency=low
 
