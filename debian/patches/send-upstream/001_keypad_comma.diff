@@ -1,3 +1,15 @@
+Index: xkb-data/rules/base.o_s.part
+===================================================================
+--- xkb-data.orig/rules/base.o_s.part	2008-05-01 01:49:17.000000000 +0200
++++ xkb-data/rules/base.o_s.part	2008-05-01 01:49:30.000000000 +0200
+@@ -70,6 +70,7 @@
+   keypad:legacy_wang    =	+keypad(legacy_wang)
+   keypad:oss_wang       =	+keypad(oss_wang)
+   keypad:future_wang    =	+keypad(future_wang)
++  keypad:comma          =       +keypad(comma)
+   nbsp:none             =	+nbsp(none)
+   nbsp:level2           =	+nbsp(level2)
+   nbsp:level3           =	+nbsp(level3)
 Index: xkb-data/rules/base.xml.in
 ===================================================================
 --- xkb-data.orig/rules/base.xml.in	2008-05-01 01:48:53.000000000 +0200
@@ -15,15 +27,3 @@ Index: xkb-data/rules/base.xml.in
            <name>keypad:oss</name>
            <_description>Keypad with unicode additions (arrows and math operators)</_description>
         </configItem>
-Index: xkb-data/rules/base.o_s.part
-===================================================================
---- xkb-data.orig/rules/base.o_s.part	2008-05-01 01:49:17.000000000 +0200
-+++ xkb-data/rules/base.o_s.part	2008-05-01 01:49:30.000000000 +0200
-@@ -70,6 +70,7 @@
-   keypad:legacy_wang    =	+keypad(legacy_wang)
-   keypad:oss_wang       =	+keypad(oss_wang)
-   keypad:future_wang    =	+keypad(future_wang)
-+  keypad:comma          =       +keypad(comma)
-   nbsp:none             =	+nbsp(none)
-   nbsp:level2           =	+nbsp(level2)
-   nbsp:level3           =	+nbsp(level3)
