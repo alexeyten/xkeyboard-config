@@ -1,3 +1,10 @@
+xkeyboard-config (1.1~cvs.20080501-1) unstable; urgency=low
+
+  * New upstream CVS snapshot from May 1st 2008:
+     + revert Latin American layout. (Closes: #477197)
+
+ -- Mohammed Adnène Trojette <adn+deb@diwi.org>  Thu, 01 May 2008 00:22:22 +0200
+
 xkeyboard-config (1.1~cvs.20080104.1-1) unstable; urgency=low
 
   * New upstream CVS snapshot from January 4th 2008:
