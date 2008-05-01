@@ -2,7 +2,13 @@ xkeyboard-config (1.2~cvs.20080501.1-1) unstable; urgency=low
 
   * New upstream CVS snapshot from May 1st 2008:
      + revert Latin American layout. (Closes: #477197)
-  * Clean up add_void_definition_pl-324647.diff.
+     + reactivate right control key in fr(oss). (Closes: #460550)
+     + fix olpc variants in the Afghan layout. (Closes: #461521)
+  * Clean up add_void_definition_pl-324647.diff and apply it before
+    resync_rules_base.diff to avoid unclean patch applying and
+    unapplying. (Closes: #460838)
+  * Document issues with the "Fn" key on some laptops in
+    README.Debian. (Closes: #461489)
 
  -- Mohammed Adnène Trojette <adn+deb@diwi.org>  Thu, 01 May 2008 01:29:51 +0200
 

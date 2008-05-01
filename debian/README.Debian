@@ -90,3 +90,12 @@ example, insert the following lines (without the pipes):
 /etc/X11/xkb/base.xml is a configuration file.
 
 Mohammed Adnène Trojette <adn+deb@diwi.org>  Sun, 23 Sep 2007 00:05:50 +0200
+
+Your 'Fn' key is not working
+----------------------------
+
+On some laptops (Gateway MX6453 for instance), when X starts with
+numlock on, the 'Fn' key is toggled the wrong way. Just turn numlock off
+to get the 'Fn' key work again.
+
+Mohammed Adnène Trojette <adn+deb@diwi.org>  Thu, 01 May 2008 02:36:13 +0200
