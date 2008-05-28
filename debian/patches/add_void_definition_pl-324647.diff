@@ -1,7 +1,7 @@
 Index: xkb-data/symbols/pl
 ===================================================================
---- xkb-data.orig/symbols/pl
-+++ xkb-data/symbols/pl
+--- xkb-data.orig/symbols/pl	2008-05-28 14:11:56.000000000 +0200
++++ xkb-data/symbols/pl	2008-05-28 14:12:01.000000000 +0200
 @@ -11,11 +11,14 @@
  
      name[Group1]="Poland";

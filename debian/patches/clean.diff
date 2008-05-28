@@ -4,8 +4,8 @@ Not submitted upstream.
 
 Index: xkb-data/rules/compat/Makefile.am
 ===================================================================
---- xkb-data.orig/rules/compat/Makefile.am	2008-05-28 13:37:20.000000000 +0200
-+++ xkb-data/rules/compat/Makefile.am	2008-05-28 14:08:04.000000000 +0200
+--- xkb-data.orig/rules/compat/Makefile.am	2008-05-28 14:11:57.000000000 +0200
++++ xkb-data/rules/compat/Makefile.am	2008-05-28 14:12:01.000000000 +0200
 @@ -7,15 +7,17 @@
  
  if USE_COMPAT_RULES
@@ -33,8 +33,8 @@ Index: xkb-data/rules/compat/Makefile.am
 +CLEANFILES=$(gen_parts)
 Index: xkb-data/rules/compat/Makefile.in
 ===================================================================
---- xkb-data.orig/rules/compat/Makefile.in	2008-05-28 13:37:20.000000000 +0200
-+++ xkb-data/rules/compat/Makefile.in	2008-05-28 14:08:04.000000000 +0200
+--- xkb-data.orig/rules/compat/Makefile.in	2008-05-28 14:11:57.000000000 +0200
++++ xkb-data/rules/compat/Makefile.in	2008-05-28 14:12:01.000000000 +0200
 @@ -181,14 +181,17 @@
  transform_files = layoutRename.lst variantRename.lst
  transform_scripts = ln_s.sh lnv_s.sh ml_s.sh mlv_s.sh ml1_s.sh ml1v_s.sh ml1v1_s.sh

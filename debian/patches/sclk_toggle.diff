@@ -5,8 +5,8 @@ Not submitted yet.
 
 Index: xkb-data/symbols/group
 ===================================================================
---- xkb-data.orig/symbols/group
-+++ xkb-data/symbols/group
+--- xkb-data.orig/symbols/group	2008-05-28 14:11:57.000000000 +0200
++++ xkb-data/symbols/group	2008-05-28 14:12:01.000000000 +0200
 @@ -333,3 +333,15 @@
    key <I219>  { [ ISO_Next_Group, ISO_Prev_Group ] };
  };
@@ -25,8 +25,8 @@ Index: xkb-data/symbols/group
 +
 Index: xkb-data/rules/base.o_s.part
 ===================================================================
---- xkb-data.orig/rules/base.o_s.part
-+++ xkb-data/rules/base.o_s.part
+--- xkb-data.orig/rules/base.o_s.part	2008-05-28 14:11:57.000000000 +0200
++++ xkb-data/rules/base.o_s.part	2008-05-28 14:12:23.000000000 +0200
 @@ -32,6 +32,7 @@
    grp:lctrl_toggle	=	+group(lctrl_toggle)
    grp:rctrl_toggle	=	+group(rctrl_toggle)
@@ -37,8 +37,8 @@ Index: xkb-data/rules/base.o_s.part
    lv3:ralt_switch_multikey	=	+level3(ralt_switch_multikey)
 Index: xkb-data/rules/base.xml.in
 ===================================================================
---- xkb-data.orig/rules/base.xml.in
-+++ xkb-data/rules/base.xml.in
+--- xkb-data.orig/rules/base.xml.in	2008-05-28 14:11:57.000000000 +0200
++++ xkb-data/rules/base.xml.in	2008-05-28 14:12:23.000000000 +0200
 @@ -4076,6 +4076,12 @@
            <_description>Right Ctrl key changes layout.</_description>
          </configItem>

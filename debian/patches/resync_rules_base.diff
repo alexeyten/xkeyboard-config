@@ -20,8 +20,8 @@
 
 Index: xkb-data/rules/base
 ===================================================================
---- xkb-data.orig/rules/base	2008-05-28 13:37:20.000000000 +0200
-+++ xkb-data/rules/base	2008-05-28 14:09:18.000000000 +0200
+--- xkb-data.orig/rules/base	2008-05-28 14:11:56.000000000 +0200
++++ xkb-data/rules/base	2008-05-28 14:12:01.000000000 +0200
 @@ -202,9 +202,6 @@
    *		yu		unicode		=	pc+srp(latinunicode)
    *		yu		yz		=	pc+srp(latinyz)
@@ -58,8 +58,8 @@ Index: xkb-data/rules/base
    nbsp:level3           =	+nbsp(level3)
 Index: xkb-data/rules/base.lst
 ===================================================================
---- xkb-data.orig/rules/base.lst	2008-05-28 13:37:20.000000000 +0200
-+++ xkb-data/rules/base.lst	2008-05-28 14:09:19.000000000 +0200
+--- xkb-data.orig/rules/base.lst	2008-05-28 14:11:56.000000000 +0200
++++ xkb-data/rules/base.lst	2008-05-28 14:12:01.000000000 +0200
 @@ -582,6 +582,7 @@
    grp:rshift_toggle    Right Shift key changes layout.
    grp:lctrl_toggle     Left Ctrl key changes layout.

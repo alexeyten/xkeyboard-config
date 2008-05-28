@@ -5,8 +5,8 @@ Not submitted upstream.
 
 Index: xkb-data/rules/base.o_s.part
 ===================================================================
---- xkb-data.orig/rules/base.o_s.part
-+++ xkb-data/rules/base.o_s.part
+--- xkb-data.orig/rules/base.o_s.part	2008-05-28 14:12:01.000000000 +0200
++++ xkb-data/rules/base.o_s.part	2008-05-28 14:12:20.000000000 +0200
 @@ -43,6 +43,7 @@
    lv3:win_switch	=	+level3(win_switch)
    lv3:lwin_switch	=	+level3(lwin_switch)
@@ -17,8 +17,8 @@ Index: xkb-data/rules/base.o_s.part
    caps:grouplock	=	+capslock(grouplock)
 Index: xkb-data/symbols/level3
 ===================================================================
---- xkb-data.orig/symbols/level3
-+++ xkb-data/symbols/level3
+--- xkb-data.orig/symbols/level3	2008-05-28 14:11:56.000000000 +0200
++++ xkb-data/symbols/level3	2008-05-28 14:12:01.000000000 +0200
 @@ -136,7 +136,7 @@
  // using the level3(enter_switch) map, the Enter key on the keypad
  // temporarily chooses the third shift level.  This is especially
@@ -30,8 +30,8 @@ Index: xkb-data/symbols/level3
      type[Group1]="ONE_LEVEL",
 Index: xkb-data/rules/base.xml.in
 ===================================================================
---- xkb-data.orig/rules/base.xml.in
-+++ xkb-data/rules/base.xml.in
+--- xkb-data.orig/rules/base.xml.in	2008-05-28 14:12:01.000000000 +0200
++++ xkb-data/rules/base.xml.in	2008-05-28 14:12:20.000000000 +0200
 @@ -4150,6 +4150,12 @@
            <_description>Right Alt key never chooses 3rd level.</_description>
          </configItem>
