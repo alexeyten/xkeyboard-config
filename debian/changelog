@@ -4,6 +4,8 @@ xkeyboard-config (1.3-1) unstable; urgency=low
      + add a CA variant for Secwepemctsin language. (Closes: #476702)
      + change Romanian keymap to use the correct comma
        characters. (Closes: #481176)
+     + "symbols/ru: default variant is winkeys (till Daniel
+       fixes xkbcomp)" (Closes: #480124)
 
  -- Mohammed Adnène Trojette <adn+deb@diwi.org>  Wed, 28 May 2008 13:38:30 +0200
 
