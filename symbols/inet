@@ -1,4 +1,4 @@
-// $XKeyboardConfig: xkeyboard-config/symbols/inet,v 1.81 2008-03-01 21:01:56 svu Exp $
+// $XKeyboardConfig: xkeyboard-config/symbols/inet,v 1.82 2008-05-27 21:46:41 svu Exp $
 
 // $XFree86: xc/programs/xkbcomp/symbols/inet,v 1.38 2004/01/17 14:59:37 pascal Exp $
 
@@ -1050,6 +1050,7 @@ xkb_symbols "hp5181" {
 partial alphanumeric_keys
 xkb_symbols "hp5185" {
     include "inet(media_common)"
+    key <I02>   {       [ XF86WWW               ]       };
     key <I12>   {       [ XF86Go                ]       };
     key <I14>   {       [ XF86VendorHome        ]       };
     key <I15>   {       [ XF86Community         ]       };

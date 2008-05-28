@@ -34,15 +34,13 @@ POST_INSTALL = :
 NORMAL_UNINSTALL = :
 PRE_UNINSTALL = :
 POST_UNINSTALL = :
-build_triplet = @build@
-host_triplet = @host@
 subdir = rules
 DIST_COMMON = README $(srcdir)/Makefile.am $(srcdir)/Makefile.in
 ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
 am__aclocal_m4_deps = $(top_srcdir)/configure.in
 am__configure_deps = $(am__aclocal_m4_deps) $(CONFIGURE_DEPENDENCIES) \
 	$(ACLOCAL_M4)
-mkinstalldirs = $(install_sh) -d
+mkinstalldirs = $(SHELL) $(top_srcdir)/mkinstalldirs
 CONFIG_CLEAN_FILES =
 SOURCES =
 DIST_SOURCES =
@@ -170,21 +168,13 @@ am__quote = @am__quote@
 am__tar = @am__tar@
 am__untar = @am__untar@
 bindir = @bindir@
-build = @build@
 build_alias = @build_alias@
-build_cpu = @build_cpu@
-build_os = @build_os@
-build_vendor = @build_vendor@
 datadir = @datadir@
 datarootdir = @datarootdir@
 docdir = @docdir@
 dvidir = @dvidir@
 exec_prefix = @exec_prefix@
-host = @host@
 host_alias = @host_alias@
-host_cpu = @host_cpu@
-host_os = @host_os@
-host_vendor = @host_vendor@
 htmldir = @htmldir@
 includedir = @includedir@
 infodir = @infodir@
@@ -241,16 +231,16 @@ HDR base.o_s.part   HDR base.o_c.part   HDR base.o_t.part
 @USE_COMPAT_RULES_TRUE@HDR compat/base.o_s.part base.o_s.part \
 @USE_COMPAT_RULES_TRUE@HDR base.o_c.part HDR base.o_t.part
 
-rules_files = base sgi sun xfree98
+rules_files = base xfree98
 lst_files = base.lst
 all_rules_files = $(rules_files) $(lst_files) \
 xkb.dtd README
 
 rules_DATA = $(all_rules_files)
-xml_in_files = base.xml.in sun.xml.in
+xml_in_files = base.xml.in
 xml_DATA = $(xml_in_files:.xml.in=.xml) 
 EXTRA_DIST = $(all_rules_files) $(xml_in_files) $(base_parts) xml2lst.pl merge.sh
-DISTCLEANFILES = base.xml base.lst sun.xml
+DISTCLEANFILES = base.xml base.lst
 rulesdir = $(xkb_base)/rules
 xmldir = $(rulesdir)
 all: all-recursive

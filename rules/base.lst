@@ -466,8 +466,8 @@
   nativo          pt: Nativo
   nativo-us       pt: Nativo for USA keyboards
   nativo-epo      pt: Nativo for Esperanto
-  comma           ro: Commabelow
-  std_comma       ro: Standard (Commabelow)
+  cedilla         ro: Cedilla
+  std             ro: Standard
   std_cedilla     ro: Standard (Cedilla)
   winkeys         ro: Winkeys
   phonetic        ru: Phonetic

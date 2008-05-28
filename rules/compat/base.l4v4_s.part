@@ -7,6 +7,8 @@
   dvorak		pl	=	+pl(dvorak_quotes):4
   dvorak		pl_altquotes	=	+pl(dvorak_altquotes):4
   dzdwi		basic	=	+bt(basic):4
+  fi		basic	=	+fi(classic):4
+  ge		azerty_tskapo	=	+fr(geo):4
   guj		basic	=	+in(guj):4
   gur		basic	=	+in(guru):4
   ie		laptop	=	+ie(basic):4
@@ -23,7 +25,10 @@
   ogham		is434laptop	=	+ie(ogam_is434):4
   ori		basic	=	+in(ori):4
   ro		de	=	+ro(winkeys):4
-  ro		us	=	+ro(std):4
+  ro		us	=	+ro(std_comma):4
+  ro		std	=	+ro(std_cedilla):4
+  ro		academic	=	+ro(std_comma):4
+  ru		os	=	+ru(os_legacy):4
   sapmi		basic	=	+no(smi):4
   sapmi		nodeadkeys	=	+no(smi_nodeadkeys):4
   sapmi		sefi	=	+fi(smi):4

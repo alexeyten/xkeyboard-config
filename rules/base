@@ -165,6 +165,8 @@
   *		dvorak		pl		=	pc+pl(dvorak_quotes)
   *		dvorak		pl_altquotes		=	pc+pl(dvorak_altquotes)
   *		dzdwi		basic		=	pc+bt(basic)
+  *		fi		basic		=	pc+fi(classic)
+  *		ge		azerty_tskapo		=	pc+fr(geo)
   *		guj		basic		=	pc+in(guj)
   *		gur		basic		=	pc+in(guru)
   *		ie		laptop		=	pc+ie(basic)
@@ -181,7 +183,10 @@
   *		ogham		is434laptop		=	pc+ie(ogam_is434)
   *		ori		basic		=	pc+in(ori)
   *		ro		de		=	pc+ro(winkeys)
-  *		ro		us		=	pc+ro(std)
+  *		ro		us		=	pc+ro(std_comma)
+  *		ro		std		=	pc+ro(std_cedilla)
+  *		ro		academic		=	pc+ro(std_comma)
+  *		ru		os		=	pc+ru(os_legacy)
   *		sapmi		basic		=	pc+no(smi)
   *		sapmi		nodeadkeys		=	pc+no(smi_nodeadkeys)
   *		sapmi		sefi		=	pc+fi(smi)
@@ -205,6 +210,7 @@
   *		ar			=	pc+ara
   *		ben			=	pc+in(ben)
   *		bs			=	pc+ba
+  *		cs			=	pc+rs
   *		cz_qwerty			=	pc+cz(qwerty)
   *		dev			=	pc+in(deva)
   *		dvorak			=	pc+us(dvorak)
@@ -237,6 +243,8 @@
   *		dvorak(pl)			=	pc+pl(dvorak_quotes)
   *		dvorak(pl_altquotes)			=	pc+pl(dvorak_altquotes)
   *		dzdwi(basic)			=	pc+bt(basic)
+  *		fi(basic)			=	pc+fi(classic)
+  *		ge(azerty_tskapo)			=	pc+fr(geo)
   *		guj(basic)			=	pc+in(guj)
   *		gur(basic)			=	pc+in(guru)
   *		ie(laptop)			=	pc+ie(basic)
@@ -253,7 +261,10 @@
   *		ogham(is434laptop)			=	pc+ie(ogam_is434)
   *		ori(basic)			=	pc+in(ori)
   *		ro(de)			=	pc+ro(winkeys)
-  *		ro(us)			=	pc+ro(std)
+  *		ro(us)			=	pc+ro(std_comma)
+  *		ro(std)			=	pc+ro(std_cedilla)
+  *		ro(academic)			=	pc+ro(std_comma)
+  *		ru(os)			=	pc+ru(os_legacy)
   *		sapmi(basic)			=	pc+no(smi)
   *		sapmi(nodeadkeys)			=	pc+no(smi_nodeadkeys)
   *		sapmi(sefi)			=	pc+fi(smi)
@@ -300,6 +311,7 @@
   *		ar			=	pc+ara%(v[1])
   *		ben			=	pc+in(ben)%(v[1])
   *		bs			=	pc+ba%(v[1])
+  *		cs			=	pc+rs%(v[1])
   *		cz_qwerty			=	pc+cz(qwerty)%(v[1])
   *		dev			=	pc+in(deva)%(v[1])
   *		dvorak			=	pc+us(dvorak)%(v[1])
@@ -332,6 +344,8 @@
   *		dvorak(pl)			=	pc+pl(dvorak_quotes)
   *		dvorak(pl_altquotes)			=	pc+pl(dvorak_altquotes)
   *		dzdwi(basic)			=	pc+bt(basic)
+  *		fi(basic)			=	pc+fi(classic)
+  *		ge(azerty_tskapo)			=	pc+fr(geo)
   *		guj(basic)			=	pc+in(guj)
   *		gur(basic)			=	pc+in(guru)
   *		ie(laptop)			=	pc+ie(basic)
@@ -348,7 +362,10 @@
   *		ogham(is434laptop)			=	pc+ie(ogam_is434)
   *		ori(basic)			=	pc+in(ori)
   *		ro(de)			=	pc+ro(winkeys)
-  *		ro(us)			=	pc+ro(std)
+  *		ro(us)			=	pc+ro(std_comma)
+  *		ro(std)			=	pc+ro(std_cedilla)
+  *		ro(academic)			=	pc+ro(std_comma)
+  *		ru(os)			=	pc+ru(os_legacy)
   *		sapmi(basic)			=	pc+no(smi)
   *		sapmi(nodeadkeys)			=	pc+no(smi_nodeadkeys)
   *		sapmi(sefi)			=	pc+fi(smi)
@@ -385,6 +402,8 @@
   *		dvorak		pl		=	pc+pl(dvorak_quotes)
   *		dvorak		pl_altquotes		=	pc+pl(dvorak_altquotes)
   *		dzdwi		basic		=	pc+bt(basic)
+  *		fi		basic		=	pc+fi(classic)
+  *		ge		azerty_tskapo		=	pc+fr(geo)
   *		guj		basic		=	pc+in(guj)
   *		gur		basic		=	pc+in(guru)
   *		ie		laptop		=	pc+ie(basic)
@@ -401,7 +420,10 @@
   *		ogham		is434laptop		=	pc+ie(ogam_is434)
   *		ori		basic		=	pc+in(ori)
   *		ro		de		=	pc+ro(winkeys)
-  *		ro		us		=	pc+ro(std)
+  *		ro		us		=	pc+ro(std_comma)
+  *		ro		std		=	pc+ro(std_cedilla)
+  *		ro		academic		=	pc+ro(std_comma)
+  *		ru		os		=	pc+ru(os_legacy)
   *		sapmi		basic		=	pc+no(smi)
   *		sapmi		nodeadkeys		=	pc+no(smi_nodeadkeys)
   *		sapmi		sefi		=	pc+fi(smi)
@@ -422,6 +444,7 @@
   ar		=	+ara%(v[2]):2
   ben		=	+in(ben)%(v[2]):2
   bs		=	+ba%(v[2]):2
+  cs		=	+rs%(v[2]):2
   cz_qwerty		=	+cz(qwerty)%(v[2]):2
   dev		=	+in(deva)%(v[2]):2
   dvorak		=	+us(dvorak)%(v[2]):2
@@ -454,6 +477,8 @@
   dvorak(pl)	=	+pl(dvorak_quotes):2
   dvorak(pl_altquotes)	=	+pl(dvorak_altquotes):2
   dzdwi(basic)	=	+bt(basic):2
+  fi(basic)	=	+fi(classic):2
+  ge(azerty_tskapo)	=	+fr(geo):2
   guj(basic)	=	+in(guj):2
   gur(basic)	=	+in(guru):2
   ie(laptop)	=	+ie(basic):2
@@ -470,7 +495,10 @@
   ogham(is434laptop)	=	+ie(ogam_is434):2
   ori(basic)	=	+in(ori):2
   ro(de)	=	+ro(winkeys):2
-  ro(us)	=	+ro(std):2
+  ro(us)	=	+ro(std_comma):2
+  ro(std)	=	+ro(std_cedilla):2
+  ro(academic)	=	+ro(std_comma):2
+  ru(os)	=	+ru(os_legacy):2
   sapmi(basic)	=	+no(smi):2
   sapmi(nodeadkeys)	=	+no(smi_nodeadkeys):2
   sapmi(sefi)	=	+fi(smi):2
@@ -492,6 +520,7 @@
   ar		=	+ara%(v[3]):3
   ben		=	+in(ben)%(v[3]):3
   bs		=	+ba%(v[3]):3
+  cs		=	+rs%(v[3]):3
   cz_qwerty		=	+cz(qwerty)%(v[3]):3
   dev		=	+in(deva)%(v[3]):3
   dvorak		=	+us(dvorak)%(v[3]):3
@@ -524,6 +553,8 @@
   dvorak(pl)	=	+pl(dvorak_quotes):3
   dvorak(pl_altquotes)	=	+pl(dvorak_altquotes):3
   dzdwi(basic)	=	+bt(basic):3
+  fi(basic)	=	+fi(classic):3
+  ge(azerty_tskapo)	=	+fr(geo):3
   guj(basic)	=	+in(guj):3
   gur(basic)	=	+in(guru):3
   ie(laptop)	=	+ie(basic):3
@@ -540,7 +571,10 @@
   ogham(is434laptop)	=	+ie(ogam_is434):3
   ori(basic)	=	+in(ori):3
   ro(de)	=	+ro(winkeys):3
-  ro(us)	=	+ro(std):3
+  ro(us)	=	+ro(std_comma):3
+  ro(std)	=	+ro(std_cedilla):3
+  ro(academic)	=	+ro(std_comma):3
+  ru(os)	=	+ru(os_legacy):3
   sapmi(basic)	=	+no(smi):3
   sapmi(nodeadkeys)	=	+no(smi_nodeadkeys):3
   sapmi(sefi)	=	+fi(smi):3
@@ -562,6 +596,7 @@
   ar		=	+ara%(v[4]):4
   ben		=	+in(ben)%(v[4]):4
   bs		=	+ba%(v[4]):4
+  cs		=	+rs%(v[4]):4
   cz_qwerty		=	+cz(qwerty)%(v[4]):4
   dev		=	+in(deva)%(v[4]):4
   dvorak		=	+us(dvorak)%(v[4]):4
@@ -594,6 +629,8 @@
   dvorak(pl)	=	+pl(dvorak_quotes):4
   dvorak(pl_altquotes)	=	+pl(dvorak_altquotes):4
   dzdwi(basic)	=	+bt(basic):4
+  fi(basic)	=	+fi(classic):4
+  ge(azerty_tskapo)	=	+fr(geo):4
   guj(basic)	=	+in(guj):4
   gur(basic)	=	+in(guru):4
   ie(laptop)	=	+ie(basic):4
@@ -610,7 +647,10 @@
   ogham(is434laptop)	=	+ie(ogam_is434):4
   ori(basic)	=	+in(ori):4
   ro(de)	=	+ro(winkeys):4
-  ro(us)	=	+ro(std):4
+  ro(us)	=	+ro(std_comma):4
+  ro(std)	=	+ro(std_cedilla):4
+  ro(academic)	=	+ro(std_comma):4
+  ru(os)	=	+ru(os_legacy):4
   sapmi(basic)	=	+no(smi):4
   sapmi(nodeadkeys)	=	+no(smi_nodeadkeys):4
   sapmi(sefi)	=	+fi(smi):4
@@ -638,6 +678,8 @@
   dvorak		pl	=	+pl(dvorak_quotes):2
   dvorak		pl_altquotes	=	+pl(dvorak_altquotes):2
   dzdwi		basic	=	+bt(basic):2
+  fi		basic	=	+fi(classic):2
+  ge		azerty_tskapo	=	+fr(geo):2
   guj		basic	=	+in(guj):2
   gur		basic	=	+in(guru):2
   ie		laptop	=	+ie(basic):2
@@ -654,7 +696,10 @@
   ogham		is434laptop	=	+ie(ogam_is434):2
   ori		basic	=	+in(ori):2
   ro		de	=	+ro(winkeys):2
-  ro		us	=	+ro(std):2
+  ro		us	=	+ro(std_comma):2
+  ro		std	=	+ro(std_cedilla):2
+  ro		academic	=	+ro(std_comma):2
+  ru		os	=	+ru(os_legacy):2
   sapmi		basic	=	+no(smi):2
   sapmi		nodeadkeys	=	+no(smi_nodeadkeys):2
   sapmi		sefi	=	+fi(smi):2
@@ -681,6 +726,8 @@
   dvorak		pl	=	+pl(dvorak_quotes):3
   dvorak		pl_altquotes	=	+pl(dvorak_altquotes):3
   dzdwi		basic	=	+bt(basic):3
+  fi		basic	=	+fi(classic):3
+  ge		azerty_tskapo	=	+fr(geo):3
   guj		basic	=	+in(guj):3
   gur		basic	=	+in(guru):3
   ie		laptop	=	+ie(basic):3
@@ -697,7 +744,10 @@
   ogham		is434laptop	=	+ie(ogam_is434):3
   ori		basic	=	+in(ori):3
   ro		de	=	+ro(winkeys):3
-  ro		us	=	+ro(std):3
+  ro		us	=	+ro(std_comma):3
+  ro		std	=	+ro(std_cedilla):3
+  ro		academic	=	+ro(std_comma):3
+  ru		os	=	+ru(os_legacy):3
   sapmi		basic	=	+no(smi):3
   sapmi		nodeadkeys	=	+no(smi_nodeadkeys):3
   sapmi		sefi	=	+fi(smi):3
@@ -724,6 +774,8 @@
   dvorak		pl	=	+pl(dvorak_quotes):4
   dvorak		pl_altquotes	=	+pl(dvorak_altquotes):4
   dzdwi		basic	=	+bt(basic):4
+  fi		basic	=	+fi(classic):4
+  ge		azerty_tskapo	=	+fr(geo):4
   guj		basic	=	+in(guj):4
   gur		basic	=	+in(guru):4
   ie		laptop	=	+ie(basic):4
@@ -740,7 +792,10 @@
   ogham		is434laptop	=	+ie(ogam_is434):4
   ori		basic	=	+in(ori):4
   ro		de	=	+ro(winkeys):4
-  ro		us	=	+ro(std):4
+  ro		us	=	+ro(std_comma):4
+  ro		std	=	+ro(std_cedilla):4
+  ro		academic	=	+ro(std_comma):4
+  ru		os	=	+ru(os_legacy):4
   sapmi		basic	=	+no(smi):4
   sapmi		nodeadkeys	=	+no(smi_nodeadkeys):4
   sapmi		sefi	=	+fi(smi):4

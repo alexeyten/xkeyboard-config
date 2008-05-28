@@ -1,6 +1,7 @@
   ar		=	+ara%(v[3]):3
   ben		=	+in(ben)%(v[3]):3
   bs		=	+ba%(v[3]):3
+  cs		=	+rs%(v[3]):3
   cz_qwerty		=	+cz(qwerty)%(v[3]):3
   dev		=	+in(deva)%(v[3]):3
   dvorak		=	+us(dvorak)%(v[3]):3
@@ -33,6 +34,8 @@
   dvorak(pl)	=	+pl(dvorak_quotes):3
   dvorak(pl_altquotes)	=	+pl(dvorak_altquotes):3
   dzdwi(basic)	=	+bt(basic):3
+  fi(basic)	=	+fi(classic):3
+  ge(azerty_tskapo)	=	+fr(geo):3
   guj(basic)	=	+in(guj):3
   gur(basic)	=	+in(guru):3
   ie(laptop)	=	+ie(basic):3
@@ -49,7 +52,10 @@
   ogham(is434laptop)	=	+ie(ogam_is434):3
   ori(basic)	=	+in(ori):3
   ro(de)	=	+ro(winkeys):3
-  ro(us)	=	+ro(std):3
+  ro(us)	=	+ro(std_comma):3
+  ro(std)	=	+ro(std_cedilla):3
+  ro(academic)	=	+ro(std_comma):3
+  ru(os)	=	+ru(os_legacy):3
   sapmi(basic)	=	+no(smi):3
   sapmi(nodeadkeys)	=	+no(smi_nodeadkeys):3
   sapmi(sefi)	=	+fi(smi):3

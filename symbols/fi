@@ -1,6 +1,6 @@
 // based on a keyboard map from an 'xkb/symbols/fi' file
 //
-// $XKeyboardConfig: xkeyboard-config/symbols/fi,v 1.19 2008-04-22 22:12:12 svu Exp $
+// $XKeyboardConfig: xkeyboard-config/symbols/fi,v 1.21 2008-05-27 22:08:14 svu Exp $
 // $XFree86: xc/programs/xkbcomp/symbols/fi,v 1.9 2003/01/29 17:17:31 dawes Exp $
 
 // Troy Korjuslommi, 
@@ -97,7 +97,7 @@ xkb_symbols "kotoistus" {
     key <AB09> { [  period,          colon,            dead_belowdot,        dead_abovedot        ] };
     key <AB10> { [  minus,           underscore,       endash,               dead_abovedot        ] };
 
-    key <SPCE> { [  space,           space,            space,                 nobreakspace        ] };
+    include "nbsp(level3)"
 
     include "kpdl(comma)"
 

@@ -1,3 +1,31 @@
+2008-05-27  Sergey Udaltsov
+
+	* symbols/inet: WWW is mapped to I02, because of some changes in
+	kernel or X server (on nx9020),
+	http://bugs.freedesktop.org/show_bug.cgi?id=7310
+	* symbols/us: fixed one-handed dvorak variants (dropped second group),
+	http://bugs.freedesktop.org/show_bug.cgi?id=5659
+	* symbols/fi: returned nbsp to 3rd level of space,
+	http://bugs.freedesktop.org/show_bug.cgi?id=12764
+	* configure.in, NEWS: preparing 1.3
+
+2008-05-12  Sergey Udaltsov
+
+	* rules/base.xml.in, symbols/ro: changed default Romanian variant to
+	the right one, http://bugs.freedesktop.org/show_bug.cgi?id=13277
+
+2008-05-09  Sergey Udaltsov
+
+	* rules/compat/variantRename.lst, symbols/ru: default variant is
+	winkeys (till Daniel fixes xkbcomp)
+	* symbols/ua: small fix, from Andriy
+
+2008-05-01  Sergey Udaltsov
+
+	* po/POTFILES.in, rules/Makefile.am, rules/sgi*, rules/sun*: dropping
+	legacy unsupported rules. Confirmed with Alan Coopersmith (Sun
+	Microsystems)
+
 2008-04-30  Sergey Udaltsov
 
 	* rules/base.xml.in, symbols/us: added us(dvp),
@@ -2084,7 +2112,7 @@
 
 2004-09-13 22:39  svu
 
-	* symbols/tj: new local cvs keyword seems to be ok - no more $Id: ChangeLog,v 1.429 2008-04-30 21:29:08 svu Exp $
+	* symbols/tj: new local cvs keyword seems to be ok - no more $Id: ChangeLog,v 1.437 2008-05-27 23:11:39 svu Exp $
 
 2004-09-13 22:38  svu
 

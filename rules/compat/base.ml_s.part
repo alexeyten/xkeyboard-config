@@ -1,6 +1,7 @@
   *		ar			=	pc+ara
   *		ben			=	pc+in(ben)
   *		bs			=	pc+ba
+  *		cs			=	pc+rs
   *		cz_qwerty			=	pc+cz(qwerty)
   *		dev			=	pc+in(deva)
   *		dvorak			=	pc+us(dvorak)
@@ -33,6 +34,8 @@
   *		dvorak(pl)			=	pc+pl(dvorak_quotes)
   *		dvorak(pl_altquotes)			=	pc+pl(dvorak_altquotes)
   *		dzdwi(basic)			=	pc+bt(basic)
+  *		fi(basic)			=	pc+fi(classic)
+  *		ge(azerty_tskapo)			=	pc+fr(geo)
   *		guj(basic)			=	pc+in(guj)
   *		gur(basic)			=	pc+in(guru)
   *		ie(laptop)			=	pc+ie(basic)
@@ -49,7 +52,10 @@
   *		ogham(is434laptop)			=	pc+ie(ogam_is434)
   *		ori(basic)			=	pc+in(ori)
   *		ro(de)			=	pc+ro(winkeys)
-  *		ro(us)			=	pc+ro(std)
+  *		ro(us)			=	pc+ro(std_comma)
+  *		ro(std)			=	pc+ro(std_cedilla)
+  *		ro(academic)			=	pc+ro(std_comma)
+  *		ru(os)			=	pc+ru(os_legacy)
   *		sapmi(basic)			=	pc+no(smi)
   *		sapmi(nodeadkeys)			=	pc+no(smi_nodeadkeys)
   *		sapmi(sefi)			=	pc+fi(smi)
