@@ -16,3 +16,4 @@ send-upstream/001_keypad_comma.diff
 fixed-compat-rules-for-Romania-b.fd.o-16872.patch
 #resync_rules_base.diff
 #send-upstream/002_add_asus6000.diff
+us-mac.diff

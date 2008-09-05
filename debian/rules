@@ -68,7 +68,7 @@ $(stamp)build: $(stamp)configure
 	# Files kept so that xkbcomp is not needed
 	for d in compat geometry keycodes keymap semantics symbols types; \
 	  do cp debian/$$d.dir $$d/; done
-	$(MAKE)
+	$(MAKE) -C po update-po
 	touch $@
 
 clean: $(stamp) unpatch
