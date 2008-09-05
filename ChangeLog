@@ -2112,7 +2112,7 @@
 
 2004-09-13 22:39  svu
 
-	* symbols/tj: new local cvs keyword seems to be ok - no more $Id: ChangeLog,v 1.437 2008-05-27 23:11:39 svu Exp $
+	* symbols/tj: new local cvs keyword seems to be ok - no more $Id$
 
 2004-09-13 22:38  svu
 

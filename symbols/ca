@@ -1,4 +1,4 @@
-// $XKeyboardConfig: xkeyboard-config/symbols/ca,v 1.18 2008-04-29 20:38:44 svu Exp $
+// $XKeyboardConfig$
 
 default partial
 xkb_symbols "fr" {
