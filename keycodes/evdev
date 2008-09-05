@@ -300,3 +300,19 @@ default xkb_keycodes "evdev" {
 
 	alias <ALGR> = <RALT>;
 };
+
+// For japanese 106 keyboard.
+xkb_keycodes "jp106" {
+    include "evdev(evdev)"
+};
+
+// For brazilian ABNT2 keyboard.
+xkb_keycodes "abnt2" {
+    include "evdev(evdev)"
+};
+
+// PC98
+xkb_keycodes "pc98" {
+    include "evdev(evdev)"
+};
+

@@ -347,7 +347,7 @@
     <model>
       <configItem>
         <name>dellusbmm</name>
-        <_description>Dell USB Multimedia Keybard</_description>
+        <_description>Dell USB Multimedia Keyboard</_description>
         <vendor>Dell</vendor>
       </configItem>
     </model>
@@ -584,7 +584,21 @@
     <model>
       <configItem>
         <name>thinkpad60</name>
-        <_description>IBM ThinkPad R60/T60/Z60m/Z60t/R61/T61/Z61m/Z61t</_description>
+        <_description>IBM ThinkPad R60/T60/R61/T61</_description>
+        <vendor>IBM</vendor>
+      </configItem>
+    </model>
+    <model>
+      <configItem>
+        <name>thinkpadz60</name>
+        <_description>IBM ThinkPad Z60m/Z60t/Z61m/Z61t</_description>
+        <vendor>IBM</vendor>
+      </configItem>
+    </model>
+    <model>
+      <configItem>
+        <name>ibm_spacesaver</name>
+        <_description>IBM Space Saver</_description>
         <vendor>IBM</vendor>
       </configItem>
     </model>
@@ -768,6 +782,13 @@
         <name>mx2750</name>
         <_description>Memorex MX2750</_description>
         <vendor>Memorex</vendor>
+      </configItem>
+    </model>
+    <model>
+      <configItem>
+        <name>microsoft7000</name>
+        <description>Microsoft Natural Wireless Ergonomic Keyboard 7000</description>
+        <vendor>Microsoft Inc.</vendor>
       </configItem>
     </model>
     <model>
@@ -1109,6 +1130,13 @@
         <languageList><iso639Id>eng</iso639Id></languageList>
       </configItem>
       <variantList>
+        <variant>
+          <configItem>
+            <name>chr</name>
+            <_description>Cherokee</_description>
+            <languageList><iso639Id>chr</iso639Id></languageList>
+          </configItem>
+        </variant>
         <variant>
           <configItem>
             <name>euro</name>
@@ -1627,12 +1655,6 @@
         </variant>
         <variant>
           <configItem>
-            <name>thinkpad</name>
-            <description>Thinkpad</description>
-          </configItem>
-        </variant>
-        <variant>
-          <configItem>
             <name>dvorak</name>
             <description>Dvorak</description>
           </configItem>
@@ -1790,6 +1812,12 @@
             <name>shs</name>
             <_description>Secwepemctsin</_description>
             <!-- No ISO code in ISO639-2, only draft ISO693-3 -->
+          </configItem>
+        </variant>
+        <variant>
+          <configItem>
+            <name>kut</name>
+            <_description>Ktunaxa</_description>
           </configItem>
         </variant>
       </variantList>
@@ -2210,7 +2238,7 @@
         <variant>
           <configItem>
             <name>dvorak</name>
-            <_description>(Legacy) Dvorak</_description>
+            <_description>Dvorak</_description>
           </configItem>
         </variant>
         <variant>
@@ -2575,6 +2603,12 @@
           <configItem>
             <name>mac</name>
             <_description>Macintosh</_description>
+          </configItem>
+        </variant>
+        <variant>
+          <configItem>
+            <name>dvorak</name>
+            <_description>Dvorak</_description>
           </configItem>
         </variant>
       </variantList>
@@ -3194,6 +3228,13 @@
             <languageList><iso639Id>kom</iso639Id></languageList>
           </configItem>
         </variant>
+	<variant>
+          <configItem>
+            <name>sah</name>
+            <_description>Yakut</_description>
+            <languageList><iso639Id>sah</iso639Id></languageList>
+          </configItem>
+        </variant>
       </variantList>
     </layout>
     <layout>
@@ -3699,8 +3740,20 @@
         </variant>
         <variant>
           <configItem>
+            <name>dvorakukp</name>
+            <_description>Dvorak (UK Punctuation)</_description>
+          </configItem>
+        </variant>
+        <variant>
+          <configItem>
             <name>mac</name>
             <_description>Macintosh</_description>
+          </configItem>
+        </variant>
+        <variant>
+          <configItem>
+            <name>colemak</name>
+            <_description>Colemak</_description>
           </configItem>
         </variant>
       </variantList>
@@ -4248,6 +4301,12 @@
           <name>keypad:future_wang</name>
           <_description>Wang 724 keypad with unicode additions (arrows and math operators). Math operators on default level.</_description>
        </configItem>
+      </option>
+      <option>
+        <configItem>
+          <name>keypad:phone_hex</name>
+          <_description>ATM/phone-style hexadecimal keypad</_description>
+        </configItem>
       </option>
     </group>
     <!-- This option should override the KPDL key defined in keypad; I hope it's declared in the right place -->
