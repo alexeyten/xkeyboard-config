@@ -2,11 +2,12 @@ Index: xkb-data/rules/base.o_s.part
 ===================================================================
 --- xkb-data.orig/rules/base.o_s.part	2008-05-28 14:12:01.000000000 +0200
 +++ xkb-data/rules/base.o_s.part	2008-05-28 14:12:01.000000000 +0200
-@@ -70,6 +70,7 @@
+@@ -70,7 +70,8 @@
    keypad:legacy_wang    =	+keypad(legacy_wang)
    keypad:oss_wang       =	+keypad(oss_wang)
    keypad:future_wang    =	+keypad(future_wang)
-+  keypad:comma          =       +keypad(comma)
+   keypad:phone_hex      =	+keypad(phone_hex)
++  keypad:comma          =	+keypad(comma)
    nbsp:none             =	+nbsp(none)
    nbsp:level2           =	+nbsp(level2)
    nbsp:level3           =	+nbsp(level3)
