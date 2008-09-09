@@ -53,7 +53,7 @@ clean: xsfclean
 	rm -f conftest* */conftest*
 	rm -rf autom4te.cache */autom4te.cache
 	rm -rf obj-*
-	rm -f $$(find -name Makefile.in) rm -f $$(find -name Makefile)
+	rm -f $$(find -name Makefile.in) $$(find -name Makefile)
 	rm -f compile config.guess config.sub configure depcomp install-sh
 	rm -f ltmain.sh missing INSTALL aclocal.m4 config.h.in mkinstalldirs
 
