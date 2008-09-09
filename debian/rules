@@ -60,7 +60,7 @@ clean: xsfclean
 	for d in compat geometry keycodes keymap semantics symbols types; \
 	  do rm -f $$d/$$d.dir; done
 	rm -f rules/compat/base.l[2-4]*.part rules/compat/base.m*.part
-	rm -f xkeyboard-config.spec
+	rm -f xkeyboard-config.spec po/*.gmo
 	dh_clean
 
 deb:
