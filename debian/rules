@@ -3,6 +3,8 @@
 # Uncomment this to turn on verbose mode.
 #export DH_VERBOSE=1
 
+include debian/xsfbs/xsfbs.mk
+
 export DEB_HOST_GNU_TYPE  ?= $(shell dpkg-architecture -qDEB_HOST_GNU_TYPE)
 export DEB_BUILD_GNU_TYPE ?= $(shell dpkg-architecture -qDEB_BUILD_GNU_TYPE)
 
@@ -14,77 +16,52 @@ else
 endif
 
 xkb_base := /usr/share/X11/xkb
-stamp := stamp-dir/
 QUILT := quilt --quiltrc debian/patches/quiltrc
 
-$(stamp):
-	mkdir $@
+confflags += --disable-xkbcomp-symlink --with-xkb-rules-symlink=xfree86,xorg \
+	     --with-xkb-base=$(xkb_base) XKBCOMP=/no/thanks
 
-patch: $(stamp)patch
-$(stamp)patch: $(stamp)
-	@if $(QUILT) next >/dev/null 2>&1; then \
-	  echo -n "Applying patches..."; \
-	  if $(QUILT) push -a -v > ${stamp}patch-log 2>&1; then \
-	    echo "successful."; \
-	    mv ${stamp}patch-log $@; \
-	  else \
-	    echo "failed! (check ${stamp}patch-log for details)"; \
-	    exit 1; \
-	  fi; \
-	else \
-	  echo "No patches to apply"; \
-	fi
-	: > rules/base.mlv_s.part
-
-unpatch:
-	@echo -n "Unapplying patches..."
-	@if $(QUILT) top >/dev/null 2>&1; then \
-	  if $(QUILT) pop -a -v > $(stamp)unpatch-log 2>&1; then \
-	    echo "successful."; \
-	  else \
-	    echo "failed! (check $(stamp)unpatch-log for details)"; \
-	    exit 1; \
-	  fi; \
-	else \
-	  echo "nothing to do."; \
-	fi
-	-rm -f $(stamp)patch $(stamp)patch-log $(stamp)unpatch-log
-	-rm -rf .pc
-
-config.status: $(stamp)configure
-$(stamp)configure: $(stamp)patch
+configure: $(STAMP_DIR)/patch
 	dh_testdir
-	./configure $(confflags) \
-	  --prefix=/usr \
-	  --disable-xkbcomp-symlink --with-xkb-rules-symlink=xfree86,xorg \
-	  --with-xkb-base=$(xkb_base) \
-	  XKBCOMP=/no/thanks
-	touch $@
+	autoreconf -vfi
 
-build: $(stamp)build
-$(stamp)build: $(stamp)configure
+obj-$(DEB_BUILD_GNU_TYPE)/config.status: configure
+	dh_testdir
+	./configure --prefix=/usr --mandir=\$${prefix}/share/man \
+	             --infodir=\$${prefix}/share/info $(confflags) \
+	             CFLAGS="$(CFLAGS)"
+
+.PHONY: build
+build: build-stamp
+build-stamp: obj-$(DEB_BUILD_GNU_TYPE)/config.status
 	dh_testdir
 
 	# Files kept so that xkbcomp is not needed
 	for d in compat geometry keycodes keymap semantics symbols types; \
 	  do cp debian/$$d.dir $$d/; done
-	$(MAKE) -C po update-po
-	touch $@
 
-clean: $(stamp) unpatch
+	$(MAKE)
+	>$@
+
+clean: xsfclean
 	dh_testdir
 	dh_testroot
-	rm -rf $(stamp)
+	rm -f build-stamp
 
-	[ ! -f Makefile ] || $(MAKE) distclean
-	# Files not cleaned up
-	-rm -f intltool-extract intltool-merge intltool-update
-	-rm -f rules/base.xml
-	-rm -f po/.intltool-merge-cache config.status.lineno
-	dh_clean 
-	rm -f compat/compat.dir geometry/geometry.dir keycodes/keycodes.dir
-	rm -f keymap/keymap.dir symbols/symbols.dir types/types.dir rules/base
+	rm -f config.cache config.log config.status
+	rm -f */config.cache */config.log */config.status
+	rm -f conftest* */conftest*
+	rm -rf autom4te.cache */autom4te.cache
+	rm -rf obj-*
+	rm -f $$(find -name Makefile.in)
+	rm -f compile config.guess config.sub configure depcomp install-sh
+	rm -f ltmain.sh missing INSTALL aclocal.m4 config.h.in mkinstalldirs
+
+	for d in compat geometry keycodes keymap semantics symbols types; \
+	  do rm -f $$d/$$d.dir; done
 	rm -f rules/compat/base.l[2-4]*.part rules/compat/base.m*.part
+	rm -f xkeyboard-config.spec
+	dh_clean
 
 deb:
 	dpkg-buildpackage -rfakeroot -i'/\.git|/\.svn'
@@ -102,15 +79,13 @@ dir:
 install: build
 	dh_testdir
 	dh_testroot
-	dh_clean -k 
+	dh_clean -k
 	dh_installdirs
 
-	$(MAKE) install DESTDIR=$(CURDIR)/debian/xkb-data
-	#  Remove this symlink, it is no more needed
-	rm -f $(CURDIR)/debian/xkb-data/$(xkb_base)/compiled
+	$(MAKE) DESTDIR=$(CURDIR)/debian/xkb-data install
 
-        # Move base.xml to /etc/X11/xkb/ and make
-        # /usr/share/X11/xkb/rules/base.xml links to it
+	# Move base.xml to /etc/X11/xkb/ and make
+	# /usr/share/X11/xkb/rules/base.xml links to it
 	mv debian/xkb-data/usr/share/X11/xkb/rules/base.xml debian/xkb-data/etc/X11/xkb/
 	dh_link etc/X11/xkb/base.xml usr/share/X11/xkb/rules/base.xml
 
@@ -119,11 +94,14 @@ binary-arch: build install
 # We have nothing to do by default.
 
 # Build architecture-independent files here.
+binary-indep: DH_OPTIONS=-i
 binary-indep: build install
 	dh_testdir
 	dh_testroot
-	dh_installchangelogs ChangeLog
+
 	dh_installdocs
+	dh_installchangelogs ChangeLog
+	dh_link
 	dh_compress
 	dh_fixperms
 	dh_installdeb
@@ -132,4 +110,4 @@ binary-indep: build install
 	dh_builddeb
 
 binary: binary-indep binary-arch
-.PHONY: build clean binary-indep binary-arch binary install 
+.PHONY: build clean binary-indep binary-arch binary install
