@@ -14,3 +14,4 @@ add_void_definition_pl-324647.diff
 send-upstream/001_keypad_comma.diff
 #resync_rules_base.diff
 #send-upstream/002_add_asus6000.diff
+100_abnt2_jp106.diff
