@@ -1,7 +1,7 @@
 Index: xkb-data/keycodes/evdev
 ===================================================================
---- xkb-data.orig/keycodes/evdev	2008-09-15 17:39:25.000000000 +0300
-+++ xkb-data/keycodes/evdev	2008-09-16 10:21:36.000000000 +0300
+--- xkb-data.orig/keycodes/evdev	2008-09-16 13:15:01.000000000 +0300
++++ xkb-data/keycodes/evdev	2008-09-17 12:23:29.000000000 +0300
 @@ -147,14 +147,14 @@
  
  	<HZTG> =  93;	// Hankaku/Zenkakau toggle
@@ -37,3 +37,16 @@ Index: xkb-data/keycodes/evdev
  };
  
  // For brazilian ABNT2 keyboard.
+Index: xkb-data/symbols/inet
+===================================================================
+--- xkb-data.orig/symbols/inet	2008-09-17 12:23:52.000000000 +0300
++++ xkb-data/symbols/inet	2008-09-17 12:24:11.000000000 +0300
+@@ -126,7 +126,7 @@
+     key <I208>   {      [ XF86AudioPlay         ]       };
+     key <I209>   {      [ XF86AudioPause        ]       };
+     key <I210>   {      [ XF86Launch3           ]       };
+-    key <AB11>   {      [ XF86Launch4           ]       };
++    key <I211>   {      [ XF86Launch4           ]       };
+     key <I213>   {      [ XF86Standby           ]       };
+     key <I214>   {      [ XF86Close             ]       };
+     key <I215>   {      [ XF86AudioPlay         ]       };
