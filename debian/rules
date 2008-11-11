@@ -3,6 +3,8 @@
 # Uncomment this to turn on verbose mode.
 #export DH_VERBOSE=1
 
+include debian/xsfbs/xsfbs.mk
+
 export DEB_HOST_GNU_TYPE  ?= $(shell dpkg-architecture -qDEB_HOST_GNU_TYPE)
 export DEB_BUILD_GNU_TYPE ?= $(shell dpkg-architecture -qDEB_BUILD_GNU_TYPE)
 
@@ -14,69 +16,34 @@ else
 endif
 
 xkb_base := /usr/share/X11/xkb
-stamp := stamp-dir/
-QUILT := quilt --quiltrc debian/patches/quiltrc
 
-$(stamp):
-	mkdir $@
+configure: $(STAMP_DIR)/patch
+	intltoolize -c -f
+	autoreconf -vfi
 
-patch: $(stamp)patch
-$(stamp)patch: $(stamp)
-	@if $(QUILT) next >/dev/null 2>&1; then \
-	  echo -n "Applying patches..."; \
-	  if $(QUILT) push -a -v > ${stamp}patch-log 2>&1; then \
-	    echo "successful."; \
-	    mv ${stamp}patch-log $@; \
-	  else \
-	    echo "failed! (check ${stamp}patch-log for details)"; \
-	    exit 1; \
-	  fi; \
-	else \
-	  echo "No patches to apply"; \
-	fi
-	: > rules/base.mlv_s.part
-
-unpatch:
-	@echo -n "Unapplying patches..."
-	@if $(QUILT) top >/dev/null 2>&1; then \
-	  if $(QUILT) pop -a -v > $(stamp)unpatch-log 2>&1; then \
-	    echo "successful."; \
-	  else \
-	    echo "failed! (check $(stamp)unpatch-log for details)"; \
-	    exit 1; \
-	  fi; \
-	else \
-	  echo "nothing to do."; \
-	fi
-	-rm -f $(stamp)patch $(stamp)patch-log $(stamp)unpatch-log
-	-rm -rf .pc
-
-config.status: $(stamp)configure
-$(stamp)configure: $(stamp)patch
+config.status: configure
 	dh_testdir
 	./configure $(confflags) \
 	  --prefix=/usr \
 	  --disable-xkbcomp-symlink --with-xkb-rules-symlink=xfree86,xorg \
-	  --with-xkb-base=$(xkb_base) \
-	  XKBCOMP=/no/thanks
-	touch $@
+	  --with-xkb-base=$(xkb_base)
+	>$@
 
-build: $(stamp)build
-$(stamp)build: $(stamp)configure
+build: $(STAMP_DIR)/build
+$(STAMP_DIR)/build: config.status
 	dh_testdir
-
-	# Files kept so that xkbcomp is not needed
-	for d in compat geometry keycodes keymap semantics symbols types; \
-	  do cp debian/$$d.dir $$d/; done
 	$(MAKE)
-	touch $@
+	>$@
 
-clean: $(stamp) unpatch
+clean: xsfclean
 	dh_testdir
 	dh_testroot
-	rm -rf $(stamp)
-
 	[ ! -f Makefile ] || $(MAKE) distclean
+	rm -rf $$(find -name Makefile.in)
+	rm -f aclocal.m4 configure install-sh intltool-*.in
+	rm -f missing po/Makefile.in.in
+	rm -f semantics/semantics.dir
+
 	# Files not cleaned up
 	-rm -f intltool-extract intltool-merge intltool-update
 	-rm -f rules/base.xml
