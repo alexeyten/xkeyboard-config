@@ -43,6 +43,7 @@ clean: xsfclean
 	rm -f aclocal.m4 configure install-sh intltool-*.in
 	rm -f missing po/Makefile.in.in
 	rm -f semantics/semantics.dir
+	rm -f rules/evdev rules/evdev.xml.in
 
 	# Files not cleaned up
 	-rm -f intltool-extract intltool-merge intltool-update
