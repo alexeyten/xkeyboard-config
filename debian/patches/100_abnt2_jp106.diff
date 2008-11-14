@@ -1,7 +1,7 @@
 Index: xkb-data/keycodes/evdev
 ===================================================================
---- xkb-data.orig/keycodes/evdev	2008-09-16 13:15:01.000000000 +0300
-+++ xkb-data/keycodes/evdev	2008-09-17 12:23:29.000000000 +0300
+--- xkb-data.orig/keycodes/evdev	2008-11-12 09:50:51.000000000 +0200
++++ xkb-data/keycodes/evdev	2008-11-12 11:39:16.000000000 +0200
 @@ -147,14 +147,14 @@
  
  	<HZTG> =  93;	// Hankaku/Zenkakau toggle
@@ -28,7 +28,7 @@ Index: xkb-data/keycodes/evdev
  	<I213> = 213;	// #define KEY_SUSPEND             205
  	<I214> = 214;	// #define KEY_CLOSE               206
  	<I215> = 215;	// #define KEY_PLAY                207
-@@ -304,6 +304,8 @@
+@@ -304,11 +304,14 @@
  // For japanese 106 keyboard.
  xkb_keycodes "jp106" {
      include "evdev(evdev)"
@@ -37,10 +37,16 @@ Index: xkb-data/keycodes/evdev
  };
  
  // For brazilian ABNT2 keyboard.
+ xkb_keycodes "abnt2" {
+     include "evdev(evdev)"
++    <I129> = 60;
+ };
+ 
+ // PC98
 Index: xkb-data/symbols/inet
 ===================================================================
---- xkb-data.orig/symbols/inet	2008-09-17 12:23:52.000000000 +0300
-+++ xkb-data/symbols/inet	2008-09-17 12:24:11.000000000 +0300
+--- xkb-data.orig/symbols/inet	2008-11-12 11:35:54.000000000 +0200
++++ xkb-data/symbols/inet	2008-11-12 11:35:54.000000000 +0200
 @@ -126,7 +126,7 @@
      key <I208>   {      [ XF86AudioPlay         ]       };
      key <I209>   {      [ XF86AudioPause        ]       };

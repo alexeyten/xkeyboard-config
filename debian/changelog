@@ -1,3 +1,11 @@
+xkeyboard-config (1.3-2ubuntu4.1) intrepid-proposed; urgency=low
+
+  * 100_abnt2_jp106.diff: Fix keycode 129 to produce a dot instead of
+    a comma. (LP: #272606)
+  * Remove patches/ directory which should not be included in the diff.
+
+ -- Timo Aaltonen <tepsipakki@ubuntu.com>  Wed, 12 Nov 2008 11:46:03 +0200
+
 xkeyboard-config (1.3-2ubuntu4) intrepid; urgency=low
 
   * Update 100_abnt2_jp106.diff, s/AB11/I211/ from symbols/inet.
