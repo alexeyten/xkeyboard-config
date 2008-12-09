@@ -39,7 +39,7 @@ Index: xkb-data/keycodes/evdev
  // For brazilian ABNT2 keyboard.
  xkb_keycodes "abnt2" {
      include "evdev(evdev)"
-+    <I129> = 60;
++    <KPPT> = 129;
  };
  
  // PC98
