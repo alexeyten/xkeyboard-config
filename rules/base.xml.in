@@ -787,7 +787,7 @@
     <model>
       <configItem>
         <name>microsoft7000</name>
-        <description>Microsoft Natural Wireless Ergonomic Keyboard 7000</description>
+        <_description>Microsoft Natural Wireless Ergonomic Keyboard 7000</_description>
         <vendor>Microsoft Inc.</vendor>
       </configItem>
     </model>
@@ -928,6 +928,13 @@
       <configItem>
         <name>sven</name>
         <_description>SVEN Ergonomic 2500</_description>
+	<vendor>SVEN</vendor>
+      </configItem>
+    </model>
+    <model>
+      <configItem>
+        <name>sven303</name>
+        <_description>SVEN Slim 303</_description>
 	<vendor>SVEN</vendor>
       </configItem>
     </model>
@@ -1656,25 +1663,25 @@
         <variant>
           <configItem>
             <name>dvorak</name>
-            <description>Dvorak</description>
+            <_description>Dvorak</_description>
           </configItem>
         </variant>
         <variant>
           <configItem>
             <name>nativo</name>
-            <description>Nativo</description>
+            <_description>Nativo</_description>
           </configItem>
         </variant>
         <variant>
           <configItem>
             <name>nativo-us</name>
-            <description>Nativo for USA keyboards</description>
+            <_description>Nativo for USA keyboards</_description>
           </configItem>
         </variant>
         <variant>
           <configItem>
             <name>nativo-epo</name>
-            <description>Nativo for Esperanto</description>
+            <_description>Nativo for Esperanto</_description>
             <languageList><iso639Id>epo</iso639Id></languageList>
           </configItem>
         </variant>
@@ -1915,6 +1922,12 @@
             <_description>qwerty, extended Backslash</_description>
           </configItem>
         </variant>
+	<variant>
+	  <configItem>
+	    <name>ucw</name>
+	    <_description>UCW layout (accented letters only)</_description>
+	 </configItem>
+	</variant>
       </variantList>
     </layout>
     <layout>
@@ -2430,6 +2443,12 @@
         <languageList><iso639Id>gre</iso639Id></languageList>
       </configItem>
       <variantList>
+        <variant>
+          <configItem>
+            <name>simple</name>
+            <_description>Simple</_description>
+          </configItem>
+        </variant>
         <variant>
           <configItem>
             <name>extended</name>
@@ -3101,19 +3120,19 @@
         <variant>
           <configItem>
             <name>nativo</name>
-            <description>Nativo</description>
+            <_description>Nativo</_description>
           </configItem>
         </variant>
         <variant>
           <configItem>
             <name>nativo-us</name>
-            <description>Nativo for USA keyboards</description>
+            <_description>Nativo for USA keyboards</_description>
           </configItem>
         </variant>
         <variant>
           <configItem>
             <name>nativo-epo</name>
-            <description>Nativo for Esperanto</description>
+            <_description>Nativo for Esperanto</_description>
             <languageList><iso639Id>epo</iso639Id></languageList>
           </configItem>
         </variant>
@@ -3693,7 +3712,7 @@
         <variant>
           <configItem>
             <name>unicode</name>
-            <description>Unicode</description>
+            <_description>Unicode</_description>
           </configItem>
         </variant>
         <variant>
@@ -4001,6 +4020,12 @@
         <configItem>
           <name>grp:win_switch</name>
           <_description>Both Win-keys switch layout while pressed.</_description>
+        </configItem>
+      </option>
+      <option>
+        <configItem>
+          <name>grp:caps_switch</name>
+          <_description>CapsLock key switches layout while pressed, Alt+CapsLock does the original capslock action.</_description>
         </configItem>
       </option>
       <option>
@@ -4338,6 +4363,12 @@
       </option>
       <option>
         <configItem>
+          <name>kpdl:dotoss_latin9</name>
+          <_description>Four-level key with dot, latin-9 restriction</_description>
+       </configItem>
+      </option>
+      <option>
+        <configItem>
           <name>kpdl:commaoss</name>
           <_description>Four-level key with comma</_description>
        </configItem>
@@ -4387,12 +4418,6 @@
         <configItem>
           <name>caps:shift_nocancel</name>
           <_description>CapsLock acts as Shift with locking. Shift doesn't affect CapsLock.</_description>
-        </configItem>
-      </option>
-      <option>
-        <configItem>
-          <name>caps:shift_lock</name>
-          <_description>CapsLock just locks the Shift modifier.</_description>
         </configItem>
       </option>
       <option>
@@ -4648,7 +4673,7 @@
       <option>
         <configItem>
           <name>nbsp:level4nl</name>
-          <_description>Space key outputs non-breakable space character at fourth level, thin non-breakable space character at sixth level (via Ctrl+Shift</_description>
+          <_description>Space key outputs non-breakable space character at fourth level, thin non-breakable space character at sixth level (via Ctrl+Shift)</_description>
         </configItem>
       </option>
     </group>

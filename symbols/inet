@@ -126,7 +126,7 @@ xkb_symbols "evdev" {
     key <I208>   {      [ XF86AudioPlay         ]       };
     key <I209>   {      [ XF86AudioPause        ]       };
     key <I210>   {      [ XF86Launch3           ]       };
-    key <AB11>   {      [ XF86Launch4           ]       };
+    key <I211>   {      [ XF86Launch4           ]       };
     key <I213>   {      [ XF86Standby           ]       };
     key <I214>   {      [ XF86Close             ]       };
     key <I215>   {      [ XF86AudioPlay         ]       };
@@ -1941,6 +1941,14 @@ xkb_symbols "sven" {
     key <I62>	{	[ XF86AudioNext		]	};
     key <I63>	{	[ XF86WakeUp		]	};
     key <I68>	{	[ XF86Back		]	};
+};
+
+// SVEN Slim 303
+partial alphanumeric_keys
+xkb_symbols "sven303" {
+    key <I11>	{	[ XF86PowerOff		]	};
+    key <I12>	{	[ XF86Sleep		]	};
+    key <I16>	{	[ XF86WakeUp		]	};
 };
 
 
