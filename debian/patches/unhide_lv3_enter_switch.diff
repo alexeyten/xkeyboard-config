@@ -3,22 +3,22 @@ is selected with an Apple laptop.
 
 Not submitted upstream.
 
-Index: xkb-data/rules/base.o_s.part
+Index: xkeyboard-config/rules/base.o_s.part
 ===================================================================
---- xkb-data.orig/rules/base.o_s.part	2008-05-28 14:12:01.000000000 +0200
-+++ xkb-data/rules/base.o_s.part	2008-05-28 14:12:20.000000000 +0200
-@@ -43,6 +43,7 @@
+--- xkeyboard-config.orig/rules/base.o_s.part	2009-01-09 02:43:47.608898124 +0300
++++ xkeyboard-config/rules/base.o_s.part	2009-01-09 02:43:51.424898319 +0300
+@@ -48,6 +48,7 @@
    lv3:win_switch	=	+level3(win_switch)
    lv3:lwin_switch	=	+level3(lwin_switch)
    lv3:rwin_switch	=	+level3(rwin_switch)
 +  lv3:enter_switch	=	+level3(enter_switch)
    caps:capslock		=	+capslock(capslock)
    caps:shiftlock	=	+capslock(shiftlock)
-   caps:grouplock	=	+capslock(grouplock)
-Index: xkb-data/symbols/level3
+   caps:swapescape	=	+capslock(swapescape)
+Index: xkeyboard-config/symbols/level3
 ===================================================================
---- xkb-data.orig/symbols/level3	2008-05-28 14:11:56.000000000 +0200
-+++ xkb-data/symbols/level3	2008-05-28 14:12:01.000000000 +0200
+--- xkeyboard-config.orig/symbols/level3	2009-01-09 02:43:30.596896505 +0300
++++ xkeyboard-config/symbols/level3	2009-01-09 02:43:51.424898319 +0300
 @@ -136,7 +136,7 @@
  // using the level3(enter_switch) map, the Enter key on the keypad
  // temporarily chooses the third shift level.  This is especially
@@ -28,12 +28,12 @@ Index: xkb-data/symbols/level3
  xkb_symbols "enter_switch" {
    key <KPEN> {
      type[Group1]="ONE_LEVEL",
-Index: xkb-data/rules/base.xml.in
+Index: xkeyboard-config/rules/base.xml.in
 ===================================================================
---- xkb-data.orig/rules/base.xml.in	2008-05-28 14:12:01.000000000 +0200
-+++ xkb-data/rules/base.xml.in	2008-05-28 14:12:20.000000000 +0200
-@@ -4150,6 +4150,12 @@
-           <_description>Right Alt key never chooses 3rd level.</_description>
+--- xkeyboard-config.orig/rules/base.xml.in	2009-01-09 02:43:47.608898124 +0300
++++ xkeyboard-config/rules/base.xml.in	2009-01-09 02:43:51.424898319 +0300
+@@ -4359,6 +4359,12 @@
+           <_description>Right Alt key never chooses 3rd level</_description>
          </configItem>
        </option>
 +      <option>

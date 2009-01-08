@@ -1,11 +1,11 @@
 Add the power key, as requested by Jörg Sommer in
   http://lists.debian.org/debian-powerpc/2006/09/msg00227.html
 
-Index: xkb-data/symbols/inet
+Index: xkeyboard-config/symbols/inet
 ===================================================================
---- xkb-data.orig/symbols/inet	2008-05-28 14:11:57.000000000 +0200
-+++ xkb-data/symbols/inet	2008-05-28 14:12:01.000000000 +0200
-@@ -2028,6 +2028,7 @@
+--- xkeyboard-config.orig/symbols/inet	2009-01-09 02:20:01.188898693 +0300
++++ xkeyboard-config/symbols/inet	2009-01-09 02:20:21.276899198 +0300
+@@ -1688,6 +1688,7 @@
      key <I2E>	{	[ XF86AudioLowerVolume	]	};
      key <I30>	{	[ XF86AudioRaiseVolume	]	};
      key <I56>   {       [ XF86RotateWindows	]	};

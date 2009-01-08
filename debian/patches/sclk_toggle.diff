@@ -3,14 +3,14 @@
 
 Not submitted yet.
 
-Index: xkb-data/symbols/group
+Index: xkeyboard-config/symbols/group
 ===================================================================
---- xkb-data.orig/symbols/group	2008-05-28 14:11:57.000000000 +0200
-+++ xkb-data/symbols/group	2008-05-28 14:12:01.000000000 +0200
-@@ -333,3 +333,15 @@
-   key <I219>  { [ ISO_Next_Group, ISO_Prev_Group ] };
+--- xkeyboard-config.orig/symbols/group	2009-01-09 01:18:59.529050614 +0300
++++ xkeyboard-config/symbols/group	2009-01-09 02:33:32.744923894 +0300
+@@ -346,3 +346,14 @@
+     symbols[Group1]= [ space,   ISO_Next_Group ]
+     };
  };
- 
 +
 +// using the group(sclk_toggle) map, pressing the Scroll Lock key
 +// toggles groups.
@@ -22,12 +22,11 @@ Index: xkb-data/symbols/group
 +    symbols[Group1] = [ ISO_Next_Group ]
 +    };
 +};
-+
-Index: xkb-data/rules/base.o_s.part
+Index: xkeyboard-config/rules/base.o_s.part
 ===================================================================
---- xkb-data.orig/rules/base.o_s.part	2008-05-28 14:11:57.000000000 +0200
-+++ xkb-data/rules/base.o_s.part	2008-05-28 14:12:23.000000000 +0200
-@@ -32,6 +32,7 @@
+--- xkeyboard-config.orig/rules/base.o_s.part	2009-01-09 02:28:27.640898257 +0300
++++ xkeyboard-config/rules/base.o_s.part	2009-01-09 02:32:16.412898433 +0300
+@@ -37,6 +37,7 @@
    grp:lctrl_toggle	=	+group(lctrl_toggle)
    grp:rctrl_toggle	=	+group(rctrl_toggle)
    grp:lalt_toggle	=	+group(lalt_toggle)
@@ -35,12 +34,12 @@ Index: xkb-data/rules/base.o_s.part
    lv3:switch		=	+level3(switch)
    lv3:ralt_switch	=	+level3(ralt_switch)
    lv3:ralt_switch_multikey	=	+level3(ralt_switch_multikey)
-Index: xkb-data/rules/base.xml.in
+Index: xkeyboard-config/rules/base.xml.in
 ===================================================================
---- xkb-data.orig/rules/base.xml.in	2008-05-28 14:11:57.000000000 +0200
-+++ xkb-data/rules/base.xml.in	2008-05-28 14:12:23.000000000 +0200
-@@ -4076,6 +4076,12 @@
-           <_description>Right Ctrl key changes layout.</_description>
+--- xkeyboard-config.orig/rules/base.xml.in	2009-01-09 02:28:27.648898185 +0300
++++ xkeyboard-config/rules/base.xml.in	2009-01-09 02:32:16.416897304 +0300
+@@ -4285,6 +4285,12 @@
+           <_description>Right Ctrl</_description>
          </configItem>
        </option>
 +      <option>

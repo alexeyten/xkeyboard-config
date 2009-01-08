@@ -1,21 +1,20 @@
-Index: xkb-data/rules/base.o_s.part
+Index: xkeyboard-config/rules/base.o_s.part
 ===================================================================
---- xkb-data.orig/rules/base.o_s.part	2008-05-28 14:12:01.000000000 +0200
-+++ xkb-data/rules/base.o_s.part	2008-05-28 14:12:01.000000000 +0200
-@@ -70,7 +70,8 @@
-   keypad:legacy_wang    =	+keypad(legacy_wang)
-   keypad:oss_wang       =	+keypad(oss_wang)
+--- xkeyboard-config.orig/rules/base.o_s.part	2009-01-09 02:43:51.424898319 +0300
++++ xkeyboard-config/rules/base.o_s.part	2009-01-09 02:44:00.876897709 +0300
+@@ -78,6 +78,7 @@
    keypad:future_wang    =	+keypad(future_wang)
-   keypad:phone_hex      =	+keypad(phone_hex)
+   keypad:hex            =	+keypad(ops)+keypad(hex)
+   keypad:atm            =	+keypad(ops)+keypad(hex)+keypad(atm)  
 +  keypad:comma          =	+keypad(comma)
    nbsp:none             =	+nbsp(none)
    nbsp:level2           =	+nbsp(level2)
    nbsp:level3           =	+nbsp(level3)
-Index: xkb-data/rules/base.xml.in
+Index: xkeyboard-config/rules/base.xml.in
 ===================================================================
---- xkb-data.orig/rules/base.xml.in	2008-05-28 14:12:01.000000000 +0200
-+++ xkb-data/rules/base.xml.in	2008-05-28 14:12:01.000000000 +0200
-@@ -4233,6 +4233,12 @@
+--- xkeyboard-config.orig/rules/base.xml.in	2009-01-09 02:43:51.424898319 +0300
++++ xkeyboard-config/rules/base.xml.in	2009-01-09 02:44:00.876897709 +0300
+@@ -4442,6 +4442,12 @@
        </option>
        <option>
          <configItem>
