@@ -1,0 +1,40 @@
+// $XKeyboardConfig$
+
+partial
+xkb_symbols "default" {
+  key <TLDE> { [ NoSymbol, NoSymbol, acute, approxeq ] };
+  key <AE01> { [ NoSymbol, NoSymbol, onesuperior ] };
+  key <AE02> { [ NoSymbol, NoSymbol, twosuperior ] };
+  key <AE03> { [ NoSymbol, NoSymbol, threesuperior ] };
+  key <AE04> { [ NoSymbol, NoSymbol, section ] };
+  key <AE05> { [ NoSymbol, NoSymbol, U2030 ] }; // PER MILLE SIGN
+  key <AE11> { [ NoSymbol, NoSymbol, emdash, hyphen ] };
+  key <AE12> { [ NoSymbol, NoSymbol, notequal, plusminus ] };
+
+  key <AD01> { [ NoSymbol, NoSymbol, NoSymbol, onequarter ] };
+  key <AD03> { [ NoSymbol, NoSymbol, EuroSign, oneeighth ] };
+  key <AD04> { [ NoSymbol, NoSymbol, registered ] };
+  key <AD05> { [ NoSymbol, NoSymbol, trademark, onethird ] };
+  key <AD09> { [ NoSymbol, NoSymbol, degree ] };
+  key <AD10> { [ NoSymbol, NoSymbol, minutes, seconds ] };
+  key <AD11> { [ NoSymbol, NoSymbol, U2039 ] }; // SINGLE LEFT-POINTING ANGLE QUOTATION MARK
+  key <AD12> { [ NoSymbol, NoSymbol, U203A ] }; // SINGLE RIGHT-POINTING ANGLE QUOTATION MARK
+  key <BKSL> { [ NoSymbol, NoSymbol, endash, enfilledcircbullet ] };
+
+  key <AC01> { [ NoSymbol, NoSymbol, approxeq ] };
+  key <AC02> { [ NoSymbol, NoSymbol, section ] };
+  key <AC03> { [ NoSymbol, NoSymbol, degree ] };
+  key <AC04> { [ NoSymbol, NoSymbol, sterling ] };
+  key <AC06> { [ NoSymbol, NoSymbol, NoSymbol, onehalf ] };
+  key <AC07> { [ NoSymbol, NoSymbol, doublelowquotemark, singlelowquotemark ] };
+  key <AC08> { [ NoSymbol, NoSymbol, leftdoublequotemark, leftsinglequotemark ] };
+  key <AC09> { [ NoSymbol, NoSymbol, rightdoublequotemark, rightsinglequotemark ] };
+  key <AC10> { [ NoSymbol, NoSymbol, leftsinglequotemark, diaeresis ] };
+  key <AC11> { [ NoSymbol, NoSymbol, rightsinglequotemark, minutes ] };
+
+  key <AB02> { [ NoSymbol, NoSymbol, multiply, periodcentered ] };
+  key <AB03> { [ NoSymbol, NoSymbol, copyright ] };
+  key <AB08> { [ NoSymbol, NoSymbol, guillemotleft, doublelowquotemark ] };
+  key <AB09> { [ NoSymbol, NoSymbol, guillemotright, leftdoublequotemark ] };
+  key <AB10> { [ NoSymbol, NoSymbol, ellipsis, U2215 ] }; // DIVISION SLASH
+};

@@ -4747,6 +4747,18 @@
       </option>
     </group>
     <group allowMultipleSelection="true">
+      <configItem>
+        <name>typo</name>
+        <_description>Adding typographic layout</_description>
+      </configItem>
+      <option>
+        <configItem>
+          <name>typo:default</name>
+          <_description>Default</_description>
+        </configItem>
+      </option>
+    </group>
+    <group allowMultipleSelection="true">
       <!-- Special shortcuts for the Euro character -->
       <configItem>
         <name>eurosign</name>
