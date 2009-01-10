@@ -1,12 +1,12 @@
-xkeyboard-config (1.5-1~20090108) UNRELEASED; urgency=low
+xkeyboard-config (1.5-1~20090108ubuntu1) UNRELEASED; urgency=low
 
   * Pull from fdo-master, last commit 75b347a1c5c280.
   * debian/patches:
     - Refresh patches
     - Remove patches applied upstream
-  * Add typographic option 
+  * Add two typographic options
 
- -- Alexey Ten (Lynn) <alexeyten+ppa@gmail.com>  Fri, 09 Jan 2009 23:06:04 +0300
+ -- Alexey Ten (Lynn) <alexeyten+ppa@gmail.com>  Sat, 10 Jan 2009 23:02:27 +0300
 
 xkeyboard-config (1.3-2ubuntu4) intrepid; urgency=low
 

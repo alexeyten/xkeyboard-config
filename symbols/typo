@@ -1,7 +1,7 @@
 // $XKeyboardConfig$
 
 partial
-xkb_symbols "default" {
+xkb_symbols "birman" {
   key <TLDE> { [ NoSymbol, NoSymbol, acute, approxeq ] };
   key <AE01> { [ NoSymbol, NoSymbol, onesuperior ] };
   key <AE02> { [ NoSymbol, NoSymbol, twosuperior ] };
@@ -37,4 +37,53 @@ xkb_symbols "default" {
   key <AB08> { [ NoSymbol, NoSymbol, guillemotleft, doublelowquotemark ] };
   key <AB09> { [ NoSymbol, NoSymbol, guillemotright, leftdoublequotemark ] };
   key <AB10> { [ NoSymbol, NoSymbol, ellipsis, U2215 ] }; // DIVISION SLASH
+};
+
+partial
+xkb_symbols "birman2" {
+  key <TLDE> { [ NoSymbol, NoSymbol, acute, dead_grave ] };
+  key <AE01> { [ NoSymbol, NoSymbol, onesuperior ] };
+  key <AE02> { [ NoSymbol, NoSymbol, twosuperior, onehalf ] };
+  key <AE03> { [ NoSymbol, NoSymbol, threesuperior, onethird ] };
+  key <AE04> { [ NoSymbol, NoSymbol, dollar, onequarter ] };
+  key <AE05> { [ NoSymbol, NoSymbol, U2030 ] }; // PER MILLE SIGN
+  key <AE06> { [ NoSymbol, NoSymbol, uparrow, dead_circumflex ] };
+  key <AE07> { [ NoSymbol, NoSymbol, ampersand ] };
+  key <AE08> { [ NoSymbol, NoSymbol, infinity, oneeighth ] };
+  key <AE09> { [ NoSymbol, NoSymbol, leftarrow, U2329 ] }; // LEFT-POINTING ANGLE BRACKET
+  key <AE10> { [ NoSymbol, NoSymbol, rightarrow, U232A ] }; // RIGHT-POINTING ANGLE BRACKET
+  key <AE11> { [ NoSymbol, NoSymbol, emdash, endash ] };
+  key <AE12> { [ NoSymbol, NoSymbol, notequal, plusminus ] };
+
+  key <AD01> { [ NoSymbol, NoSymbol, NoSymbol, dead_breve ] };
+  key <AD03> { [ NoSymbol, NoSymbol, EuroSign ] };
+  key <AD04> { [ NoSymbol, NoSymbol, registered ] };
+  key <AD05> { [ NoSymbol, NoSymbol, trademark ] };
+  key <AD06> { [ NoSymbol, NoSymbol, U0463, U0462 ] }; // CYRILLIC SMALL/CAPITAL LETTER YAT
+  key <AD07> { [ NoSymbol, NoSymbol, U0475, U0474 ] }; // CYRILLIC SMALL/CAPITAL LETTER IZHITSA
+  key <AD08> { [ NoSymbol, NoSymbol, U0456, U0406 ] }; // CYRILLIC SMALL/CAPITAL LETTER BYELORUSSIAN-UKRAINIAN I
+  key <AD09> { [ NoSymbol, NoSymbol, U0473, U0472 ] }; // CYRILLIC SMALL/CAPITAL LETTER FITA
+  key <AD10> { [ NoSymbol, NoSymbol, minutes, seconds ] };
+  key <AD11> { [ NoSymbol, NoSymbol, bracketleft, braceleft ] };
+  key <AD12> { [ NoSymbol, NoSymbol, bracketright, braceright ] };
+
+  key <AC01> { [ NoSymbol, NoSymbol, approxeq, U2318 ] }; // PLACE OF INTEREST SIGN
+  key <AC02> { [ NoSymbol, NoSymbol, section ] };
+  key <AC03> { [ NoSymbol, NoSymbol, degree ] };
+  key <AC04> { [ NoSymbol, NoSymbol, sterling ] };
+  key <AC07> { [ NoSymbol, NoSymbol, doublelowquotemark, singlelowquotemark ] };
+  key <AC08> { [ NoSymbol, NoSymbol, leftdoublequotemark, leftsinglequotemark ] };
+  key <AC09> { [ NoSymbol, NoSymbol, rightdoublequotemark, rightsinglequotemark ] };
+  key <AC10> { [ NoSymbol, NoSymbol, leftsinglequotemark, dead_diaeresis ] };
+  key <AC11> { [ NoSymbol, NoSymbol, rightsinglequotemark, dead_acute ] };
+
+  key <AB02> { [ NoSymbol, NoSymbol, multiply, periodcentered ] };
+  key <AB03> { [ NoSymbol, NoSymbol, copyright, cent ] };
+  key <AB04> { [ NoSymbol, NoSymbol, downarrow, dead_caron ] };
+  key <AB05> { [ NoSymbol, NoSymbol, U2039 ] }; // SINGLE LEFT-POINTING ANGLE QUOTATION MARK
+  key <AB06> { [ NoSymbol, NoSymbol, U203A, dead_tilde ] }; // SINGLE RIGHT-POINTING ANGLE QUOTATION MARK
+  key <AB07> { [ NoSymbol, NoSymbol, U2212 ] }; // MINUS SIGN
+  key <AB08> { [ NoSymbol, NoSymbol, guillemotleft, doublelowquotemark ] };
+  key <AB09> { [ NoSymbol, NoSymbol, guillemotright, leftdoublequotemark ] };
+  key <AB10> { [ NoSymbol, NoSymbol, ellipsis, enfilledcircbullet ] };
 };
