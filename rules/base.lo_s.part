@@ -1,3 +1,2 @@
   $threelevellayouts	grp:alts_toggle = +level3(ralt_switch_for_alts_toggle)
-  $alllayouts		typo:birman = +typo(birman)
-  $alllayouts		typo:birman2 = +typo(birman2)
+  *			misc:typo 	= +typo(base)

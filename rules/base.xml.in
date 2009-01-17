@@ -2321,6 +2321,12 @@
         </variant>
         <variant>
           <configItem>
+            <name>bre</name>
+            <_description>Breton</_description>
+          </configItem>
+        </variant>
+        <variant>
+          <configItem>
             <name>geo</name>
             <_description>Georgian AZERTY Tskapo</_description>
             <languageList><iso639Id>geo</iso639Id></languageList>
@@ -2928,12 +2934,6 @@
           <configItem>
             <name>lekpa</name>
             <_description>LEKPa</_description>
-          </configItem>
-        </variant>
-        <variant>
-          <configItem>
-            <name>balticplus</name>
-            <_description>Baltic+</_description>
           </configItem>
         </variant>
       </variantList>
@@ -4583,6 +4583,12 @@
       </option>
       <option>
         <configItem>
+          <name>caps:backspace</name>
+          <_description>Make CapsLock an additional Backspace</_description>
+        </configItem>
+      </option>
+      <option>
+        <configItem>
           <name>caps:shiftlock</name>
           <_description>CapsLock toggles Shift so all keys are affected</_description>
         </configItem>
@@ -4743,6 +4749,12 @@
         <configItem>
           <name>shift:breaks_caps</name>
           <_description>Shift cancels CapsLock</_description>
+        </configItem>
+      </option>
+      <option>
+        <configItem>
+          <name>misc:typo</name>
+          <_description>Enable extra typographic characters</_description>
         </configItem>
       </option>
     </group>
