@@ -4758,24 +4758,6 @@
         </configItem>
       </option>
     </group>
-    <group allowMultipleSelection="false">
-      <configItem>
-        <name>typo</name>
-        <_description>Adding typographic layout</_description>
-      </configItem>
-      <option>
-        <configItem>
-          <name>typo:birman</name>
-          <_description>birman</_description>
-        </configItem>
-      </option>
-      <option>
-        <configItem>
-          <name>typo:birman2</name>
-          <_description>birman v2</_description>
-        </configItem>
-      </option>
-    </group>
     <group allowMultipleSelection="true">
       <!-- Special shortcuts for the Euro character -->
       <configItem>
