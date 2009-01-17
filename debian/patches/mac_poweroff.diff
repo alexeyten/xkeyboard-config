@@ -3,9 +3,9 @@ Add the power key, as requested by Jörg Sommer in
 
 Index: xkeyboard-config/symbols/inet
 ===================================================================
---- xkeyboard-config.orig/symbols/inet	2009-01-09 02:20:01.188898693 +0300
-+++ xkeyboard-config/symbols/inet	2009-01-09 02:20:21.276899198 +0300
-@@ -1688,6 +1688,7 @@
+--- xkeyboard-config.orig/symbols/inet	2009-01-13 01:00:48.123335665 +0300
++++ xkeyboard-config/symbols/inet	2009-01-17 23:34:47.615358013 +0300
+@@ -1684,6 +1684,7 @@
      key <I2E>	{	[ XF86AudioLowerVolume	]	};
      key <I30>	{	[ XF86AudioRaiseVolume	]	};
      key <I56>   {       [ XF86RotateWindows	]	};

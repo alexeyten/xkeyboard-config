@@ -1,8 +1,8 @@
 Index: xkeyboard-config/rules/base.o_s.part
 ===================================================================
---- xkeyboard-config.orig/rules/base.o_s.part	2009-01-09 02:43:51.424898319 +0300
-+++ xkeyboard-config/rules/base.o_s.part	2009-01-09 02:44:00.876897709 +0300
-@@ -78,6 +78,7 @@
+--- xkeyboard-config.orig/rules/base.o_s.part	2009-01-17 23:35:08.238819790 +0300
++++ xkeyboard-config/rules/base.o_s.part	2009-01-17 23:35:11.274820287 +0300
+@@ -79,6 +79,7 @@
    keypad:future_wang    =	+keypad(future_wang)
    keypad:hex            =	+keypad(ops)+keypad(hex)
    keypad:atm            =	+keypad(ops)+keypad(hex)+keypad(atm)  
@@ -12,8 +12,8 @@ Index: xkeyboard-config/rules/base.o_s.part
    nbsp:level3           =	+nbsp(level3)
 Index: xkeyboard-config/rules/base.xml.in
 ===================================================================
---- xkeyboard-config.orig/rules/base.xml.in	2009-01-09 02:43:51.424898319 +0300
-+++ xkeyboard-config/rules/base.xml.in	2009-01-09 02:44:00.876897709 +0300
+--- xkeyboard-config.orig/rules/base.xml.in	2009-01-17 23:35:08.258818516 +0300
++++ xkeyboard-config/rules/base.xml.in	2009-01-17 23:35:11.278817979 +0300
 @@ -4442,6 +4442,12 @@
        </option>
        <option>
@@ -25,5 +25,5 @@ Index: xkeyboard-config/rules/base.xml.in
 +      <option>
 +        <configItem>
            <name>keypad:oss</name>
-           <_description>Keypad with unicode additions (arrows and math operators)</_description>
+           <_description>Unicode additions (arrows and math operators)</_description>
         </configItem>
