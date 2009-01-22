@@ -1,3 +1,10 @@
+xkeyboard-config (1.4-1ubuntu1) UNRELEASED; urgency=low
+
+  * Merge from Debian experimental, remaining changes:
+    - 100_abnt2_jp106.diff: Fix ABNT2 keys. Patch modified to apply.
+
+ -- Timo Aaltonen <tjaalton@ubuntu.com>  Thu, 22 Jan 2009 18:18:34 +0200
+
 xkeyboard-config (1.4-1) unstable; urgency=low
 
   * New upstream release.
