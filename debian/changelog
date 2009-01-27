@@ -1,3 +1,16 @@
+xkeyboard-config (1.5-1) UNRELEASED; urgency=low
+
+  * New upstream release.
+    + bepo layout updated (closes: #469826)
+    + some symbols added to Gurmukhi keymap (closes: #443647)
+    + new 'deadtilde' variant for es and latam layouts (closes: #444035)
+    + problem with cymotion model and XF86WWW keysym fixed (closes: #462816)
+    + 'sun' rules files removed (closes: #469306)
+    + the us layout doesn't override CAPS anymore (closes: #504022)
+    + model 'logimel', Logitech Media Keyboard Elite, added (closes: #384801)
+
+ -- Julien Cristau <jcristau@debian.org>  Wed, 28 Jan 2009 00:50:57 +0100
+
 xkeyboard-config (1.4-1) unstable; urgency=low
 
   * New upstream release.
