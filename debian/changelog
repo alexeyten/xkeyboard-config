@@ -14,6 +14,7 @@ xkeyboard-config (1.5-1) UNRELEASED; urgency=low
     exists since 1.1, and keypad:comma was broken since then.
   * Patches add_void_definition_pl-324647.diff and mac_poweroff.diff dropped,
     applied upstream.
+  * Add myself to Uploaders.
 
  -- Julien Cristau <jcristau@debian.org>  Wed, 28 Jan 2009 00:50:57 +0100
 
