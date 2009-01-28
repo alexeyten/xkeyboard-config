@@ -1,3 +1,8 @@
+2009-01-28  Sergey Udaltsov
+
+	* rules/base.xml.in, symbols/ca: added ca(eng) for convenience,
+	http://bugs.freedesktop.org/show_bug.cgi?id=19707
+
 2009-01-27  Sergey Udaltsov
 
 	* symbols/typo: fixed text selection,
