@@ -1,7 +1,7 @@
 Unhide lv3:enter_switch option, it can be useful if a pc105 model
 is selected with an Apple laptop.
 
-Not submitted upstream.
+Submitted at http://bugs.freedesktop.org/show_bug.cgi?id=19773
 
 Index: xkb-data/rules/base.o_s.part
 ===================================================================
