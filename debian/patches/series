@@ -5,13 +5,9 @@
 #clean.diff
 docs.diff
 sclk_toggle.diff
-mac_poweroff.diff
 #bz1576.diff
 #bz8668.diff
 unhide_lv3_enter_switch.diff
 #compatibility.diff
 #japan.diff
-add_void_definition_pl-324647.diff
-send-upstream/001_keypad_comma.diff
 #resync_rules_base.diff
-#send-upstream/002_add_asus6000.diff
