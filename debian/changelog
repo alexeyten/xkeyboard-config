@@ -1,4 +1,4 @@
-xkeyboard-config (1.5-1) UNRELEASED; urgency=low
+xkeyboard-config (1.5-1) unstable; urgency=low
 
   * New upstream release.
     + bepo layout updated (closes: #469826)
@@ -17,7 +17,7 @@ xkeyboard-config (1.5-1) UNRELEASED; urgency=low
   * Add myself to Uploaders.
   * Update debian/copyright from upstream COPYING.
 
- -- Julien Cristau <jcristau@debian.org>  Wed, 28 Jan 2009 00:50:57 +0100
+ -- Julien Cristau <jcristau@debian.org>  Wed, 28 Jan 2009 06:40:24 +0100
 
 xkeyboard-config (1.4-1) unstable; urgency=low
 
