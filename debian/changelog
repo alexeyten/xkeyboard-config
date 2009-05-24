@@ -1,3 +1,12 @@
+xkeyboard-config (1.5-3) UNRELEASED; urgency=low
+
+  * Add Breaks on old libx11-6.  It seems some people are keeping very, very
+    old libx11-6 versions, which didn't know about some keysyms we're now
+    using, thus making their keyboard unusable (closes: #530585 and probably
+    others).
+
+ -- Julien Cristau <jcristau@debian.org>  Sun, 24 May 2009 11:55:32 +0200
+
 xkeyboard-config (1.5-2) unstable; urgency=low
 
   * Cherry-picked from upstream git:
