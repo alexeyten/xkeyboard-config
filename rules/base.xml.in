@@ -88,13 +88,6 @@
     </model>
     <model>
       <configItem>
-        <name>jp106</name>
-        <_description>Japanese 106-key</_description>
-        <vendor>Generic</vendor>
-      </configItem>
-    </model>
-    <model>
-      <configItem>
         <name>pc98</name>
         <_description>PC-98xx Series</_description>
         <vendor>Generic</vendor>
@@ -119,13 +112,6 @@
         <name>a4_rfkb23</name>
         <_description>A4Tech Wireless Desktop RFKB-23</_description>
         <vendor>A4Tech</vendor>
-      </configItem>
-    </model>
-    <model>
-      <configItem>
-        <name>abnt2</name>
-        <_description>Brazilian ABNT2</_description>
-        <vendor>Generic</vendor>
       </configItem>
     </model>
     <model>
@@ -256,6 +242,13 @@
       <configItem>
         <name>cherrycmexpert</name>
         <_description>Cherry CyMotion Expert</_description>
+        <vendor>Cherry</vendor>
+      </configItem>
+    </model>
+    <model>
+      <configItem>
+        <name>cherrybunlim</name>
+        <_description>Cherry B.UNLIMITED</_description>
         <vendor>Cherry</vendor>
       </configItem>
     </model>
@@ -444,6 +437,13 @@
       <configItem>
         <name>geniuskb19e</name>
         <_description>Genius KB-19e NB</_description>
+        <vendor>Genius</vendor>
+      </configItem>
+    </model>
+    <model>
+      <configItem>
+        <name>geniuskkb2050hs</name>
+        <_description>Genius KKB-2050HS</_description>
         <vendor>Genius</vendor>
       </configItem>
     </model>
@@ -667,7 +667,7 @@
     <model>
       <configItem>
         <name>logicdpa2</name>
-        <_description>Logitech Cordless Desktop Pro (alternate option2)</_description>
+        <_description>Logitech Cordless Desktop Pro (alternate option 2)</_description>
         <vendor>Logitech</vendor>
       </configItem>
     </model>
@@ -974,6 +974,13 @@
     </model>
     <model>
       <configItem>
+        <name>trust_slimline</name>
+        <_description>Trust Slimline</_description>
+	<vendor>Trust</vendor>
+      </configItem>
+    </model>
+    <model>
+      <configItem>
         <name>yahoo</name>
         <_description>Yahoo! Internet Keyboard</_description>
 	<vendor>Yahoo!</vendor>
@@ -1068,13 +1075,6 @@
         <name>emachines</name>
         <_description>Laptop/notebook eMachines m68xx</_description>
 	<vendor>eMachines</vendor>
-      </configItem>
-    </model>
-    <model>
-      <configItem>
-	<name>kr106</name>
-	<_description>Korean 106-key</_description>
-	<vendor>Generic</vendor>
       </configItem>
     </model>
     <model>
@@ -1669,6 +1669,13 @@
             <languageList><iso639Id>hin</iso639Id></languageList>
           </configItem>
         </variant>
+        <variant>
+          <configItem>
+            <name>hin-wx</name>
+            <_description>Hindi Wx</_description>
+            <languageList><iso639Id>hin</iso639Id></languageList>
+          </configItem>
+        </variant>
       </variantList>
     </layout>
     <layout>
@@ -1757,7 +1764,15 @@
         <variant>
           <configItem>
             <name>phonetic</name>
-            <_description>Phonetic</_description>
+            <_description>Traditional Phonetic</_description>
+          </configItem>
+        </variant>
+      </variantList>
+      <variantList>
+        <variant>
+          <configItem>
+            <name>bas_phonetic</name>
+            <_description>Standard Phonetic</_description>
           </configItem>
         </variant>
       </variantList>
@@ -2335,6 +2350,13 @@
         </variant>
         <variant>
           <configItem>
+            <name>oci</name>
+            <_description>Occitan</_description>
+            <languageList><iso639Id>oci</iso639Id></languageList>
+          </configItem>
+        </variant>
+        <variant>
+          <configItem>
             <name>geo</name>
             <_description>Georgian AZERTY Tskapo</_description>
             <languageList><iso639Id>geo</iso639Id></languageList>
@@ -2807,11 +2829,18 @@
     <layout>
       <configItem>
         <name>kg</name>
-        <_shortDescription>Kir</_shortDescription>
+        <_shortDescription>Kgz</_shortDescription>
         <_description>Kyrgyzstan</_description>
         <languageList><iso639Id>kir</iso639Id></languageList>
       </configItem>
-      <variantList/>
+      <variantList>
+       <variant>
+          <configItem>
+            <name>phonetic</name>
+            <_description>Phonetic</_description>
+          </configItem>
+        </variant>
+      </variantList>
     </layout>
     <layout>
       <configItem>
@@ -2944,6 +2973,12 @@
           <configItem>
             <name>lekpa</name>
             <_description>LEKPa</_description>
+          </configItem>
+        </variant>
+        <variant>
+          <configItem>
+            <name>balticplus</name>
+            <_description>Baltic+</_description>
           </configItem>
         </variant>
       </variantList>
@@ -3155,7 +3190,7 @@
         <variant>
           <configItem>
             <name>dvorak_altquotes</name>
-            <_description>Dvorak, Polish quotes on key "1/!"</_description>
+            <_description>Dvorak, Polish quotes on key 1</_description>
           </configItem>
         </variant>
         <variant>
@@ -3265,6 +3300,34 @@
             <_description>Winkeys</_description>
           </configItem>
         </variant>
+        <variant>
+          <configItem>
+            <name>crh_f</name>
+            <_description>Crimean Tatar (Turkish F)</_description>
+            <languageList><iso639Id>crh</iso639Id></languageList>
+          </configItem>
+        </variant>
+        <variant>
+          <configItem>
+            <name>crh_alt</name>
+            <_description>Crimean Tatar (Turkish Alt-Q)</_description>
+            <languageList><iso639Id>crh</iso639Id></languageList>
+          </configItem>
+        </variant>
+        <variant>
+          <configItem>
+            <name>crh_dobruca1</name>
+            <_description>Crimean Tatar (Dobruca-1 Q)</_description>
+            <languageList><iso639Id>crh</iso639Id></languageList>
+          </configItem>
+        </variant>
+        <variant>
+          <configItem>
+            <name>crh_dobruca2</name>
+            <_description>Crimean Tatar (Dobruca-2 Q)</_description>
+            <languageList><iso639Id>crh</iso639Id></languageList>
+          </configItem>
+        </variant>
       </variantList>
     </layout>
     <layout>
@@ -3279,6 +3342,12 @@
           <configItem>
             <name>phonetic</name>
             <_description>Phonetic</_description>
+          </configItem>
+        </variant>
+        <variant>
+          <configItem>
+            <name>phonetic_winkeys</name>
+            <_description>Phonetic Winkeys</_description>
           </configItem>
         </variant>
         <variant>
@@ -3356,6 +3425,12 @@
             <languageList><iso639Id>xal</iso639Id></languageList>
           </configItem>
         </variant>
+        <variant>
+          <configItem>
+            <name>dos</name>
+            <_description>DOS</_description>
+          </configItem>
+        </variant>
       </variantList>
     </layout>
     <layout>
@@ -3422,18 +3497,6 @@
           <configItem>
             <name>alternatequotes</name>
             <_description>Use guillemets for quotes</_description>
-          </configItem>
-        </variant>
-        <variant>
-          <configItem>
-            <name>unicode</name>
-            <_description>Use Slovenian digraphs</_description>
-          </configItem>
-        </variant>
-        <variant>
-          <configItem>
-            <name>unicodeus</name>
-            <_description>US keyboard with Slovenian digraphs</_description>
           </configItem>
         </variant>
         <variant>
@@ -3796,6 +3859,27 @@
             <_description>International (with dead keys)</_description>
           </configItem>
         </variant>
+        <variant>
+          <configItem>
+            <name>crh</name>
+            <_description>Crimean Tatar (Turkish Q)</_description>
+            <languageList><iso639Id>crh</iso639Id></languageList>
+          </configItem>
+        </variant>
+        <variant>
+          <configItem>
+            <name>crh_f</name>
+            <_description>Crimean Tatar (Turkish F)</_description>
+            <languageList><iso639Id>crh</iso639Id></languageList>
+          </configItem>
+        </variant>
+        <variant>
+          <configItem>
+            <name>crh_alt</name>
+            <_description>Crimean Tatar (Turkish Alt-Q)</_description>
+            <languageList><iso639Id>crh</iso639Id></languageList>
+          </configItem>
+        </variant>
       </variantList>
     </layout>
     <layout>
@@ -3826,8 +3910,8 @@
         </variant>
         <variant>
           <configItem>
-            <name>unicode</name>
-            <_description>Unicode</_description>
+            <name>legacy</name>
+            <_description>Legacy</_description>
           </configItem>
         </variant>
         <variant>
@@ -3850,6 +3934,27 @@
             <_description>Homophonic</_description>
           </configItem>
         </variant>
+        <variant>
+          <configItem>
+            <name>crh</name>
+            <_description>Crimean Tatar (Turkish Q)</_description>
+            <languageList><iso639Id>crh</iso639Id></languageList>
+          </configItem>
+        </variant>
+        <variant>
+          <configItem>
+            <name>crh_f</name>
+            <_description>Crimean Tatar (Turkish F)</_description>
+            <languageList><iso639Id>crh</iso639Id></languageList>
+          </configItem>
+        </variant>
+        <variant>
+          <configItem>
+            <name>crh_alt</name>
+            <_description>Crimean Tatar (Turkish Alt-Q)</_description>
+            <languageList><iso639Id>crh</iso639Id></languageList>
+          </configItem>
+        </variant>
       </variantList>
     </layout>
     <layout>
@@ -3860,6 +3965,12 @@
         <languageList><iso639Id>eng</iso639Id></languageList>
       </configItem>
       <variantList>
+        <variant>
+          <configItem>
+            <name>extd</name>
+            <_description>Extended - Winkeys</_description>
+          </configItem>
+        </variant>
         <variant>
           <configItem>
             <name>intl</name>
@@ -3904,6 +4015,27 @@
           <configItem>
             <name>latin</name>
             <_description>Latin</_description>
+          </configItem>
+        </variant>
+        <variant>
+          <configItem>
+            <name>crh</name>
+            <_description>Crimean Tatar (Turkish Q)</_description>
+            <languageList><iso639Id>crh</iso639Id></languageList>
+          </configItem>
+        </variant>
+        <variant>
+          <configItem>
+            <name>crh_f</name>
+            <_description>Crimean Tatar (Turkish F)</_description>
+            <languageList><iso639Id>crh</iso639Id></languageList>
+          </configItem>
+        </variant>
+        <variant>
+          <configItem>
+            <name>crh_alt</name>
+            <_description>Crimean Tatar (Turkish Alt-Q)</_description>
+            <languageList><iso639Id>crh</iso639Id></languageList>
           </configItem>
         </variant>
       </variantList>
@@ -4094,7 +4226,16 @@
     </layout>
     <layout>
       <configItem>
-        <name>braille</name>
+        <name>sn</name>
+        <shortDescription>Sen</shortDescription>
+        <description>Senegal</description>
+        <languageList><iso639Id>wol</iso639Id></languageList>
+      </configItem>
+      <variantList/>
+    </layout>
+    <layout>
+      <configItem>
+        <name>brai</name>
         <_shortDescription>Brl</_shortDescription>
         <_description>Braille</_description>
       </configItem>
@@ -4109,6 +4250,22 @@
           <configItem>
             <name>right_hand</name>
             <_description>Right hand</_description>
+          </configItem>
+        </variant>
+      </variantList>
+    </layout>
+    <layout>
+      <configItem>
+        <name>tm</name>
+        <shortDescription>Tkm</shortDescription>
+        <_description>Turkmenistan</_description>
+        <languageList><iso639Id>tuk</iso639Id></languageList>
+      </configItem>
+      <variantList>
+        <variant>
+          <configItem>
+            <name>alt</name>
+            <_description>Alt-Q</_description>
           </configItem>
         </variant>
       </variantList>
@@ -4295,6 +4452,12 @@
           <_description>Right Ctrl</_description>
         </configItem>
       </option>
+      <option>
+        <configItem>
+          <name>grp:sclk_toggle</name>
+          <_description>Scroll Lock</_description>
+        </configItem>
+      </option>
     </group>
     <group allowMultipleSelection="true">
       <!-- The key combination used to choose the 3rd (and 4th, together with Shift)
@@ -4361,6 +4524,12 @@
         <configItem>
           <name>lv3:ralt_alt</name>
           <_description>Right Alt key never chooses 3rd level</_description>
+        </configItem>
+      </option>
+      <option>
+        <configItem>
+          <name>lv3:enter_switch</name>
+          <_description>Enter on keypad</_description>
         </configItem>
       </option>
     </group>
@@ -4648,12 +4817,6 @@
       </option>
       <option>
         <configItem>
-          <name>altwin:super_win</name>
-          <_description>Super is mapped to Win keys</_description>
-        </configItem>
-      </option>
-      <option>
-        <configItem>
           <name>altwin:hyper_win</name>
           <_description>Hyper is mapped to Win-keys</_description>
         </configItem>
@@ -4888,6 +5051,18 @@
           <name>esperanto:dvorak</name>
           <_description>To the corresponding key in a Dvorak keyboard.</_description>
        </configItem>
+      </option>
+    </group>
+    <group allowMultipleSelection="true">
+      <configItem>
+        <name>terminate</name>
+        <_description>Key sequence to kill the X server</_description>
+      </configItem>
+      <option>
+        <configItem>
+          <name>terminate:ctrl_alt_bksp</name>
+          <_description>Control + Alt + Backspace</_description>
+        </configItem>
       </option>
     </group>
   </optionList>

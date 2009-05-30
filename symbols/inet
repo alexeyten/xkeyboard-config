@@ -31,6 +31,7 @@ xkb_symbols "media_common" {
     key <I24>   {       [ XF86AudioStop, XF86Eject ] };
     key <I2E>   {       [ XF86AudioLowerVolume  ] };	
     key <I30>   {       [ XF86AudioRaiseVolume  ] };
+    key <K5A>   {       [ XF86Eject             ] };
 };
 
 // popular web navigation combination
@@ -55,6 +56,9 @@ xkb_symbols "acpi_common" {
     key <I5E>	{	[ XF86PowerOff		]	};
     key <I5F>	{	[ XF86Standby		]	};
     key <I63>	{	[ XF86WakeUp		]	};
+    key <I74>	{	[ XF86Battery		]	};
+    key <I76>	{	[ XF86WLAN		]	};
+    key <I16>	{	[ XF86Sleep		]	};
 };
 
 // Combined sections, for simplicity
@@ -103,7 +107,9 @@ xkb_symbols "evdev" {
     key <HELP>   {      [ Help                  ]       };
     key <LNFD>   {      [ Linefeed              ]       };
 
-    key <HZTG>   {      [ Zenkaku_Hankaku       ]       };
+// Commented out because HZTG has same keycode as TLDE
+//    key <HZTG>   {      [ Zenkaku_Hankaku       ]       };
+
     key <HKTG>   {      [ Hiragana_Katakana     ]       };
     key <HENK>   {      [ Henkan                ]       };
     key <MUHE>   {      [ Muhenkan              ]       };
@@ -165,7 +171,7 @@ xkb_symbols "evdev" {
     key <I209>   {      [ XF86AudioPause        ]       };
     key <I210>   {      [ XF86Launch3           ]       };
     key <I211>   {      [ XF86Launch4           ]       };
-    key <I213>   {      [ XF86Standby           ]       };
+    key <I213>   {      [ XF86Suspend           ]       };
     key <I214>   {      [ XF86Close             ]       };
     key <I215>   {      [ XF86AudioPlay         ]       };
     key <I216>   {      [ XF86Forward           ]       };
@@ -196,14 +202,16 @@ xkb_symbols "evdev" {
     key <I241>   {      [ XF86MailForward       ]       };
     key <I242>   {      [ XF86Save              ]       };
     key <I243>   {      [ XF86Documents         ]       };
-//  key <I244>   {      [ ]       }; // KEY_BATTERY
-//  key <I245>   {      [ ]       }; // KEY_BLUETOOTH
-//  key <I246>   {      [ ]       }; // KEY_WLAN
+    key <I244>   {      [ XF86Battery           ]       };
+    key <I245>   {      [ XF86Bluetooth         ]       };
+    key <I246>   {      [ XF86WLAN              ]       };
 //  key <I249>   {      [ ]       }; // KEY_VIDEO_NEXT  --  drive next video source
 //  key <I250>   {      [ ]       }; // KEY_VIDEO_PREV  --  drive previous video source
 //  key <I251>   {      [ ]       }; // KEY_BRIGHTNESS_CYCLE  --  bright up, max++ == min
 //  key <I252>   {      [ ]       }; // KEY_BRIGHTNESS_ZERO  --  brightness off
 //  key <I253>   {      [ ]       }; // KEY_DISPLAY_OFF  --  turn off display
+//  key <I254>   {      [ ]       }; // KEY_WIMAX
+    key <I255>   {      [ XF86Hibernate         ]       }; // KEY_HIBERNATE
  
 };
 
@@ -684,7 +692,7 @@ partial alphanumeric_keys
 xkb_symbols "dellusbmm" {
     // Describes the extra keys on a SK-8135 Multimedia keyboard
     // From Olivier Lahaye <olivier dot lahaye at motorola dot com>
-    include "inet(media_nav_common)"
+    include "inet(media_nav_acpi_common)"
     key <I02>	{	[ XF86HomePage		]	};
     key <K67>	{	[ XF86MyComputer	]	}; 
     key <XFER>	{	[ XF86AudioMedia	]	};  
@@ -972,7 +980,10 @@ xkb_symbols "thinkpad60" {
 // IBM Space Saver
 partial alphanumeric_keys
 xkb_symbols "ibm_spacesaver" {
-    key <NMLK>  { [ Num_Lock, Num_Lock ] };
+    key <NMLK>  {
+        type="ONE_LEVEL",
+        symbols[Group1]= [ Num_Lock ]
+    };
 };
 
 // Logitech
@@ -1796,3 +1807,7 @@ xkb_symbols "compalfl90" {
     key <II65>  {       [ XF86MonBrightnessDown ]       };
 };
 
+partial alphanumeric_keys
+xkb_symbols "pc105" {
+    include "inet(media_nav_acpi_common)"
+};

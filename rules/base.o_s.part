@@ -4,7 +4,6 @@
   altwin:ctrl_alt_win	=	+altwin(ctrl_alt_win)
   altwin:meta_win	=	+altwin(meta_win)
   altwin:left_meta_win	=	+altwin(left_meta_win)
-  altwin:super_win	=	+altwin(super_win)
   altwin:hyper_win	=	+altwin(hyper_win)
   altwin:alt_super_win	=	+altwin(alt_super_win)
   altwin:swap_lalt_lwin	=	+altwin(swap_lalt_lwin)
@@ -37,6 +36,7 @@
   grp:lctrl_toggle	=	+group(lctrl_toggle)
   grp:rctrl_toggle	=	+group(rctrl_toggle)
   grp:lalt_toggle	=	+group(lalt_toggle)
+  grp:sclk_toggle	=	+group(sclk_toggle)
   lv3:switch		=	+level3(switch)
   lv3:ralt_switch	=	+level3(ralt_switch)
   lv3:ralt_switch_multikey	=	+level3(ralt_switch_multikey)
@@ -47,6 +47,7 @@
   lv3:win_switch	=	+level3(win_switch)
   lv3:lwin_switch	=	+level3(lwin_switch)
   lv3:rwin_switch	=	+level3(rwin_switch)
+  lv3:enter_switch	=	+level3(enter_switch)
   caps:capslock		=	+capslock(capslock)
   caps:shiftlock	=	+capslock(shiftlock)
   caps:swapescape	=	+capslock(swapescape)
@@ -97,4 +98,6 @@
   shift:breaks_caps     =	+shift(breaks_caps)
   esperanto:qwerty      =	+epo(qwerty)
   esperanto:dvorak      =	+epo(dvorak)
+  terminate:ctrl_alt_bksp =	+terminate(ctrl_alt_bksp)
+
 
