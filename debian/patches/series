@@ -1,13 +1,1 @@
-#cvs.diff
-#fix_xkbcomp_crash.diff
-#revert_bz8572.diff
-#po.diff
-#clean.diff
 docs.diff
-sclk_toggle.diff
-#bz1576.diff
-#bz8668.diff
-unhide_lv3_enter_switch.diff
-#compatibility.diff
-#japan.diff
-#resync_rules_base.diff
