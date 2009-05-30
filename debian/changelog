@@ -1,4 +1,4 @@
-xkeyboard-config (1.6-1) UNRELEASED; urgency=low
+xkeyboard-config (1.6-1) unstable; urgency=low
 
   * Add Breaks on old libx11-6.  It seems some people are keeping very, very
     old libx11-6 versions, which didn't know about some keysyms we're now
@@ -10,7 +10,7 @@ xkeyboard-config (1.6-1) UNRELEASED; urgency=low
   * Patches sclk_toggle.diff and unhide_lv3_enter_switch.diff are upstream.
   * Add README.source, bump Standards-Version to 3.8.1.
 
- -- Julien Cristau <jcristau@debian.org>  Sun, 24 May 2009 11:55:32 +0200
+ -- Julien Cristau <jcristau@debian.org>  Sat, 30 May 2009 16:39:19 +0200
 
 xkeyboard-config (1.5-2) unstable; urgency=low
 
